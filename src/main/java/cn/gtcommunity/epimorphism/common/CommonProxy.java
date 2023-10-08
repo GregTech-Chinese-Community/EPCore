@@ -48,7 +48,7 @@ public class CommonProxy {
         return itemBlock;
     }
 
-    @SubscribeEvent
+    //@SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         EPLog.logger.info("Registering recipes...");
         //EPRecipeManager.init();
