@@ -113,6 +113,10 @@ repositories {
         name 'CleanroomMC Maven'
         url 'https://maven.cleanroommc.com'
     }
+    maven {
+        name 'BlameJared Maven'
+        url 'https://maven.blamejared.com'
+    }
 }
 
 dependencies {
@@ -150,6 +154,12 @@ dependencies {
     //APIs
     implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
     implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4701483")
+    implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4701685")
+    implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4716101")
+
+    implementation 'mezz.jei:jei_1.12.2:4.16.1.302'
+    //noinspection DependencyNotationArgument
+    runtimeOnly 'curse.maven:top-245211:2667280'
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'
