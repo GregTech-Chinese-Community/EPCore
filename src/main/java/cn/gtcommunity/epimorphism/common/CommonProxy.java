@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -47,6 +48,6 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         EPLog.logger.info("Registering recipes...");
-        //EPRecipeManager.init();
+        EPRecipeManager.init();
     }
 }

@@ -24,6 +24,8 @@ public class EPMaterialFlagAddition {
         Materials.Iridium.addFlags(EPMaterialFlags.GENERATE_COIL);
         Materials.Osmiridium.addFlags(EPMaterialFlags.GENERATE_COIL);
         Materials.Tritanium.addFlags(EPMaterialFlags.GENERATE_COIL);
+        //  test
+        Materials.Copper.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
     }
 
 }
