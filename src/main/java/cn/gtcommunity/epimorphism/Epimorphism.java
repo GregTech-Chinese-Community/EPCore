@@ -1,8 +1,12 @@
 package cn.gtcommunity.epimorphism;
 
 import cn.gtcommunity.epimorphism.common.CommonProxy;
+import cn.gtcommunity.epimorphism.loader.recipes.AWRecipeManager;
+import com.codetaylor.mc.artisanworktables.api.internal.recipe.RecipeBuilderException;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(
         modid = "epimorphism",
@@ -24,6 +28,9 @@ public class Epimorphism {
 
     public Epimorphism() {}
 
-
+    @Mod.EventHandler
+    public void onPreInit(FMLPreInitializationEvent event) {
+        proxy.preLoad();
+    }
 
 }
