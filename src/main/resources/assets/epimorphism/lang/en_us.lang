@@ -7,3 +7,113 @@ item.gt.tool.universal_spade.name=%s Universal Spade
 item.gt.tool.combination_wrench.name=%s Combination Wrench
 item.gt.tool.bending_cylinder.name=%s Bending Cylinder
 item.gt.tool.small_bending_cylinder.name=%s Small Bneding Cylinder
+
+#  Boards
+metaitem.board.gooware.name=Kapton™ Board
+metaitem.board.gooware.tooltip=Dupont™ Pyralux® TK Laminate Film
+
+metaitem.board.optical.name=Gallium Nitride Semiconducting Board
+metaitem.board.optical.tooltip=Absolute ideal materials for Optoelectronic Devices
+
+metaitem.board.spintronic.name=Carbon Nanotube Magnetic storage Board
+metaitem.board.spintronic.tooltip=Third generation Spintronic Technology
+
+metaitem.circuit_board.gooware.name=Super Circuit Board
+metaitem.circuit_board.gooware.tooltip=Revitalization on circuit boards
+
+metaitem.circuit_board.optical.name=Ultimate Circuit Board
+metaitem.circuit_board.optical.tooltip=The Technology Star of the Semiconductor Industry
+
+metaitem.circuit_board.spintronic.name=Infinite Circuit Board
+metaitem.circuit_board.spintronic.tooltip=The Best Implementation of Spin Transfer Torque
+
+#  Circuits
+metaitem.circuit.gooware_processor.name=Gooware Processor
+metaitem.circuit.gooware_processor.tooltip=Viscous organic slurry adheres the board/n§2ZPM-Tier Circuit
+metaitem.circuit.gooware_assembly.name=Gooware Assembly
+metaitem.circuit.gooware_assembly.tooltip=Seems to be able to hear whispers/n§2UV-Tier Circuit
+metaitem.circuit.gooware_computer.name=Gooware Supercomputer
+metaitem.circuit.gooware_computer.tooltip=Slime mold covered in metal/n§2UHV-Tier Circuit
+metaitem.circuit.gooware_mainframe.name=Gooware Mainframe
+metaitem.circuit.gooware_mainframe.tooltip=Microbial Awareness Network/n§2UEV-Tier Circuit
+
+metaitem.circuit.optical_processor.name=Optical IMC Processor
+metaitem.circuit.optical_processor.tooltip=Ultra efficient Photoelectron Transport/n§6UV-Tier Circuit
+metaitem.circuit.optical_assembly.name=Optical IMC Assembly
+metaitem.circuit.optical_assembly.tooltip=Photon Surge/n§6UHV-Tier Circuit
+metaitem.circuit.optical_computer.name=Optical IMC Supercomputer
+metaitem.circuit.optical_computer.tooltip=Ultra Large scale Computing data support/n§6UEV-Tier Circuit
+metaitem.circuit.optical_mainframe.name=Optical IMC Mainframe
+metaitem.circuit.optical_mainframe.tooltip=Calculating speed infinitely close to Light speed/n§6UIV-Tier Circuit
+
+metaitem.circuit.spintronic_processor.name=Spintronic IMC Processor
+metaitem.circuit.spintronic_processor.tooltip=Super Magnetic Semiconductor Circuit/n§5UHV-Tier Circuit
+metaitem.circuit.spintronic_assembly.name=Spintronic IMC Assembly
+metaitem.circuit.spintronic_assembly.tooltip=Quantum Random Walk/n§5UEV-Tier Circuit
+metaitem.circuit.spintronic_computer.name=Spintronic IMC Supercomputer
+metaitem.circuit.spintronic_computer.tooltip=Control everything with Spin/n§5UIV-Tier Circuit
+metaitem.circuit.spintronic_mainframe.name=Spintronic IMC Mainframe
+metaitem.circuit.spintronic_mainframe.tooltip=Circuit from the Future/n§5UXV-Tier Circuit
+
+metaitem.circuit.cosmic_processor.name=Cosmic Planetary Processor
+metaitem.circuit.cosmic_processor.tooltip=Holding Star in Hand/n§8UEV-Tier Circuit
+metaitem.circuit.cosmic_assembly.name=Cosmic Planetary Assembly
+metaitem.circuit.cosmic_assembly.tooltip=Rotate slightly/n§8UIV-Tier Circuit
+metaitem.circuit.cosmic_computer.name=Cosmic Planetary Supercomputer
+metaitem.circuit.cosmic_computer.tooltip=A small thing with a density approaching a Singularity/n§8UXV-Tier Circuit
+metaitem.circuit.cosmic_mainframe.name=Cosmic Planetary Mainframe
+metaitem.circuit.cosmic_mainframe.tooltip=Simulate everything, Analyze everything, Understand everything/n§8OpV-Tier Circuit
+
+metaitem.circuit.supracausal_processor.name=Supracausal Galactic Processor
+metaitem.circuit.supracausal_processor.tooltip=The laws of the Universe emerge here/n§fUIV-Tier Circuit
+metaitem.circuit.supracausal_assembly.name=Supracausal Galactic Assembly
+metaitem.circuit.supracausal_assembly.tooltip=Crossing the Barrier in front of the Gate of Truth/n§fUXV-Tier Circuit
+metaitem.circuit.supracausal_computer.name=Supracausal Galactic Supercomputer
+metaitem.circuit.supracausal_computer.tooltip=Beyond the Shadow of Time/n§fOpV-Tier Circuit
+metaitem.circuit.supracausal_mainframe.name=Supracausal Galactic Mainframe
+metaitem.circuit.supracausal_mainframe.tooltip=One of All Things，and the Original Miracle/n§fMAX-Tier Circuit
+
+#  Components
+metaitem.component.optical_smd.transistor.name=Phototransistor
+metaitem.component.optical_smd.transistor.tooltip=Optical Transistor
+metaitem.component.optical_smd.resistor.name=Photoresistor
+metaitem.component.optical_smd.resistor.tooltip=Optical Resistor
+metaitem.component.optical_smd.capacitor.name=Optical Integrator
+metaitem.component.optical_smd.capacitor.tooltip=Optical Capacitor
+metaitem.component.optical_smd.diode.name=Optical Isolator
+metaitem.component.optical_smd.diode.tooltip=Optical Diode
+metaitem.component.optical_smd.inductor.name=Optical Polarizer
+metaitem.component.optical_smd.inductor.tooltip=Optical Inductor
+
+metaitem.component.spintronic_smd.transistor.name=MOSFET
+metaitem.component.spintronic_smd.transistor.tooltip=Spintronic Transistor
+metaitem.component.spintronic_smd.resistor.name=Magnetoresistor
+metaitem.component.spintronic_smd.resistor.tooltip=Spintronic Resistor
+metaitem.component.spintronic_smd.capacitor.name=Ultracapacitor
+metaitem.component.spintronic_smd.capacitor.tooltip=Spintronic Capacitor
+metaitem.component.spintronic_smd.diode.name=Schottky Diode
+metaitem.component.spintronic_smd.diode.tooltip=Spintronic Diode
+metaitem.component.spintronic_smd.inductor.name=Spin Polarizer
+metaitem.component.spintronic_smd.inductor.tooltip=Spintronic Inductor
+
+metaitem.component.cosmic_smd.transistor.name=Crystal Information Payload
+metaitem.component.cosmic_smd.transistor.tooltip=Cosmic Transistor
+metaitem.component.cosmic_smd.resistor.name=Micro Interstellar material Information Wall
+metaitem.component.cosmic_smd.resistor.tooltip=Cosmic Resistor
+metaitem.component.cosmic_smd.capacitor.name=Holographic Energy Charge
+metaitem.component.cosmic_smd.capacitor.tooltip=Cosmic Capacitor
+metaitem.component.cosmic_smd.diode.name=Cosmic Ion Diode
+metaitem.component.cosmic_smd.diode.tooltip=Cosmic Diode
+metaitem.component.cosmic_smd.inductor.name=Zenith Polarizer
+metaitem.component.cosmic_smd.inductor.tooltip=Cosmic Inductor
+
+metaitem.component.supracausal_smd.transistor.name=Kaluza-Klein Extradimensional Dilator Field Effect Transistor
+metaitem.component.supracausal_smd.transistor.tooltip=Supracausal Transistor
+metaitem.component.supracausal_smd.resistor.name=Non anomalous Quantum Main Constraint Generator
+metaitem.component.supracausal_smd.resistor.tooltip=Supracausal Resistor
+metaitem.component.supracausal_smd.capacitor.name=Energy-Momentum-Stress Tensor Memory
+metaitem.component.supracausal_smd.capacitor.tooltip=Supracausal Capacitor
+metaitem.component.supracausal_smd.diode.name=Spin network Carrier Diode
+metaitem.component.supracausal_smd.diode.tooltip=Supracausal Diode
+metaitem.component.supracausal_smd.inductor.name=Supersymmetric Conformal Polarizer
+metaitem.component.supracausal_smd.inductor.tooltip=Supracausal Inductor

@@ -29,8 +29,10 @@ Improve difficulty and QoL of GregTech CEu, based on GregTech 6, Gregicality Leg
 
 ###  Credited Works
 
-* Bending Cylinder textures from **[GregTech 6](https://github.com/GregTech6/gregtech6)**.
+* Some tool textures from **[GregTech 6](https://github.com/GregTech6/gregtech6)**.
 
-* Curved Plate textures from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
+* Curved Plate textures and recipes from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
+
+* Cosmic Inductor and Supracausal SMD textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
 
 * README.md base from **[GregTech CEu](https://github.com/GregTechCEu/GregTech)**.
