@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
+import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -30,6 +31,7 @@ public class Epimorphism {
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
         EPLog.init(event.getModLog());
+        EPMetaItems.initialization();
         proxy.preLoad();
     }
 
