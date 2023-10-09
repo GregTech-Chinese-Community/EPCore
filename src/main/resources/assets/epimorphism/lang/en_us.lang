@@ -6,7 +6,7 @@ item.material.oreprefix.plateCurved=Curved %s Plate
 item.gt.tool.universal_spade.name=%s Universal Spade
 item.gt.tool.combination_wrench.name=%s Combination Wrench
 item.gt.tool.bending_cylinder.name=%s Bending Cylinder
-item.gt.tool.small_bending_cylinder.name=%s Small Bneding Cylinde
+item.gt.tool.small_bending_cylinder.name=%s Small Bneding Cylinder
 
 #  Boards
 metaitem.board.gooware.name=Kapton™ Board
