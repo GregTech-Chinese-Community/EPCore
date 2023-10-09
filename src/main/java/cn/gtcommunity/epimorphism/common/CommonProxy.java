@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -37,6 +38,8 @@ public class CommonProxy {
     //@SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         EPLog.logger.info("Registering Items...");
+        EPMetaItems.initSubItems();
+
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
