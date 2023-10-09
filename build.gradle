@@ -157,8 +157,10 @@ dependencies {
     implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4701685")
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4716101")
 
+    implementation rfg.deobf("curse.maven:artisan-worktables-284351:3205284")
+    runtimeOnly 'curse.maven:athenaeum-284350:4633750'
+
     implementation 'mezz.jei:jei_1.12.2:4.16.1.302'
-    //noinspection DependencyNotationArgument
     runtimeOnly 'curse.maven:top-245211:2667280'
 }
 
