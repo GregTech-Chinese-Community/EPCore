@@ -7,6 +7,7 @@ public class EPRecipeManager {
     private EPRecipeManager() {}
 
     public static void init() {
+        GTOverrideRecipes.init();
         EPRecipeHandlerList.register();
     }
 }
