@@ -48,11 +48,11 @@ public class EPPartsRecipeHandler {
         }
     }
     public static void processSpring(OrePrefix springPrefix, Material material, IngotProperty property) {
-        if (material.hasFlag(MaterialFlags.GENERATE_ROD)) {
+        if (material.hasFlag(MaterialFlags.GENERATE_LONG_ROD)) {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_spring_%s", material),
                         OreDictUnifier.get(OrePrefix.spring, material),
-                        "hSB", 'S', new UnificationEntry(OrePrefix.stick, material), 'B', EPToolItems.BENDING_CYLINDER);
+                        "hSB", 'S', new UnificationEntry(OrePrefix.stickLong, material), 'B', EPToolItems.BENDING_CYLINDER);
             }
         }
     }
@@ -69,7 +69,7 @@ public class EPPartsRecipeHandler {
         if (material.hasFlag(MaterialFlags.GENERATE_PLATE)) {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_foil_%s", material),
-                        OreDictUnifier.get(OrePrefix.foil, material),
+                        OreDictUnifier.get(OrePrefix.foil, material, 2),
                         "hPB", 'P', new UnificationEntry(OrePrefix.plate,material), 'B', EPToolItems.SMALL_BENDING_CYLINDER);
             }
         }
