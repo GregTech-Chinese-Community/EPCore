@@ -2,9 +2,12 @@ package cn.gtcommunity.epimorphism;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
+import gregtech.common.ConfigHolder;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(
@@ -31,7 +34,10 @@ public class Epimorphism {
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
         EPLog.init(event.getModLog());
+        ConfigHolder.machines.highTierContent = true;
+        EPLog.logger.info("Enabled GregTechCEu highTierContent");
         EPMetaItems.initialization();
+        EPMetablocks.init();
         proxy.preLoad();
     }
 
