@@ -20,7 +20,6 @@ public class EPEventHandler {
         EPMaterials.init();
         OrePrefixAdditions.init();
         EPToolItems.init();
-
     }
 
 }

@@ -8,10 +8,37 @@ import java.util.List;
 public class EPMetaItems {
     public static final List<MetaItem<?>> ITEMS = EPMetaItem1.getMetaItems();
 
-    public static MetaItem<?>.MetaValueItem CELL_MUTATION_INDUCTION_REAGENT;
+    //  Boards
+    public static MetaItem<?>.MetaValueItem GOOWARE_BOARD;
+    public static MetaItem<?>.MetaValueItem OPTICAL_BOARD;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_BOARD;
+    public static MetaItem<?>.MetaValueItem GOOWARE_CIRCUIT_BOARD;
+    public static MetaItem<?>.MetaValueItem OPTICAL_CIRCUIT_BOARD;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_CIRCUIT_BOARD;
 
+    //  Circuits
+    public static MetaItem<?>.MetaValueItem GOOWARE_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem GOOWARE_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem GOOWARE_COMPUTER;
+    public static MetaItem<?>.MetaValueItem GOOWARE_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem OPTICAL_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem OPTICAL_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem OPTICAL_COMPUTER;
+    public static MetaItem<?>.MetaValueItem OPTICAL_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_COMPUTER;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem COSMIC_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem COSMIC_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem COSMIC_COMPUTER;
+    public static MetaItem<?>.MetaValueItem COSMIC_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_PROCESSOR;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_COMPUTER;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_MAINFRAME;
 
-    private EPMetaItems() {/**/}
+    private EPMetaItems() {}
 
     public static void initialization()
     {
