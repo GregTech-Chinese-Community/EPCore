@@ -72,3 +72,48 @@ metaitem.circuit.supracausal_computer.name=超因果星系级超级计算机复�
 metaitem.circuit.supracausal_computer.tooltip=超越时间之影/n§fOpV级电路
 metaitem.circuit.supracausal_mainframe.name=超因果星系级电脑主机群复合体
 metaitem.circuit.supracausal_mainframe.tooltip=万物归一者，原初的神迹/n§fMAX级电路
+
+#  Components
+metaitem.component.optical_smd.transistor.name=光学晶体管
+metaitem.component.optical_smd.transistor.tooltip=光电子晶体管
+metaitem.component.optical_smd.resistor.name=光敏电阻
+metaitem.component.optical_smd.resistor.tooltip=光电子电阻
+metaitem.component.optical_smd.capacitor.name=光学整合器
+metaitem.component.optical_smd.capacitor.tooltip=光电子电容
+metaitem.component.optical_smd.diode.name=光频隔离器
+metaitem.component.optical_smd.diode.tooltip=光电子二极管
+metaitem.component.optical_smd.inductor.name=光学偏振器
+metaitem.component.optical_smd.inductor.tooltip=光电子电感
+
+metaitem.component.spintronic_smd.transistor.name=自旋金属-氧半场效晶体管
+metaitem.component.spintronic_smd.transistor.tooltip=自旋电子晶体管
+metaitem.component.spintronic_smd.resistor.name=磁阻器
+metaitem.component.spintronic_smd.resistor.tooltip=自旋电子电阻
+metaitem.component.spintronic_smd.capacitor.name=超级电容
+metaitem.component.spintronic_smd.capacitor.tooltip=自旋电子电容
+metaitem.component.spintronic_smd.diode.name=肖氏势垒二极管
+metaitem.component.spintronic_smd.diode.tooltip=自旋电子二极管
+metaitem.component.spintronic_smd.inductor.name=自旋偏振器
+metaitem.component.spintronic_smd.inductor.tooltip=自旋电子电感
+
+metaitem.component.cosmic_smd.transistor.name=晶体信息载荷
+metaitem.component.cosmic_smd.transistor.tooltip=寰宇晶体管
+metaitem.component.cosmic_smd.resistor.name=微型星际物质信息壁
+metaitem.component.cosmic_smd.resistor.tooltip=寰宇电阻
+metaitem.component.cosmic_smd.capacitor.name=全息能量荷
+metaitem.component.cosmic_smd.capacitor.tooltip=寰宇电容
+metaitem.component.cosmic_smd.diode.name=宇宙离子极管
+metaitem.component.cosmic_smd.diode.tooltip=寰宇二极管
+metaitem.component.cosmic_smd.inductor.name=天顶星偏振器
+metaitem.component.cosmic_smd.inductor.tooltip=寰宇电感
+
+metaitem.component.supracausal_smd.transistor.name=卡鲁扎-克莱因额外维胀子场效应管
+metaitem.component.supracausal_smd.transistor.tooltip=超因果晶体管
+metaitem.component.supracausal_smd.resistor.name=非反常量子主约束生成器
+metaitem.component.supracausal_smd.resistor.tooltip=超因果电阻
+metaitem.component.supracausal_smd.capacitor.name=能量-动量-应力张量存储器
+metaitem.component.supracausal_smd.capacitor.tooltip=超因果电容
+metaitem.component.supracausal_smd.diode.name=自旋网络载波极管
+metaitem.component.supracausal_smd.diode.tooltip=超因果二极管
+metaitem.component.supracausal_smd.inductor.name=超对称共形偏振器
+metaitem.component.supracausal_smd.inductor.tooltip=超因果电感

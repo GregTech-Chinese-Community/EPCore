@@ -72,3 +72,48 @@ metaitem.circuit.supracausal_computer.name=Supracausal Galactic Supercomputer
 metaitem.circuit.supracausal_computer.tooltip=Beyond the Shadow of Time/n§fOpV-Tier Circuit
 metaitem.circuit.supracausal_mainframe.name=Supracausal Galactic Mainframe
 metaitem.circuit.supracausal_mainframe.tooltip=One of All Things，and the Original Miracle/n§fMAX-Tier Circuit
+
+#  Components
+metaitem.component.optical_smd.transistor.name=Phototransistor
+metaitem.component.optical_smd.transistor.tooltip=Optical Transistor
+metaitem.component.optical_smd.resistor.name=Photoresistor
+metaitem.component.optical_smd.resistor.tooltip=Optical Resistor
+metaitem.component.optical_smd.capacitor.name=Optical Integrator
+metaitem.component.optical_smd.capacitor.tooltip=Optical Capacitor
+metaitem.component.optical_smd.diode.name=Optical Isolator
+metaitem.component.optical_smd.diode.tooltip=Optical Diode
+metaitem.component.optical_smd.inductor.name=Optical Polarizer
+metaitem.component.optical_smd.inductor.tooltip=Optical Inductor
+
+metaitem.component.spintronic_smd.transistor.name=MOSFET
+metaitem.component.spintronic_smd.transistor.tooltip=Spintronic Transistor
+metaitem.component.spintronic_smd.resistor.name=Magnetoresistor
+metaitem.component.spintronic_smd.resistor.tooltip=Spintronic Resistor
+metaitem.component.spintronic_smd.capacitor.name=Ultracapacitor
+metaitem.component.spintronic_smd.capacitor.tooltip=Spintronic Capacitor
+metaitem.component.spintronic_smd.diode.name=Schottky Diode
+metaitem.component.spintronic_smd.diode.tooltip=Spintronic Diode
+metaitem.component.spintronic_smd.inductor.name=Spin Polarizer
+metaitem.component.spintronic_smd.inductor.tooltip=Spintronic Inductor
+
+metaitem.component.cosmic_smd.transistor.name=Crystal Information Payload
+metaitem.component.cosmic_smd.transistor.tooltip=Cosmic Transistor
+metaitem.component.cosmic_smd.resistor.name=Micro Interstellar material Information Wall
+metaitem.component.cosmic_smd.resistor.tooltip=Cosmic Resistor
+metaitem.component.cosmic_smd.capacitor.name=Holographic Energy Charge
+metaitem.component.cosmic_smd.capacitor.tooltip=Cosmic Capacitor
+metaitem.component.cosmic_smd.diode.name=Cosmic Ion Diode
+metaitem.component.cosmic_smd.diode.tooltip=Cosmic Diode
+metaitem.component.cosmic_smd.inductor.name=Zenith Polarizer
+metaitem.component.cosmic_smd.inductor.tooltip=Cosmic Inductor
+
+metaitem.component.supracausal_smd.transistor.name=Kaluza-Klein Extradimensional Dilator Field Effect Transistor
+metaitem.component.supracausal_smd.transistor.tooltip=Supracausal Transistor
+metaitem.component.supracausal_smd.resistor.name=Non anomalous Quantum Main Constraint Generator
+metaitem.component.supracausal_smd.resistor.tooltip=Supracausal Resistor
+metaitem.component.supracausal_smd.capacitor.name=Energy-Momentum-Stress Tensor Memory
+metaitem.component.supracausal_smd.capacitor.tooltip=Supracausal Capacitor
+metaitem.component.supracausal_smd.diode.name=Spin network Carrier Diode
+metaitem.component.supracausal_smd.diode.tooltip=Supracausal Diode
+metaitem.component.supracausal_smd.inductor.name=Supersymmetric Conformal Polarizer
+metaitem.component.supracausal_smd.inductor.tooltip=Supracausal Inductor

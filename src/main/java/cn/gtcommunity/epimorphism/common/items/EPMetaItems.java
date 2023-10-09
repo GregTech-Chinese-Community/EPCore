@@ -38,6 +38,28 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_COMPUTER;
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_MAINFRAME;
 
+    //  Components
+    public static MetaItem<?>.MetaValueItem OPTICAL_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem OPTICAL_RESISTOR;
+    public static MetaItem<?>.MetaValueItem OPTICAL_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem OPTICAL_DIODE;
+    public static MetaItem<?>.MetaValueItem OPTICAL_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_RESISTOR;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_DIODE;
+    public static MetaItem<?>.MetaValueItem SPINTRONIC_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem COSMIC_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem COSMIC_RESISTOR;
+    public static MetaItem<?>.MetaValueItem COSMIC_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem COSMIC_DIODE;
+    public static MetaItem<?>.MetaValueItem COSMIC_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_RESISTOR;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_DIODE;
+    public static MetaItem<?>.MetaValueItem SUPRACAUSAL_INDUCTOR;
+
     private EPMetaItems() {}
 
     public static void initialization()

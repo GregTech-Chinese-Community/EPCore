@@ -45,5 +45,26 @@ public class EPMetaItem1 extends StandardMetaItem {
         SUPRACAUSAL_COMPUTER = this.addItem(24, "circuit.supracausal_computer").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.OpV);
         SUPRACAUSAL_MAINFRAME = this.addItem(25, "circuit.supracausal_mainframe").setUnificationData(OrePrefix.circuit, MarkerMaterials.Tier.MAX);
 
+        //  Components
+        OPTICAL_TRANSISTOR = this.addItem(26, "component.optical_smd.transistor");
+        OPTICAL_RESISTOR = this.addItem(27, "component.optical_smd.resistor");
+        OPTICAL_CAPACITOR = this.addItem(28, "component.optical_smd.capacitor");
+        OPTICAL_DIODE = this.addItem(29, "component.optical_smd.diode");
+        OPTICAL_INDUCTOR = this.addItem(30, "component.optical_smd.inductor");
+        SPINTRONIC_TRANSISTOR = this.addItem(31, "component.spintronic_smd.transistor");
+        SPINTRONIC_RESISTOR = this.addItem(32, "component.spintronic_smd.resistor");
+        SPINTRONIC_CAPACITOR = this.addItem(33, "component.spintronic_smd.capacitor");
+        SPINTRONIC_DIODE = this.addItem(34, "component.spintronic_smd.diode");
+        SPINTRONIC_INDUCTOR = this.addItem(35, "component.spintronic_smd.inductor");
+        COSMIC_TRANSISTOR = this.addItem(36, "component.cosmic_smd.transistor");
+        COSMIC_RESISTOR = this.addItem(37, "component.cosmic_smd.resistor");
+        COSMIC_CAPACITOR = this.addItem(38, "component.cosmic_smd.capacitor");
+        COSMIC_DIODE = this.addItem(39, "component.cosmic_smd.diode");
+        COSMIC_INDUCTOR = this.addItem(40, "component.cosmic_smd.inductor");
+        SUPRACAUSAL_TRANSISTOR = this.addItem(41, "component.supracausal_smd.transistor");
+        SUPRACAUSAL_RESISTOR = this.addItem(42, "component.supracausal_smd.resistor");
+        SUPRACAUSAL_CAPACITOR = this.addItem(43, "component.supracausal_smd.capacitor");
+        SUPRACAUSAL_DIODE = this.addItem(44, "component.supracausal_smd.diode");
+        SUPRACAUSAL_INDUCTOR = this.addItem(45, "component.supracausal_smd.inductor");
     }
 }
