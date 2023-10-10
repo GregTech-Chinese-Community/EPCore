@@ -210,6 +210,26 @@ tile.ep_pmma_casing.pmma_glass.tooltip=Have both strength and toughness!/n§8UV-
 tile.ep_pmma_casing.neu_pmma_glass.name=Neutronium PMMA Glass
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=TAfield/n§8UHV-Tier Glass
 
-#Optical Glasses
+#  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=ThYBoron Silicate Glass
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=Precision Optical Glass
+
+#  Recipe Properties
+epimorphism.recipe.temperature=Temperature:%,d K
+
+#  Materials
+
+##  Organic Chemistry Materials
+gregtech.material.kapton_k=Kapton-K
+gregtech.material.kapton_e=Kapton-E
+gregtech.material.edot=3,4-Ethylenedioxythiophene (EDOT)
+gregtech.material.polystyrene=Polystyrene
+gregtech.material.polystyrene_sulfonate=Polystyrene Sulfonate
+gregtech.material.pedot_pss=PEDOT:PSS
+gregtech.material.polymethylmethacrylate=Polymethylmethacrylate (PMMA)
+gregtech.material.pedot_tma=PEDOT-TMA
+gregtech.material.tetramethylammonium_hydroxide=Tetramethyl ammonium hydroxide (TMAH)
+
+##  Unknown Composition Materials
+gregtech.material.bz_medium=Belousov-Zhabotinsky Medium
+gregtech.material.edp=EDP

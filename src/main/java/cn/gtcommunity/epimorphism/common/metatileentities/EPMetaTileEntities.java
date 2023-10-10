@@ -4,13 +4,11 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import net.minecraft.util.ResourceLocation;
 
 public class EPMetaTileEntities {
-    private static ResourceLocation epId(String name) {
-        return new ResourceLocation("epimorphism", name);
-    }
-    //  Need an id, and can sometimes use registerMetaTileEntity()
-    /*
+
+    //  Range: 12300-13300
     private static <T extends MetaTileEntity> T registerMultiMetaTileEntity(int id, T mte) {
-        return registerMultiMetaTileEntity(id + <any number>, mte);
-    }*/
+        return registerMultiMetaTileEntity(id + 12300, mte);
+    }
+
     public static void init() {}
 }
