@@ -11,6 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EPMetablocks {
     public static EPBlockGlassCasing EP_GLASS_CASING;
+    public static EPBlockPMMACasing EP_PMMA_CASING;
     public static EPBlockMultiblockCasing EP_MULTIBLOCK_CASING;
 
 
@@ -19,6 +20,8 @@ public class EPMetablocks {
     public static void init() {
         EP_GLASS_CASING = new EPBlockGlassCasing();
         EP_GLASS_CASING.setRegistryName("ep_glass_casing");
+        EP_PMMA_CASING = new EPBlockPMMACasing();
+        EP_PMMA_CASING.setRegistryName("ep_pmma_casing");
         EP_MULTIBLOCK_CASING = new EPBlockMultiblockCasing();
         EP_MULTIBLOCK_CASING.setRegistryName("ep_multiblock_casing");
     }
@@ -26,6 +29,7 @@ public class EPMetablocks {
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(EP_GLASS_CASING);
+        registerItemModel(EP_PMMA_CASING);
         registerItemModel(EP_MULTIBLOCK_CASING);
     }
 
@@ -38,6 +42,4 @@ public class EPMetablocks {
                             MetaBlocks.statePropertiesToString(state.getProperties())));
         }
     }
-
-
 }

@@ -31,24 +31,56 @@
     },
     "active=false,variant=w_boron_silicate_glass": {
       "model": "minecraft:cube_all",
+      "ambientocclusion": false,
       "textures": {
         "all": "epimorphism:blocks/casings/ep_glass_casing/w_boron_silicate_glass"
       }
     },
     "active=true,variant=w_boron_silicate_glass": {
       "model": "minecraft:cube_all",
+      "ambientocclusion": false,
       "textures": {
         "all": "epimorphism:blocks/casings/ep_glass_casing/w_boron_silicate_glass"
       }
     },
+    "active=false,variant=osmir_boron_silicate_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing/osmir_boron_silicate_glass"
+      }
+    },
+    "active=true,variant=osmir_boron_silicate_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing/osmir_boron_silicate_glass"
+      }
+    },
+    "active=false,variant=naq_boron_silicate_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing/naq_boron_silicate_glass"
+      }
+    },
+    "active=true,variant=naq_boron_silicate_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing/naq_boron_silicate_glass"
+      }
+    },
     "active=false,variant=thy_boron_silicate_glass": {
       "model": "minecraft:cube_all",
+      "ambientocclusion": false,
       "textures": {
         "all": "epimorphism:blocks/casings/ep_glass_casing/thy_boron_silicate_glass"
       }
     },
     "active=true,variant=thy_boron_silicate_glass": {
       "model": "minecraft:cube_all",
+      "ambientocclusion": false,
       "textures": {
         "all": "epimorphism:blocks/casings/ep_glass_casing/thy_boron_silicate_glass"
       }

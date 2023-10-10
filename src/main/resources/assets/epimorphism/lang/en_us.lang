@@ -196,6 +196,20 @@ tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casi
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
+tile.ep_glass_casing.boron_silicate_glass.tooltip=High Strength Glass/n§8HV-Tier Glass
 tile.ep_glass_casing.ti_boron_silicate_glass.name=Ti Boron Silicate Glass
+tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=High Strength Glass/n§8EV-Tier Glass
 tile.ep_glass_casing.w_boron_silicate_glass.name=W Boron Silicate Glass
+tile.ep_glass_casing.w_boron_silicate_glass.tooltip=High Strength Glass/n§8IV-Tier Glass
+tile.ep_glass_casing.osmir_boron_silicate_glass.name=Osmiridium Boron Silicate Glass
+tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=Industrial Crystal/n§8LuV-Tier Glass
+tile.ep_glass_casing.naq_boron_silicate_glass.name=Naq Boron Silicate Glass
+tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=Like a diamond!/n§8ZPM-Tier Glass
+tile.ep_pmma_casing.pmma_glass.name=PMMA Glass
+tile.ep_pmma_casing.pmma_glass.tooltip=Have both strength and toughness!/n§8UV-Tier Glass
+tile.ep_pmma_casing.neu_pmma_glass.name=Neutronium PMMA Glass
+tile.ep_pmma_casing.neu_pmma_glass.tooltip=TAfield/n§8UHV-Tier Glass
+
+#Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=ThYBoron Silicate Glass
+tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=Precision Optical Glass

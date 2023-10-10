@@ -18,15 +18,15 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.CasingType> {
-    public EPBlockGlassCasing() {
+public class EPBlockPMMACasing extends VariantActiveBlock<EPBlockPMMACasing.CasingType> {
+    public EPBlockPMMACasing() {
         super(Material.GLASS);
-        setTranslationKey("ep_glass_casing");
+        setTranslationKey("ep_pmma_casing");
         setHardness(5.0F);
-        setResistance(5.0F);
-        setSoundType(SoundType.GLASS);
-        setHarvestLevel(ToolClasses.PICKAXE, 1);
-        setDefaultState(this.getState(CasingType.SILICATE_GLASS));
+        setResistance(10.0F);
+        setSoundType(SoundType.STONE);
+        setHarvestLevel(ToolClasses.PICKAXE, 3);
+        setDefaultState(this.getState(CasingType.PMMA_GLASS));
         this.useNeighborBrightness = true;
     }
 
@@ -43,11 +43,12 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
 
     @Override
     public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
-        EPBlockGlassCasing.CasingType type = getState(state);
-        if( type == CasingType.NAQ_BORON_SILICATE_GLASS
+        //  渲染相关，可能启用，请不要修改
+        /*EPBlockPMMACasing.CasingType type = getState(state);
+        if( type == EPBlockPMMACasing.CasingType.
         ) {
             return super.canRenderInLayer(state, layer);
-        }
+        }*/
         return layer == BlockRenderLayer.TRANSLUCENT;
     }
 
@@ -76,12 +77,8 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
 
     public enum CasingType implements IStringSerializable {
 
-        SILICATE_GLASS("boron_silicate_glass"),
-        TI_BORON_SILICATE_GLASS("ti_boron_silicate_glass"),
-        W_BORON_SILICATE_GLASS("w_boron_silicate_glass"),
-        OSMIR_BORON_SILICATE_GLASS("osmir_boron_silicate_glass"),
-        NAQ_BORON_SILICATE_GLASS("naq_boron_silicate_glass"),
-        THY_BORON_SILICATE_GLASS("thy_boron_silicate_glass");
+        PMMA_GLASS("pmma_glass"),
+        NEU_PMMA_GLASS("neu_pmma_glass");
 
         private final String name;
 
@@ -92,4 +89,3 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
         public String getName() {return this.name;}
     }
 }
-
