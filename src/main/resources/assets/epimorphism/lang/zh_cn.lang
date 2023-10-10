@@ -200,6 +200,20 @@ tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方�
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
+tile.ep_glass_casing.boron_silicate_glass.tooltip=高强玻璃/n§8HV级玻璃
 tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硅酸盐硼玻璃
+tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=高强玻璃/n§8EV级玻璃
 tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硅酸盐硼玻璃
+tile.ep_glass_casing.w_boron_silicate_glass.tooltip=高强玻璃/n§8IV级玻璃
+tile.ep_glass_casing.osmir_boron_silicate_glass.name=铱锇强化硅酸盐硼玻璃
+tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=工业水晶/n§8LuV级玻璃
+tile.ep_glass_casing.naq_boron_silicate_glass.name=硅岩强化硅酸盐硼玻璃
+tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=堪比钻石！/n§8ZPM级玻璃
+tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
+tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！/n§8UV级玻璃
+tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
+tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
+
+#Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
+tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=精密光学玻璃
