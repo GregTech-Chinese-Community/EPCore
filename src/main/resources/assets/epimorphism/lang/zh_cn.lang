@@ -126,20 +126,17 @@ metaitem.component.gooware.nonlinear_chemical_oscillator.tooltip=非平衡热力
 #  Optical Components
 metaitem.component.optical.optical_laser_control_unit.name=光学激光控制器
 metaitem.component.optical.optical_laser_control_unit.tooltip=激光信息传输
-metaitem.wafer.phase_change_memory.name=PRAM晶片
-metaitem.wafer.phase_change_memory.tooltip=相变随机存取存储器
 
 #  Spintronic Components
 metaitem.component.spintronic.esr_computation_unit.name=电子自旋共振计算单元
 metaitem.component.spintronic.esr_computation_unit.tooltip=电子自旋共振量子计算！
-metaitem.wafer.spin_transfer_torque_memory.name=STTRAM晶片
-metaitem.wafer.spin_transfer_torque_memory.tooltip=自旋转移力矩存储器
 
 #  Cosmic Components
 metaitem.component.cosmic.information_module.name=宇宙信息承载模块
 metaitem.component.cosmic.information_module.tooltip=宇宙在我手中
 metaitem.component.cosmic.holographic_imc.name=存算一体全息存储器
 metaitem.component.cosmic.holographic_imc.tooltip=天穹对偶引力散射！
+
 #  Supracausal Components
 metaitem.component.supracausal.spacetime_condenser.name=超因果时空凝聚器
 metaitem.component.supracausal.spacetime_condenser.tooltip=超空间稳定器
@@ -170,6 +167,32 @@ metaitem.containment_unit.bose_einstein_condensate.name=玻色-爱因斯坦凝�
 metaitem.containment_unit.bose_einstein_condensate.tooltip=电磁蒸发冷却
 metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态
 metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个 §cRb-87§7 原子！
+
+#  Wafers
+metaitem.wafer.chip.phase_change_memory.name=PRAM晶片
+metaitem.wafer.chip.phase_change_memory.tooltip=相变随机存取存储器
+metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM晶片
+metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=自旋转移力矩存储器
+metaitem.wafer.nano_pic.name=NPIC晶圆
+metaitem.wafer.nano_pic.tooltip=纳米功率集成电路原料
+metaitem.wafer.chip.nano_pic.name=NPIC晶片
+metaitem.wafer.chip.nano_pic.tooltip=纳米功率集成电路
+metaitem.wafer.pico_pic.name=PPIC晶圆
+metaitem.wafer.pico_pic.tooltip=皮米功率集成电路原料
+metaitem.wafer.chip.pico_pic.name=PPIC晶片
+metaitem.wafer.chip.pico_pic.tooltip=皮米功率集成电路
+metaitem.wafer.femto_pic.name=FPIC晶圆
+metaitem.wafer.femto_pic.tooltip=飞米功率集成电路原料
+metaitem.wafer.chip.femto_pic.name=FPIC晶片
+metaitem.wafer.chip.femto_pic.tooltip=飞米功率集成电路
+metaitem.wafer.atto_pic.name=APIC晶圆
+metaitem.wafer.atto_pic.tooltip=阿米功率集成电路原料
+metaitem.wafer.chip.atto_pic.name=APIC晶片
+metaitem.wafer.chip.atto_pic.tooltip=阿米功率集成电路
+metaitem.wafer.zepto_pic.name=ZPIC晶圆
+metaitem.wafer.zepto_pic.tooltip=仄米功率集成电路原料
+metaitem.wafer.chip.zepto_pic.name=ZPIC
+metaitem.wafer.chip.zepto_pic.tooltip=仄米功率集成电路
 
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块

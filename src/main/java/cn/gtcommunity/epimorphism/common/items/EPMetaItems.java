@@ -66,11 +66,9 @@ public class EPMetaItems {
 
     //  Optical Components
     public static MetaItem<?>.MetaValueItem OPTICAL_LASER_CONTROL_UNIT;
-    public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
 
     //  Spintronic Components
     public static MetaItem<?>.MetaValueItem ESR_COMPUTATION_UNIT;
-    public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
 
     //  Cosmic Components
     public static MetaItem<?>.MetaValueItem COSMIC_INFORMATION_MODULE;
@@ -96,6 +94,20 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem TOPOLOGICAL_INSULATOR_TUBE;
     public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT;
     public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE;
+
+    //  Wafers
+    public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
+    public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
+    public static MetaItem<?>.MetaValueItem NANO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem NANO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem PICO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem PICO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem FEMTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem FEMTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem ATTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem ATTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
 
     private EPMetaItems() {}
 
