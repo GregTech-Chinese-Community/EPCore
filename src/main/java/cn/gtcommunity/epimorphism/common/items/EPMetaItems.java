@@ -60,26 +60,54 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_DIODE;
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_INDUCTOR;
 
-    //  Gooware Processor Components
+    //  Gooware Components
     public static MetaItem<?>.MetaValueItem BZ_REACTION_CHAMBER;
     public static MetaItem<?>.MetaValueItem NONLINEAR_CHEMICAL_OSCILLATOR;
 
-    //  Optical Processor Components
-    public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
+    //  Optical Components
+    public static MetaItem<?>.MetaValueItem OPTICAL_LASER_CONTROL_UNIT;
+
+    //  Spintronic Components
+    public static MetaItem<?>.MetaValueItem ESR_COMPUTATION_UNIT;
+
+    //  Cosmic Components
+    public static MetaItem<?>.MetaValueItem COSMIC_INFORMATION_MODULE;
+    public static MetaItem<?>.MetaValueItem HOLOGRAPHIC_INFORMATION_IMC;
+
+    //  Supracausal Components
+    public static MetaItem<?>.MetaValueItem SPACETIME_CONDENSER;
+    public static MetaItem<?>.MetaValueItem LIGHT_CONE_MODULE;
+
+    //  Lasers
     public static MetaItem<?>.MetaValueItem OPTICAL_FIBER;
     public static MetaItem<?>.MetaValueItem DIELECTRIC_MIRROR;
     public static MetaItem<?>.MetaValueItem EMPTY_LASER_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem HELIUM_LASER;
+    public static MetaItem<?>.MetaValueItem NEON_LASER;
+    public static MetaItem<?>.MetaValueItem ARGON_LASER;
+    public static MetaItem<?>.MetaValueItem KRYPTON_LASER;
+    public static MetaItem<?>.MetaValueItem XENON_LASER;
     public static MetaItem<?>.MetaValueItem HELIUM_NEON_LASER;
     public static MetaItem<?>.MetaValueItem ND_YAG_LASER;
-    public static MetaItem<?>.MetaValueItem OPTICAL_LASER_CONTROL_UNIT;
 
-
-    //  Spintronic Processor Components
-    public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
+    //  Condenser Components
     public static MetaItem<?>.MetaValueItem TOPOLOGICAL_INSULATOR_TUBE;
     public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT;
     public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE;
-    public static MetaItem<?>.MetaValueItem ESR_COMPUTATION_UNIT;
+
+    //  Wafers
+    public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
+    public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
+    public static MetaItem<?>.MetaValueItem NANO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem NANO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem PICO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem PICO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem FEMTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem FEMTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem ATTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem ATTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
+    public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
 
     private EPMetaItems() {}
 

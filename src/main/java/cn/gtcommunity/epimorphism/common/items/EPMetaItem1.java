@@ -67,24 +67,53 @@ public class EPMetaItem1 extends StandardMetaItem {
         SUPRACAUSAL_DIODE = this.addItem(44, "component.supracausal_smd.diode");
         SUPRACAUSAL_INDUCTOR = this.addItem(45, "component.supracausal_smd.inductor");
 
-        //  Gooware Processor Components
-        BZ_REACTION_CHAMBER = this.addItem(46, "reaction_chamber.bz");
-        NONLINEAR_CHEMICAL_OSCILLATOR = this.addItem(47, "nonlinear_chemical_oscillator");
+        //  Gooware Components
+        BZ_REACTION_CHAMBER = this.addItem(46, "component.gooware.reaction_chamber");
+        NONLINEAR_CHEMICAL_OSCILLATOR = this.addItem(47, "component.gooware.nonlinear_chemical_oscillator");
 
-        //  Optical Processor Components
-        PHASE_CHANGE_MEMORY = this.addItem(48, "plate.phase_change_memory");
-        OPTICAL_FIBER = this.addItem(49, "optical_fiber");
-        DIELECTRIC_MIRROR = this.addItem(50, "dielectric_mirror");
-        EMPTY_LASER_ASSEMBLY = this.addItem(51, "laser.assembly.empty");
-        HELIUM_NEON_LASER = this.addItem(52, "laser.helium_neon");
-        ND_YAG_LASER = this.addItem(53, "laser.nd_yag");
-        OPTICAL_LASER_CONTROL_UNIT = this.addItem(54, "optical_laser_control_unit");
+        //  Optical Components
+        OPTICAL_LASER_CONTROL_UNIT = this.addItem(48, "component.optical.optical_laser_control_unit");
 
-        //  Spintronic Processor Components
-        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(55, "plate.spin_transfer_torque_memory");
-        TOPOLOGICAL_INSULATOR_TUBE = this.addItem(56, "tube.topological_insulator");
-        BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT = this.addItem(57, "containment_unit.bose_einstein_condensate");
-        BOSE_EINSTEIN_CONDENSATE = this.addItem(58, "bose_einstein_condensate");
-        ESR_COMPUTATION_UNIT = this.addItem(59, "esr_computation_unit");
+        //  Spintronic Components
+        ESR_COMPUTATION_UNIT = this.addItem(49, "component.spintronic.esr_computation_unit");
+
+        //  Cosmic Components
+        COSMIC_INFORMATION_MODULE = this.addItem(50, "component.cosmic.information_module");
+        HOLOGRAPHIC_INFORMATION_IMC = this.addItem(51, "component.cosmic.holographic_imc");
+
+        //  Supracausal Components
+        SPACETIME_CONDENSER = this.addItem(52, "component.supracausal.spacetime_condenser");
+        LIGHT_CONE_MODULE = this.addItem(53, "component.supracausal.light_cone_module");
+
+        //  Lasers
+        OPTICAL_FIBER = this.addItem(54, "laser.optical_fiber");
+        DIELECTRIC_MIRROR = this.addItem(55, "laser.dielectric_mirror");
+        EMPTY_LASER_ASSEMBLY = this.addItem(56, "laser.emitter.empty");
+        HELIUM_LASER = this.addItem(57, "laser.emitter.helium");
+        NEON_LASER = this.addItem(58, "laser.emitter.neon");
+        ARGON_LASER = this.addItem(59, "laser.emitter.argon");
+        KRYPTON_LASER = this.addItem(60, "laser.emitter.krypton");
+        XENON_LASER = this.addItem(61, "laser.emitter.xenon");
+        HELIUM_NEON_LASER = this.addItem(62, "laser.emitter.helium_neon");
+        ND_YAG_LASER = this.addItem(63, "laser.emitter.nd_yag");
+
+        //  Condenser Components
+        TOPOLOGICAL_INSULATOR_TUBE = this.addItem(64, "tube.topological_insulator");
+        BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT = this.addItem(65, "containment_unit.bose_einstein_condensate");
+        BOSE_EINSTEIN_CONDENSATE = this.addItem(66, "bose_einstein_condensate");
+
+        //  Wafers
+        PHASE_CHANGE_MEMORY = this.addItem(67, "wafer.chip.phase_change_memory");
+        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(68, "wafer.chip.spin_transfer_torque_memory");
+        NANO_PIC_WAFER = this.addItem(69, "wafer.nano_pic");
+        NANO_PIC_CHIP = this.addItem(70, "wafer.chip.nano_pic");
+        PICO_PIC_WAFER = this.addItem(71, "wafer.pico_pic");
+        PICO_PIC_CHIP = this.addItem(72, "wafer.chip.pico_pic");
+        FEMTO_PIC_WAFER = this.addItem(73, "wafer.femto_pic");
+        FEMTO_PIC_CHIP = this.addItem(74, "wafer.chip.femto_pic");
+        ATTO_PIC_WAFER = this.addItem(75, "wafer.atto_pic");
+        ATTO_PIC_CHIP = this.addItem(76, "wafer.chip.atto_pic");
+        ZEPTO_PIC_WAFER = this.addItem(77, "wafer.zepto_pic");
+        ZEPTO_PIC_CHIP = this.addItem(78, "wafer.chip.zepto_pic");
     }
 }

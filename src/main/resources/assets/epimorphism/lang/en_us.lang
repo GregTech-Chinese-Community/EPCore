@@ -118,40 +118,83 @@ metaitem.component.supracausal_smd.diode.tooltip=Supracausal Diode
 metaitem.component.supracausal_smd.inductor.name=Supersymmetric Conformal Polarizer
 metaitem.component.supracausal_smd.inductor.tooltip=Supracausal Inductor
 
-#   Gooware Processor Component
-metaitem.reaction_chamber.bz.name=Belousov-Zhabotinsky Reaction Chamber
-metaitem.nonlinear_chemical_oscillator.name=Nonlinear Chemical Oscillator
-metaitem.nonlinear_chemical_oscillator.tooltip=Non-equilibrium Thermodynamics!
+#  Gooware Components
+metaitem.component.gooware.reaction_chamber.name=Belousov-Zhabotinsky Reaction Chamber
+metaitem.component.gooware.nonlinear_chemical_oscillator.name=Nonlinear Chemical Oscillator
+metaitem.component.gooware.nonlinear_chemical_oscillator.tooltip=Non-equilibrium Thermodynamics!
 
-#   Optical Processor Component
-metaitem.plate.phase_change_memory.name=PRAM
-metaitem.plate.phase_change_memory.tooltip=Phase-change Memory
-metaitem.optical_fiber.name=Optical Fiber
-metaitem.optical_fiber.tooltip=Light-transmitting Glass
-metaitem.dielectric_mirror.name=Dielectric Mirror
-metaitem.dielectric_mirror.tooltip=Bragg Mirror
-metaitem.laser.assembly.empty.name=Empty Laser Assembly
-metaitem.laser.assembly.empty.tooltip=Fill this with some Laser Medium
-metaitem.laser.helium_neon.name=Helium-Neon Laser
-metaitem.laser.helium_neon.tooltip=Purpose: Weak Optical Appliances
-metaitem.laser.nd_yag.name=Nd:YAG Laser
-metaitem.laser.nd_yag.tooltip=Purpose: Strong Optical Appliances
-metaitem.optical_laser_control_unit.name=Optical Laser Control Unit
-metaitem.optical_laser_control_unit.tooltip=Laser Information Transmission
+#  Optical Components
+metaitem.component.optical.optical_laser_control_unit.name=Optical Laser Control Unit
+metaitem.component.optical.optical_laser_control_unit.tooltip=Laser Information Transmission
 
-#   Spintronic Processor Component
-metaitem.plate.spin_transfer_torque_memory.name=STTRAM
-metaitem.plate.spin_transfer_torque_memory.tooltip=Spin-Transfer Torque Memory
+#  Spintronic Components
+metaitem.component.spintronic.esr_computation_unit.name=ESR Computation Unit
+metaitem.component.spintronic.esr_computation_unit.tooltip=Electron Spin Resonance Quantum Computation!
+
+#  Cosmic Components
+metaitem.component.cosmic.information_module.name=Cosmic Information Module
+metaitem.component.cosmic.information_module.tooltip=Universe in my hands
+metaitem.component.cosmic.holographic_imc.name=Holographic IMC
+metaitem.component.cosmic.holographic_imc.tooltip=Celestial Holographic Gravitational Scattering!
+
+#  Supracausal Components
+metaitem.component.supracausal.spacetime_condenser.name=Supracausal SpaceTime Condenser
+metaitem.component.supracausal.spacetime_condenser.tooltip=Hyperspace Stabilizer
+metaitem.component.supracausal.light_cone_module.name=Spacetime Light cone Stabilization Module
+metaitem.component.supracausal.light_cone_module.tooltip=Spin Foam Path Integral Computation!
+
+#  Lasers
+metaitem.laser.optical_fiber.name=Optical Fiber
+metaitem.laser.optical_fiber.tooltip=Light-transmitting Glass
+metaitem.laser.dielectric_mirror.name=Dielectric Mirror
+metaitem.laser.dielectric_mirror.tooltip=Bragg Mirror
+metaitem.laser.emitter.empty.name=Empty Laser Assembly
+metaitem.laser.emitter.empty.tooltip=Fill this with some Laser Medium
+metaitem.laser.emitter.helium.name=Helium Laser Emitter
+metaitem.laser.emitter.neon.name=Neon Laser Emitter
+metaitem.laser.emitter.argon.name=Argon Laser Emitter
+metaitem.laser.emitter.krypton.name=Krypton Laser Emitter
+metaitem.laser.emitter.xenon.name=Xenon Laser Emitter
+metaitem.laser.emitter.helium_neon.name=Helium-Neon Laser
+metaitem.laser.emitter.helium_neon.tooltip=Purpose: Weak Optical Appliances
+metaitem.laser.emitter.nd_yag.name=Nd:YAG Laser Emitter
+metaitem.laser.emitter.nd_yag.tooltip=Purpose: Strong Optical Appliances
+
+#  Condenser Components
 metaitem.tube.topological_insulator.name=Topological Insulator Tube
 metaitem.tube.topological_insulator.tooltip=Conductive Surface States
 metaitem.containment_unit.bose_einstein_condensate.name=Bose-Einstein Condensate Containment Unit
 metaitem.containment_unit.bose_einstein_condensate.tooltip=Magnetic Evaporative Cooling
 metaitem.bose_einstein_condensate.name=Bose-Einstein Condensate
 metaitem.bose_einstein_condensate.tooltip=2,000 §cRb-87§7 Atoms at §b170nK§7!
-metaitem.esr_computation_unit.name=ESR Computation Unit
-metaitem.esr_computation_unit.tooltip=Electron Spin Resonance Quantum Computation!
 
-#   Glass
+#  Wafers
+metaitem.wafer.chip.phase_change_memory.name=PRAM
+metaitem.wafer.chip.phase_change_memory.tooltip=Phase-change Memory
+metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM
+metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=Spin-Transfer Torque Memory
+metaitem.wafer.nano_pic.name=NPIC Wafer
+metaitem.wafer.nano_pic.tooltip=Raw Nano Power Circuit
+metaitem.wafer.chip.nano_pic.name=NPIC
+metaitem.wafer.chip.nano_pic.tooltip=Nano Power Integrated Circuit
+metaitem.wafer.pico_pic.name=PPIC Wafer
+metaitem.wafer.pico_pic.tooltip=Raw Pico Power Circuit
+metaitem.wafer.chip.pico_pic.name=PPIC
+metaitem.wafer.chip.pico_pic.tooltip=Pico Power Integrated Circuit
+metaitem.wafer.femto_pic.name=FPIC Wafer
+metaitem.wafer.femto_pic.tooltip=Raw Femto Power Circuit
+metaitem.wafer.chip.femto_pic.name=FPIC
+metaitem.wafer.chip.femto_pic.tooltip=Femto Power Integrated Circuit
+metaitem.wafer.zepto_pic.name=ZPIC Wafer
+metaitem.wafer.zepto_pic.tooltip=Raw Zepto Power Circuit
+metaitem.wafer.chip.zepto_pic.name=ZPIC
+metaitem.wafer.chip.zepto_pic.tooltip=Zepto Power Integrated Circuit
+
+#  Multiblock Casings
+tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
+tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casing
+
+#  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
 tile.ep_glass_casing.ti_boron_silicate_glass.name=Ti Boron Silicate Glass
 tile.ep_glass_casing.w_boron_silicate_glass.name=W Boron Silicate Glass

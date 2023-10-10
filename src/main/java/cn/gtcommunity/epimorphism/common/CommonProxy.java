@@ -38,14 +38,15 @@ public class CommonProxy {
         EPLog.logger.info("Registering blocks...");
         IForgeRegistry<Block> registry = event.getRegistry();
         registry.register(EPMetablocks.EP_GLASS_CASING);
+        registry.register(EPMetablocks.EP_MULTIBLOCK_CASING);
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         EPLog.logger.info("Registering Items...");
         IForgeRegistry<Item> registry = event.getRegistry();
-        registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING, VariantItemBlock::new)
-        );
+        registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_MULTIBLOCK_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

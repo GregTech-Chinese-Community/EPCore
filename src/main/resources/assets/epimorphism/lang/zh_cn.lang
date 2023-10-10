@@ -118,40 +118,87 @@ metaitem.component.supracausal_smd.diode.tooltip=超因果二极管
 metaitem.component.supracausal_smd.inductor.name=超对称共形偏振器
 metaitem.component.supracausal_smd.inductor.tooltip=超因果电感
 
-#   Gooware Processor Component
-metaitem.reaction_chamber.bz.name=B-Z振荡反应室
-metaitem.nonlinear_chemical_oscillator.name=非线性化学振荡器
-metaitem.nonlinear_chemical_oscillator.tooltip=非平衡热力学！
+#  Gooware Components
+metaitem.component.gooware.reaction_chamber.name=别洛索夫-扎鲍京斯基振荡反应室
+metaitem.component.gooware.nonlinear_chemical_oscillator.name=非线性化学振荡器
+metaitem.component.gooware.nonlinear_chemical_oscillator.tooltip=非平衡热力学！
 
-#   Optical Processor Component
-metaitem.plate.phase_change_memory.name=PRAM
-metaitem.plate.phase_change_memory.tooltip=相变内存
-metaitem.optical_fiber.name=光纤
-metaitem.optical_fiber.tooltip=透光玻璃
-metaitem.dielectric_mirror.name=介电镜
-metaitem.dielectric_mirror.tooltip=布拉格之镜
-metaitem.laser.assembly.empty.name=空激光组件
-metaitem.laser.assembly.empty.tooltip=用一些激光介质填充它
-metaitem.laser.helium_neon.name=氦氖激光
-metaitem.laser.helium_neon.tooltip=用途：弱光学设备
-metaitem.laser.nd_yag.name=掺钕钇铝石榴石激光(Nd:YAG)
-metaitem.laser.nd_yag.tooltip=用途：强光学设备
-metaitem.optical_laser_control_unit.name=光学激光控制装置
-metaitem.optical_laser_control_unit.tooltip=激光信息传输
+#  Optical Components
+metaitem.component.optical.optical_laser_control_unit.name=光学激光控制器
+metaitem.component.optical.optical_laser_control_unit.tooltip=激光信息传输
 
-#   Spintronic Processor Component
-metaitem.plate.spin_transfer_torque_memory.name=STTRAM
-metaitem.plate.spin_transfer_torque_memory.tooltip=自旋转移扭矩记忆
+#  Spintronic Components
+metaitem.component.spintronic.esr_computation_unit.name=电子自旋共振计算单元
+metaitem.component.spintronic.esr_computation_unit.tooltip=电子自旋共振量子计算！
+
+#  Cosmic Components
+metaitem.component.cosmic.information_module.name=宇宙信息承载模块
+metaitem.component.cosmic.information_module.tooltip=宇宙在我手中
+metaitem.component.cosmic.holographic_imc.name=存算一体全息存储器
+metaitem.component.cosmic.holographic_imc.tooltip=天穹对偶引力散射！
+
+#  Supracausal Components
+metaitem.component.supracausal.spacetime_condenser.name=超因果时空凝聚器
+metaitem.component.supracausal.spacetime_condenser.tooltip=超空间稳定器
+metaitem.component.supracausal.light_cone_module.name=时空光锥稳定模块
+metaitem.component.supracausal.light_cone_module.tooltip=自旋泡沫路径积分计算！
+
+#  Lasers
+metaitem.laser.optical_fiber.name=光纤
+metaitem.laser.optical_fiber.tooltip=透光玻璃
+metaitem.laser.dielectric_mirror.name=介电镜
+metaitem.laser.dielectric_mirror.tooltip=布氏镜
+metaitem.laser.emitter.empty.name=空激光组件
+metaitem.laser.emitter.empty.tooltip=需要导光介质填充
+metaitem.laser.emitter.helium.name=氦激光镭射器
+metaitem.laser.emitter.neon.name=氖激光镭射器
+metaitem.laser.emitter.argon.name=氩激光镭射器
+metaitem.laser.emitter.krypton.name=氪激光镭射器
+metaitem.laser.emitter.xenon.name=氙激光镭射器
+metaitem.laser.emitter.helium_neon.name=氦-氖混合气激光镭射器
+metaitem.laser.emitter.helium_neon.tooltip=用于弱光学设备
+metaitem.laser.emitter.nd_yag.name=掺钕钇铝石榴石激光镭射器
+metaitem.laser.emitter.nd_yag.tooltip=用于强光学设备
+
+#  Condenser Components
 metaitem.tube.topological_insulator.name=拓扑绝缘管
 metaitem.tube.topological_insulator.tooltip=导电表面态
-metaitem.containment_unit.bose_einstein_condensate.name=玻色-爱因斯坦冷凝液遏制装置
-metaitem.containment_unit.bose_einstein_condensate.tooltip=磁蒸发冷却
-metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚体
-metaitem.bose_einstein_condensate.tooltip=2,000§cRb-87§7原子，§b170nK§7！
-metaitem.esr_computation_unit.name=ESR计算单元
-metaitem.esr_computation_unit.tooltip=电子自旋共振量子计算！
+metaitem.containment_unit.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态遏制装置
+metaitem.containment_unit.bose_einstein_condensate.tooltip=电磁蒸发冷却
+metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态
+metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个 §cRb-87§7 原子！
 
-# Glass
+#  Wafers
+metaitem.wafer.chip.phase_change_memory.name=PRAM晶片
+metaitem.wafer.chip.phase_change_memory.tooltip=相变随机存取存储器
+metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM晶片
+metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=自旋转移力矩存储器
+metaitem.wafer.nano_pic.name=NPIC晶圆
+metaitem.wafer.nano_pic.tooltip=纳米功率集成电路原料
+metaitem.wafer.chip.nano_pic.name=NPIC晶片
+metaitem.wafer.chip.nano_pic.tooltip=纳米功率集成电路
+metaitem.wafer.pico_pic.name=PPIC晶圆
+metaitem.wafer.pico_pic.tooltip=皮米功率集成电路原料
+metaitem.wafer.chip.pico_pic.name=PPIC晶片
+metaitem.wafer.chip.pico_pic.tooltip=皮米功率集成电路
+metaitem.wafer.femto_pic.name=FPIC晶圆
+metaitem.wafer.femto_pic.tooltip=飞米功率集成电路原料
+metaitem.wafer.chip.femto_pic.name=FPIC晶片
+metaitem.wafer.chip.femto_pic.tooltip=飞米功率集成电路
+metaitem.wafer.atto_pic.name=APIC晶圆
+metaitem.wafer.atto_pic.tooltip=阿米功率集成电路原料
+metaitem.wafer.chip.atto_pic.name=APIC晶片
+metaitem.wafer.chip.atto_pic.tooltip=阿米功率集成电路
+metaitem.wafer.zepto_pic.name=ZPIC晶圆
+metaitem.wafer.zepto_pic.tooltip=仄米功率集成电路原料
+metaitem.wafer.chip.zepto_pic.name=ZPIC
+metaitem.wafer.chip.zepto_pic.tooltip=仄米功率集成电路
+
+#  Multiblock Casings
+tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
+tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
+
+#  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
 tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硅酸盐硼玻璃
 tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硅酸盐硼玻璃
