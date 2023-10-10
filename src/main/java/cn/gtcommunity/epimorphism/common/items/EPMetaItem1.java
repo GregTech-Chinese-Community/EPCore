@@ -67,24 +67,42 @@ public class EPMetaItem1 extends StandardMetaItem {
         SUPRACAUSAL_DIODE = this.addItem(44, "component.supracausal_smd.diode");
         SUPRACAUSAL_INDUCTOR = this.addItem(45, "component.supracausal_smd.inductor");
 
-        //  Gooware Processor Components
-        BZ_REACTION_CHAMBER = this.addItem(46, "reaction_chamber.bz");
-        NONLINEAR_CHEMICAL_OSCILLATOR = this.addItem(47, "nonlinear_chemical_oscillator");
+        //  Gooware Components
+        BZ_REACTION_CHAMBER = this.addItem(46, "component.gooware.reaction_chamber");
+        NONLINEAR_CHEMICAL_OSCILLATOR = this.addItem(47, "component.gooware.nonlinear_chemical_oscillator");
 
-        //  Optical Processor Components
-        PHASE_CHANGE_MEMORY = this.addItem(48, "plate.phase_change_memory");
-        OPTICAL_FIBER = this.addItem(49, "optical_fiber");
-        DIELECTRIC_MIRROR = this.addItem(50, "dielectric_mirror");
-        EMPTY_LASER_ASSEMBLY = this.addItem(51, "laser.assembly.empty");
-        HELIUM_NEON_LASER = this.addItem(52, "laser.helium_neon");
-        ND_YAG_LASER = this.addItem(53, "laser.nd_yag");
-        OPTICAL_LASER_CONTROL_UNIT = this.addItem(54, "optical_laser_control_unit");
+        //  Optical Components
+        OPTICAL_LASER_CONTROL_UNIT = this.addItem(48, "component.optical.optical_laser_control_unit");
+        PHASE_CHANGE_MEMORY = this.addItem(49, "wafer.phase_change_memory");
 
-        //  Spintronic Processor Components
-        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(55, "plate.spin_transfer_torque_memory");
-        TOPOLOGICAL_INSULATOR_TUBE = this.addItem(56, "tube.topological_insulator");
-        BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT = this.addItem(57, "containment_unit.bose_einstein_condensate");
-        BOSE_EINSTEIN_CONDENSATE = this.addItem(58, "bose_einstein_condensate");
-        ESR_COMPUTATION_UNIT = this.addItem(59, "esr_computation_unit");
+        //  Spintronic Components
+        ESR_COMPUTATION_UNIT = this.addItem(50, "component.spintronic.esr_computation_unit");
+        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(51, "wafer.spin_transfer_torque_memory");
+
+        //  Cosmic Components
+        COSMIC_INFORMATION_MODULE = this.addItem(52, "component.cosmic.information_module");
+        HOLOGRAPHIC_INFORMATION_IMC = this.addItem(53, "component.cosmic.holographic_imc");
+
+        //  Supracausal Components
+        SPACETIME_CONDENSER = this.addItem(54, "component.supracausal.spacetime_condenser");
+        LIGHT_CONE_MODULE = this.addItem(55, "component.supracausal.light_cone_module");
+
+        //  Lasers
+        OPTICAL_FIBER = this.addItem(56, "laser.optical_fiber");
+        DIELECTRIC_MIRROR = this.addItem(57, "laser.dielectric_mirror");
+        EMPTY_LASER_ASSEMBLY = this.addItem(58, "laser.emitter.empty");
+        HELIUM_LASER = this.addItem(59, "laser.emitter.helium");
+        NEON_LASER = this.addItem(60, "laser.emitter.neon");
+        ARGON_LASER = this.addItem(61, "laser.emitter.argon");
+        KRYPTON_LASER = this.addItem(62, "laser.emitter.krypton");
+        XENON_LASER = this.addItem(63, "laser.emitter.xenon");
+        HELIUM_NEON_LASER = this.addItem(64, "laser.emitter.helium_neon");
+        ND_YAG_LASER = this.addItem(65, "laser.emitter.nd_yag");
+
+        //  Condenser Components
+        TOPOLOGICAL_INSULATOR_TUBE = this.addItem(66, "tube.topological_insulator");
+        BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT = this.addItem(67, "containment_unit.bose_einstein_condensate");
+        BOSE_EINSTEIN_CONDENSATE = this.addItem(68, "bose_einstein_condensate");
+
     }
 }

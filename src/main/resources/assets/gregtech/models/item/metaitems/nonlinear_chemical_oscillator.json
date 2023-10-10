@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "epimorphism:items/metaitems/nonlinear_chemical_oscillator"
-  }
-}
