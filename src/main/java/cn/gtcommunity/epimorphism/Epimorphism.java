@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
+import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import gregtech.common.ConfigHolder;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -38,6 +39,7 @@ public class Epimorphism {
         EPLog.logger.info("Enabled GregTechCEu highTierContent");
         EPMetaItems.initialization();
         EPMetablocks.init();
+        EPMetaTileEntities.init();
         proxy.preLoad();
     }
 
