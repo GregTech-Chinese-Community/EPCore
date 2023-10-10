@@ -3,10 +3,14 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.material.info.MaterialFlags;
 
 public class EPMaterialFlagAddition {
 
     public static void init() {
+        //  Darmstadtium Frame for Gooware Mainframe
+        Materials.Darmstadtium.addFlags(MaterialFlags.GENERATE_FRAME);
+
         /*
         *  Coils for Motor wires
         *  Copper      | LV Motor

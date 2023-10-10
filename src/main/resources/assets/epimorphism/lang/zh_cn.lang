@@ -214,6 +214,27 @@ tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！/n§8UV级玻璃
 tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
 
-#Optical Glasses
+#  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=精密光学玻璃
+
+#  Recipe Properties and Recipe Maps
+recipemap.cvd_recipes.name=化学气相沉积
+epimorphism.recipe.temperature=温度:%,d K
+
+#  Materials
+
+##  Organic Chemistry Materials
+gregtech.material.kapton_k=聚酰亚胺-K
+gregtech.material.kapton_e=聚酰亚胺-E
+gregtech.material.edot=3,4-乙撑二氧噻吩（EDOT）
+gregtech.material.polystyrene=聚苯乙烯（PS）
+gregtech.material.polystyrene_sulfonate=聚苯乙烯磺酸（PSS）
+gregtech.material.pedot_pss=PEDOT:PSS
+gregtech.material.polymethylmethacrylate=聚甲基丙烯酸甲酯（PMMA）
+gregtech.material.pedot_tma=PEDOT-TMA
+gregtech.material.tetramethylammonium_hydroxide=四甲基氢氧化铵（TMAH）
+
+##  Unknown Composition Materials
+gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
+gregtech.material.edp=乙二胺邻苯二酚（EDP）
