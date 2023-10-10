@@ -1,8 +1,10 @@
 package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
+import gregtech.api.block.VariantItemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -12,6 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Objects;
 import java.util.function.Function;
@@ -30,16 +33,19 @@ public class CommonProxy {
     public static void syncConfigValues(ConfigChangedEvent.OnConfigChangedEvent event) {
     }
 
-    //@SubscribeEvent
+    @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         EPLog.logger.info("Registering blocks...");
+        IForgeRegistry<Block> registry = event.getRegistry();
+        registry.register(EPMetablocks.EP_GLASS_CASING);
     }
 
-    //@SubscribeEvent
+    @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         EPLog.logger.info("Registering Items...");
-        EPMetaItems.initSubItems();
-
+        IForgeRegistry<Item> registry = event.getRegistry();
+        registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING, VariantItemBlock::new)
+        );
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

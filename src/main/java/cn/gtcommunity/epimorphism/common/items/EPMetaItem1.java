@@ -66,5 +66,25 @@ public class EPMetaItem1 extends StandardMetaItem {
         SUPRACAUSAL_CAPACITOR = this.addItem(43, "component.supracausal_smd.capacitor");
         SUPRACAUSAL_DIODE = this.addItem(44, "component.supracausal_smd.diode");
         SUPRACAUSAL_INDUCTOR = this.addItem(45, "component.supracausal_smd.inductor");
+
+        //  Gooware Processor Components
+        BZ_REACTION_CHAMBER = this.addItem(46, "reaction_chamber.bz");
+        NONLINEAR_CHEMICAL_OSCILLATOR = this.addItem(47, "nonlinear_chemical_oscillator");
+
+        //  Optical Processor Components
+        PHASE_CHANGE_MEMORY = this.addItem(48, "plate.phase_change_memory");
+        OPTICAL_FIBER = this.addItem(49, "optical_fiber");
+        DIELECTRIC_MIRROR = this.addItem(50, "dielectric_mirror");
+        EMPTY_LASER_ASSEMBLY = this.addItem(51, "laser.assembly.empty");
+        HELIUM_NEON_LASER = this.addItem(52, "laser.helium_neon");
+        ND_YAG_LASER = this.addItem(53, "laser.nd_yag");
+        OPTICAL_LASER_CONTROL_UNIT = this.addItem(54, "optical_laser_control_unit");
+
+        //  Spintronic Processor Components
+        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(55, "plate.spin_transfer_torque_memory");
+        TOPOLOGICAL_INSULATOR_TUBE = this.addItem(56, "tube.topological_insulator");
+        BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT = this.addItem(57, "containment_unit.bose_einstein_condensate");
+        BOSE_EINSTEIN_CONDENSATE = this.addItem(58, "bose_einstein_condensate");
+        ESR_COMPUTATION_UNIT = this.addItem(59, "esr_computation_unit");
     }
 }

@@ -60,6 +60,27 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_DIODE;
     public static MetaItem<?>.MetaValueItem SUPRACAUSAL_INDUCTOR;
 
+    //  Gooware Processor Components
+    public static MetaItem<?>.MetaValueItem BZ_REACTION_CHAMBER;
+    public static MetaItem<?>.MetaValueItem NONLINEAR_CHEMICAL_OSCILLATOR;
+
+    //  Optical Processor Components
+    public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
+    public static MetaItem<?>.MetaValueItem OPTICAL_FIBER;
+    public static MetaItem<?>.MetaValueItem DIELECTRIC_MIRROR;
+    public static MetaItem<?>.MetaValueItem EMPTY_LASER_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem HELIUM_NEON_LASER;
+    public static MetaItem<?>.MetaValueItem ND_YAG_LASER;
+    public static MetaItem<?>.MetaValueItem OPTICAL_LASER_CONTROL_UNIT;
+
+
+    //  Spintronic Processor Components
+    public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
+    public static MetaItem<?>.MetaValueItem TOPOLOGICAL_INSULATOR_TUBE;
+    public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE_CONTAINMENT_UNIT;
+    public static MetaItem<?>.MetaValueItem BOSE_EINSTEIN_CONDENSATE;
+    public static MetaItem<?>.MetaValueItem ESR_COMPUTATION_UNIT;
+
     private EPMetaItems() {}
 
     public static void initialization()
