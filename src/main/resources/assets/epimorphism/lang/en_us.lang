@@ -172,7 +172,11 @@ metaitem.containment_unit.bose_einstein_condensate.tooltip=Magnetic Evaporative 
 metaitem.bose_einstein_condensate.name=Bose-Einstein Condensate
 metaitem.bose_einstein_condensate.tooltip=2,000 §cRb-87§7 Atoms at §b170nK§7!
 
-#   Glasses
+#  Multiblock Casings
+tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
+tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casing
+
+#  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
 tile.ep_glass_casing.ti_boron_silicate_glass.name=Ti Boron Silicate Glass
 tile.ep_glass_casing.w_boron_silicate_glass.name=W Boron Silicate Glass

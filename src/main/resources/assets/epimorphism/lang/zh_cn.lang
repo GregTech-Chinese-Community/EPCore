@@ -171,7 +171,11 @@ metaitem.containment_unit.bose_einstein_condensate.tooltip=电磁蒸发冷却
 metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态
 metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个 §cRb-87§7 原子！
 
-# Glass
+#  Multiblock Casings
+tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
+tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
+
+#  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
 tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硅酸盐硼玻璃
 tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硅酸盐硼玻璃
