@@ -17,6 +17,8 @@
 
 Epimorphism Core is a Minecraft mod for the modpack **Epimorphism**. The repository contains all the code and assets required to build and run that mod.
 
+Epimorphism Core requires [CodeChickenLib](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-1-8), [GregTech CEu](https://github.com/GregTechCEu/GregTech) and [Gregicality Multiblocks](https://github.com/GregTechCEu/gregicality-multiblocks). 
+
 ###  Epimorphism?
 
 Epimorphism is a Minecraft 1.12.2 modpack, this modpack is about technology, magic, and adventure.
@@ -33,6 +35,8 @@ Improve difficulty and QoL of GregTech CEu, based on GregTech 6, Gregicality Leg
 
 * Curved Plate textures and recipes from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
 
-* Cosmic Inductor and Supracausal SMD textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
+* Circuit textures from **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**.
+
+* Cosmic Inductor, Supracausal SMD and some circuit textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
 
 * README.md base from **[GregTech CEu](https://github.com/GregTechCEu/GregTech)**.
