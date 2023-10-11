@@ -43,6 +43,8 @@ public EPMaterials() {}
 
     public static Material SulfurDichloride;
 
+    public static Material AcetoneCyanohydrin;
+
     //  Unknown Composition Materials
     public static Material BZMedium;
     public static Material EDP;

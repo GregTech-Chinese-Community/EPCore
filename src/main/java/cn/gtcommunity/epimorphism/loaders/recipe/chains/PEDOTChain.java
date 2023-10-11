@@ -7,7 +7,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 
-public class EDOTChain {
+public class PEDOTChain {
     public static void init() {
 
         //  Diacetyl

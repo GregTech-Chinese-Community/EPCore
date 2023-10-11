@@ -232,5 +232,12 @@ public class EPOrganicChemistryMaterials {
                 .color(0x761410)
                 .components(Sulfur, 1, Chlorine, 2)
                 .build();
+        //  25020 Acetone Cyanohydrin
+        AcetoneCyanohydrin = new Material.Builder(25020, gregtechId("acetone_cyanohydrin"))
+                .fluid()
+                .color(0xA1FFD0)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 4, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .build();
     }
 }
