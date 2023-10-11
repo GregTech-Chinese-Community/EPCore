@@ -13,8 +13,7 @@ import gregtech.api.unification.stack.UnificationEntry;
 
 import javax.annotation.Nonnull;
 
-import static gregtech.api.unification.material.properties.PropertyKey.GEM;
-import static gregtech.api.unification.material.properties.PropertyKey.TOOL;
+import static gregtech.api.unification.material.properties.PropertyKey.*;
 
 public class EPToolRecipeHandler {
 

@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
+import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import gregicality.multiblocks.api.render.GCYMTextures;
@@ -14,7 +15,6 @@ import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.blocks.BlockBoilerCasing;
-import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.util.ResourceLocation;
 
@@ -48,7 +48,7 @@ public class EPMetaTileEntitySonicator extends RecipeMapMultiblockController {
                         .or(autoAbilities()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
                 .where('C', states(GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.ELECTROLYTIC_CELL)))
-                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS)))
+                .where('G', EPTraceabilityPredicate.EP_GLASS.get())
                 .where(' ', any())
                 .build();
     }

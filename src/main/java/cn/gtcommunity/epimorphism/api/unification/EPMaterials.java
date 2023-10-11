@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.api.unification;
 
 import cn.gtcommunity.epimorphism.api.unification.materials.EPMaterialFlagAddition;
+import cn.gtcommunity.epimorphism.api.unification.materials.EPMaterialPropertyAddition;
 import cn.gtcommunity.epimorphism.api.unification.materials.EPOrganicChemistryMaterials;
 import cn.gtcommunity.epimorphism.api.unification.materials.EPUnknownCompositionMaterials;
 import gregtech.api.unification.material.Material;
@@ -20,12 +21,43 @@ public EPMaterials() {}
 
     public static Material TetramethylammoniumHydroxide;
 
+    public static Material PotassiumHydroxide;
+
+    public static Material PotassiumBromate;
+
+    public static Material MalonicAcid;
+
+    public static Material ChloroaceticAcid;
+
+    public static Material Trichloroethylene;
+
+    public static Material Dichloroethane;
+
+    public static Material HydrobromicAcid;
+
+    public static Material Butanediol;
+
+    public static Material Diacetyl;
+
+    public static Material EthyleneGlycol;
+
+    public static Material SulfurDichloride;
+
+    public static Material AcetoneCyanohydrin;
+
+    public static Material ParaXylene;
+
     //  Unknown Composition Materials
     public static Material BZMedium;
     public static Material EDP;
 
+    public static Material RichNitrogenMixture;
+
+    public static Material RichAmmoniaMixture;
+
     //  Range: 25000-26000
     public static void init() {
+        EPMaterialPropertyAddition.init();
         EPMaterialFlagAddition.init();
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();

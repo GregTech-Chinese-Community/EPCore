@@ -3,7 +3,6 @@ package cn.gtcommunity.epimorphism.api.recipe;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierNoCoilTemperatureRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.NoCoilTemperatureRecipeBuilder;
-import cn.gtcommunity.epimorphism.api.recipe.properties.GlassTierProperty;
 import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
@@ -35,11 +34,19 @@ public class EPRecipeMaps {
             .setProgressBar(EPGuiTextures.PROGRESS_BAR_NANOSCALE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ELECTROLYZER);
 
-    public static final RecipeMap<SimpleRecipeBuilder> SONICATION_RECIPES = new RecipeMap<>("sonication_recipes", 0, 0, 0, 1, 2, 2, 1, 1, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<GlassTierRecipeBuilder> SONICATION_RECIPES = new RecipeMap<>("sonication_recipes", 0, 0, 0, 1, 2, 2, 1, 1, new GlassTierRecipeBuilder(), false)
             .setSlotOverlay(false, true, false, GuiTextures.BREWER_OVERLAY)
             .setSlotOverlay(false, true, true, GuiTextures.MOLECULAR_OVERLAY_3)
             .setSlotOverlay(true, true, true, GuiTextures.MOLECULAR_OVERLAY_4)
             .setSlotOverlay(true, false, true, EPGuiTextures.FOIL_OVERLAY)
             .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.CENTRIFUGE);
+
+    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> CRYOGENIC_REACTOR_RECIPES = new RecipeMap<>("cryogenic_reactor_recipes", 0, 3, 0, 2, 0, 2, 0, 2, new NoCoilTemperatureRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.COOLING);
+
+    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>("burner_reactor_recipes", 0, 3, 0, 2, 0, 3, 0, 3, new NoCoilTemperatureRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.ARC);
 }

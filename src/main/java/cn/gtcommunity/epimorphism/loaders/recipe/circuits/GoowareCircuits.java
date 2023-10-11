@@ -23,49 +23,11 @@ public class GoowareCircuits {
                .input(OrePrefix.plate, EPMaterials.KaptonE)
                .input(OrePrefix.foil, Materials.Europium, 4)
                .output(GOOWARE_BOARD)
-               .glassTier(4)
-               .temperature(500)
+               .glassTier(7)
+               .temperature(493)
                .duration(40)
                .EUt(GTValues.VA[8])
                .buildAndRegister();
-
-/*        CRYSTALLIZER_RECIPES.recipeBuilder()
-                .input(OrePrefix.plate, EPMaterials.KaptonE)
-                .input(OrePrefix.foil, Materials.Europium, 4)
-                .output(GOOWARE_BOARD)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(40)
-                .EUt(GTValues.VA[8])
-                .buildAndRegister();
-
-        CATALYTIC_REFORMER_RECIPES.recipeBuilder()
-                .input(OrePrefix.plate, EPMaterials.KaptonE)
-                .input(OrePrefix.foil, Materials.Europium, 4)
-                .output(GOOWARE_BOARD)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(40)
-                .EUt(GTValues.VA[8])
-                .buildAndRegister();
-
-        MOLECULAR_BEAM_RECIPES.recipeBuilder()
-                .input(OrePrefix.plate, EPMaterials.KaptonE)
-                .input(OrePrefix.foil, Materials.Europium, 4)
-                .output(GOOWARE_BOARD)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(40)
-                .EUt(GTValues.VA[8])
-                .buildAndRegister();
-
-        SONICATION_RECIPES.recipeBuilder()
-                .input(OrePrefix.plate, EPMaterials.KaptonE)
-                .input(OrePrefix.foil, Materials.Europium, 4)
-                .output(GOOWARE_BOARD)
-                .cleanroom(CleanroomType.CLEANROOM)
-                .duration(40)
-                .EUt(GTValues.VA[8])
-                .buildAndRegister();*/
-
-
 
         //  Gooware Circuit Board
         for (FluidStack stack : new FluidStack[] {

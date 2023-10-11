@@ -214,8 +214,32 @@ tile.ep_pmma_casing.neu_pmma_glass.tooltip=TAfield/n§8UHV-Tier Glass
 tile.ep_glass_casing.thy_boron_silicate_glass.name=ThYBoron Silicate Glass
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=Precision Optical Glass
 
+#  Crucibles
+tile.ep_crucible_casing.boron_nitride.name=Boron NitrideCrucible
+tile.ep_crucible_casing.graphite.name=Graphite Crucible
+tile.ep_crucible_casing.quartz.name=Quartz Crucible
+tile.ep_crucible_casing.tungsten.name=Tungsten Crucible
+
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
+epimorphism.recipe.glass_tier=Glass Tier:%s
+
+#  Machines
+epimorphism.machine.sonicator.name=Sonicator
+recipemap.sonication_recipes.name=Sonication
+
+epimorphism.machine.cvd_unit.name=CVD Unit
+recipemap.cvd_recipes.name=Chemical Vapor Deposition
+
+epimorphism.machine.nanoscale_fabricator.name=Nanoscale Fabricator
+epimorphism.machine.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
+recipemap.molecular_beam_recipes.name=Molecular Beam Epitaxy
+
+epimorphism.machine.crystallization_crucible.name=Crystallization Crucible
+recipemap.crystallization_recipes.name=Crystallization
+
+epimorphism.machine.catalytic_reformer.name=Catalytic Reformer
+recipemap.catalytic_reformer_recipes.name=Catalytic Reformation
 
 epimorphism.recipe.glass_tier=Glass Tier:%s
 

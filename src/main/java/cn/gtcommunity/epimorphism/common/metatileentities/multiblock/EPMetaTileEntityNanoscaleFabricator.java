@@ -149,7 +149,7 @@ public class EPMetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockCont
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
-        tooltip.add(I18n.format("gcys.multiblock.nanoscale_fabricator.tooltip.1"));
+        tooltip.add(I18n.format("epimorphism.machine.nanoscale_fabricator.tooltip.1"));
     }
 
     @Override

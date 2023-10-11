@@ -218,17 +218,37 @@ tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=精密光学玻璃
 
-#  Crucible
+#  Crucibles
 tile.ep_crucible_casing.boron_nitride.name=氮化硼坩埚
 tile.ep_crucible_casing.graphite.name=石墨坩埚
 tile.ep_crucible_casing.quartz.name=石英坩埚
 tile.ep_crucible_casing.tungsten.name=钨坩埚
 
-#  Recipe Properties and Recipe Maps
-recipemap.cvd_recipes.name=化学气相沉积
+#  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
-
 epimorphism.recipe.glass_tier=玻璃等级:%s
+
+#  Machines
+epimorphism.machine.sonicator.name=超声振荡器
+recipemap.sonication_recipes.name=超声振荡
+
+epimorphism.machine.cvd_unit.name=化学气相沉积单元
+recipemap.cvd_recipes.name=化学气相沉积
+
+epimorphism.machine.nanoscale_fabricator.name=纳米级制造室
+epimorphism.machine.nanoscale_fabricator.tooltip.1=坩埚的平均温度最多可超过目标温度§c250K§7。
+recipemap.molecular_beam_recipes.name=分子束外延
+
+epimorphism.machine.crystallization_crucible.name=结晶坩埚
+recipemap.crystallization_recipes.name=结晶
+
+epimorphism.machine.catalytic_reformer.name=催化重整炉
+recipemap.catalytic_reformer_recipes.name=催化重整
+
+
+recipemap.burner_reactor_recipes.name=燃烧反应
+
+recipemap.cryogenic_reactor_recipes.name=低温反应
 
 #  Materials
 
@@ -242,7 +262,22 @@ gregtech.material.pedot_pss=PEDOT:PSS
 gregtech.material.polymethylmethacrylate=聚甲基丙烯酸甲酯（PMMA）
 gregtech.material.pedot_tma=PEDOT-TMA
 gregtech.material.tetramethylammonium_hydroxide=四甲基氢氧化铵（TMAH）
+gregtech.material.potassium_hydroxide=氢氧化钾
+gregtech.material.potassium_bromate=溴酸钾
+gregtech.material.malonic_acid=丙二酸
+gregtech.material.chloroacetic_acid=氯乙酸
+gregtech.material.trichloroethylene=三氯乙烯
+gregtech.material.dichloroethane=1,2-二氯乙烷
+gregtech.material.hydrobromic_acid=氢溴酸
+gregtech.material.butanediol=1,4-丁二醇
+gregtech.material.diacetyl=丁二酮
+gregtech.material.ethylene_glycol=乙二醇
+gregtech.material.sulfur_dichloride=二氯化硫
+gregtech.material.acetone_cyanohydrin=丙酮氰醇
+gregtech.material.para_xylene=对二甲苯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
 gregtech.material.edp=乙二胺邻苯二酚（EDP）
+gregtech.material.rich_nitrogen_mixture=富氮混合物
+gregtech.material.rich_ammonia_mixture=富氨混合物
