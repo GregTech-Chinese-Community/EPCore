@@ -218,9 +218,17 @@ tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=精密光学玻璃
 
+#  Crucible
+tile.ep_crucible_casing.boron_nitride.name=氮化硼坩埚
+tile.ep_crucible_casing.graphite.name=石墨坩埚
+tile.ep_crucible_casing.quartz.name=石英坩埚
+tile.ep_crucible_casing.tungsten.name=钨坩埚
+
 #  Recipe Properties and Recipe Maps
 recipemap.cvd_recipes.name=化学气相沉积
 epimorphism.recipe.temperature=温度:%,d K
+
+epimorphism.recipe.glass_tier=玻璃等级:%s
 
 #  Materials
 

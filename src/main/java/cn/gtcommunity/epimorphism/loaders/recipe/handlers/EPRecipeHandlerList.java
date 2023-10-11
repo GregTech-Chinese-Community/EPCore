@@ -4,5 +4,6 @@ public class EPRecipeHandlerList {
 
     public static void register() {
         EPPartsRecipeHandler.register();
+        EPToolRecipeHandler.register();
     }
 }

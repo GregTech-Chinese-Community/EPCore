@@ -217,6 +217,14 @@ tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=Precision Optical Glass
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
 
+epimorphism.recipe.glass_tier=Glass Tier:%s
+
+#  Crucible
+tile.ep_crucible_casing.boron_nitride.name=Boron NitrideCrucible
+tile.ep_crucible_casing.graphite.name=Graphite Crucible
+tile.ep_crucible_casing.quartz.name=Quartz Crucible
+tile.ep_crucible_casing.tungsten.name=Tungsten Crucible
+
 #  Materials
 
 ##  Organic Chemistry Materials
