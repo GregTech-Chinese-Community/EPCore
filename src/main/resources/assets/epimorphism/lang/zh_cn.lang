@@ -245,6 +245,11 @@ recipemap.crystallization_recipes.name=结晶
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
 
+
+recipemap.burner_reactor_recipes.name=燃烧反应
+
+recipemap.cryogenic_reactor_recipes.name=低温反应
+
 #  Materials
 
 ##  Organic Chemistry Materials
@@ -257,6 +262,13 @@ gregtech.material.pedot_pss=PEDOT:PSS
 gregtech.material.polymethylmethacrylate=聚甲基丙烯酸甲酯（PMMA）
 gregtech.material.pedot_tma=PEDOT-TMA
 gregtech.material.tetramethylammonium_hydroxide=四甲基氢氧化铵（TMAH）
+gregtech.material.potassium_hydroxide=氢氧化钾
+gregtech.material.potassium_bromate=溴酸钾
+gregtech.material.malonic_acid=丙二酸
+gregtech.material.chloroacetic_acid=氯乙酸
+gregtech.material.trichloroethylene=三氯乙烯
+gregtech.material.dichloroethane=1,2-二氯乙烷
+gregtech.material.hydrobromic_acid=氢溴酸
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
