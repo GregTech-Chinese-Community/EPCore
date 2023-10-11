@@ -3,7 +3,6 @@ package cn.gtcommunity.epimorphism.api.recipe;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierNoCoilTemperatureRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.NoCoilTemperatureRecipeBuilder;
-import cn.gtcommunity.epimorphism.api.recipe.properties.GlassTierProperty;
 import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
@@ -35,7 +34,7 @@ public class EPRecipeMaps {
             .setProgressBar(EPGuiTextures.PROGRESS_BAR_NANOSCALE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ELECTROLYZER);
 
-    public static final RecipeMap<SimpleRecipeBuilder> SONICATION_RECIPES = new RecipeMap<>("sonication_recipes", 0, 0, 0, 1, 2, 2, 1, 1, new SimpleRecipeBuilder(), false)
+    public static final RecipeMap<GlassTierRecipeBuilder> SONICATION_RECIPES = new RecipeMap<>("sonication_recipes", 0, 0, 0, 1, 2, 2, 1, 1, new GlassTierRecipeBuilder(), false)
             .setSlotOverlay(false, true, false, GuiTextures.BREWER_OVERLAY)
             .setSlotOverlay(false, true, true, GuiTextures.MOLECULAR_OVERLAY_3)
             .setSlotOverlay(true, true, true, GuiTextures.MOLECULAR_OVERLAY_4)
