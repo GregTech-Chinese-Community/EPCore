@@ -115,5 +115,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         ATTO_PIC_CHIP = this.addItem(76, "wafer.chip.atto_pic");
         ZEPTO_PIC_WAFER = this.addItem(77, "wafer.zepto_pic");
         ZEPTO_PIC_CHIP = this.addItem(78, "wafer.chip.zepto_pic");
+
+        //  Others
+        MAGNETRON = this.addItem(79, "magnetron");
     }
 }

@@ -224,6 +224,9 @@ tile.ep_crucible_casing.graphite.name=石墨坩埚
 tile.ep_crucible_casing.quartz.name=石英坩埚
 tile.ep_crucible_casing.tungsten.name=钨坩埚
 
+#  Others
+metaitem.magnetron.name=磁控管
+
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s
@@ -251,6 +254,12 @@ recipemap.burner_reactor_recipes.name=燃烧反应
 recipemap.cryogenic_reactor_recipes.name=低温反应
 
 #  Materials
+
+##  First Degree Materials
+gregtech.material.graphene_oxide=氧化石墨烯
+gregtech.material.hydrazine=肼
+gregtech.material.beryllium_oxide=氧化铍
+gregtech.material.hydrogen_peroxide=过氧化氢
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

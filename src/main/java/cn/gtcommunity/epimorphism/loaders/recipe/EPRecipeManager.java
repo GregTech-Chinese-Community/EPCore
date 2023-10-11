@@ -23,6 +23,7 @@ public class EPRecipeManager {
         PEDOTChain.init();
         PMMAChain.init();
         AmmoniaChain.init();
+        GrapheneChain.init();
     }
 
     public static void initCircuits() {

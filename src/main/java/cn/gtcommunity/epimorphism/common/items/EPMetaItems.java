@@ -2,7 +2,6 @@ package cn.gtcommunity.epimorphism.common.items;
 
 import gregtech.api.items.metaitem.MetaItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EPMetaItems {
@@ -108,6 +107,8 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem ATTO_PIC_CHIP;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
+
+    public static MetaItem<?>.MetaValueItem MAGNETRON;
 
     public static MetaItem<?>.MetaValueItem GRINDBALL_SOAPSTONE;
     public static MetaItem<?>.MetaValueItem GRINDBALL_ALUMINIUM;
