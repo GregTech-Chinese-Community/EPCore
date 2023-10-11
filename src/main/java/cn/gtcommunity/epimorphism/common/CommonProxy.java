@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
@@ -40,6 +41,7 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_GLASS_CASING);
         registry.register(EPMetablocks.EP_PMMA_CASING);
         registry.register(EPMetablocks.EP_MULTIBLOCK_CASING);
+        registry.register(EPMetablocks.EP_CRUCIBLE_CASING);
     }
 
     @SubscribeEvent
@@ -49,6 +51,7 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_PMMA_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_MULTIBLOCK_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_CRUCIBLE_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
