@@ -2,13 +2,12 @@ package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.BURNER_REACTOR_RECIPES;
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.CRYOGENIC_REACTOR_RECIPES;
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.ore.OrePrefix.dust;
+import static gregtech.api.unification.ore.OrePrefix.*;
 
 public class BZMediumChain {
     public static void init() {

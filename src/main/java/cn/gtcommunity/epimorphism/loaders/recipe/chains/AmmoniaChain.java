@@ -5,8 +5,7 @@ import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.RichAmmoniaMixture;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.RichNitrogenMixture;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;

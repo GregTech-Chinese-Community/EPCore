@@ -1,11 +1,10 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.AcetoneCyanohydrin;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.PMMA;
-import static gregtech.api.GTValues.L;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtechfoodoption.GTFOMaterialHandler.HydrogenCyanide;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class PMMAChain {
     public static void init() {

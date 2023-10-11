@@ -7,11 +7,9 @@ import gregtech.api.unification.material.MarkerMaterials;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import static gregtech.api.GTValues.LuV;
-import static gregtech.api.GTValues.VA;
-import static gregtech.api.recipes.RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES;
-import static gregtech.api.unification.material.Materials.NiobiumTitanium;
-import static gregtech.api.unification.material.Materials.SterileGrowthMedium;
+import static gregtech.api.GTValues.*;
+import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
