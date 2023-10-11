@@ -35,6 +35,14 @@ public EPMaterials() {}
 
     public static Material HydrobromicAcid;
 
+    public static Material Butanediol;
+
+    public static Material Diacetyl;
+
+    public static Material EthyleneGlycol;
+
+    public static Material SulfurDichloride;
+
     //  Unknown Composition Materials
     public static Material BZMedium;
     public static Material EDP;

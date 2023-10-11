@@ -205,5 +205,32 @@ public class EPOrganicChemistryMaterials {
                 .color(0x8D1212)
                 .components(Hydrogen, 1, Bromine, 1)
                 .build();
+        //  25016 Butanediol
+        Butanediol = new Material.Builder(25016, gregtechId("butanediol"))
+                .fluid()
+                .color(0xAAC4DA)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 2)
+                .build()
+                .setFormula("C4H8(OH)2", true);
+        //  25017 Diacetyl
+        Diacetyl = new Material.Builder(25017,  gregtechId("diacetyl"))
+                .fluid()
+                .color(0xF7FF65)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
+                .build();
+        //  25018 Ethylene Glycol
+        EthyleneGlycol = new Material.Builder(25018, gregtechId("ethylene_glycol"))
+                .fluid()
+                .color(0x286632)
+                .components(Carbon, 2, Hydrogen, 6, Oxygen, 2)
+                .build()
+                .setFormula("C2H4(OH)2", true);
+        //  25019 Sulfur Dichloride
+        SulfurDichloride = new Material.Builder(25019, gregtechId("sulfur_dichloride"))
+                .fluid()
+                .color(0x761410)
+                .components(Sulfur, 1, Chlorine, 2)
+                .build();
     }
 }

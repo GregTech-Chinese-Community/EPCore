@@ -269,6 +269,10 @@ gregtech.material.chloroacetic_acid=氯乙酸
 gregtech.material.trichloroethylene=三氯乙烯
 gregtech.material.dichloroethane=1,2-二氯乙烷
 gregtech.material.hydrobromic_acid=氢溴酸
+gregtech.material.butanediol=1,4-丁二醇
+gregtech.material.diacetyl=丁二酮
+gregtech.material.ethylene_glycol=乙二醇
+gregtech.material.sulfur_dichloride=二氯化硫
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
