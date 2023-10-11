@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
+import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -17,6 +18,16 @@ public class EPUnknownCompositionMaterials {
         EDP = new Material.Builder(25202, gregtechId("edp"))
                 .fluid()
                 .color(16514839)
+                .build();
+        //  25203 Rich Nitrogen Mixture
+        RichNitrogenMixture = new Material.Builder(25203, gregtechId("rich_nitrogen_mixture"))
+                .fluid(FluidTypes.GAS)
+                .color(0x6891D8)
+                .build();
+        //  25204 Rich Ammonia Mixture
+        RichAmmoniaMixture = new Material.Builder(25204, gregtechId("rich_ammonia_mixture"))
+                .fluid()
+                .color(0x708ACD)
                 .build();
     }
 }

@@ -239,5 +239,13 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 4, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
                 .build();
+        //  25021 Para Xylene
+        ParaXylene = new Material.Builder(25021, gregtechId("para_xylene"))
+                .fluid()
+                .color(0x666040)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 8, Hydrogen, 10)
+                .build()
+                .setFormula("C6H4(CH3)2", true);
     }
 }

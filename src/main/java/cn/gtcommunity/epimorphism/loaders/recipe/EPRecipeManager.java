@@ -1,6 +1,8 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
+import cn.gtcommunity.epimorphism.loaders.recipe.chains.AmmoniaChain;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.BZMediumChain;
+import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.PEDOTChain;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.PMMAChain;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
@@ -16,16 +18,22 @@ public class EPRecipeManager {
         EPRecipeHandlerList.register();
         initChains();
         initCircuits();
+        initMultiblockRecipes();
     }
 
     public static void initChains() {
         BZMediumChain.init();
         PEDOTChain.init();
         PMMAChain.init();
+        AmmoniaChain.init();
     }
 
     public static void initCircuits() {
         WetwareCircuits.init();
         GoowareCircuits.init();
+    }
+
+    public static void initMultiblockRecipes() {
+        CatalyticReformationOilProcessing.init();
     }
 }

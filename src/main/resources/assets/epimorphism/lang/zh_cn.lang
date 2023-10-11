@@ -274,7 +274,10 @@ gregtech.material.diacetyl=丁二酮
 gregtech.material.ethylene_glycol=乙二醇
 gregtech.material.sulfur_dichloride=二氯化硫
 gregtech.material.acetone_cyanohydrin=丙酮氰醇
+gregtech.material.para_xylene=对二甲苯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
 gregtech.material.edp=乙二胺邻苯二酚（EDP）
+gregtech.material.rich_nitrogen_mixture=富氮混合物
+gregtech.material.rich_ammonia_mixture=富氨混合物

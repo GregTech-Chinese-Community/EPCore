@@ -45,9 +45,15 @@ public EPMaterials() {}
 
     public static Material AcetoneCyanohydrin;
 
+    public static Material ParaXylene;
+
     //  Unknown Composition Materials
     public static Material BZMedium;
     public static Material EDP;
+
+    public static Material RichNitrogenMixture;
+
+    public static Material RichAmmoniaMixture;
 
     //  Range: 25000-26000
     public static void init() {
