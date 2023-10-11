@@ -109,6 +109,9 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
 
+    public static MetaItem<?>.MetaValueItem GRINDBALL_SOAPSTONE;
+    public static MetaItem<?>.MetaValueItem GRINDBALL_ALUMINIUM;
+
     private EPMetaItems() {}
 
     public static void initialization()

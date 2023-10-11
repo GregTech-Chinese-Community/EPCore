@@ -1,5 +1,8 @@
 package cn.gtcommunity.epimorphism.common.blocks;
 
+import cn.gtcommunity.epimorphism.api.EPValues;
+import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
+import gregtech.api.GTValues;
 import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.items.toolitem.ToolClasses;
 import net.minecraft.block.SoundType;
@@ -74,22 +77,37 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
                 super.shouldSideBeRendered(state, world, pos, side);
     }
 
-    public enum CasingType implements IStringSerializable {
+    public enum CasingType implements IStringSerializable, IGlassTierBlockState {
 
-        SILICATE_GLASS("boron_silicate_glass"),
-        TI_BORON_SILICATE_GLASS("ti_boron_silicate_glass"),
-        W_BORON_SILICATE_GLASS("w_boron_silicate_glass"),
-        OSMIR_BORON_SILICATE_GLASS("osmir_boron_silicate_glass"),
-        NAQ_BORON_SILICATE_GLASS("naq_boron_silicate_glass"),
-        THY_BORON_SILICATE_GLASS("thy_boron_silicate_glass");
+        SILICATE_GLASS("boron_silicate_glass", GTValues.HV, false),
+        TI_BORON_SILICATE_GLASS("ti_boron_silicate_glass", GTValues.EV, false),
+        W_BORON_SILICATE_GLASS("w_boron_silicate_glass", GTValues.IV, false),
+        OSMIR_BORON_SILICATE_GLASS("osmir_boron_silicate_glass",GTValues.LuV, false),
+        NAQ_BORON_SILICATE_GLASS("naq_boron_silicate_glass", GTValues.ZPM, false),
+        THY_BORON_SILICATE_GLASS("thy_boron_silicate_glass", EPValues.OP, true);
 
         private final String name;
+        private final int tier;
+        private final boolean isOpticalGlass;
 
-        CasingType(String name) {this.name = name;}
+        CasingType(String name, int tier, boolean isOpticalGlass) {
+            this.name = name;
+            this.tier = tier;
+            this.isOpticalGlass = isOpticalGlass;
+        }
 
         @Nonnull
         @Override
         public String getName() {return this.name;}
+
+        @Override
+        public int getTier() {return this.tier;}
+
+        public boolean isOpticalGlass() {return isOpticalGlass;}
+
+        @Nonnull
+        @Override
+        public String toString() {return getName();}
     }
 }
 

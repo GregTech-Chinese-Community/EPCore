@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.common.blocks;
 
+import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
+import gregtech.api.GTValues;
 import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.items.toolitem.ToolClasses;
 import net.minecraft.block.SoundType;
@@ -75,17 +77,32 @@ public class EPBlockPMMACasing extends VariantActiveBlock<EPBlockPMMACasing.Casi
                 super.shouldSideBeRendered(state, world, pos, side);
     }
 
-    public enum CasingType implements IStringSerializable {
+    public enum CasingType implements IStringSerializable, IGlassTierBlockState {
 
-        PMMA_GLASS("pmma_glass"),
-        NEU_PMMA_GLASS("neu_pmma_glass");
+        PMMA_GLASS("pmma_glass", GTValues.UV, false),
+        NEU_PMMA_GLASS("neu_pmma_glass", GTValues.UHV, false);
 
         private final String name;
+        private final int tier;
+        private final boolean isOpticalGlass;
 
-        CasingType(String name) {this.name = name;}
+        CasingType(String name, int tier, boolean isOpticalGlass) {
+            this.name = name;
+            this.tier = tier;
+            this.isOpticalGlass = isOpticalGlass;
+        }
 
         @Nonnull
         @Override
         public String getName() {return this.name;}
+
+        @Override
+        public int getTier() {return this.tier;}
+
+        public boolean isOpticalGlass() {return isOpticalGlass;}
+
+        @Nonnull
+        @Override
+        public String toString() {return getName();}
     }
 }

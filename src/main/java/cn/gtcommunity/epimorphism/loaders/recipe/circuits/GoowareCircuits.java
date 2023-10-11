@@ -7,7 +7,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.ore.OrePrefix;
 import net.minecraftforge.fluids.FluidStack;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.CVD_RECIPES;
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
@@ -23,10 +23,49 @@ public class GoowareCircuits {
                .input(OrePrefix.plate, EPMaterials.KaptonE)
                .input(OrePrefix.foil, Materials.Europium, 4)
                .output(GOOWARE_BOARD)
-               .cleanroom(CleanroomType.CLEANROOM)
+               .glassTier(4)
+               .temperature(500)
                .duration(40)
                .EUt(GTValues.VA[8])
                .buildAndRegister();
+
+/*        CRYSTALLIZER_RECIPES.recipeBuilder()
+                .input(OrePrefix.plate, EPMaterials.KaptonE)
+                .input(OrePrefix.foil, Materials.Europium, 4)
+                .output(GOOWARE_BOARD)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(40)
+                .EUt(GTValues.VA[8])
+                .buildAndRegister();
+
+        CATALYTIC_REFORMER_RECIPES.recipeBuilder()
+                .input(OrePrefix.plate, EPMaterials.KaptonE)
+                .input(OrePrefix.foil, Materials.Europium, 4)
+                .output(GOOWARE_BOARD)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(40)
+                .EUt(GTValues.VA[8])
+                .buildAndRegister();
+
+        MOLECULAR_BEAM_RECIPES.recipeBuilder()
+                .input(OrePrefix.plate, EPMaterials.KaptonE)
+                .input(OrePrefix.foil, Materials.Europium, 4)
+                .output(GOOWARE_BOARD)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(40)
+                .EUt(GTValues.VA[8])
+                .buildAndRegister();
+
+        SONICATION_RECIPES.recipeBuilder()
+                .input(OrePrefix.plate, EPMaterials.KaptonE)
+                .input(OrePrefix.foil, Materials.Europium, 4)
+                .output(GOOWARE_BOARD)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(40)
+                .EUt(GTValues.VA[8])
+                .buildAndRegister();*/
+
+
 
         //  Gooware Circuit Board
         for (FluidStack stack : new FluidStack[] {
