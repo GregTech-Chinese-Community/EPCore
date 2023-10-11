@@ -1,13 +1,16 @@
 package cn.gtcommunity.epimorphism.api.unification;
 
-import cn.gtcommunity.epimorphism.api.unification.materials.EPMaterialFlagAddition;
-import cn.gtcommunity.epimorphism.api.unification.materials.EPMaterialPropertyAddition;
-import cn.gtcommunity.epimorphism.api.unification.materials.EPOrganicChemistryMaterials;
-import cn.gtcommunity.epimorphism.api.unification.materials.EPUnknownCompositionMaterials;
+import cn.gtcommunity.epimorphism.api.unification.materials.*;
 import gregtech.api.unification.material.Material;
 
 public class EPMaterials {
 public EPMaterials() {}
+
+    //  First Degree Materials
+    public static Material GrapheneOxide;
+    public static Material Hydrazine;
+    public static Material BerylliumOxide;
+    public static Material HydrogenPeroxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -59,6 +62,7 @@ public EPMaterials() {}
     public static void init() {
         EPMaterialPropertyAddition.init();
         EPMaterialFlagAddition.init();
+        EPFirstDegreeMaterials.register();
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();
     }
