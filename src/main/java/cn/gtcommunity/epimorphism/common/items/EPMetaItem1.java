@@ -118,5 +118,17 @@ public class EPMetaItem1 extends StandardMetaItem {
 
         //  Others
         MAGNETRON = this.addItem(79, "magnetron");
+
+        //  Biological Components
+        ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");
+        ULTRA_MICRO_PHASE_SEPARATOR = this.addItem(302, "biological.components.ultra_micro_phase_separator");
+        QUANTUM_TUNNELING_MICROTUBULE = this.addItem(303, "biological.components.quantum_tunneling_microtubule");
+        HYPERRIBOSOME = this.addItem(304, "biological.components.hyperribosome");
+        NEUTRON_ABSORBING_PROTEIN = this.addItem(305, "biological.components.neutron_absorbing_protein");
+        SUPEREXCITED_CONDUCTIVE_POLYMER = this.addItem(306, "biological.components.superexcited_conductive_polymer");
+        DNA_ENCODER = this.addItem(307, "biological.components.dna_encoder");
+        DNA_DECODER = this.addItem(308, "biological.components.dna_decoder");
+        DNA_DECODE_ENCODER = this.addItem(309, "biological.components.dna_decode_encoder");
+
     }
 }

@@ -58,6 +58,14 @@ public EPMaterials() {}
 
     public static Material RichAmmoniaMixture;
 
+    //  Biological Production Line
+    /*public static Material ArtificialBaseX;
+    public static Material ArtificialBaseZ;
+    public static Material ;
+    public static Material
+    public static Material
+    public static Material*/
+
     //  Range: 25000-26000
     public static void init() {
         EPMaterialPropertyAddition.init();
