@@ -194,6 +194,7 @@ metaitem.wafer.chip.zepto_pic.tooltip=Zepto Power Integrated Circuit
 tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_invar_casing.name=Plated Adiabatic Invar Machine Casing
+tile.ep_multiblock_casing.advanced_aluminium_casing.name=Plated Antifreeze Aluminium Machine Casing
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
@@ -253,9 +254,16 @@ epimorphism.machine.blazing_blast_furnace.name=Volcanus
 epimorphism.machine.blazing_blast_furnace.amount=Blazing Pyrotheum: %sL
 epimorphism.machine.blazing_blast_furnace.heat=Blazing Pyrotheum are converting into heat!
 epimorphism.machine.blazing_blast_furnace.warning=Insufficient Blazing Pyrotheum
-epimorphism.machine.blazing_blast_furnace.tooltip.1=Need to provide Blazing Pyrotheum for work
-epimorphism.machine.blazing_blast_furnace.tooltip.2=When no Blazing Pyrotheum are provided, Volcanus will shut down.
+epimorphism.machine.blazing_blast_furnace.tooltip.1=Need to provide §cBlazing Pyrotheum§7 for work
+epimorphism.machine.blazing_blast_furnace.tooltip.2=When no §cBlazing Pyrotheum§7 are provided, Volcanus will shut down.
 epimorphism.machine.blazing_blast_furnace.tooltip.3=The maximum parallels is determined based on the Coil level, and each improvement will increase maximum parallels to twice the original number.
+
+epimorphism.machine.cryogenic_freezer.name=Cryogenic Freezer
+epimorphism.machine.cryogenic_freezer.amount=Gelid Cryotheum: %sL
+epimorphism.machine.cryogenic_freezer.subcooled=Gelid Cryotheum are absorbing surrounding heat!
+epimorphism.machine.cryogenic_freezer.warning=Insufficient Gelid Cryotheum
+epimorphism.machine.cryogenic_freezer.tooltip.1=Need to provide §bGelid Cryotheum§7 for work
+epimorphism.machine.cryogenic_freezer.tooltip.2=When no §bGelid Cryotheum§7 are provided, Cryogenic Freezer will shut down.
 
 #  Materials
 
@@ -295,3 +303,4 @@ gregtech.material.edp=Ethylenediamine Pyrocatechol (EDP)
 gregtech.material.rich_nitrogen_mixture=Rich Nitrogen Mixture
 gregtech.material.rich_ammonia_mixture=Rich Ammonia Mixture
 gregtech.material.blazing_pyrotheum=Blazing Pyrotheum
+gregtech.material.gelid_cryotheum=Gelid Cryotheum

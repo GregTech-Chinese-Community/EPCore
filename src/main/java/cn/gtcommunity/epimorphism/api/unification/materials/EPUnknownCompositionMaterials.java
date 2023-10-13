@@ -37,5 +37,11 @@ public class EPUnknownCompositionMaterials {
                 .iconSet(MaterialIconSet.DULL)
                 .fluidTemp(8000)
                 .build();
+        //  25206 Gelid Cryotheum
+        GelidCryotheum = new Material.Builder(25206, gregtechId("gelid_cryotheum"))
+                .fluid(FluidTypes.LIQUID, true)
+                .color(0x40B8FB)
+                .fluidTemp(8)
+                .build();
     }
 }

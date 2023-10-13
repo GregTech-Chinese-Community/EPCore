@@ -97,9 +97,9 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
     @Override
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle(new String[]{"XXX", "CCC", "CCC", "XXX"})
-                .aisle(new String[]{"XXX", "C#C", "C#C", "XMX"})
-                .aisle(new String[]{"XSX", "CCC", "CCC", "XXX"})
+                .aisle("XXX", "CCC", "CCC", "XXX")
+                .aisle("XXX", "C#C", "C#C", "XMX")
+                .aisle("XSX", "CCC", "CCC", "XXX")
                 .where('S', this.selfPredicate())
                 .where('X', states(new IBlockState[]{this.getCasingState()})
                         .setMinGlobalLimited(9)

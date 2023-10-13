@@ -1,9 +1,6 @@
 package cn.gtcommunity.epimorphism.client.textures;
 
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
-import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
-
-import static gregtech.client.renderer.texture.cube.OrientedOverlayRenderer.OverlayFace.FRONT;
 
 public class EPTextures {
 
@@ -16,6 +13,7 @@ public class EPTextures {
 
     //  EPOverlayRenderer
     public static EPOverlayRenderer ADVANCED_INVAR_CASING = new EPOverlayRenderer("casings/solid/advanced_invar_casing");
+    public static EPOverlayRenderer ADVANCED_ALUMINIUM_CASING = new EPOverlayRenderer("casings/solid/advanced_aluminium_casing");
 
     public EPTextures() {
     }

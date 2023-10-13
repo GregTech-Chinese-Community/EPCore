@@ -23,6 +23,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/advanced_invar_casing"
         }
+      },
+      "advanced_aluminium_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/advanced_aluminium_casing"
+        }
       }
     }
   }

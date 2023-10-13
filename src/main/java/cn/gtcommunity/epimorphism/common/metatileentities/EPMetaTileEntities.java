@@ -1,6 +1,5 @@
 package cn.gtcommunity.epimorphism.common.metatileentities;
 
-import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
@@ -9,7 +8,6 @@ import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.integration.jei.multiblock.MultiblockInfoCategory;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
@@ -21,8 +19,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
     public static EPMetaTileEntityCrystallizationCrucible CRYSTALLIZATION_CRUCIBLE;
     public static EPMetaTileEntityCatalyticReformer CATALYTIC_REFORMER;
-
     public static EPMetaTileEntityBlazingBlastFurnace BLAZING_BLAST_FURNACE;
+    public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
 
     //  Range: 12300-13300
     private static <T extends MetaTileEntity> T registerMultiMetaTileEntity(int id, T mte) {
@@ -40,6 +38,7 @@ public class EPMetaTileEntities {
 
         //  Range: 13300-14300
         BLAZING_BLAST_FURNACE = registerMultiMetaTileEntity(1000, new EPMetaTileEntityBlazingBlastFurnace(epId("blazing_blast_furnace")));
+        CRYOGENIC_FREEZER = registerMultiMetaTileEntity(1001, new EPMetaTileEntityCryogenicFreezer(epId("cryogenic_freezer")));
     }
 
     public static <T extends MetaTileEntity> T registerMetaTileEntity(int id, T sampleMetaTileEntity) {
