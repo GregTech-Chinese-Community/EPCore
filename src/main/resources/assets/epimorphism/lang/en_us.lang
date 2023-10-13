@@ -190,6 +190,26 @@ metaitem.wafer.zepto_pic.tooltip=Raw Zepto Power Circuit
 metaitem.wafer.chip.zepto_pic.name=ZPIC
 metaitem.wafer.chip.zepto_pic.tooltip=Zepto Power Integrated Circuit
 
+#   Biological Components
+metaitem.biological.components.electrochemical_gradient_recorder.name=Electrochemical Gradient Recorder
+metaitem.biological.components.electrochemical_gradient_recorder.tooltip=Fundamentals of Biocomputing
+metaitem.biological.components.hyperribosome.name=Hyperribosome
+metaitem.biological.components.hyperribosome.tooltip=Protein Factory
+metaitem.biological.components.neutron_absorbing_protein.name=Neutron Absorbing Protein
+metaitem.biological.components.neutron_absorbing_protein.tooltip=Inconceivable
+metaitem.biological.components.quantum_tunneling_microtubule.name=Quantum Tunneling Microtubule
+metaitem.biological.components.quantum_tunneling_microtubule.tooltip=Biological fusion has finally become a reality
+metaitem.biological.components.superexcited_conductive_polymer.name=Superexcited Conductive Polymer
+metaitem.biological.components.superexcited_conductive_polymer.tooltip=Biological High-voltage Line
+metaitem.biological.components.ultra_micro_phase_separator.name=Ultra-micro Phase Separator
+metaitem.biological.components.ultra_micro_phase_separator.tooltip=Guardian of Biochemical Reactions
+metaitem.biological.components.dna_decoder.name=DNA Decoder
+metaitem.biological.components.dna_decoder.tooltip=Part of a Self-replicating Turing Machine
+metaitem.biological.components.dna_encoder.name=DNA Encoder
+metaitem.biological.components.dna_encoder.tooltip=Part of a Self-replicating Turing Machine
+metaitem.biological.components.dna_decode_encoder.name=DNA Decode-encoder
+metaitem.biological.components.dna_decode_encoder.tooltip=Will deplete the universe in order to calculate
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
@@ -211,6 +231,8 @@ tile.ep_pmma_casing.pmma_glass.name=PMMA Glass
 tile.ep_pmma_casing.pmma_glass.tooltip=Have both strength and toughness!/n§8UV-Tier Glass
 tile.ep_pmma_casing.neu_pmma_glass.name=Neutronium PMMA Glass
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=TAfield/n§8UHV-Tier Glass
+
+epimorphism.multiblock.pattern.error.glasses=The same type of glass block must be used.
 
 #  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=ThYBoron Silicate Glass

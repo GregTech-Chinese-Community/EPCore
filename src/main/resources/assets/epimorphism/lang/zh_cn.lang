@@ -194,6 +194,27 @@ metaitem.wafer.zepto_pic.tooltip=仄米功率集成电路原料
 metaitem.wafer.chip.zepto_pic.name=ZPIC
 metaitem.wafer.chip.zepto_pic.tooltip=仄米功率集成电路
 
+#   Biological Components
+metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪
+metaitem.biological.components.electrochemical_gradient_recorder.tooltip=生物计算基础
+metaitem.biological.components.hyperribosome.name=超核糖体
+metaitem.biological.components.hyperribosome.tooltip=蛋白质工厂
+metaitem.biological.components.neutron_absorbing_protein.name=中子吸收蛋白
+metaitem.biological.components.neutron_absorbing_protein.tooltip=不可思议
+metaitem.biological.components.quantum_tunneling_microtubule.name=量子隧穿微管
+metaitem.biological.components.quantum_tunneling_microtubule.tooltip=生物聚变终成现实
+metaitem.biological.components.superexcited_conductive_polymer.name=超激发传导聚合体
+metaitem.biological.components.superexcited_conductive_polymer.tooltip=生物高压线
+metaitem.biological.components.ultra_micro_phase_separator.name=超微型相分离器
+metaitem.biological.components.ultra_micro_phase_separator.tooltip=生化反应守护者
+metaitem.biological.components.dna_decoder.name=DNA解码器
+metaitem.biological.components.dna_decoder.tooltip=自复制图灵机的一部分
+metaitem.biological.components.dna_encoder.name=DNA编码器
+metaitem.biological.components.dna_encoder.tooltip=自复制图灵机的一部分
+metaitem.biological.components.dna_decode_encoder.name=DNA解-编码器
+metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干宇宙
+
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
@@ -215,6 +236,8 @@ tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
 tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！/n§8UV级玻璃
 tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
+
+epimorphism.multiblock.pattern.error.glasses=必须使用同一种玻璃方块。
 
 #  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
