@@ -118,6 +118,12 @@ public class EPMetaItem1 extends StandardMetaItem {
 
         //  Others
         MAGNETRON = this.addItem(79, "magnetron");
+        VOLTAGE_COIL_UHV = this.addItem(80, "voltage_coil.uhv");
+        VOLTAGE_COIL_UEV = this.addItem(81, "voltage_coil.uev");
+        VOLTAGE_COIL_UIV = this.addItem(82, "voltage_coil.uiv");
+        VOLTAGE_COIL_UXV = this.addItem(83, "voltage_coil.uxv");
+        VOLTAGE_COIL_OPV = this.addItem(84, "voltage_coil.opv");
+        VOLTAGE_COIL_MAX = this.addItem(85, "voltage_coil.max");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");
