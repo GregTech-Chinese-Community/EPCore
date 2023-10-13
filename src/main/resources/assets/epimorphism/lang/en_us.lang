@@ -210,10 +210,11 @@ metaitem.biological.components.dna_encoder.tooltip=Part of a Self-replicating Tu
 metaitem.biological.components.dna_decode_encoder.name=DNA Decode-encoder
 metaitem.biological.components.dna_decode_encoder.tooltip=Will deplete the universe in order to calculate
 
-
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
-tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casing
+tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
+tile.ep_multiblock_casing.advanced_invar_casing.name=Plated Adiabatic Invar Machine Casing
+tile.ep_multiblock_casing.advanced_aluminium_casing.name=Plated Antifreeze Aluminium Machine Casing
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
@@ -231,15 +232,20 @@ tile.ep_pmma_casing.pmma_glass.tooltip=Have both strength and toughness!/n§8UV-
 tile.ep_pmma_casing.neu_pmma_glass.name=Neutronium PMMA Glass
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=TAfield/n§8UHV-Tier Glass
 
+epimorphism.multiblock.pattern.error.glasses=The same type of glass block must be used.
+
 #  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=ThYBoron Silicate Glass
 tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=Precision Optical Glass
 
 #  Crucibles
-tile.ep_crucible_casing.boron_nitride.name=Boron NitrideCrucible
+tile.ep_crucible_casing.boron_nitride.name=Boron Nitride Crucible
 tile.ep_crucible_casing.graphite.name=Graphite Crucible
 tile.ep_crucible_casing.quartz.name=Quartz Crucible
 tile.ep_crucible_casing.tungsten.name=Tungsten Crucible
+
+#  Others
+metaitem.magnetron.name=Magnetron
 
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
@@ -262,21 +268,61 @@ recipemap.crystallization_recipes.name=Crystallization
 epimorphism.machine.catalytic_reformer.name=Catalytic Reformer
 recipemap.catalytic_reformer_recipes.name=Catalytic Reformation
 
-epimorphism.multiblock.pattern.error.glasses=The same type of glass block must be used.
+recipemap.burner_reactor_recipes.name=Combustion Reaction
+
+recipemap.cryogenic_reactor_recipes.name=Low-temperature Reaction
+
+epimorphism.machine.blazing_blast_furnace.name=Volcanus
+epimorphism.machine.blazing_blast_furnace.amount=Blazing Pyrotheum: %sL
+epimorphism.machine.blazing_blast_furnace.heat=Blazing Pyrotheum are converting into heat!
+epimorphism.machine.blazing_blast_furnace.warning=Insufficient Blazing Pyrotheum
+epimorphism.machine.blazing_blast_furnace.tooltip.1=Need to provide §cBlazing Pyrotheum§7 for work
+epimorphism.machine.blazing_blast_furnace.tooltip.2=When no §cBlazing Pyrotheum§7 are provided, Volcanus will shut down.
+epimorphism.machine.blazing_blast_furnace.tooltip.3=The maximum parallels is determined based on the Coil level, and each improvement will increase maximum parallels to twice the original number.
+
+epimorphism.machine.cryogenic_freezer.name=Cryogenic Freezer
+epimorphism.machine.cryogenic_freezer.amount=Gelid Cryotheum: %sL
+epimorphism.machine.cryogenic_freezer.subcooled=Gelid Cryotheum are absorbing surrounding heat!
+epimorphism.machine.cryogenic_freezer.warning=Insufficient Gelid Cryotheum
+epimorphism.machine.cryogenic_freezer.tooltip.1=Need to provide §bGelid Cryotheum§7 for work
+epimorphism.machine.cryogenic_freezer.tooltip.2=When no §bGelid Cryotheum§7 are provided, Cryogenic Freezer will shut down.
 
 #  Materials
+
+##  First Degree Materials
+gregtech.material.graphene_oxide=Graphene Oxide
+gregtech.material.hydrazine=Hydrazine
+gregtech.material.beryllium_oxide=Beryllium Oxide
+gregtech.material.hydrogen_peroxide=Hydrogen Peroxide
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K
 gregtech.material.kapton_e=Kapton-E
 gregtech.material.edot=3,4-Ethylenedioxythiophene (EDOT)
-gregtech.material.polystyrene=Polystyrene
-gregtech.material.polystyrene_sulfonate=Polystyrene Sulfonate
+gregtech.material.polystyrene=Polystyrene (PS)
+gregtech.material.polystyrene_sulfonate=Polystyrene Sulfonate (PSS)
 gregtech.material.pedot_pss=PEDOT:PSS
 gregtech.material.polymethylmethacrylate=Polymethylmethacrylate (PMMA)
 gregtech.material.pedot_tma=PEDOT-TMA
 gregtech.material.tetramethylammonium_hydroxide=Tetramethyl ammonium hydroxide (TMAH)
+gregtech.material.potassium_hydroxide=Potassium Hydroxide
+gregtech.material.potassium_bromate=Potassium Bromate
+gregtech.material.malonic_acid=Malonic Acid
+gregtech.material.chloroacetic_acid=Chloroacetic Acid
+gregtech.material.trichloroethylene=Trichloroethylene
+gregtech.material.dichloroethane=Dichloroethane
+gregtech.material.hydrobromic_acid=Hydrobromic acid
+gregtech.material.butanediol=Butanediol
+gregtech.material.diacetyl=Diacetyl
+gregtech.material.ethylene_glycol=Ethylene Glycol
+gregtech.material.sulfur_dichloride=Sulfur Dichloride
+gregtech.material.acetone_cyanohydrin=Acetone Cyanohydrin
+gregtech.material.para_xylene=Para Xylene
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=Belousov-Zhabotinsky Medium
-gregtech.material.edp=EDP
+gregtech.material.edp=Ethylenediamine Pyrocatechol (EDP)
+gregtech.material.rich_nitrogen_mixture=Rich Nitrogen Mixture
+gregtech.material.rich_ammonia_mixture=Rich Ammonia Mixture
+gregtech.material.blazing_pyrotheum=Blazing Pyrotheum
+gregtech.material.gelid_cryotheum=Gelid Cryotheum

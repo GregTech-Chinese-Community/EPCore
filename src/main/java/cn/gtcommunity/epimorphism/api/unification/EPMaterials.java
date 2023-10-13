@@ -21,42 +21,28 @@ public EPMaterials() {}
     public static Material PedotPSS;
     public static Material PMMA;
     public static Material PedotTMA;
-
     public static Material TetramethylammoniumHydroxide;
-
     public static Material PotassiumHydroxide;
-
     public static Material PotassiumBromate;
-
     public static Material MalonicAcid;
-
     public static Material ChloroaceticAcid;
-
     public static Material Trichloroethylene;
-
     public static Material Dichloroethane;
-
     public static Material HydrobromicAcid;
-
     public static Material Butanediol;
-
     public static Material Diacetyl;
-
     public static Material EthyleneGlycol;
-
     public static Material SulfurDichloride;
-
     public static Material AcetoneCyanohydrin;
-
     public static Material ParaXylene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
     public static Material EDP;
-
     public static Material RichNitrogenMixture;
-
     public static Material RichAmmoniaMixture;
+    public static Material BlazingPyrotheum;
+    public static Material GelidCryotheum;
 
     //  Biological Production Line
     /*public static Material ArtificialBaseX;

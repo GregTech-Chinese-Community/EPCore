@@ -214,9 +214,12 @@ metaitem.biological.components.dna_encoder.tooltip=自复制图灵机的一部�
 metaitem.biological.components.dna_decode_encoder.name=DNA解-编码器
 metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干宇宙
 
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
+tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
+tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
@@ -233,6 +236,8 @@ tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
 tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！/n§8UV级玻璃
 tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
+
+epimorphism.multiblock.pattern.error.glasses=必须使用同一种玻璃方块。
 
 #  Optical Glasses
 tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
@@ -268,12 +273,24 @@ recipemap.crystallization_recipes.name=结晶
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
 
-
 recipemap.burner_reactor_recipes.name=燃烧反应
 
 recipemap.cryogenic_reactor_recipes.name=低温反应
 
-epimorphism.multiblock.pattern.error.glasses=必须使用同一种玻璃方块。
+epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
+epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL
+epimorphism.machine.blazing_blast_furnace.heat=烈焰之炽焱正在转换为热量！
+epimorphism.machine.blazing_blast_furnace.warning=烈焰之炽焱不足
+epimorphism.machine.blazing_blast_furnace.tooltip.1=需要提供§c烈焰之炽焱§7以工作。
+epimorphism.machine.blazing_blast_furnace.tooltip.2=未提供§c烈焰之炽焱§7时，炽焱高炉将会停机。
+epimorphism.machine.blazing_blast_furnace.tooltip.3=根据线圈等级决定最大并行数量，每提升一级都会使得最大并行数量提高至原本数量的两倍。
+
+epimorphism.machine.cryogenic_freezer.name=凛冰冷冻机
+epimorphism.machine.cryogenic_freezer.amount=极寒之凛冰储量：%sL
+epimorphism.machine.cryogenic_freezer.subcooled=极寒之凛冰正在吸收周围的热量！
+epimorphism.machine.cryogenic_freezer.warning=极寒之凛冰不足
+epimorphism.machine.cryogenic_freezer.tooltip.1=需要提供§b极寒之凛冰§7以工作
+epimorphism.machine.cryogenic_freezer.tooltip.2=未提供§b极寒之凛冰§7时，凛冰冷冻机将会停机
 
 #  Materials
 
@@ -312,3 +329,5 @@ gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
 gregtech.material.edp=乙二胺邻苯二酚（EDP）
 gregtech.material.rich_nitrogen_mixture=富氮混合物
 gregtech.material.rich_ammonia_mixture=富氨混合物
+gregtech.material.blazing_pyrotheum=烈焰之炽焱
+gregtech.material.gelid_cryotheum=极寒之凛冰

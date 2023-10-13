@@ -1,6 +1,5 @@
 package cn.gtcommunity.epimorphism.common.metatileentities;
 
-import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
@@ -9,8 +8,9 @@ import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.integration.jei.multiblock.MultiblockInfoCategory;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
+
+import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 
 public class EPMetaTileEntities {
 
@@ -19,6 +19,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
     public static EPMetaTileEntityCrystallizationCrucible CRYSTALLIZATION_CRUCIBLE;
     public static EPMetaTileEntityCatalyticReformer CATALYTIC_REFORMER;
+    public static EPMetaTileEntityBlazingBlastFurnace BLAZING_BLAST_FURNACE;
+    public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
 
     //  Range: 12300-13300
     private static <T extends MetaTileEntity> T registerMultiMetaTileEntity(int id, T mte) {
@@ -27,13 +29,16 @@ public class EPMetaTileEntities {
 
     public static void init() {
 
+        //  Range: 12300-13300
+        SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));
+        CVD_UNIT = registerMultiMetaTileEntity(2, new EPMetaTileEntityCVDUnit(epId("cvd_unit")));
+        NANOSCALE_FABRICATOR = registerMultiMetaTileEntity(3, new EPMetaTileEntityNanoscaleFabricator(epId("nanoscale_fabricator")));
+        CRYSTALLIZATION_CRUCIBLE = registerMultiMetaTileEntity(4, new EPMetaTileEntityCrystallizationCrucible(epId("crystallization_crucible")));
+        CATALYTIC_REFORMER = registerMultiMetaTileEntity(5, new EPMetaTileEntityCatalyticReformer(epId("catalytic_reformer")));
 
-        //Multiblocks: Id 12300-13300
-        SONICATOR=registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(EPUtils.epId("sonicator")));
-        CVD_UNIT= registerMultiMetaTileEntity(2, new EPMetaTileEntityCVDUnit(EPUtils.epId("cvd_unit")));
-        NANOSCALE_FABRICATOR=registerMultiMetaTileEntity(3, new EPMetaTileEntityNanoscaleFabricator(EPUtils.epId("nanoscale_fabricator")));
-        CRYSTALLIZATION_CRUCIBLE=registerMultiMetaTileEntity(4, new EPMetaTileEntityCrystallizationCrucible(EPUtils.epId("crystallization_crucible")));
-        CATALYTIC_REFORMER=registerMultiMetaTileEntity(5, new EPMetaTileEntityCatalyticReformer(EPUtils.epId("catalytic_reformer")));
+        //  Range: 13300-14300
+        BLAZING_BLAST_FURNACE = registerMultiMetaTileEntity(1000, new EPMetaTileEntityBlazingBlastFurnace(epId("blazing_blast_furnace")));
+        CRYOGENIC_FREEZER = registerMultiMetaTileEntity(1001, new EPMetaTileEntityCryogenicFreezer(epId("cryogenic_freezer")));
     }
 
     public static <T extends MetaTileEntity> T registerMetaTileEntity(int id, T sampleMetaTileEntity) {
