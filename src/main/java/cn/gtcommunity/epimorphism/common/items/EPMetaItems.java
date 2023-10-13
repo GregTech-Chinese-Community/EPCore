@@ -108,7 +108,15 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
 
+    //  Others
     public static MetaItem<?>.MetaValueItem MAGNETRON;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UHV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UEV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UIV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UXV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_OPV;
+    public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MAX;
+
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;
     public static MetaItem<?>.MetaValueItem ULTRA_MICRO_PHASE_SEPARATOR;
     public static MetaItem<?>.MetaValueItem QUANTUM_TUNNELING_MICROTUBULE;
