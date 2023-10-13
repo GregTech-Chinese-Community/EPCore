@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.info.MaterialIconSet;
 
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
@@ -28,6 +29,13 @@ public class EPUnknownCompositionMaterials {
         RichAmmoniaMixture = new Material.Builder(25204, gregtechId("rich_ammonia_mixture"))
                 .fluid()
                 .color(0x708ACD)
+                .build();
+        //  25205 Blazing Pyrotheum
+        BlazingPyrotheum = new Material.Builder(25205, gregtechId("blazing_pyrotheum"))
+                .fluid(FluidTypes.LIQUID, true)
+                .color(0xE19352)
+                .iconSet(MaterialIconSet.DULL)
+                .fluidTemp(8000)
                 .build();
     }
 }

@@ -197,6 +197,7 @@ metaitem.wafer.chip.zepto_pic.tooltip=仄米功率集成电路
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
+tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
@@ -248,10 +249,17 @@ recipemap.crystallization_recipes.name=结晶
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
 
-
 recipemap.burner_reactor_recipes.name=燃烧反应
 
 recipemap.cryogenic_reactor_recipes.name=低温反应
+
+epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
+epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL
+epimorphism.machine.blazing_blast_furnace.heat=烈焰之炽焱正在转换为热量！
+epimorphism.machine.blazing_blast_furnace.warning=烈焰之炽焱不足
+epimorphism.machine.blazing_blast_furnace.tooltip.1=需要提供烈焰之炽焱以工作。
+epimorphism.machine.blazing_blast_furnace.tooltip.2=未提供烈焰之炽焱时，炽焱高炉将会停机。
+epimorphism.machine.blazing_blast_furnace.tooltip.3=根据线圈等级决定最大并行数量，每提升一级都会使得最大并行数量提高至原本数量的两倍。
 
 #  Materials
 
@@ -290,3 +298,4 @@ gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
 gregtech.material.edp=乙二胺邻苯二酚（EDP）
 gregtech.material.rich_nitrogen_mixture=富氮混合物
 gregtech.material.rich_ammonia_mixture=富氨混合物
+gregtech.material.blazing_pyrotheum=烈焰之炽焱

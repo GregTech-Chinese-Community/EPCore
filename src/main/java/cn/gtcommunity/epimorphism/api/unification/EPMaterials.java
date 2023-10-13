@@ -58,6 +58,8 @@ public EPMaterials() {}
 
     public static Material RichAmmoniaMixture;
 
+    public static Material BlazingPyrotheum;
+
     //  Range: 25000-26000
     public static void init() {
         EPMaterialPropertyAddition.init();
