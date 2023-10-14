@@ -18,6 +18,7 @@ import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
+import gregtech.api.util.LocalizationUtils;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
@@ -25,13 +26,16 @@ import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 
 import javax.annotation.Nonnull;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static gregtech.api.unification.material.Materials.Steel;
@@ -55,7 +59,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
         double max = recipe.getProperty(PHProperty.getInstance(), 7D) + recipe.getProperty(PHErrorRangeProperty.getInstance(), 0D);
         if (min < 0) {min = 0D;}
         if (max > 14) {max = 14D;}
-        return this.pH >= min && this.pH <= max;
+        return (this.pH >= min && this.pH <= max) && super.checkRecipe(recipe, consumeIfSuccess);
     }
 
     @Override
@@ -108,7 +112,16 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         super.addDisplayText(textList);
-        textList.add(new TextComponentString(String.valueOf(this.pH)));
+        textList.add(new TextComponentTranslation("epimorphism.machine.fermentation_tank.ph", String.format("%, .2f", this.pH)));
+    }
+
+    @Override
+    public String[] getDescription() {
+        List<String> list = new ArrayList<>();
+        list.add(I18n.format("epimorphism.multiblock.fermentation_tank.description"));
+        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.multiblock.fermentation_tank.extra1"));
+        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.multiblock.fermentation_tank.extra2"));
+        return list.toArray(new String[0]);
     }
 
     @Nonnull
@@ -135,6 +148,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
         } else if (ph > 14){
             this.pH = 14D;
         } else {this.pH = ph;}
+        this.markDirty();
     }
 
     @Override

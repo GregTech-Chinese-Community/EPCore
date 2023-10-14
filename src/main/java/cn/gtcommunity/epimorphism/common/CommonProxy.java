@@ -4,8 +4,10 @@ import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
+import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.unification.OreDictUnifier;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -19,6 +21,9 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Objects;
 import java.util.function.Function;
+
+import static gregtech.api.unification.material.Materials.Iron;
+import static gregtech.api.unification.ore.OrePrefix.dust;
 
 @EventBusSubscriber(
         modid = "epimorphism"
@@ -64,5 +69,6 @@ public class CommonProxy {
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         EPLog.logger.info("Registering recipes...");
         EPRecipeManager.init();
+        FormulaManager.init();
     }
 }

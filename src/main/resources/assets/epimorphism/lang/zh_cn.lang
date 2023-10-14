@@ -214,6 +214,9 @@ metaitem.biological.components.dna_encoder.tooltip=自复制图灵机的一部�
 metaitem.biological.components.dna_decode_encoder.name=DNA解-编码器
 metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干宇宙
 
+#   Mill Balls
+metaitem.mill.grindball_soapstone.name=皂石研磨球
+metaitem.mill.grindball_aluminium.name=铝研磨球
 
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
@@ -278,10 +281,17 @@ recipemap.catalytic_reformer_recipes.name=催化重整
 
 epimorphism.machine.fermentation_tank.name=发酵罐
 recipemap.fermentation_tank_recipes.name=生物发酵
+epimorphism.machine.fermentation_tank.ph=当前pH值为：%s
+epimorphism.multiblock.fermentation_tank.description=发酵罐是你发展生物技术不可或缺的多方块设施，你可以使用它进行大规模发酵，这将为你提供重要的生物材料。微生物的生长需要特定的pH值，你需要通过向缓冲剂仓输入液体或物品调整发酵液的pH值，得益于特殊的制造技术和需求，它可以使用的缓冲剂范围很广，这在培养某些特殊微生物时非常有用，你也可以输入通用缓冲剂将pH重置为7，微生物的代谢产物同样会改变pH值。别担心，微生物对pH值的要求并不严格，你可以在配方界面查看误差范围。下一页列出了不同缓冲剂的数据，单位为1个或1000L。
+epimorphism.multiblock.fermentation_tank.extra1= /n /n /n /n /n
+epimorphism.multiblock.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 /n 氢氧化钠：3.15
 
 epimorphism.machine.buffer_hatch.name=缓冲剂仓
 epimorphism.machine.buffer_hatch.import.tooltip=为多方块结构输入缓冲剂
 epimorphism.multipart.ph.name=当前pH值为：
+
+epimorphism.machine.mill_ball_hatch.name=研磨球仓
+epimorphism.multipart.ball.only=仅能放入研磨球
 
 recipemap.burner_reactor_recipes.name=燃烧反应
 

@@ -190,7 +190,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
 
     public String getPH() {
         if (getController() != null) {
-            return String.valueOf(((IPHValue) getController()).getCurrentPHValue());
+            return String.format("%, .2f", ((IPHValue) getController()).getCurrentPHValue());
         }else {
             return "7.0";
         }
@@ -203,7 +203,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
             needUpdate = false;
         } else {
             if (!bufferitem.isEmpty()){
-                Double phchangeitem = BufferItemMap.get(bufferitem.getItem().toString() + bufferitem.getMetadata());
+                Double phchangeitem = BufferItemMap.get(bufferitem.getTranslationKey());
                 MultiblockControllerBase current_controller = getController();
                 if (current_controller == null || !current_controller.isStructureFormed()) {
                     needUpdate = false;
@@ -215,8 +215,9 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                             itemHandler.extractItem(0,1,false);
                             ((IPHValue) current_controller).changeCurrentPHValue(phchangeitem);
                             needUpdate = true;
+                        } else {
+                            needUpdate = false;
                         }
-                        needUpdate = false;
                     }
                 }
             }
@@ -233,8 +234,9 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                             fluidTank.drain(1000,true);
                             ((IPHValue) current_controller).changeCurrentPHValue(phchangefluid);
                             needUpdate = true;
+                        }else {
+                            needUpdate = false;
                         }
-                        needUpdate = false;
                     }
                 }
             }
@@ -244,7 +246,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     @Override
     public void update() {
         super.update();
-        if(needUpdate){
+        if(needUpdate && !getWorld().isRemote){
             this.changePH();
             this.setPH();
             this.markDirty();
@@ -280,6 +282,11 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     @Override
     public void registerAbilities(List<IBuffer> list) {
         list.add(this);
+    }
+
+    @Override
+    public boolean canPartShare() {
+        return false;
     }
 
     private class BufferFluidTank extends NotifiableFluidTank {

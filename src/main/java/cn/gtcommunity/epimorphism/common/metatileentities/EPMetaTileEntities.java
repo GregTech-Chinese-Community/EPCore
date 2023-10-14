@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities;
 
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.metatileentity.MetaTileEntity;
@@ -31,6 +32,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
 
     public static EPMetaTileEntityBufferHatch MULTIPART_BUFFER_HATCH;
+    public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
 
     //  Range: 12300-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -47,6 +49,7 @@ public class EPMetaTileEntities {
 
         //SingleBlock: Id 12300-13300
         MULTIPART_BUFFER_HATCH = registerSingleMetaTileEntity(1, new EPMetaTileEntityBufferHatch(epId("buffer_hatch")));
+        MULTIPART_BALL_HATCH = registerSingleMetaTileEntity(2, new EPMetaTileEntityMillBallHatch(epId("mill_ball_hatch")));
 
         //Multiblocks: Id 13300-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));

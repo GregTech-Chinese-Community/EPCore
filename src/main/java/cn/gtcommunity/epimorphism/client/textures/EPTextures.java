@@ -14,7 +14,8 @@ public class EPTextures {
     //  EPOverlayRenderer
     public static EPOverlayRenderer ADVANCED_INVAR_CASING = new EPOverlayRenderer("casings/solid/advanced_invar_casing");
     public static EPOverlayRenderer ADVANCED_ALUMINIUM_CASING = new EPOverlayRenderer("casings/solid/advanced_aluminium_casing");
-    public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_bufferhatch");
+    public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
+    public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
 
     public EPTextures() {
     }

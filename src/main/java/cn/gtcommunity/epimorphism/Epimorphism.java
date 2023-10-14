@@ -43,7 +43,6 @@ public class Epimorphism {
         EPMetablocks.init();
         EPAPI.APIBlockInit();
         EPMetaTileEntities.init();
-        FormulaManager.init();
         proxy.preLoad();
     }
 
