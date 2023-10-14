@@ -140,5 +140,18 @@ public class GoowareCircuits {
                         .CWUt(192)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
+
+        // Test
+        FERMENTATION_TANK_RECIPES.recipeBuilder()
+                .input(GOOWARE_COMPUTER, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 20))
+                .output(GOOWARE_MAINFRAME)
+                .fluidOutputs(KaptonE.getFluid(L * 9))
+                .duration(2000)
+                .EUt(1_200_000)
+                .pH(5.12)
+                .pHChange(-3.14)
+                .pHErrorRange(4.12)
+                .buildAndRegister();
     }
 }

@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.recipe;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierNoCoilTemperatureRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierRecipeBuilder;
 import cn.gtcommunity.epimorphism.api.recipe.builder.NoCoilTemperatureRecipeBuilder;
+import cn.gtcommunity.epimorphism.api.recipe.builder.PHRecipeBuilder;
 import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
@@ -49,4 +50,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>("burner_reactor_recipes", 0, 3, 0, 2, 0, 3, 0, 3, new NoCoilTemperatureRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ARC);
+
+    public static final RecipeMap<PHRecipeBuilder> FERMENTATION_TANK_RECIPES = new RecipeMap<>("fermentation_tank_recipes", 0, 3, 0, 3, 1, 3, 1, 3, new PHRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT,ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.CHEMICAL_REACTOR);
 }

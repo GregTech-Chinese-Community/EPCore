@@ -255,6 +255,9 @@ metaitem.magnetron.name=磁控管
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s
+epimorphism.recipe.ph=pH值:%d
+epimorphism.recipe.ph_change=pH值变化:%d
+epimorphism.recipe.ph_error_range=pH值误差范围:±%d
 
 #  Machines
 epimorphism.machine.sonicator.name=超声振荡器
@@ -272,6 +275,13 @@ recipemap.crystallization_recipes.name=结晶
 
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
+
+epimorphism.machine.fermentation_tank.name=发酵罐
+recipemap.fermentation_tank_recipes.name=生物发酵
+
+epimorphism.machine.buffer_hatch.name=缓冲剂仓
+epimorphism.machine.buffer_hatch.import.tooltip=为多方块结构输入缓冲剂
+epimorphism.multipart.ph.name=当前pH值为：
 
 recipemap.burner_reactor_recipes.name=燃烧反应
 
