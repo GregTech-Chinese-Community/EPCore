@@ -143,7 +143,9 @@ public class GoowareCircuits {
 
         // Test
         FERMENTATION_TANK_RECIPES.recipeBuilder()
+                .input(frameGt, Darmstadtium, 2)
                 .input(GOOWARE_COMPUTER, 2)
+                .input(wireGtDouble, PedotPSS, 16)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .output(GOOWARE_MAINFRAME)
                 .fluidOutputs(KaptonE.getFluid(L * 9))

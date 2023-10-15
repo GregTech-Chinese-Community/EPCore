@@ -9,6 +9,7 @@ import cn.gtcommunity.epimorphism.api.recipe.properties.PHProperty;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -38,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static gregicality.multiblocks.api.unification.GCYMMaterials.WatertightSteel;
 import static gregtech.api.unification.material.Materials.Steel;
 
 public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockController implements IPHValue {
@@ -102,7 +104,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
 
     @Nonnull
     private static IBlockState getFrameState() {
-        return MetaBlocks.FRAMES.get(Steel).getBlock(Steel);
+        return MetaBlocks.FRAMES.get(WatertightSteel).getBlock(WatertightSteel);
     }
 
     private static IBlockState getGlassState() {
