@@ -1,6 +1,8 @@
 package cn.gtcommunity.epimorphism.common.items;
 
+import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import gregtech.api.GregTechAPI;
+import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.StandardMetaItem;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
@@ -135,6 +137,10 @@ public class EPMetaItem1 extends StandardMetaItem {
         DNA_ENCODER = this.addItem(307, "biological.components.dna_encoder");
         DNA_DECODER = this.addItem(308, "biological.components.dna_decoder");
         DNA_DECODE_ENCODER = this.addItem(309, "biological.components.dna_decode_encoder");
+
+        //  Mill Balls
+        GRINDBALL_SOAPSTONE = this.addItem(350, "mill.grindball_soapstone").setMaxStackSize(1).addComponents(new MillBallBehavior());
+        GRINDBALL_ALUMINIUM = this.addItem(351, "mill.grindball_aluminium").setMaxStackSize(1).addComponents(new MillBallBehavior());
 
     }
 }

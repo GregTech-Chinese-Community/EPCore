@@ -250,6 +250,9 @@ metaitem.magnetron.name=Magnetron
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
 epimorphism.recipe.glass_tier=Glass Tier:%s
+epimorphism.recipe.ph=pH:%d
+epimorphism.recipe.ph_change=pH Change:%d
+epimorphism.recipe.ph_error_range=pH Error Range:±%d
 
 #  Machines
 epimorphism.machine.sonicator.name=Sonicator

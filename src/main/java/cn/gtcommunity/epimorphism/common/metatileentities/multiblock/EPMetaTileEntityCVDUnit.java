@@ -46,7 +46,7 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 
     @Override
     public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
-        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0);
+        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0) && super.checkRecipe(recipe, consumeIfSuccess);
     }
 
     @Override
