@@ -49,8 +49,8 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     private final BufferFluidTank fluidTank;
     private final BufferItemHandler itemHandler;
 
-    public static Map<String,Double> BufferItemMap = new HashMap<>();
-    public static Map<String,Double> BufferFluidMap = new HashMap<>();
+    public static Map<String,double[]> BufferItemMap = new HashMap<>();
+    public static Map<String,double[]> BufferFluidMap = new HashMap<>();
 
     private boolean needUpdate = false;
 
@@ -203,7 +203,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
             needUpdate = false;
         } else {
             if (!bufferitem.isEmpty()){
-                Double phchangeitem = BufferItemMap.get(bufferitem.getTranslationKey());
+                double[] phchangeitem = BufferItemMap.get(bufferitem.getTranslationKey());
                 MultiblockControllerBase current_controller = getController();
                 if (current_controller == null || !current_controller.isStructureFormed()) {
                     needUpdate = false;
@@ -213,7 +213,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                     } else {
                         if (phchangeitem != null) {
                             itemHandler.extractItem(0,1,false);
-                            ((IPHValue) current_controller).changeCurrentPHValue(phchangeitem);
+                            ((IPHValue) current_controller).changeCurrentPHValue(phchangeitem[0], phchangeitem[1]);
                             needUpdate = true;
                         } else {
                             needUpdate = false;
@@ -222,7 +222,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                 }
             }
             if (bufferfluid != null && bufferfluid.amount >= 1000){
-                Double phchangefluid = BufferFluidMap.get(bufferfluid.getFluid().toString());
+                double[] phchangefluid = BufferFluidMap.get(bufferfluid.getFluid().toString());
                 MultiblockControllerBase current_controller = getController();
                 if (current_controller == null || !current_controller.isStructureFormed()) {
                     needUpdate = false;
@@ -232,7 +232,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                     } else {
                         if (phchangefluid != null) {
                             fluidTank.drain(1000,true);
-                            ((IPHValue) current_controller).changeCurrentPHValue(phchangefluid);
+                            ((IPHValue) current_controller).changeCurrentPHValue(phchangefluid[0], phchangefluid[1]);
                             needUpdate = true;
                         }else {
                             needUpdate = false;

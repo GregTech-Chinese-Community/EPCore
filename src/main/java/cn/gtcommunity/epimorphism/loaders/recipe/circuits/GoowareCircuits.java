@@ -155,5 +155,13 @@ public class GoowareCircuits {
                 .pHChange(-3.14)
                 .pHErrorRange(4.12)
                 .buildAndRegister();
+
+        FLOTATION_FACTORY.recipeBuilder()
+                .input(frameGt, Darmstadtium, 2)
+                .output(GOOWARE_MAINFRAME)
+                .fluidOutputs(KaptonE.getFluid(L * 9))
+                .duration(2000)
+                .EUt(1_200_000)
+                .buildAndRegister();
     }
 }

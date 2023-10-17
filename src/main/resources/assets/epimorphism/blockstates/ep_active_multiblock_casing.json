@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "active=false,variant=flotation_intake_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_active_multiblock_casing/flotation_intake_casing"
+      }
+    },
+    "active=true,variant=flotation_intake_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_active_multiblock_casing/flotation_intake_casing_active"
+      }
+    }
+  }
+}

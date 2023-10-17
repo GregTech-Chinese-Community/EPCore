@@ -1,6 +1,7 @@
 #  Ore Prefixes
 item.material.oreprefix.coil=%s线圈
 item.material.oreprefix.plateCurved=弯曲%s板
+item.material.oreprefix.milled=研磨%s矿石粉
 
 #  Tools
 item.gt.tool.universal_spade.name=%s万用铲
@@ -218,11 +219,18 @@ metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干�
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球
 
+#
+metaitem.milled.tooltip.flotation=使用工业浮选机进行精选
+
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
 tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
+tile.ep_mill_casing.isa_mill_casing.name=镀层艾萨研磨机器外壳
+tile.ep_mill_casing.isa_mill_casing_pipe.name=镀层艾萨研磨管道机器外壳
+tile.ep_mill_casing.isa_mill_casing_gearbox.name=艾萨研磨齿轮机械方块
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
@@ -261,6 +269,8 @@ epimorphism.recipe.glass_tier=玻璃等级:%s
 epimorphism.recipe.ph=pH值:%d
 epimorphism.recipe.ph_change=pH值变化:%d
 epimorphism.recipe.ph_error_range=pH值误差范围:±%d
+epimorphism.recipe.grind_ball_soapstone=研磨球材质：皂石
+epimorphism.recipe.grind_ball_aluminium=研磨球材质：铝
 
 #  Machines
 epimorphism.machine.sonicator.name=超声振荡器
@@ -284,7 +294,7 @@ recipemap.fermentation_tank_recipes.name=生物发酵
 epimorphism.machine.fermentation_tank.ph=当前pH值为：%s
 epimorphism.multiblock.fermentation_tank.description=发酵罐是你发展生物技术不可或缺的多方块设施，你可以使用它进行大规模发酵，这将为你提供重要的生物材料。微生物的生长需要特定的pH值，你需要通过向缓冲剂仓输入液体或物品调整发酵液的pH值，得益于特殊的制造技术和需求，它可以使用的缓冲剂范围很广，这在培养某些特殊微生物时非常有用，你也可以输入通用缓冲剂将pH重置为7，微生物的代谢产物同样会改变pH值。别担心，微生物对pH值的要求并不严格，你可以在配方界面查看误差范围。下一页列出了不同缓冲剂的数据，单位为1个或1000L。
 epimorphism.multiblock.fermentation_tank.extra1= /n /n /n /n /n
-epimorphism.multiblock.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 /n 氢氧化钠：3.15
+epimorphism.multiblock.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 1.55/n 氢氧化钠：3.15 13.55
 
 epimorphism.machine.buffer_hatch.name=缓冲剂仓
 epimorphism.machine.buffer_hatch.import.tooltip=为多方块结构输入缓冲剂
