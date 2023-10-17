@@ -18,7 +18,8 @@ import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 public class EPMetaTileEntities {
 
     //SingleBlock
-
+    public static EPMetaTileEntityBufferHatch MULTIPART_BUFFER_HATCH;
+    public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
 
 
     //  Multiblocks
@@ -30,9 +31,9 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityFermentationTank FERMENTATION_TANK;
     public static EPMetaTileEntityBlazingBlastFurnace BLAZING_BLAST_FURNACE;
     public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
+    public static EPMetaTileEntityIsaMill ISA_MILL;
+    public static EPMetaTileEntityFlotationFactory FLOTATION_FACTORY;
 
-    public static EPMetaTileEntityBufferHatch MULTIPART_BUFFER_HATCH;
-    public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
 
     //  Range: 12300-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -60,6 +61,8 @@ public class EPMetaTileEntities {
         FERMENTATION_TANK= registerMultiMetaTileEntity(6, new EPMetaTileEntityFermentationTank(epId("fermentation_tank")));
         BLAZING_BLAST_FURNACE = registerMultiMetaTileEntity(7, new EPMetaTileEntityBlazingBlastFurnace(epId("blazing_blast_furnace")));
         CRYOGENIC_FREEZER = registerMultiMetaTileEntity(8, new EPMetaTileEntityCryogenicFreezer(epId("cryogenic_freezer")));
+        ISA_MILL = registerMultiMetaTileEntity(9, new EPMetaTileEntityIsaMill(epId("isa_mill")));
+        FLOTATION_FACTORY = registerMultiMetaTileEntity(10, new EPMetaTileEntityFlotationFactory(epId("flotation_factory")));
     }
     
 }

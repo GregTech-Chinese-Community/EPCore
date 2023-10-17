@@ -1,9 +1,6 @@
 package cn.gtcommunity.epimorphism.api.recipe;
 
-import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierNoCoilTemperatureRecipeBuilder;
-import cn.gtcommunity.epimorphism.api.recipe.builder.GlassTierRecipeBuilder;
-import cn.gtcommunity.epimorphism.api.recipe.builder.NoCoilTemperatureRecipeBuilder;
-import cn.gtcommunity.epimorphism.api.recipe.builder.PHRecipeBuilder;
+import cn.gtcommunity.epimorphism.api.recipe.builder.*;
 import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
@@ -52,6 +49,15 @@ public class EPRecipeMaps {
             .setSound(GTSoundEvents.ARC);
 
     public static final RecipeMap<PHRecipeBuilder> FERMENTATION_TANK_RECIPES = new RecipeMap<>("fermentation_tank_recipes", 0, 3, 0, 3, 1, 3, 1, 3, new PHRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT,ProgressWidget.MoveType.HORIZONTAL)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.CHEMICAL_REACTOR);
+
+    public static final RecipeMap<GrindBallTierRecipeBuilder> ISA_MILL_GRINDER = new RecipeMap<>("isa_mill_recipes", 3, 3, 0, 0, new GrindBallTierRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.MACERATOR);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FLOTATION_FACTORY = new RecipeMap<>("flotation_factory", 3, 3, 3, 3, new SimpleRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_BATH, ProgressWidget.MoveType.CIRCULAR)
+            .setSound(GTSoundEvents.BATH);
+
 }

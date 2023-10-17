@@ -7,5 +7,6 @@ public class OrePrefixAdditions {
     public static void init() {
         MetaItems.addOrePrefix(EPOrePrefix.coil);
         MetaItems.addOrePrefix(EPOrePrefix.plateCurved);
+        MetaItems.addOrePrefix(EPOrePrefix.milled);
     }
 }

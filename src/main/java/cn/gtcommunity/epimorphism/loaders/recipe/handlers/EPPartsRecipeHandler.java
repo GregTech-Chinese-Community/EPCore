@@ -14,7 +14,7 @@ import gregtech.api.unification.stack.UnificationEntry;
 
 public class EPPartsRecipeHandler {
 
-    private EPPartsRecipeHandler() {}
+    private EPPartsRecipeHandler() {/**/}
     public static void register() {
         EPOrePrefix.plateCurved.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processPlateCurved);
         OrePrefix.ring.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processRing);

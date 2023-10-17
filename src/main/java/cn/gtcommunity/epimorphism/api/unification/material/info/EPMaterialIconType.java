@@ -6,5 +6,6 @@ public class EPMaterialIconType {
 
     public static final MaterialIconType coil = new MaterialIconType("coil");
     public static final MaterialIconType plateCurved = new MaterialIconType("plateCurved");
+    public static final MaterialIconType milled = new MaterialIconType("milled");
 
 }
