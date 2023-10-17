@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
+import cn.gtcommunity.epimorphism.api.EPAPI;
 import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
@@ -7,28 +8,31 @@ import cn.gtcommunity.epimorphism.api.recipe.properties.GlassTierProperty;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import gregicality.multiblocks.api.render.GCYMTextures;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
-import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.pattern.MultiblockShapeInfo;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
-import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
-import gregtech.common.blocks.BlockGlassCasing;
-import gregtech.common.blocks.BlockWireCoil;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.ConfigHolder;
+import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 
@@ -75,7 +79,9 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
                 .aisle("XXXXX", "XCCCX", "XGGGX").setRepeatable(3)
                 .aisle("XXXXX", "SGGGX", "XGGGX")
                 .where('S', selfPredicate())
-                .where('X', states(getCasingState()).setMinGlobalLimited(35).or(autoAbilities()))
+                .where('X', states(getCasingState())
+                        .setMinGlobalLimited(35)
+                        .or(autoAbilities()))
                 .where('G', EPTraceabilityPredicate.EP_GLASS.get())
                 .where('C', states(getSubstrateState()))
                 .build();
@@ -98,5 +104,32 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return GCYMTextures.NONCONDUCTING_CASING;
+    }
+
+    public List<MultiblockShapeInfo> getMatchingShapes() {
+        ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList();
+        MultiblockShapeInfo.Builder builder = MultiblockShapeInfo.builder()
+                .aisle("EETXX", "RGGGU", "PGGGQ")
+                .aisle("XXXXX", "XCCCX", "XGGGX")
+                .aisle("XXXXX", "XCCCX", "XGGGX")
+                .aisle("XXXXX", "XCCCX", "XGGGX")
+                .aisle("XXXXX", "SGGGX", "XGGGX")
+                .where('S', EPMetaTileEntities.CVD_UNIT, EnumFacing.SOUTH)
+                .where('X', getCasingState())
+                .where('C', getSubstrateState())
+                .where('P', MetaTileEntities.ITEM_IMPORT_BUS[4], EnumFacing.NORTH)
+                .where('Q', MetaTileEntities.ITEM_EXPORT_BUS[4], EnumFacing.NORTH)
+                .where('R', MetaTileEntities.FLUID_IMPORT_HATCH[4], EnumFacing.NORTH)
+                .where('U', MetaTileEntities.FLUID_EXPORT_HATCH[4], EnumFacing.NORTH)
+                .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[4], EnumFacing.NORTH)
+                .where('T', () -> {
+                    return ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
+                }, EnumFacing.NORTH);
+        EPAPI.EP_Glass.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
+            return ((IGlassTierBlockState)entry.getValue()).getTier();
+        })).forEach((entry) -> {
+            shapeInfo.add(builder.where('G', (IBlockState)entry.getKey()).build());
+        });
+        return shapeInfo;
     }
 }
