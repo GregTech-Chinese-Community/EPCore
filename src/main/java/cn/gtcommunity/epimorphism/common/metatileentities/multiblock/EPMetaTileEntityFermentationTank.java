@@ -73,6 +73,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     public void invalidateStructure() {
         super.invalidateStructure();
         this.pH = 7D;
+        this.markDirty();
     }
 
     @Nonnull
@@ -154,6 +155,18 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     }
 
     @Override
+    public void changeCurrentPHValue(double ph_change, double ph_change_limit) {
+        if (ph_change > 0) {
+            double ph = this.pH + ph_change;
+            this.pH = Math.min(ph, ph_change_limit);
+        } else {
+            double ph = this.pH + ph_change;
+            this.pH = Math.max(ph, ph_change_limit);
+        }
+        this.markDirty();
+    }
+
+    @Override
     public NBTTagCompound writeToNBT(NBTTagCompound data) {
         data.setDouble("ph", this.pH);
         return super.writeToNBT(data);
@@ -166,7 +179,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     }
 
     protected class PHRecipeLogic extends MultiblockRecipeLogic {
-        private Recipe current_recipe;
+        private double current_ph_change;
         public PHRecipeLogic(RecipeMapMultiblockController metaTileEntity) {
             super(metaTileEntity);
             if (!(metaTileEntity instanceof IPHValue)) {
@@ -177,13 +190,27 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
         @Override
         protected void setupRecipe(Recipe recipe) {
             super.setupRecipe(recipe);
-            this.current_recipe = recipe;
+            this.current_ph_change = recipe.getProperty(PHChangeProperty.getInstance(), 0D);
+        }
+
+        @Nonnull
+        @Override
+        public NBTTagCompound serializeNBT() {
+            NBTTagCompound tag = super.serializeNBT();
+            tag.setDouble("current_ph_change", this.current_ph_change);
+            return tag;
+        }
+
+        @Override
+        public void deserializeNBT(@Nonnull NBTTagCompound compound) {
+            super.deserializeNBT(compound);
+            this.current_ph_change = compound.getDouble("current_ph_change");
         }
 
         @Override
         protected void completeRecipe() {
             super.completeRecipe();
-            ((IPHValue)this.metaTileEntity).changeCurrentPHValue(current_recipe.getProperty(PHChangeProperty.getInstance(), 0D));
+            ((IPHValue)this.metaTileEntity).changeCurrentPHValue(this.current_ph_change);
         }
     }
 }

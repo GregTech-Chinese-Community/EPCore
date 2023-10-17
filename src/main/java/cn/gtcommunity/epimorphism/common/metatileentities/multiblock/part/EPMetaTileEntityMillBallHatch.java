@@ -142,7 +142,7 @@ public class EPMetaTileEntityMillBallHatch extends MetaTileEntityMultiblockPart 
 
     @Override
     public boolean hasBall() {
-        return false;
+        return ballHolder.hasBall();
     }
 
     @Override
@@ -150,6 +150,7 @@ public class EPMetaTileEntityMillBallHatch extends MetaTileEntityMultiblockPart 
         return ballHolder.getBallTier();
     }
 
+    @Override
     public void damageGrinder(int amount) {
 
         ballHolder.damageBall(amount);
@@ -161,9 +162,7 @@ public class EPMetaTileEntityMillBallHatch extends MetaTileEntityMultiblockPart 
     }
 
     @Override
-    public void registerAbilities(List<IBall> list) {
-
-    }
+    public void registerAbilities(List<IBall> list) {list.add(this);}
 
     private class ItemBallHolder extends ItemStackHandler {
         @Nullable

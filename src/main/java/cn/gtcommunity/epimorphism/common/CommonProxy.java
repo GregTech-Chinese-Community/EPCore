@@ -47,6 +47,8 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_PMMA_CASING);
         registry.register(EPMetablocks.EP_MULTIBLOCK_CASING);
         registry.register(EPMetablocks.EP_CRUCIBLE_CASING);
+        registry.register(EPMetablocks.EP_MILL_CASING);
+        registry.register(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING);
     }
 
     @SubscribeEvent
@@ -57,6 +59,8 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_PMMA_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_CRUCIBLE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_MILL_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

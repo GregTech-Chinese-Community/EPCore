@@ -1,9 +1,9 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "gcys:crucible",
+    "model": "epimorphism:crucible",
     "textures": {
-      "all": "gregtech:blocks/rendering_error"
+      "all": "epimorphism:blocks/rendering_error"
     }
   },
   "variants": {
