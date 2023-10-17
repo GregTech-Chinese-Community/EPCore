@@ -44,6 +44,11 @@ public EPMaterials() {}
     public static Material BlazingPyrotheum;
     public static Material GelidCryotheum;
 
+    //  Machine Casing Materials
+    public static Material Inconel625;
+    public static Material HastelloyN;
+
+
     //  Biological Production Line
     /*public static Material ArtificialBaseX;
     public static Material ArtificialBaseZ;
@@ -52,13 +57,14 @@ public EPMaterials() {}
     public static Material
     public static Material*/
 
-    //  Range: 25000-26000
+    //  Range: 24000-28000
     public static void init() {
         EPMaterialPropertyAddition.init();
         EPMaterialFlagAddition.init();
         EPFirstDegreeMaterials.register();
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();
+        EPMachineCasingMaterials.register();
     }
 
 }

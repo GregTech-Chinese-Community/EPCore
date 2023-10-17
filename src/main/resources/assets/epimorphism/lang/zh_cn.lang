@@ -1,7 +1,8 @@
 #  Ore Prefixes
 item.material.oreprefix.coil=%s线圈
 item.material.oreprefix.plateCurved=弯曲%s板
-item.material.oreprefix.milled=研磨%s矿石粉
+item.material.oreprefix.milled=碾磨%s粉
+metaitem.milled.tooltip.flotation=使用工业浮选机进行进一步精选
 
 #  Tools
 item.gt.tool.universal_spade.name=%s万用铲
@@ -219,18 +220,18 @@ metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干�
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球
 
-#
-metaitem.milled.tooltip.flotation=使用工业浮选机进行精选
-
-
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
 tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
-tile.ep_mill_casing.isa_mill_casing.name=镀层艾萨研磨机器外壳
-tile.ep_mill_casing.isa_mill_casing_pipe.name=镀层艾萨研磨管道机器外壳
-tile.ep_mill_casing.isa_mill_casing_gearbox.name=艾萨研磨齿轮机械方块
+tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
+tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
+tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
+tile.ep_mill_casing.flotation_casing.name=哈斯特洛依合金-N机器外壳
+tile.ep_mill_casing.flotation_casing_pipe.name=哈斯特洛依合金-N油膜管道外壳
+tile.ep_mill_casing.flotation_casing_gearbox.name=哈斯特洛依合金-N齿轮箱外壳
+tile.ep_active_multiblock_casing.flotation_intake_casing.name=哈斯特洛依合金-N筛选用进气口外壳
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
@@ -322,6 +323,11 @@ epimorphism.machine.cryogenic_freezer.warning=极寒之凛冰不足
 epimorphism.machine.cryogenic_freezer.tooltip.1=需要提供§b极寒之凛冰§7以工作
 epimorphism.machine.cryogenic_freezer.tooltip.2=未提供§b极寒之凛冰§7时，凛冰冷冻机将会停机
 
+epimorphism.machine.isa_mill.name=艾萨研磨机
+recipemap.isa_mill_recipes.name=湿法碾磨
+
+epimorphism.machine.flotation_factory.name=工业浮选机
+
 #  Materials
 
 ##  First Degree Materials
@@ -361,3 +367,7 @@ gregtech.material.rich_nitrogen_mixture=富氮混合物
 gregtech.material.rich_ammonia_mixture=富氨混合物
 gregtech.material.blazing_pyrotheum=烈焰之炽焱
 gregtech.material.gelid_cryotheum=极寒之凛冰
+
+##  Machine Casing Materials
+gregtech.material.inconel_625=镍基合金-625
+gregtech.material.hastelloy_n=哈斯特洛依合金-N
