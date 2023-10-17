@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
+import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
@@ -15,6 +16,7 @@ public class EPRecipeManager {
         EPRecipeHandlerList.register();
         initChains();
         initCircuits();
+        initMachines();
         initMultiblockRecipes();
     }
 
@@ -29,6 +31,10 @@ public class EPRecipeManager {
     public static void initCircuits() {
         WetwareCircuits.init();
         GoowareCircuits.init();
+    }
+
+    public static void initMachines() {
+        MachineComponents.init();
     }
 
     public static void initMultiblockRecipes() {

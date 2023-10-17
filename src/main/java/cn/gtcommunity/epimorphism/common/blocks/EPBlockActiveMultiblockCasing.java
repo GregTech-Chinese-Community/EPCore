@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 public class EPBlockActiveMultiblockCasing extends VariantActiveBlock<EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType> {
     public EPBlockActiveMultiblockCasing() {
         super(Material.IRON);
-        setTranslationKey("active_multiblock_casing");
+        setTranslationKey("ep_active_multiblock_casing");
         setHardness(5.0f);
         setResistance(10.0f);
         setSoundType(SoundType.METAL);
