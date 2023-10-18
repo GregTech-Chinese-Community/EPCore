@@ -304,6 +304,7 @@ epimorphism.multipart.ph.name=当前pH值为：
 epimorphism.machine.mill_ball_hatch.name=研磨球仓
 epimorphism.multipart.ball.only=仅能放入研磨球
 
+epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
 
 recipemap.cryogenic_reactor_recipes.name=低温反应

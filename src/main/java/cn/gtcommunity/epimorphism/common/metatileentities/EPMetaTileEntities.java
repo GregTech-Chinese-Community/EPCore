@@ -33,7 +33,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
     public static EPMetaTileEntityIsaMill ISA_MILL;
     public static EPMetaTileEntityFlotationFactory FLOTATION_FACTORY;
-
+    //  11
+    public static EPMetaTileEntityBurnerReactor BURNER_REACTOR;
 
     //  Range: 12300-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -48,11 +49,11 @@ public class EPMetaTileEntities {
 
     public static void init() {
 
-        //SingleBlock: Id 12300-13300
+        //  SingleBlock: Id 12300-13300
         MULTIPART_BUFFER_HATCH = registerSingleMetaTileEntity(1, new EPMetaTileEntityBufferHatch(epId("buffer_hatch")));
         MULTIPART_BALL_HATCH = registerSingleMetaTileEntity(2, new EPMetaTileEntityMillBallHatch(epId("mill_ball_hatch")));
 
-        //Multiblocks: Id 13300-14300
+        //  Multiblocks: Id 13300-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));
         CVD_UNIT = registerMultiMetaTileEntity(2, new EPMetaTileEntityCVDUnit(epId("cvd_unit")));
         NANOSCALE_FABRICATOR = registerMultiMetaTileEntity(3, new EPMetaTileEntityNanoscaleFabricator(epId("nanoscale_fabricator")));
@@ -63,6 +64,7 @@ public class EPMetaTileEntities {
         CRYOGENIC_FREEZER = registerMultiMetaTileEntity(8, new EPMetaTileEntityCryogenicFreezer(epId("cryogenic_freezer")));
         ISA_MILL = registerMultiMetaTileEntity(9, new EPMetaTileEntityIsaMill(epId("isa_mill")));
         FLOTATION_FACTORY = registerMultiMetaTileEntity(10, new EPMetaTileEntityFlotationFactory(epId("flotation_factory")));
+        //  11
+        BURNER_REACTOR = registerMultiMetaTileEntity(12, new EPMetaTileEntityBurnerReactor(epId("burner_reactor")));
     }
-    
 }
