@@ -11,6 +11,7 @@ public EPMaterials() {}
     public static Material Hydrazine;
     public static Material BerylliumOxide;
     public static Material HydrogenPeroxide;
+    public static Material TungstenTrioxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

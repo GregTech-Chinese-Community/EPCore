@@ -42,5 +42,14 @@ public class EPFirstDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Hydrogen, 2, Oxygen, 2)
                 .build();
+
+        //  24005 Tungsten Trioxide
+        TungstenTrioxide = new Material.Builder(24005, gregtechId("tungsten_trioxide"))
+                .dust()
+                .color(0xC7D300)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Tungsten, 1, Oxygen, 3)
+                .build();
     }
 }

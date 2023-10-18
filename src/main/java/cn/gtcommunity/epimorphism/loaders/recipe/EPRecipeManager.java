@@ -26,6 +26,7 @@ public class EPRecipeManager {
         PMMAChain.init();
         AmmoniaChain.init();
         GrapheneChain.init();
+        TungstenChain.init();
     }
 
     public static void initCircuits() {

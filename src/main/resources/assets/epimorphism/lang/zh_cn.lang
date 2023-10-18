@@ -308,6 +308,8 @@ recipemap.burner_reactor_recipes.name=燃烧反应
 
 recipemap.cryogenic_reactor_recipes.name=低温反应
 
+recipemap.dryer_recipes.name=脱水
+
 epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
 epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL
 epimorphism.machine.blazing_blast_furnace.heat=烈焰之炽焱正在转换为热量！
@@ -335,6 +337,7 @@ gregtech.material.graphene_oxide=氧化石墨烯
 gregtech.material.hydrazine=肼
 gregtech.material.beryllium_oxide=氧化铍
 gregtech.material.hydrogen_peroxide=过氧化氢
+gregtech.material.tungsten_trioxide=三氧化钨
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
