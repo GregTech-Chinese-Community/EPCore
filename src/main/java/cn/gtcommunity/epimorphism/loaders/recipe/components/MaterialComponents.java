@@ -1,10 +1,13 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.components;
 
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
+import gregtech.api.unification.stack.UnificationEntry;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.loaders.recipe.CraftingComponent.*;
 
 public class MaterialComponents {
@@ -27,6 +30,10 @@ public class MaterialComponents {
                 {12, EPMetaItems.VOLTAGE_COIL_UXV},
                 {13, EPMetaItems.VOLTAGE_COIL_OPV},
                 {14, EPMetaItems.VOLTAGE_COIL_MAX},
+        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
+
+        SAWBLADE.appendIngredients(Stream.of(new Object[][]{
+                {9, new UnificationEntry(toolHeadBuzzSaw, CubicBoronNitride)}
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
     }
 }

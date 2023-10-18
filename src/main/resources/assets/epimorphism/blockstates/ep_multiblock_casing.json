@@ -29,6 +29,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/advanced_aluminium_casing"
         }
+      },
+      "vacuum_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/vacuum_casing"
+        }
       }
     }
   }

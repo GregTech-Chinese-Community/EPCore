@@ -12,5 +12,6 @@ public class EPMaterialPropertyAddition {
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
         Rhenium.addFlags(GENERATE_PLATE);
+        Nickel.addFlags(GENERATE_FOIL);
     }
 }

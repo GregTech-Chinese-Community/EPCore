@@ -109,6 +109,7 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
                 .where('#', air())
                 .build();
     }
+
     protected IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.ADVANCED_INVAR_CASING);
     }

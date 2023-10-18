@@ -33,10 +33,10 @@ Improve difficulty and QoL of GregTech CEu, based on GregTech 6, Gregicality Leg
 
 * Some tool textures from **[GregTech 6](https://github.com/GregTech6/gregtech6)**.
 
-* Curved Plate textures and recipes from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
+* Curved Plate textures and recipes, Cosmic SMD textures from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
 
-* Circuit textures from **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**.
+* Machine overlay textures and circuit textures from **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**.
 
-* Cosmic Inductor, Supracausal SMD and some circuit textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
+* Cosmic Inductor, Supracausal SMD and some circuit component textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
 
 * README.md base from **[GregTech CEu](https://github.com/GregTechCEu/GregTech)**.

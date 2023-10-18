@@ -304,9 +304,13 @@ epimorphism.multipart.ph.name=当前pH值为：
 epimorphism.machine.mill_ball_hatch.name=研磨球仓
 epimorphism.multipart.ball.only=仅能放入研磨球
 
+epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
 
+epimorphism.machine.cryogenic_reactor.name=低温反应室
 recipemap.cryogenic_reactor_recipes.name=低温反应
+
+recipemap.dryer_recipes.name=脱水
 
 epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
 epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL
@@ -327,6 +331,10 @@ epimorphism.machine.isa_mill.name=艾萨研磨机
 recipemap.isa_mill_recipes.name=湿法碾磨
 
 epimorphism.machine.flotation_factory.name=工业浮选机
+recipemap.flotation_factory_recipes.name=浮游选矿
+
+epimorphism.machine.vacuum_drying_furnace.name=真空干燥炉
+recipemap.vacuum_drying_furnace_recipes.name=真空干燥
 
 #  Materials
 
@@ -335,6 +343,21 @@ gregtech.material.graphene_oxide=氧化石墨烯
 gregtech.material.hydrazine=肼
 gregtech.material.beryllium_oxide=氧化铍
 gregtech.material.hydrogen_peroxide=过氧化氢
+gregtech.material.tungsten_trioxide=三氧化钨
+gregtech.material.hexagonal_boron_nitride=六方氮化硼
+gregtech.material.cubic_boron_nitride=立方氮化硼
+gregtech.material.boric_acid=硼酸
+gregtech.material.boron_trioxide=三氧化二硼
+gregtech.material.boron_trifluoride=三氟化硼
+gregtech.material.lithium_hydride=氢化锂
+gregtech.material.lithium_tetrafluoroborate=四氟硼酸锂
+gregtech.material.diborane=乙硼烷
+gregtech.material.borazine=环氮硼烷
+gregtech.material.boron_trichloride=三氯化硼
+gregtech.material.trichloroborazine=三氯环硼氮烷
+gregtech.material.amorphous_boron_nitride=非晶氮化硼
+gregtech.material.heterodiamond=杂金刚石
+gregtech.material.cubic_heterodiamond=立方杂金刚石
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
