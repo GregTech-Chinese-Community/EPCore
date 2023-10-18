@@ -340,6 +340,20 @@ gregtech.material.hydrazine=肼
 gregtech.material.beryllium_oxide=氧化铍
 gregtech.material.hydrogen_peroxide=过氧化氢
 gregtech.material.tungsten_trioxide=三氧化钨
+gregtech.material.hexagonal_boron_nitride=六方氮化硼
+gregtech.material.cubic_boron_nitride=立方氮化硼
+gregtech.material.boric_acid=硼酸
+gregtech.material.boron_trioxide=三氧化二硼
+gregtech.material.boron_trifluoride=三氟化硼
+gregtech.material.lithium_hydride=氢化锂
+gregtech.material.lithium_tetrafluoroborate=四氟硼酸锂
+gregtech.material.diborane=乙硼烷
+gregtech.material.borazine=环氮硼烷
+gregtech.material.boron_trichloride=三氯化硼
+gregtech.material.trichloroborazine=三氯环硼氮烷
+gregtech.material.amorphous_boron_nitride=非晶氮化硼
+gregtech.material.heterodiamond=杂金刚石
+gregtech.material.cubic_heterodiamond=立方杂金刚石
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

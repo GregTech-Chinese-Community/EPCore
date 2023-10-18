@@ -1,7 +1,9 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
+import cn.gtcommunity.epimorphism.loaders.recipe.blocks.Crucibles;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
+import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
@@ -14,18 +16,24 @@ public class EPRecipeManager {
     public static void init() {
         GTOverrideRecipes.init();
         EPRecipeHandlerList.register();
+        initBlocks();
         initChains();
         initCircuits();
-        initMachines();
+        initComponents();
         initMultiblockRecipes();
     }
 
+    public static void initBlocks() {
+        Crucibles.init();
+    }
+
     public static void initChains() {
+        AmmoniaChain.init();
+        BoronNitrideChain.init();
         BZMediumChain.init();
+        GrapheneChain.init();
         PEDOTChain.init();
         PMMAChain.init();
-        AmmoniaChain.init();
-        GrapheneChain.init();
         TungstenChain.init();
     }
 
@@ -34,8 +42,9 @@ public class EPRecipeManager {
         GoowareCircuits.init();
     }
 
-    public static void initMachines() {
+    public static void initComponents() {
         MachineComponents.init();
+        MaterialComponents.init();
     }
 
     public static void initMultiblockRecipes() {

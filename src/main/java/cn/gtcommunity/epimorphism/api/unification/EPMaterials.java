@@ -12,6 +12,20 @@ public EPMaterials() {}
     public static Material BerylliumOxide;
     public static Material HydrogenPeroxide;
     public static Material TungstenTrioxide;
+    public static Material HexagonalBoronNitride;
+    public static Material CubicBoronNitride;
+    public static Material BoricAcid;
+    public static Material BoronTrioxide;
+    public static Material BoronTrifluoride;
+    public static Material LithiumHydride;
+    public static Material LithiumTetrafluoroborate;
+    public static Material Diborane;
+    public static Material Borazine;
+    public static Material BoronTrichloride;
+    public static Material Trichloroborazine;
+    public static Material AmorphousBoronNitride;
+    public static Material Heterodiamond;
+    public static Material CubicHeterodiamond;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
