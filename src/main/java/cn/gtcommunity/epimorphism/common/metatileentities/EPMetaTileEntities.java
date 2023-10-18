@@ -26,7 +26,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCryogenicFreezer CRYOGENIC_FREEZER;
     public static EPMetaTileEntityIsaMill ISA_MILL;
     public static EPMetaTileEntityFlotationFactory FLOTATION_FACTORY;
-    //  11
+    public static EPMetaTileEntityVacuumDryingFurnace VACUUM_DRYING_FURNACE;
     public static EPMetaTileEntityBurnerReactor BURNER_REACTOR;
     public static EPMetaTileEntityCryogenicReactor CRYOGENIC_REACTOR;
 
@@ -58,7 +58,7 @@ public class EPMetaTileEntities {
         CRYOGENIC_FREEZER = registerMultiMetaTileEntity(8, new EPMetaTileEntityCryogenicFreezer(epId("cryogenic_freezer")));
         ISA_MILL = registerMultiMetaTileEntity(9, new EPMetaTileEntityIsaMill(epId("isa_mill")));
         FLOTATION_FACTORY = registerMultiMetaTileEntity(10, new EPMetaTileEntityFlotationFactory(epId("flotation_factory")));
-        //  11
+        VACUUM_DRYING_FURNACE = registerMultiMetaTileEntity(11, new EPMetaTileEntityVacuumDryingFurnace(epId("vacuum_drying_furnace")));
         BURNER_REACTOR = registerMultiMetaTileEntity(12, new EPMetaTileEntityBurnerReactor(epId("burner_reactor")));
         CRYOGENIC_REACTOR = registerMultiMetaTileEntity(13, new EPMetaTileEntityCryogenicReactor(epId("cryogenic_reactor")));
     }

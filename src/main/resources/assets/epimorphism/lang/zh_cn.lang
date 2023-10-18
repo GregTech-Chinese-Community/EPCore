@@ -331,6 +331,10 @@ epimorphism.machine.isa_mill.name=艾萨研磨机
 recipemap.isa_mill_recipes.name=湿法碾磨
 
 epimorphism.machine.flotation_factory.name=工业浮选机
+recipemap.flotation_factory_recipes.name=浮游选矿
+
+epimorphism.machine.vacuum_drying_furnace.name=真空干燥炉
+recipemap.vacuum_drying_furnace_recipes.name=真空干燥
 
 #  Materials
 

@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
 public class EPMetaTileEntityFlotationFactory extends RecipeMapMultiblockController {
 
     public EPMetaTileEntityFlotationFactory(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.FLOTATION_FACTORY);
+        super(metaTileEntityId, EPRecipeMaps.FLOTATION_FACTORY_RECIPES);
     }
 
     @Override
