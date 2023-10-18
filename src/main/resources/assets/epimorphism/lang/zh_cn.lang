@@ -307,6 +307,7 @@ epimorphism.multipart.ball.only=仅能放入研磨球
 epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
 
+epimorphism.machine.cryogenic_reactor.name=低温反应室
 recipemap.cryogenic_reactor_recipes.name=低温反应
 
 recipemap.dryer_recipes.name=脱水

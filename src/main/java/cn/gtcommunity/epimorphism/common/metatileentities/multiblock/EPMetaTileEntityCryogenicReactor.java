@@ -7,14 +7,14 @@ import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.unification.material.Materials;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -25,63 +25,60 @@ import javax.annotation.Nullable;
 
 import java.util.List;
 
-import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
-import static gregicality.multiblocks.common.block.GCYMMetaBlocks.*;
+import static gregicality.multiblocks.common.block.GCYMMetaBlocks.UNIQUE_CASING;
 import static gregtech.common.blocks.MetaBlocks.*;
 
-public class EPMetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
-    public EPMetaTileEntityBurnerReactor(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.BURNER_REACTOR_RECIPES);
+public class EPMetaTileEntityCryogenicReactor extends RecipeMapMultiblockController {
+    public EPMetaTileEntityCryogenicReactor(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, EPRecipeMaps.CRYOGENIC_REACTOR_RECIPES);
         this.recipeMapWorkable = new MultiblockRecipeLogic(this, true);
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
-        return new EPMetaTileEntityBurnerReactor(metaTileEntityId);
+        return new EPMetaTileEntityCryogenicReactor(metaTileEntityId);
     }
 
     @Nonnull
     @Override
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle("F   F", "F X F", "FXXXF", "F X F", "F   F", "     ")
-                .aisle("  X  ", " XCX ", "XCCCX", " XCX ", "  X  ", "  X  ")
-                .aisle(" XXX ", "XCCCX", "XK#KX", "XC#CX", " XCX ", " XMX ")
-                .aisle("  X  ", " XCX ", "XCCCX", " XCX ", "  X  ", "  X  ")
-                .aisle("F   F", "F X F", "FXSXF", "F X F", "F   F", "     ")
+                .aisle("    RR", "    TV", "    VV", "    TV", "    TT")
+                .aisle("F   RR", "F X TT", "FXPPPV", "F X TT", "F   TT")
+                .aisle("  X   ", " XCX  ", "XCKCP ", " XCX  ", "  X   ")
+                .aisle(" XXX  ", "XCCCX ", "XC#KP ", "XCCCX ", " XXX  ")
+                .aisle("  X   ", " XCX  ", "XCCCX ", " XCX  ", "  X   ")
+                .aisle("F   F ", "F X F ", "FXSXF ", "F X F ", "F   F ")
                 .where('S', selfPredicate())
-                .where('X', states(METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF))
-                        .setMinGlobalLimited(25)
-                        .or(autoAbilities(true, true, true, true, true, true, false)))
-                .where('F', states(MetaBlocks.FRAMES.get(MaragingSteel300).getBlock(MaragingSteel300)))
-                .where('C', states(METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN)))
-                .where('K', states(UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.MOLYBDENUM_DISILICIDE_COIL)))
-                .where('M', abilities(MultiblockAbility.MUFFLER_HATCH))
+                .where('X', states(METAL_CASING.getState(BlockMetalCasing.MetalCasingType.ALUMINIUM_FROSTPROOF))
+                        .setMinGlobalLimited(20)
+                        .or(autoAbilities()))
+                .where('F', states(FRAMES.get(Materials.Aluminium).getBlock(Materials.Aluminium)))
+                .where('R', states(FRAMES.get(Materials.Steel).getBlock(Materials.Steel)))
+                .where('C', states(METAL_CASING.getState(BlockMetalCasing.MetalCasingType.PTFE_INERT_CASING)))
+                .where('K', states(BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE)))
+                .where('P', states(BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('V', states(UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.HEAT_VENT)))
+                .where('T', states(METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID)))
                 .where(' ', any())
                 .where('#', air())
                 .build();
     }
 
-
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
-        return Textures.HEAT_PROOF_CASING;
+        return Textures.FROST_PROOF_CASING;
     }
 
     @Nonnull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return EPTextures.BURNER_REACTOR_OVERLAY;
+        return EPTextures.CRYOGENIC_REACTOR_OVERLAY;
     }
 
     @Override
     public void addInformation(@Nonnull ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("gregtech.machine.perfect_oc"));
-    }
-
-    @Override
-    public boolean hasMufflerMechanics() {
-        return true;
     }
 }

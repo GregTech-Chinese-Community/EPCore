@@ -3,24 +3,17 @@ package cn.gtcommunity.epimorphism.common.metatileentities;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
-import gregtech.api.GTValues;
-import gregtech.api.GregTechAPI;
 import gregtech.api.metatileentity.MetaTileEntity;
-import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.common.metatileentities.MetaTileEntities;
-import gregtech.integration.jei.multiblock.MultiblockInfoCategory;
-import net.minecraftforge.fml.common.Loader;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 
 public class EPMetaTileEntities {
 
-    //SingleBlock
+    //  Singleblocks
     public static EPMetaTileEntityBufferHatch MULTIPART_BUFFER_HATCH;
     public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
-
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -35,6 +28,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityFlotationFactory FLOTATION_FACTORY;
     //  11
     public static EPMetaTileEntityBurnerReactor BURNER_REACTOR;
+    public static EPMetaTileEntityCryogenicReactor CRYOGENIC_REACTOR;
 
     //  Range: 12300-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -66,5 +60,6 @@ public class EPMetaTileEntities {
         FLOTATION_FACTORY = registerMultiMetaTileEntity(10, new EPMetaTileEntityFlotationFactory(epId("flotation_factory")));
         //  11
         BURNER_REACTOR = registerMultiMetaTileEntity(12, new EPMetaTileEntityBurnerReactor(epId("burner_reactor")));
+        CRYOGENIC_REACTOR = registerMultiMetaTileEntity(13, new EPMetaTileEntityCryogenicReactor(epId("cryogenic_reactor")));
     }
 }
