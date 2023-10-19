@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.api.recipe.builder;
 
 import cn.gtcommunity.epimorphism.api.recipe.properties.GrindBallTierProperty;
+import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
@@ -44,7 +45,7 @@ public class GrindBallTierRecipeBuilder extends RecipeBuilder<GrindBallTierRecip
 
     public GrindBallTierRecipeBuilder grindBallTier(int level) {
         if (level <= 0) {
-            GTLog.logger.error("Grind Ball Tier cannot be less than or equal to 0", new IllegalArgumentException());
+            EPLog.logger.error("Grind Ball Tier cannot be less than or equal to 0", new IllegalArgumentException());
             recipeStatus = EnumValidationResult.INVALID;
         }
         this.applyProperty(GrindBallTierProperty.getInstance(), level);

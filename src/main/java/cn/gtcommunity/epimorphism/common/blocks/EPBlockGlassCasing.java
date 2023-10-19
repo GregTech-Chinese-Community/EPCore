@@ -46,11 +46,11 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
 
     @Override
     public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
-        EPBlockGlassCasing.CasingType type = getState(state);
-        if( type == CasingType.NAQ_BORON_SILICATE_GLASS
-        ) {
-            return super.canRenderInLayer(state, layer);
-        }
+//        EPBlockGlassCasing.CasingType type = getState(state);
+//        if( type == CasingType.NAQ_BORON_SILICATE_GLASS
+//        ) {
+//            return super.canRenderInLayer(state, layer);
+//        }
         return layer == BlockRenderLayer.TRANSLUCENT;
     }
 
@@ -101,7 +101,7 @@ public class EPBlockGlassCasing extends VariantActiveBlock<EPBlockGlassCasing.Ca
         public String getName() {return this.name;}
 
         @Override
-        public int getTier() {return this.tier;}
+        public int getGlassTier() {return this.tier;}
 
         public boolean isOpticalGlass() {return isOpticalGlass;}
 

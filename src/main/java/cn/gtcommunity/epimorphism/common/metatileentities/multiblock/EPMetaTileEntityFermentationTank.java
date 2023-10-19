@@ -6,6 +6,7 @@ import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHChangeProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHErrorRangeProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHProperty;
+import cn.gtcommunity.epimorphism.api.utils.EPMathUtil;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
@@ -115,15 +116,16 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         super.addDisplayText(textList);
-        textList.add(new TextComponentTranslation("epimorphism.machine.fermentation_tank.ph", String.format("%, .2f", this.pH)));
+        if (isStructureFormed())
+            textList.add(new TextComponentTranslation("epimorphism.machine.fermentation_tank.ph", String.format("%, .2f", this.pH)));
     }
 
     @Override
     public String[] getDescription() {
         List<String> list = new ArrayList<>();
-        list.add(I18n.format("epimorphism.multiblock.fermentation_tank.description"));
-        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.multiblock.fermentation_tank.extra1"));
-        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.multiblock.fermentation_tank.extra2"));
+        list.add(I18n.format("epimorphism.machine.fermentation_tank.description"));
+        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.machine.fermentation_tank.extra1"));
+        Collections.addAll(list, LocalizationUtils.formatLines("epimorphism.machine.fermentation_tank.extra2"));
         return list.toArray(new String[0]);
     }
 
@@ -146,11 +148,12 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
     @Override
     public void changeCurrentPHValue(double ph_change) {
         double ph = this.pH + ph_change;
-        if (ph < 0){
+        this.pH = EPMathUtil.clamp(ph, 0, 14);
+        /*if (ph < 0){
             this.pH = 0D;
         } else if (ph > 14){
             this.pH = 14D;
-        } else {this.pH = ph;}
+        } else {this.pH = ph;}*/
         this.markDirty();
     }
 

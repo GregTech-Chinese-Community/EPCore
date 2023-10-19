@@ -97,7 +97,7 @@ public class EPBlockPMMACasing extends VariantActiveBlock<EPBlockPMMACasing.Casi
         public String getName() {return this.name;}
 
         @Override
-        public int getTier() {return this.tier;}
+        public int getGlassTier() {return this.tier;}
 
         public boolean isOpticalGlass() {return isOpticalGlass;}
 

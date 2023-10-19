@@ -36,12 +36,14 @@ public class EPMetablocks {
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
-        registerItemModel(EP_GLASS_CASING);
-        registerItemModel(EP_PMMA_CASING);
         registerItemModel(EP_MULTIBLOCK_CASING);
         registerItemModel(EP_CRUCIBLE_CASING);
         registerItemModel(EP_MILL_CASING);
-        registerItemModel(EP_ACTIVE_MULTIBLOCK_CASING);
+
+        //  VariantActiveBlock Registry
+        EP_GLASS_CASING.onModelRegister();
+        EP_PMMA_CASING.onModelRegister();
+        EP_ACTIVE_MULTIBLOCK_CASING.onModelRegister();
     }
 
     @SideOnly(Side.CLIENT)
