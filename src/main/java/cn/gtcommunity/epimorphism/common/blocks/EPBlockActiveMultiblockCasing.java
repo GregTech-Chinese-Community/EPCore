@@ -29,11 +29,6 @@ public class EPBlockActiveMultiblockCasing extends VariantActiveBlock<EPBlockAct
         return false;
     }
 
-    @Override
-    public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
-        return layer == BlockRenderLayer.SOLID;
-    }
-
     public enum ActiveMultiblockCasingType implements IStringSerializable {
 
         FLOTATION_INTAKE_CASING("flotation_intake_casing");

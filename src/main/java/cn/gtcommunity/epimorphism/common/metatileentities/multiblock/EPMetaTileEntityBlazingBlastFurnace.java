@@ -59,7 +59,6 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
 
     public EPMetaTileEntityBlazingBlastFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, BLAST_RECIPES);
-        this.recipeMapWorkable = new HeatingCoilRecipeLogic(this);
         this.recipeMapWorkable = new BlazingBlastRecipeLogic(this);
     }
 
@@ -234,12 +233,12 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
         heatingCoilDiscount = 0;
     }
 
-    protected class BlazingBlastRecipeLogic extends MultiblockRecipeLogic {
+    protected class BlazingBlastRecipeLogic extends HeatingCoilRecipeLogic {
 
-        private final EPMetaTileEntityBlazingBlastFurnace combustionEngine;
+        private final EPMetaTileEntityBlazingBlastFurnace blastFurnace;
         public BlazingBlastRecipeLogic(RecipeMapMultiblockController tileEntity) {
             super(tileEntity);
-            this.combustionEngine = (EPMetaTileEntityBlazingBlastFurnace) tileEntity;
+            this.blastFurnace = (EPMetaTileEntityBlazingBlastFurnace) tileEntity;
         }
 
         @Override
@@ -249,7 +248,7 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
 
         protected void updateRecipeProgress() {
             if (canRecipeProgress && drawEnergy(recipeEUt, true)) {
-                IMultipleTankHandler inputTank = combustionEngine.getInputFluidInventory();
+                IMultipleTankHandler inputTank = blastFurnace.getInputFluidInventory();
                 if (BLAZING_STACK.isFluidStackIdentical(inputTank.drain(BLAZING_STACK, false))) {
                     inputTank.drain(BLAZING_STACK, true);
                     if (++progressTime > maxProgressTime) {

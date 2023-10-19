@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
+import cn.gtcommunity.epimorphism.api.EPValues;
 import cn.gtcommunity.epimorphism.api.capability.EPCapabilities;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.capability.IBuffer;
@@ -81,8 +82,8 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                 builder.widget(new SlotWidget(itemHandler, 0, 89 + 1 * 9, 18, true, true, true)
                         .setBackgroundTexture(GuiTextures.SLOT)
                         .setChangeListener(this::markDirty));
-                builder.label(10, 20, "epimorphism.multipart.ph.name");
-                builder.dynamicLabel(57, 20, () -> this.ph, 99);
+                /*builder.label(10, 20, "epimorphism.multipart.ph.name");*/
+                builder.dynamicLabel(10, 20, () -> I18n.format("epimorphism.multipart.ph.name", this.ph), 99);
                 builder.bindPlayerInventory(entityPlayer.inventory, GuiTextures.SLOT, 7, 18 + 18 + 12);
                 builder.bindOpenListener(this::setPH);
 
@@ -162,7 +163,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
 
     public void setPH() {
         if (!this.getWorld().isRemote) {
-            this.writeCustomData(9984, (buf) -> {
+            this.writeCustomData(EPValues.EP_CHANNEL_1, (buf) -> {
                 buf.writeString(getPH());
             });
         }
@@ -171,7 +172,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     @Override
     public void receiveCustomData(int dataId, PacketBuffer buf) {
         super.receiveCustomData(dataId, buf);
-        if (dataId == 9984){
+        if (dataId == EPValues.EP_CHANNEL_1){
             this.ph = buf.readString(99);
         }
     }

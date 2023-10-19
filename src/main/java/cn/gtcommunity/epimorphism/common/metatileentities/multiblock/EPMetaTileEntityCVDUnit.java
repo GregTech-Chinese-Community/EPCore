@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.EPAPI;
 import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.GlassTierMultiblockController;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.GlassTierProperty;
@@ -12,6 +13,7 @@ import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import gregicality.multiblocks.api.render.GCYMTextures;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
+import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -26,17 +28,20 @@ import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import gregtech.common.ConfigHolder;
 import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
+public class EPMetaTileEntityCVDUnit extends GlassTierMultiblockController {
 
-    private int glassTier;
+//    private int glassTier;
     private int temperature;
 
     public EPMetaTileEntityCVDUnit(ResourceLocation metaTileEntityId) {
@@ -48,28 +53,27 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
         return new EPMetaTileEntityCVDUnit(metaTileEntityId);
     }
 
-    @Override
-    public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
-        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0) && super.checkRecipe(recipe, consumeIfSuccess);
-    }
-
-    @Override
-    protected void formStructure(PatternMatchContext context) {
-        super.formStructure(context);
-        Object type = context.get("CasingType");
-        if (type instanceof IGlassTierBlockState) {
-            this.glassTier = ((IGlassTierBlockState) type).getTier();
-        } else {
-            this.glassTier = 0;
-        }
-
-    }
-
-    @Override
-    public void invalidateStructure() {
-        super.invalidateStructure();
-        this.glassTier = 0;
-    }
+//    @Override
+//    public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
+//        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0) && super.checkRecipe(recipe, consumeIfSuccess);
+//    }
+//
+//    @Override
+//    protected void formStructure(PatternMatchContext context) {
+//        super.formStructure(context);
+//        Object type = context.get("CasingType");
+//        if (type instanceof IGlassTierBlockState) {
+//            this.glassTier = ((IGlassTierBlockState) type).getGlassTier();
+//        } else {
+//            this.glassTier = 0;
+//        }
+//    }
+//
+//    @Override
+//    public void invalidateStructure() {
+//        super.invalidateStructure();
+//        this.glassTier = 0;
+//    }
 
     @Nonnull
     @Override
@@ -106,6 +110,15 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
         return GCYMTextures.NONCONDUCTING_CASING;
     }
 
+//    @Override
+//    protected void addDisplayText(List<ITextComponent> textList) {
+//        super.addDisplayText(textList);
+//        if (this.isStructureFormed() && glassTier > 0) {
+//            String tierName = GTValues.VNF[glassTier];
+//            textList.add(new TextComponentTranslation("epimorphism.machine.multiblock.glass_tier", new Object[]{glassTier, tierName}));
+//        }
+//    }
+
     public List<MultiblockShapeInfo> getMatchingShapes() {
         ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList();
         MultiblockShapeInfo.Builder builder = MultiblockShapeInfo.builder()
@@ -126,7 +139,7 @@ public class EPMetaTileEntityCVDUnit extends RecipeMapMultiblockController {
                     return ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
                 }, EnumFacing.NORTH);
         EPAPI.EP_Glass.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
-            return ((IGlassTierBlockState)entry.getValue()).getTier();
+            return ((IGlassTierBlockState)entry.getValue()).getGlassTier();
         })).forEach((entry) -> {
             shapeInfo.add(builder.where('G', (IBlockState)entry.getKey()).build());
         });

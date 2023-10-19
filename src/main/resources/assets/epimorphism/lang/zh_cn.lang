@@ -1,7 +1,7 @@
 #  Ore Prefixes
 item.material.oreprefix.coil=%s线圈
 item.material.oreprefix.plateCurved=弯曲%s板
-item.material.oreprefix.milled=碾磨%s粉
+item.material.oreprefix.milled=碾磨%s矿石粉
 metaitem.milled.tooltip.flotation=使用工业浮选机进行进一步精选
 
 #  Tools
@@ -279,6 +279,7 @@ recipemap.sonication_recipes.name=超声振荡
 
 epimorphism.machine.cvd_unit.name=化学气相沉积单元
 recipemap.cvd_recipes.name=化学气相沉积
+epimorphism.machine.multiblock.glass_tier=当前玻璃等级为：%s (%s)
 
 epimorphism.machine.nanoscale_fabricator.name=纳米级制造室
 epimorphism.machine.nanoscale_fabricator.tooltip.1=坩埚的平均温度最多可超过目标温度§c250K§7。
@@ -293,13 +294,13 @@ recipemap.catalytic_reformer_recipes.name=催化重整
 epimorphism.machine.fermentation_tank.name=发酵罐
 recipemap.fermentation_tank_recipes.name=生物发酵
 epimorphism.machine.fermentation_tank.ph=当前pH值为：%s
-epimorphism.multiblock.fermentation_tank.description=发酵罐是你发展生物技术不可或缺的多方块设施，你可以使用它进行大规模发酵，这将为你提供重要的生物材料。微生物的生长需要特定的pH值，你需要通过向缓冲剂仓输入液体或物品调整发酵液的pH值，得益于特殊的制造技术和需求，它可以使用的缓冲剂范围很广，这在培养某些特殊微生物时非常有用，你也可以输入通用缓冲剂将pH重置为7，微生物的代谢产物同样会改变pH值。别担心，微生物对pH值的要求并不严格，你可以在配方界面查看误差范围。下一页列出了不同缓冲剂的数据，单位为1个或1000L。
-epimorphism.multiblock.fermentation_tank.extra1= /n /n /n /n /n
-epimorphism.multiblock.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 1.55/n 氢氧化钠：3.15 13.55
+epimorphism.machine.fermentation_tank.description=发酵罐是你发展生物技术不可或缺的多方块设施，你可以使用它进行大规模发酵，这将为你提供重要的生物材料。微生物的生长需要特定的pH值，你需要通过向缓冲剂仓输入液体或物品调整发酵液的pH值，得益于特殊的制造技术和需求，它可以使用的缓冲剂范围很广，这在培养某些特殊微生物时非常有用，你也可以输入通用缓冲剂将pH重置为7，微生物的代谢产物同样会改变pH值。别担心，微生物对pH值的要求并不严格，你可以在配方界面查看误差范围。下一页列出了不同缓冲剂的数据，单位为1个或1000L。
+epimorphism.machine.fermentation_tank.extra1= /n /n /n /n /n
+epimorphism.machine.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 1.55/n 氢氧化钠：3.15 13.55
 
 epimorphism.machine.buffer_hatch.name=缓冲剂仓
 epimorphism.machine.buffer_hatch.import.tooltip=为多方块结构输入缓冲剂
-epimorphism.multipart.ph.name=当前pH值为：
+epimorphism.multipart.ph.name=当前pH值为：%s
 
 epimorphism.machine.mill_ball_hatch.name=研磨球仓
 epimorphism.multipart.ball.only=仅能放入研磨球
@@ -309,6 +310,12 @@ recipemap.burner_reactor_recipes.name=燃烧反应
 
 epimorphism.machine.cryogenic_reactor.name=低温反应室
 recipemap.cryogenic_reactor_recipes.name=低温反应
+
+epimorphism.machine.mega_alloy_blast_smelter.name=巨型合金冶炼炉
+epimorphism.machine.mega_alloy_blast_smelter.max_parallel=最大并行数：%s
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.1=玻璃等级决定了最大电压。
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=最大并行数量为线圈等级的四倍。
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=线圈每比白铜高一个层级，配方所需时间变为原来的0.8。
 
 recipemap.dryer_recipes.name=脱水
 

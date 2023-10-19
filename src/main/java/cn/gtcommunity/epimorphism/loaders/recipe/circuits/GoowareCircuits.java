@@ -163,5 +163,14 @@ public class GoowareCircuits {
                 .duration(2000)
                 .EUt(1_200_000)
                 .buildAndRegister();
+
+        CHEMICAL_PLANT.recipeBuilder()
+                .input(frameGt, Darmstadtium, 2)
+                .output(GOOWARE_MAINFRAME)
+                .fluidOutputs(KaptonE.getFluid(L * 9))
+                .CasingTier(5)
+                .duration(2000)
+                .EUt(1_200_000)
+                .buildAndRegister();
     }
 }
