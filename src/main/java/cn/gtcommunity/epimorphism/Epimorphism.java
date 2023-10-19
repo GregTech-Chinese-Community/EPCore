@@ -6,10 +6,10 @@ import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
-import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import gregtech.common.ConfigHolder;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(
@@ -35,6 +35,12 @@ public class Epimorphism {
     public Epimorphism() {}
 
     @Mod.EventHandler
+    public void onConstruction(FMLConstructionEvent event)
+    {
+        ConfigHolder.machines.highTierContent = true;
+    }
+
+    @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
         EPLog.init(event.getModLog());
         ConfigHolder.machines.highTierContent = true;
@@ -45,5 +51,4 @@ public class Epimorphism {
         EPMetaTileEntities.init();
         proxy.preLoad();
     }
-
 }

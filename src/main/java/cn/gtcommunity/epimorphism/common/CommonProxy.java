@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common;
 
+import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
@@ -74,5 +75,10 @@ public class CommonProxy {
         EPLog.logger.info("Registering recipes...");
         EPRecipeManager.init();
         FormulaManager.init();
+        CasingTierProperty.registerCasingTier(1, "A");
+        CasingTierProperty.registerCasingTier(2, "B");
+        CasingTierProperty.registerCasingTier(3, "C");
+        CasingTierProperty.registerCasingTier(4, "D");
+        CasingTierProperty.registerCasingTier(5, "E");
     }
 }

@@ -157,7 +157,7 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
 
         @Override
         public boolean checkRecipe(@Nonnull Recipe recipe) {
-            return (recipe.getProperty(GrindBallTierProperty.getInstance(), 0) == metaTileEntity.getBallHolder().getGrinderTier()) && super.checkRecipe(recipe);
+            return super.checkRecipe(recipe) && (recipe.getProperty(GrindBallTierProperty.getInstance(), 0) == metaTileEntity.getBallHolder().getGrinderTier());
         }
 
         @Override
