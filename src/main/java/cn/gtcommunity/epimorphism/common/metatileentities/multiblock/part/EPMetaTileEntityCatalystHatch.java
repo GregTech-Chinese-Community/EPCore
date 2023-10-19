@@ -123,7 +123,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
                 .widget(new SlotWidget(this.itemStack,0, 88-9,50,true,true,true)
                         .setBackgroundTexture(GuiTextures.SLOT)
                         .setChangeListener(this::markDirty))
-                .widget(new LabelWidget(88,20,"gregica.multipart.catalyst.only")
+                .widget(new LabelWidget(88,20,"epimorphism.multipart.catalyst.only")
                         .setXCentered(true));
 
         return builder.build(this.getHolder(),entityPlayer);

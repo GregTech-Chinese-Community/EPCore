@@ -75,7 +75,7 @@ public class PEDOTChain {
                 .fluidInputs(SulfurTrioxide.getFluid(1000))
                 .fluidOutputs(PolystyreneSulfonate.getFluid(L))
                 .duration(160)
-                .EUt(VA[HV])
+                .EUt(VA[IV])
                 .buildAndRegister();
 
         //  PEDOT:PSS
@@ -84,7 +84,7 @@ public class PEDOTChain {
                 .fluidInputs(PolystyreneSulfonate.getFluid(L))
                 .fluidOutputs(PedotPSS.getFluid(L * 9))
                 .duration(400)
-                .EUt(VA[LuV])
+                .EUt(VA[UV])
                 .buildAndRegister();
 
         //  PEDOT-TMA
@@ -93,7 +93,7 @@ public class PEDOTChain {
                 .fluidInputs(PMMA.getFluid(L))
                 .fluidOutputs(PedotTMA.getFluid(L * 9))
                 .duration(400)
-                .EUt(VA[ZPM])
+                .EUt(VA[UHV])
                 .buildAndRegister();
     }
 }

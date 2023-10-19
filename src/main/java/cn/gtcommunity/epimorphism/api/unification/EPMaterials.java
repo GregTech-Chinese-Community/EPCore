@@ -26,6 +26,15 @@ public EPMaterials() {}
     public static Material AmorphousBoronNitride;
     public static Material Heterodiamond;
     public static Material CubicHeterodiamond;
+    public static Material CarbonNanotube;
+    public static Material SilverTetrafluoroborate;
+    public static Material TrimethyltinChloride;
+    public static Material SilverChloride;
+    public static Material ChloroplatinicAcid;
+    public static Material PotassiumTetrachloroplatinate;
+    public static Material NickelTriphenylphosphite;
+    public static Material NickelChloride;
+    public static Material PhosphorusTrichloride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -50,6 +59,14 @@ public EPMaterials() {}
     public static Material SulfurDichloride;
     public static Material AcetoneCyanohydrin;
     public static Material ParaXylene;
+    public static Material Cycloparaphenylene;
+    public static Material Dichlorocyclooctadieneplatinium;
+    public static Material Diiodobiphenyl;
+    public static Material Bipyridine;
+    public static Material PalladiumBisdibenzylidieneacetone;
+    public static Material Octene;
+    public static Material Acetylene;
+    public static Material Cyclooctadiene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

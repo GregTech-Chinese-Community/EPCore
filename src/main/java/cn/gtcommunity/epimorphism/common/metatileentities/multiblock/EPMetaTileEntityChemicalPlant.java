@@ -44,7 +44,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     private int tier;
 
     public EPMetaTileEntityChemicalPlant(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.CHEMICAL_PLANT);
+        super(metaTileEntityId, EPRecipeMaps.CHEMICAL_PLANT_RECIPES);
         this.recipeMapWorkable = new ChemicalPlantLogic(this);
     }
 

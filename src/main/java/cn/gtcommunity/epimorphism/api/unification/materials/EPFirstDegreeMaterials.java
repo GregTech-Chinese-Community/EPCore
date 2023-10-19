@@ -1,10 +1,12 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
+import gregtech.api.fluids.MaterialFluidBlock;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.ToolProperty;
 
+import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -163,5 +165,77 @@ public class EPFirstDegreeMaterials {
                 .components(Boron, 1, Carbon, 2, Nitrogen, 1)
                 .build()
                 .setFormula("c-BC2N", true);
+        //  24020 Carbon Nanotube
+        CarbonNanotube = new Material.Builder(24020, gregtechId("carbon_nanotube"))
+                .ingot()
+                .fluid()
+                .color(0x05090C)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(DISABLE_DECOMPOSITION, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FINE_WIRE, GENERATE_SPRING)
+                .cableProperties(V[UEV], 8, 6)
+                .components(Carbon, 48)
+                .build()
+                .setFormula("CNT", false);
+        //  24021 Silver Tetrafluoroborate
+        SilverTetrafluoroborate = new Material.Builder(24021, gregtechId("silver_tetrafluoroborate"))
+                .fluid()
+                .color(0x818024)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Silver, 1, Boron, 1, Fluorine, 4)
+                .build()
+                .setFormula("AgBF4", true);
+        //  24022 Trimethyltin Chloride
+        TrimethyltinChloride = new Material.Builder(24022, gregtechId("trimethyltin_chloride"))
+                .fluid()
+                .color(0x7F776F)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 3, Hydrogen, 6, Tin, 1, Chlorine, 1)
+                .build()
+                .setFormula("(CH3)3SnCl", true);
+        //  24023 Silver Chloride
+        SilverChloride = new Material.Builder(24023, gregtechId("silver_chloride"))
+                .dust()
+                .color(0x8D8D8D)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Silver, 1, Chlorine, 1)
+                .build();
+        //  24024 Chloroplatinic Acid
+        ChloroplatinicAcid = new Material.Builder(24024, gregtechId("chloroplatinic_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(0xFFB546)
+                .components(Hydrogen, 2, Platinum, 1, Chlorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24025 Potassium Tetrachloroplatinate
+        PotassiumTetrachloroplatinate = new Material.Builder(24025, gregtechId("potassium_tetrachloroplatinate"))
+                .dust()
+                .color(0xF1B04F)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Potassium, 2, Platinum, 1, Chlorine, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("K2PtCl4", true);
+        //  24026 Nickel Triphenylphosphite
+        NickelTriphenylphosphite = new Material.Builder(24026, gregtechId("nickel_triphenylphosphite"))
+                .dust()
+                .color(0xCCCC66)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 36, Hydrogen, 30, Chlorine, 2, Nickel, 1, Phosphorus, 2)
+                .build()
+                .setFormula("C36H30Cl2NiP2", true);
+        //  24027 Nickel Chloride
+        NickelChloride = new Material.Builder(24027, gregtechId("nickel_chloride"))
+                .dust()
+                .color(0x898A07)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Nickel, 1, Chlorine, 2)
+                .build();
+        //  24028 Phosphorus Trichloride
+        PhosphorusTrichloride = new Material.Builder(24028, gregtechId("phosphorus_trichloride"))
+                .fluid()
+                .color(0xD8D85B)
+                .components(Phosphorus, 1, Chlorine, 3)
+                .build();
     }
 }

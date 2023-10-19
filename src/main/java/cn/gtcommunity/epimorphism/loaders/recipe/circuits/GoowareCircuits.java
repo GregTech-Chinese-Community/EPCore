@@ -142,7 +142,7 @@ public class GoowareCircuits {
                 .buildAndRegister();
 
         // Test
-        FERMENTATION_TANK_RECIPES.recipeBuilder()
+        /*FERMENTATION_TANK_RECIPES.recipeBuilder()
                 .input(frameGt, Darmstadtium, 2)
                 .input(GOOWARE_COMPUTER, 2)
                 .input(wireGtDouble, PedotPSS, 16)
@@ -172,5 +172,6 @@ public class GoowareCircuits {
                 .duration(2000)
                 .EUt(1_200_000)
                 .buildAndRegister();
+       */
     }
 }

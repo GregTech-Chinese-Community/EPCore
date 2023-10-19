@@ -247,5 +247,66 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 8, Hydrogen, 10)
                 .build()
                 .setFormula("C6H4(CH3)2", true);
+        //  25022 Cycloparaphenylene
+        Cycloparaphenylene = new Material.Builder(25022, gregtechId("cycloparaphenylene"))
+                .fluid()
+                .color(0x60545A)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 6, Hydrogen, 4)
+                .build();
+        //  25023 Dichlorocyclooctadieneplatinium
+        Dichlorocyclooctadieneplatinium = new Material.Builder(25023, gregtechId("dichlorocyclooctadieneplatinium"))
+                .dust()
+                .color(0xD4E982)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 8, Hydrogen, 12, Chlorine, 2, Platinum, 1)
+                .build()
+                .setFormula("C8H12Cl2Pt", true);
+        //  25024 Diiodobiphenyl
+        Diiodobiphenyl = new Material.Builder(25024, gregtechId("diiodobiphenyl"))
+                .dust()
+                .color(0x000C52)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 12, Hydrogen, 8, Iodine, 2)
+                .build()
+                .setFormula("C12H8I2", true);
+        //  25025 Bipyridine
+        Bipyridine = new Material.Builder(25025, gregtechId("bipyridine"))
+                .dust()
+                .color(0x716449)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 8, Nitrogen, 2)
+                .build()
+                .setFormula("C10H8N2", true);
+        //  25026 Palladium Bisdibenzylidieneacetone
+        PalladiumBisdibenzylidieneacetone = new Material.Builder(25026, gregtechId("palladium_bisdibenzylidieneacetone"))
+                .dust()
+                .color(0x996881)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 51, Hydrogen, 42, Oxygen, 3, Palladium, 2)
+                .build()
+                .setFormula("C51H42O3Pd2", true);
+        //  25027 1-Octene
+        Octene = new Material.Builder(25027, gregtechId("1_octene"))
+                .fluid()
+                .color(0x818022)
+                .components(Carbon, 8, Hydrogen, 16)
+                .build();
+        //  25028 Acetylene
+        Acetylene = new Material.Builder(25028, gregtechId("acetylene"))
+                .fluid()
+                .color(0x959C60)
+                .components(Carbon, 2, Hydrogen, 2)
+                .build();
+        //  25029 Cyclooctadiene
+        Cyclooctadiene = new Material.Builder(25029, gregtechId("cyclooctadiene"))
+                .fluid()
+                .color(0x40AC40)
+                .components(Carbon, 8, Hydrogen, 12)
+                .build();
     }
 }
