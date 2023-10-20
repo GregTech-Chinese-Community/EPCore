@@ -11,12 +11,19 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 
 public class EPMaterialPropertyAddition {
     public static void init() {
+        //  Properties
+        Iodine.setProperty(PropertyKey.DUST, new DustProperty());
+        Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        SodiumHydroxide.setProperty(PropertyKey.FLUID, new FluidProperty());
+
+        //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
 
-        Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        //  Flags
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
-
         Nickel.addFlags(GENERATE_FOIL);
     }
 }

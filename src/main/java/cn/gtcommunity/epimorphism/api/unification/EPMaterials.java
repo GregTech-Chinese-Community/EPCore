@@ -35,6 +35,21 @@ public EPMaterials() {}
     public static Material NickelTriphenylphosphite;
     public static Material NickelChloride;
     public static Material PhosphorusTrichloride;
+    public static Material AmmoniumSulfate;
+    public static Material AmmoniumPersulfate;
+    public static Material HydroxylamineDisulfate;
+    public static Material Hydroxylamine;
+    public static Material AmmoniumNitrate;
+    public static Material ThalliumSulfate;
+    public static Material ThalliumChloride;
+    public static Material IodizedBrine;
+    public static Material IodineBrineMixture;
+    public static Material BrominatedBrine;
+    public static Material IodineSlurry;
+    public static Material SodiumIodate;
+    public static Material SodiumIodide;
+    public static Material SodiumHypochlorite;
+    public static Material SodiumPeriodate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -67,6 +82,8 @@ public EPMaterials() {}
     public static Material Octene;
     public static Material Acetylene;
     public static Material Cyclooctadiene;
+    public static Material Pyridine;
+    public static Material Formaldehyde;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

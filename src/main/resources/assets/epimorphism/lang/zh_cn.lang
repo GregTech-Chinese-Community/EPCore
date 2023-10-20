@@ -378,6 +378,8 @@ recipemap.vacuum_drying_furnace_recipes.name=真空干燥
 epimorphism.machine.chemical_plant.name=化工厂
 recipemap.chemical_plant_recipes.name=化工处理
 
+recipemap.roaster_recipes.name=焙烧
+
 #  Materials
 
 ##  First Degree Materials
@@ -409,6 +411,21 @@ gregtech.material.potassium_tetrachloroplatinate=氯铂酸钾
 gregtech.material.nickel_triphenylphosphite=四（亚磷酸三苯酯）镍
 gregtech.material.nickel_chloride=氯化镍
 gregtech.material.phosphorus_trichloride=三氯化磷
+gregtech.material.ammonium_sulfate=硫酸铵
+gregtech.material.ammonium_persulfate=过硫酸铵
+gregtech.material.hydroxylamine_disulfate=硫酸羟胺
+gregtech.material.hydroxylamine=羟胺
+gregtech.material.ammonium_nitrate=硝酸铵
+gregtech.material.thallium_sulfate=硫酸铊
+gregtech.material.thallium_chloride=氯化铊
+gregtech.material.iodized_brine=含碘盐水
+gregtech.material.iodine_brine_mixture=浓缩碘盐水混合物
+gregtech.material.brominated_brine=含溴盐水
+gregtech.material.iodine_slurry=碘浆液
+gregtech.material.sodium_iodate=碘酸钠
+gregtech.material.sodium_iodide=碘化钠
+gregtech.material.sodium_hypochlorite=次氯酸钠
+gregtech.material.sodium_periodate=高碘酸钠
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -441,6 +458,8 @@ gregtech.material.palladium_bisdibenzylidieneacetone=双（二亚苄基二丙酮
 gregtech.material.1_octene=1-辛烯
 gregtech.material.acetylene=乙炔
 gregtech.material.cyclooctadiene=环辛二烯
+gregtech.material.pyridine=吡啶
+gregtech.material.formaldehyde=甲醛
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

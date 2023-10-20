@@ -1,6 +1,5 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
-import gregtech.api.fluids.MaterialFluidBlock;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
@@ -236,6 +235,104 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(0xD8D85B)
                 .components(Phosphorus, 1, Chlorine, 3)
+                .build();
+        //  24029 Ammonium Sulfate
+        AmmoniumSulfate = new Material.Builder(24029, gregtechId("ammonium_sulfate"))
+                .fluid()
+                .color(0x5858F4)
+                .build()
+                .setFormula("(NH2)4SO4", true);
+        //  24030 Ammonium Persulfate
+        AmmoniumPersulfate = new Material.Builder(24030, gregtechId("ammonium_persulfate"))
+                .fluid()
+                .color(0x4242B7)
+                .build()
+                .setFormula("(NH4)2S2O8", true);
+        //  24031 Hydroxylamine Disulfate
+        HydroxylamineDisulfate = new Material.Builder(24031, gregtechId("hydroxylamine_disulfate"))
+                .fluid()
+                .color(0x91A6D2)
+                .build()
+                .setFormula("(NH3OH)2(NH4)2(SO4)2", true);
+        //  24032 Hydroxylamine
+        Hydroxylamine = new Material.Builder(24032, gregtechId("hydroxylamine"))
+                .fluid()
+                .color(0x91C791)
+                .components(Hydrogen, 3, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("H3NO", true);
+        //  24033 Ammonium Nitrate
+        AmmoniumNitrate = new Material.Builder(24033, gregtechId("ammonium_nitrate"))
+                .fluid()
+                .color(0x454066)
+                .components(Nitrogen, 2, Hydrogen, 4, Oxygen, 3)
+                .build()
+                .setFormula("NH4NO3", true);
+        //  24034 Thallium Sulfate
+        ThalliumSulfate = new Material.Builder(24034, gregtechId("thallium_sulfate"))
+                .dust()
+                .color(0x9C222C)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4)
+                .build();
+        //  24035 Thallium Chloride
+        ThalliumChloride = new Material.Builder(24035, gregtechId("thallium_chloride"))
+                .dust()
+                .color(0xCC5350)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Thallium, 1, Chlorine, 1)
+                .build();
+        //  24036 Iodized Brine
+        IodizedBrine = new Material.Builder(24036, gregtechId("iodized_brine"))
+                .fluid()
+                .color(0x525246)
+                .build()
+                .setFormula("I?", false);
+        //  24037 Iodine Brine Mixture
+        IodineBrineMixture = new Material.Builder(24037, gregtechId("iodine_brine_mixture"))
+                .fluid()
+                .color(0x525234)
+                .build()
+                .setFormula("I?Cl", false);
+        //  24038 Brominated Brine
+        BrominatedBrine = new Material.Builder(24038, gregtechId("brominated_brine"))
+                .fluid()
+                .color(0xA9A990)
+                .build()
+                .setFormula("Br?", false);
+        //  24039 Iodine Slurry
+        IodineSlurry = new Material.Builder(24039, gregtechId("iodine_slurry"))
+                .fluid()
+                .color(0x292923)
+                .build()
+                .setFormula("I?", false);
+        //  24040 Sodium Iodate
+        SodiumIodate = new Material.Builder(24040, gregtechId("sodium_iodate"))
+                .dust()
+                .color(0x0B0B47)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Sodium, 1, Iodine, 1, Oxygen, 3)
+                .build();
+        //  24041 Sodium Iodide
+        SodiumIodide = new Material.Builder(24041, gregtechId("sodium_iodide"))
+                .dust()
+                .color(0x1919A3)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Sodium, 1, Iodine, 1)
+                .build();
+        //  24042 Sodium Hypochlorite
+        SodiumHypochlorite = new Material.Builder(24042, gregtechId("sodium_hypochlorite"))
+                .dust()
+                .color(0x2828FF)
+                .components(Sodium, 1, Chlorine, 1, Oxygen, 1)
+                .build();
+        //  24043 Sodium Periodate
+        SodiumPeriodate = new Material.Builder(24043, gregtechId("sodium_periodate"))
+                .dust()
+                .color(0x050547)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .components(Sodium, 1, Iodine, 1, Oxygen, 4)
                 .build();
     }
 }

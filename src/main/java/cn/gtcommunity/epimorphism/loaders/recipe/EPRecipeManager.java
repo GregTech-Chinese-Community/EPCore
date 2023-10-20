@@ -33,8 +33,10 @@ public class EPRecipeManager {
         BZMediumChain.init();
         CarbonNanotubeChain.init();
         GrapheneChain.init();
+        IodineChain.init();
         PEDOTChain.init();
         PMMAChain.init();
+        ThalliumChain.init();
         TungstenChain.init();
     }
 

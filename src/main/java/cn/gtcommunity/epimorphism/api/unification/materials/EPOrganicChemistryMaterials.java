@@ -308,5 +308,17 @@ public class EPOrganicChemistryMaterials {
                 .color(0x40AC40)
                 .components(Carbon, 8, Hydrogen, 12)
                 .build();
+        //  25030 Pyridine
+        Pyridine = new Material.Builder(25030, gregtechId("pyridine"))
+                .fluid()
+                .color(0x716449)
+                .components(Carbon, 10, Hydrogen, 8, Nitrogen, 2)
+                .build();
+        //  25031 Formaldehyde
+        Formaldehyde = new Material.Builder(25031, gregtechId("formaldehyde"))
+                .fluid()
+                .color(0x858F40)
+                .components(Carbon, 1, Hydrogen, 2, Oxygen, 1)
+                .build();
     }
 }
