@@ -25,6 +25,7 @@ import gregtech.api.recipes.Recipe;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockWireCoil;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
@@ -44,7 +45,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     private int tier;
 
     public EPMetaTileEntityChemicalPlant(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.CHEMICAL_PLANT);
+        super(metaTileEntityId, EPRecipeMaps.CHEMICAL_PLANT_RECIPES);
         this.recipeMapWorkable = new ChemicalPlantLogic(this);
     }
 
@@ -147,10 +148,10 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         super.addDisplayText(textList);
-        textList.add(new TextComponentString(String.format("coilTire: %d",coilLevel)));
-        textList.add(new TextComponentString(String.format("casingTire: %d",casingTier)));
-        textList.add(new TextComponentString(String.format("tubeTire: %d",tubeTier)));
-        textList.add(new TextComponentString(String.format("tire: %d",tier)));
+        textList.add(new TextComponentString(I18n.format("epimorphism.machine.chemical_plant.coil_tier", coilLevel)));
+        textList.add(new TextComponentString(I18n.format("epimorphism.machine.chemical_plant.casing_tier", casingTier)));
+        textList.add(new TextComponentString(I18n.format("epimorphism.machine.chemical_plant.tube_tier", tubeTier)));
+        textList.add(new TextComponentString(I18n.format("epimorphism.machine.chemical_plant.tier", tier)));
     }
 
     @Override

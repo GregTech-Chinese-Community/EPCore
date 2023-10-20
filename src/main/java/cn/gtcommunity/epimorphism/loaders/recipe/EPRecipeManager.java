@@ -8,6 +8,7 @@ import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformatio
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
+import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.MetaTileEntityRecipes;
 
 public class EPRecipeManager {
 
@@ -30,10 +31,14 @@ public class EPRecipeManager {
     public static void initChains() {
         AmmoniaChain.init();
         BoronNitrideChain.init();
+        BromineChain.init();
         BZMediumChain.init();
+        CarbonNanotubeChain.init();
         GrapheneChain.init();
+        IodineChain.init();
         PEDOTChain.init();
         PMMAChain.init();
+        ThalliumChain.init();
         TungstenChain.init();
     }
 
@@ -49,5 +54,6 @@ public class EPRecipeManager {
 
     public static void initMultiblockRecipes() {
         CatalyticReformationOilProcessing.init();
+        MetaTileEntityRecipes.init();
     }
 }

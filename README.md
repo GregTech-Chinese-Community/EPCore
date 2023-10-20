@@ -37,6 +37,8 @@ Improve difficulty and QoL of GregTech CEu, based on GregTech 6, Gregicality Leg
 
 * Machine overlay textures and circuit textures from **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**.
 
+* Machine textures from **[GregTech++](https://github.com/GTNewHorizons/GTplusplus)**.
+
 * Cosmic Inductor, Supracausal SMD and some circuit component textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
 
 * README.md base from **[GregTech CEu](https://github.com/GregTechCEu/GregTech)**.

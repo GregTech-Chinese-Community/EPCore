@@ -32,6 +32,10 @@ public class EPRecipeMaps {
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.COOLING);
 
+    public static final RecipeMap<GlassTierNoCoilTemperatureRecipeBuilder> PLASMA_CVD_RECIPES = new RecipeMap<>("plasma_cvd_recipes", 0, 2, 0, 2, 0, 3, 0, 3, new GlassTierNoCoilTemperatureRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.COOLING);
+
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>("molecular_beam_recipes", 1, 5, 1, 1, 0, 2, 0, 1, new NoCoilTemperatureRecipeBuilder(), false)
             .setSlotOverlay(false, false, false, EPGuiTextures.NANOSCALE_OVERLAY_1)
             .setSlotOverlay(false, false, true, EPGuiTextures.NANOSCALE_OVERLAY_1)
@@ -80,7 +84,11 @@ public class EPRecipeMaps {
             .setSlotOverlay(true, true, true, GuiTextures.FURNACE_OVERLAY_2)
             .setSound(GTSoundEvents.FURNACE);
 
-    public static final RecipeMap<CasingTierRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant", 4, 4, 4, 4, new CasingTierRecipeBuilder(), false)
+    public static final RecipeMap<CasingTierRecipeBuilder> CHEMICAL_PLANT_RECIPES = new RecipeMap<>("chemical_plant_recipes", 4, 4, 4, 4, new CasingTierRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.CHEMICAL_REACTOR);
+
+    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> ROASTER_RECIPES = new RecipeMap<>("roaster_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new NoCoilTemperatureRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.FURNACE);
 }

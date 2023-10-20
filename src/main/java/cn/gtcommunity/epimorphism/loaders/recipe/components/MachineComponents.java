@@ -2,7 +2,10 @@ package cn.gtcommunity.epimorphism.loaders.recipe.components;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -21,6 +24,21 @@ import static gregtech.common.items.MetaItems.ELECTRIC_PUMP_LuV;
 public class MachineComponents {
 
     public static void init() {
+        //  Substrate Casings
+        ModHandler.addShapedRecipe(true, "substrate_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.SUBSTRATE_CASING),
+                "PPP", "RFR", "R R",
+                'P', new UnificationEntry(plate, Palladium),
+                'R', new UnificationEntry(stick, RedSteel),
+                'F', new UnificationEntry(frameGt, BlueSteel)
+        );
+
+        ModHandler.addShapedRecipe(true, "advanced_substrate_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.ADVANCED_SUBSTRATE_CASING),
+                "PPP", "RFR", "R R",
+                'P', new UnificationEntry(plate, Ruridit),
+                'R', new UnificationEntry(stick, Duranium),
+                'F', new UnificationEntry(frameGt, NaquadahAlloy)
+        );
+
         //  Isa Mill
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(MetaTileEntities.HULL[IV], 2)

@@ -2,7 +2,6 @@ package cn.gtcommunity.epimorphism.common.items;
 
 import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import gregtech.api.GregTechAPI;
-import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.StandardMetaItem;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
@@ -126,6 +125,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         VOLTAGE_COIL_UXV = this.addItem(83, "voltage_coil.uxv");
         VOLTAGE_COIL_OPV = this.addItem(84, "voltage_coil.opv");
         VOLTAGE_COIL_MAX = this.addItem(85, "voltage_coil.max");
+        CARBON_ALLOTROPE = this.addItem(86, "carbon_allotrope");
+        GRAPHENE_ALIGNED = this.addItem(87, "graphene_aligned");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");

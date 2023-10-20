@@ -116,6 +116,8 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_UXV;
     public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_OPV;
     public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MAX;
+    public static MetaItem<?>.MetaValueItem CARBON_ALLOTROPE;
+    public static MetaItem<?>.MetaValueItem GRAPHENE_ALIGNED;
 
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;
     public static MetaItem<?>.MetaValueItem ULTRA_MICRO_PHASE_SEPARATOR;

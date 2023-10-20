@@ -101,7 +101,7 @@ public class BoronNitrideChain {
                 .EUt(VA[IV])
                 .buildAndRegister();
 
-        //  UV Hexagonal Boron Nitride: Borazine + Oxygen -> Hexagonal Boron Nitride + Water
+        //  Hexagonal Boron Nitride (UV) Borazine + Oxygen -> Hexagonal Boron Nitride + Water
         CVD_RECIPES.recipeBuilder()
                 .fluidInputs(Borazine.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(3000))
@@ -112,7 +112,7 @@ public class BoronNitrideChain {
                 .temperature(1300)
                 .buildAndRegister();
 
-        //  UEV Hexagonal Boron Nitride: Nickel + Boron + Nitrogen -> Hexagonal Boron Nitride
+        //  Hexagonal Boron Nitride (UEV) Nickel + Boron + Nitrogen -> Hexagonal Boron Nitride
         MOLECULAR_BEAM_RECIPES.recipeBuilder()
                 .input(foil, Nickel, 8)
                 .input(dust, Boron)

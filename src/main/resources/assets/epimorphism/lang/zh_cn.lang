@@ -263,6 +263,8 @@ tile.ep_crucible_casing.tungsten.name=钨坩埚
 
 #  Others
 metaitem.magnetron.name=磁控管
+metaitem.carbon_allotrope.name=碳同素异构体混合物
+metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
@@ -274,11 +276,40 @@ epimorphism.recipe.grind_ball_soapstone=研磨球材质：皂石
 epimorphism.recipe.grind_ball_aluminium=研磨球材质：铝
 
 #  Machines
+epimorphism.machine.dryer.lv.name=基础化学脱水机
+epimorphism.machine.dryer.lv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.mv.name=进阶化学脱水机
+epimorphism.machine.dryer.mv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.hv.name=进阶化学脱水机 II
+epimorphism.machine.dryer.hv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.ev.name=进阶化学脱水机 III
+epimorphism.machine.dryer.ev.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.iv.name=精英化学脱水机
+epimorphism.machine.dryer.iv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.luv.name=精英化学脱水机 II
+epimorphism.machine.dryer.luv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.zpm.name=精英化学脱水机 III
+epimorphism.machine.dryer.zpm.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.uv.name=终极化学脱水机
+epimorphism.machine.dryer.uv.tooltip=水分湮灭者
+epimorphism.machine.dryer.uhv.name=史诗化学脱水机
+epimorphism.machine.dryer.uhv.tooltip=水分湮灭者
+epimorphism.machine.dryer.uev.name=史诗化学脱水机 II
+epimorphism.machine.dryer.uev.tooltip=水分湮灭者
+epimorphism.machine.dryer.uiv.name=史诗化学脱水机 III
+epimorphism.machine.dryer.uiv.tooltip=水分湮灭者
+epimorphism.machine.dryer.uxv.name=史诗化学脱水机 IV
+epimorphism.machine.dryer.uxv.tooltip=水分湮灭者
+epimorphism.machine.dryer.opv.name=传奇化学脱水机
+epimorphism.machine.dryer.opv.tooltip=水分湮灭者
+
 epimorphism.machine.sonicator.name=超声振荡器
 recipemap.sonication_recipes.name=超声振荡
 
 epimorphism.machine.cvd_unit.name=化学气相沉积单元
 recipemap.cvd_recipes.name=化学气相沉积
+recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
+
 epimorphism.machine.multiblock.glass_tier=当前玻璃等级为：%s (%s)
 
 epimorphism.machine.nanoscale_fabricator.name=纳米级制造室
@@ -304,6 +335,9 @@ epimorphism.multipart.ph.name=当前pH值为：%s
 
 epimorphism.machine.mill_ball_hatch.name=研磨球仓
 epimorphism.multipart.ball.only=仅能放入研磨球
+
+epimorphism.machine.catalyst_hatch.name=催化剂仓
+epimorphism.multipart.catalyst.only=仅能放入催化剂
 
 epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
@@ -343,6 +377,15 @@ recipemap.flotation_factory_recipes.name=浮游选矿
 epimorphism.machine.vacuum_drying_furnace.name=真空干燥炉
 recipemap.vacuum_drying_furnace_recipes.name=真空干燥
 
+epimorphism.machine.chemical_plant.name=化工厂
+recipemap.chemical_plant_recipes.name=化工处理
+epimorphism.machine.chemical_plant.coil_tier=线圈等级：%d
+epimorphism.machine.chemical_plant.casing_tier=外壳等级：%d
+epimorphism.machine.chemical_plant.tube_tier=管道等级：%d
+epimorphism.machine.chemical_plant.tier=等级：%d
+
+recipemap.roaster_recipes.name=焙烧
+
 #  Materials
 
 ##  First Degree Materials
@@ -365,6 +408,41 @@ gregtech.material.trichloroborazine=三氯环硼氮烷
 gregtech.material.amorphous_boron_nitride=非晶氮化硼
 gregtech.material.heterodiamond=杂金刚石
 gregtech.material.cubic_heterodiamond=立方杂金刚石
+gregtech.material.carbon_nanotube=碳纳米管
+gregtech.material.silver_tetrafluoroborate=四氟硼酸银
+gregtech.material.trimethyltin_chloride=三甲基氯化锡
+gregtech.material.silver_chloride=氯化银
+gregtech.material.chloroplatinic_acid=氯铂酸
+gregtech.material.potassium_tetrachloroplatinate=氯铂酸钾
+gregtech.material.nickel_triphenylphosphite=四（亚磷酸三苯酯）镍
+gregtech.material.nickel_chloride=氯化镍
+gregtech.material.phosphorus_trichloride=三氯化磷
+gregtech.material.ammonium_sulfate=硫酸铵
+gregtech.material.ammonium_persulfate=过硫酸铵
+gregtech.material.hydroxylamine_disulfate=硫酸羟胺
+gregtech.material.hydroxylamine=羟胺
+gregtech.material.ammonium_nitrate=硝酸铵
+gregtech.material.thallium_sulfate=硫酸铊
+gregtech.material.thallium_chloride=氯化铊
+gregtech.material.iodized_brine=含碘盐水
+gregtech.material.iodine_brine_mixture=浓缩碘盐水混合物
+gregtech.material.brominated_brine=含溴盐水
+gregtech.material.iodine_slurry=碘浆液
+gregtech.material.sodium_iodate=碘酸钠
+gregtech.material.sodium_iodide=碘化钠
+gregtech.material.sodium_hypochlorite=次氯酸钠
+gregtech.material.sodium_periodate=高碘酸钠
+gregtech.material.acidic_brominated_brine=酸化含溴盐水
+gregtech.material.bromine_sulfate_solution=硫酸溴溶液
+gregtech.material.overheated_bromine_sulfate_solution=过热硫酸溴溶液
+gregtech.material.wet_bromine=含水溴烟气
+gregtech.material.debrominated_water=脱溴水
+gregtech.material.palladium_chloride=氯化钯
+gregtech.material.palladium_on_carbon=钯碳催化剂
+gregtech.material.potassium_permanganate=高锰酸钾
+gregtech.material.potassium_manganate=锰酸钾
+gregtech.material.tin_chloride=氯化锡
+gregtech.material.silver_oxide=氧化银
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -389,6 +467,20 @@ gregtech.material.ethylene_glycol=乙二醇
 gregtech.material.sulfur_dichloride=二氯化硫
 gregtech.material.acetone_cyanohydrin=丙酮氰醇
 gregtech.material.para_xylene=对二甲苯
+gregtech.material.cycloparaphenylene=环对苯撑（CPP）
+gregtech.material.dichlorocyclooctadieneplatinium=（1,5-环辛二烯）二氯化铂
+gregtech.material.diiodobiphenyl=二碘代联苯
+gregtech.material.bipyridine=联吡啶
+gregtech.material.palladium_bisdibenzylidieneacetone=双（二亚苄基二丙酮）钯
+gregtech.material.1_octene=1-辛烯
+gregtech.material.acetylene=乙炔
+gregtech.material.cyclooctadiene=环辛二烯
+gregtech.material.pyridine=吡啶
+gregtech.material.formaldehyde=甲醛
+gregtech.material.dibenzylideneacetone=二苄基丙酮
+gregtech.material.benzaldehyde=苯甲醛
+gregtech.material.benzoyl_chloride=苯甲酰氯
+gregtech.material.thionyl_chloride=氯化亚砜
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

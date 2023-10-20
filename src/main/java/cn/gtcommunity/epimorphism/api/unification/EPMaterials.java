@@ -26,6 +26,41 @@ public EPMaterials() {}
     public static Material AmorphousBoronNitride;
     public static Material Heterodiamond;
     public static Material CubicHeterodiamond;
+    public static Material CarbonNanotube;
+    public static Material SilverTetrafluoroborate;
+    public static Material TrimethyltinChloride;
+    public static Material SilverChloride;
+    public static Material ChloroplatinicAcid;
+    public static Material PotassiumTetrachloroplatinate;
+    public static Material NickelTriphenylphosphite;
+    public static Material NickelChloride;
+    public static Material PhosphorusTrichloride;
+    public static Material AmmoniumSulfate;
+    public static Material AmmoniumPersulfate;
+    public static Material HydroxylamineDisulfate;
+    public static Material Hydroxylamine;
+    public static Material AmmoniumNitrate;
+    public static Material ThalliumSulfate;
+    public static Material ThalliumChloride;
+    public static Material IodizedBrine;
+    public static Material IodineBrineMixture;
+    public static Material BrominatedBrine;
+    public static Material IodineSlurry;
+    public static Material SodiumIodate;
+    public static Material SodiumIodide;
+    public static Material SodiumHypochlorite;
+    public static Material SodiumPeriodate;
+    public static Material AcidicBrominatedBrine;
+    public static Material BromineSulfateSolution;
+    public static Material OverheatedBromineSulfateSolution;
+    public static Material WetBromine;
+    public static Material DebrominatedWater;
+    public static Material PalladiumChloride;
+    public static Material PalladiumOnCarbon;
+    public static Material PotassiumPermanganate;
+    public static Material PotassiumManganate;
+    public static Material TinChloride;
+    public static Material SilverOxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -50,6 +85,20 @@ public EPMaterials() {}
     public static Material SulfurDichloride;
     public static Material AcetoneCyanohydrin;
     public static Material ParaXylene;
+    public static Material Cycloparaphenylene;
+    public static Material Dichlorocyclooctadieneplatinium;
+    public static Material Diiodobiphenyl;
+    public static Material Bipyridine;
+    public static Material PalladiumBisdibenzylidieneacetone;
+    public static Material Octene;
+    public static Material Acetylene;
+    public static Material Cyclooctadiene;
+    public static Material Pyridine;
+    public static Material Formaldehyde;
+    public static Material Dibenzylideneacetone;
+    public static Material Benzaldehyde;
+    public static Material BenzoylChloride;
+    public static Material ThionylChloride;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

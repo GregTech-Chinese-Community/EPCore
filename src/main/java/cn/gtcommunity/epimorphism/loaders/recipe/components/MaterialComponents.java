@@ -12,6 +12,9 @@ import static gregtech.loaders.recipe.CraftingComponent.*;
 
 public class MaterialComponents {
     public static void init() {
+        SAWBLADE.appendIngredients(Stream.of(new Object[][]{
+                {9, new UnificationEntry(toolHeadBuzzSaw, CubicBoronNitride)}
+        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         POWER_COMPONENT.appendIngredients(Stream.of(new Object[][]{
                 {8, EPMetaItems.NANO_PIC_CHIP},
@@ -30,10 +33,6 @@ public class MaterialComponents {
                 {12, EPMetaItems.VOLTAGE_COIL_UXV},
                 {13, EPMetaItems.VOLTAGE_COIL_OPV},
                 {14, EPMetaItems.VOLTAGE_COIL_MAX},
-        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
-
-        SAWBLADE.appendIngredients(Stream.of(new Object[][]{
-                {9, new UnificationEntry(toolHeadBuzzSaw, CubicBoronNitride)}
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
     }
 }

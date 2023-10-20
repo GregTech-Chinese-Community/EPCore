@@ -123,7 +123,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
                 .widget(new SlotWidget(this.itemStack,0, 88-9,50,true,true,true)
                         .setBackgroundTexture(GuiTextures.SLOT)
                         .setChangeListener(this::markDirty))
-                .widget(new LabelWidget(88,20,"gregica.multipart.catalyst.only")
+                .widget(new LabelWidget(88,20,"epimorphism.multipart.catalyst.only")
                         .setXCentered(true));
 
         return builder.build(this.getHolder(),entityPlayer);
@@ -194,7 +194,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World world, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, world, tooltip, advanced);
-        tooltip.add(I18n.format("gregica.multipart.catalyst.only"));
+        tooltip.add(I18n.format("epimorphism.multipart.catalyst.only"));
     }
 
     @Override
