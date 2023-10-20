@@ -6,6 +6,7 @@ import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.IngotProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 
+import static gregicality.multiblocks.api.unification.GCYMMaterials.Stellite100;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 
@@ -25,5 +26,7 @@ public class EPMaterialPropertyAddition {
         //  Flags
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
         Nickel.addFlags(GENERATE_FOIL);
+        HSSE.addFlags(GENERATE_DOUBLE_PLATE);
+        Stellite100.addFlags(GENERATE_DOUBLE_PLATE);
     }
 }
