@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
@@ -108,7 +109,7 @@ public class MetaTileEntityRecipes {
         //  Isa Mill
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(frameGt, IncoloyMA956)
-                .input(EPMetablocks.EP_MILL_CASING.getItemVariant(ISA_MILL_CASING_GEARBOX).getItem(), 4)
+                .inputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_GEARBOX, 4))
                 .input(COMPONENT_GRINDER_TUNGSTEN, 16)
                 .input(OrePrefix.circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(gear, Inconel625, 8)
