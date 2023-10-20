@@ -8,7 +8,7 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 
 public class IodineChain {
     public static void init() {
-        //  Iodized Brine
+        //  Saltpeter + Salt Water -> Potassium + Iodized Brine
         ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Saltpeter)
                 .fluidInputs(SaltWater.getFluid(1000))

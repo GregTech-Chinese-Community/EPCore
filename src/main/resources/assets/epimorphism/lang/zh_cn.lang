@@ -426,6 +426,11 @@ gregtech.material.sodium_iodate=碘酸钠
 gregtech.material.sodium_iodide=碘化钠
 gregtech.material.sodium_hypochlorite=次氯酸钠
 gregtech.material.sodium_periodate=高碘酸钠
+gregtech.material.acidic_brominated_brine=酸化含溴盐水
+gregtech.material.bromine_sulfate_solution=硫酸溴溶液
+gregtech.material.overheated_bromine_sulfate_solution=过热硫酸溴溶液
+gregtech.material.wet_bromine=含水溴烟气
+gregtech.material.debrominated_water=脱溴水
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

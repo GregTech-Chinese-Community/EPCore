@@ -6,6 +6,7 @@ import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregtech.api.GTValues.*;
+import static gregtech.api.fluids.fluidType.FluidTypes.LIQUID;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -334,5 +335,38 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.BRIGHT)
                 .components(Sodium, 1, Iodine, 1, Oxygen, 4)
                 .build();
+        //  24044 Acidic Brominated Brine
+        AcidicBrominatedBrine = new Material.Builder(24044, gregtechId("acidic_brominated_brine"))
+                .fluid(FluidTypes.ACID)
+                .color(0xC6A76F)
+                .build()
+                .setFormula("Br?(H2SO4)Cl", true);
+        //  24045 Bromine Sulfate Solution
+        BromineSulfateSolution = new Material.Builder(24045, gregtechId("bromine_sulfate_solution"))
+                .fluid()
+                .color(0xCC9966)
+                .build()
+                .setFormula("H2SO4Br(H2O)Cl2", true);
+        //  24046 Overheated Bromine Sulfate Solution
+        OverheatedBromineSulfateSolution = new Material.Builder(24046, gregtechId("overheated_bromine_sulfate_solution"))
+                .fluid()
+                .color(0xC69337)
+                .iconSet(MaterialIconSet.DULL)
+                .build()
+                .setFormula("H2SO4Br(H2O)2Cl2", true);
+        //  24047 Wet Bromine
+        WetBromine = new Material.Builder(24047, gregtechId("wet_bromine"))
+                .fluid()
+                .color(0xDB5C5C)
+                .iconSet(MaterialIconSet.DULL)
+                .build()
+                .setFormula("Br(H2O)", true);
+        //  24048 Debrominated Water
+        DebrominatedWater = new Material.Builder(24048, gregtechId("debrominated_water"))
+                .fluid()
+                .color(0x24A3A3)
+                .components(Hydrogen, 2, Oxygen, 1)
+                .build();
+
     }
 }

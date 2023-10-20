@@ -30,6 +30,7 @@ public class EPRecipeManager {
     public static void initChains() {
         AmmoniaChain.init();
         BoronNitrideChain.init();
+        BromineChain.init();
         BZMediumChain.init();
         CarbonNanotubeChain.init();
         GrapheneChain.init();

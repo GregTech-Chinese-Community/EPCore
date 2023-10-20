@@ -50,6 +50,11 @@ public EPMaterials() {}
     public static Material SodiumIodide;
     public static Material SodiumHypochlorite;
     public static Material SodiumPeriodate;
+    public static Material AcidicBrominatedBrine;
+    public static Material BromineSulfateSolution;
+    public static Material OverheatedBromineSulfateSolution;
+    public static Material WetBromine;
+    public static Material DebrominatedWater;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
