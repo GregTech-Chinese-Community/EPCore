@@ -379,6 +379,10 @@ recipemap.vacuum_drying_furnace_recipes.name=真空干燥
 
 epimorphism.machine.chemical_plant.name=化工厂
 recipemap.chemical_plant_recipes.name=化工处理
+epimorphism.machine.chemical_plant.coil_tier=线圈等级：%d
+epimorphism.machine.chemical_plant.casing_tier=外壳等级：%d
+epimorphism.machine.chemical_plant.tube_tier=管道等级：%d
+epimorphism.machine.chemical_plant.tier=等级：%d
 
 recipemap.roaster_recipes.name=焙烧
 

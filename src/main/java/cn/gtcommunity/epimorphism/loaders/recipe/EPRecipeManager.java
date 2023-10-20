@@ -8,6 +8,7 @@ import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformatio
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
+import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.MetaTileEntityRecipes;
 
 public class EPRecipeManager {
 
@@ -53,5 +54,6 @@ public class EPRecipeManager {
 
     public static void initMultiblockRecipes() {
         CatalyticReformationOilProcessing.init();
+        MetaTileEntityRecipes.init();
     }
 }
