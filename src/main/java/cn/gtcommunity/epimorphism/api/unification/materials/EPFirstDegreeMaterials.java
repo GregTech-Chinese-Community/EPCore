@@ -388,13 +388,25 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.DULL)
                 .components(Potassium, 1, Manganese, 1, Oxygen, 4)
                 .build();
-
         //  24052 Potassium Manganate
         PotassiumManganate = new Material.Builder(24052, gregtechId("potassium_manganate"))
                 .dust()
                 .color(0x873883)
                 .iconSet(MaterialIconSet.METALLIC)
                 .components(Potassium, 2, Manganese, 1, Oxygen, 4)
+                .build();
+        //  24053 Tin Chloride
+        TinChloride = new Material.Builder(24053, gregtechId("tin_chloride"))
+                .dust()
+                .color(0xDBDBDB)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Tin, 1, Chlorine, 2)
+                .build();
+        //  24054 Silver Oxide
+        SilverOxide = new Material.Builder(24054, gregtechId("silver_oxide"))
+                .dust()
+                .color(0xA4A4A4)
+                .components(Silver, 2, Oxygen, 1)
                 .build();
     }
 }

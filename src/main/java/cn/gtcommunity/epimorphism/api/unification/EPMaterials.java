@@ -59,6 +59,8 @@ public EPMaterials() {}
     public static Material PalladiumOnCarbon;
     public static Material PotassiumPermanganate;
     public static Material PotassiumManganate;
+    public static Material TinChloride;
+    public static Material SilverOxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

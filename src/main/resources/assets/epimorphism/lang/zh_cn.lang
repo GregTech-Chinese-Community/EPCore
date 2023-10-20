@@ -263,6 +263,8 @@ tile.ep_crucible_casing.tungsten.name=钨坩埚
 
 #  Others
 metaitem.magnetron.name=磁控管
+metaitem.carbon_allotrope.name=碳同素异构体混合物
+metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
@@ -435,6 +437,8 @@ gregtech.material.palladium_chloride=氯化钯
 gregtech.material.palladium_on_carbon=钯碳催化剂
 gregtech.material.potassium_permanganate=高锰酸钾
 gregtech.material.potassium_manganate=锰酸钾
+gregtech.material.tin_chloride=氯化锡
+gregtech.material.silver_oxide=氧化银
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

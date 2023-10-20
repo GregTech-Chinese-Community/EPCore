@@ -1,10 +1,12 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
+import gregtech.api.metatileentity.multiblock.CleanroomType;
+
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
-import static gregtech.api.recipes.RecipeMaps.CHEMICAL_RECIPES;
-import static gregtech.api.recipes.RecipeMaps.LARGE_CHEMICAL_RECIPES;
+import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
@@ -59,6 +61,39 @@ public class CarbonNanotubeChain {
                 .buildAndRegister();
 
         //  Cycloparaphenylene Cycle
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(foil, Graphene, 24)
+                .input(dust, CarbonNanotube)
+                .output(CARBON_ALLOTROPE)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(100)
+                .EUt(VA[ZPM])
+                .buildAndRegister();
+
+        ELECTROMAGNETIC_SEPARATOR_RECIPES.recipeBuilder()
+                .input(CARBON_ALLOTROPE)
+                .output(ingot, CarbonNanotube)
+                .output(GRAPHENE_ALIGNED, 4)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .duration(200)
+                .EUt(VA[UEV])
+                .buildAndRegister();
+
+        EXTRACTOR_RECIPES.recipeBuilder()
+                .input(GRAPHENE_ALIGNED)
+                .output(dust, Carbon, 3)
+                .fluidOutputs(Cycloparaphenylene.getFluid(2000))
+                .duration(800)
+                .EUt(VA[LuV])
+                .buildAndRegister();
+
+        //  Decomposition
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, CarbonNanotube)
+                .output(dust, Carbon, 48)
+                .duration((int) Carbon.getMass() * 48)
+                .EUt(64)
+                .buildAndRegister();
 
         //  Potassium Tetrachloroplatinate + Cyclooctadiene -> Dichlorocyclooctadieneplatinium + Potassium Chloride
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
@@ -336,6 +371,62 @@ public class CarbonNanotubeChain {
                 .fluidOutputs(Water.getFluid(1000))
                 .EUt(30)
                 .duration(170)
+                .buildAndRegister();
+
+        //  Silver Tetrafluoroborate
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, SilverOxide, 9)
+                .fluidInputs(BoronTrifluoride.getFluid(8000))
+                .notConsumable(Benzene.getFluid(1))
+                .output(dust, BoronTrioxide, 5)
+                .fluidOutputs(SilverTetrafluoroborate.getFluid(6000))
+                .EUt(7680)
+                .duration(650)
+                .buildAndRegister();
+
+        //  Silver + Chlorine -> Silver Chloride
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Silver)
+                .fluidInputs(Chlorine.getFluid(1000))
+                .circuitMeta(1)
+                .output(dust, SilverChloride, 2)
+                .EUt(120)
+                .duration(40)
+                .buildAndRegister();
+
+        //  Silver Chloride + Sodium Hydroxide + Water -> Silver Oxide + Hydrofluoric Acid
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, SilverChloride, 4)
+                .notConsumable(dust, SodiumHydroxide)
+                .fluidInputs(Water.getFluid(1000))
+                .output(dust, SilverOxide, 3)
+                .fluidOutputs(HydrofluoricAcid.getFluid(2000))
+                .EUt(VA[HV])
+                .duration(180)
+                .buildAndRegister();
+
+        //  Tin Chloride + Magnesium + Iodine + Methane + Oxygen -> Trimethyltin Chloride + Diluted Hydrochloric Acid
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
+                .input(dust, TinChloride)
+                .notConsumable(dust, Magnesium)
+                .notConsumable(dust, Iodine)
+                .fluidInputs(Methane.getFluid(3000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidOutputs(TrimethyltinChloride.getFluid(1000))
+                .fluidOutputs(DilutedHydrochloricAcid.getFluid(2000))
+                .CasingTier(2)
+                .EUt(1920)
+                .duration(260)
+                .buildAndRegister();
+
+        //  Tin + Chlorine -> Tin Chlorine
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Tin)
+                .fluidInputs(Chlorine.getFluid(2000))
+                .circuitMeta(2)
+                .output(dust, TinChloride, 3)
+                .EUt(30)
+                .duration(65)
                 .buildAndRegister();
     }
 }
