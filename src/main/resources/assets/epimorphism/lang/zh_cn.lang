@@ -431,6 +431,10 @@ gregtech.material.bromine_sulfate_solution=硫酸溴溶液
 gregtech.material.overheated_bromine_sulfate_solution=过热硫酸溴溶液
 gregtech.material.wet_bromine=含水溴烟气
 gregtech.material.debrominated_water=脱溴水
+gregtech.material.palladium_chloride=氯化钯
+gregtech.material.palladium_on_carbon=钯碳催化剂
+gregtech.material.potassium_permanganate=高锰酸钾
+gregtech.material.potassium_manganate=锰酸钾
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -465,6 +469,10 @@ gregtech.material.acetylene=乙炔
 gregtech.material.cyclooctadiene=环辛二烯
 gregtech.material.pyridine=吡啶
 gregtech.material.formaldehyde=甲醛
+gregtech.material.dibenzylideneacetone=二苄基丙酮
+gregtech.material.benzaldehyde=苯甲醛
+gregtech.material.benzoyl_chloride=苯甲酰氯
+gregtech.material.thionyl_chloride=氯化亚砜
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

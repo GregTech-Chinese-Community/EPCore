@@ -235,5 +235,107 @@ public class CarbonNanotubeChain {
                 .EUt(30720)
                 .duration(200)
                 .buildAndRegister();
+
+        //  PalladiumChloride + Dibenzylideneacetone -> Palladium Bisdibenzylidieneacetone
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, PalladiumChloride, 6)
+                .fluidInputs(Dibenzylideneacetone.getFluid(3000))
+                .output(dust, PalladiumBisdibenzylidieneacetone, 16)
+                .fluidOutputs(Chlorine.getFluid(4000))
+                .EUt(1920)
+                .duration(160)
+                .buildAndRegister();
+
+        //  Palladium Chloride
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Palladium)
+                .fluidInputs(Chlorine.getFluid(2000))
+                .circuitMeta(2)
+                .output(dust, PalladiumChloride, 3)
+                .EUt(30)
+                .duration(320)
+                .buildAndRegister();
+
+        //  Acetone + Benzaldehyde -> Dibenzylideneacetone + Water
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Acetone.getFluid(1000))
+                .fluidInputs(Benzaldehyde.getFluid(2000))
+                .fluidOutputs(Dibenzylideneacetone.getFluid(1000))
+                .fluidOutputs(Water.getFluid(2000))
+                .EUt(VA[HV])
+                .duration(440)
+                .buildAndRegister();
+
+        //  Barite dust + Palladium on Carbon + Benzoyl Chloride + Hydrogen -> Benzaldehyde + DilutedHydrochloricAcid
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(dust, Barite)
+                .notConsumable(dust, PalladiumOnCarbon)
+                .fluidInputs(BenzoylChloride.getFluid(2000))
+                .fluidInputs(Hydrogen.getFluid(1000))
+                .fluidOutputs(Benzaldehyde.getFluid(1000))
+                .fluidOutputs(DilutedHydrochloricAcid.getFluid(1000))
+                .EUt(VA[HV])
+                .duration(260)
+                .buildAndRegister();
+
+        //  Palladium Chloride + Carbon dust + Formaldehyde + Hydrochloric Acid -> Palladium on Carbon
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, PalladiumChloride)
+                .input(dust, Carbon)
+                .fluidInputs(Formaldehyde.getFluid(1000))
+                .fluidInputs(HydrochloricAcid.getFluid(1000))
+                .output(dust, PalladiumOnCarbon)
+                .EUt(1920)
+                .duration(100)
+                .buildAndRegister();
+
+        //  Potassium Permanganate + Thionyl Chloride -> Benzoyl Chloride
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
+                .input(dust, PotassiumPermanganate, 24)
+                .fluidInputs(ThionylChloride.getFluid(1000))
+                .fluidInputs(Toluene.getFluid(2000))
+                .output(dust, Pyrolusite, 12)
+                .fluidOutputs(BenzoylChloride.getFluid(2000))
+                .fluidOutputs(SulfurDioxide.getFluid(1000))
+                .fluidOutputs(PotassiumHydroxide.getFluid(4000))
+                .fluidOutputs(Water.getFluid(1000))
+                .CasingTier(3)
+                .EUt(VA[IV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  Thionyl Chloride
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Sulfur)
+                .fluidInputs(SulfurTrioxide.getFluid(1000))
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidOutputs(ThionylChloride.getFluid(1000))
+                .fluidOutputs(SulfurDioxide.getFluid(1000))
+                .EUt(480)
+                .duration(320)
+                .buildAndRegister();
+
+        //  Potassium Manganate + Water -> Potassium Permanganate + Pyrolusite + Potassium Hydroxide
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, PotassiumManganate, 21)
+                .fluidInputs(Water.getFluid(2000))
+                .output(dust, PotassiumPermanganate, 12)
+                .output(dust, Pyrolusite, 3)
+                .fluidOutputs(PotassiumHydroxide.getFluid(4000))
+                .temperature(720)
+                .EUt(120)
+                .duration(250)
+                .buildAndRegister();
+
+        //  Pyrolusite + PotassiumHydroxide + Oxygen -> Potassium Manganate + Water
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Pyrolusite, 3)
+                .fluidInputs(PotassiumHydroxide.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .output(dust, PotassiumManganate, 7)
+                .fluidOutputs(Water.getFluid(1000))
+                .EUt(30)
+                .duration(170)
+                .buildAndRegister();
     }
 }

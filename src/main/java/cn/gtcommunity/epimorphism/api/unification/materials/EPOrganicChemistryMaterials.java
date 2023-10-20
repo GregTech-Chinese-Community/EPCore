@@ -320,5 +320,30 @@ public class EPOrganicChemistryMaterials {
                 .color(0x858F40)
                 .components(Carbon, 1, Hydrogen, 2, Oxygen, 1)
                 .build();
+        //  25032 Dibenzylideneacetone
+        Dibenzylideneacetone = new Material.Builder(25032, gregtechId("dibenzylideneacetone"))
+                .fluid()
+                .color(0xA44545)
+                .components(Carbon, 17, Hydrogen, 14, Oxygen, 1)
+                .build();
+        //  25033 Benzaldehyde
+        Benzaldehyde = new Material.Builder(25033, gregtechId("benzaldehyde"))
+                .fluid()
+                .color(0x957D53)
+                .components(Carbon, 7, Hydrogen, 6, Oxygen, 1)
+                .build();
+        //  25034 Benzoyl Chloride
+        BenzoylChloride = new Material.Builder(25034, gregtechId("benzoyl_chloride"))
+                .fluid()
+                .color(0xABE1FF)
+                .components(Carbon, 7, Hydrogen, 5, Chlorine, 1, Oxygen, 1)
+                .build();
+        //  25035 Thionyl Chloride
+        ThionylChloride = new Material.Builder(25035, gregtechId("thionyl_chloride"))
+                .fluid()
+                .color(0xDBC2C2)
+                .components(Sulfur, 1, Oxygen, 1, Chlorine, 2)
+                .build()
+                .setFormula("SOCl2", true);
     }
 }

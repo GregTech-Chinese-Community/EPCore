@@ -55,6 +55,10 @@ public EPMaterials() {}
     public static Material OverheatedBromineSulfateSolution;
     public static Material WetBromine;
     public static Material DebrominatedWater;
+    public static Material PalladiumChloride;
+    public static Material PalladiumOnCarbon;
+    public static Material PotassiumPermanganate;
+    public static Material PotassiumManganate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -89,6 +93,10 @@ public EPMaterials() {}
     public static Material Cyclooctadiene;
     public static Material Pyridine;
     public static Material Formaldehyde;
+    public static Material Dibenzylideneacetone;
+    public static Material Benzaldehyde;
+    public static Material BenzoylChloride;
+    public static Material ThionylChloride;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

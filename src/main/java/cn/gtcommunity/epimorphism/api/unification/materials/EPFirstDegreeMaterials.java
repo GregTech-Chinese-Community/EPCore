@@ -6,7 +6,6 @@ import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregtech.api.GTValues.*;
-import static gregtech.api.fluids.fluidType.FluidTypes.LIQUID;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -367,6 +366,35 @@ public class EPFirstDegreeMaterials {
                 .color(0x24A3A3)
                 .components(Hydrogen, 2, Oxygen, 1)
                 .build();
+        //  24049 Palladium Chloride
+        PalladiumChloride = new Material.Builder(24049, gregtechId("palladium_chloride"))
+                .dust()
+                .color(0xAFB5BC)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Palladium, 1, Chlorine, 2)
+                .build();
+        //  24050 Palladium on Carbon
+        PalladiumOnCarbon = new Material.Builder(24050, gregtechId("palladium_on_carbon"))
+                .dust()
+                .color(0x480104)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Palladium, 1, Carbon, 1)
+                .build();
+        //  24051 Potassium Permanganate
+        PotassiumPermanganate = new Material.Builder(24051, gregtechId("potassium_permanganate"))
+                .dust()
+                .color(0x871D82)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Potassium, 1, Manganese, 1, Oxygen, 4)
+                .build();
 
+        //  24052 Potassium Manganate
+        PotassiumManganate = new Material.Builder(24052, gregtechId("potassium_manganate"))
+                .dust()
+                .color(0x873883)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Potassium, 2, Manganese, 1, Oxygen, 4)
+                .build();
     }
 }
