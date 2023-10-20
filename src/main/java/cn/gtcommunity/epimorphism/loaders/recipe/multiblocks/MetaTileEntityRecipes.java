@@ -11,7 +11,6 @@ import gregtech.loaders.recipe.MetaTileEntityLoader;
 import gregtech.api.recipes.ModHandler;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
-import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingType.*;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregicality.multiblocks.common.metatileentities.GCYMMetaTileEntities.*;

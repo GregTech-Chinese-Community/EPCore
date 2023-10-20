@@ -1,14 +1,10 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
-import cn.gtcommunity.epimorphism.api.unification.EPMaterials;
-import gregtech.api.GTValues;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.unification.material.info.MaterialFlag;
-import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.info.MaterialIconSet;
 
+import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -23,133 +19,72 @@ public class EPOrganicChemistryMaterials {
                 .ingot()
                 .fluid()
                 .color(16764498)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.NO_SMASHING,
-                        MaterialFlags.NO_SMELTING,
-                        MaterialFlags.GENERATE_PLATE,
-                        MaterialFlags.GENERATE_FOIL })
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(12),
-                        Hydrogen, Integer.valueOf(12),
-                        Materials.Nitrogen, Integer.valueOf(2),
-                        Oxygen, Integer.valueOf(1) })
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
                 .build()
                 .setFormula("(C7H2N2O4)(O(C6H4)2)", true);
-
         //  25001 Kapton-E
         KaptonE = new Material.Builder(25001, gregtechId("kapton_e"))
                 .ingot()
                 .fluid()
                 .color(16768908)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.GENERATE_PLATE,
-                        MaterialFlags.NO_SMASHING,
-                        MaterialFlags.NO_SMELTING,
-                        MaterialFlags.GENERATE_FOIL })
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(12),
-                        Hydrogen, Integer.valueOf(12),
-                        Materials.Nitrogen, Integer.valueOf(2),
-                        Oxygen, Integer.valueOf(1) })
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, NO_SMASHING, NO_SMELTING, GENERATE_FOIL)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
                 .build()
                 .setFormula("O(C6H4NH2)2", true);
         //  25002  EDOT
         Edot = new Material.Builder(25002, gregtechId("edot"))
                 .fluid()
                 .color(11665367)
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(6),
-                        Hydrogen, Integer.valueOf(6),
-                        Oxygen, Integer.valueOf(2),
-                        Materials.Sulfur, Integer.valueOf(1) })
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2, Sulfur, 1)
                 .build();
-
         //  25003 Polystyrene
         Polystyrene = new Material.Builder(25003, gregtechId("polystyrene"))
                 .fluid()
                 .color(14795458)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION
-                })
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(8),
-                        Hydrogen, Integer.valueOf(8) })
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 8, Hydrogen, 8)
                 .build();
-
         //  25004 PolystyreneSulfonate
         PolystyreneSulfonate = new Material.Builder(25004, gregtechId("polystyrene_sulfonate"))
                 .ingot()
                 .fluid()
                 .color(14777458)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.GENERATE_PLATE })
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(8),
-                        Hydrogen, Integer.valueOf(8),
-                        Materials.Sulfur, Integer.valueOf(1),
-                        Oxygen, Integer.valueOf(3) })
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
+                .components(Carbon, 8, Hydrogen, 8, Sulfur, 1, Oxygen, 3)
                 .build();
-
         //  25005  PEDOT-PSS
         PedotPSS = new Material.Builder(25005, gregtechId("pedot_pss"))
                 .ingot()
                 .fluid()
                 .color(14771623)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.GENERATE_FINE_WIRE })
-                .components(new Object[] {
-                        EPMaterials.Edot, Integer.valueOf(1),
-                        EPMaterials.PolystyreneSulfonate, Integer.valueOf(1) })
-                .cableProperties(GTValues.V[9], 24, 0, true)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .components(Edot, 1, PolystyreneSulfonate, 1)
+                .cableProperties(V[UHV], 24, 0, true)
                 .build();
-
         //  25006  PMMA
         PMMA = new Material.Builder(25006, gregtechId("polymethylmethacrylate"))
                 .ingot()
                 .fluid()
                 .color(9554657)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.NO_SMASHING,
-                        MaterialFlags.NO_SMELTING,
-                        MaterialFlags.GENERATE_PLATE })
-                .components(new Object[] {
-                        Materials.Carbon, Integer.valueOf(5),
-                        Hydrogen, Integer.valueOf(8),
-                        Oxygen, Integer.valueOf(2) })
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
                 .build();
-
-        //  25007  PEDOT-TMA
+        //  25007  PEDOT:TMA
         PedotTMA = new Material.Builder(25007, gregtechId("pedot_tma"))
                 .ingot()
                 .fluid()
                 .color(6201057)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION,
-                        MaterialFlags.GENERATE_ROD,
-                        MaterialFlags.GENERATE_SPRING })
-                .components(new Object[] {
-                        EPMaterials.Edot, Integer.valueOf(1),
-                        EPMaterials.PMMA, Integer.valueOf(2) })
-                .cableProperties(GTValues.V[10], 8, 6)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_ROD, GENERATE_SPRING)
+                .components(Edot, 1, PMMA, 2)
+                .cableProperties(V[UEV], 8, 6)
                 .build();
         //  25008 Tetramethylammonium Hydroxide
         TetramethylammoniumHydroxide = new Material.Builder(25008, gregtechId("tetramethylammonium_hydroxide"))
                 .fluid()
                 .color(4259798)
-                .flags(new MaterialFlag[] {
-                        DISABLE_DECOMPOSITION
-                })
-                .components(new Object[] {
-                        Materials.Nitrogen, Integer.valueOf(1),
-                        Materials.Carbon, Integer.valueOf(4),
-                        Hydrogen, Integer.valueOf(12),
-                        Oxygen, Integer.valueOf(1),
-                        Hydrogen, Integer.valueOf(1) })
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Nitrogen, 1, Carbon, 4, Hydrogen, 12, Oxygen, 1, Hydrogen, 1)
                 .build()
                 .setFormula("N(CH3)4OH", true);
         //  25009 Potassium Hydroxide

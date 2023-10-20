@@ -4,7 +4,7 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty;
 
-import static gregtech.api.GTValues.VA;
+import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -22,7 +22,7 @@ public class EPMachineCasingMaterials {
                 .color(0x3fcc60)
                 .iconSet(MaterialIconSet.METALLIC)
                 .flags(GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_GEAR)
-                .blastTemp(4850, BlastProperty.GasTier.HIGHEST, VA[5], 1000)
+                .blastTemp(4850, BlastProperty.GasTier.HIGHEST, VA[IV], 1000)
                 .components(Nickel, 8, Chrome, 6, Molybdenum, 4, Niobium, 4, Titanium, 3, Iron, 2, Aluminium, 2)
                 .build();
 
@@ -34,7 +34,7 @@ public class EPMachineCasingMaterials {
                 .color(0x939554)
                 .iconSet(MaterialIconSet.DULL)
                 .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_ROTOR, GENERATE_FRAME)
-                .blastTemp(4550, BlastProperty.GasTier.HIGHER, VA[4], 800)
+                .blastTemp(4550, BlastProperty.GasTier.HIGHER, VA[EV], 800)
                 .components(Nickel, 15, Molybdenum, 4, Chrome, 2, Titanium, 2, Yttrium, 2)
                 .build();
     }
