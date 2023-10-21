@@ -471,5 +471,82 @@ public class EPOrganicChemistryMaterials {
                 .components(Gallium, 1, Carbon, 3, Hydrogen, 9)
                 .build()
                 .setFormula("Ga(CH3)3", true);
+        //  25062 Benzophenanthrenylacetonitrile
+        Benzophenanthrenylacetonitrile = new Material.Builder(25062, gregtechId("benzophenanthrenylacetonitrile"))
+                .dust()
+                .color(0xBB58E9)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Carbon, 20, Hydrogen, 13, Nitrogen, 1)
+                .build();
+        //  25063 Methylbenzophenanthrene
+        Methylbenzophenanthrene = new Material.Builder(25063, gregtechId("methylbenzophenanthrene"))
+                .dust()
+                .color(0xEA236B)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Carbon, 19, Hydrogen, 14)
+                .build();
+        //  25064 Bromo Succinimide
+        BromoSuccinimide = new Material.Builder(25064, gregtechId("bromo_succinimide"))
+                .dust()
+                .color(0x00BF8C)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Carbon, 4, Hydrogen, 4, Bromine, 1, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  25065 Succinimide
+        Succinimide = new Material.Builder(25065, gregtechId("succinimide"))
+                .dust()
+                .color(0x1774B6)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Carbon, 4, Hydrogen, 5, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  25066 Succinic Acid
+        SuccinicAcid = new Material.Builder(25066, gregtechId("succinic_acid"))
+                .dust()
+                .color(0x0C3A5B)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 4)
+                .build();
+        //  25067 Maleic Anhydride
+        MaleicAnhydride = new Material.Builder(25067, gregtechId("maleic_anhydride"))
+                .fluid()
+                .color(0x610C2F)
+                .components(Carbon, 4, Hydrogen, 2, Oxygen, 3)
+                .build();
+        //  25068 Naphthaldehyde
+        Naphthaldehyde = new Material.Builder(25068, gregtechId("naphthaldehyde"))
+                .fluid()
+                .color(0x00FFED)
+                .components(Carbon, 11, Hydrogen, 8, Oxygen, 1)
+                .build()
+                .setFormula("C10H7CHO", true);
+        //  25069 Butanol
+        Butanol = new Material.Builder(25069, gregtechId("butanol"))
+                .fluid()
+                .color(0xC7AF2E)
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .build()
+                .setFormula("C4H9OH", true);
+        //  25070 Bromobutane
+        Bromobutane = new Material.Builder(25070, gregtechId("bromobutane"))
+                .fluid()
+                .color(0xAE0E39)
+                .components(Carbon, 4, Hydrogen, 9, Bromine, 1)
+                .build()
+                .setFormula("CH3(CH2)3Br", true);
+        //  25071 Cyanonaphthalene
+        Cyanonaphthalene = new Material.Builder(25071, gregtechId("cyanonaphthalene"))
+                .dust()
+                .color(0xDE992D)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Carbon, 11, Hydrogen, 7, Nitrogen, 1)
+                .build();
+        //  25072 Triphenylphosphine
+        Triphenylphosphine = new Material.Builder(25072, gregtechId("triphenylphosphine"))
+                .dust()
+                .color(0x8F2C6B)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
+                .build()
+                .setFormula("(C6H5)3P", true);
     }
 }

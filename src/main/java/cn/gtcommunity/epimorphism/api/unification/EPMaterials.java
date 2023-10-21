@@ -74,6 +74,19 @@ public EPMaterials() {}
     public static Material Alumina;
     public static Material GalliumTrioxide;
     public static Material GalliumNitride;
+    public static Material Fullerene;
+    public static Material GeodesicPolyarene;
+    public static Material TiAlCatalyst;
+    public static Material PotassiumCyanide;
+    public static Material PotassiumBromide;
+    public static Material BismuthVanadate;
+    public static Material BismuthVanadateSolution;
+    public static Material AmmoniumVanadate;
+    public static Material VanadiumSlag;
+    public static Material BismuthNitrateSolution;
+    public static Material SodiumVanadate;
+    public static Material VanadiumWasteSolution;
+    public static Material SodiumBromide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -137,6 +150,17 @@ public EPMaterials() {}
     public static Material GammaButyrolactone;
     public static Material Methylamine;
     public static Material Trimethylaluminium;
+    public static Material Benzophenanthrenylacetonitrile;
+    public static Material Methylbenzophenanthrene;
+    public static Material BromoSuccinimide;
+    public static Material Succinimide;
+    public static Material SuccinicAcid;
+    public static Material MaleicAnhydride;
+    public static Material Naphthaldehyde;
+    public static Material Butanol;
+    public static Material Bromobutane;
+    public static Material Cyanonaphthalene;
+    public static Material Triphenylphosphine;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

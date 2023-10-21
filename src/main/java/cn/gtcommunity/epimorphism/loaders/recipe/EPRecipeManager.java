@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe;
 import cn.gtcommunity.epimorphism.loaders.recipe.blocks.Crucibles;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.OpticalCircuits;
+import cn.gtcommunity.epimorphism.loaders.recipe.circuits.SpintronicCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
@@ -31,11 +32,13 @@ public class EPRecipeManager {
 
     public static void initChains() {
         AmmoniaChain.init();
+        BismuthVanadiumChain.init();
         BoronChain.init();
         BoronNitrideChain.init();
         BromineChain.init();
         BZMediumChain.init();
         CarbonNanotubeChain.init();
+        FullereneChain.init();
         GalliumNitrideChain.init();
         GrapheneChain.init();
         IodineChain.init();
@@ -43,6 +46,7 @@ public class EPRecipeManager {
         KevlarChain.init();
         PEDOTChain.init();
         PEEKChain.init();
+        PhosphorusChain.init();
         PMMAChain.init();
         ThalliumChain.init();
         TungstenChain.init();
@@ -52,6 +56,7 @@ public class EPRecipeManager {
         WetwareCircuits.init();
         GoowareCircuits.init();
         OpticalCircuits.init();
+        SpintronicCircuits.init();
     }
 
     public static void initComponents() {

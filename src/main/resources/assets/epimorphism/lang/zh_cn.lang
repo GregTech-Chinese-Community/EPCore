@@ -455,6 +455,19 @@ gregtech.material.aluminium_hydroxide=氢氧化铝
 gregtech.material.alumina=三氧化二铝
 gregtech.material.gallium_trioxide=三氧化镓
 gregtech.material.gallium_nitride=氮化镓
+gregtech.material.fullerene=富勒烯
+gregtech.material.geodesic_polyarene=拱形芳烃聚合物
+gregtech.material.ti_al_catalyst=钛-铝联合催化剂
+gregtech.material.potassium_cyanide=氰化钾
+gregtech.material.potassium_bromide=溴化钾
+gregtech.material.bismuth_vanadate=钒酸铋
+gregtech.material.bismuth_vanadate_solution=钒酸铋溶液
+gregtech.material.ammonium_vanadate=钒酸铵
+gregtech.material.vanadium_slag=含钒炉渣
+gregtech.material.bismuth_nitrate_solution=硝酸铋溶液
+gregtech.material.sodium_vanadate=钒酸钠
+gregtech.material.vanadium_waste_solution=钒废液
+gregtech.material.sodium_bromide=溴化钠
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -519,6 +532,17 @@ gregtech.material.gamma_butyrolactone=γ-丁内酯
 gregtech.material.methylamine=甲胺
 gregtech.material.trimethylaluminium=三甲基铝
 gregtech.material.trimethylgallium=三甲基镓
+gregtech.material.benzophenanthrenylacetonitrile=苯并菲乙腈
+gregtech.material.methylbenzophenanthrene=甲基苯并菲
+gregtech.material.bromo_succinimide=N-溴代琥珀酰亚胺
+gregtech.material.succinimide=琥珀酰亚胺
+gregtech.material.succinic_acid=琥珀酸
+gregtech.material.maleic_anhydride=顺丁烯二酸酐
+gregtech.material.naphthaldehyde=萘甲醛
+gregtech.material.butanol=丁醇
+gregtech.material.bromobutane=溴丁烷
+gregtech.material.cyanonaphthalene=氰萘
+gregtech.material.triphenylphosphine=三苯基膦
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

@@ -20,6 +20,7 @@ public class EPMaterialPropertyAddition {
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
         SodiumHydroxide.setProperty(PropertyKey.FLUID, new FluidProperty());
+        AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
