@@ -37,6 +37,8 @@ public class EPRecipeManager {
         CarbonNanotubeChain.init();
         GrapheneChain.init();
         IodineChain.init();
+        KaptonChain.init();
+        KevlarChain.init();
         PEDOTChain.init();
         PEEKChain.init();
         PMMAChain.init();

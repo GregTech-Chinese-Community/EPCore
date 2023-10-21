@@ -111,6 +111,19 @@ public EPMaterials() {}
     public static Material Resorcinol;
     public static Material Fluorobenzene;
     public static Material Fluorotoluene;
+    public static Material Kevlar;
+    public static Material ParaPhenylenediamine;
+    public static Material TerephthaloylChloride;
+    public static Material NMethylPyrrolidone;
+    public static Material Nitroaniline;
+    public static Material Durene;
+    public static Material PyromelliticDianhydride;
+    public static Material Aminophenol;
+    public static Material Aniline;
+    public static Material Oxydianiline;
+    public static Material Dimethylformamide;
+    public static Material PhthalicAnhydride;
+    public static Material BiphenylTetracarboxylicAcidDianhydride;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

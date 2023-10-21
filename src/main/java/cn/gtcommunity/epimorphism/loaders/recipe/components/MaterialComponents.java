@@ -66,6 +66,8 @@ public class MaterialComponents {
         HULL_PLATE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.plate, Polyetheretherketone)},
                 {10, new UnificationEntry(OrePrefix.plate, Polyetheretherketone)},
+                {11, new UnificationEntry(OrePrefix.plate, Kevlar)},
+                {12, new UnificationEntry(OrePrefix.plate, Kevlar)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         STICK_DISTILLATION.appendIngredients(Stream.of(new Object[][]{

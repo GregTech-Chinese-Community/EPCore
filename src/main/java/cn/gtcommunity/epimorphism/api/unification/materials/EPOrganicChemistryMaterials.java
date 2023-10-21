@@ -320,5 +320,106 @@ public class EPOrganicChemistryMaterials {
                 .color(0x6EC5B8)
                 .components(Carbon, 7, Hydrogen, 7, Fluorine, 1)
                 .build();
+        //  25042 Kevlar
+        Kevlar = new Material.Builder(25042, gregtechId("kevlar"))
+                .polymer()
+                .color(0xF0F078)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
+                .build()
+                .setFormula("(C6H4)2(CO)2(NH)2", true);
+        //  25043 Para Phenylenediamine
+        ParaPhenylenediamine = new Material.Builder(25043, gregtechId("para_phenylenediamine"))
+                .dust()
+                .color(0x4A8E7B)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Carbon, 6, Hydrogen, 8, Nitrogen, 2)
+                .build()
+                .setFormula("H2NC6H4NH2", true);
+        //  25044 Terephthaloyl Chloride
+        TerephthaloylChloride = new Material.Builder(25044, gregtechId("terephthaloyl_chloride"))
+                .dust()
+                .color(0xFAC4DA)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Carbon, 8, Hydrogen, 4, Oxygen, 2, Chlorine, 2)
+                .build()
+                .setFormula("C6H4(COCl)2", true);
+        //  25045 N-Methyl Pyrrolidone
+        NMethylPyrrolidone = new Material.Builder(25045, gregtechId("n_methyl_pyrrolidone"))
+                .fluid()
+                .color(0xA504D6)
+                .components(Carbon, 5, Hydrogen, 9, Nitrogen, 1, Oxygen, 1)
+                .build();
+        //  25046 Nitroaniline
+        Nitroaniline = new Material.Builder(25046, gregtechId("nitroaniline"))
+                .fluid()
+                .color(0x2A6E68)
+                .components(Carbon, 6, Hydrogen, 6, Nitrogen, 2, Oxygen, 2)
+                .build()
+                .setFormula("H2NC6H4NO2", true);
+        //  25047 Durene
+        Durene = new Material.Builder(25047, gregtechId("durene"))
+                .dust()
+                .color(0x336040)
+                .iconSet(MaterialIconSet.FINE)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 14)
+                .build()
+                .setFormula("C6H2(CH3)4", true);
+        //  25048 Pyromellitic Dianhydride
+        PyromelliticDianhydride = new Material.Builder(25048, gregtechId("pyromellitic_dianhydride"))
+                .dust()
+                .color(0xF0EAD6)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 2, Oxygen, 6)
+                .build()
+                .setFormula("C6H2(C2O3)2", true);
+        //  25049 Aminophenol
+        Aminophenol = new Material.Builder(25049, gregtechId("aminophenol"))
+                .fluid()
+                .color(0xFF7F50)
+                .components(Carbon, 6, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("HOC6H4NH2", true);
+        //  25050 Aniline
+        Aniline = new Material.Builder(25050, gregtechId("aniline"))
+                .fluid()
+                .color(0x4C911D)
+                .components(Carbon, 6, Hydrogen, 7, Nitrogen, 1)
+                .build()
+                .setFormula("C6H5NH2", true);
+        //  25051 Oxydianiline
+        Oxydianiline = new Material.Builder(25051, gregtechId("oxydianiline"))
+                .dust()
+                .color(0xF0E130)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
+                .build()
+                .setFormula("O(C6H4NH2)2", true);
+        //  25052 Dimethylformamide
+        Dimethylformamide = new Material.Builder(25052, gregtechId("dimethylformamide"))
+                .fluid()
+                .color(0x42BDFF)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 3, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("(CH3)2NC(O)H", true);
+        //  25053 Phthalic Anhydride
+        PhthalicAnhydride = new Material.Builder(25053, gregtechId("phthalic_anhydride"))
+                .dust()
+                .color(0xEEAAEE)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 8, Hydrogen, 4, Oxygen, 3)
+                .build()
+                .setFormula("C6H4(CO)2O", true);
+        //  25054 Biphenyl Tetracarboxylic Acid Dianhydride
+        BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(25054, gregtechId("biphenyl_tetracarboxylic_acid_dianhydride"))
+                .dust()
+                .color(0xFF7F50)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 16, Hydrogen, 6, Oxygen, 6)
+                .build()
+                .setFormula("(C8H3O3)2", true);
     }
 }
