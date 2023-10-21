@@ -67,6 +67,13 @@ public EPMaterials() {}
     public static Material SodiumNitrate;
     public static Material FluoroboricAcid;
     public static Material BenzenediazoniumTetrafluoroborate;
+    public static Material GalliumTrichloride;
+    public static Material AluminiumTrichloride;
+    public static Material Trimethylgallium;
+    public static Material AluminiumHydroxide;
+    public static Material Alumina;
+    public static Material GalliumTrioxide;
+    public static Material GalliumNitride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -129,6 +136,7 @@ public EPMaterials() {}
     public static Material TerephthalicAcid;
     public static Material GammaButyrolactone;
     public static Material Methylamine;
+    public static Material Trimethylaluminium;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

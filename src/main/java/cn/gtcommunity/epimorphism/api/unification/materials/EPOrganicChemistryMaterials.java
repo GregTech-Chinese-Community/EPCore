@@ -455,5 +455,21 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 1, Hydrogen, 5, Nitrogen, 1)
                 .build()
                 .setFormula("CH3NH2", true);
+        //  25060 Trimethylaluminium
+        Trimethylaluminium = new Material.Builder(25060, gregtechId("trimethylaluminium"))
+                .fluid()
+                .color(0x6ECCFF)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Aluminium, 2, Carbon, 6, Hydrogen, 18)
+                .build()
+                .setFormula("Al2(CH3)6", true);
+        //  25061 Trimethylgallium
+        Trimethylgallium = new Material.Builder(25061, gregtechId("trimethylgallium"))
+                .fluid()
+                .color(0x4F92FF)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Gallium, 1, Carbon, 3, Hydrogen, 9)
+                .build()
+                .setFormula("Ga(CH3)3", true);
     }
 }

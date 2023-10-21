@@ -23,10 +23,11 @@ public class GoowareCircuits {
                .input(OrePrefix.plate, EPMaterials.KaptonE)
                .input(OrePrefix.foil, Materials.Europium, 4)
                .output(GOOWARE_BOARD)
-               .glassTier(7)
-               .temperature(493)
                .duration(40)
-               .EUt(GTValues.VA[8])
+               .EUt(VA[UV])
+               .temperature(493)
+               .glassTier(7)
+               .cleanroom(CleanroomType.CLEANROOM)
                .buildAndRegister();
 
         //  Gooware Circuit Board
@@ -40,7 +41,7 @@ public class GoowareCircuits {
                     .output(GOOWARE_CIRCUIT_BOARD)
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(210)
-                    .EUt(GTValues.VA[4])
+                    .EUt(GTValues.VA[EV])
                     .buildAndRegister();
         }
 

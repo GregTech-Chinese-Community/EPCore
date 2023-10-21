@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import cn.gtcommunity.epimorphism.loaders.recipe.blocks.Crucibles;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
+import cn.gtcommunity.epimorphism.loaders.recipe.circuits.OpticalCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
@@ -35,6 +36,7 @@ public class EPRecipeManager {
         BromineChain.init();
         BZMediumChain.init();
         CarbonNanotubeChain.init();
+        GalliumNitrideChain.init();
         GrapheneChain.init();
         IodineChain.init();
         KaptonChain.init();
@@ -49,6 +51,7 @@ public class EPRecipeManager {
     public static void initCircuits() {
         WetwareCircuits.init();
         GoowareCircuits.init();
+        OpticalCircuits.init();
     }
 
     public static void initComponents() {

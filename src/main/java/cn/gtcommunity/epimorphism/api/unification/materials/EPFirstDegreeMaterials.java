@@ -450,5 +450,52 @@ public class EPFirstDegreeMaterials {
                 .color(0xD5C5B2)
                 .components(Carbon, 6, Hydrogen, 5, Boron, 1, Fluorine, 4, Nitrogen, 2)
                 .build();
+        //  24061 Gallium Trichloride
+        GalliumTrichloride = new Material.Builder(24061, gregtechId("gallium_trichloride"))
+                .dust()
+                .color(0x6EB4FF)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Gallium, 1, Chlorine, 3)
+                .build();
+        //  24062 Aluminium Trichloride
+        AluminiumTrichloride = new Material.Builder(24062, gregtechId("aluminium_trichloride"))
+                .dust()
+                .color(0x78C3EB)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Aluminium, 1, Chlorine, 3)
+                .build();
+        //  24063 Aluminium Hydroxide
+        AluminiumHydroxide = new Material.Builder(24063, gregtechId("aluminium_hydroxide"))
+                .dust()
+                .color(0xBEBEC8)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Aluminium, 1, Oxygen, 3, Hydrogen, 3)
+                .build()
+                .setFormula("Al(OH)3", true);
+        //  24064 Alumina
+        Alumina = new Material.Builder(24064, gregtechId("alumina"))
+                .dust()
+                .color(0x78c3eb)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Aluminium, 2, Oxygen, 3)
+                .build();
+        //  24065 Gallium Trioxide
+        GalliumTrioxide = new Material.Builder(24065, gregtechId("gallium_trioxide"))
+                .dust()
+                .fluid()
+                .fluidTemp(2170)
+                .color(0xE4CDFF)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Gallium, 1, Oxygen, 3)
+                .build();
+        //  24066 Gallium Nitride
+        GalliumNitride = new Material.Builder(24066, gregtechId("gallium_nitride"))
+                .ingot()
+                .color(0xFFF458)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(GENERATE_PLATE)
+                .components(Gallium, 1, Nitrogen, 1)
+                .build();
     }
 }

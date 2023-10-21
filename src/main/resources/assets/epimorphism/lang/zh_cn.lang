@@ -449,6 +449,12 @@ gregtech.material.sodium_nitrite=亚硝酸钠
 gregtech.material.sodium_nitrate=硝酸钠
 gregtech.material.fluoroboric_acid=氟硼酸
 gregtech.material.benzenediazonium_tetrafluoroborate=四氟硼酸重氮苯
+gregtech.material.gallium_trichloride=三氯化镓
+gregtech.material.aluminium_trichloride=三氯化铝
+gregtech.material.aluminium_hydroxide=氢氧化铝
+gregtech.material.alumina=三氧化二铝
+gregtech.material.gallium_trioxide=三氧化镓
+gregtech.material.gallium_nitride=氮化镓
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -511,6 +517,8 @@ gregtech.material.tetrabromoethane=四溴乙烷
 gregtech.material.terephthalic_acid=对苯二甲酸（PTA）
 gregtech.material.gamma_butyrolactone=γ-丁内酯
 gregtech.material.methylamine=甲胺
+gregtech.material.trimethylaluminium=三甲基铝
+gregtech.material.trimethylgallium=三甲基镓
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
