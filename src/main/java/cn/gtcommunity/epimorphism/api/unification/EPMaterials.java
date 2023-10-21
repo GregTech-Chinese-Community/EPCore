@@ -124,6 +124,11 @@ public EPMaterials() {}
     public static Material Dimethylformamide;
     public static Material PhthalicAnhydride;
     public static Material BiphenylTetracarboxylicAcidDianhydride;
+    public static Material Bistrichloromethylbenzene;
+    public static Material Tetrabromoethane;
+    public static Material TerephthalicAcid;
+    public static Material GammaButyrolactone;
+    public static Material Methylamine;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

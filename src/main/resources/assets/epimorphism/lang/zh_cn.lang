@@ -506,6 +506,11 @@ gregtech.material.oxydianiline=4,4'-二氨基二苯醚（ODA）
 gregtech.material.dimethylformamide=二甲基甲酰胺（DMF）
 gregtech.material.phthalic_anhydride=邻苯二甲酸酐
 gregtech.material.biphenyl_tetracarboxylic_acid_dianhydride=联苯四甲酸二酐（BPDA）
+gregtech.material.bistrichloromethylbenzene=1,4-双（三氯甲基）苯
+gregtech.material.tetrabromoethane=四溴乙烷
+gregtech.material.terephthalic_acid=对苯二甲酸（PTA）
+gregtech.material.gamma_butyrolactone=γ-丁内酯
+gregtech.material.methylamine=甲胺
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

@@ -421,5 +421,39 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 16, Hydrogen, 6, Oxygen, 6)
                 .build()
                 .setFormula("(C8H3O3)2", true);
+        //  25055 Bistrichloromethylbenzene
+        Bistrichloromethylbenzene = new Material.Builder(25055, gregtechId("bistrichloromethylbenzene"))
+                .fluid()
+                .color(0xCF8498)
+                .components(Carbon, 8, Hydrogen, 4, Chlorine, 6)
+                .build()
+                .setFormula("C6H4(CCl3)2", true);
+        //  25056 Tetrabromoethane
+        Tetrabromoethane = new Material.Builder(25056, gregtechId("tetrabromoethane"))
+                .fluid()
+                .color(0x5AAADA)
+                .components(Carbon, 2, Hydrogen, 2, Bromine, 4)
+                .build();
+        //  25057 Terephthalic Acid
+        TerephthalicAcid = new Material.Builder(25057, gregtechId("terephthalic_acid"))
+                .dust()
+                .color(0x5ACCDA)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
+                .build()
+                .setFormula("C6H4(CO2H)2", true);
+        //  25058 γ-Butyrolactone
+        GammaButyrolactone = new Material.Builder(25058, gregtechId("gamma_butyrolactone"))
+                .fluid()
+                .color(0xAF04D6)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
+                .build();
+        //  25059 Methylamine
+        Methylamine = new Material.Builder(25059, gregtechId("methylamine"))
+                .fluid(FluidTypes.GAS)
+                .color(0xAA6600)
+                .components(Carbon, 1, Hydrogen, 5, Nitrogen, 1)
+                .build()
+                .setFormula("CH3NH2", true);
     }
 }
