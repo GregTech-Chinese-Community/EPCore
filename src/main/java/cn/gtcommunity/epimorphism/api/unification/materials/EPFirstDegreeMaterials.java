@@ -78,6 +78,7 @@ public class EPFirstDegreeMaterials {
         //  24008 Boric Acid
         BoricAcid = new Material.Builder(24008, gregtechId("boric_acid"))
                 .dust()
+                .fluid()
                 .color(0xFAFAFA)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(DISABLE_DECOMPOSITION)
@@ -408,5 +409,192 @@ public class EPFirstDegreeMaterials {
                 .color(0xA4A4A4)
                 .components(Silver, 2, Oxygen, 1)
                 .build();
+        //  24055 Sodium Fluoride
+        SodiumFluoride = new Material.Builder(24055, gregtechId("sodium_fluoride"))
+                .dust()
+                .color(0x460012)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Sodium, 1, Fluorine, 1)
+                .build();
+        //  24056 Zn-Fe-Al-Cl Catalyst
+        ZnFeAlClCatalyst = new Material.Builder(24056, gregtechId("zn_fe_al_cl_catalyst"))
+                .dust()
+                .color(0xC522A9)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Zinc, 1, Iron, 1, Aluminium, 1, Chlorine, 1)
+                .build();
+        //  24057 Sodium Nitrite
+        SodiumNitrite = new Material.Builder(24057, gregtechId("sodium_nitrite"))
+                .dust()
+                .color(0x205CA4)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  24058 Sodium Nitrate
+        SodiumNitrate = new Material.Builder(24058, gregtechId("sodium_nitrate"))
+                .dust()
+                .fluid()
+                .color(0xEB9E3F)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)
+                .build();
+        //  24059 Fluoroboric Acid
+        FluoroboricAcid = new Material.Builder(24059, gregtechId("fluoroboric_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(0xD5811B)
+                .components(Hydrogen, 1, Boron, 1, Fluorine, 4)
+                .build();
+        //  24060 Benzenediazonium Tetrafluoroborate
+        BenzenediazoniumTetrafluoroborate = new Material.Builder(24060, gregtechId("benzenediazonium_tetrafluoroborate"))
+                .fluid()
+                .color(0xD5C5B2)
+                .components(Carbon, 6, Hydrogen, 5, Boron, 1, Fluorine, 4, Nitrogen, 2)
+                .build();
+        //  24061 Gallium Trichloride
+        GalliumTrichloride = new Material.Builder(24061, gregtechId("gallium_trichloride"))
+                .dust()
+                .color(0x6EB4FF)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Gallium, 1, Chlorine, 3)
+                .build();
+        //  24062 Aluminium Trichloride
+        AluminiumTrichloride = new Material.Builder(24062, gregtechId("aluminium_trichloride"))
+                .dust()
+                .color(0x78C3EB)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Aluminium, 1, Chlorine, 3)
+                .build();
+        //  24063 Aluminium Hydroxide
+        AluminiumHydroxide = new Material.Builder(24063, gregtechId("aluminium_hydroxide"))
+                .dust()
+                .color(0xBEBEC8)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Aluminium, 1, Oxygen, 3, Hydrogen, 3)
+                .build()
+                .setFormula("Al(OH)3", true);
+        //  24064 Alumina
+        Alumina = new Material.Builder(24064, gregtechId("alumina"))
+                .dust()
+                .color(0x78c3eb)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Aluminium, 2, Oxygen, 3)
+                .build();
+        //  24065 Gallium Trioxide
+        GalliumTrioxide = new Material.Builder(24065, gregtechId("gallium_trioxide"))
+                .dust()
+                .fluid()
+                .fluidTemp(2170)
+                .color(0xE4CDFF)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Gallium, 1, Oxygen, 3)
+                .build();
+        //  24066 Gallium Nitride
+        GalliumNitride = new Material.Builder(24066, gregtechId("gallium_nitride"))
+                .ingot()
+                .color(0xFFF458)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(GENERATE_PLATE)
+                .components(Gallium, 1, Nitrogen, 1)
+                .build();
+        //  24067 Fullerene
+        Fullerene = new Material.Builder(24067, gregtechId("fullerene"))
+                .ingot()
+                .color(0x72556A)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(DISABLE_DECOMPOSITION, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL, GENERATE_ROD, GENERATE_RING, GENERATE_FRAME)
+                .components(Carbon, 60)
+                .build();
+        //  24068 Geodesic Polyarene
+        GeodesicPolyarene = new Material.Builder(24068, gregtechId("geodesic_polyarene"))
+                .dust()
+                .color(0x9E81A8)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 60, Hydrogen, 30)
+                .build();
+        //  24069 Ti-Al Catalyst
+        TiAlCatalyst = new Material.Builder(24069, gregtechId("ti_al_catalyst"))
+                .dust()
+                .color(0x6600CC)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Titanium, 1, Aluminium, 1)
+                .build();
+        //  24070 Potassium Cyanide
+        PotassiumCyanide = new Material.Builder(24070, gregtechId("potassium_cyanide"))
+                .dust()
+                .color(0x9EF3D0)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Potassium, 1, Carbon, 1, Nitrogen, 1)
+                .build();
+        //  24071 Potassium Bromide
+        PotassiumBromide = new Material.Builder(24071, gregtechId("potassium_bromide"))
+                .dust()
+                .color(0x615057)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Potassium, 1, Bromine, 1)
+                .build();
+        //  24072 Bismuth Vanadate
+        BismuthVanadate = new Material.Builder(24072, gregtechId("bismuth_vanadate"))
+                .dust()
+                .color(0xFFAF33)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Bismuth, 1, Vanadium, 1, Oxygen, 4)
+                .build();
+        //  24073 Bismuth Vanadate Solution
+        BismuthVanadateSolution = new Material.Builder(24073, gregtechId("bismuth_vanadate_solution"))
+                .fluid()
+                .color(0xFFAF33)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Bismuth, 1, Vanadium, 1, Hydrogen, 2, Oxygen, 5)
+                .build()
+                .setFormula("BiVO4(H2O)", true);
+        //  24074 Ammonium Vanadate
+        AmmoniumVanadate = new Material.Builder(24074, gregtechId("ammonium_vanadate"))
+                .dust()
+                .color(0xCC9933)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Nitrogen, 1, Hydrogen, 4, Vanadium, 1, Oxygen, 3)
+                .build();
+        //  24075 Vanadium Slag
+        VanadiumSlag = new Material.Builder(24075, gregtechId("vanadium_slag"))
+                .dust()
+                .color(0xCC9933)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Vanadium, 1, Oxygen, 1)
+                .build();
+        //  24076 Bismuth Nitrate Solution
+        BismuthNitrateSolution = new Material.Builder(24076, gregtechId("bismuth_nitrate_solution"))
+                .fluid()
+                .color(0x3ABF50)
+                .components(Bismuth, 1, Nitrogen, 3, Oxygen, 10, Hydrogen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Bi(NO3)3(H2O)");
+        //  24077 Sodium Vanadate
+        SodiumVanadate = new Material.Builder(24077, gregtechId("sodium_vanadate"))
+                .dust()
+                .color(0xCC9933)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Sodium, 3, Vanadium, 1, Oxygen, 4)
+                .build();
+        //  24078 Vanadium Waste Solution
+        VanadiumWasteSolution = new Material.Builder(24078, gregtechId("vanadium_waste_solution"))
+                .fluid()
+                .color(0xA28097)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("NaCl(Na2SO4)(SiO2)(Al(OH)3)");
+        //  24079 Sodium Bromide
+        SodiumBromide = new Material.Builder(24079, gregtechId("sodium_bromide"))
+                .dust()
+                .color(0x830B2B)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Sodium, 1, Bromine, 1)
+                .build();
+
     }
 }

@@ -43,5 +43,11 @@ public class EPUnknownCompositionMaterials {
                 .color(0x40B8FB)
                 .fluidTemp(8)
                 .build();
+        //  25207 Co/AC-AB Catalyst
+        CoACABCatalyst = new Material.Builder(25207, gregtechId("co_ac_ab_catalyst"))
+                .dust()
+                .color(0x6B4312)
+                .iconSet(MaterialIconSet.METALLIC)
+                .build();
     }
 }

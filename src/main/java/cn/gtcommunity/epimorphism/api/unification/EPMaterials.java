@@ -61,6 +61,32 @@ public EPMaterials() {}
     public static Material PotassiumManganate;
     public static Material TinChloride;
     public static Material SilverOxide;
+    public static Material SodiumFluoride;
+    public static Material ZnFeAlClCatalyst;
+    public static Material SodiumNitrite;
+    public static Material SodiumNitrate;
+    public static Material FluoroboricAcid;
+    public static Material BenzenediazoniumTetrafluoroborate;
+    public static Material GalliumTrichloride;
+    public static Material AluminiumTrichloride;
+    public static Material Trimethylgallium;
+    public static Material AluminiumHydroxide;
+    public static Material Alumina;
+    public static Material GalliumTrioxide;
+    public static Material GalliumNitride;
+    public static Material Fullerene;
+    public static Material GeodesicPolyarene;
+    public static Material TiAlCatalyst;
+    public static Material PotassiumCyanide;
+    public static Material PotassiumBromide;
+    public static Material BismuthVanadate;
+    public static Material BismuthVanadateSolution;
+    public static Material AmmoniumVanadate;
+    public static Material VanadiumSlag;
+    public static Material BismuthNitrateSolution;
+    public static Material SodiumVanadate;
+    public static Material VanadiumWasteSolution;
+    public static Material SodiumBromide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -99,6 +125,42 @@ public EPMaterials() {}
     public static Material Benzaldehyde;
     public static Material BenzoylChloride;
     public static Material ThionylChloride;
+    public static Material Polyetheretherketone;
+    public static Material Difluorobenzophenone;
+    public static Material Hydroquinone;
+    public static Material Resorcinol;
+    public static Material Fluorobenzene;
+    public static Material Fluorotoluene;
+    public static Material Kevlar;
+    public static Material ParaPhenylenediamine;
+    public static Material TerephthaloylChloride;
+    public static Material NMethylPyrrolidone;
+    public static Material Nitroaniline;
+    public static Material Durene;
+    public static Material PyromelliticDianhydride;
+    public static Material Aminophenol;
+    public static Material Aniline;
+    public static Material Oxydianiline;
+    public static Material Dimethylformamide;
+    public static Material PhthalicAnhydride;
+    public static Material BiphenylTetracarboxylicAcidDianhydride;
+    public static Material Bistrichloromethylbenzene;
+    public static Material Tetrabromoethane;
+    public static Material TerephthalicAcid;
+    public static Material GammaButyrolactone;
+    public static Material Methylamine;
+    public static Material Trimethylaluminium;
+    public static Material Benzophenanthrenylacetonitrile;
+    public static Material Methylbenzophenanthrene;
+    public static Material BromoSuccinimide;
+    public static Material Succinimide;
+    public static Material SuccinicAcid;
+    public static Material MaleicAnhydride;
+    public static Material Naphthaldehyde;
+    public static Material Butanol;
+    public static Material Bromobutane;
+    public static Material Cyanonaphthalene;
+    public static Material Triphenylphosphine;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -107,6 +169,7 @@ public EPMaterials() {}
     public static Material RichAmmoniaMixture;
     public static Material BlazingPyrotheum;
     public static Material GelidCryotheum;
+    public static Material CoACABCatalyst;
 
     //  Machine Casing Materials
     public static Material Inconel625;

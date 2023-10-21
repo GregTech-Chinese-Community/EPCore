@@ -13,13 +13,15 @@ import gregtech.common.items.MetaItems;
 import gregtech.common.metatileentities.MetaTileEntities;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
-import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingType.ISA_MILL_CASING;
+import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingType.*;
+import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.ELECTRIC_PUMP_LuV;
+import static gregtech.common.items.MetaItems.*;
+import static gregtech.common.metatileentities.MetaTileEntities.*;
 
 public class MachineComponents {
 
@@ -125,5 +127,43 @@ public class MachineComponents {
                 .duration(880)
                 .buildAndRegister();
 
+        //  Mill Ball Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, TungstenSteel)
+                .inputs(ITEM_IMPORT_BUS[EV].getStackForm())
+                .input(gear, Titanium, 4)
+                .input(COMPONENT_GRINDER_TUNGSTEN, 4)
+                .input(wireFine, Tungsten, 32)
+                .fluidInputs(BlueSteel.getFluid(1152))
+                .outputs(MULTIPART_BALL_HATCH.getStackForm())
+                .EUt(7680)
+                .duration(1600)
+                .buildAndRegister();
+
+        //  Catalyst Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Titanium)
+                .inputs(ITEM_IMPORT_BUS[HV].getStackForm())
+                .input(gear, StainlessSteel, 4)
+                .input(FLUID_CELL_LARGE_TITANIUM, 4)
+                .input(wireFine, Electrum, 32)
+                .fluidInputs(BlackSteel.getFluid(1152))
+                .outputs(MULTIPART_CATALYST_HATCH.getStackForm())
+                .EUt(VA[HV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Buffer Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, RhodiumPlatedPalladium)
+                .inputs(ITEM_IMPORT_BUS[IV].getStackForm())
+                .input(ELECTRIC_PUMP_IV, 4)
+                .input(SENSOR_IV, 4)
+                .input(wireFine, Naquadah, 32)
+                .fluidInputs(TitaniumTungstenCarbide.getFluid(1152))
+                .outputs(MULTIPART_BUFFER_HATCH.getStackForm())
+                .EUt(VA[IV])
+                .duration(1800)
+                .buildAndRegister();
     }
 }

@@ -6,6 +6,7 @@ import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.IngotProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 
+import static gregicality.multiblocks.api.unification.GCYMMaterials.MaragingSteel300;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.Stellite100;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -19,6 +20,7 @@ public class EPMaterialPropertyAddition {
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
         SodiumHydroxide.setProperty(PropertyKey.FLUID, new FluidProperty());
+        AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -26,7 +28,10 @@ public class EPMaterialPropertyAddition {
         //  Flags
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
         Nickel.addFlags(GENERATE_FOIL);
+        Tungsten.addFlags(GENERATE_FINE_WIRE);
+        RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);
         Stellite100.addFlags(GENERATE_DOUBLE_PLATE);
+        MaragingSteel300.addFlags(GENERATE_DOUBLE_PLATE);
     }
 }
