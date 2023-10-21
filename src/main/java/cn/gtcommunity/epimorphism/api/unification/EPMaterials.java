@@ -87,6 +87,15 @@ public EPMaterials() {}
     public static Material SodiumVanadate;
     public static Material VanadiumWasteSolution;
     public static Material SodiumBromide;
+    public static Material WhitePhosphorus;
+    public static Material RedPhosphorus;
+    public static Material VioletPhosphorus;
+    public static Material BlackPhosphorus;
+    public static Material BluePhosphorus;
+    public static Material Wollastonite;
+    public static Material Phosphorene;
+    public static Material PhosphorylChloride;
+    public static Material Phosphine;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -170,6 +179,7 @@ public EPMaterials() {}
     public static Material BlazingPyrotheum;
     public static Material GelidCryotheum;
     public static Material CoACABCatalyst;
+    public static Material PhosphoreneSolution;
 
     //  Machine Casing Materials
     public static Material Inconel625;

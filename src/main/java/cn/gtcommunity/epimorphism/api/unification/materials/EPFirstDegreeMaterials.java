@@ -595,6 +595,74 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Sodium, 1, Bromine, 1)
                 .build();
-
+        //  24080 White Phosphorus
+        WhitePhosphorus = new Material.Builder(24080, gregtechId("white_phosphorus"))
+                .gem()
+                .color(0xECEADD)
+                .iconSet(MaterialIconSet.FLINT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Phosphorus, 4)
+                .build();
+        //  24081 Red Phosphorus
+        RedPhosphorus = new Material.Builder(24081, gregtechId("red_phosphorus"))
+                .gem()
+                .color(0x77040E)
+                .iconSet(MaterialIconSet.FLINT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Phosphorus, 4)
+                .build();
+        //  24082 Violet Phosphorus
+        VioletPhosphorus = new Material.Builder(24082, gregtechId("violet_phosphorus"))
+                .gem()
+                .color(0x8000FF)
+                .iconSet(MaterialIconSet.FLINT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Phosphorus, 4)
+                .build();
+        //  24083 Black Phosphorus
+        BlackPhosphorus = new Material.Builder(24083, gregtechId("black_phosphorus"))
+                .gem()
+                .color(0x36454F)
+                .iconSet(MaterialIconSet.FLINT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Phosphorus, 4)
+                .build();
+        //  24084 Blue Phosphorus
+        BluePhosphorus = new Material.Builder(24084, gregtechId("blue_phosphorus"))
+                .gem()
+                .color(0x9BE3E4)
+                .iconSet(MaterialIconSet.FLINT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Phosphorus, 4)
+                .build();
+        //  24085 Wollastonite
+        Wollastonite = new Material.Builder(24085, gregtechId("wollastonite"))
+                .dust()
+                .color(0xF0F0F0)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(Quicklime, 2, SiliconDioxide, 3)
+                .build()
+                .setFormula("CaSiO3", true);
+        //  24086 Phosphorene
+        Phosphorene = new Material.Builder(24086, gregtechId("phosphorene"))
+                .ingot()
+                .color(0x273239)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FOIL)
+                .components(Phosphorus, 4)
+                .build();
+        //  24087 Phosphoryl Chloride
+        PhosphorylChloride = new Material.Builder(24087, gregtechId("phosphoryl_chloride"))
+                .fluid()
+                .color(0xE8BB5B)
+                .components(Phosphorus, 1, Oxygen, 1, Chlorine, 3)
+                .build();
+        //  24088 Phosphine
+        Phosphine = new Material.Builder(24088, gregtechId("phosphine"))
+                .fluid(FluidTypes.GAS)
+                .color(0xACB330)
+                .flags(DECOMPOSITION_BY_ELECTROLYZING, FLAMMABLE)
+                .components(Phosphorus, 1, Hydrogen, 3)
+                .build();
     }
 }
