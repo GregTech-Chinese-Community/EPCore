@@ -552,6 +552,8 @@ gregtech.material.butanol=丁醇
 gregtech.material.bromobutane=溴丁烷
 gregtech.material.cyanonaphthalene=氰萘
 gregtech.material.triphenylphosphine=三苯基膦
+gregtech.material.ethylanthraquinone=2-乙基蒽醌
+gregtech.material.ethylanthrahydroquinone=2-乙基蒽氢醌
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

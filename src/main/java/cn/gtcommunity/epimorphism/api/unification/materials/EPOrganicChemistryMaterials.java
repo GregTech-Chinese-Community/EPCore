@@ -548,5 +548,21 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
                 .build()
                 .setFormula("(C6H5)3P", true);
+        //  25073 Ethylanthraquinone
+        Ethylanthraquinone = new Material.Builder(25073, gregtechId("ethylanthraquinone"))
+                .fluid()
+                .color(0xCC865A)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 16, Hydrogen, 12, Oxygen, 2)
+                .build()
+                .setFormula("C6H4(CO)2C6H3Et", true);
+        //  25074 Ethylanthrahydroquinone
+        Ethylanthrahydroquinone = new Material.Builder(25074, gregtechId("ethylanthrahydroquinone"))
+                .fluid()
+                .color(0xAD531A)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 16, Hydrogen, 18, Oxygen, 2)
+                .build()
+                .setFormula("C6H4(CH2OH)2C6H3Et", true);
     }
 }
