@@ -49,5 +49,10 @@ public class EPUnknownCompositionMaterials {
                 .color(0x6B4312)
                 .iconSet(MaterialIconSet.METALLIC)
                 .build();
+        //  25208 PhosphoreneSolution
+        PhosphoreneSolution = new Material.Builder(25208, gregtechId("phosphorene_solution"))
+                .fluid()
+                .color(0x465966)
+                .build();
     }
 }
