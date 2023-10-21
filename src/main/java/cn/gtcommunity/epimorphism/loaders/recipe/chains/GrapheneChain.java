@@ -57,7 +57,7 @@ public class GrapheneChain {
                 .EUt(VA[HV])
                 .buildAndRegister();
 
-        //  Ammonia + HydrogenPeroxide -> Hydrazine
+        //  Ammonia + Hydrogen Peroxide -> Hydrazine
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Ammonia.getFluid(2000))
                 .fluidInputs(HydrogenPeroxide.getFluid(1000))
@@ -74,6 +74,7 @@ public class GrapheneChain {
                 .duration(60)
                 .EUt(VA[LV])
                 .buildAndRegister();
+
         //  Magnetron
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(ring, BerylliumOxide, 64)

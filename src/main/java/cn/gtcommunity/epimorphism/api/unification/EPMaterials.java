@@ -170,6 +170,8 @@ public EPMaterials() {}
     public static Material Bromobutane;
     public static Material Cyanonaphthalene;
     public static Material Triphenylphosphine;
+    public static Material Ethylanthraquinone;
+    public static Material Ethylanthrahydroquinone;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
