@@ -2,7 +2,6 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
@@ -144,8 +143,8 @@ public class MetaTileEntityRecipes {
                 .input(plateDouble, Osmiridium, 8)
                 .input(plateDouble, MaragingSteel300, 8)
                 .input(screw, Trinium, 32)
-                .input(wireFine, Naquadah, 64)
-                .input(wireFine, Naquadah, 64)
+                .input(wireFine, YttriumBariumCuprate, 64)
+                .input(wireFine, YttriumBariumCuprate, 64)
                 .input(foil, NiobiumNitride, 32)
                 .fluidInputs(WatertightSteel.getFluid(2304))
                 .fluidInputs(NaquadahEnriched.getFluid(4608))
@@ -154,9 +153,21 @@ public class MetaTileEntityRecipes {
                 .EUt(30720)
                 .duration(12000)
                 .research(b -> b
-                        .researchStack(LARGE_SIFTER.getStackForm())
+                        .researchStack(LARGE_DISTILLERY.getStackForm())
                         .CWUt(30)
                         .EUt(VA[LuV]))
+                .buildAndRegister();
+
+        //  Chemical Plant
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, StainlessSteel)
+                .input(gear, Aluminium, 8)
+                .input(plate, AnnealedCopper, 16)
+                .input(cableGtQuadruple, Electrum, 4)
+                .fluidInputs(BlackSteel.getFluid(1152))
+                .output(CHEMICAL_PLANT)
+                .EUt(VA[MV])
+                .duration(2400)
                 .buildAndRegister();
     }
 }
