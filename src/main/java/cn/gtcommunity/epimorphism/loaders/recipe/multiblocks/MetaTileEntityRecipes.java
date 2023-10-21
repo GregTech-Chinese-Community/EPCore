@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
@@ -128,8 +129,34 @@ public class MetaTileEntityRecipes {
                 .research(b -> b
                         .researchStack(LARGE_MACERATOR.getStackForm())
                         .CWUt(30)
-                        .EUt(VA[IV]))
+                        .EUt(VA[LuV]))
                 .buildAndRegister();
 
+        //  Flotation Factory
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HastelloyX)
+                .inputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_GEARBOX, 4))
+                .input(CONVEYOR_MODULE_LuV, 8)
+                .input(ELECTRIC_PUMP_LuV, 8)
+                .input(OrePrefix.circuit, MarkerMaterials.Tier.LuV, 8)
+                .input(gear, HastelloyN, 8 )
+                .input(plate, HastelloyN, 32)
+                .input(plateDouble, Osmiridium, 8)
+                .input(plateDouble, MaragingSteel300, 8)
+                .input(screw, Trinium, 32)
+                .input(wireFine, Naquadah, 64)
+                .input(wireFine, Naquadah, 64)
+                .input(foil, NiobiumNitride, 32)
+                .fluidInputs(WatertightSteel.getFluid(2304))
+                .fluidInputs(NaquadahEnriched.getFluid(4608))
+                .fluidInputs(TitaniumTungstenCarbide.getFluid(4608))
+                .output(FLOTATION_FACTORY)
+                .EUt(30720)
+                .duration(12000)
+                .research(b -> b
+                        .researchStack(LARGE_SIFTER.getStackForm())
+                        .CWUt(30)
+                        .EUt(VA[LuV]))
+                .buildAndRegister();
     }
 }
