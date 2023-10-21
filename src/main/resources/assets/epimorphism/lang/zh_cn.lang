@@ -443,6 +443,12 @@ gregtech.material.potassium_permanganate=高锰酸钾
 gregtech.material.potassium_manganate=锰酸钾
 gregtech.material.tin_chloride=氯化锡
 gregtech.material.silver_oxide=氧化银
+gregtech.material.sodium_fluoride=氟化钠
+gregtech.material.zn_fe_al_cl_catalyst=锌-铁-铝-氯联合催化剂
+gregtech.material.sodium_nitrite=亚硝酸钠
+gregtech.material.sodium_nitrate=硝酸钠
+gregtech.material.fluoroboric_acid=氟硼酸
+gregtech.material.benzenediazonium_tetrafluoroborate=四氟硼酸重氮苯
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -481,6 +487,12 @@ gregtech.material.dibenzylideneacetone=二苄基丙酮
 gregtech.material.benzaldehyde=苯甲醛
 gregtech.material.benzoyl_chloride=苯甲酰氯
 gregtech.material.thionyl_chloride=氯化亚砜
+gregtech.material.polyetheretherketone=聚醚醚酮
+gregtech.material.difluorobenzophenone=二氟二苯甲酮
+gregtech.material.hydroquinone=对苯二酚
+gregtech.material.resorcinol=间苯二酚
+gregtech.material.fluorobenzene=氟苯
+gregtech.material.fluorotoluene=氟甲苯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -489,6 +501,7 @@ gregtech.material.rich_nitrogen_mixture=富氮混合物
 gregtech.material.rich_ammonia_mixture=富氨混合物
 gregtech.material.blazing_pyrotheum=烈焰之炽焱
 gregtech.material.gelid_cryotheum=极寒之凛冰
+gregtech.material.co_ac_ab_catalyst=钴/乙炔-聚苯并咪唑混合催化剂
 
 ##  Machine Casing Materials
 gregtech.material.inconel_625=镍基合金-625

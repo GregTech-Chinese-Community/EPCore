@@ -280,5 +280,45 @@ public class EPOrganicChemistryMaterials {
                 .components(Sulfur, 1, Oxygen, 1, Chlorine, 2)
                 .build()
                 .setFormula("SOCl2", true);
+        //  25036 Polyetheretherketone (PEEK)
+        Polyetheretherketone = new Material.Builder(25036, gregtechId("polyetheretherketone"))
+                .polymer()
+                .color(0x45433D)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .components(Carbon, 20, Hydrogen, 12, Oxygen, 3)
+                .build();
+        //  25037 Difluorobenzophenone
+        Difluorobenzophenone = new Material.Builder(25037, gregtechId("difluorobenzophenone"))
+                .dust()
+                .color(0xC44DA5)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Carbon, 13, Hydrogen, 8, Oxygen, 1, Fluorine, 2)
+                .build()
+                .setFormula("(FC6H4)2CO", true);
+        //  25038 Hydroquinone
+        Hydroquinone = new Material.Builder(25038, gregtechId("hydroquinone"))
+                .fluid()
+                .color(0x83251A)
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
+                .build()
+                .setFormula("C6H4(OH)2", true);
+        //  25039 Resorcinol
+        Resorcinol = new Material.Builder(25039, gregtechId("resorcinol"))
+                .fluid()
+                .color(0x9DA38D)
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
+                .build();
+        //  25040 Fluorobenzene
+        Fluorobenzene = new Material.Builder(25040, gregtechId("fluorobenzene"))
+                .fluid()
+                .color(0x7CCA88)
+                .components(Carbon, 6, Hydrogen, 5, Fluorine, 1)
+                .build();
+        //  25041 Fluorotoluene
+        Fluorotoluene = new Material.Builder(25041, gregtechId("fluorotoluene"))
+                .fluid()
+                .color(0x6EC5B8)
+                .components(Carbon, 7, Hydrogen, 7, Fluorine, 1)
+                .build();
     }
 }

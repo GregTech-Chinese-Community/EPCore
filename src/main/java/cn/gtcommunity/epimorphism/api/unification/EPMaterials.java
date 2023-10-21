@@ -61,6 +61,12 @@ public EPMaterials() {}
     public static Material PotassiumManganate;
     public static Material TinChloride;
     public static Material SilverOxide;
+    public static Material SodiumFluoride;
+    public static Material ZnFeAlClCatalyst;
+    public static Material SodiumNitrite;
+    public static Material SodiumNitrate;
+    public static Material FluoroboricAcid;
+    public static Material BenzenediazoniumTetrafluoroborate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -99,6 +105,12 @@ public EPMaterials() {}
     public static Material Benzaldehyde;
     public static Material BenzoylChloride;
     public static Material ThionylChloride;
+    public static Material Polyetheretherketone;
+    public static Material Difluorobenzophenone;
+    public static Material Hydroquinone;
+    public static Material Resorcinol;
+    public static Material Fluorobenzene;
+    public static Material Fluorotoluene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -107,6 +119,7 @@ public EPMaterials() {}
     public static Material RichAmmoniaMixture;
     public static Material BlazingPyrotheum;
     public static Material GelidCryotheum;
+    public static Material CoACABCatalyst;
 
     //  Machine Casing Materials
     public static Material Inconel625;

@@ -78,6 +78,7 @@ public class EPFirstDegreeMaterials {
         //  24008 Boric Acid
         BoricAcid = new Material.Builder(24008, gregtechId("boric_acid"))
                 .dust()
+                .fluid()
                 .color(0xFAFAFA)
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(DISABLE_DECOMPOSITION)
@@ -407,6 +408,47 @@ public class EPFirstDegreeMaterials {
                 .dust()
                 .color(0xA4A4A4)
                 .components(Silver, 2, Oxygen, 1)
+                .build();
+        //  24055 Sodium Fluoride
+        SodiumFluoride = new Material.Builder(24055, gregtechId("sodium_fluoride"))
+                .dust()
+                .color(0x460012)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Sodium, 1, Fluorine, 1)
+                .build();
+        //  24056 Zn-Fe-Al-Cl Catalyst
+        ZnFeAlClCatalyst = new Material.Builder(24056, gregtechId("zn_fe_al_cl_catalyst"))
+                .dust()
+                .color(0xC522A9)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Zinc, 1, Iron, 1, Aluminium, 1, Chlorine, 1)
+                .build();
+        //  24057 Sodium Nitrite
+        SodiumNitrite = new Material.Builder(24057, gregtechId("sodium_nitrite"))
+                .dust()
+                .color(0x205CA4)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  24058 Sodium Nitrate
+        SodiumNitrate = new Material.Builder(24058, gregtechId("sodium_nitrate"))
+                .dust()
+                .fluid()
+                .color(0xEB9E3F)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Sodium, 1, Nitrogen, 1, Oxygen, 3)
+                .build();
+        //  24059 Fluoroboric Acid
+        FluoroboricAcid = new Material.Builder(24059, gregtechId("fluoroboric_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(0xD5811B)
+                .components(Hydrogen, 1, Boron, 1, Fluorine, 4)
+                .build();
+        //  24060 Benzenediazonium Tetrafluoroborate
+        BenzenediazoniumTetrafluoroborate = new Material.Builder(24060, gregtechId("benzenediazonium_tetrafluoroborate"))
+                .fluid()
+                .color(0xD5C5B2)
+                .components(Carbon, 6, Hydrogen, 5, Boron, 1, Fluorine, 4, Nitrogen, 2)
                 .build();
     }
 }

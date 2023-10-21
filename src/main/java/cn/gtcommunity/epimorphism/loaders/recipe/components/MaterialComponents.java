@@ -60,7 +60,12 @@ public class MaterialComponents {
 
         COIL_HEATING_DOUBLE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
-                {11, new UnificationEntry(OrePrefix.wireGtQuadruple, Tritanium)},
+                {10, new UnificationEntry(OrePrefix.wireGtQuadruple, Tritanium)},
+        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
+
+        HULL_PLATE.appendIngredients(Stream.of(new Object[][]{
+                {9, new UnificationEntry(OrePrefix.plate, Polyetheretherketone)},
+                {10, new UnificationEntry(OrePrefix.plate, Polyetheretherketone)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         STICK_DISTILLATION.appendIngredients(Stream.of(new Object[][]{
