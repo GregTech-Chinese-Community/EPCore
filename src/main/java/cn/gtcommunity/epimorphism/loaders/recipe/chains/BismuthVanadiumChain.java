@@ -76,6 +76,13 @@ public class BismuthVanadiumChain {
                 .duration(120)
                 .buildAndRegister();
 
-        //  TODO Vanadium Waste Solution Cycle
+        //  Vanadium Waste Solution Cycle
+        DRYER_RECIPES.recipeBuilder()
+                .fluidInputs(VanadiumWasteSolution.getFluid(4000))
+                .chancedOutput(dust, SiliconDioxide, 3, 5000, 1200)
+                .chancedOutput(dust, AluminiumHydroxide, 7, 5000, 1200)
+                .EUt(VA[MV])
+                .duration(300)
+                .buildAndRegister();
     }
 }

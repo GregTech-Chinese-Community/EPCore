@@ -564,5 +564,54 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 16, Hydrogen, 18, Oxygen, 2)
                 .build()
                 .setFormula("C6H4(CH2OH)2C6H3Et", true);
+        //  25075 Ethylenediamine
+        Ethylenediamine = new Material.Builder(25075, gregtechId("ethylenediamine"))
+                .fluid()
+                .color(0xD00ED0)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 2, Hydrogen, 8, Nitrogen, 2)
+                .build()
+                .setFormula("C2H4(NH2)2", true);
+        //  25076 Tetrasodium EDTA
+        TetrasodiumEDTA = new Material.Builder(25076, gregtechId("tetrasodium_edta"))
+                .dust()
+                .color(0x8890E0)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 12, Nitrogen, 2, Oxygen, 8, Sodium, 4)
+                .build();
+        //  25077 EthylenediaminetetraaceticAcid
+        EthylenediaminetetraaceticAcid = new Material.Builder(25077, gregtechId("ethylenediaminetetraacetic_acid"))
+                .dust()
+                .fluid()
+                .color(0x87E6D9)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 16, Nitrogen, 2, Oxygen, 8)
+                .build();
+        //  25078 Tetramethylammonium Chloride
+        TetramethylammoniumChloride = new Material.Builder(25078, gregtechId("tetramethylammonium_chloride"))
+                .dust()
+                .color(0x27FF81)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Carbon, 4, Hydrogen, 12, Nitrogen, 1, Chlorine, 1)
+                .build()
+                .setFormula("N(CH3)4Cl", true);
+        //  25079 Trimethylamine
+        Trimethylamine = new Material.Builder(25079, gregtechId("trimethylamine"))
+                .fluid(FluidTypes.GAS)
+                .color(0xBB7700)
+                .components(Carbon, 3, Hydrogen, 9, Nitrogen, 1)
+                .build()
+                .setFormula("(CH3)3N", true);
+        //  25080 Pyrocatechol
+        Pyrocatechol = new Material.Builder(25080, gregtechId("pyrocatechol"))
+                .dust()
+                .color(0x784421)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
+                .build();
     }
 }

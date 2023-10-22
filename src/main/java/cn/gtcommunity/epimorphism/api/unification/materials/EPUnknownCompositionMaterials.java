@@ -54,5 +54,10 @@ public class EPUnknownCompositionMaterials {
                 .fluid()
                 .color(0x465966)
                 .build();
+        //  25209 Methylamine Mixture
+        MethylamineMixture = new Material.Builder(25209, gregtechId("methylamine_mixture"))
+                .fluid()
+                .color(0xAA4400)
+                .build();
     }
 }

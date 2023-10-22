@@ -477,6 +477,9 @@ gregtech.material.wollastonite=硅灰石
 gregtech.material.phosphorene=磷烯
 gregtech.material.phosphoryl_chloride=磷酰氯
 gregtech.material.phosphine=磷化氢
+gregtech.material.copper_chloride=氯化铜
+gregtech.material.lithium_hydroxide=氢氧化锂
+gregtech.material.lithium_amalgam=锂汞齐
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -554,6 +557,12 @@ gregtech.material.cyanonaphthalene=氰萘
 gregtech.material.triphenylphosphine=三苯基膦
 gregtech.material.ethylanthraquinone=2-乙基蒽醌
 gregtech.material.ethylanthrahydroquinone=2-乙基蒽氢醌
+gregtech.material.ethylenediamine=乙二胺
+gregtech.material.tetrasodium_edta=乙二胺四乙酸四钠
+gregtech.material.ethylenediaminetetraacetic_acid=乙二胺四乙酸（EDTA）
+gregtech.material.tetramethylammonium_chloride=四甲基氯化铵
+gregtech.material.trimethylamine=三甲胺
+gregtech.material.pyrocatechol=邻苯二酚
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -564,6 +573,7 @@ gregtech.material.blazing_pyrotheum=烈焰之炽焱
 gregtech.material.gelid_cryotheum=极寒之凛冰
 gregtech.material.co_ac_ab_catalyst=钴/乙炔-聚苯并咪唑混合催化剂
 gregtech.material.phosphorene_solution=磷烯剥离溶液
+gregtech.material.methylamine_mixture=甲基胺混合物
 
 ##  Machine Casing Materials
 gregtech.material.inconel_625=镍基合金-625

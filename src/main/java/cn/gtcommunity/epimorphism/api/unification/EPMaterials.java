@@ -96,6 +96,9 @@ public EPMaterials() {}
     public static Material Phosphorene;
     public static Material PhosphorylChloride;
     public static Material Phosphine;
+    public static Material CopperChloride;
+    public static Material LithiumHydroxide;
+    public static Material LithiumAmalgam;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -172,6 +175,12 @@ public EPMaterials() {}
     public static Material Triphenylphosphine;
     public static Material Ethylanthraquinone;
     public static Material Ethylanthrahydroquinone;
+    public static Material Ethylenediamine;
+    public static Material TetrasodiumEDTA;
+    public static Material EthylenediaminetetraaceticAcid;
+    public static Material TetramethylammoniumChloride;
+    public static Material Trimethylamine;
+    public static Material Pyrocatechol;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -182,6 +191,7 @@ public EPMaterials() {}
     public static Material GelidCryotheum;
     public static Material CoACABCatalyst;
     public static Material PhosphoreneSolution;
+    public static Material MethylamineMixture;
 
     //  Machine Casing Materials
     public static Material Inconel625;

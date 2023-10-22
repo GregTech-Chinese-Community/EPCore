@@ -38,6 +38,9 @@ public class EPRecipeManager {
         BromineChain.init();
         BZMediumChain.init();
         CarbonNanotubeChain.init();
+        CyanogenChain.init();
+        EDTAChain.init();
+        EtchingMaterialsChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
         GrapheneChain.init();
@@ -45,6 +48,7 @@ public class EPRecipeManager {
         IodineChain.init();
         KaptonChain.init();
         KevlarChain.init();
+        LithiumChain.init();
         PEDOTChain.init();
         PEEKChain.init();
         PhosphorusChain.init();

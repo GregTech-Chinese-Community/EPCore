@@ -664,5 +664,27 @@ public class EPFirstDegreeMaterials {
                 .flags(DECOMPOSITION_BY_ELECTROLYZING, FLAMMABLE)
                 .components(Phosphorus, 1, Hydrogen, 3)
                 .build();
+        //  24089 Copper Chloride
+        CopperChloride = new Material.Builder(24089, gregtechId("copper_chloride"))
+                .dust()
+                .color(0x3FB3B8)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Copper, 1, Chlorine, 2)
+                .build();
+        //  24090 Lithium Hydroxide
+        LithiumHydroxide = new Material.Builder(24090, gregtechId("lithium_hydroxide"))
+                .dust()
+                .color(0xDECAFA)
+                .iconSet(MaterialIconSet.FINE)
+                .components(Lithium, 1, Oxygen, 1, Hydrogen, 1)
+                .build();
+
+        //  24091 Lithiuim Amalgam
+        LithiumAmalgam = new Material.Builder(24091, gregtechId("lithium_amalgam"))
+                .fluid()
+                .color(0xAEA7D4).iconSet(MaterialIconSet.FINE)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Mercury, 1, Lithium, 1)
+                .build();
     }
 }
