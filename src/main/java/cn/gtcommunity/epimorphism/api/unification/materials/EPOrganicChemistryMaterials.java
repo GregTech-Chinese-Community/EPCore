@@ -589,5 +589,29 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 16, Nitrogen, 2, Oxygen, 8)
                 .build();
+        //  25078 Tetramethylammonium Chloride
+        TetramethylammoniumChloride = new Material.Builder(25078, gregtechId("tetramethylammonium_chloride"))
+                .dust()
+                .color(0x27FF81)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Carbon, 4, Hydrogen, 12, Nitrogen, 1, Chlorine, 1)
+                .build()
+                .setFormula("N(CH3)4Cl", true);
+        //  25079 Trimethylamine
+        Trimethylamine = new Material.Builder(25079, gregtechId("trimethylamine"))
+                .fluid(FluidTypes.GAS)
+                .color(0xBB7700)
+                .components(Carbon, 3, Hydrogen, 9, Nitrogen, 1)
+                .build()
+                .setFormula("(CH3)3N", true);
+        //  25080 Pyrocatechol
+        Pyrocatechol = new Material.Builder(25080, gregtechId("pyrocatechol"))
+                .dust()
+                .color(0x784421)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
+                .build();
     }
 }

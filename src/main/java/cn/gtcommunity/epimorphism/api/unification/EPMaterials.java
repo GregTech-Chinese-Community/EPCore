@@ -178,6 +178,9 @@ public EPMaterials() {}
     public static Material Ethylenediamine;
     public static Material TetrasodiumEDTA;
     public static Material EthylenediaminetetraaceticAcid;
+    public static Material TetramethylammoniumChloride;
+    public static Material Trimethylamine;
+    public static Material Pyrocatechol;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -188,6 +191,7 @@ public EPMaterials() {}
     public static Material GelidCryotheum;
     public static Material CoACABCatalyst;
     public static Material PhosphoreneSolution;
+    public static Material MethylamineMixture;
 
     //  Machine Casing Materials
     public static Material Inconel625;

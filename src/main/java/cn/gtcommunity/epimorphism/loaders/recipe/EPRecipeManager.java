@@ -40,6 +40,7 @@ public class EPRecipeManager {
         CarbonNanotubeChain.init();
         CyanogenChain.init();
         EDTAChain.init();
+        EtchingMaterialsChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
         GrapheneChain.init();
