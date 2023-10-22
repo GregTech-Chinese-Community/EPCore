@@ -664,5 +664,12 @@ public class EPFirstDegreeMaterials {
                 .flags(DECOMPOSITION_BY_ELECTROLYZING, FLAMMABLE)
                 .components(Phosphorus, 1, Hydrogen, 3)
                 .build();
+        //  24089 Copper Chloride
+        CopperChloride = new Material.Builder(24089, gregtechId("copper_chloride"))
+                .dust()
+                .color(0x3FB3B8)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Copper, 1, Chlorine, 2)
+                .build();
     }
 }

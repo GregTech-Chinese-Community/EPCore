@@ -39,6 +39,7 @@ public class EPRecipeManager {
         BZMediumChain.init();
         CarbonNanotubeChain.init();
         CyanogenChain.init();
+        EDTAChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
         GrapheneChain.init();

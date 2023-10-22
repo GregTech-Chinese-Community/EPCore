@@ -477,6 +477,7 @@ gregtech.material.wollastonite=硅灰石
 gregtech.material.phosphorene=磷烯
 gregtech.material.phosphoryl_chloride=磷酰氯
 gregtech.material.phosphine=磷化氢
+gregtech.material.copper_chloride=氯化铜
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -554,6 +555,9 @@ gregtech.material.cyanonaphthalene=氰萘
 gregtech.material.triphenylphosphine=三苯基膦
 gregtech.material.ethylanthraquinone=2-乙基蒽醌
 gregtech.material.ethylanthrahydroquinone=2-乙基蒽氢醌
+gregtech.material.ethylenediamine=乙二胺
+gregtech.material.tetrasodium_edta=乙二胺四乙酸四钠
+gregtech.material.ethylenediaminetetraacetic_acid=乙二胺四乙酸（EDTA）
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

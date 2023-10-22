@@ -96,6 +96,7 @@ public EPMaterials() {}
     public static Material Phosphorene;
     public static Material PhosphorylChloride;
     public static Material Phosphine;
+    public static Material CopperChloride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -172,6 +173,9 @@ public EPMaterials() {}
     public static Material Triphenylphosphine;
     public static Material Ethylanthraquinone;
     public static Material Ethylanthrahydroquinone;
+    public static Material Ethylenediamine;
+    public static Material TetrasodiumEDTA;
+    public static Material EthylenediaminetetraaceticAcid;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
