@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.circuits;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import net.minecraftforge.fluids.FluidStack;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
@@ -12,7 +13,7 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 public class SpintronicCircuits {
     public static void init() {
         //  Spintronic Board
-        /*CVD_RECIPES.recipeBuilder()
+        CVD_RECIPES.recipeBuilder()
                 .input(plate, CarbonNanotube)
                 .input(foil, Phosphorene, 4)
                 .output(SPINTRONIC_BOARD)
@@ -21,7 +22,7 @@ public class SpintronicCircuits {
                 .temperature(3580)
                 .glassTier(9)
                 .cleanroom(CleanroomType.CLEANROOM)
-                .buildAndRegister();*/
+                .buildAndRegister();
 
         //  Spintronic Circuit Board
         for (FluidStack stack : new FluidStack[]{TetramethylammoniumHydroxide.getFluid(4000), EDP.getFluid(1000)}) {

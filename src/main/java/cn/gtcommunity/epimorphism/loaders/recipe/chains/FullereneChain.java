@@ -128,17 +128,6 @@ public class FullereneChain {
                 .duration(200)
                 .buildAndRegister();
 
-        //  Potassium Hydroxide + Hydrogen Cyanide -> Potassium Cyanide + Water
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(PotassiumHydroxide.getFluid(1000))
-                .fluidInputs(HydrogenCyanide.getFluid(1000))
-                .circuitMeta(0)
-                .output(dust, PotassiumCyanide, 3)
-                .fluidOutputs(Water.getFluid(1000))
-                .EUt(1920)
-                .duration(200)
-                .buildAndRegister();
-
         //  Methylbenzophenanthrene + Bromo Succinimide + Potassium Cyanide -> Benzophenanthrenylacetonitrile + Potassium Bromide + Succinimide
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Methylbenzophenanthrene, 33)
