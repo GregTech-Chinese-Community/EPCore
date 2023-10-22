@@ -97,6 +97,8 @@ public EPMaterials() {}
     public static Material PhosphorylChloride;
     public static Material Phosphine;
     public static Material CopperChloride;
+    public static Material LithiumHydroxide;
+    public static Material LithiumAmalgam;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

@@ -478,6 +478,8 @@ gregtech.material.phosphorene=磷烯
 gregtech.material.phosphoryl_chloride=磷酰氯
 gregtech.material.phosphine=磷化氢
 gregtech.material.copper_chloride=氯化铜
+gregtech.material.lithium_hydroxide=氢氧化锂
+gregtech.material.lithium_amalgam=锂汞齐
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

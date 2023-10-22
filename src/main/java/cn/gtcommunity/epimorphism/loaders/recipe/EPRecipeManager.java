@@ -47,6 +47,7 @@ public class EPRecipeManager {
         IodineChain.init();
         KaptonChain.init();
         KevlarChain.init();
+        LithiumChain.init();
         PEDOTChain.init();
         PEEKChain.init();
         PhosphorusChain.init();

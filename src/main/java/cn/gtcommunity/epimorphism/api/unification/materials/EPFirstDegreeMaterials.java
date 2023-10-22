@@ -671,5 +671,20 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Copper, 1, Chlorine, 2)
                 .build();
+        //  24090 Lithium Hydroxide
+        LithiumHydroxide = new Material.Builder(24090, gregtechId("lithium_hydroxide"))
+                .dust()
+                .color(0xDECAFA)
+                .iconSet(MaterialIconSet.FINE)
+                .components(Lithium, 1, Oxygen, 1, Hydrogen, 1)
+                .build();
+
+        //  24091 Lithiuim Amalgam
+        LithiumAmalgam = new Material.Builder(24091, gregtechId("lithium_amalgam"))
+                .fluid()
+                .color(0xAEA7D4).iconSet(MaterialIconSet.FINE)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Mercury, 1, Lithium, 1)
+                .build();
     }
 }
