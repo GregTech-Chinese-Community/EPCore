@@ -35,6 +35,8 @@ public class EPMaterialPropertyAddition {
         Stellite100.addFlags(GENERATE_DOUBLE_PLATE);
         MaragingSteel300.addFlags(GENERATE_DOUBLE_PLATE);
 
+        Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
+        Tantalite.addFlags(DISABLE_DECOMPOSITION);
         Molybdenite.addFlags(DISABLE_DECOMPOSITION);
         OreProperty oreProp = Molybdenite.getProperty(PropertyKey.ORE);
         oreProp.setDirectSmeltResult(null);

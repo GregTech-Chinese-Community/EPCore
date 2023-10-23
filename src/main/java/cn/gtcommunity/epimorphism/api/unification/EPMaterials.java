@@ -134,6 +134,10 @@ public EPMaterials() {}
     public static Material LeadChloride;
     public static Material PerrhenicAcid;
     public static Material AmmoniumPerrhenate;
+    public static Material NiobiumPentoxide;
+    public static Material TantalumPentoxide;
+    public static Material CalciumDifluoride;
+    public static Material ManganeseDifluoride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

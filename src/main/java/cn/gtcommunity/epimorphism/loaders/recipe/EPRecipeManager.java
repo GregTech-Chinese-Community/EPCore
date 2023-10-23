@@ -53,6 +53,7 @@ public class EPRecipeManager {
         LithiumChain.init();
         MolybdenumRheniumChain.init();
         NaquadahChain.init();
+        NiobiumTantalumChain.init();
         PEDOTChain.init();
         PEEKChain.init();
         PhosphorusChain.init();
