@@ -130,6 +130,10 @@ public EPMaterials() {}
     public static Material WaelzSlag;
     public static Material ImpureGermaniumDioxide;
     public static Material GermaniumTetrachloride;
+    public static Material MolybdenumTrioxide;
+    public static Material LeadChloride;
+    public static Material PerrhenicAcid;
+    public static Material AmmoniumPerrhenate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -224,6 +228,8 @@ public EPMaterials() {}
     public static Material CoACABCatalyst;
     public static Material PhosphoreneSolution;
     public static Material MethylamineMixture;
+    public static Material MolybdenumFlue;
+    public static Material TraceRheniumFlue;
 
     //  Machine Casing Materials
     public static Material Inconel625;
