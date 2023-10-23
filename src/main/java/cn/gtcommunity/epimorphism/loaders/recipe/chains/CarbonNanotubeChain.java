@@ -425,8 +425,8 @@ public class CarbonNanotubeChain {
                 .fluidInputs(Chlorine.getFluid(2000))
                 .circuitMeta(2)
                 .output(dust, TinChloride, 3)
-                .EUt(30)
-                .duration(65)
+                .EUt(VA[LV])
+                .duration(60)
                 .buildAndRegister();
     }
 }

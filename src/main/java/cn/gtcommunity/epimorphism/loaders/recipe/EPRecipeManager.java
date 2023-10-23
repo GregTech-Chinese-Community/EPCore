@@ -37,6 +37,7 @@ public class EPRecipeManager {
         BoronNitrideChain.init();
         BromineChain.init();
         BZMediumChain.init();
+        CaesiumRubidiumChain.init();
         CarbonNanotubeChain.init();
         CyanogenChain.init();
         EDTAChain.init();

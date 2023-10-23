@@ -118,6 +118,10 @@ public EPMaterials() {}
     public static Material HexafluorideNaquadriaSolution;
     public static Material NaquadriaResidueSolution;
     public static Material RadonDifluoride;
+    public static Material HeavyAlkaliChlorideSolution;
+    public static Material StannicChloride;
+    public static Material RubidiumChlorostannate;
+    public static Material CaesiumChlorostannate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

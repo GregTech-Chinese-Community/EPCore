@@ -399,6 +399,7 @@ public class EPFirstDegreeMaterials {
         //  24053 Tin Chloride
         TinChloride = new Material.Builder(24053, gregtechId("tin_chloride"))
                 .dust()
+                .fluid()
                 .color(0xDBDBDB)
                 .iconSet(MaterialIconSet.METALLIC)
                 .components(Tin, 1, Chlorine, 2)
@@ -818,6 +819,34 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(0x8B7EFF)
                 .components(Radon, 1, Fluorine, 2)
+                .build();
+        //  24111 Heavy Alkali Chloride Solution
+        HeavyAlkaliChlorideSolution = new Material.Builder(24111, gregtechId("heavy_alkali_chloride_solution"))
+                .fluid()
+                .color(0x8F5353)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
+                .build()
+                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+        //  24112 Stannic Chloride
+        StannicChloride = new Material.Builder(24112, gregtechId("stannic_chloride"))
+                .fluid()
+                .color(0x33BBF5)
+                .components(Tin, 1, Chlorine, 4)
+                .build();
+        //  24113 Rubidium Chlorostannate
+        RubidiumChlorostannate = new Material.Builder(24113, gregtechId("rubidium_chlorostannate"))
+                .dust()
+                .color(0xBD888A)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Rubidium, 2, Tin, 1, Chlorine, 6)
+                .build();
+        //  24114 Caesium Chlorostannate
+        CaesiumChlorostannate = new Material.Builder(24114, gregtechId("caesium_chlorostannate"))
+                .dust()
+                .color(0xBDAD88)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Caesium, 2, Tin, 1, Chlorine, 6)
                 .build();
     }
 }

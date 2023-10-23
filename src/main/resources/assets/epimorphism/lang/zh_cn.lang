@@ -441,7 +441,7 @@ gregtech.material.palladium_chloride=氯化钯
 gregtech.material.palladium_on_carbon=钯碳催化剂
 gregtech.material.potassium_permanganate=高锰酸钾
 gregtech.material.potassium_manganate=锰酸钾
-gregtech.material.tin_chloride=氯化锡
+gregtech.material.tin_chloride=二氯化锡
 gregtech.material.silver_oxide=氧化银
 gregtech.material.sodium_fluoride=氟化钠
 gregtech.material.zn_fe_al_cl_catalyst=锌-铁-铝-氯联合催化剂
@@ -499,6 +499,10 @@ gregtech.material.xenon_trioxide=三氧化氙
 gregtech.material.hexafluoride_naquadria_solution=六氟化超能硅岩溶液
 gregtech.material.naquadria_residue_solution=超能硅岩残余物溶液
 gregtech.material.radon_difluoride=二氟化氡
+gregtech.material.heavy_alkali_chloride_solution=重碱氯化物溶液
+gregtech.material.stannic_chloride=四氯化锡
+gregtech.material.rubidium_chlorostannate=六氯锡酸铷
+gregtech.material.caesium_chlorostannate=六氯锡酸铯
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
