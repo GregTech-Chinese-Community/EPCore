@@ -503,6 +503,14 @@ gregtech.material.heavy_alkali_chloride_solution=重碱氯化物溶液
 gregtech.material.stannic_chloride=四氯化锡
 gregtech.material.rubidium_chlorostannate=六氯锡酸铷
 gregtech.material.caesium_chlorostannate=六氯锡酸铯
+gregtech.material.germanium_dioxide=二氧化锗
+gregtech.material.roasted_sphalerite=焙烧闪锌矿
+gregtech.material.zinc_rich_sphalerite=富锌闪锌矿
+gregtech.material.zinc_oxide=氧化锌
+gregtech.material.waelz_oxide=威氏氧化物
+gregtech.material.waelz_slag=威氏浸出渣
+gregtech.material.impure_germanium_dioxide=含杂氧化锗
+gregtech.material.germanium_tetrachloride=四氯化锗
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

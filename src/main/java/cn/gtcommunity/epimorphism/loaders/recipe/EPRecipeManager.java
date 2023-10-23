@@ -44,6 +44,7 @@ public class EPRecipeManager {
         EtchingMaterialsChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
+        GermaniumChain.init();
         GrapheneChain.init();
         HydrogenPeroxideChain.init();
         IodineChain.init();
