@@ -911,5 +911,64 @@ public class EPFirstDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Germanium, 1, Chlorine, 4)
                 .build();
+        //  24123 Molybdenum Trioxide
+        MolybdenumTrioxide = new Material.Builder(24123, gregtechId("molybdenum_trioxide"))
+                .dust()
+                .color(0xCBCFDA)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Molybdenum, 1, Oxygen, 3)
+                .build();
+        //  24124 Lead Chloride
+        LeadChloride = new Material.Builder(24124, gregtechId("lead_chloride"))
+                .dust()
+                .color(0xF3F3F3)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Lead, 1, Chlorine, 2)
+                .build();
+        //  24125 Perrhenic Acid
+        PerrhenicAcid = new Material.Builder(24125, gregtechId("perrhenic_acid"))
+                .dust()
+                .color(0xE6DC70)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Hydrogen, 1, Rhenium, 1, Oxygen, 4)
+                .build();
+        //  24126 Ammonium Perrhenate
+        AmmoniumPerrhenate = new Material.Builder(24126, gregtechId("ammonium_perrhenate"))
+                .dust()
+                .color(0xA69970)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Nitrogen, 1, Hydrogen, 4, Rhenium, 1, Oxygen, 4)
+                .build();
+        //  24127 Niobium Pentoxide
+        NiobiumPentoxide = new Material.Builder(24127, gregtechId("niobium_pentoxide"))
+                .dust()
+                .color(0xBAB0C3)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Niobium, 2, Oxygen, 5)
+                .build();
+        //  24128 Tantalum Pentoxide
+        TantalumPentoxide = new Material.Builder(24128, gregtechId("tantalum_pentoxide"))
+                .dust()
+                .color(0x72728A)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Tantalum, 2, Oxygen, 5)
+                .build();
+        //  24129 Calcium Difluoride
+        CalciumDifluoride = new Material.Builder(24129, gregtechId("calcium_difluoride"))
+                .dust()
+                .color(0xFFFC9E)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Calcium, 1, Fluorine, 2)
+                .build();
+        //  24130 Manganese Difluoride
+        ManganeseDifluoride = new Material.Builder(24130, gregtechId("manganese_difluoride"))
+                .dust()
+                .color(0xEF4B3D)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(Manganese, 1, Fluorine, 2)
+                .build();
     }
 }

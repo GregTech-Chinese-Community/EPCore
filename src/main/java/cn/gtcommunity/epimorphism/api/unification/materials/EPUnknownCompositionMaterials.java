@@ -59,5 +59,16 @@ public class EPUnknownCompositionMaterials {
                 .fluid()
                 .color(0xAA4400)
                 .build();
+        //  25210 Molybdenum Flue
+        MolybdenumFlue = new Material.Builder(25210, gregtechId("molybdenum_flue"))
+                .fluid(FluidTypes.GAS)
+                .color(0x39194A)
+                .build();
+        //  25211 Trace Rhenium Flue
+        TraceRheniumFlue = new Material.Builder(25211, gregtechId("trace_rhenium_flue"))
+                .fluid(FluidTypes.GAS)
+                .color(0x96D6D5)
+                .build();
+
     }
 }

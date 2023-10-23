@@ -16,7 +16,7 @@ public class PollutionProvider implements ICapabilitySerializable<NBTTagCompound
     private Storage storage = new Storage();
 
     @CapabilityInject(IPollution.class)
-    static Capability<IPollution> pollution = null;
+    public static Capability<IPollution> pollution = null;
 
     @Override
     public boolean hasCapability(@Nonnull Capability<?> capability, @Nullable EnumFacing facing) {
@@ -52,9 +52,7 @@ public class PollutionProvider implements ICapabilitySerializable<NBTTagCompound
 
         @Override
         public void readNBT(Capability<IPollution> capability, IPollution instance, EnumFacing side, NBTBase nbt) {
-            if (nbt instanceof NBTTagLong tag) {
-
-            }
+            if (nbt instanceof NBTTagLong tag) instance.setPollution(tag.getLong());
         }
     }
 
