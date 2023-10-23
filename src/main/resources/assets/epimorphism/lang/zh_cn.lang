@@ -515,6 +515,10 @@ gregtech.material.molybdenum_trioxide=三氧化钼
 gregtech.material.lead_chloride=氯化铅
 gregtech.material.perrhenic_acid=高铼酸
 gregtech.material.ammonium_perrhenate=高铼酸铵
+gregtech.material.niobium_pentoxide=五氧化二铌
+gregtech.material.tantalum_pentoxide=五氧化二钽
+gregtech.material.calcium_difluoride=二氟化钙
+gregtech.material.manganese_difluoride=二氟化锰
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
