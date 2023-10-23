@@ -1,13 +1,10 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.unification.material.info.MaterialIconSet;
-import gregtech.api.unification.material.properties.DustProperty;
-import gregtech.api.unification.material.properties.FluidProperty;
-import gregtech.api.unification.material.properties.IngotProperty;
-import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.material.properties.*;
 
-import static gregicality.multiblocks.api.unification.GCYMMaterials.MaragingSteel300;
-import static gregicality.multiblocks.api.unification.GCYMMaterials.Stellite100;
+import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
+import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 
@@ -19,6 +16,10 @@ public class EPMaterialPropertyAddition {
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Germanium.setProperty(PropertyKey.BLAST, new BlastProperty(1211, BlastProperty.GasTier.HIGH, VA[EV], 1200));
+        Germanium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Rubidium.setProperty(PropertyKey.DUST, new DustProperty());
         SodiumHydroxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
 

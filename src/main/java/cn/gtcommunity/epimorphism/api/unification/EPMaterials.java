@@ -122,6 +122,14 @@ public EPMaterials() {}
     public static Material StannicChloride;
     public static Material RubidiumChlorostannate;
     public static Material CaesiumChlorostannate;
+    public static Material GermaniumDioxide;
+    public static Material RoastedSphalerite;
+    public static Material ZincRichSphalerite;
+    public static Material ZincOxide;
+    public static Material WaelzOxide;
+    public static Material WaelzSlag;
+    public static Material ImpureGermaniumDioxide;
+    public static Material GermaniumTetrachloride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
