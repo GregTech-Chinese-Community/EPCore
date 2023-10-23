@@ -1,16 +1,21 @@
 package cn.gtcommunity.epimorphism;
 
 import cn.gtcommunity.epimorphism.api.EPAPI;
+import cn.gtcommunity.epimorphism.api.capability.pollution.IPollution;
+import cn.gtcommunity.epimorphism.api.capability.pollution.PollutionProvider;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import gregtech.common.ConfigHolder;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import java.util.concurrent.Callable;
 
 @Mod(
         modid = "epimorphism",
@@ -49,6 +54,8 @@ public class Epimorphism {
         EPMetablocks.init();
         EPAPI.APIBlockInit();
         EPMetaTileEntities.init();
+
+        CapabilityManager.INSTANCE.register(IPollution.class, new PollutionProvider.Storage(), PollutionProvider.Impl::new);
         proxy.preLoad();
     }
 }
