@@ -99,6 +99,25 @@ public EPMaterials() {}
     public static Material CopperChloride;
     public static Material LithiumHydroxide;
     public static Material LithiumAmalgam;
+    public static Material HexafluorideEnrichedNaquadahSolution;
+    public static Material XenonHexafluoroEnrichedNaquadate;
+    public static Material EnrichedNaquadahResidueSolution;
+    public static Material XenoauricFluoroantimonicAcid;
+    public static Material GoldChloride;
+    public static Material BromineTrifluoride;
+    public static Material GoldTrifluoride;
+    public static Material NaquadriaCaesiumfluoride;
+    public static Material AcidicNaquadriaCaesiumfluoride;
+    public static Material NitrosoniumOctafluoroxenate;
+    public static Material NaquadriaCaesiumXenonnonfluoride;
+    public static Material RadonNaquadriaOctafluoride;
+    public static Material CaesiumXenontrioxideFluoride;
+    public static Material RadonTrioxide;
+    public static Material CaesiumFluoride;
+    public static Material XenonTrioxide;
+    public static Material HexafluorideNaquadriaSolution;
+    public static Material NaquadriaResidueSolution;
+    public static Material RadonDifluoride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -181,6 +200,7 @@ public EPMaterials() {}
     public static Material TetramethylammoniumChloride;
     public static Material Trimethylamine;
     public static Material Pyrocatechol;
+    public static Material NitrylFluoride;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

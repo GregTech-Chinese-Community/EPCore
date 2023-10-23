@@ -49,6 +49,7 @@ public class EPRecipeManager {
         KaptonChain.init();
         KevlarChain.init();
         LithiumChain.init();
+        NaquadahChain.init();
         PEDOTChain.init();
         PEEKChain.init();
         PhosphorusChain.init();

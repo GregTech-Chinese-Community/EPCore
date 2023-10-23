@@ -480,6 +480,25 @@ gregtech.material.phosphine=磷化氢
 gregtech.material.copper_chloride=氯化铜
 gregtech.material.lithium_hydroxide=氢氧化锂
 gregtech.material.lithium_amalgam=锂汞齐
+gregtech.material.hexafluoride_enriched_naquadah_solution=六氟化富集硅岩溶液
+gregtech.material.xenon_hexafluoro_enriched_naquadate=六氟氙酸富集硅岩
+gregtech.material.enriched_naquadah_residue_solution=富集硅岩残余物溶液
+gregtech.material.xenoauric_fluoroantimonic_acid=氟锑酸二氙
+gregtech.material.gold_chloride=氯化金
+gregtech.material.bromine_trifluoride=三氟化溴
+gregtech.material.gold_trifluoride=三氟化金
+gregtech.material.naquadria_caesiumfluoride=二氟超能硅岩酸铯
+gregtech.material.acidic_naquadria_caesiumfluoride=硫酸二氟超能硅岩酸铯
+gregtech.material.nitrosonium_octafluoroxenate=八氟氙酸亚硝酰
+gregtech.material.naquadria_caesium_xenonnonfluoride=九氟氙酸超能硅岩铯
+gregtech.material.radon_naquadria_octafluoride=八氟超能硅岩酸氡
+gregtech.material.caesium_xenontrioxide_fluoride=二氟三氧氙酸铯
+gregtech.material.radon_trioxide=三氧化氡
+gregtech.material.caesium_fluoride=氟化铯
+gregtech.material.xenon_trioxide=三氧化氙
+gregtech.material.hexafluoride_naquadria_solution=六氟化超能硅岩溶液
+gregtech.material.naquadria_residue_solution=超能硅岩残余物溶液
+gregtech.material.radon_difluoride=二氟化氡
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -563,6 +582,7 @@ gregtech.material.ethylenediaminetetraacetic_acid=乙二胺四乙酸（EDTA）
 gregtech.material.tetramethylammonium_chloride=四甲基氯化铵
 gregtech.material.trimethylamine=三甲胺
 gregtech.material.pyrocatechol=邻苯二酚
+gregtech.material.nitryl_fluoride=硝酰氟
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
