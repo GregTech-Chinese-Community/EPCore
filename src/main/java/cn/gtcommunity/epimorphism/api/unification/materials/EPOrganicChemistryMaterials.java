@@ -613,5 +613,13 @@ public class EPOrganicChemistryMaterials {
                 .iconSet(MaterialIconSet.DULL)
                 .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
                 .build();
+        //  25081 Nitryl Fluoride
+        NitrylFluoride = new Material.Builder(25081, gregtechId("nitryl_fluoride"))
+                .fluid()
+                .color(0x8B7EFF)
+                .components(Nitrogen, 1, Oxygen, 2, Fluorine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
     }
 }

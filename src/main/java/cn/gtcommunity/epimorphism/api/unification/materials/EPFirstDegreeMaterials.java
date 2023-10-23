@@ -399,6 +399,7 @@ public class EPFirstDegreeMaterials {
         //  24053 Tin Chloride
         TinChloride = new Material.Builder(24053, gregtechId("tin_chloride"))
                 .dust()
+                .fluid()
                 .color(0xDBDBDB)
                 .iconSet(MaterialIconSet.METALLIC)
                 .components(Tin, 1, Chlorine, 2)
@@ -682,9 +683,170 @@ public class EPFirstDegreeMaterials {
         //  24091 Lithiuim Amalgam
         LithiumAmalgam = new Material.Builder(24091, gregtechId("lithium_amalgam"))
                 .fluid()
-                .color(0xAEA7D4).iconSet(MaterialIconSet.FINE)
+                .color(0xAEA7D4)
+                .iconSet(MaterialIconSet.FINE)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Mercury, 1, Lithium, 1)
+                .build();
+        //  24092 Hexafluoride Enriched Naquadah Solution
+        HexafluorideEnrichedNaquadahSolution = new Material.Builder(24092, gregtechId("hexafluoride_enriched_naquadah_solution"))
+                .fluid()
+                .color(0x868D7F)
+                .components(NaquadahEnriched, 1, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24093 Xenon Hexafluoro Enriched Naquadate
+        XenonHexafluoroEnrichedNaquadate = new Material.Builder(24093, gregtechId("xenon_hexafluoro_enriched_naquadate"))
+                .fluid()
+                .color(0x255A55)
+                .components(Xenon, 1, NaquadahEnriched, 1, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24094 Enriched Naquadah Residue Solution
+        EnrichedNaquadahResidueSolution = new Material.Builder(24094, gregtechId("enriched_naquadah_residue_solution"))
+                .fluid()
+                .color(0x868D7F)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("XeAuSbKeF6S2?");
+        //  24095 Xenoauric Fluoroantimonic Acid
+        XenoauricFluoroantimonicAcid = new Material.Builder(24095, gregtechId("xenoauric_fluoroantimonic_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(0xE0BD74)
+                .components(Xenon, 1, Gold, 1, Antimony, 1, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24096 Gold Chloride
+        GoldChloride = new Material.Builder(24096, gregtechId("gold_chloride"))
+                .fluid()
+                .color(0xCCCC66)
+                .components(Gold, 2, Chlorine, 6)
+                .build();
+        //  24097 Bromine Trifluoride
+        BromineTrifluoride = new Material.Builder(24097, gregtechId("bromine_trifluoride"))
+                .fluid()
+                .color(0xA88E57)
+                .components(Bromine, 1, Fluorine, 3)
+                .build();
+        //  24098 Gold Trifluoride
+        GoldTrifluoride = new Material.Builder(24098, gregtechId("gold_trifluoride"))
+                .dust()
+                .color(0xE8C478)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .components(Gold, 1, Fluorine, 3)
+                .build();
+        //  24099 Naquadria Caesiumfluoride
+        NaquadriaCaesiumfluoride = new Material.Builder(24099, gregtechId("naquadria_caesiumfluoride"))
+                .fluid()
+                .color(0xAAEB69)
+                .components(Naquadria, 1, Fluorine, 3, Caesium, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("*Nq*F2CsF", true);
+        //  24100 Acidic Naquadria Caesiumfluoride
+        AcidicNaquadriaCaesiumfluoride = new Material.Builder(24100, gregtechId("acidic_naquadria_caesiumfluoride"))
+                .fluid()
+                .color(0x75EB00)
+                .components(Naquadria, 1, Fluorine, 3, Caesium, 1, Sulfur, 2, Oxygen, 8)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("*Nq*F2CsF(SO4)2", true);
+        //  24101 Nitrosonium Octafluoroxenate
+        NitrosoniumOctafluoroxenate = new Material.Builder(24101, gregtechId("nitrosonium_octafluoroxenate"))
+                .fluid()
+                .color(0x953D9F)
+                .components(NitrogenDioxide, 2, Xenon, 1, Fluorine, 8)
+                .build()
+                .setFormula("(NO2)2XeF8", true);
+        //  24102 Naquadria Caesium Xenonnonfluoride
+        NaquadriaCaesiumXenonnonfluoride = new Material.Builder(24102, gregtechId("naquadria_caesium_xenonnonfluoride"))
+                .fluid()
+                .color(0x54C248)
+                .components(Naquadria, 1, Caesium, 1, Xenon, 1, Fluorine, 9)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24103 Radon Naquadria Octafluoride
+        RadonNaquadriaOctafluoride = new Material.Builder(24103, gregtechId("radon_naquadria_octafluoride"))
+                .fluid()
+                .color(0x85F378)
+                .components(Radon, 1, Naquadria, 1, Fluorine, 8)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24104 Caesium Xenontrioxide Fluoride
+        CaesiumXenontrioxideFluoride = new Material.Builder(24104, gregtechId("caesium_xenontrioxide_fluoride"))
+                .fluid()
+                .color(0x5067D7)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Caesium, 1, Xenon, 1, Oxygen, 3, Fluorine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24105 Radon Trioxide
+        RadonTrioxide = new Material.Builder(24105, gregtechId("radon_trioxide"))
+                .fluid()
+                .color(0x9A6DD7)
+                .components(Radon, 1, Oxygen, 3)
+                .build();
+        //  24106 Cesium Fluoride
+        CaesiumFluoride = new Material.Builder(24106, gregtechId("caesium_fluoride"))
+                .fluid()
+                .color(0xFF7A5F)
+                .components(Caesium, 1, Fluorine, 1)
+                .build();
+        //  24107 Xenon Trioxide
+        XenonTrioxide = new Material.Builder(24107, gregtechId("xenon_trioxide"))
+                .fluid()
+                .color(0x359FC3)
+                .components(Xenon, 1, Oxygen, 3)
+                .build();
+        //  24108 Hexafluoride Naquadria Solution
+        HexafluorideNaquadriaSolution = new Material.Builder(24108, gregtechId("hexafluoride_naquadria_solution"))
+                .fluid()
+                .color(0x25C213)
+                .components(Naquadria, 1, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24109 Naquadria Residue Solution
+        NaquadriaResidueSolution = new Material.Builder(24109, gregtechId("naquadria_residue_solution"))
+                .fluid()
+                .color(0x25C213)
+                .iconSet(MaterialIconSet.DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("InPS6?", true);
+        //  24110 Radon Difluoride
+        RadonDifluoride = new Material.Builder(24110, gregtechId("radon_difluoride"))
+                .fluid()
+                .color(0x8B7EFF)
+                .components(Radon, 1, Fluorine, 2)
+                .build();
+        //  24111 Heavy Alkali Chloride Solution
+        HeavyAlkaliChlorideSolution = new Material.Builder(24111, gregtechId("heavy_alkali_chloride_solution"))
+                .fluid()
+                .color(0x8F5353)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
+                .build()
+                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+        //  24112 Stannic Chloride
+        StannicChloride = new Material.Builder(24112, gregtechId("stannic_chloride"))
+                .fluid()
+                .color(0x33BBF5)
+                .components(Tin, 1, Chlorine, 4)
+                .build();
+        //  24113 Rubidium Chlorostannate
+        RubidiumChlorostannate = new Material.Builder(24113, gregtechId("rubidium_chlorostannate"))
+                .dust()
+                .color(0xBD888A)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Rubidium, 2, Tin, 1, Chlorine, 6)
+                .build();
+        //  24114 Caesium Chlorostannate
+        CaesiumChlorostannate = new Material.Builder(24114, gregtechId("caesium_chlorostannate"))
+                .dust()
+                .color(0xBDAD88)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Caesium, 2, Tin, 1, Chlorine, 6)
                 .build();
     }
 }
