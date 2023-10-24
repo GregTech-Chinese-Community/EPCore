@@ -31,6 +31,7 @@ public class EPMaterialPropertyAddition {
         //  Flags
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
         Nickel.addFlags(GENERATE_FOIL);
+        Titanium.addFlags(GENERATE_FOIL);
         Tungsten.addFlags(GENERATE_FINE_WIRE);
         RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);

@@ -620,6 +620,18 @@ public class EPOrganicChemistryMaterials {
                 .components(Nitrogen, 1, Oxygen, 2, Fluorine, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
-
+        //  25082 Dimethylamine Hydrochloride
+        DimethylamineHydrochloride = new Material.Builder(25082, gregtechId("dimethylamine_hydrochloride"))
+                .fluid()
+                .color(0xE3EBDC)
+                .components(Dimethylamine, 1, HydrochloricAcid, 1)
+                .build()
+                .setFormula("C2H8NCl", true);
+        //  25083 Potassium Formate
+        PotassiumFormate = new Material.Builder(25083, gregtechId("potassium_formate"))
+                .dust()
+                .color(0x74B5A9)
+                .components(Carbon, 1, Hydrogen, 3, Oxygen, 1, Sodium, 1)
+                .build();
     }
 }
