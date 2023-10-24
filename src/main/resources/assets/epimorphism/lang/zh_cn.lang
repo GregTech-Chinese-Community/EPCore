@@ -519,6 +519,8 @@ gregtech.material.niobium_pentoxide=五氧化二铌
 gregtech.material.tantalum_pentoxide=五氧化二钽
 gregtech.material.calcium_difluoride=二氟化钙
 gregtech.material.manganese_difluoride=二氟化锰
+gregtech.material.calcium_carbide=碳化钙
+gregtech.material.calcium_hydroxide=氢氧化钙
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

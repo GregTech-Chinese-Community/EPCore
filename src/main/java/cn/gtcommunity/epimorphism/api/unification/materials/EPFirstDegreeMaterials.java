@@ -970,5 +970,22 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Manganese, 1, Fluorine, 2)
                 .build();
+        //  24131 Calcium Carbide
+        CalciumCarbide = new Material.Builder(24131, gregtechId("calcium_carbide"))
+                .dust()
+                .color(0x807B70)
+                .iconSet(MaterialIconSet.DULL)
+                .components(Calcium, 1, Carbon, 2)
+                .build();
+
+        //  24132 Calcium Hydroxide
+        CalciumHydroxide = new Material.Builder(24132, gregtechId("calcium_hydroxide"))
+                .dust()
+                .color(0x5F8764)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Calcium, 1, Hydrogen, 2, Oxygen, 2)
+                .build()
+                .setFormula("Ca(OH)2", true);
     }
 }
