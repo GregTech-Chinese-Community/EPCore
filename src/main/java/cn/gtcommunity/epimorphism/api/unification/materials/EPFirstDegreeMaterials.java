@@ -977,7 +977,6 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.DULL)
                 .components(Calcium, 1, Carbon, 2)
                 .build();
-
         //  24132 Calcium Hydroxide
         CalciumHydroxide = new Material.Builder(24132, gregtechId("calcium_hydroxide"))
                 .dust()
@@ -987,5 +986,37 @@ public class EPFirstDegreeMaterials {
                 .components(Calcium, 1, Hydrogen, 2, Oxygen, 2)
                 .build()
                 .setFormula("Ca(OH)2", true);
+        //  24133 Sodium Tellurite
+        SodiumTellurite = new Material.Builder(24133, gregtechId("sodium_tellurite"))
+                .dust()
+                .color(0xC6C9BE)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Sodium, 2, Tellurium, 1, Oxygen, 3)
+                .build();
+        //  24134 Selenium Dioxide
+        SeleniumDioxide = new Material.Builder(24134, gregtechId("selenium_dioxide"))
+                .dust()
+                .color(0xE0DDD8)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Selenium, 1, Oxygen, 2)
+                .build();
+        //  24135 Tellurium Dioxide
+        TelluriumDioxide = new Material.Builder(24135, gregtechId("tellurium_dioxide"))
+                .dust()
+                .color(0xE3DDB8)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Tellurium, 1, Oxygen, 2)
+                .build();
+        //  24136 Selenous Acid
+        SelenousAcid = new Material.Builder(24136, gregtechId("selenous_acid"))
+                .dust()
+                .color(0xE0E083)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Hydrogen, 2, Selenium, 1, Oxygen, 3)
+                .build();
     }
 }

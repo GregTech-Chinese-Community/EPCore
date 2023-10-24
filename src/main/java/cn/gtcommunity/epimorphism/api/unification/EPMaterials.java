@@ -140,6 +140,10 @@ public EPMaterials() {}
     public static Material ManganeseDifluoride;
     public static Material CalciumCarbide;
     public static Material CalciumHydroxide;
+    public static Material SodiumTellurite;
+    public static Material SeleniumDioxide;
+    public static Material TelluriumDioxide;
+    public static Material SelenousAcid;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -236,6 +240,7 @@ public EPMaterials() {}
     public static Material MethylamineMixture;
     public static Material MolybdenumFlue;
     public static Material TraceRheniumFlue;
+    public static Material ChalcogenAnodeMud;
 
     //  Machine Casing Materials
     public static Material Inconel625;

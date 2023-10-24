@@ -22,6 +22,8 @@ public class EPMaterialPropertyAddition {
         Rubidium.setProperty(PropertyKey.DUST, new DustProperty());
         SodiumHydroxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Selenium.setProperty(PropertyKey.DUST, new DustProperty());
+        Tellurium.setProperty(PropertyKey.DUST, new DustProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -42,5 +44,10 @@ public class EPMaterialPropertyAddition {
         oreProp.setDirectSmeltResult(null);
         Powellite.addFlags(DISABLE_DECOMPOSITION);
         Wulfenite.addFlags(DISABLE_DECOMPOSITION);
+
+        //  Fluid Temperatures
+        FluidProperty prop = new FluidProperty();
+        prop.setFluidTemperature(332);
+        SodiumBisulfate.setProperty(PropertyKey.FLUID, prop);
     }
 }
