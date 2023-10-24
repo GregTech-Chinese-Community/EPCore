@@ -138,6 +138,8 @@ public EPMaterials() {}
     public static Material TantalumPentoxide;
     public static Material CalciumDifluoride;
     public static Material ManganeseDifluoride;
+    public static Material CalciumCarbide;
+    public static Material CalciumHydroxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
