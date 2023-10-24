@@ -69,6 +69,11 @@ public class EPUnknownCompositionMaterials {
                 .fluid(FluidTypes.GAS)
                 .color(0x96D6D5)
                 .build();
-
+        //  25212 Chalcogen Anode Mud
+        ChalcogenAnodeMud = new Material.Builder(25212, gregtechId("chalcogen_anode_mud"))
+                .dust()
+                .color(0x8A3324)
+                .iconSet(MaterialIconSet.FINE)
+                .build();
     }
 }

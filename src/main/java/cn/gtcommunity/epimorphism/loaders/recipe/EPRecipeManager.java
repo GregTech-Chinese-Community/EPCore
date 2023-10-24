@@ -59,6 +59,7 @@ public class EPRecipeManager {
         PEEKChain.init();
         PhosphorusChain.init();
         PMMAChain.init();
+        SeleniumTelluriumChain.init();
         ThalliumChain.init();
         TungstenChain.init();
     }
