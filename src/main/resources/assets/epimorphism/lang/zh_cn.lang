@@ -609,6 +609,8 @@ gregtech.material.tetramethylammonium_chloride=四甲基氯化铵
 gregtech.material.trimethylamine=三甲胺
 gregtech.material.pyrocatechol=邻苯二酚
 gregtech.material.nitryl_fluoride=硝酰氟
+gregtech.material.dimethylamine_hydrochloride=盐酸二甲胺
+gregtech.material.potassium_formate=甲醇钠
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

@@ -118,5 +118,46 @@ public class KaptonChain {
                 .duration(30)
                 .EUt(VA[ZPM])
                 .buildAndRegister();
+
+        //  Dimethylformamide (LuV): Dimethylamine + Carbon Monoxide -> Dimethylformamide
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Dimethylamine.getFluid(1000))
+                .fluidInputs(CarbonMonoxide.getFluid(1000))
+                .fluidOutputs(Dimethylformamide.getFluid(1000))
+                .duration(200)
+                .EUt(VA[LuV])
+                .buildAndRegister();
+
+        //  Dimethylamine + Hydrochloric Acid -> Dimethylamine Hydrochloride
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Dimethylamine.getFluid(1000))
+                .fluidInputs(HydrochloricAcid.getFluid(1000))
+                .fluidOutputs(DimethylamineHydrochloride.getFluid(1000))
+                .EUt(VA[EV])
+                .duration(60)
+                .buildAndRegister();
+
+        //  Dimethylformamide (EV): Potassium Formate + Dimethylamine Hydrochloride -> Dimethylformamide + Hydrogen
+        BURNER_REACTOR_RECIPES.recipeBuilder()
+                .input(dust, PotassiumFormate, 1)
+                .fluidInputs(DimethylamineHydrochloride.getFluid(1000))
+                .output(dust, Salt, 2)
+                .fluidOutputs(Dimethylformamide.getFluid(1000))
+                .fluidOutputs(Hydrogen.getFluid(1000))
+                .EUt(VA[EV])
+                .duration(120)
+                .temperature(1488)
+                .buildAndRegister();
+
+        //  Salt + Methanol -> Potassium Formate + Chlorine
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, Salt, 2)
+                .fluidInputs(Methanol.getFluid(1000))
+                .output(dust, PotassiumFormate)
+                .fluidOutputs(DilutedHydrochloricAcid.getFluid(1000))
+                .EUt(VA[HV])
+                .duration(240)
+                .temperature(980)
+                .buildAndRegister();
     }
 }

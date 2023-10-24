@@ -227,6 +227,8 @@ public EPMaterials() {}
     public static Material Trimethylamine;
     public static Material Pyrocatechol;
     public static Material NitrylFluoride;
+    public static Material DimethylamineHydrochloride;
+    public static Material PotassiumFormate;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
