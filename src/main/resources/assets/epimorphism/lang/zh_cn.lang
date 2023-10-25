@@ -394,6 +394,9 @@ recipemap.laser_cvd_recipes.name=激光诱导化学气相沉积
 
 #  Materials
 
+##  Element Materials
+gregtech.material.draconium=龙素
+
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
 gregtech.material.hydrazine=肼

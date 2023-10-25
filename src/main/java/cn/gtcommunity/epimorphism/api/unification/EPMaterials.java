@@ -6,6 +6,9 @@ import gregtech.api.unification.material.Material;
 public class EPMaterials {
 public EPMaterials() {}
 
+    //  Element Materials
+    public static Material Draconium;
+
     //  First Degree Materials
     public static Material GrapheneOxide;
     public static Material Hydrazine;
@@ -269,6 +272,7 @@ public EPMaterials() {}
     public static void init() {
         EPMaterialPropertyAddition.init();
         EPMaterialFlagAddition.init();
+        EPElementMaterials.register();
         EPFirstDegreeMaterials.register();
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();

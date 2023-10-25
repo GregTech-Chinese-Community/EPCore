@@ -5,7 +5,6 @@ import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.OpticalCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.SpintronicCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
-import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
 import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
@@ -20,6 +19,7 @@ public class EPRecipeManager {
         GTOverrideRecipes.init();
         EPRecipeHandlerList.register();
         RecipeConflicts.init();
+        EPMaterialInfoLoader.init();
         initBlocks();
         initChains();
         initCircuits();
@@ -75,7 +75,6 @@ public class EPRecipeManager {
 
     public static void initComponents() {
         MachineComponents.init();
-        MaterialComponents.init();
     }
 
     public static void initMultiblockRecipes() {
