@@ -2,13 +2,13 @@ package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
+import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
+import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
-import gregtech.api.unification.OreDictUnifier;
+import gregtech.loaders.recipe.CraftingComponent;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -17,14 +17,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Objects;
 import java.util.function.Function;
-
-import static gregtech.api.unification.material.Materials.Iron;
-import static gregtech.api.unification.ore.OrePrefix.dust;
 
 @EventBusSubscriber(
         modid = "epimorphism"
@@ -80,5 +78,11 @@ public class CommonProxy {
         CasingTierProperty.registerCasingTier(3, "C");
         CasingTierProperty.registerCasingTier(4, "D");
         CasingTierProperty.registerCasingTier(5, "E");
+    }
+
+    //  Crafting Component Event
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void initComponents(GregTechAPI.RegisterEvent<CraftingComponent> event) {
+        MaterialComponents.init();
     }
 }
