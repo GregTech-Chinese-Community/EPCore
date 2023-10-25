@@ -144,6 +144,12 @@ public EPMaterials() {}
     public static Material SeleniumDioxide;
     public static Material TelluriumDioxide;
     public static Material SelenousAcid;
+    public static Material GSTGlass;
+    public static Material ZBLANGlass;
+    public static Material ErbiumDopedZBLANGlass;
+    public static Material PraseodymiumDopedZBLANGlass;
+    public static Material SiliconTetrachloride;
+    public static Material CadmiumSulfide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

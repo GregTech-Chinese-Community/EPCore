@@ -103,5 +103,15 @@ public class GermaniumChain {
                 .duration(240)
                 .EUt(VA[EV])
                 .buildAndRegister();
+
+        //  Germanium + Oxygen -> Germanium Dioxide
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Germanium)
+                .fluidInputs(Oxygen.getFluid(2000))
+                .circuitMeta(2)
+                .output(dust, GermaniumDioxide, 3)
+                .duration(150)
+                .EUt(VA[HV])
+                .buildAndRegister();
     }
 }

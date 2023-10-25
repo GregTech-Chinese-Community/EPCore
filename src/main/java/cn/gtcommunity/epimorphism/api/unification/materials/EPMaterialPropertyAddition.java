@@ -24,6 +24,9 @@ public class EPMaterialPropertyAddition {
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         Selenium.setProperty(PropertyKey.DUST, new DustProperty());
         Tellurium.setProperty(PropertyKey.DUST, new DustProperty());
+        Erbium.setProperty(PropertyKey.DUST, new DustProperty());
+        Praseodymium.setProperty(PropertyKey.DUST, new DustProperty());
+        Terbium.setProperty(PropertyKey.DUST, new DustProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -32,6 +35,7 @@ public class EPMaterialPropertyAddition {
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
         Nickel.addFlags(GENERATE_FOIL);
         Titanium.addFlags(GENERATE_FOIL);
+        Germanium.addFlags(GENERATE_FOIL);
         Tungsten.addFlags(GENERATE_FINE_WIRE);
         RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);

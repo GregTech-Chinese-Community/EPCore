@@ -105,28 +105,29 @@ public class EPMetaItem1 extends StandardMetaItem {
 
         //  Wafers
         PHASE_CHANGE_MEMORY = this.addItem(67, "wafer.chip.phase_change_memory");
-        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(68, "wafer.chip.spin_transfer_torque_memory");
-        NANO_PIC_WAFER = this.addItem(69, "wafer.nano_pic");
-        NANO_PIC_CHIP = this.addItem(70, "wafer.chip.nano_pic");
-        PICO_PIC_WAFER = this.addItem(71, "wafer.pico_pic");
-        PICO_PIC_CHIP = this.addItem(72, "wafer.chip.pico_pic");
-        FEMTO_PIC_WAFER = this.addItem(73, "wafer.femto_pic");
-        FEMTO_PIC_CHIP = this.addItem(74, "wafer.chip.femto_pic");
-        ATTO_PIC_WAFER = this.addItem(75, "wafer.atto_pic");
-        ATTO_PIC_CHIP = this.addItem(76, "wafer.chip.atto_pic");
-        ZEPTO_PIC_WAFER = this.addItem(77, "wafer.zepto_pic");
-        ZEPTO_PIC_CHIP = this.addItem(78, "wafer.chip.zepto_pic");
+        OPTICAL_NOR_MEMORY_CHIP = this.addItem(68, "wafer.chip.optical_nor_memory_chip");
+        SPIN_TRANSFER_TORQUE_MEMORY = this.addItem(69, "wafer.chip.spin_transfer_torque_memory");
+        NANO_PIC_WAFER = this.addItem(70, "wafer.nano_pic");
+        NANO_PIC_CHIP = this.addItem(71, "wafer.chip.nano_pic");
+        PICO_PIC_WAFER = this.addItem(72, "wafer.pico_pic");
+        PICO_PIC_CHIP = this.addItem(73, "wafer.chip.pico_pic");
+        FEMTO_PIC_WAFER = this.addItem(74, "wafer.femto_pic");
+        FEMTO_PIC_CHIP = this.addItem(75, "wafer.chip.femto_pic");
+        ATTO_PIC_WAFER = this.addItem(76, "wafer.atto_pic");
+        ATTO_PIC_CHIP = this.addItem(77, "wafer.chip.atto_pic");
+        ZEPTO_PIC_WAFER = this.addItem(78, "wafer.zepto_pic");
+        ZEPTO_PIC_CHIP = this.addItem(79, "wafer.chip.zepto_pic");
 
         //  Others
-        MAGNETRON = this.addItem(79, "magnetron");
-        VOLTAGE_COIL_UHV = this.addItem(80, "voltage_coil.uhv");
-        VOLTAGE_COIL_UEV = this.addItem(81, "voltage_coil.uev");
-        VOLTAGE_COIL_UIV = this.addItem(82, "voltage_coil.uiv");
-        VOLTAGE_COIL_UXV = this.addItem(83, "voltage_coil.uxv");
-        VOLTAGE_COIL_OPV = this.addItem(84, "voltage_coil.opv");
-        VOLTAGE_COIL_MAX = this.addItem(85, "voltage_coil.max");
-        CARBON_ALLOTROPE = this.addItem(86, "carbon_allotrope");
-        GRAPHENE_ALIGNED = this.addItem(87, "graphene_aligned");
+        MAGNETRON = this.addItem(80, "magnetron");
+        VOLTAGE_COIL_UHV = this.addItem(81, "voltage_coil.uhv");
+        VOLTAGE_COIL_UEV = this.addItem(82, "voltage_coil.uev");
+        VOLTAGE_COIL_UIV = this.addItem(83, "voltage_coil.uiv");
+        VOLTAGE_COIL_UXV = this.addItem(84, "voltage_coil.uxv");
+        VOLTAGE_COIL_OPV = this.addItem(85, "voltage_coil.opv");
+        VOLTAGE_COIL_MAX = this.addItem(86, "voltage_coil.max");
+        CARBON_ALLOTROPE = this.addItem(87, "carbon_allotrope");
+        GRAPHENE_ALIGNED = this.addItem(88, "graphene_aligned");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");

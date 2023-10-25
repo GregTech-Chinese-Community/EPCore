@@ -96,6 +96,7 @@ public class EPMetaItems {
 
     //  Wafers
     public static MetaItem<?>.MetaValueItem PHASE_CHANGE_MEMORY;
+    public static MetaItem<?>.MetaValueItem OPTICAL_NOR_MEMORY_CHIP;
     public static MetaItem<?>.MetaValueItem SPIN_TRANSFER_TORQUE_MEMORY;
     public static MetaItem<?>.MetaValueItem NANO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem NANO_PIC_CHIP;

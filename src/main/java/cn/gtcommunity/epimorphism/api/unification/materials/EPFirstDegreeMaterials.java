@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
+import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregtech.api.GTValues.*;
@@ -1017,6 +1018,59 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.SHINY)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Hydrogen, 2, Selenium, 1, Oxygen, 3)
+                .build();
+        //  24137 GST Glass
+        GSTGlass = new Material.Builder(24137, gregtechId("gst_glass"))
+                .ingot()
+                .fluid()
+                .color(0xCFFFFF)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(GENERATE_PLATE, NO_SMASHING, NO_WORKING, DECOMPOSITION_BY_CENTRIFUGING)
+                .components(Germanium, 2, Antimony, 2, Tellurium, 5)
+                .blastTemp(873, BlastProperty.GasTier.MID)
+                .build();
+        //  24138 ZBLAN Glass
+        ZBLANGlass = new Material.Builder(24138, gregtechId("zblan_glass"))
+                .ingot()
+                .fluid()
+                .color(0xACB4BC)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION)
+                .components(Zirconium, 5, Barium, 2, Lanthanum, 1, Aluminium, 1, Sodium, 2, Fluorine, 6)
+                .build()
+                .setFormula("(ZrF4)5(BaF2)2(LaF3)(AlF3)(NaF)2", true);
+        //  24139 Erbium-doped ZBLAN Glass
+        ErbiumDopedZBLANGlass = new Material.Builder(24139, gregtechId("erbium_doped_zblan_glass"))
+                .ingot()
+                .color(0x505444)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION, GENERATE_PLATE)
+                .components(ZBLANGlass, 1, Erbium, 1)
+                .build()
+                .setFormula("(ZrF4)5(BaF2)2(LaF3)(AlF3)(NaF)2Er", true);
+        //  24140 PraseodymiumDopedZBLANGlass
+        PraseodymiumDopedZBLANGlass = new Material.Builder(24140, gregtechId("praseodymium_doped_zblan_glass"))
+                .ingot()
+                .color(0xC5C88D)
+                .iconSet(MaterialIconSet.BRIGHT)
+                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION, GENERATE_PLATE)
+                .components(ZBLANGlass, 1, Praseodymium, 1)
+                .build()
+                .setFormula("(ZrF4)5(BaF2)2(LaF3)(AlF3)(NaF)2Pr", true);
+        //  24141 Silicon Tetrachloride
+        SiliconTetrachloride = new Material.Builder(24141, gregtechId("silicon_tetrachloride"))
+                .fluid()
+                .color(0x5B5B7A)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Silicon, 1, Chlorine, 4)
+                .build();
+        //  24142 Cadmium Sulfide
+        CadmiumSulfide = new Material.Builder(24142, gregtechId("cadmium_sulfide"))
+                .dust()
+                .color(0xC8C43C)
+                .flags(DECOMPOSITION_BY_ELECTROLYZING, GENERATE_PLATE)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Cadmium, 1, Sulfur, 1)
                 .build();
     }
 }

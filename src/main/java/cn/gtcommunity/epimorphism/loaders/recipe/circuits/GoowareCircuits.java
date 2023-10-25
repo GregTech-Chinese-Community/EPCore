@@ -111,7 +111,7 @@ public class GoowareCircuits {
                 .fluidInputs(SolderingAlloy.getFluid(L * 9))
                 .output(GOOWARE_COMPUTER)
                 .duration(400)
-                .EUt(153_600)
+                .EUt(VA[UV])
                 .research(b -> b
                         .researchStack(GOOWARE_ASSEMBLY.getStackForm())
                         .CWUt(32)
@@ -134,8 +134,8 @@ public class GoowareCircuits {
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .fluidInputs(KaptonE.getFluid(L * 9))
                 .output(GOOWARE_MAINFRAME)
-                .duration(2000)
-                .EUt(1_200_000)
+                .duration(800)
+                .EUt(VA[UHV])
                 .research(b -> b
                         .researchStack(GOOWARE_COMPUTER.getStackForm())
                         .CWUt(192)
