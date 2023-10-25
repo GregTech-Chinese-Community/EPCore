@@ -235,6 +235,8 @@ public EPMaterials() {}
     public static Material NitrylFluoride;
     public static Material DimethylamineHydrochloride;
     public static Material PotassiumFormate;
+    public static Material DiethylSuflide;
+    public static Material Dimethylcadmium;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
