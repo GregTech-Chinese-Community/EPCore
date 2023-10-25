@@ -173,6 +173,8 @@ metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个
 #  Wafers
 metaitem.wafer.chip.phase_change_memory.name=PRAM晶片
 metaitem.wafer.chip.phase_change_memory.tooltip=相变随机存取存储器
+metaitem.wafer.chip.optical_nor_memory_chip.name=ACNOR晶片
+metaitem.wafer.chip.optical_nor_memory_chip.tooltip=全光级联逻辑或非门
 metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM晶片
 metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=自旋转移力矩存储器
 metaitem.wafer.nano_pic.name=NPIC晶圆
@@ -308,7 +310,6 @@ recipemap.sonication_recipes.name=超声振荡
 
 epimorphism.machine.cvd_unit.name=化学气相沉积单元
 recipemap.cvd_recipes.name=化学气相沉积
-recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
 
 epimorphism.machine.multiblock.glass_tier=当前玻璃等级为：%s (%s)
 
@@ -385,6 +386,11 @@ epimorphism.machine.chemical_plant.tube_tier=管道等级：%d
 epimorphism.machine.chemical_plant.tier=等级：%d
 
 recipemap.roaster_recipes.name=焙烧
+
+recipemap.ion_implanter_recipes.name=真空离子注入
+
+recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
+recipemap.laser_cvd_recipes.name=激光诱导化学气相沉积
 
 #  Materials
 
@@ -525,6 +531,12 @@ gregtech.material.sodium_tellurite=亚碲酸钠
 gregtech.material.selenium_dioxide=二氧化硒
 gregtech.material.tellurium_dioxide=二氧化碲
 gregtech.material.selenous_acid=亚硒酸
+gregtech.material.gst_glass=GST玻璃
+gregtech.material.zblan_glass=ZBLAN玻璃
+gregtech.material.erbium_doped_zblan_glass=掺铒的ZBLAN玻璃
+gregtech.material.praseodymium_doped_zblan_glass=掺镨的ZBLAN玻璃
+gregtech.material.silicon_tetrachloride=四氯化硅
+gregtech.material.cadmium_sulfide=硫化镉
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -610,7 +622,9 @@ gregtech.material.trimethylamine=三甲胺
 gregtech.material.pyrocatechol=邻苯二酚
 gregtech.material.nitryl_fluoride=硝酰氟
 gregtech.material.dimethylamine_hydrochloride=盐酸二甲胺
-gregtech.material.potassium_formate=甲醇钠
+gregtech.material.potassium_formate=甲醇钾
+gregtech.material.diethyl_sulfide=二乙硫醚
+gregtech.material.dimethylcadmium=二甲基镉
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

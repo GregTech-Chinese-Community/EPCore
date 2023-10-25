@@ -36,6 +36,10 @@ public class EPRecipeMaps {
             .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.COOLING);
 
+    public static final RecipeMap<GlassTierNoCoilTemperatureRecipeBuilder> LASER_CVD_RECIPES = new RecipeMap<>("laser_cvd_recipes", 0, 2, 0, 2, 0, 3, 0, 3, new GlassTierNoCoilTemperatureRecipeBuilder(), false)
+            .setProgressBar(EPGuiTextures.PROGRESS_BAR_NANOSCALE, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.COOLING);
+
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>("molecular_beam_recipes", 1, 5, 1, 1, 0, 2, 0, 1, new NoCoilTemperatureRecipeBuilder(), false)
             .setSlotOverlay(false, false, false, EPGuiTextures.NANOSCALE_OVERLAY_1)
             .setSlotOverlay(false, false, true, EPGuiTextures.NANOSCALE_OVERLAY_1)
@@ -91,4 +95,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> ROASTER_RECIPES = new RecipeMap<>("roaster_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new NoCoilTemperatureRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.FURNACE);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTATOR_RECIPES = new RecipeMap<>("ion_implanter_recipes", 1, 3, 1, 1, 0, 1, 0, 0, new SimpleRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL)
+            .setSound(GTSoundEvents.ELECTROLYZER);
 }

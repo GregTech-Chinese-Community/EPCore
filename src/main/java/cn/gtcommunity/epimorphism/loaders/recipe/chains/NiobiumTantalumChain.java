@@ -31,5 +31,14 @@ public class NiobiumTantalumChain {
                 .duration(200)
                 .EUt(VA[HV])
                 .buildAndRegister();
+
+        //  Tantalum + Oxygen -> Tantalum Pentoxide
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Tantalum, 2)
+                .fluidInputs(Oxygen.getFluid(5000))
+                .output(dust, TantalumPentoxide, 7)
+                .duration(110)
+                .EUt(VA[LV])
+                .buildAndRegister();
     }
 }

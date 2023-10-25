@@ -631,7 +631,23 @@ public class EPOrganicChemistryMaterials {
         PotassiumFormate = new Material.Builder(25083, gregtechId("potassium_formate"))
                 .dust()
                 .color(0x74B5A9)
-                .components(Carbon, 1, Hydrogen, 3, Oxygen, 1, Sodium, 1)
+                .components(Carbon, 1, Hydrogen, 3, Oxygen, 1, Potassium, 1)
                 .build();
+        //  25084 Diethyl Suflide
+        DiethylSuflide = new Material.Builder(25084, gregtechId("diethyl_sulfide"))
+                .fluid()
+                .color(0xFF7E4B)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Ethylene, 2, Sulfur, 1)
+                .build()
+                .setFormula("(C2H5)2S", true);
+        //  25085 Dimethylcadmium
+        Dimethylcadmium = new Material.Builder(25085, gregtechId("dimethylcadmium"))
+                .fluid()
+                .color(0x5C037F)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 2, Hydrogen, 6, Cadmium, 1)
+                .build()
+                .setFormula("(CH3)2Cd", true);
     }
 }
