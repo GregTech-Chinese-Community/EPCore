@@ -19,6 +19,7 @@ public class EPRecipeManager {
     public static void init() {
         GTOverrideRecipes.init();
         EPRecipeHandlerList.register();
+        RecipeConflicts.init();
         initBlocks();
         initChains();
         initCircuits();

@@ -46,6 +46,12 @@ public class EPMaterialPropertyAddition {
         Powellite.addFlags(DISABLE_DECOMPOSITION);
         Wulfenite.addFlags(DISABLE_DECOMPOSITION);
 
+        RockSalt.addFlags(DISABLE_DECOMPOSITION);
+        Salt.addFlags(DISABLE_DECOMPOSITION);
+
+        Pollucite.addFlags(DISABLE_DECOMPOSITION);
+        Pollucite.getProperty(PropertyKey.ORE).setOreByProducts(Aluminium, Potassium, Caesium, Pollucite);
+
         //  Fluid Temperatures
         FluidProperty prop = new FluidProperty();
         prop.setFluidTemperature(332);
