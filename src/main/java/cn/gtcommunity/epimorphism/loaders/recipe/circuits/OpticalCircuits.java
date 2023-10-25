@@ -73,11 +73,24 @@ public class OpticalCircuits {
 
         //  PRAM
         FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(RANDOM_ACCESS_MEMORY)
                 .input(plate, GSTGlass, 2)
                 .input(foil, Americium, 8)
                 .output(PHASE_CHANGE_MEMORY, 4)
                 .duration(200)
                 .EUt(VA[UHV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  ACNOR
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(NOR_MEMORY_CHIP)
+                .input(OPTICAL_FIBER, 2)
+                .input(foil, Trinium, 8)
+                .output(OPTICAL_NOR_MEMORY_CHIP, 4)
+                .duration(200)
+                .EUt(VA[UHV])
+                .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
         //  Silicon + Chlorine -> Silicon Tetrachloride
