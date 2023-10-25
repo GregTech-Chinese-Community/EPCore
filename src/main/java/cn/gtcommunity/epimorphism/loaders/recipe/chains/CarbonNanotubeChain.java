@@ -350,6 +350,27 @@ public class CarbonNanotubeChain {
                 .duration(320)
                 .buildAndRegister();
 
+        //  Potassium + Oxygen -> Potash
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Potassium, 2)
+                .fluidInputs(Oxygen.getFluid(1000))
+                .circuitMeta(1)
+                .output(dust, Potash)
+                .EUt(VA[LV])
+                .duration(30)
+                .buildAndRegister();
+
+        //  Potash + Sulfuric Acid -> Potassium Hydroxide + Sulfur Trioxide
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, Potash)
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .output(dust, PotassiumHydroxide, 2)
+                .fluidOutputs(SulfurTrioxide.getFluid(1000))
+                .temperature(299)
+                .EUt(VA[HV])
+                .duration(480)
+                .buildAndRegister();
+
         //  Potassium Manganate + Water -> Potassium Permanganate + Pyrolusite + Potassium Hydroxide
         ROASTER_RECIPES.recipeBuilder()
                 .input(dust, PotassiumManganate, 21)
