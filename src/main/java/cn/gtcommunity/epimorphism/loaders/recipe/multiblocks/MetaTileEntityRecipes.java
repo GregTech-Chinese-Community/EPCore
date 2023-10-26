@@ -8,7 +8,6 @@ import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 
 import gregtech.api.unification.stack.UnificationEntry;
-import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -231,32 +230,24 @@ public class MetaTileEntityRecipes {
                 .buildAndRegister();
 
         //  Ion Implantater
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, Adamantium)
-                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 16))
-                .input(ELECTRIC_PISTON_UHV, 8)
-                .input(EMITTER_UHV, 8)
-                .input(ELECTRIC_PUMP_UHV, 8)
-                .input(circuit, MarkerMaterials.Tier.UHV, 4)
-                .input(circuit, MarkerMaterials.Tier.UV, 8)
-                .input(plate, HSSS, 16)
-                .input(plateDouble, TitaniumTungstenCarbide, 32)
-                .input(plateDouble, HSLASteel, 32)
-                .input(wireFine, YttriumBariumCuprate, 64)
-                .input(wireFine, YttriumBariumCuprate, 64)
-                .input(cableGtQuadruple, SiliconCarbide, 4)
-                .fluidInputs(Orichalcum.getFluid(5760))
-                .fluidInputs(Zeron100.getFluid(5760))
-                .fluidInputs(PolychlorinatedBiphenyl.getFluid(2880))
-                .output(ION_IMPLANTATER)
-                .EUt(VA[UV])
-                .duration(6400)
-                .research(b -> b
-                        .researchStack(LARGE_ENGRAVER.getStackForm())
-                        .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(12800))
-                .buildAndRegister();
+        ModHandler.addShapedRecipe(true, "ion_implantater", ION_IMPLANTATER.getStackForm(),
+                "WCW", "EHP", "WKW",
+                'E', EMITTER_UHV.getStackForm(),
+                'P', ELECTRIC_PUMP_UHV.getStackForm(),
+                'H', MetaTileEntities.HULL[UHV].getStackForm(),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UHV),
+                'K', new UnificationEntry(cableGtSingle, Europium),
+                'W', new UnificationEntry(plate, Adamantium));
+
+        //  Plasma CVD Unit
+        ModHandler.addShapedRecipe(true, "plasma_cvd_unit", PLASMA_CVD.getStackForm(),
+                "PKP", "CHC", "ESE",
+                'P', new UnificationEntry(plate, Vibranium),
+                'K', new UnificationEntry(cableGtSingle, SiliconCarbide),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UEV),
+                'H', MetaTileEntities.HULL[UHV].getStackForm(),
+                'S', SENSOR_UHV.getStackForm(),
+                'E', EMITTER_UHV.getStackForm());
 
         //  GCYM Nerf
         ModHandler.removeRecipeByName("gcym:mega_blast_furnace");
