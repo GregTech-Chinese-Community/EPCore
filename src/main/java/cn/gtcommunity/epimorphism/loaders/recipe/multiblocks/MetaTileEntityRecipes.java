@@ -2,13 +2,20 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.BlockMachineCasing;
+import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.loaders.recipe.CraftingComponent;
 import gregtech.loaders.recipe.MetaTileEntityLoader;
 import gregtech.api.recipes.ModHandler;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
@@ -22,6 +29,47 @@ import static gregtech.common.items.MetaItems.*;
 
 public class MetaTileEntityRecipes {
     public static void init() {
+        //  UHV Hull
+        ModHandler.removeRecipeByName("gregtech:casing_uhv");
+        ModHandler.addShapedRecipe(true, "epimorphism:casing_uhv", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV),
+                "PPP", "PwP", "PPP",
+                'P', new UnificationEntry(plate, Draconium));
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES, IntCircuitIngredient.getIntegratedCircuit(8), OreDictUnifier.get(plate, Neutronium, 8));
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Draconium, 8)
+                .circuitMeta(8)
+                .outputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV))
+                .duration(50)
+                .EUt(16)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[]{OreDictUnifier.get(cableGtSingle, Europium, 2), MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV)},
+                new FluidStack[]{Polybenzimidazole.getFluid(288)});
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV))
+                .input(cableGtSingle, Europium, 2)
+                .fluidInputs(Polyetheretherketone.getFluid(288))
+                .output(MetaTileEntities.HULL[9])
+                .EUt(16)
+                .duration(50)
+                .buildAndRegister();
+
+        //  UEV Hull
+        ModHandler.addShapedRecipe(true, "casing_uev", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UEV),
+                "PPP", "PwP", "PPP",
+                'P', new UnificationEntry(plate, Neutronium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Neutronium, 8)
+                .circuitMeta(8)
+                .outputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UEV))
+                .duration(50)
+                .EUt(16)
+                .buildAndRegister();
+
         //  Dryer recipes
         MetaTileEntityLoader.registerMachineRecipe(true, DRYER,
                 "WCW", "SHS", "WCW",

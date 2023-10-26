@@ -60,5 +60,11 @@ public class EPMaterialPropertyAddition {
         FluidProperty prop = new FluidProperty();
         prop.setFluidTemperature(332);
         SodiumBisulfate.setProperty(PropertyKey.FLUID, prop);
+
+        //  Wire Properties
+        WireProperties wireProp = RutheniumTriniumAmericiumNeutronate.getProperty(PropertyKey.WIRE);
+        wireProp.setSuperconductor(false);
+        wireProp.setLossPerBlock(32);
+        wireProp.setVoltage((int) V[UIV]);
     }
 }

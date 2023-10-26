@@ -21,7 +21,7 @@ public class EPElementMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .element(EPElements.Draconium)
                 .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
-                .blastTemp(9000, BlastProperty.GasTier.HIGH)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST)
                 .build();
     }
 }

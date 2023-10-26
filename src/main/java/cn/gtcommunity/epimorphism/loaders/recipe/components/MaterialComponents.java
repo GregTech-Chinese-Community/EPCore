@@ -110,7 +110,7 @@ public class MaterialComponents {
 
         PLATE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.plate, Draconium)},
-//                {10, new UnificationEntry(OrePrefix.plate, Trinium}
+                {10, new UnificationEntry(OrePrefix.plate, Neutronium)},
 //                {11, new UnificationEntry(OrePrefix.plate, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.plate, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.plate, Trinium)},
