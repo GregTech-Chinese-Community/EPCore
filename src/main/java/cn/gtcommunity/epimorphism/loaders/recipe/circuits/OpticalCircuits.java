@@ -182,7 +182,7 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        ION_IMPLANTATOR_RECIPES.recipeBuilder()
+        ION_IMPLANTATER_RECIPES.recipeBuilder()
                 .input(dust, Silver, 4)
                 .input(plate, PMMA)
                 .output(OPTICAL_INDUCTOR, 16)

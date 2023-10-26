@@ -387,6 +387,7 @@ epimorphism.machine.chemical_plant.tier=等级：%d
 
 recipemap.roaster_recipes.name=焙烧
 
+epimorphism.machine.ion_implantater.name=离子注入机
 recipemap.ion_implanter_recipes.name=真空离子注入
 
 recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
