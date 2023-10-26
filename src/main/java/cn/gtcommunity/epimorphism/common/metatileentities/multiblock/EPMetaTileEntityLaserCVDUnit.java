@@ -46,7 +46,7 @@ public class EPMetaTileEntityLaserCVDUnit extends RecipeMapMultiblockController 
                 .aisle("   XXXXX", "   XGGGX", "   XGGGX", "   XGGGX", "    XXX ")
                 .where('S', selfPredicate())
                 .where('X', states(getCasingState())
-                        .setMinGlobalLimited(66)
+                        .setMinGlobalLimited(60)
                         .or(autoAbilities()))
                 .where('G', states(getGlassState()))
                 .where('C', states(getSubstrateState()))

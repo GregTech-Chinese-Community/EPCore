@@ -1083,7 +1083,6 @@ public class EPFirstDegreeMaterials {
                 .blastTemp(2500, BlastProperty.GasTier.HIGH, VA[UV])
                 .cableProperties(V[UHV], 6, 8)
                 .build();
-
         //  24144 Chromium Germanium Telluride
         ChromiumGermaniumTelluride = new Material.Builder(24144, gregtechId("chromium_germanium_telluride"))
                 .ingot()
@@ -1094,7 +1093,6 @@ public class EPFirstDegreeMaterials {
                 .components(Chrome, 1, Germanium, 1, Tellurium, 3)
                 .blastTemp(2900, BlastProperty.GasTier.HIGHER)
                 .build();
-
         //  24145 Magnetic Chromium Germanium Telluride
         ChromiumGermaniumTellurideMagnetic = new Material.Builder(24145, gregtechId("magnetic_chromium_germanium_telluride"))
                 .ingot()
@@ -1106,7 +1104,6 @@ public class EPFirstDegreeMaterials {
                 .arcSmeltInto(ChromiumGermaniumTelluride)
                 .macerateInto(ChromiumGermaniumTelluride)
                 .build();
-        
         ChromiumGermaniumTelluride.getProperty(PropertyKey.INGOT).setMagneticMaterial(ChromiumGermaniumTellurideMagnetic);
     }
 }
