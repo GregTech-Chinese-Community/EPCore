@@ -169,7 +169,7 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         COIL_ELECTRIC.appendIngredients(Stream.of(new Object[][]{
-//                {9, new UnificationEntry(OrePrefix.wireGtOctal, MercuryCadmiumTelluride)},
+                  {9, new UnificationEntry(OrePrefix.wireGtOctal, AwakenedDraconium)},
 //                {10, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
 //                {11, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
@@ -178,7 +178,7 @@ public class MaterialComponents {
 
         //  TODO Magnetic Samarium Cobalt Alloy
         STICK_MAGNETIC.appendIngredients(Stream.of(new Object[][]{
-//                {9, new UnificationEntry(OrePrefix.stickLong, Trinium)},
+                  {9, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
 //                {10, new UnificationEntry(OrePrefix.stickLong, Trinium)},
 //                {11, new UnificationEntry(OrePrefix.stickLong, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.stickLong, Trinium)},
@@ -243,7 +243,7 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         SPRING.appendIngredients(Stream.of(new Object[][]{
-//                {10, new UnificationEntry(OrePrefix.spring, Trinium)},
+                  {10, new UnificationEntry(OrePrefix.spring, PedotTMA)},
 //                {11, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.spring, Trinium)},
