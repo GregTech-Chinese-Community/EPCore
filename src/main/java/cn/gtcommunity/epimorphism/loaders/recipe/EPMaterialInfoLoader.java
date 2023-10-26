@@ -14,17 +14,21 @@ import static gregtech.common.blocks.MetaBlocks.MACHINE_CASING;
 
 public class EPMaterialInfoLoader {
     public static void init() {
+        //  UHV Machine Casing
         OreDictUnifier.registerOre(MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV), new ItemMaterialInfo(
                 new MaterialStack(Draconium, M * 8)));
 
+        //  UEV Machine Casing
         OreDictUnifier.registerOre(MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UEV), new ItemMaterialInfo(
                 new MaterialStack(Neutronium, M * 8)));
 
+        //  UHV Machine Hull
         OreDictUnifier.registerOre(MetaTileEntities.HULL[9].getStackForm(), new ItemMaterialInfo(
                 new MaterialStack(Draconium, M * 8),
                 new MaterialStack(Europium, M),
                 new MaterialStack(Polyetheretherketone, M * 2)));
 
+        //  UEV Machine Hull
         OreDictUnifier.registerOre(MetaTileEntities.HULL[10].getStackForm(), new ItemMaterialInfo(
                 new MaterialStack(Neutronium, M * 8),
                 new MaterialStack(CarbonNanotube, M),

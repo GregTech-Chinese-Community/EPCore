@@ -70,6 +70,15 @@ public class MetaTileEntityRecipes {
                 .EUt(16)
                 .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UEV))
+                .input(cableGtSingle, CarbonNanotube, 2)
+                .fluidInputs(Polyetheretherketone.getFluid(288))
+                .output(MetaTileEntities.HULL[10])
+                .EUt(16)
+                .duration(50)
+                .buildAndRegister();
+
         //  Dryer recipes
         MetaTileEntityLoader.registerMachineRecipe(true, DRYER,
                 "WCW", "SHS", "WCW",
