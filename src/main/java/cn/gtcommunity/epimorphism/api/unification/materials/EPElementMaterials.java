@@ -49,6 +49,7 @@ public class EPElementMaterials {
                 .color(0x72A0C1)
                 .iconSet(MaterialIconSet.METALLIC)
                 .element(EPElements.Orichalcum)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .blastTemp(9000, BlastProperty.GasTier.HIGH)
                 .build();
         Vibranium = new Material.Builder(26004, gregtechId("vibranium"))
@@ -57,7 +58,7 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xC880FF)
                 .iconSet(MaterialIconSet.SHINY)
-                .flags(GENERATE_PLATE, GENERATE_FOIL)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE)
                 .element(EPElements.Vibranium)
                 .blastTemp(4852, BlastProperty.GasTier.HIGH)
                 .build();
@@ -72,10 +73,12 @@ public class EPElementMaterials {
                 .blastTemp(5225, BlastProperty.GasTier.HIGH)
                 .build();
         Taranium = new Material.Builder(26006, gregtechId("taranium"))
-                .dust()
+                .ingot()
+                .fluid()
                 .color(0x4F404F)
                 .iconSet(MaterialIconSet.METALLIC)
                 .element(EPElements.Taranium)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
     }
 }

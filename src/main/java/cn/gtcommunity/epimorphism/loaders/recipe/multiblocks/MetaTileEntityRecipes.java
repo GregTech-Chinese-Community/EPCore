@@ -6,7 +6,7 @@ import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
-import gregtech.api.unification.ore.OrePrefix;
+
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -158,7 +158,7 @@ public class MetaTileEntityRecipes {
                 .input(frameGt, IncoloyMA956)
                 .inputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_GEARBOX, 4))
                 .input(COMPONENT_GRINDER_TUNGSTEN, 16)
-                .input(OrePrefix.circuit, MarkerMaterials.Tier.LuV, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(gear, Inconel625, 8)
                 .input(plate, Inconel625, 32)
                 .input(plateDouble, HSSE, 8)
@@ -185,7 +185,7 @@ public class MetaTileEntityRecipes {
                 .inputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_GEARBOX, 4))
                 .input(CONVEYOR_MODULE_LuV, 8)
                 .input(ELECTRIC_PUMP_LuV, 8)
-                .input(OrePrefix.circuit, MarkerMaterials.Tier.LuV, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 8)
                 .input(gear, HastelloyN, 8 )
                 .input(plate, HastelloyN, 32)
                 .input(plateDouble, Osmiridium, 8)
@@ -216,6 +216,57 @@ public class MetaTileEntityRecipes {
                 .output(CHEMICAL_PLANT)
                 .EUt(VA[MV])
                 .duration(2400)
+                .buildAndRegister();
+
+        //  GCYM Nerf
+        ModHandler.removeRecipeByName("gcym:mega_blast_furnace");
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium, 4)
+                .input(BLAZING_BLAST_FURNACE, 16)
+                .input(FIELD_GENERATOR_UHV, 4)
+                .input(VOLTAGE_COIL_UV, 4)
+                .input(circuit, MarkerMaterials.Tier.UHV, 8)
+                .input(circuit, MarkerMaterials.Tier.UV, 16)
+                .input(plate, Draconium, 16)
+                .input(plateDouble, Vibranium, 16)
+                .input(plateDouble, TitaniumTungstenCarbide, 16)
+                .input(cableGtHex, SiliconCarbide, 16)
+                .fluidInputs(IncoloyMA956.getFluid(5760))
+                .fluidInputs(HastelloyC276.getFluid(5760))
+                .fluidInputs(Naquadria.getFluid(1440))
+                .output(MEGA_BLAST_FURNACE)
+                .EUt(VA[UHV])
+                .duration(3600)
+                .research(b -> b
+                        .researchStack(BLAZING_BLAST_FURNACE.getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UHV])
+                        .duration(24000))
+                .buildAndRegister();
+
+        ModHandler.removeRecipeByName("gcym:mega_vacuum_freezer");
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Orichalcum, 4)
+                .input(CRYOGENIC_FREEZER, 4)
+                .input(FIELD_GENERATOR_UHV, 4)
+                .input(VOLTAGE_COIL_UV, 4)
+                .input(circuit, MarkerMaterials.Tier.UHV, 8)
+                .input(circuit, MarkerMaterials.Tier.UV, 16)
+                .input(plate, Draconium, 16)
+                .input(plateDouble, Taranium, 16)
+                .input(plateDouble, WatertightSteel, 16)
+                .input(cableGtHex, SiliconCarbide, 16)
+                .fluidInputs(HastelloyX.getFluid(5760))
+                .fluidInputs(MaragingSteel300.getFluid(2880))
+                .fluidInputs(Trinium.getFluid(1440))
+                .output(MEGA_VACUUM_FREEZER)
+                .EUt(VA[UHV])
+                .duration(3600)
+                .research(b -> b
+                        .researchStack(CRYOGENIC_FREEZER.getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UHV])
+                        .duration(24000))
                 .buildAndRegister();
     }
 }
