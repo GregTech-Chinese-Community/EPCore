@@ -5,9 +5,9 @@ import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
-import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -23,41 +23,39 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nonnull;
 
-public class EPMetaTileEntityPlasmaCVDUnit extends RecipeMapMultiblockController {
-    public EPMetaTileEntityPlasmaCVDUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.PLASMA_CVD_RECIPES);
+import static gregtech.common.blocks.MetaBlocks.FRAMES;
+
+public class EPMetaTileEntityLaserCVDUnit extends RecipeMapMultiblockController {
+    public EPMetaTileEntityLaserCVDUnit(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, EPRecipeMaps.LASER_CVD_RECIPES);
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
-        return new EPMetaTileEntityPlasmaCVDUnit(metaTileEntityId);
+        return new EPMetaTileEntityLaserCVDUnit(metaTileEntityId);
     }
 
     @Nonnull
     @Override
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle("XXXXXXX", " XGGGX ", " XGGGX ", "       ")
-                .aisle("XXXXXXX", "XCCCCCX", "X     X", " XGGGX ")
-                .aisle("VXXXXXV", "VCCCCCV", "X     X", " XGGGX ")
-                .aisle("XXXXXXX", "XCCCCCX", "X     X", " XGGGX ")
-                .aisle("XXXXXXX", " SGGGX ", " XGGGX ", "       ")
+                .aisle("   XXXXX", "   XGGGX", "   XGGGX", "   XGGGX", "    XXX ")
+                .aisle("XXXXXXXX", "XXXFCCCF", "XXXF   F", "XXXF   F", "    FFF ")
+                .aisle("XXXXXXXX", "X XFCCCF", "X G    X", "XXXF   F", "    FFF ")
+                .aisle("XXXXXXXX", "XXXFCCCF", "XSXF   F", "XXXF   F", "    FFF ")
+                .aisle("   XXXXX", "   XGGGX", "   XGGGX", "   XGGGX", "    XXX ")
                 .where('S', selfPredicate())
                 .where('X', states(getCasingState())
-                        .setMinGlobalLimited(40)
+                        .setMinGlobalLimited(66)
                         .or(autoAbilities()))
                 .where('G', states(getGlassState()))
                 .where('C', states(getSubstrateState()))
-                .where('V', states(getUniqueCasingState()))
+                .where('F', states(getFrameState()))
                 .build();
     }
 
     private static IBlockState getCasingState() {
-        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.ATOMIC_CASING);
-    }
-
-    private static IBlockState getUniqueCasingState() {
-        return GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.HEAT_VENT);
+        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.MIXER_CASING);
     }
 
     private static IBlockState getSubstrateState() {
@@ -68,6 +66,10 @@ public class EPMetaTileEntityPlasmaCVDUnit extends RecipeMapMultiblockController
         return MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS);
     }
 
+    private static IBlockState getFrameState() {
+        return FRAMES.get(GCYMMaterials.HastelloyX).getBlock(GCYMMaterials.HastelloyX);
+    }
+
     @Nonnull
     @Override
     protected OrientedOverlayRenderer getFrontOverlay() {
@@ -76,6 +78,7 @@ public class EPMetaTileEntityPlasmaCVDUnit extends RecipeMapMultiblockController
 
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
-        return GCYMTextures.ATOMIC_CASING;
+        return GCYMTextures.MIXER_CASING;
     }
 }
+
