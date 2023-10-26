@@ -53,14 +53,14 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
                 .components(Carbon, 8, Hydrogen, 8, Sulfur, 1, Oxygen, 3)
                 .build();
-        //  25005  PEDOT-PSS
+        //  25005  PEDOT:PSS
         PedotPSS = new Material.Builder(25005, gregtechId("pedot_pss"))
                 .ingot()
                 .fluid()
                 .color(14771623)
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Edot, 1, PolystyreneSulfonate, 1)
-                .cableProperties(V[UHV], 24, 0, true)
+                .cableProperties(V[UHV], 24, 0, true) //  TODO find better UHV superconductor
                 .build();
         //  25006  PMMA
         PMMA = new Material.Builder(25006, gregtechId("polymethylmethacrylate"))

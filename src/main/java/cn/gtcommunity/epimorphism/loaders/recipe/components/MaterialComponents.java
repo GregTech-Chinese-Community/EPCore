@@ -127,7 +127,7 @@ public class MaterialComponents {
 
         ROTOR.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.rotor, Draconium)},
-//                {10, new UnificationEntry(OrePrefix.rotor, Trinium)},
+                {10, new UnificationEntry(OrePrefix.rotor, Neutronium)},
 //                {11, new UnificationEntry(OrePrefix.rotor, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.rotor, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.rotor, Trinium)},

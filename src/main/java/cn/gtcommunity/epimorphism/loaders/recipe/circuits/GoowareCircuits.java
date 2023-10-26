@@ -115,7 +115,8 @@ public class GoowareCircuits {
                 .research(b -> b
                         .researchStack(GOOWARE_ASSEMBLY.getStackForm())
                         .CWUt(32)
-                        .EUt(VA[UV]))
+                        .EUt(VA[UV])
+                        .duration(8000))
                 .buildAndRegister();
 
         //  Gooware Mainframe
@@ -129,6 +130,7 @@ public class GoowareCircuits {
                 .input(ADVANCED_SMD_INDUCTOR, 64)
                 .input(foil, KaptonK, 64)
                 .input(RANDOM_ACCESS_MEMORY, 32)
+                //  TODO find better UHV superconductor
                 .input(wireGtDouble, PedotPSS, 16)
                 .input(plate, Americium, 8)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
@@ -139,7 +141,8 @@ public class GoowareCircuits {
                 .research(b -> b
                         .researchStack(GOOWARE_COMPUTER.getStackForm())
                         .CWUt(192)
-                        .EUt(VA[UHV]))
+                        .EUt(VA[UHV])
+                        .duration(8000))
                 .buildAndRegister();
 
         // Test

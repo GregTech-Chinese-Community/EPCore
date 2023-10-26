@@ -265,14 +265,15 @@ public class OpticalCircuits {
                 .input(foil, KaptonE, 32)
                 .input(plate, Tritanium, 4)
                 .fluidInputs(SolderingAlloy.getFluid(L * 12))
-                //  TODO UEV main material fluids (L * 3)
+                .fluidInputs(Neutronium.getFluid(L * 3))
                 .output(OPTICAL_COMPUTER)
                 .duration(400)
                 .EUt(VA[UHV])
                 .research(b -> b
                         .researchStack(OPTICAL_ASSEMBLY.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UHV]))
+                        .EUt(VA[UHV])
+                        .duration(16000))
                 .buildAndRegister();
 
         //  Optical Mainframe
@@ -291,14 +292,15 @@ public class OpticalCircuits {
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .fluidInputs(Kevlar.getFluid(L * 12))
                 .fluidInputs(Polyetheretherketone.getFluid(L * 9))
-                //  TODO UEV main material fluids (L * 6)
+                .fluidInputs(Neutronium.getFluid(L * 6))
                 .output(OPTICAL_MAINFRAME)
                 .duration(1200)
                 .EUt(VA[UEV])
                 .research(b -> b
                         .researchStack(OPTICAL_COMPUTER.getStackForm())
                         .CWUt(384)
-                        .EUt(VA[UEV]))
+                        .EUt(VA[UEV])
+                        .duration(16000))
                 .buildAndRegister();
     }
 }

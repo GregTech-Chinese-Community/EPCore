@@ -4,6 +4,7 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty;
+import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregtech.api.GTValues.*;
@@ -1072,5 +1073,40 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.METALLIC)
                 .components(Cadmium, 1, Sulfur, 1)
                 .build();
+        //  24143 Silicon Carbide
+        SiliconCarbide = new Material.Builder(24143, gregtechId("silicon_carbide"))
+                .dust()
+                .color(0x4D4D4D)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(GENERATE_FINE_WIRE)
+                .components(Silicon, 1, Carbon, 1)
+                .blastTemp(2500, BlastProperty.GasTier.HIGH, VA[UV])
+                .cableProperties(V[UHV], 6, 8)
+                .build();
+
+        //  24144 Chromium Germanium Telluride
+        ChromiumGermaniumTelluride = new Material.Builder(24144, gregtechId("chromium_germanium_telluride"))
+                .ingot()
+                .fluid()
+                .color(0x8F103E)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD)
+                .components(Chrome, 1, Germanium, 1, Tellurium, 3)
+                .blastTemp(2900, BlastProperty.GasTier.HIGHER)
+                .build();
+
+        //  24145 Magnetic Chromium Germanium Telluride
+        ChromiumGermaniumTellurideMagnetic = new Material.Builder(24145, gregtechId("magnetic_chromium_germanium_telluride"))
+                .ingot()
+                .color(0x8F103E)
+                .iconSet(MaterialIconSet.MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, IS_MAGNETIC)
+                .components(ChromiumGermaniumTelluride, 1)
+                .ingotSmeltInto(ChromiumGermaniumTelluride)
+                .arcSmeltInto(ChromiumGermaniumTelluride)
+                .macerateInto(ChromiumGermaniumTelluride)
+                .build();
+        
+        ChromiumGermaniumTelluride.getProperty(PropertyKey.INGOT).setMagneticMaterial(ChromiumGermaniumTellurideMagnetic);
     }
 }
