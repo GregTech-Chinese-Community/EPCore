@@ -10,7 +10,7 @@ import gregtech.common.metatileentities.MetaTileEntities;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.common.blocks.MetaBlocks.MACHINE_CASING;
+import static gregtech.common.blocks.MetaBlocks.*;
 
 public class EPMaterialInfoLoader {
     public static void init() {

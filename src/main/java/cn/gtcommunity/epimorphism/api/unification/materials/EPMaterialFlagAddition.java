@@ -1,7 +1,6 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags;
-import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialFlags;
 
