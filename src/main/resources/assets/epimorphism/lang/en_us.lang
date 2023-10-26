@@ -553,6 +553,10 @@ gregtech.material.cadmium_sulfide=Cadmium Sulfide
 gregtech.material.silicon_carbide=Silicon Carbide
 gregtech.material.chromium_germanium_telluride=Chromium Germanium Telluride
 gregtech.material.magnetic_chromium_germanium_telluride=Magnetic Chromium Germanium Telluride
+gregtech.material.lithium_fluoride=Lithium Fluoride
+gregtech.material.barium_carbonate=Barium Carbonate
+gregtech.material.carbon_disulfide=Carbon Disulfide
+gregtech.material.sodium_thiosulfate=Sodium Thiosulfate
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K
@@ -641,6 +645,21 @@ gregtech.material.dimethylamine_hydrochloride=Dimethylamine Hydrochloride
 gregtech.material.potassium_formate=Potassium Formate
 gregtech.material.diethyl_sulfide=Diethyl Sulfide
 gregtech.material.dimethylcadmium=Dimethylcadmium
+gregtech.material.bets_perrhenate=Bisethylenedithiotetraselenafulvalene Perrhenate
+gregtech.material.bisethylenedithiotetraselenafulvalene=Bisethylenedithiotetraselenafulvalene (BETS)
+gregtech.material.lithiumthiinediselenide=Lithiumthiinediselenide
+gregtech.material.cyclopentadienyl_titanium_trichloride=Cyclopentadienyl Titanium Trichloride (CTT)
+gregtech.material.propadiene=Propadiene
+gregtech.material.barium_triflate=Barium Triflate
+gregtech.material.scandium_triflate=Scandium Triflate
+gregtech.material.barium_triflate_solution=Barium Triflate Solution
+gregtech.material.biperfluoromethanedisulfide=Biperfluoromethanedisulfide
+gregtech.material.butyl_lithium=Butyl Lithium
+gregtech.material.bromodihydrothiine=Bromodihydrothiine
+gregtech.material.chloroethane=Chloroethane
+gregtech.material.dibromoacrolein=Dibromoacrolein
+gregtech.material.formic_acid=Formic Acid
+gregtech.material.sodium_formate=Sodium Formate
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=Belousov-Zhabotinsky Medium
@@ -659,3 +678,6 @@ gregtech.material.chalcogen_anode_mud=Chalcogen Anode Mud
 ##  Machine Casing Materials
 gregtech.material.inconel_625=Inconel-625
 gregtech.material.hastelloy_n=Hastelloy-N
+gregtech.material.stellite=Stellite Alloy
+gregtech.material.quantum_alloy=Quantum Alloy
+gregtech.material.grisium=Grisium

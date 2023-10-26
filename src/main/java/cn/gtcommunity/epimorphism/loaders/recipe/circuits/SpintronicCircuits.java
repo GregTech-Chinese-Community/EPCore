@@ -9,6 +9,7 @@ import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
 
 public class SpintronicCircuits {
     public static void init() {
@@ -36,5 +37,22 @@ public class SpintronicCircuits {
                     .EUt(VA[LuV])
                     .buildAndRegister();
         }
+
+        //  STTRAM
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(RANDOM_ACCESS_MEMORY)
+                .input(plate, ErbiumDopedZBLANGlass, 2)
+                .input(plate, PraseodymiumDopedZBLANGlass, 2)
+                .input(foil, Vibranium, 8)
+                .input(wireFine, PedotPSS, 16)
+                .output(SPIN_TRANSFER_TORQUE_MEMORY, 2)
+                .duration(200)
+                .EUt(VA[UEV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  TODO New NOR
+
+        //  TODO Other recipes
     }
 }

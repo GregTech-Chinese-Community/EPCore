@@ -58,6 +58,7 @@ public class EPRecipeManager {
         PhotoresistivesChain.init();
         PMMAChain.init();
         SeleniumTelluriumChain.init();
+        SuperconductorsChain.init();
         TaraniumChain.init();
         ThalliumChain.init();
         TungstenChain.init();

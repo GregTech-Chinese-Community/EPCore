@@ -2,8 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.CHEMICAL_PLANT_RECIPES;
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.ROASTER_RECIPES;
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;

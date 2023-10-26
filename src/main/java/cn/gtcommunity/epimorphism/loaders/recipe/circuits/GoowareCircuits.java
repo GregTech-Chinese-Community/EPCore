@@ -130,8 +130,7 @@ public class GoowareCircuits {
                 .input(ADVANCED_SMD_INDUCTOR, 64)
                 .input(foil, KaptonK, 64)
                 .input(RANDOM_ACCESS_MEMORY, 32)
-                //  TODO find better UHV superconductor
-                .input(wireGtDouble, PedotPSS, 16)
+                .input(wireGtDouble, QuantumAlloy, 16)
                 .input(plate, Americium, 8)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .fluidInputs(KaptonE.getFluid(L * 9))

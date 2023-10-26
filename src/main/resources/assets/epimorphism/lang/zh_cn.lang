@@ -553,6 +553,10 @@ gregtech.material.cadmium_sulfide=硫化镉
 gregtech.material.silicon_carbide=碳化硅
 gregtech.material.chromium_germanium_telluride=碲化锗铬
 gregtech.material.magnetic_chromium_germanium_telluride=磁化碲化锗铬
+gregtech.material.lithium_fluoride=氟化锂
+gregtech.material.barium_carbonate=碳酸钡
+gregtech.material.carbon_disulfide=二硫化碳
+gregtech.material.sodium_thiosulfate=硫代硫酸钠
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -641,6 +645,21 @@ gregtech.material.dimethylamine_hydrochloride=盐酸二甲胺
 gregtech.material.potassium_formate=甲醇钾
 gregtech.material.diethyl_sulfide=二乙硫醚
 gregtech.material.dimethylcadmium=二甲基镉
+gregtech.material.bets_perrhenate=高铼酸双（乙烯二硫代）四硒富瓦烯
+gregtech.material.bisethylenedithiotetraselenafulvalene=双（乙烯二硫代）四硒富瓦烯（BETS）
+gregtech.material.lithiumthiinediselenide=二硒醚合硫锂
+gregtech.material.cyclopentadienyl_titanium_trichloride=环戊二烯三氯化钛（CTT）
+gregtech.material.propadiene=丙二烯
+gregtech.material.barium_triflate=三氟甲基磺酸钡
+gregtech.material.scandium_triflate=三氟甲基磺酸钪
+gregtech.material.barium_triflate_solution=三氟甲基磺酸钡溶液
+gregtech.material.biperfluoromethanedisulfide=三氟甲基二硫醚
+gregtech.material.butyl_lithium=丁基锂
+gregtech.material.bromodihydrothiine=溴二氢硫醚
+gregtech.material.chloroethane=氯乙烷
+gregtech.material.dibromoacrolein=二溴丙烯醛
+gregtech.material.formic_acid=甲酸
+gregtech.material.sodium_formate=甲酸钠
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -659,3 +678,6 @@ gregtech.material.chalcogen_anode_mud=硫系元素阳极泥
 ##  Machine Casing Materials
 gregtech.material.inconel_625=镍基合金-625
 gregtech.material.hastelloy_n=哈斯特洛依合金-N
+gregtech.material.stellite=铬钴锰钛合金
+gregtech.material.quantum_alloy=量子合金
+gregtech.material.grisium=灰钛合金

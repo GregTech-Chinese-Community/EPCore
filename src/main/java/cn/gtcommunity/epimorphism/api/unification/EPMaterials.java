@@ -162,6 +162,10 @@ public EPMaterials() {}
     public static Material SiliconCarbide;
     public static Material ChromiumGermaniumTelluride;
     public static Material ChromiumGermaniumTellurideMagnetic;
+    public static Material LithiumFluoride;
+    public static Material BariumCarbonate;
+    public static Material CarbonDisulfide;
+    public static Material SodiumThiosulfate;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -249,6 +253,21 @@ public EPMaterials() {}
     public static Material PotassiumFormate;
     public static Material DiethylSuflide;
     public static Material Dimethylcadmium;
+    public static Material BETSPerrhenate;
+    public static Material Bisethylenedithiotetraselenafulvalene;
+    public static Material Lithiumthiinediselenide;
+    public static Material CyclopentadienylTitaniumTrichloride;
+    public static Material Propadiene;
+    public static Material BariumTriflate;
+    public static Material ScandiumTriflate;
+    public static Material BariumTriflateSolution;
+    public static Material Biperfluoromethanedisulfide;
+    public static Material ButylLithium;
+    public static Material Bromodihydrothiine;
+    public static Material Chloroethane;
+    public static Material Dibromoacrolein;
+    public static Material FormicAcid;
+    public static Material SodiumFormate;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -267,7 +286,9 @@ public EPMaterials() {}
     //  Machine Casing Materials
     public static Material Inconel625;
     public static Material HastelloyN;
-
+    public static Material Stellite;
+    public static Material QuantumAlloy;
+    public static Material Grisium;
 
     //  Biological Production Line
     /*public static Material ArtificialBaseX;
