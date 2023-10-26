@@ -1,6 +1,8 @@
 #  Ore Prefixes
 item.material.oreprefix.coil=%s Coil
 item.material.oreprefix.plateCurved=Curved %s Plate
+item.material.oreprefix.milled=Milled %s Dust
+metaitem.milled.tooltip.flotation=Further processing requires §6Industrial Flotation Factory§7.
 
 #  Tools
 item.gt.tool.universal_spade.name=%s Universal Spade
@@ -173,6 +175,8 @@ metaitem.wafer.chip.phase_change_memory.name=PRAM
 metaitem.wafer.chip.phase_change_memory.tooltip=Phase-change Memory
 metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM
 metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=Spin-Transfer Torque Memory
+metaitem.wafer.chip.optical_nor_memory_chip.name=ACNOR
+metaitem.wafer.chip.optical_nor_memory_chip.tooltip=All-optical Cascaded logic NOR
 metaitem.wafer.nano_pic.name=NPIC Wafer
 metaitem.wafer.nano_pic.tooltip=Raw Nano Power Circuit
 metaitem.wafer.chip.nano_pic.name=NPIC
@@ -185,6 +189,10 @@ metaitem.wafer.femto_pic.name=FPIC Wafer
 metaitem.wafer.femto_pic.tooltip=Raw Femto Power Circuit
 metaitem.wafer.chip.femto_pic.name=FPIC
 metaitem.wafer.chip.femto_pic.tooltip=Femto Power Integrated Circuit
+metaitem.wafer.atto_pic.name=APIC Wafer
+metaitem.wafer.atto_pic.tooltip=Raw Atto Power Circuit
+metaitem.wafer.chip.atto_pic.name=APIC
+metaitem.wafer.chip.atto_pic.tooltip=Raw Atto Power Integrated Circuit
 metaitem.wafer.zepto_pic.name=ZPIC Wafer
 metaitem.wafer.zepto_pic.tooltip=Raw Zepto Power Circuit
 metaitem.wafer.chip.zepto_pic.name=ZPIC
@@ -198,7 +206,7 @@ metaitem.biological.components.hyperribosome.tooltip=Protein Factory
 metaitem.biological.components.neutron_absorbing_protein.name=Neutron Absorbing Protein
 metaitem.biological.components.neutron_absorbing_protein.tooltip=Inconceivable
 metaitem.biological.components.quantum_tunneling_microtubule.name=Quantum Tunneling Microtubule
-metaitem.biological.components.quantum_tunneling_microtubule.tooltip=Biological fusion has finally become a reality
+metaitem.biological.components.quantum_tunneling_microtubule.tooltip=Biological Fusion has finally become a reality
 metaitem.biological.components.superexcited_conductive_polymer.name=Superexcited Conductive Polymer
 metaitem.biological.components.superexcited_conductive_polymer.tooltip=Biological High-voltage Line
 metaitem.biological.components.ultra_micro_phase_separator.name=Ultra-micro Phase Separator
@@ -210,11 +218,22 @@ metaitem.biological.components.dna_encoder.tooltip=Part of a Self-replicating Tu
 metaitem.biological.components.dna_decode_encoder.name=DNA Decode-encoder
 metaitem.biological.components.dna_decode_encoder.tooltip=Will deplete the universe in order to calculate
 
+#   Mill Balls
+metaitem.mill.grindball_soapstone.name=Soapstone Grindball
+metaitem.mill.grindball_aluminium.name=Aluminium Grindball
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_invar_casing.name=Plated Adiabatic Invar Machine Casing
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=Plated Antifreeze Aluminium Machine Casing
+tile.ep_mill_casing.isa_mill_casing.name=Inconel-625 Machine Casing
+tile.ep_mill_casing.isa_mill_casing_pipe.name=Inconel-625 Mild dispersion Pipe Casing
+tile.ep_mill_casing.isa_mill_casing_gearbox.name=Inconel-625 Ball-milling Gearbox Casing
+tile.ep_mill_casing.flotation_casing.name=Hastelloy-N Machine Casing
+tile.ep_mill_casing.flotation_casing_pipe.name=Hastelloy-N Oil film coated Pipe Casing
+tile.ep_mill_casing.flotation_casing_gearbox.name=Hastelloy-N Gearbox Casing
+tile.ep_active_multiblock_casing.flotation_intake_casing.name=Hastelloy-N Sieve selection Intake Casing
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=Boron Silicate Glass
@@ -246,6 +265,8 @@ tile.ep_crucible_casing.tungsten.name=Tungsten Crucible
 
 #  Others
 metaitem.magnetron.name=Magnetron
+metaitem.carbon_allotrope.name=Carbon Allotrope Mixture
+metaitem.graphene_aligned.name=Graphene-Aligned Carbon Nanotube
 
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
@@ -253,13 +274,44 @@ epimorphism.recipe.glass_tier=Glass Tier:%s
 epimorphism.recipe.ph=pH:%d
 epimorphism.recipe.ph_change=pH Change:%d
 epimorphism.recipe.ph_error_range=pH Error Range:±%d
+epimorphism.recipe.grind_ball_soapstone=Grindball material: Soapstone
+epimorphism.recipe.grind_ball_aluminium=Grindball material: Aluminium
 
 #  Machines
+epimorphism.machine.dryer.lv.name=Basic Chemical Dryer
+epimorphism.machine.dryer.lv.tooltip=Not for Hair
+epimorphism.machine.dryer.mv.name=Advanced Chemical Dryer
+epimorphism.machine.dryer.mv.tooltip=Not for Hair
+epimorphism.machine.dryer.hv.name=Advanced Chemical Dryer II
+epimorphism.machine.dryer.hv.tooltip=Not for Hair
+epimorphism.machine.dryer.ev.name=Advanced Chemical Dryer III
+epimorphism.machine.dryer.ev.tooltip=Not for Hair
+epimorphism.machine.dryer.iv.name=Elite Chemical Dryer
+epimorphism.machine.dryer.iv.tooltip=Not for Hair
+epimorphism.machine.dryer.luv.name=Elite Chemical Dryer II
+epimorphism.machine.dryer.luv.tooltip=Not for Hair
+epimorphism.machine.dryer.zpm.name=Elite Chemical Dryer III
+epimorphism.machine.dryer.zpm.tooltip=Not for Hair
+epimorphism.machine.dryer.uv.name=Ultimate Chemical Dryer
+epimorphism.machine.dryer.uv.tooltip=Moisture Remover
+epimorphism.machine.dryer.uhv.name=Epic Chemical Dryer
+epimorphism.machine.dryer.uhv.tooltip=Moisture Remover
+epimorphism.machine.dryer.uev.name=Epic Chemical Dryer II
+epimorphism.machine.dryer.uev.tooltip=Moisture Remover
+epimorphism.machine.dryer.uiv.name=Epic Chemical Dryer III
+epimorphism.machine.dryer.uiv.tooltip=Moisture Remover
+epimorphism.machine.dryer.uxv.name=Epic Chemical Dryer IV
+epimorphism.machine.dryer.uxv.tooltip=Moisture Remover
+epimorphism.machine.dryer.opv.name=Legendary Chemical Dryer
+epimorphism.machine.dryer.opv.tooltip=Moisture Remover
+
 epimorphism.machine.sonicator.name=Sonicator
 recipemap.sonication_recipes.name=Sonication
 
 epimorphism.machine.cvd_unit.name=CVD Unit
 recipemap.cvd_recipes.name=Chemical Vapor Deposition
+
+epimorphism.machine.multiblock.glass_tier=Glass tier: %s (%s)
 
 epimorphism.machine.nanoscale_fabricator.name=Nanoscale Fabricator
 epimorphism.machine.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
@@ -271,9 +323,36 @@ recipemap.crystallization_recipes.name=Crystallization
 epimorphism.machine.catalytic_reformer.name=Catalytic Reformer
 recipemap.catalytic_reformer_recipes.name=Catalytic Reformation
 
+epimorphism.machine.fermentation_tank.name=Fermentation Tank
+recipemap.fermentation_tank_recipes.name=Biological Fermentation
+epimorphism.machine.fermentation_tank.ph=ph: %s
+epimorphism.machine.fermentation_tank.description=Fermentation tank is a multiblock which facility for your development of biotechnology. You can use it for large-scale fermentation which will provide you with important biological materials. The growth of microorganisms requires a specific pH value, you need to adjust the pH value of the fermentation broth by inputting liquid/items into the buffer hatch. Thanks to special manufacturing technology and requirements, it can use a wide range of buffer which is very useful for cultivating certain special microorganisms. You can also input a universal buffer to reset the pH value to 7, and the metabolic products of microorganisms will also change the pH value.Do not worry, microorganisms do not have strict requirements for pH values, you can check the error range on the formula interface. The next page lists data for different buffers, in units of 1 or 1000L.
+epimorphism.machine.fermentation_tank.extra1= /n /n /n /n /n
+epimorphism.machine.fermentation_tank.extra2=Buffer:/n Sulfuric acid: -3.15 1.55/n Sodium hydroxide: 3.15 13.55
+
+epimorphism.machine.buffer_hatch.name=Buffer Hatch
+epimorphism.machine.buffer_hatch.import.tooltip=Input buffer for multiblocks
+epimorphism.multipart.ph.name=pH: %s
+
+epimorphism.machine.mill_ball_hatch.name=Grindball Hatch
+epimorphism.multipart.ball.only=Only grindballs can be placed
+
+epimorphism.machine.catalyst_hatch.name=Catalyst Hatch
+epimorphism.multipart.catalyst.only=Only catalysts can be placed
+
+epimorphism.machine.burner_reactor.name=Burner Reactor
 recipemap.burner_reactor_recipes.name=Combustion Reaction
 
+epimorphism.machine.cryogenic_reactor.name=Cryogenic Reactor
 recipemap.cryogenic_reactor_recipes.name=Low-temperature Reaction
+
+epimorphism.machine.mega_alloy_blast_smelter.name=Mega Alloy Blast Smelter
+epimorphism.machine.mega_alloy_blast_smelter.max_parallel=Max parallel: %s
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.1=Glass level determines the maximum voltage.
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=Max parallel is four times the coil level.
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=For each level higher than cupronickel, duration required for recipes increases to 0.8.
+
+recipemap.dryer_recipes.name=Drying
 
 epimorphism.machine.blazing_blast_furnace.name=Volcanus
 epimorphism.machine.blazing_blast_furnace.amount=Blazing Pyrotheum: %sL
@@ -281,7 +360,7 @@ epimorphism.machine.blazing_blast_furnace.heat=Blazing Pyrotheum are converting 
 epimorphism.machine.blazing_blast_furnace.warning=Insufficient Blazing Pyrotheum
 epimorphism.machine.blazing_blast_furnace.tooltip.1=Need to provide §cBlazing Pyrotheum§7 for work
 epimorphism.machine.blazing_blast_furnace.tooltip.2=When no §cBlazing Pyrotheum§7 are provided, Volcanus will shut down.
-epimorphism.machine.blazing_blast_furnace.tooltip.3=The maximum parallels is determined based on the Coil level, and each improvement will increase maximum parallels to twice the original number.
+epimorphism.machine.blazing_blast_furnace.tooltip.3=The max parallels is determined based on the Coil level, and each improvement will increase max parallels to twice the original number.
 
 epimorphism.machine.cryogenic_freezer.name=Cryogenic Freezer
 epimorphism.machine.cryogenic_freezer.amount=Gelid Cryotheum: %sL
@@ -290,13 +369,186 @@ epimorphism.machine.cryogenic_freezer.warning=Insufficient Gelid Cryotheum
 epimorphism.machine.cryogenic_freezer.tooltip.1=Need to provide §bGelid Cryotheum§7 for work
 epimorphism.machine.cryogenic_freezer.tooltip.2=When no §bGelid Cryotheum§7 are provided, Cryogenic Freezer will shut down.
 
+epimorphism.machine.isa_mill.name=Isa Mill
+recipemap.isa_mill_recipes.name=Wet Milling
+
+epimorphism.machine.flotation_factory.name=Industrial Flotation Factory
+recipemap.flotation_factory_recipes.name=Flotation
+
+epimorphism.machine.vacuum_drying_furnace.name=Vacuum Drying Furnace
+recipemap.vacuum_drying_furnace_recipes.name=Vacuum Drying
+
+epimorphism.machine.chemical_plant.name=Chemical Plant
+recipemap.chemical_plant_recipes.name=Chemical Processing
+epimorphism.machine.chemical_plant.coil_tier=Coil level: %d
+epimorphism.machine.chemical_plant.casing_tier=Casing level: %d
+epimorphism.machine.chemical_plant.tube_tier=Pipe level: %d
+epimorphism.machine.chemical_plant.tier=Tier: %d
+
+recipemap.roaster_recipes.name=Roaster
+
+recipemap.ion_implanter_recipes.name=Vacuum Ion Implantation
+
+recipemap.plasma_cvd_recipes.name=Plasma-enhanced Chemical Vapor Deposition
+recipemap.laser_cvd_recipes.name=Laser-induced Chemical Vapor Deposition
+
 #  Materials
+
+##  Element Materials
+gregtech.material.draconium=Draconium
+gregtech.material.awakened_draconium=Awakened Draconium
+gregtech.material.chaotic_draconium=Chaotic Draconium
+gregtech.material.orichalcum=Orichalcum
+gregtech.material.vibranium=Vibranium
+gregtech.material.adamantium=Adamantium
+gregtech.material.taranium=Taranium
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=Graphene Oxide
 gregtech.material.hydrazine=Hydrazine
 gregtech.material.beryllium_oxide=Beryllium Oxide
 gregtech.material.hydrogen_peroxide=Hydrogen Peroxide
+gregtech.material.tungsten_trioxide=Tungsten Trioxide
+gregtech.material.hexagonal_boron_nitride=Hexagonal Boron Nitride
+gregtech.material.cubic_boron_nitride=Cubic Boron Nitride
+gregtech.material.boric_acid=Boric Acid
+gregtech.material.boron_trioxide=Boron Trioxide
+gregtech.material.boron_trifluoride=Boron Trifluoride
+gregtech.material.lithium_hydride=Lithium Hydride
+gregtech.material.lithium_tetrafluoroborate=Lithium Tetrafluoroborate
+gregtech.material.diborane=Diborane
+gregtech.material.borazine=Borazine
+gregtech.material.boron_trichloride=Boron Trichloride
+gregtech.material.trichloroborazine=Trichloroborazine
+gregtech.material.amorphous_boron_nitride=Amorphous Boron Nitride
+gregtech.material.heterodiamond=Heterodiamond
+gregtech.material.cubic_heterodiamond=Cubic Heterodiamond
+gregtech.material.carbon_nanotube=Carbon Nanotube
+gregtech.material.silver_tetrafluoroborate=Silver Tetrafluoroborate
+gregtech.material.trimethyltin_chloride=Trimethyltin Chloride
+gregtech.material.silver_chloride=Silver Chloride
+gregtech.material.chloroplatinic_acid=Chloroplatinic Acid
+gregtech.material.potassium_tetrachloroplatinate=Potassium Tetrachloroplatinate
+gregtech.material.nickel_triphenylphosphite=Nickel Triphenylphosphite
+gregtech.material.nickel_chloride=Nickel Chloride
+gregtech.material.phosphorus_trichloride=Phosphorus Trichloride
+gregtech.material.ammonium_sulfate=Ammonium Sulfate
+gregtech.material.ammonium_persulfate=Ammonium Persulfate
+gregtech.material.hydroxylamine_disulfate=Hydroxylamine Disulfate
+gregtech.material.hydroxylamine=Hydroxylamine
+gregtech.material.ammonium_nitrate=Ammonium Nitrate
+gregtech.material.thallium_sulfate=Thallium Sulfate
+gregtech.material.thallium_chloride=Thallium Chloride
+gregtech.material.iodized_brine=Iodized Brine
+gregtech.material.iodine_brine_mixture=Iodine Brine Mixture
+gregtech.material.brominated_brine=Brominated Brine
+gregtech.material.iodine_slurry=Iodine Slurry
+gregtech.material.sodium_iodate=Sodium Iodate
+gregtech.material.sodium_iodide=Sodium Iodide
+gregtech.material.sodium_hypochlorite=Sodium Hypochlorite
+gregtech.material.sodium_periodate=Sodium Periodate
+gregtech.material.acidic_brominated_brine=Acidic Brominated Brine
+gregtech.material.bromine_sulfate_solution=Bromine Sulfate Solution
+gregtech.material.overheated_bromine_sulfate_solution=Overheated Bromine Sulfate Solution
+gregtech.material.wet_bromine=Wet Bromine
+gregtech.material.debrominated_water=Debrominated Water
+gregtech.material.palladium_chloride=Palladium Chloride
+gregtech.material.palladium_on_carbon=Palladium on Carbon
+gregtech.material.potassium_permanganate=Potassium Permanganate
+gregtech.material.potassium_manganate=Potassium Manganate
+gregtech.material.tin_chloride=Tin Dichloride
+gregtech.material.silver_oxide=Silver Oxide
+gregtech.material.sodium_fluoride=Sodium Fluoride
+gregtech.material.zn_fe_al_cl_catalyst=Zinc-Iron-Aluminum-Chlorine Combined Catalyst
+gregtech.material.sodium_nitrite=Sodium Nitrite
+gregtech.material.sodium_nitrate=Sodium Nitrate
+gregtech.material.fluoroboric_acid=Fluoroboric Acid
+gregtech.material.benzenediazonium_tetrafluoroborate=Benzenediazonium Tetrafluoroborate
+gregtech.material.gallium_trichloride=Gallium Trichloride
+gregtech.material.aluminium_trichloride=Aluminium Trichloride
+gregtech.material.aluminium_hydroxide=Aluminium Hydroxide
+gregtech.material.alumina=Alumina
+gregtech.material.gallium_trioxide=Gallium Trioxide
+gregtech.material.gallium_nitride=Gallium Nitride
+gregtech.material.fullerene=Fullerene
+gregtech.material.geodesic_polyarene=Geodesic Polyarene
+gregtech.material.ti_al_catalyst=Titanium-Aluminum Combined Catalyst
+gregtech.material.potassium_cyanide=Potassium Cyanide
+gregtech.material.potassium_bromide=Potassium Bromide
+gregtech.material.bismuth_vanadate=Bismuth Vanadate
+gregtech.material.bismuth_vanadate_solution=Bismuth Vanadate Solution
+gregtech.material.ammonium_vanadate=Ammonium Vanadate
+gregtech.material.vanadium_slag=Vanadium Slag
+gregtech.material.bismuth_nitrate_solution=Bismuth Nitrate Solution
+gregtech.material.sodium_vanadate=Sodium Vanadate
+gregtech.material.vanadium_waste_solution=Vanadium Waste Solution
+gregtech.material.sodium_bromide=Sodium Bromide
+gregtech.material.white_phosphorus=White Phosphorus
+gregtech.material.red_phosphorus=Red Phosphorus
+gregtech.material.violet_phosphorus=Violet Phosphorus
+gregtech.material.black_phosphorus=Black Phosphorus
+gregtech.material.blue_phosphorus=Blue Phosphorus
+gregtech.material.wollastonite=Wollastonite
+gregtech.material.phosphorene=Phosphorene
+gregtech.material.phosphoryl_chloride=Phosphoryl Chloride
+gregtech.material.phosphine=Phosphine
+gregtech.material.copper_chloride=Copper Chloride
+gregtech.material.lithium_hydroxide=Lithium Hydroxide
+gregtech.material.lithium_amalgam=Lithium Amalgam
+gregtech.material.hexafluoride_enriched_naquadah_solution=Hexafluoride Enriched Naquadah Solution
+gregtech.material.xenon_hexafluoro_enriched_naquadate=Xenon Hexafluoro-Enriched Naquadate
+gregtech.material.enriched_naquadah_residue_solution=Enriched Naquadah Residue Solution
+gregtech.material.xenoauric_fluoroantimonic_acid=Xenoauric Fluoroantimonic Acid
+gregtech.material.gold_chloride=Gold Chloride
+gregtech.material.bromine_trifluoride=Bromine Trifluoride
+gregtech.material.gold_trifluoride=Gold Trifluoride
+gregtech.material.naquadria_caesiumfluoride=Naquadria Caesiumfluoride
+gregtech.material.acidic_naquadria_caesiumfluoride=Acidic Naquadria Caesiumfluoride
+gregtech.material.nitrosonium_octafluoroxenate=Nitrosonium Octafluoroxenate
+gregtech.material.naquadria_caesium_xenonnonfluoride=Naquadria Caesium Xenonnonfluoride
+gregtech.material.radon_naquadria_octafluoride=Radon Naquadria Octafluoride
+gregtech.material.caesium_xenontrioxide_fluoride=Caesium Xenontrioxide Fluoride
+gregtech.material.radon_trioxide=Radon Trioxide
+gregtech.material.caesium_fluoride=Caesium Fluoride
+gregtech.material.xenon_trioxide=Xenon Trioxide
+gregtech.material.hexafluoride_naquadria_solution=Hexafluoride Naquadria Solution
+gregtech.material.naquadria_residue_solution=Naquadria Residue Solution
+gregtech.material.radon_difluoride=Radon Difluoride
+gregtech.material.heavy_alkali_chloride_solution=Heavy Alkali Chloride Solution
+gregtech.material.stannic_chloride=Tin Tetrachloride
+gregtech.material.rubidium_chlorostannate=Rubidium Chlorostannate
+gregtech.material.caesium_chlorostannate=Caesium Chlorostannate
+gregtech.material.germanium_dioxide=Germanium Dioxide
+gregtech.material.roasted_sphalerite=Roasted Sphalerite
+gregtech.material.zinc_rich_sphalerite=Zinc rich Sphalerite
+gregtech.material.zinc_oxide=Zinc Oxide
+gregtech.material.waelz_oxide=Waelz Oxide
+gregtech.material.waelz_slag=Waelz Slag
+gregtech.material.impure_germanium_dioxide=Impure Germanium Dioxide
+gregtech.material.germanium_tetrachloride=Germanium Tetrachloride
+gregtech.material.molybdenum_trioxide=Molybdenum Trioxide
+gregtech.material.lead_chloride=Lead Chloride
+gregtech.material.perrhenic_acid=Perrhenic Acid
+gregtech.material.ammonium_perrhenate=Ammonium Perrhenate
+gregtech.material.niobium_pentoxide=Niobium Pentoxide
+gregtech.material.tantalum_pentoxide=Tantalum Pentoxide
+gregtech.material.calcium_difluoride=Calcium Difluoride
+gregtech.material.manganese_difluoride=Manganese Difluoride
+gregtech.material.calcium_carbide=Calcium Carbide
+gregtech.material.calcium_hydroxide=Calcium Hydroxide
+gregtech.material.sodium_tellurite=Sodium Tellurite
+gregtech.material.selenium_dioxide=Selenium Dioxide
+gregtech.material.tellurium_dioxide=Tellurium Dioxide
+gregtech.material.selenous_acid=Selenous Acid
+gregtech.material.gst_glass=GST Glass
+gregtech.material.zblan_glass=ZBLAN Glass
+gregtech.material.erbium_doped_zblan_glass=Erbium doped ZBLAN Glass
+gregtech.material.praseodymium_doped_zblan_glass=Praseodymium doped ZBLAN Glass
+gregtech.material.silicon_tetrachloride=Silicon Tetrachloride
+gregtech.material.cadmium_sulfide=Cadmium Sulfide
+gregtech.material.silicon_carbide=Silicon Carbide
+gregtech.material.chromium_germanium_telluride=Chromium Germanium Telluride
+gregtech.material.magnetic_chromium_germanium_telluride=Magnetic Chromium Germanium Telluride
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K
@@ -307,20 +559,84 @@ gregtech.material.polystyrene_sulfonate=Polystyrene Sulfonate (PSS)
 gregtech.material.pedot_pss=PEDOT:PSS
 gregtech.material.polymethylmethacrylate=Polymethylmethacrylate (PMMA)
 gregtech.material.pedot_tma=PEDOT-TMA
-gregtech.material.tetramethylammonium_hydroxide=Tetramethyl ammonium hydroxide (TMAH)
+gregtech.material.tetramethylammonium_hydroxide=Tetramethylammonium Hydroxide (TMAH)
 gregtech.material.potassium_hydroxide=Potassium Hydroxide
 gregtech.material.potassium_bromate=Potassium Bromate
 gregtech.material.malonic_acid=Malonic Acid
 gregtech.material.chloroacetic_acid=Chloroacetic Acid
 gregtech.material.trichloroethylene=Trichloroethylene
 gregtech.material.dichloroethane=Dichloroethane
-gregtech.material.hydrobromic_acid=Hydrobromic acid
+gregtech.material.hydrobromic_acid=Hydrobromic Acid
 gregtech.material.butanediol=Butanediol
 gregtech.material.diacetyl=Diacetyl
 gregtech.material.ethylene_glycol=Ethylene Glycol
 gregtech.material.sulfur_dichloride=Sulfur Dichloride
 gregtech.material.acetone_cyanohydrin=Acetone Cyanohydrin
 gregtech.material.para_xylene=Para Xylene
+gregtech.material.cycloparaphenylene=Cycloparaphenylene (CPP)
+gregtech.material.dichlorocyclooctadieneplatinium=Dichlorocyclooctadieneplatinium
+gregtech.material.diiodobiphenyl=Diiodobiphenyl
+gregtech.material.bipyridine=Bipyridine
+gregtech.material.palladium_bisdibenzylidieneacetone=Palladium Bisdibenzylidieneacetone
+gregtech.material.1_octene=1-Octene
+gregtech.material.acetylene=Acetylene
+gregtech.material.cyclooctadiene=Cyclooctadiene
+gregtech.material.pyridine=Pyridine
+gregtech.material.formaldehyde=Formaldehyde
+gregtech.material.dibenzylideneacetone=Dibenzylideneacetone
+gregtech.material.benzaldehyde=Benzaldehyde
+gregtech.material.benzoyl_chloride=Benzoyl Chloride
+gregtech.material.thionyl_chloride=Thionyl Chloride
+gregtech.material.polyetheretherketone=Polyetheretherketone (PEEK)
+gregtech.material.difluorobenzophenone=Difluorobenzophenone
+gregtech.material.hydroquinone=Hydroquinone
+gregtech.material.resorcinol=Resorcinol
+gregtech.material.fluorobenzene=Fluorobenzene
+gregtech.material.fluorotoluene=Fluorotoluene
+gregtech.material.kevlar=Kevlar
+gregtech.material.para_phenylenediamine=Para Phenylenediamine
+gregtech.material.terephthaloyl_chloride=Terephthaloyl Chloride
+gregtech.material.n_methyl_pyrrolidone=N-Methyl-2-Pyrrolidone
+gregtech.material.nitroaniline=Nitroaniline
+gregtech.material.durene=Durene
+gregtech.material.pyromellitic_dianhydride=Pyromellitic Dianhydride (PDMA)
+gregtech.material.aminophenol=Aminophenol
+gregtech.material.aniline=Aniline
+gregtech.material.oxydianiline=Oxydianiline (ODA)
+gregtech.material.dimethylformamide=Dimethylformamide (DMF)
+gregtech.material.phthalic_anhydride=Phthalic Anhydride
+gregtech.material.biphenyl_tetracarboxylic_acid_dianhydride=Biphenyl Tetracarboxylic Acid Dianhydride (BPDA)
+gregtech.material.bistrichloromethylbenzene=Bistrichloromethylbenzene
+gregtech.material.tetrabromoethane=Tetrabromoethane
+gregtech.material.terephthalic_acid=Terephthalic Acid (PTA)
+gregtech.material.gamma_butyrolactone=γ-Butyrolactone
+gregtech.material.methylamine=Methylamine
+gregtech.material.trimethylaluminium=Trimethylaluminium
+gregtech.material.trimethylgallium=Trimethylgallium
+gregtech.material.benzophenanthrenylacetonitrile=Benzophenanthrenylacetonitrile
+gregtech.material.methylbenzophenanthrene=Methylbenzophenanthrene
+gregtech.material.bromo_succinimide=Bromo Succinimide
+gregtech.material.succinimide=Succinimide
+gregtech.material.succinic_acid=Succinic Acid
+gregtech.material.maleic_anhydride=Maleic Anhydride
+gregtech.material.naphthaldehyde=Naphthaldehyde
+gregtech.material.butanol=Butanol
+gregtech.material.bromobutane=Bromobutane
+gregtech.material.cyanonaphthalene=Cyanonaphthalene
+gregtech.material.triphenylphosphine=Triphenylphosphine
+gregtech.material.ethylanthraquinone=Ethylanthraquinone
+gregtech.material.ethylanthrahydroquinone=Ethylanthrahydroquinone
+gregtech.material.ethylenediamine=Ethylenediamine
+gregtech.material.tetrasodium_edta=Ethylenediaminetetraacetic Acid Tetrasodium
+gregtech.material.ethylenediaminetetraacetic_acid=Ethylenediaminetetraacetic Acid (EDTA)
+gregtech.material.tetramethylammonium_chloride=Tetramethylammonium Chloride
+gregtech.material.trimethylamine=Trimethylamine
+gregtech.material.pyrocatechol=Pyrocatechol
+gregtech.material.nitryl_fluoride=Nitryl Fluoride
+gregtech.material.dimethylamine_hydrochloride=Dimethylamine Hydrochloride
+gregtech.material.potassium_formate=Potassium Formate
+gregtech.material.diethyl_sulfide=Diethyl Sulfide
+gregtech.material.dimethylcadmium=Dimethylcadmium
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=Belousov-Zhabotinsky Medium
@@ -329,3 +645,13 @@ gregtech.material.rich_nitrogen_mixture=Rich Nitrogen Mixture
 gregtech.material.rich_ammonia_mixture=Rich Ammonia Mixture
 gregtech.material.blazing_pyrotheum=Blazing Pyrotheum
 gregtech.material.gelid_cryotheum=Gelid Cryotheum
+gregtech.material.co_ac_ab_catalyst=Co/Ac-AB Mixed Catalyst
+gregtech.material.phosphorene_solution=Phosphorene Solution
+gregtech.material.methylamine_mixture=Methylamine Mixture
+gregtech.material.molybdenum_flue=Molybdenum Flue
+gregtech.material.trace_rhenium_flue=Trace Rhenium Flue
+gregtech.material.chalcogen_anode_mud=Chalcogen Anode Mud
+
+##  Machine Casing Materials
+gregtech.material.inconel_625=Inconel-625
+gregtech.material.hastelloy_n=Hastelloy-N

@@ -2,7 +2,7 @@
 item.material.oreprefix.coil=%s线圈
 item.material.oreprefix.plateCurved=弯曲%s板
 item.material.oreprefix.milled=碾磨%s矿石粉
-metaitem.milled.tooltip.flotation=使用工业浮选机进行进一步精选
+metaitem.milled.tooltip.flotation=使用§6工业浮选机§7进行进一步精选
 
 #  Tools
 item.gt.tool.universal_spade.name=%s万用铲
