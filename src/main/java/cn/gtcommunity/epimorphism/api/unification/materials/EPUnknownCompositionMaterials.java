@@ -2,8 +2,8 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.info.MaterialIconSet;
 
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 
@@ -34,7 +34,7 @@ public class EPUnknownCompositionMaterials {
         BlazingPyrotheum = new Material.Builder(25205, gregtechId("blazing_pyrotheum"))
                 .fluid(FluidTypes.LIQUID, true)
                 .color(0xE19352)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .fluidTemp(8000)
                 .build();
         //  25206 Gelid Cryotheum
@@ -47,7 +47,7 @@ public class EPUnknownCompositionMaterials {
         CoACABCatalyst = new Material.Builder(25207, gregtechId("co_ac_ab_catalyst"))
                 .dust()
                 .color(0x6B4312)
-                .iconSet(MaterialIconSet.METALLIC)
+                .iconSet(METALLIC)
                 .build();
         //  25208 PhosphoreneSolution
         PhosphoreneSolution = new Material.Builder(25208, gregtechId("phosphorene_solution"))
@@ -73,7 +73,7 @@ public class EPUnknownCompositionMaterials {
         ChalcogenAnodeMud = new Material.Builder(25212, gregtechId("chalcogen_anode_mud"))
                 .dust()
                 .color(0x8A3324)
-                .iconSet(MaterialIconSet.FINE)
+                .iconSet(FINE)
                 .build();
     }
 }

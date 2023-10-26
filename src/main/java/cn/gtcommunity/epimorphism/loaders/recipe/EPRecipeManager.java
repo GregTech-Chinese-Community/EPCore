@@ -1,15 +1,11 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
-import cn.gtcommunity.epimorphism.loaders.recipe.blocks.Crucibles;
+import cn.gtcommunity.epimorphism.loaders.recipe.blocks.*;
 import cn.gtcommunity.epimorphism.loaders.recipe.chains.*;
-import cn.gtcommunity.epimorphism.loaders.recipe.circuits.OpticalCircuits;
-import cn.gtcommunity.epimorphism.loaders.recipe.circuits.SpintronicCircuits;
-import cn.gtcommunity.epimorphism.loaders.recipe.components.MachineComponents;
-import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.CatalyticReformationOilProcessing;
-import cn.gtcommunity.epimorphism.loaders.recipe.circuits.WetwareCircuits;
-import cn.gtcommunity.epimorphism.loaders.recipe.circuits.GoowareCircuits;
-import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
-import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.MetaTileEntityRecipes;
+import cn.gtcommunity.epimorphism.loaders.recipe.circuits.*;
+import cn.gtcommunity.epimorphism.loaders.recipe.components.*;
+import cn.gtcommunity.epimorphism.loaders.recipe.multiblocks.*;
+import cn.gtcommunity.epimorphism.loaders.recipe.handlers.*;
 
 public class EPRecipeManager {
 
@@ -23,8 +19,8 @@ public class EPRecipeManager {
         initBlocks();
         initChains();
         initCircuits();
-        initComponents();
         initMultiblockRecipes();
+        MachineComponents.init();
     }
 
     public static void initBlocks() {
@@ -62,6 +58,7 @@ public class EPRecipeManager {
         PhotoresistivesChain.init();
         PMMAChain.init();
         SeleniumTelluriumChain.init();
+        TaraniumChain.init();
         ThalliumChain.init();
         TungstenChain.init();
     }
@@ -71,10 +68,6 @@ public class EPRecipeManager {
         GoowareCircuits.init();
         OpticalCircuits.init();
         SpintronicCircuits.init();
-    }
-
-    public static void initComponents() {
-        MachineComponents.init();
     }
 
     public static void initMultiblockRecipes() {

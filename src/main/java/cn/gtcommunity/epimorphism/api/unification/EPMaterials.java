@@ -8,6 +8,12 @@ public EPMaterials() {}
 
     //  Element Materials
     public static Material Draconium;
+    public static Material AwakenedDraconium;
+    public static Material ChaoticDraconium;
+    public static Material Orichalcum;
+    public static Material Vibranium;
+    public static Material Adamantium;
+    public static Material Taranium;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -153,6 +159,9 @@ public EPMaterials() {}
     public static Material PraseodymiumDopedZBLANGlass;
     public static Material SiliconTetrachloride;
     public static Material CadmiumSulfide;
+    public static Material SiliconCarbide;
+    public static Material ChromiumGermaniumTelluride;
+    public static Material ChromiumGermaniumTellurideMagnetic;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

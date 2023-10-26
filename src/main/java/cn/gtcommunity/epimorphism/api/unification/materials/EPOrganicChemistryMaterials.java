@@ -2,11 +2,11 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.info.MaterialIconSet;
 
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
+import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 
@@ -53,14 +53,14 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
                 .components(Carbon, 8, Hydrogen, 8, Sulfur, 1, Oxygen, 3)
                 .build();
-        //  25005  PEDOT-PSS
+        //  25005  PEDOT:PSS
         PedotPSS = new Material.Builder(25005, gregtechId("pedot_pss"))
                 .ingot()
                 .fluid()
                 .color(14771623)
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Edot, 1, PolystyreneSulfonate, 1)
-                .cableProperties(V[UHV], 24, 0, true)
+                .cableProperties(V[UHV], 24, 0, true) //  TODO find better UHV superconductor
                 .build();
         //  25006  PMMA
         PMMA = new Material.Builder(25006, gregtechId("polymethylmethacrylate"))
@@ -70,7 +70,7 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
                 .components(Carbon, 5, Hydrogen, 8, Oxygen, 2)
                 .build();
-        //  25007  PEDOT:TMA
+        //  25007  PEDOT-TMA
         PedotTMA = new Material.Builder(25007, gregtechId("pedot_tma"))
                 .ingot()
                 .fluid()
@@ -101,7 +101,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .color(0x782828)
                 .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Potassium, 1, Bromine, 1, Oxygen, 3)
                 .build();
         //  25011 Malonic Acid
@@ -109,7 +109,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .color(0x61932E)
                 .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.SHINY)
+                .iconSet(SHINY)
                 .components(Carbon, 3, Hydrogen, 4, Oxygen, 4)
                 .build();
         //  25012 Chloroacetic Acid
@@ -117,7 +117,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .color(0x38541A)
                 .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.SHINY)
+                .iconSet(SHINY)
                 .components(Carbon, 2, Hydrogen, 3, Chlorine, 1, Oxygen, 2)
                 .build();
         //  25013 Trichloroethylene
@@ -193,7 +193,7 @@ public class EPOrganicChemistryMaterials {
         Dichlorocyclooctadieneplatinium = new Material.Builder(25023, gregtechId("dichlorocyclooctadieneplatinium"))
                 .dust()
                 .color(0xD4E982)
-                .iconSet(MaterialIconSet.BRIGHT)
+                .iconSet(BRIGHT)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 8, Hydrogen, 12, Chlorine, 2, Platinum, 1)
                 .build()
@@ -202,7 +202,7 @@ public class EPOrganicChemistryMaterials {
         Diiodobiphenyl = new Material.Builder(25024, gregtechId("diiodobiphenyl"))
                 .dust()
                 .color(0x000C52)
-                .iconSet(MaterialIconSet.METALLIC)
+                .iconSet(METALLIC)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 12, Hydrogen, 8, Iodine, 2)
                 .build()
@@ -211,7 +211,7 @@ public class EPOrganicChemistryMaterials {
         Bipyridine = new Material.Builder(25025, gregtechId("bipyridine"))
                 .dust()
                 .color(0x716449)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 8, Nitrogen, 2)
                 .build()
@@ -220,7 +220,7 @@ public class EPOrganicChemistryMaterials {
         PalladiumBisdibenzylidieneacetone = new Material.Builder(25026, gregtechId("palladium_bisdibenzylidieneacetone"))
                 .dust()
                 .color(0x996881)
-                .iconSet(MaterialIconSet.METALLIC)
+                .iconSet(METALLIC)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 51, Hydrogen, 42, Oxygen, 3, Palladium, 2)
                 .build()
@@ -291,7 +291,7 @@ public class EPOrganicChemistryMaterials {
         Difluorobenzophenone = new Material.Builder(25037, gregtechId("difluorobenzophenone"))
                 .dust()
                 .color(0xC44DA5)
-                .iconSet(MaterialIconSet.SHINY)
+                .iconSet(SHINY)
                 .components(Carbon, 13, Hydrogen, 8, Oxygen, 1, Fluorine, 2)
                 .build()
                 .setFormula("(FC6H4)2CO", true);
@@ -332,7 +332,7 @@ public class EPOrganicChemistryMaterials {
         ParaPhenylenediamine = new Material.Builder(25043, gregtechId("para_phenylenediamine"))
                 .dust()
                 .color(0x4A8E7B)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Carbon, 6, Hydrogen, 8, Nitrogen, 2)
                 .build()
                 .setFormula("H2NC6H4NH2", true);
@@ -340,7 +340,7 @@ public class EPOrganicChemistryMaterials {
         TerephthaloylChloride = new Material.Builder(25044, gregtechId("terephthaloyl_chloride"))
                 .dust()
                 .color(0xFAC4DA)
-                .iconSet(MaterialIconSet.SHINY)
+                .iconSet(SHINY)
                 .components(Carbon, 8, Hydrogen, 4, Oxygen, 2, Chlorine, 2)
                 .build()
                 .setFormula("C6H4(COCl)2", true);
@@ -361,7 +361,7 @@ public class EPOrganicChemistryMaterials {
         Durene = new Material.Builder(25047, gregtechId("durene"))
                 .dust()
                 .color(0x336040)
-                .iconSet(MaterialIconSet.FINE)
+                .iconSet(FINE)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 14)
                 .build()
@@ -370,7 +370,7 @@ public class EPOrganicChemistryMaterials {
         PyromelliticDianhydride = new Material.Builder(25048, gregtechId("pyromellitic_dianhydride"))
                 .dust()
                 .color(0xF0EAD6)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 2, Oxygen, 6)
                 .build()
@@ -438,7 +438,7 @@ public class EPOrganicChemistryMaterials {
         TerephthalicAcid = new Material.Builder(25057, gregtechId("terephthalic_acid"))
                 .dust()
                 .color(0x5ACCDA)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Carbon, 8, Hydrogen, 6, Oxygen, 4)
                 .build()
                 .setFormula("C6H4(CO2H)2", true);
@@ -475,35 +475,35 @@ public class EPOrganicChemistryMaterials {
         Benzophenanthrenylacetonitrile = new Material.Builder(25062, gregtechId("benzophenanthrenylacetonitrile"))
                 .dust()
                 .color(0xBB58E9)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Carbon, 20, Hydrogen, 13, Nitrogen, 1)
                 .build();
         //  25063 Methylbenzophenanthrene
         Methylbenzophenanthrene = new Material.Builder(25063, gregtechId("methylbenzophenanthrene"))
                 .dust()
                 .color(0xEA236B)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .components(Carbon, 19, Hydrogen, 14)
                 .build();
         //  25064 Bromo Succinimide
         BromoSuccinimide = new Material.Builder(25064, gregtechId("bromo_succinimide"))
                 .dust()
                 .color(0x00BF8C)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Carbon, 4, Hydrogen, 4, Bromine, 1, Nitrogen, 1, Oxygen, 2)
                 .build();
         //  25065 Succinimide
         Succinimide = new Material.Builder(25065, gregtechId("succinimide"))
                 .dust()
                 .color(0x1774B6)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .components(Carbon, 4, Hydrogen, 5, Nitrogen, 1, Oxygen, 2)
                 .build();
         //  25066 Succinic Acid
         SuccinicAcid = new Material.Builder(25066, gregtechId("succinic_acid"))
                 .dust()
                 .color(0x0C3A5B)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .components(Carbon, 4, Hydrogen, 6, Oxygen, 4)
                 .build();
         //  25067 Maleic Anhydride
@@ -537,14 +537,14 @@ public class EPOrganicChemistryMaterials {
         Cyanonaphthalene = new Material.Builder(25071, gregtechId("cyanonaphthalene"))
                 .dust()
                 .color(0xDE992D)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .components(Carbon, 11, Hydrogen, 7, Nitrogen, 1)
                 .build();
         //  25072 Triphenylphosphine
         Triphenylphosphine = new Material.Builder(25072, gregtechId("triphenylphosphine"))
                 .dust()
                 .color(0x8F2C6B)
-                .iconSet(MaterialIconSet.BRIGHT)
+                .iconSet(BRIGHT)
                 .components(Carbon, 18, Hydrogen, 15, Phosphorus, 1)
                 .build()
                 .setFormula("(C6H5)3P", true);
@@ -576,7 +576,7 @@ public class EPOrganicChemistryMaterials {
         TetrasodiumEDTA = new Material.Builder(25076, gregtechId("tetrasodium_edta"))
                 .dust()
                 .color(0x8890E0)
-                .iconSet(MaterialIconSet.SHINY)
+                .iconSet(SHINY)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 12, Nitrogen, 2, Oxygen, 8, Sodium, 4)
                 .build();
@@ -585,7 +585,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .fluid()
                 .color(0x87E6D9)
-                .iconSet(MaterialIconSet.ROUGH)
+                .iconSet(ROUGH)
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 10, Hydrogen, 16, Nitrogen, 2, Oxygen, 8)
                 .build();
@@ -594,7 +594,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .color(0x27FF81)
                 .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.METALLIC)
+                .iconSet(METALLIC)
                 .components(Carbon, 4, Hydrogen, 12, Nitrogen, 1, Chlorine, 1)
                 .build()
                 .setFormula("N(CH3)4Cl", true);
@@ -610,7 +610,7 @@ public class EPOrganicChemistryMaterials {
                 .dust()
                 .color(0x784421)
                 .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.DULL)
+                .iconSet(DULL)
                 .components(Carbon, 6, Hydrogen, 6, Oxygen, 2)
                 .build();
         //  25081 Nitryl Fluoride

@@ -2,7 +2,7 @@
 item.material.oreprefix.coil=%s线圈
 item.material.oreprefix.plateCurved=弯曲%s板
 item.material.oreprefix.milled=碾磨%s矿石粉
-metaitem.milled.tooltip.flotation=使用工业浮选机进行进一步精选
+metaitem.milled.tooltip.flotation=使用§6工业浮选机§7进行进一步精选
 
 #  Tools
 item.gt.tool.universal_spade.name=%s万用铲
@@ -396,6 +396,12 @@ recipemap.laser_cvd_recipes.name=激光诱导化学气相沉积
 
 ##  Element Materials
 gregtech.material.draconium=龙素
+gregtech.material.awakened_draconium=觉醒龙素
+gregtech.material.chaotic_draconium=混沌龙素
+gregtech.material.orichalcum=山铜
+gregtech.material.vibranium=振金
+gregtech.material.adamantium=精金
+gregtech.material.taranium=塔兰金属
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -540,6 +546,9 @@ gregtech.material.erbium_doped_zblan_glass=掺铒的ZBLAN玻璃
 gregtech.material.praseodymium_doped_zblan_glass=掺镨的ZBLAN玻璃
 gregtech.material.silicon_tetrachloride=四氯化硅
 gregtech.material.cadmium_sulfide=硫化镉
+gregtech.material.silicon_carbide=碳化硅
+gregtech.material.chromium_germanium_telluride=碲化锗铬
+gregtech.material.magnetic_chromium_germanium_telluride=磁化碲化锗铬
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

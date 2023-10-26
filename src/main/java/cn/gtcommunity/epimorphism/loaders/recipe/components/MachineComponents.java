@@ -5,6 +5,7 @@ import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
@@ -26,6 +27,210 @@ import static gregtech.common.metatileentities.MetaTileEntities.*;
 public class MachineComponents {
 
     public static void init() {
+        Components();
+        Machines();
+    }
+
+    private static void Components() {
+        ElectricMotor();
+        ConveyorModule();
+        ElectricPiston();
+        RobotArm();
+        ElectricPump();
+        Emitter();
+        Sensor();
+        FieldGenerator();
+    }
+
+    private static void ElectricMotor() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, ChromiumGermaniumTellurideMagnetic)
+                .input(stickLong, Adamantium, 4)
+                .input(ring, Adamantium, 4)
+                .input(round, Adamantium, 8)
+                .input(wireFine, SiliconCarbide, 64)
+                .input(wireFine, SiliconCarbide, 64)
+                .input(cableGtSingle, Europium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(1000))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(ELECTRIC_MOTOR_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(ELECTRIC_MOTOR_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void ConveyorModule() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UHV, 2)
+                .input(plate, Adamantium, 2)
+                .input(ring, Adamantium, 4)
+                .input(round, Adamantium, 16)
+                .input(screw, Adamantium, 4)
+                .input(cableGtSingle, Europium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(1000))
+                .fluidInputs(StyreneButadieneRubber.getFluid(L * 24))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(CONVEYOR_MODULE_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(CONVEYOR_MODULE_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void ElectricPiston() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UHV)
+                .input(plate, Adamantium, 4)
+                .input(ring, Adamantium, 4)
+                .input(round, Adamantium, 16)
+                .input(stick, Adamantium, 4)
+                .input(gear, Draconium)
+                .input(gearSmall, Draconium, 2)
+                .input(cableGtSingle, Europium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(1000))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(ELECTRIC_PISTON_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(ELECTRIC_PISTON_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void RobotArm() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, Adamantium, 4)
+                .input(gear, Adamantium)
+                .input(gearSmall, Adamantium, 3)
+                .input(ELECTRIC_MOTOR_UHV, 2)
+                .input(ELECTRIC_PISTON_UHV)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(circuit, MarkerMaterials.Tier.UV, 2)
+                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
+                .input(cableGtSingle, Europium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 12))
+                .fluidInputs(Lubricant.getFluid(1000))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(ROBOT_ARM_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(ROBOT_ARM_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void ElectricPump() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UHV)
+                .input(pipeLargeFluid, Duranium)
+                .input(plate, Adamantium, 2)
+                .input(screw, Adamantium, 8)
+                .input(ring, SiliconeRubber, 16)
+                .input(rotor, Draconium)
+                .input(cableGtSingle, Europium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 4))
+                .fluidInputs(Lubricant.getFluid(1000))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(ELECTRIC_PUMP_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(ELECTRIC_PUMP_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void Emitter() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium)
+                .input(ELECTRIC_MOTOR_UHV)
+                .input(stickLong, Adamantium, 4)
+                .input(GRAVI_STAR)
+                .input(circuit, MarkerMaterials.Tier.UHV, 2)
+                .input(foil, Vibranium, 64)
+                .input(foil, Vibranium, 32)
+                .input(cableGtSingle, Europium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 8))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(EMITTER_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(EMITTER_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void Sensor() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium)
+                .input(ELECTRIC_MOTOR_UHV)
+                .input(plate, Adamantium, 4)
+                .input(GRAVI_STAR)
+                .input(circuit, MarkerMaterials.Tier.UHV, 2)
+                .input(foil, Naquadria, 64)
+                .input(foil, Naquadria, 32)
+                .input(cableGtSingle, Europium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 8))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(SENSOR_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(SENSOR_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void FieldGenerator() {
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium)
+                .input(plate, Adamantium, 6)
+                .input(GRAVI_STAR)
+                .input(EMITTER_UHV, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV, 2)
+                //  TODO find better UHV superconductor
+                .input(wireFine, PedotPSS, 64)
+                .input(wireFine, PedotPSS, 64)
+                .input(cableGtSingle, Europium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 12))
+                .fluidInputs(Vibranium.getFluid(L))
+                .output(FIELD_GENERATOR_UHV)
+                .duration(600)
+                .EUt(400000)
+                .research(b -> b
+                        .researchStack(FIELD_GENERATOR_UV.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(8000))
+                .buildAndRegister();
+    }
+
+    private static void Machines() {
         //  Substrate Casings
         ModHandler.addShapedRecipe(true, "substrate_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.SUBSTRATE_CASING),
                 "PPP", "RFR", "R R",
@@ -33,14 +238,12 @@ public class MachineComponents {
                 'R', new UnificationEntry(stick, RedSteel),
                 'F', new UnificationEntry(frameGt, BlueSteel)
         );
-
         ModHandler.addShapedRecipe(true, "advanced_substrate_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.ADVANCED_SUBSTRATE_CASING),
                 "PPP", "RFR", "R R",
                 'P', new UnificationEntry(plate, Ruridit),
                 'R', new UnificationEntry(stick, Duranium),
                 'F', new UnificationEntry(frameGt, NaquadahAlloy)
         );
-
         //  Isa Mill
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(MetaTileEntities.HULL[IV], 2)
@@ -53,7 +256,6 @@ public class MachineComponents {
                 .EUt(1920)
                 .duration(480)
                 .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, HSSS)
                 .input(gear, Inconel625, 3)
@@ -65,7 +267,6 @@ public class MachineComponents {
                 .EUt(32720)
                 .duration(1200)
                 .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.BOILER_CASING.getItemVariant(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE))
                 .input(frameGt, MaragingSteel300)
@@ -76,7 +277,6 @@ public class MachineComponents {
                 .EUt(28560)
                 .duration(680)
                 .buildAndRegister();
-
         //  Flotation Factory
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(MetaTileEntities.HULL[EV], 2)
@@ -89,7 +289,6 @@ public class MachineComponents {
                 .EUt(4480)
                 .duration(1080)
                 .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, HSSG)
                 .input(plate, HSSG, 4)
@@ -101,7 +300,6 @@ public class MachineComponents {
                 .EUt(11300)
                 .duration(580)
                 .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.BOILER_CASING.getItemVariant(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE))
                 .input(frameGt, WatertightSteel)
@@ -113,7 +311,6 @@ public class MachineComponents {
                 .EUt(23760)
                 .duration(1200)
                 .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.MULTIBLOCK_CASING.getItemVariant(BlockMultiblockCasing.MultiblockCasingType.EXTREME_ENGINE_INTAKE_CASING))
                 .input(frameGt, HastelloyN)
@@ -126,7 +323,6 @@ public class MachineComponents {
                 .EUt(VA[5])
                 .duration(880)
                 .buildAndRegister();
-
         //  Mill Ball Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, TungstenSteel)
@@ -139,7 +335,6 @@ public class MachineComponents {
                 .EUt(7680)
                 .duration(1600)
                 .buildAndRegister();
-
         //  Catalyst Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, Titanium)
@@ -152,7 +347,6 @@ public class MachineComponents {
                 .EUt(VA[HV])
                 .duration(1200)
                 .buildAndRegister();
-
         //  Buffer Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, RhodiumPlatedPalladium)
