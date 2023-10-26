@@ -18,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregicality.multiblocks.common.metatileentities.GCYMMetaTileEntities.*;
@@ -248,6 +249,16 @@ public class MetaTileEntityRecipes {
                 'H', MetaTileEntities.HULL[UHV].getStackForm(),
                 'S', SENSOR_UHV.getStackForm(),
                 'E', EMITTER_UHV.getStackForm());
+
+        //  Laser CVD Unit
+        ModHandler.addShapedRecipe(true, "laser_cvd_unit", LASER_CVD.getStackForm(),
+                "EOE", "CHC", "PPP",
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UEV),
+                'H', MetaTileEntities.HULL[UHV].getStackForm(),
+                'P', new UnificationEntry(plate, Orichalcum),
+                'E', EMITTER_UHV.getStackForm(),
+                'O', OPTICAL_FIBER.getStackForm()
+        );
 
         //  GCYM Nerf
         ModHandler.removeRecipeByName("gcym:mega_blast_furnace");
