@@ -390,7 +390,9 @@ recipemap.roaster_recipes.name=焙烧
 epimorphism.machine.ion_implantater.name=离子注入机
 recipemap.ion_implanter_recipes.name=真空离子注入
 
+epimorphism.machine.plasma_cvd_unit.name=等离子体增强化学气相沉积单元
 recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
+
 recipemap.laser_cvd_recipes.name=激光诱导化学气相沉积
 
 #  Materials

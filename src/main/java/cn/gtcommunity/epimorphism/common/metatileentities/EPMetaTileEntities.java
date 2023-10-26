@@ -47,6 +47,7 @@ public class EPMetaTileEntities {
     //  16-29
 
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
+    public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
 
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -88,7 +89,8 @@ public class EPMetaTileEntities {
         CRYOGENIC_REACTOR = registerMultiMetaTileEntity(13, new EPMetaTileEntityCryogenicReactor(epId("cryogenic_reactor")));
         MEGA_ALLOY_BLAST_SMELTER = registerMultiMetaTileEntity(14, new EPMetaTileEntityMegaAlloyBlastSmelter(epId("mega_alloy_blast_smelter")));
         CHEMICAL_PLANT = registerMultiMetaTileEntity(15, new EPMetaTileEntityChemicalPlant(epId("chemical_plant")));
-        // 16-29
-        ION_IMPLANTATER = registerMultiMetaTileEntity(30, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
+        // 16-30
+        ION_IMPLANTATER = registerMultiMetaTileEntity(31, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
+        PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
     }
 }
