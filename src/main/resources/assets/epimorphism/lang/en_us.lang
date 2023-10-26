@@ -387,6 +387,7 @@ epimorphism.machine.chemical_plant.tier=Tier: %d
 
 recipemap.roaster_recipes.name=Roaster
 
+epimorphism.machine.ion_implantater.name=Ion Implantater
 recipemap.ion_implanter_recipes.name=Vacuum Ion Implantation
 
 recipemap.plasma_cvd_recipes.name=Plasma-enhanced Chemical Vapor Deposition

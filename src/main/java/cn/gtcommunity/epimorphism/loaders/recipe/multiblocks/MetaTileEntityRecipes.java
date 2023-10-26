@@ -8,6 +8,7 @@ import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -185,7 +186,8 @@ public class MetaTileEntityRecipes {
                 .research(b -> b
                         .researchStack(LARGE_MACERATOR.getStackForm())
                         .CWUt(30)
-                        .EUt(VA[LuV]))
+                        .EUt(VA[LuV])
+                        .duration(12000))
                 .buildAndRegister();
 
         //  Flotation Factory
@@ -212,7 +214,8 @@ public class MetaTileEntityRecipes {
                 .research(b -> b
                         .researchStack(LARGE_DISTILLERY.getStackForm())
                         .CWUt(30)
-                        .EUt(VA[LuV]))
+                        .EUt(VA[LuV])
+                        .duration(12000))
                 .buildAndRegister();
 
         //  Chemical Plant
@@ -225,6 +228,34 @@ public class MetaTileEntityRecipes {
                 .output(CHEMICAL_PLANT)
                 .EUt(VA[MV])
                 .duration(2400)
+                .buildAndRegister();
+
+        //  Ion Implantater
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium)
+                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS, 16))
+                .input(ELECTRIC_PISTON_UHV, 8)
+                .input(EMITTER_UHV, 8)
+                .input(ELECTRIC_PUMP_UHV, 8)
+                .input(circuit, MarkerMaterials.Tier.UHV, 4)
+                .input(circuit, MarkerMaterials.Tier.UV, 8)
+                .input(plate, HSSS, 16)
+                .input(plateDouble, TitaniumTungstenCarbide, 32)
+                .input(plateDouble, HSLASteel, 32)
+                .input(wireFine, YttriumBariumCuprate, 64)
+                .input(wireFine, YttriumBariumCuprate, 64)
+                .input(cableGtQuadruple, SiliconCarbide, 4)
+                .fluidInputs(Orichalcum.getFluid(5760))
+                .fluidInputs(Zeron100.getFluid(5760))
+                .fluidInputs(PolychlorinatedBiphenyl.getFluid(2880))
+                .output(ION_IMPLANTATER)
+                .EUt(VA[UV])
+                .duration(6400)
+                .research(b -> b
+                        .researchStack(LARGE_ENGRAVER.getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(12800))
                 .buildAndRegister();
 
         //  GCYM Nerf

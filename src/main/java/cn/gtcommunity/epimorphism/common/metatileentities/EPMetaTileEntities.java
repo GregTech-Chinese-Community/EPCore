@@ -7,7 +7,7 @@ import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityCatalystHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
-import gregtech.api.GTValues;;
+import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
@@ -43,6 +43,10 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCryogenicReactor CRYOGENIC_REACTOR;
     public static EPMetaTileEntityMegaAlloyBlastSmelter MEGA_ALLOY_BLAST_SMELTER;
     public static EPMetaTileEntityChemicalPlant CHEMICAL_PLANT;
+
+    //  16-29
+
+    public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
 
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -84,5 +88,7 @@ public class EPMetaTileEntities {
         CRYOGENIC_REACTOR = registerMultiMetaTileEntity(13, new EPMetaTileEntityCryogenicReactor(epId("cryogenic_reactor")));
         MEGA_ALLOY_BLAST_SMELTER = registerMultiMetaTileEntity(14, new EPMetaTileEntityMegaAlloyBlastSmelter(epId("mega_alloy_blast_smelter")));
         CHEMICAL_PLANT = registerMultiMetaTileEntity(15, new EPMetaTileEntityChemicalPlant(epId("chemical_plant")));
+        // 16-29
+        ION_IMPLANTATER = registerMultiMetaTileEntity(30, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
     }
 }

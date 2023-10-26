@@ -43,6 +43,7 @@ public class EPMaterialPropertyAddition {
         MaragingSteel300.addFlags(GENERATE_DOUBLE_PLATE);
         TitaniumTungstenCarbide.addFlags(GENERATE_DOUBLE_PLATE);
         WatertightSteel.addFlags(GENERATE_DOUBLE_PLATE);
+        HSLASteel.addFlags(GENERATE_DOUBLE_PLATE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
