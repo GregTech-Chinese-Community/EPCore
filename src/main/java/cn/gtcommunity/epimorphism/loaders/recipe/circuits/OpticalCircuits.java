@@ -169,6 +169,7 @@ public class OpticalCircuits {
                 .output(OPTICAL_CAPACITOR, 16)
                 .duration(160)
                 .EUt(VA[UV])
+                .temperature(487)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
@@ -287,7 +288,7 @@ public class OpticalCircuits {
                 .input(OPTICAL_INDUCTOR, 16)
                 .input(foil, KaptonE, 64)
                 .input(PHASE_CHANGE_MEMORY, 32)
-                .input(OPTICAL_FIBER, 16) //TODO UEV superconductor
+                .input(wireGtDouble, Grisium, 16)
                 .input(plate, Tritanium, 8)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .fluidInputs(Kevlar.getFluid(L * 12))

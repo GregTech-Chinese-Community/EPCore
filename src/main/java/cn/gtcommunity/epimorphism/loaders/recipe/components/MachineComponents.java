@@ -213,7 +213,6 @@ public class MachineComponents {
                 .input(GRAVI_STAR)
                 .input(EMITTER_UHV, 2)
                 .input(circuit, MarkerMaterials.Tier.UHV, 2)
-                //  TODO find better UHV superconductor
                 .input(wireFine, PedotPSS, 64)
                 .input(wireFine, PedotPSS, 64)
                 .input(cableGtSingle, Europium, 4)

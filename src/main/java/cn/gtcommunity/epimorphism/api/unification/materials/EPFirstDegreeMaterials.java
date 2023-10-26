@@ -939,6 +939,7 @@ public class EPFirstDegreeMaterials {
         //  24126 Ammonium Perrhenate
         AmmoniumPerrhenate = new Material.Builder(24126, gregtechId("ammonium_perrhenate"))
                 .dust()
+                .fluid()
                 .color(0xA69970)
                 .iconSet(METALLIC)
                 .flags(DISABLE_DECOMPOSITION)
@@ -1105,5 +1106,32 @@ public class EPFirstDegreeMaterials {
                 .macerateInto(ChromiumGermaniumTelluride)
                 .build();
         ChromiumGermaniumTelluride.getProperty(PropertyKey.INGOT).setMagneticMaterial(ChromiumGermaniumTellurideMagnetic);
+        //  24146 Lithium Fluoride
+        LithiumFluoride = new Material.Builder(24146, gregtechId("lithium_fluoride"))
+                .dust()
+                .color(0x9BAFDB)
+                .iconSet(ROUGH)
+                .components(Lithium, 1, Fluorine, 1)
+                .build();
+        //  24147 Barium Carbonate
+        BariumCarbonate = new Material.Builder(24147, gregtechId("barium_carbonate"))
+                .dust()
+                .color(0x425A73)
+                .iconSet(ROUGH)
+                .components(Barium, 1, Carbon, 1, Oxygen, 3)
+                .build();
+        //  24148 Carbon Disulfide
+        CarbonDisulfide = new Material.Builder(24148, gregtechId("carbon_disulfide"))
+                .fluid()
+                .color(0x1F80C8)
+                .components(Carbon, 1, Sulfur, 2)
+                .build();
+        //  24149 Sodium Thiosulfate
+        SodiumThiosulfate = new Material.Builder(24149, gregtechId("sodium_thiosulfate"))
+                .dust()
+                .color(0x1436A7)
+                .iconSet(ROUGH)
+                .components(Sodium, 2, Sulfur, 2, Oxygen, 3)
+                .build();
     }
 }

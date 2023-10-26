@@ -60,7 +60,7 @@ public class EPOrganicChemistryMaterials {
                 .color(14771623)
                 .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Edot, 1, PolystyreneSulfonate, 1)
-                .cableProperties(V[UHV], 24, 0, true) //  TODO find better UHV superconductor
+                .cableProperties(V[UHV], 24, 6, false)
                 .build();
         //  25006  PMMA
         PMMA = new Material.Builder(25006, gregtechId("polymethylmethacrylate"))
@@ -649,5 +649,112 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 2, Hydrogen, 6, Cadmium, 1)
                 .build()
                 .setFormula("(CH3)2Cd", true);
+        //  25086 BETS Perrhenate
+        BETSPerrhenate = new Material.Builder(25086, gregtechId("bets_perrhenate"))
+                .dust()
+                .color(0x98E993)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(SHINY)
+                .components(Rhenium, 1, Carbon, 10, Hydrogen, 8, Sulfur, 4, Selenium, 4, Oxygen, 4)
+                .build();
+        //  25087 Bisethylenedithiotetraselenafulvalene
+        Bisethylenedithiotetraselenafulvalene = new Material.Builder(25087, gregtechId("bisethylenedithiotetraselenafulvalene"))
+                .dust()
+                .color(0x98E993)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(ROUGH)
+                .components(Carbon, 10, Hydrogen, 8, Sulfur, 4, Selenium, 4)
+                .build();
+        //  25088 Lithiumthiinediselenide
+        Lithiumthiinediselenide = new Material.Builder(25088, gregtechId("lithiumthiinediselenide"))
+                .dust()
+                .color(0x689E64)
+                .iconSet(DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 4, Hydrogen, 4, Sulfur, 2, Lithium, 2, Selenium, 2)
+                .build();
+        //  25089 Cyclopentadienyl Titanium Trichloride
+        CyclopentadienylTitaniumTrichloride = new Material.Builder(25089, gregtechId("cyclopentadienyl_titanium_trichloride"))
+                .dust()
+                .color(0x752C7A)
+                .iconSet(BRIGHT)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 10, Chlorine, 2, Titanium, 1)
+                .build()
+                .setFormula("(C5H5)2Cl2Ti", true);
+        //  25090 Propadiene
+        Propadiene = new Material.Builder(25090, gregtechId("propadiene"))
+                .fluid()
+                .color(0xBD8F61)
+                .components(Carbon, 3, Hydrogen, 4)
+                .build();
+        //  25091 Barium Triflate
+        BariumTriflate = new Material.Builder(25091, gregtechId("barium_triflate"))
+                .dust()
+                .color(0xFFC183)
+                .iconSet(BRIGHT)
+                .components(Barium, 1, Oxygen, 6, Carbon, 2, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ba(OSO2CF3)2", true);
+        //  25092 Scandium Triflate
+        ScandiumTriflate = new Material.Builder(25092, gregtechId("scandium_triflate"))
+                .dust()
+                .color(0xCC9999)
+                .iconSet(BRIGHT)
+                .components(Scandium, 1, Oxygen, 9, Carbon, 3, Fluorine, 9)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Sc(OSO2CF3)3", true);
+        //  25093 Barium Triflate Solution
+        BariumTriflateSolution = new Material.Builder(25093, gregtechId("barium_triflate_solution"))
+                .fluid()
+                .color(0xFFC183)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("C2BaF6O6S2Hg(H2O)3", true);
+        //  25094 Biperfluoromethanedisulfide
+        Biperfluoromethanedisulfide = new Material.Builder(25094, gregtechId("biperfluoromethanedisulfide"))
+                .fluid()
+                .color(0x849648)
+                .components(Carbon, 2, Fluorine, 6, Sulfur, 2)
+                .build();
+        //  25095 Butyl Lithium
+        ButylLithium = new Material.Builder(25095, gregtechId("butyl_lithium"))
+                .fluid()
+                .color(0x96F6DF)
+                .components(Carbon, 4, Hydrogen, 9, Lithium, 1)
+                .build();
+        //  25096 Bromodihydrothiine
+        Bromodihydrothiine = new Material.Builder(25096, gregtechId("bromodihydrothiine"))
+                .fluid()
+                .color(0x66F36E)
+                .components(Carbon, 4, Hydrogen, 4, Sulfur, 2, Bromine, 2)
+                .build();
+        //  25097 Chloroethane
+        Chloroethane = new Material.Builder(25097, gregtechId("chloroethane"))
+                .fluid()
+                .color(0xA55D80)
+                .components(Carbon, 2, Hydrogen, 5, Chlorine, 1)
+                .build();
+        //  25098 Dibromoacrolein
+        Dibromoacrolein = new Material.Builder(25098, gregtechId("dibromoacrolein"))
+                .fluid()
+                .color(0x7C4660)
+                .components(Carbon, 2, Hydrogen, 2, Bromine, 2, Oxygen, 2)
+                .build();
+        //  25099 Formic Acid
+        FormicAcid = new Material.Builder(25099, gregtechId("formic_acid"))
+                .fluid()
+                .color(0xFFAA77)
+                .components(Carbon, 1, Hydrogen, 2, Oxygen, 2)
+                .build();
+        //  25100 Sodium Formate
+        SodiumFormate = new Material.Builder(25100, gregtechId("sodium_formate"))
+                .fluid()
+                .color(0x416CC0)
+                .iconSet(ROUGH)
+                .components(Carbon, 1, Hydrogen, 1, Oxygen, 2, Sodium, 1)
+                .build();
     }
 }
