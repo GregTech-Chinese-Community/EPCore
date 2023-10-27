@@ -29,7 +29,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xf58742)
                 .iconSet(BRIGHT)
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .element(EPElements.AwakenedDraconium)
                 .cableProperties(V[UHV], 16, 4)
                 .build();
@@ -58,7 +58,7 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xC880FF)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE, GENERATE_FINE_WIRE)
                 .element(EPElements.Vibranium)
                 .blastTemp(4852, BlastProperty.GasTier.HIGH)
                 .build();

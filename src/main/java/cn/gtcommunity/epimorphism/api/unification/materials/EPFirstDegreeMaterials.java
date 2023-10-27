@@ -1133,5 +1133,93 @@ public class EPFirstDegreeMaterials {
                 .iconSet(ROUGH)
                 .components(Sodium, 2, Sulfur, 2, Oxygen, 3)
                 .build();
+        //  24150 Cadmium Selenide
+        CadmiumSelenide = new Material.Builder(24150, gregtechId("cadmium_selenide"))
+                .dust()
+                .color(0x983034)
+                .flags(DECOMPOSITION_BY_ELECTROLYZING)
+                .iconSet(METALLIC)
+                .components(Cadmium, 1, Selenium, 1)
+                .build();
+        //  24151 Thallium Copper Chloride Antiferromagnetic
+        ThalliumCopperChloride = new Material.Builder(24151, gregtechId("thallium_copper_chloride"))
+                .ingot()
+                .fluid()
+                .color(0x3C5CB5)
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_FINE_WIRE)
+                .components(Thallium, 1, Copper, 1, Chlorine, 3)
+                .build();
+        //  24152 Plutonium Trihydride
+        PlutoniumTrihydride = new Material.Builder(24152, gregtechId("plutonium_trihydride"))
+                .dust()
+                .color(0x140002)
+                .iconSet(SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Plutonium239, 1, Hydrogen, 3)
+                .build()
+                .setFormula("PuH3", true);
+        //  24153 Plutonium Phosphide
+        PlutoniumPhosphide = new Material.Builder(24153, gregtechId("plutonium_phosphide"))
+                .ingot()
+                .color(0x1F0104)
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD)
+                .components(Plutonium239, 1, Phosphorus, 1)
+                .build()
+                .setFormula("PuP", true);
+        //  24154 Neptunium Aluminide
+        NeptuniumAluminide = new Material.Builder(24154, gregtechId("neptunium_aluminide"))
+                .ingot()
+                .fluid()
+                .color(0x5E228F)
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD)
+                .components(Neptunium, 1, Aluminium, 3)
+                .blastTemp(1568, BlastProperty.GasTier.HIGHER, VA[ZPM])
+                .build()
+                .setFormula("NpAl3", true);
+        //  24155 Bismuth Trioxide
+        BismuthTrioxide = new Material.Builder(24155, gregtechId("bismuth_trioxide"))
+                .dust()
+                .color(0xF5EF42)
+                .iconSet(FINE)
+                .components(Bismuth, 2, Oxygen, 3)
+                .build();
+        //  24156 Ferric Oxide
+        FerricOxide = new Material.Builder(24156, gregtechId("ferric_oxide"))
+                .dust()
+                .color(0x915A5A)
+                .iconSet(ROUGH)
+                .components(Iron, 2, Oxygen, 3)
+                .build();
+        //  24157 Bismuth Ferrite
+        BismuthFerrite = new Material.Builder(24157, gregtechId("bismuth_ferrite"))
+                .gem()
+                .color(0x43634B)
+                .iconSet(MAGNETIC)
+                //  TODO CRYSTALLIZABLE
+                .flags(GENERATE_PLATE)
+                .components(BismuthTrioxide, 2, FerricOxide, 2)
+                .build()
+                .setFormula("BiFeO3", true);
+        //  24158 Bismuth Chalcogenide
+        BismuthChalcogenide = new Material.Builder(24158, gregtechId("bismuth_chalcogenide"))
+                .ingot()
+                .color(0x91994D)
+                .iconSet(SHINY)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, DECOMPOSITION_BY_ELECTROLYZING)
+                .components(Bismuth, 1, Antimony, 1, Tellurium, 2, Sulfur, 1)
+                .build();
+        //  24159 Mercury Cadmium Telluride
+        MercuryCadmiumTelluride = new Material.Builder(24159, gregtechId("mercury_cadmium_telluride"))
+                .ingot()
+                .fluid()
+                .color(0x823C80)
+                .iconSet(BRIGHT)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
+                .components(Mercury, 2, Cadmium, 1, Tellurium, 2)
+                .blastTemp(2170, BlastProperty.GasTier.HIGHER, VA[UHV])
+                .build();
     }
 }

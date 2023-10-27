@@ -28,6 +28,8 @@ public class EPMaterialPropertyAddition {
         Praseodymium.setProperty(PropertyKey.DUST, new DustProperty());
         Terbium.setProperty(PropertyKey.DUST, new DustProperty());
         Scandium.setProperty(PropertyKey.DUST, new DustProperty());
+        Neptunium.setProperty(PropertyKey.DUST, new DustProperty());
+        Neptunium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

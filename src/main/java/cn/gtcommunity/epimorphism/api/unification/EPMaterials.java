@@ -166,6 +166,16 @@ public EPMaterials() {}
     public static Material BariumCarbonate;
     public static Material CarbonDisulfide;
     public static Material SodiumThiosulfate;
+    public static Material CadmiumSelenide;
+    public static Material ThalliumCopperChloride;
+    public static Material PlutoniumTrihydride;
+    public static Material PlutoniumPhosphide;
+    public static Material NeptuniumAluminide;
+    public static Material BismuthTrioxide;
+    public static Material FerricOxide;
+    public static Material BismuthFerrite;
+    public static Material BismuthChalcogenide;
+    public static Material MercuryCadmiumTelluride;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

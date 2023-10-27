@@ -557,6 +557,16 @@ gregtech.material.lithium_fluoride=氟化锂
 gregtech.material.barium_carbonate=碳酸钡
 gregtech.material.carbon_disulfide=二硫化碳
 gregtech.material.sodium_thiosulfate=硫代硫酸钠
+gregtech.material.cadmium_selenide=硒化镉
+gregtech.material.thallium_copper_chloride=氯化铜铊
+gregtech.material.plutonium_trihydride=三氢化钚
+gregtech.material.plutonium_phosphide=亚磷酸钚
+gregtech.material.neptunium_aluminide=铝化镎
+gregtech.material.bismuth_trioxide=三氧化二铋
+gregtech.material.ferric_oxide=三氧化二铁
+gregtech.material.bismuth_ferrite=铁酸铋
+gregtech.material.bismuth_chalcogenide=铋-锑硫系化合物
+gregtech.material.mercury_cadmium_telluride=碲化镉汞
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
