@@ -567,6 +567,11 @@ gregtech.material.ferric_oxide=三氧化二铁
 gregtech.material.bismuth_ferrite=铁酸铋
 gregtech.material.bismuth_chalcogenide=铋-锑硫系化合物
 gregtech.material.mercury_cadmium_telluride=碲化镉汞
+gregtech.material.cubic_zirconia=立方氧化锆
+gregtech.material.bismuth_tellurite=亚碲酸铋
+gregtech.material.prasiolite=堇云石
+gregtech.material.magneto_resonatic=共振紫晶
+gregtech.material.yttrium_trioxide=三氧化二钇
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

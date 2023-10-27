@@ -1221,5 +1221,43 @@ public class EPFirstDegreeMaterials {
                 .components(Mercury, 2, Cadmium, 1, Tellurium, 2)
                 .blastTemp(2170, BlastProperty.GasTier.HIGHER, VA[UHV])
                 .build();
+        //  24160 Cubic Zirconia
+        CubicZirconia = new Material.Builder(24160, gregtechId("cubic_zirconia"))
+                .gem()
+                .color(0xFFDFE2)
+                .iconSet(DIAMOND)
+                //  TODO CRYSTALLIZABLE
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Zirconium, 1, Oxygen, 2)
+                .build();
+        //  24161 Bismuth Tellurite
+        BismuthTellurite = new Material.Builder(24161, gregtechId("bismuth_tellurite"))
+                .dust()
+                .color(0x0E8933)
+                .iconSet(DULL)
+                .components(Bismuth, 2, Tellurium, 3)
+                .build();
+        //  24162 Prasiolite
+        Prasiolite = new Material.Builder(24162, gregtechId("prasiolite"))
+                .gem()
+                .color(0x9EB749)
+                .iconSet(QUARTZ)
+                .components(Silicon, 5, Oxygen, 10, Iron, 1)
+                .build();
+        //  24163 Magneto Resonatic
+        MagnetoResonatic = new Material.Builder(24163, gregtechId("magneto_resonatic"))
+                .gem()
+                .color(0xFF97FF)
+                .iconSet(MAGNETIC)
+                .components(Prasiolite, 3, BismuthTellurite, 6, CubicZirconia, 1, SteelMagnetic, 1)
+                .flags(GENERATE_LENS)
+                .build();
+        //  24164 Yttrium Trioxide
+        YttriumTrioxide = new Material.Builder(24164, gregtechId("yttrium_trioxide"))
+                .dust()
+                .color(0x765320)
+                .iconSet(DULL)
+                .components(Yttrium, 2, Oxygen, 3)
+                .build();
     }
 }

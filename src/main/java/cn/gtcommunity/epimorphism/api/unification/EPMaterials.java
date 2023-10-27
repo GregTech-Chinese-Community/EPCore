@@ -176,6 +176,11 @@ public EPMaterials() {}
     public static Material BismuthFerrite;
     public static Material BismuthChalcogenide;
     public static Material MercuryCadmiumTelluride;
+    public static Material CubicZirconia;
+    public static Material BismuthTellurite;
+    public static Material Prasiolite;
+    public static Material MagnetoResonatic;
+    public static Material YttriumTrioxide;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

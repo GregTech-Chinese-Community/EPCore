@@ -566,6 +566,11 @@ gregtech.material.bismuth_trioxide=Bismuth Trioxide
 gregtech.material.ferric_oxide=Ferric Oxide
 gregtech.material.bismuth_ferrite=Bismuth Ferrite
 gregtech.material.bismuth_chalcogenide=Bismuth Chalcogenide
+gregtech.material.cubic_zirconia=Cubic Zirconia
+gregtech.material.bismuth_tellurite=Bismuth Tellurite
+gregtech.material.prasiolite=Prasiolite
+gregtech.material.magneto_resonatic=Magneto Resonatic
+gregtech.material.yttrium_trioxide=Yttrium Trioxide
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K
