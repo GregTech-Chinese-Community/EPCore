@@ -557,6 +557,20 @@ gregtech.material.lithium_fluoride=Lithium Fluoride
 gregtech.material.barium_carbonate=Barium Carbonate
 gregtech.material.carbon_disulfide=Carbon Disulfide
 gregtech.material.sodium_thiosulfate=Sodium Thiosulfate
+gregtech.material.cadmium_selenide=Cadium Selenide
+gregtech.material.thallium_copper_chloride=Thallium Copper Chloride
+gregtech.material.plutonium_trihydride=Plutonium Trihydride
+gregtech.material.plutonium_phosphide=Plutonium Phosphide
+gregtech.material.neptunium_aluminide=Neptunium Aluminide
+gregtech.material.bismuth_trioxide=Bismuth Trioxide
+gregtech.material.ferric_oxide=Ferric Oxide
+gregtech.material.bismuth_ferrite=Bismuth Ferrite
+gregtech.material.bismuth_chalcogenide=Bismuth Chalcogenide
+gregtech.material.cubic_zirconia=Cubic Zirconia
+gregtech.material.bismuth_tellurite=Bismuth Tellurite
+gregtech.material.prasiolite=Prasiolite
+gregtech.material.magneto_resonatic=Magneto Resonatic
+gregtech.material.yttrium_trioxide=Yttrium Trioxide
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K

@@ -7,6 +7,7 @@ import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 
+import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -26,10 +27,23 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.blocks.BlockHermeticCasing.HermeticCasingsType.*;
 import static gregtech.common.items.MetaItems.*;
+import static gregtech.common.metatileentities.MetaTileEntities.*;
 
 public class MetaTileEntityRecipes {
     public static void init() {
+        VanillaMachineRecipes();
+        EPMachineRecipes();
+        GCYMOverrideRecipes();
+    }
+
+    private static void VanillaMachineRecipes() {
+        HullRecipes();
+        EnergyHatchRecipes();
+    }
+
+    private static void HullRecipes() {
         //  UHV Hull
         ModHandler.removeRecipeByName("gregtech:casing_uhv");
         ModHandler.addShapedRecipe(true, "epimorphism:casing_uhv", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV),
@@ -58,7 +72,30 @@ public class MetaTileEntityRecipes {
                 .duration(50)
                 .buildAndRegister();
 
-        //  UEV Hull
+        ModHandler.removeRecipeByName("gregtech:hermetic_casing_max");
+        ModHandler.addShapedRecipe(true, "hermetic_casing_max", MetaBlocks.HERMETIC_CASING.getItemVariant(HERMETIC_UHV),
+                "PPP", "PFP", "PPP",
+                'P', new UnificationEntry(OrePrefix.plate, Draconium),
+                'F', new UnificationEntry(OrePrefix.pipeLargeFluid, Duranium));
+
+        ModHandler.removeRecipeByName("gregtech:quantum_chest_uhv");
+        ModHandler.addShapedRecipe(true, "quantum_chest_uhv", MetaTileEntities.QUANTUM_CHEST[9].getStackForm(),
+                "CPC", "PHP", "CFC",
+                'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.UHV),
+                'P', new UnificationEntry(OrePrefix.plate, Draconium),
+                'F', FIELD_GENERATOR_UV.getStackForm(),
+                'H', MetaTileEntities.HULL[9].getStackForm());
+
+        ModHandler.removeRecipeByName("gregtech:quantum_tank_uhv");
+        ModHandler.addShapedRecipe(true, "quantum_tank_uhv", MetaTileEntities.QUANTUM_TANK[9].getStackForm(),
+                "CGC", "PHP", "CUC",
+                'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.UHV),
+                'P', new UnificationEntry(OrePrefix.plate, Draconium),
+                'U', ELECTRIC_PUMP_UV.getStackForm(),
+                'G', FIELD_GENERATOR_UV.getStackForm(),
+                'H', MetaBlocks.HERMETIC_CASING.getItemVariant(HERMETIC_UHV));
+
+        //  UEV Hulls
         ModHandler.addShapedRecipe(true, "casing_uev", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UEV),
                 "PPP", "PwP", "PPP",
                 'P', new UnificationEntry(plate, Neutronium));
@@ -79,7 +116,66 @@ public class MetaTileEntityRecipes {
                 .EUt(16)
                 .duration(50)
                 .buildAndRegister();
+    }
 
+    private static void EnergyHatchRecipes() {
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
+                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
+                        OreDictUnifier.get(cableGtSingle, Europium, 4),
+                        ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                        OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
+                        OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
+                new FluidStack[]{SodiumPotassium.getFluid(12000),
+                        SolderingAlloy.getFluid(5760)});
+
+        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UHV])
+                .input(cableGtSingle, Europium, 4)
+                .input(NANO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(VOLTAGE_COIL_UHV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(12000))
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .output(ENERGY_INPUT_HATCH[UHV])
+                .duration(1000)
+                .EUt(VA[UHV])
+                .research(b -> b
+                        .researchStack(ENERGY_INPUT_HATCH[UV].getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UV]))
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
+                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
+                                OreDictUnifier.get(spring, Europium, 4),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                                OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
+                new FluidStack[]{SodiumPotassium.getFluid(12000), SolderingAlloy.getFluid(5760)});
+
+        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UHV])
+                .input(spring, Europium, 4)
+                .input(NANO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(VOLTAGE_COIL_UHV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(12000))
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .output(ENERGY_OUTPUT_HATCH[UHV])
+                .duration(1000)
+                .EUt(VA[UHV])
+                .research(b -> b
+                        .researchStack(ENERGY_OUTPUT_HATCH[UV].getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UV]))
+                .buildAndRegister();
+
+        //  TODO Other Transformers and Energy Hatches (e.g. 4A, 16A, 64A).
+    }
+
+    private static void EPMachineRecipes() {
         //  Dryer recipes
         MetaTileEntityLoader.registerMachineRecipe(true, DRYER,
                 "WCW", "SHS", "WCW",
@@ -259,7 +355,9 @@ public class MetaTileEntityRecipes {
                 'E', EMITTER_UHV.getStackForm(),
                 'O', OPTICAL_FIBER.getStackForm()
         );
+    }
 
+    private static void GCYMOverrideRecipes() {
         //  GCYM Nerf
         ModHandler.removeRecipeByName("gcym:mega_blast_furnace");
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
