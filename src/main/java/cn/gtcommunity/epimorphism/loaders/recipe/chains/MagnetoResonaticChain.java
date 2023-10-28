@@ -22,12 +22,12 @@ public class MagnetoResonaticChain {
                 .duration(200)
                 .buildAndRegister();
 
-        //  YttriumTrioxide + Zirconium + Oxygen -> Cubic Zirconia
+        //  Yttrium Trioxide + Zirconium + Oxygen -> Cubic Zirconia
         CVD_RECIPES.recipeBuilder()
                 .notConsumable(dust, YttriumTrioxide)
                 .input(dust, Zirconium)
                 .fluidInputs(Oxygen.getFluid(2000))
-                .output(dust, CubicZirconia)
+                .output(gem, CubicZirconia)
                 .EUt(VA[IV])
                 .duration(600)
                 .glassTier(6)
