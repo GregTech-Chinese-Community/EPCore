@@ -312,6 +312,8 @@ public EPMaterials() {}
     public static Material Stellite;
     public static Material QuantumAlloy;
     public static Material Grisium;
+    public static Material Hdcs;
+    public static Material Abyssalloy;
 
     //Mod Compat Materials
     public static Material Mana;

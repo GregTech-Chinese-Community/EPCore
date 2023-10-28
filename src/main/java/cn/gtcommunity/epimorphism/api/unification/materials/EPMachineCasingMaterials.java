@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
+import gregtech.api.unification.material.properties.ToolProperty;
 
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
@@ -67,6 +68,29 @@ public class EPMachineCasingMaterials {
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 2000)
                 .components(BETSPerrhenate, 1, Trinaquadalloy, 4, Vibranium, 2, Taranium, 1, TitaniumCarbide, 9, Potassium, 9, Lithium, 9, Sulfur, 6)
                 .cableProperties(V[UEV], 48, 0, true)
+                .build();
+        //  24506 HDCS (High Durability Compound Steel)
+        Hdcs = new Material.Builder(24506, gregtechId("hdcs"))
+                .ingot()
+                .fluid()
+                .color(0x334433)
+                .iconSet(SHINY)
+                .toolStats(new ToolProperty(20.0F, 10.0F, 18000, 18))
+                //  TODO UHV stage Coil?
+                .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[UEV], 2400)
+                .components(TungstenSteel, 12, HSSS, 9, HSSG, 6, Ruridit, 3, MagnetoResonatic, 2, Plutonium241, 1)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
+                .build();
+        //  24507 Abyssalloy
+        Abyssalloy = new Material.Builder(24507, gregtechId("abyssalloy"))
+                .ingot()
+                .fluid()
+                .color(0x9E706A)
+                .iconSet(METALLIC)
+                .blastTemp(9625, BlastProperty.GasTier.HIGHEST, VA[UEV], 2250)
+                .components(StainlessSteel, 5, TungstenCarbide, 5, Nichrome, 5, IncoloyMA956, 5, Germanium, 1, Iodine, 1, Radon, 1)
+                .cableProperties(V[UEV], 64, 64, false)
+                .flags(GENERATE_FINE_WIRE)
                 .build();
     }
 }

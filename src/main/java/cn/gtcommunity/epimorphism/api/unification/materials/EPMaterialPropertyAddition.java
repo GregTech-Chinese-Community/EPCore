@@ -42,6 +42,7 @@ public class EPMaterialPropertyAddition {
         Germanium.addFlags(GENERATE_FOIL);
         Tungsten.addFlags(GENERATE_FINE_WIRE);
         RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
+        Neutronium.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);
         Stellite100.addFlags(GENERATE_DOUBLE_PLATE);
         MaragingSteel300.addFlags(GENERATE_DOUBLE_PLATE);
