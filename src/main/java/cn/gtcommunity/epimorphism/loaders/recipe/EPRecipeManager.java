@@ -75,7 +75,7 @@ public class EPRecipeManager {
     }
 
     public static void initMultiblockRecipes() {
-        CatalyticReformationOilProcessing.init();
+        CatalyticReformerRecipes.init();
         MetaTileEntityRecipes.init();
     }
 }

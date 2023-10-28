@@ -162,7 +162,7 @@ public class MaterialComponents {
 
         COIL_HEATING_DOUBLE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
-                {11, new UnificationEntry(OrePrefix.wireGtQuadruple, Tritanium)},
+                {10, new UnificationEntry(OrePrefix.wireGtQuadruple, Tritanium)},
 //                {11, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
@@ -176,7 +176,7 @@ public class MaterialComponents {
 //                {13, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
-        //  TODO Magnetic Samarium Cobalt Alloy
+        //  TODO Magnetic Samarium Cobalt Alloy?
         STICK_MAGNETIC.appendIngredients(Stream.of(new Object[][]{
                   {9, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
 //                {10, new UnificationEntry(OrePrefix.stickLong, Trinium)},

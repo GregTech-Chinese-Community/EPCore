@@ -6,7 +6,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
-public class CatalyticReformationOilProcessing {
+public class CatalyticReformerRecipes {
     public static void init() {
         CATALYTIC_REFORMER_RECIPES.recipeBuilder()
                 .notConsumable(plate, Platinum)
