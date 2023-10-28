@@ -75,5 +75,23 @@ public class EPUnknownCompositionMaterials {
                 .color(0x8A3324)
                 .iconSet(FINE)
                 .build();
+        // 25213 Precious Metal
+        PreciousMetal = new Material.Builder(25213, gregtechId("precious_metal"))
+                .dust()
+                .color(0xDAA520)
+                .ore()
+                .build();
+        // 25214 Iridium Platinum Metal Dust
+        IridiumPlatinumMetalDust = new Material.Builder(25214, gregtechId("iridium_platinum_metal_dust"))
+                .dust()
+                .color(0x87CEFA)
+                .ore()
+                .build();
+        // 25215 Rarest Metal Residue
+        RarestMetalResidue = new Material.Builder(25215, gregtechId("rarest_metal_residue"))
+                .dust()
+                .color(0xA0522D)
+                .ore()
+                .build();
     }
 }
