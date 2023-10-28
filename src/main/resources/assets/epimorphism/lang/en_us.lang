@@ -572,6 +572,11 @@ gregtech.material.prasiolite=Prasiolite
 gregtech.material.magneto_resonatic=Magneto Resonatic
 gregtech.material.yttrium_trioxide=Yttrium Trioxide
 
+##  Second Degree Materials
+gregtech.material.dragon_breath=Dragon Breath
+gregtech.material.concentrate_dragon_breath=Concentrate Dragon Breath
+gregtech.material.impuritie_precious_metal_cold_solution=Impuritie Precious Metal cold solution
+
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=Kapton-K
 gregtech.material.kapton_e=Kapton-E
@@ -688,6 +693,14 @@ gregtech.material.methylamine_mixture=Methylamine Mixture
 gregtech.material.molybdenum_flue=Molybdenum Flue
 gregtech.material.trace_rhenium_flue=Trace Rhenium Flue
 gregtech.material.chalcogen_anode_mud=Chalcogen Anode Mud
+gregtech.material.precious_metal=Precious Metal
+gregtech.material.iridium_platinum_metal_dust=Iridium-Platinum Slag
+gregtech.material.rarest_metal_residue=Rarest Metal Residue
+
+##  Mod Compatibility Materials
+gregtech.material.mana=Mana
+gregtech.material.primal_mana=Primal Mana
+gregtech.material.dawnstone=Dawnstone
 
 ##  Machine Casing Materials
 gregtech.material.inconel_625=Inconel-625

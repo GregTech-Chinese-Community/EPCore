@@ -573,6 +573,11 @@ gregtech.material.prasiolite=堇云石
 gregtech.material.magneto_resonatic=共振紫晶
 gregtech.material.yttrium_trioxide=三氧化二钇
 
+##  Second Degree Materials
+gregtech.material.dragon_breath=龙息
+gregtech.material.concentrate_dragon_breath=浓缩龙息
+gregtech.material.impuritie_precious_metal_cold_solution=含杂贵金属冷溶液
+
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
 gregtech.material.kapton_e=聚酰亚胺-E
@@ -689,6 +694,14 @@ gregtech.material.methylamine_mixture=甲基胺混合物
 gregtech.material.molybdenum_flue=钼烟气
 gregtech.material.trace_rhenium_flue=微量钼烟气
 gregtech.material.chalcogen_anode_mud=硫系元素阳极泥
+gregtech.material.precious_metal=贵金属
+gregtech.material.iridium_platinum_metal_dust=铱铂金属残渣
+gregtech.material.rarest_metal_residue=稀有金属残余物
+
+##  Mod Compatibility Materials
+gregtech.material.mana=魔力
+gregtech.material.primal_mana=原始魔力
+gregtech.material.dawnstone=黎明石
 
 ##  Machine Casing Materials
 gregtech.material.inconel_625=镍基合金-625
