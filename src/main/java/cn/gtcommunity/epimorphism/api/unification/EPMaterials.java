@@ -297,6 +297,14 @@ public EPMaterials() {}
     public static Material MolybdenumFlue;
     public static Material TraceRheniumFlue;
     public static Material ChalcogenAnodeMud;
+    public static Material PreciousMetal;
+    public static Material IridiumPlatinumMetalDust;
+    public static Material RarestMetalResidue;
+
+    //Liquids
+    public static Material DragonBreath;
+    public static Material ConcentrateDragonBreath;
+    public static Material ImpuritiesPreciousMetalColdSolution;
 
     //  Machine Casing Materials
     public static Material Inconel625;
@@ -304,6 +312,12 @@ public EPMaterials() {}
     public static Material Stellite;
     public static Material QuantumAlloy;
     public static Material Grisium;
+
+    //Mod Compat Materials
+    public static Material Mana;
+    public static Material PrimalMana;
+    public static Material Dawnstone;
+
 
     //  Biological Production Line
     /*public static Material ArtificialBaseX;
@@ -322,6 +336,8 @@ public EPMaterials() {}
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();
         EPMachineCasingMaterials.register();
+        EPLiquidMaterials.init();
+        EPModCompatMaterials.init();
     }
 
 }

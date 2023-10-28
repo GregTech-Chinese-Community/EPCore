@@ -132,6 +132,10 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem GRINDBALL_SOAPSTONE;
     public static MetaItem<?>.MetaValueItem GRINDBALL_ALUMINIUM;
 
+    //Chemical Items
+    public static MetaItem<?>.MetaValueItem IMPURITIES_PRECIOUS_METAL_SLUDGE_DUST;
+    public static MetaItem<?>.MetaValueItem PURIFICATION_PRECIOUS_METAL_SLUDGE_DUST;
+
     private EPMetaItems() {}
 
     public static void initialization()
