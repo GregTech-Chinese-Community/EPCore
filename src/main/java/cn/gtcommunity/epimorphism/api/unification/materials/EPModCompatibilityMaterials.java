@@ -9,7 +9,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 
-public class EPModCompatMaterials {
+public class EPModCompatibilityMaterials {
     //Range: 27000 - 27200
     public static void init() {
         // 27000 Mana

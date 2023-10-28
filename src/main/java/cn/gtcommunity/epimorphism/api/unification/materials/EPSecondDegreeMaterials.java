@@ -6,7 +6,7 @@ import gregtech.api.unification.material.Material;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 
-public class EPLiquidMaterials {
+public class EPSecondDegreeMaterials {
     // Range: 25401 - 25500
     public static void init() {
         //25401 Dragon Breath
