@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.BURNER_REACTOR_RECIPES;
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;

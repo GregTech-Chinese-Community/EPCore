@@ -63,5 +63,7 @@ public class EPMaterialInfoLoader {
 
         OreDictUnifier.registerOre(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS),
                 new ItemMaterialInfo(new MaterialStack(PMMA, M * 4)));
+
+        //  TODO other glass info
     }
 }

@@ -8,7 +8,7 @@ import gregtech.api.unification.material.properties.OreProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.ore.OrePrefix;
 
-import static gregtech.api.GTValues.ZPM;
+import static gregtech.api.GTValues.*;
 
 public class EPOreRecipeHandler {
     private EPOreRecipeHandler() {/**/}
