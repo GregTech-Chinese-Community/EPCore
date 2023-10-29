@@ -227,6 +227,7 @@ tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_invar_casing.name=Plated Adiabatic Invar Machine Casing
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=Plated Antifreeze Aluminium Machine Casing
+tile.ep_multiblock_casing.naquadria_casing.name=Naquadria Radiation Resistant Machine Casing
 tile.ep_mill_casing.isa_mill_casing.name=Inconel-625 Machine Casing
 tile.ep_mill_casing.isa_mill_casing_pipe.name=Inconel-625 Mild dispersion Pipe Casing
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=Inconel-625 Ball-milling Gearbox Casing
@@ -304,6 +305,18 @@ epimorphism.machine.dryer.uxv.name=Epic Chemical Dryer IV
 epimorphism.machine.dryer.uxv.tooltip=Moisture Remover
 epimorphism.machine.dryer.opv.name=Legendary Chemical Dryer
 epimorphism.machine.dryer.opv.tooltip=Moisture Remover
+
+recipemap.naquadah_reactor_recipes.name=Naquadah Reactor
+epimorphism.machine.naquadah_reactor.iv.name=Elite Naquadah Reactor
+epimorphism.machine.naquadah_reactor.iv.tooltip=Endless energy
+epimorphism.machine.naquadah_reactor.luv.name=Elite Naquadah Reactor II
+epimorphism.machine.naquadah_reactor.luv.tooltip=Endless energy
+epimorphism.machine.naquadah_reactor.zpm.name=Elite Naquadah Reactor III
+epimorphism.machine.naquadah_reactor.zpm.tooltip=Endless energy
+
+epimorphism.machine.large_naquadah_reactor.name=Large Naquadah Reactor
+epimorphism.machine.large_naquadah_reactor.tooltip.1=Take energy in moderation
+epimorphism.machine.large_naquadah_reactor.tooltip.2=Produces up to §3UV§7 power.
 
 epimorphism.machine.sonicator.name=Sonicator
 recipemap.sonication_recipes.name=Sonication
@@ -696,6 +709,11 @@ gregtech.material.chalcogen_anode_mud=Chalcogen Anode Mud
 gregtech.material.precious_metal=Precious Metal
 gregtech.material.iridium_platinum_metal_dust=Iridium-Platinum Slag
 gregtech.material.rarest_metal_residue=Rarest Metal Residue
+gregtech.material.crude_naquadah_fuel=Crude Naquadah Fuel
+gregtech.material.heavy_naquadah_fuel=Heavy Naquadah Fuel
+gregtech.material.medium_naquadah_fuel=Medium Naquadah Fuel
+gregtech.material.light_naquadah_fuel=Light Naquadah Fuel
+gregtech.material.naquadah_gas=Naquadah Gas
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=Mana

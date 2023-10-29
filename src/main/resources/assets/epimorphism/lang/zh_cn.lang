@@ -227,6 +227,7 @@ tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
 tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
+tile.ep_multiblock_casing.naquadria_casing.name=超能硅岩抗辐射机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -278,6 +279,7 @@ epimorphism.recipe.grind_ball_soapstone=研磨球材质：皂石
 epimorphism.recipe.grind_ball_aluminium=研磨球材质：铝
 
 #  Machines
+recipemap.dryer_recipes.name=脱水
 epimorphism.machine.dryer.lv.name=基础化学脱水机
 epimorphism.machine.dryer.lv.tooltip=并不能用于烘干头发
 epimorphism.machine.dryer.mv.name=进阶化学脱水机
@@ -304,6 +306,18 @@ epimorphism.machine.dryer.uxv.name=史诗化学脱水机 IV
 epimorphism.machine.dryer.uxv.tooltip=水分湮灭者
 epimorphism.machine.dryer.opv.name=传奇化学脱水机
 epimorphism.machine.dryer.opv.tooltip=水分湮灭者
+
+recipemap.naquadah_reactor_recipes.name=硅岩反应堆
+epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
+epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭
+epimorphism.machine.naquadah_reactor.luv.name=精英硅岩反应堆 II
+epimorphism.machine.naquadah_reactor.luv.tooltip=取之不尽，用之不竭
+epimorphism.machine.naquadah_reactor.zpm.name=精英硅岩反应堆 III
+epimorphism.machine.naquadah_reactor.zpm.tooltip=取之不尽，用之不竭
+
+epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
+epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
+epimorphism.machine.large_naquadah_reactor.tooltip.2=最高产生§3UV§7级的能量
 
 epimorphism.machine.sonicator.name=超声振荡器
 recipemap.sonication_recipes.name=超声振荡
@@ -351,8 +365,6 @@ epimorphism.machine.mega_alloy_blast_smelter.max_parallel=最大并行数：%s
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.1=玻璃等级决定了最大电压。
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=最大并行数量为线圈等级的四倍。
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=线圈每比白铜高一个层级，配方所需时间变为原来的0.8。
-
-recipemap.dryer_recipes.name=脱水
 
 epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
 epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL
@@ -697,6 +709,11 @@ gregtech.material.chalcogen_anode_mud=硫系元素阳极泥
 gregtech.material.precious_metal=贵金属
 gregtech.material.iridium_platinum_metal_dust=铱铂金属残渣
 gregtech.material.rarest_metal_residue=稀有金属残余物
+gregtech.material.crude_naquadah_fuel=粗制硅岩燃料
+gregtech.material.heavy_naquadah_fuel=重硅岩燃料
+gregtech.material.medium_naquadah_fuel=硅岩燃料
+gregtech.material.light_naquadah_fuel=轻硅岩燃料
+gregtech.material.naquadah_gas=硅岩气
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

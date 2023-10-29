@@ -75,23 +75,50 @@ public class EPUnknownCompositionMaterials {
                 .color(0x8A3324)
                 .iconSet(FINE)
                 .build();
-        // 25213 Precious Metal
+        //  25213 Precious Metal
         PreciousMetal = new Material.Builder(25213, gregtechId("precious_metal"))
                 .dust()
                 .color(0xDAA520)
                 .ore()
                 .build();
-        // 25214 Iridium Platinum Metal Dust
+        //  25214 Iridium Platinum Metal Dust
         IridiumPlatinumMetalDust = new Material.Builder(25214, gregtechId("iridium_platinum_metal_dust"))
                 .dust()
                 .color(0x87CEFA)
                 .ore()
                 .build();
-        // 25215 Rarest Metal Residue
+        //  25215 Rarest Metal Residue
         RarestMetalResidue = new Material.Builder(25215, gregtechId("rarest_metal_residue"))
                 .dust()
                 .color(0xA0522D)
                 .ore()
+                .build();
+        //  25216 Crude Naquadah Fuel
+        CrudeNaquadahFuel = new Material.Builder(25216, gregtechId("crude_naquadah_fuel"))
+                .fluid()
+                .color(0x077F4E)
+                .iconSet(DULL)
+                .build();
+        //  25217 Heavy Naquadah Fuel
+        HeavyNaquadahFuel = new Material.Builder(25217, gregtechId("heavy_naquadah_fuel"))
+                .fluid()
+                .color(0x088C56)
+                .build();
+        //  25218 Medium Naquadah Fuel
+        MediumNaquadahFuel = new Material.Builder(25218, gregtechId("medium_naquadah_fuel"))
+                .fluid()
+                .color(0x09A566)
+                .build();
+        //  25219 Light Naquadah Fuel
+        LightNaquadahFuel = new Material.Builder(25219, gregtechId("light_naquadah_fuel"))
+                .fluid()
+                .color(0x0BBF75)
+                .build();
+        //  25220 Naquadah Gas
+        NaquadahGas = new Material.Builder(25220, gregtechId("naquadah_gas"))
+                .fluid(FluidTypes.GAS)
+                .color(0x0CD985)
+                .iconSet(GAS)
                 .build();
     }
 }

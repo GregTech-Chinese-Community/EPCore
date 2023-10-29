@@ -185,6 +185,15 @@ public class MetaTileEntityRecipes {
                 'H', CraftingComponent.HULL
         );
 
+        //  Naquadah Reactor recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
+                "RCR", "FHF", "WCW",
+                'R', CraftingComponent.STICK_RADIOACTIVE,
+                'C', CraftingComponent.CIRCUIT,
+                'F', CraftingComponent.FIELD_GENERATOR,
+                'W', CraftingComponent.CABLE,
+                'H', CraftingComponent.HULL);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",
@@ -355,6 +364,34 @@ public class MetaTileEntityRecipes {
                 'E', EMITTER_UHV.getStackForm(),
                 'O', OPTICAL_FIBER.getStackForm()
         );
+
+        //  Large Naquadah Reactor
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Vibranium, 4)
+                .input(ELECTRIC_PISTON_UV, 2)
+                .input(ELECTRIC_PUMP_UV, 2)
+                .input(FIELD_GENERATOR_UV, 4)
+                .input(circuit, MarkerMaterials.Tier.UHV, 8)
+                .input(ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT, 32)
+                .input(plate, Trinium, 4)
+                .input(plateDouble, Naquadria, 4)
+                .input(gear, Tritanium, 4)
+                .input(gearSmall, Tritanium, 8)
+                .input(foil, UraniumRhodiumDinaquadide, 64)
+                .input(wireFine, EnrichedNaquadahTriniumEuropiumDuranide, 64)
+                .input(cableGtOctal, YttriumBariumCuprate, 16)
+                .fluidInputs(Trinaquadalloy.getFluid(5760))
+                .fluidInputs(HSSS.getFluid(5760))
+                .fluidInputs(Naquadria.getFluid(1440))
+                .output(LARGE_NAQUADAH_REACTOR)
+                .EUt(VA[UV])
+                .duration(4800)
+                .research(b -> b
+                        .researchStack(NAQUADAH_REACTOR[2].getStackForm())
+                        .CWUt(64)
+                        .EUt(VA[UV])
+                        .duration(48000))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {

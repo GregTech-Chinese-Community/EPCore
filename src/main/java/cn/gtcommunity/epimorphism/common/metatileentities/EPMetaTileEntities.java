@@ -9,13 +9,14 @@ import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMeta
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
+import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.util.GTUtility;
-import gregtech.common.metatileentities.MetaTileEntities;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
-import static gregtech.common.metatileentities.MetaTileEntities.registerSimpleMetaTileEntity;
+import static gregtech.api.util.GTUtility.*;
+import static gregtech.common.metatileentities.MetaTileEntities.*;
 
 public class EPMetaTileEntities {
 
@@ -26,6 +27,7 @@ public class EPMetaTileEntities {
 
     //  SingleBlock---SimpleMachines Range:301-600
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
+    public static final SimpleGeneratorMetaTileEntity[] NAQUADAH_REACTOR = new SimpleGeneratorMetaTileEntity[3];
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -49,15 +51,16 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
+    public static EPMetaTileEntityLargeNaquadahReactor LARGE_NAQUADAH_REACTOR;
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
         if (id > 1000) return null;
-        return MetaTileEntities.registerMetaTileEntity(id + 12300, mte);
+        return registerMetaTileEntity(id + 12300, mte);
     }
 
     //  Range: 13301-14300
     private static <T extends MultiblockControllerBase> T registerMultiMetaTileEntity(int id, T mte) {
-        return MetaTileEntities.registerMetaTileEntity(id + 13300, mte);
+        return registerMetaTileEntity(id + 13300, mte);
     }
 
     public static void init() {
@@ -71,7 +74,9 @@ public class EPMetaTileEntities {
 
         //  SimpleMachines: Id 12601_12900   15 ids for each machine
         registerSimpleMetaTileEntity(DRYER, 12601, "dryer", EPRecipeMaps.DRYER_RECIPES, EPTextures.DRYER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
-
+        NAQUADAH_REACTOR[0] = registerMetaTileEntity(12614, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.iv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 5, genericGeneratorTankSizeFunction));
+        NAQUADAH_REACTOR[1] = registerMetaTileEntity(12615, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.luv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 6, genericGeneratorTankSizeFunction));
+        NAQUADAH_REACTOR[2] = registerMetaTileEntity(12616, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.zpm"),  EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 7, genericGeneratorTankSizeFunction));
 
         //Multiblocks: Id 13301-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));
@@ -93,5 +98,6 @@ public class EPMetaTileEntities {
         ION_IMPLANTATER = registerMultiMetaTileEntity(31, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
+        LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
     }
 }

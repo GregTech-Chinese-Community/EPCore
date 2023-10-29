@@ -305,6 +305,11 @@ public EPMaterials() {}
     public static Material PreciousMetal;
     public static Material IridiumPlatinumMetalDust;
     public static Material RarestMetalResidue;
+    public static Material CrudeNaquadahFuel;
+    public static Material HeavyNaquadahFuel;
+    public static Material MediumNaquadahFuel;
+    public static Material LightNaquadahFuel;
+    public static Material NaquadahGas;
 
     //  Machine Casing Materials
     public static Material Inconel625;
@@ -319,7 +324,6 @@ public EPMaterials() {}
     public static Material Mana;
     public static Material PrimalMana;
     public static Material Dawnstone;
-
 
     //  Biological Production Line
     /*public static Material ArtificialBaseX;
