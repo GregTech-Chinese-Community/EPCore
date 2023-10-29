@@ -31,7 +31,8 @@ public class EPBlockMultiblockCasing extends VariantBlock<EPBlockMultiblockCasin
         ADVANCED_SUBSTRATE_CASING("advanced_substrate_casing"),
         ADVANCED_INVAR_CASING("advanced_invar_casing"),
         ADVANCED_ALUMINIUM_CASING("advanced_aluminium_casing"),
-        VACUUM_CASING("vacuum_casing");
+        VACUUM_CASING("vacuum_casing"),
+        NAQUADRIA_CASING("naquadria_casing");
 
         private final String name;
 

@@ -422,6 +422,24 @@ public class MachineComponents {
                 'R', new UnificationEntry(stick, Duranium),
                 'F', new UnificationEntry(frameGt, NaquadahAlloy)
         );
+
+        //  Naquadria Casing
+        ModHandler.addShapedRecipe(true, "naquadria_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.NAQUADRIA_CASING, 2),
+                "PhP", "TFT","PwP",
+                'P', new UnificationEntry(plateDouble, Naquadria),
+                'T', new UnificationEntry(plate, Trinium),
+                'F', new UnificationEntry(frameGt, Orichalcum));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plateDouble, Naquadria, 4)
+                .input(plate, Trinium, 2)
+                .input(frameGt, Orichalcum)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.NAQUADRIA_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Isa Mill
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(MetaTileEntities.HULL[IV], 2)

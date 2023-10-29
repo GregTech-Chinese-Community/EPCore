@@ -51,6 +51,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
+    public static EPMetaTileEntityLargeNaquadahReactor LARGE_NAQUADAH_REACTOR;
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
         if (id > 1000) return null;
@@ -97,5 +98,6 @@ public class EPMetaTileEntities {
         ION_IMPLANTATER = registerMultiMetaTileEntity(31, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
+        LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
     }
 }

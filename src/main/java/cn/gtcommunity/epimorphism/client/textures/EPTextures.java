@@ -25,6 +25,7 @@ public class EPTextures {
     public static EPOverlayRenderer ISA_MILL_CASING = new EPOverlayRenderer("casings/ep_mill_casing/isa_mill_casing");
     public static EPOverlayRenderer FLOTATION_CASING = new EPOverlayRenderer("casings/ep_mill_casing/flotation_casing");
     public static EPOverlayRenderer VACUUM_CASING = new EPOverlayRenderer("casings/solid/vacuum_casing");
+    public static EPOverlayRenderer NAQUADRIA_CASING = new EPOverlayRenderer("casings/solid/naquadria_casing");
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");

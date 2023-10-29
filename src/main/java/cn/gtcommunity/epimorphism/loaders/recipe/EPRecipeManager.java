@@ -77,5 +77,6 @@ public class EPRecipeManager {
     public static void initMultiblockRecipes() {
         CatalyticReformerRecipes.init();
         MetaTileEntityRecipes.init();
+        NaquadahReactorRecipes.init();
     }
 }
