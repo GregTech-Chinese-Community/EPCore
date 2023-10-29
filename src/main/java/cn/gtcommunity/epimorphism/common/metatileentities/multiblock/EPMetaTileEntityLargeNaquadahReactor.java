@@ -26,6 +26,7 @@ import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
@@ -36,7 +37,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 import static gregtech.api.GTValues.*;
-import static gregtech.common.blocks.MetaBlocks.FRAMES;
+import static gregtech.common.blocks.MetaBlocks.*;
 
 public class EPMetaTileEntityLargeNaquadahReactor extends FuelMultiblockController {
 
@@ -115,5 +116,9 @@ public class EPMetaTileEntityLargeNaquadahReactor extends FuelMultiblockControll
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.machine.large_naquadah_reactor.tooltip.1"));
         tooltip.add(I18n.format("epimorphism.machine.large_naquadah_reactor.tooltip.2"));
+    }
+
+    public void runMufflerEffect(float xPos, float yPos, float zPos, float xSpd, float ySpd, float zSpd) {
+        this.getWorld().spawnParticle(EnumParticleTypes.SPELL_WITCH, (double)xPos, (double)yPos, (double)zPos, (double)xSpd, (double)ySpd, (double)zSpd, new int[0]);
     }
 }
