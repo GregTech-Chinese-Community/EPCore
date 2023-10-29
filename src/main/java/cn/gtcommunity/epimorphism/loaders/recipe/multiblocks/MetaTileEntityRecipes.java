@@ -185,6 +185,15 @@ public class MetaTileEntityRecipes {
                 'H', CraftingComponent.HULL
         );
 
+        //  Naquadah Reactor recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
+                "RCR", "FHF", "WCW",
+                'R', CraftingComponent.STICK_RADIOACTIVE,
+                'C', CraftingComponent.CIRCUIT,
+                'F', CraftingComponent.FIELD_GENERATOR,
+                'W', CraftingComponent.CABLE,
+                'H', CraftingComponent.HULL);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",

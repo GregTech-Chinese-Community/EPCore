@@ -305,6 +305,13 @@ epimorphism.machine.dryer.uxv.tooltip=Moisture Remover
 epimorphism.machine.dryer.opv.name=Legendary Chemical Dryer
 epimorphism.machine.dryer.opv.tooltip=Moisture Remover
 
+epimorphism.machine.naquadah_reactor.iv.name=Elite Naquadah Reactor
+epimorphism.machine.naquadah_reactor.iv.tooltip=Endless energy
+epimorphism.machine.naquadah_reactor.luv.name=Elite Naquadah Reactor II
+epimorphism.machine.naquadah_reactor.luv.tooltip=Endless energy
+epimorphism.machine.naquadah_reactor.zpm.name=Elite Naquadah Reactor III
+epimorphism.machine.naquadah_reactor.zpm.tooltip=Endless energy
+
 epimorphism.machine.sonicator.name=Sonicator
 recipemap.sonication_recipes.name=Sonication
 

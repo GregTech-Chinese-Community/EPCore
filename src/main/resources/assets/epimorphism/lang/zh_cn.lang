@@ -305,6 +305,13 @@ epimorphism.machine.dryer.uxv.tooltip=水分湮灭者
 epimorphism.machine.dryer.opv.name=传奇化学脱水机
 epimorphism.machine.dryer.opv.tooltip=水分湮灭者
 
+epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
+epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭
+epimorphism.machine.naquadah_reactor.luv.name=精英硅岩反应堆 II
+epimorphism.machine.naquadah_reactor.luv.tooltip=取之不尽，用之不竭
+epimorphism.machine.naquadah_reactor.zpm.name=精英硅岩反应堆 III
+epimorphism.machine.naquadah_reactor.zpm.tooltip=取之不尽，用之不竭
+
 epimorphism.machine.sonicator.name=超声振荡器
 recipemap.sonication_recipes.name=超声振荡
 
