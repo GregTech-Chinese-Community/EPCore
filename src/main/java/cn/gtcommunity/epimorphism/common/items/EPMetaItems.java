@@ -108,6 +108,12 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem ATTO_PIC_CHIP;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem DUBNIUM_BOULE;
+    public static MetaItem<?>.MetaValueItem DUBNIUM_WAFER;
+    public static MetaItem<?>.MetaValueItem CUBIC_ZIRCONIA_EUROPIUM_BOULE;
+    public static MetaItem<?>.MetaValueItem CUBIC_ZIRCONIA_EUROPIUM_WAFER;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_WAFER;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_CHIP;
 
     //  Others
     public static MetaItem<?>.MetaValueItem MAGNETRON;
@@ -120,6 +126,16 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem CARBON_ALLOTROPE;
     public static MetaItem<?>.MetaValueItem GRAPHENE_ALIGNED;
 
+    //  Crystal Components
+    public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;
+    public static MetaItem<?>.MetaValueItem RUBY_CHIP;
+    public static MetaItem<?>.MetaValueItem SAPPHIRE_CHIP;
+    public static MetaItem<?>.MetaValueItem DIAMOND_MODULATOR;
+    public static MetaItem<?>.MetaValueItem RUBY_MODULATOR;
+    public static MetaItem<?>.MetaValueItem SAPPHIRE_MODULATOR;
+    public static MetaItem<?>.MetaValueItem CRYSTAL_SOC_SOCKET;
+
+    //  Biological
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;
     public static MetaItem<?>.MetaValueItem ULTRA_MICRO_PHASE_SEPARATOR;
     public static MetaItem<?>.MetaValueItem QUANTUM_TUNNELING_MICROTUBULE;
@@ -132,7 +148,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem GRINDBALL_SOAPSTONE;
     public static MetaItem<?>.MetaValueItem GRINDBALL_ALUMINIUM;
 
-    //Chemical Items
+    //  Chemical Items
     public static MetaItem<?>.MetaValueItem IMPURITIES_PRECIOUS_METAL_SLUDGE_DUST;
     public static MetaItem<?>.MetaValueItem PURIFICATION_PRECIOUS_METAL_SLUDGE_DUST;
 

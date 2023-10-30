@@ -68,11 +68,12 @@ public class CommonProxy {
         return itemBlock;
     }
 
-    @SubscribeEvent
+    //  Recipe Event
+    @SubscribeEvent(priority = EventPriority.LOW)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         EPLog.logger.info("Registering recipes...");
-        EPRecipeManager.init();
         FormulaManager.init();
+        EPRecipeManager.init();
         CasingTierProperty.registerCasingTier(1, "A");
         CasingTierProperty.registerCasingTier(2, "B");
         CasingTierProperty.registerCasingTier(3, "C");

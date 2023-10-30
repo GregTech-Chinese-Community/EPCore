@@ -16,6 +16,8 @@ public class EPRecipeManager {
         EPRecipeHandlerList.register();
         RecipeConflicts.init();
         EPMaterialInfoLoader.init();
+        EPFusionLoader.init();
+        EPOverrideRecipes.init();
         initBlocks();
         initChains();
         initCircuits();
@@ -68,6 +70,7 @@ public class EPRecipeManager {
     }
 
     public static void initCircuits() {
+        CrystalCircuits.init();
         WetwareCircuits.init();
         GoowareCircuits.init();
         OpticalCircuits.init();
