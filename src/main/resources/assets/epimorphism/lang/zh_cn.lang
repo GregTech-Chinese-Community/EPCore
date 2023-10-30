@@ -390,12 +390,13 @@ epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
 
 epimorphism.machine.fracker.name=压裂机
-epimorphism.multiblock.fracker.tooltip.1=使用1000L压裂液补充基岩下的区块流体。
-epimorphism.multiblock.fracker.tooltip.2=消耗§a%sEU/t§7。
+epimorphism.multiblock.fracker.tooltip.1=使用压裂液补充基岩下的区块流体，每次消耗1000L。
+epimorphism.multiblock.fracker.tooltip.2=每次工作消耗§a%sEU/t§7。
 
 epimorphism.machine.industrial_drill.name=工业钻机
 epimorphism.multiblock.industrial_drill.tooltip.1=钻取放置在钻头下方的方块。
-epimorphism.multiblock.industrial_drill.tooltip.2=目标方块在非消耗品时不会被破坏。
+epimorphism.multiblock.industrial_drill.tooltip.2=目标方块在配方中作为非消耗品时不会被破坏。
+recipemap.drill_recipes.name=钻取
 
 epimorphism.machine.roaster.name=工业焙烧炉
 epimorphism.multiblock.roaster.tooltip.1=青铜燃烧室: §c1000K

@@ -6,5 +6,6 @@ public class EPRecipeHandlerList {
         EPPartsRecipeHandler.register();
         EPToolRecipeHandler.register();
         EPOreRecipeHandler.register();
+        EPBouleRecipeHandler.register();
     }
 }

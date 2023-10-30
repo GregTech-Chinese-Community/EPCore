@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static gregicality.multiblocks.api.recipes.GCYMRecipeMaps.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
@@ -82,13 +83,12 @@ public class MagneticsChain {
                 .EUt(120)
                 .buildAndRegister();
 
-        //  TODO Bismuth Ferrite Seed Crystal
+        //  Bismuth Trioxide + Boron Trioxide + Distilled Water -> Bismuth Ferrite seed crystal
         AUTOCLAVE_RECIPES.recipeBuilder()
                 .input(dust, BismuthTrioxide, 20)
                 .input(dust, BoronTrioxide, 5)
                 .fluidInputs(DistilledWater.getFluid(8000))
-                .output(dust, BismuthFerrite)
-                //  .outputs(seedCrystal, BismuthFerrite)
+                .output(seedCrystal, BismuthFerrite)
                 .duration(1000)
                 .EUt(VA[LuV])
                 .buildAndRegister();
