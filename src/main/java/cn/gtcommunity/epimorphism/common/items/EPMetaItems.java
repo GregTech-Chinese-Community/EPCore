@@ -108,6 +108,8 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem ATTO_PIC_CHIP;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_WAFER;
     public static MetaItem<?>.MetaValueItem ZEPTO_PIC_CHIP;
+    public static MetaItem<?>.MetaValueItem DUBNIUM_BOULE;
+    public static MetaItem<?>.MetaValueItem DUBNIUM_WAFER;
 
     //  Others
     public static MetaItem<?>.MetaValueItem MAGNETRON;

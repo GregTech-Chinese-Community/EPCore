@@ -16,6 +16,8 @@ public class EPRecipeManager {
         EPRecipeHandlerList.register();
         RecipeConflicts.init();
         EPMaterialInfoLoader.init();
+        EPFusionLoader.init();
+        EPOverrideRecipes.init();
         initBlocks();
         initChains();
         initCircuits();

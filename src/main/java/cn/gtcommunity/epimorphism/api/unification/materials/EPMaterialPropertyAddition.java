@@ -31,6 +31,8 @@ public class EPMaterialPropertyAddition {
         Neptunium.setProperty(PropertyKey.DUST, new DustProperty());
         Neptunium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Zirconium.setProperty(PropertyKey.DUST, new DustProperty());
+        Dubnium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Dubnium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

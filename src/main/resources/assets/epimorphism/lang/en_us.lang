@@ -197,6 +197,10 @@ metaitem.wafer.zepto_pic.name=ZPIC Wafer
 metaitem.wafer.zepto_pic.tooltip=Raw Zepto Power Circuit
 metaitem.wafer.chip.zepto_pic.name=ZPIC
 metaitem.wafer.chip.zepto_pic.tooltip=Zepto Power Integrated Circuit
+metaitem.boule.dubnium.name=Dubnium-doped Monocrystalline Silicon Boule
+metaitem.boule.dubnium.tooltip=Raw Circuit
+metaitem.wafer.dubnium.name=Dubnium-doped Wafer
+metaitem.wafer.dubnium.tooltip=Raw Circuit
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=Electrochemical Gradient Recorder

@@ -197,6 +197,10 @@ metaitem.wafer.zepto_pic.name=ZPIC晶圆
 metaitem.wafer.zepto_pic.tooltip=仄米功率集成电路原料
 metaitem.wafer.chip.zepto_pic.name=ZPIC
 metaitem.wafer.chip.zepto_pic.tooltip=仄米功率集成电路
+metaitem.boule.dubnium.name=钅杜掺杂的单晶硅
+metaitem.boule.dubnium.tooltip=待处理电路
+metaitem.wafer.dubnium.name=钅杜掺杂的晶圆
+metaitem.wafer.dubnium.tooltip=待处理电路
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪

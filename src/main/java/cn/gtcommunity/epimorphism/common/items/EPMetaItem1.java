@@ -117,17 +117,19 @@ public class EPMetaItem1 extends StandardMetaItem {
         ATTO_PIC_CHIP = this.addItem(77, "wafer.chip.atto_pic");
         ZEPTO_PIC_WAFER = this.addItem(78, "wafer.zepto_pic");
         ZEPTO_PIC_CHIP = this.addItem(79, "wafer.chip.zepto_pic");
+        DUBNIUM_BOULE = this.addItem(80, "boule.dubnium");
+        DUBNIUM_WAFER = this.addItem(81, "wafer.dubnium");
 
         //  Others
-        MAGNETRON = this.addItem(80, "magnetron");
-        VOLTAGE_COIL_UHV = this.addItem(81, "voltage_coil.uhv");
-        VOLTAGE_COIL_UEV = this.addItem(82, "voltage_coil.uev");
-        VOLTAGE_COIL_UIV = this.addItem(83, "voltage_coil.uiv");
-        VOLTAGE_COIL_UXV = this.addItem(84, "voltage_coil.uxv");
-        VOLTAGE_COIL_OPV = this.addItem(85, "voltage_coil.opv");
-        VOLTAGE_COIL_MAX = this.addItem(86, "voltage_coil.max");
-        CARBON_ALLOTROPE = this.addItem(87, "carbon_allotrope");
-        GRAPHENE_ALIGNED = this.addItem(88, "graphene_aligned");
+        MAGNETRON = this.addItem(82, "magnetron");
+        VOLTAGE_COIL_UHV = this.addItem(83, "voltage_coil.uhv");
+        VOLTAGE_COIL_UEV = this.addItem(84, "voltage_coil.uev");
+        VOLTAGE_COIL_UIV = this.addItem(85, "voltage_coil.uiv");
+        VOLTAGE_COIL_UXV = this.addItem(86, "voltage_coil.uxv");
+        VOLTAGE_COIL_OPV = this.addItem(87, "voltage_coil.opv");
+        VOLTAGE_COIL_MAX = this.addItem(88, "voltage_coil.max");
+        CARBON_ALLOTROPE = this.addItem(89, "carbon_allotrope");
+        GRAPHENE_ALIGNED = this.addItem(90, "graphene_aligned");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");

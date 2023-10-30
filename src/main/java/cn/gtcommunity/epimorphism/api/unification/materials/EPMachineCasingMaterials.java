@@ -62,7 +62,7 @@ public class EPMachineCasingMaterials {
         Grisium = new Material.Builder(24505, gregtechId("grisium"))
                 .ingot()
                 .fluid()
-                .color(0x359FFC)
+                .color(0x355D6A)
                 .iconSet(METALLIC)
                 //  TODO UEV stage coil?
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 2000)
