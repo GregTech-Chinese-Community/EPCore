@@ -8,6 +8,7 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.core.unification.material.internal.MaterialRegistryManager;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
@@ -36,6 +37,37 @@ public class EPOverrideRecipes {
                 "ChC", " P ",
                 'C', new UnificationEntry(plateCurved, Iron),
                 'P', new UnificationEntry(plate, Iron));
+
+        //  Hopper
+        ModHandler.removeRecipeByName("gregtech:hopper");
+        ModHandler.addShapedRecipe("hopper", new ItemStack(Blocks.HOPPER),
+                "UCU", "UGU", "wPh",
+                'U', new UnificationEntry(plateCurved, Iron),
+                'C', "chestWood",
+                'G', new UnificationEntry(gearSmall, Iron),
+                'P', new UnificationEntry(plate, Iron));
+
+        //  Cauldron
+        ModHandler.removeRecipeByName("gregtech:cauldron");
+        ModHandler.addShapedRecipe("cauldron", new ItemStack(Items.CAULDRON),
+                "C C", "ChC", "CPC",
+                'C', new UnificationEntry(plateCurved, Iron),
+                'P', new UnificationEntry(plate, Iron));
+
+        //  Compass
+        ModHandler.removeRecipeByName("minecraft:compass");
+        ModHandler.addShapedRecipe("compass", new ItemStack(Items.COMPASS),
+                " C ", "CRC", " C ",
+                'C', new UnificationEntry(plateCurved, Iron),
+                'R', new UnificationEntry(bolt, RedAlloy));
+
+        //  Clock
+        ModHandler.removeRecipeByName("minecraft:clock");
+        ModHandler.addShapedRecipe("clock", new ItemStack(Items.CLOCK),
+                " C ", "CRC", " C ",
+                'C', new UnificationEntry(plateCurved, Gold),
+                'R', new UnificationEntry(bolt, RedAlloy));
+
         //  Tool Override Recipe
         Collection<Material> list = MaterialRegistryManager.getInstance().getRegisteredMaterials();
         for (Material material : list) {

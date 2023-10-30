@@ -88,7 +88,7 @@ public class EPMachineCasingMaterials {
                 .color(0x9E706A)
                 .iconSet(METALLIC)
                 .blastTemp(9625, BlastProperty.GasTier.HIGHEST, VA[UEV], 2250)
-                .components(StainlessSteel, 5, TungstenCarbide, 5, Nichrome, 5, IncoloyMA956, 5, Germanium, 1, Iodine, 1, Radon, 1)
+                .components(StainlessSteel, 5, TungstenCarbide, 5, Nichrome, 5, IncoloyMA956, 5, Germanium, 1, Rutherfordium, 1, Radon, 1)
                 .cableProperties(V[UEV], 64, 64, false)
                 .flags(GENERATE_FINE_WIRE)
                 .build();

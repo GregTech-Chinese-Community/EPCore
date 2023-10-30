@@ -49,7 +49,7 @@ public class EPElementMaterials {
                 .color(0x72A0C1)
                 .iconSet(METALLIC)
                 .element(EPElements.Orichalcum)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_GEAR)
                 .blastTemp(9000, BlastProperty.GasTier.HIGH)
                 .build();
         Vibranium = new Material.Builder(26004, gregtechId("vibranium"))
@@ -79,6 +79,13 @@ public class EPElementMaterials {
                 .iconSet(METALLIC)
                 .element(EPElements.Taranium)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .build();
+        Plutonium244 = new Material.Builder(26007, gregtechId("plutonium_244"))
+                .ingot()
+                .fluid()
+                .color(0xF03232)
+                .iconSet(SHINY)
+                .element(EPElements.Plutonium244)
                 .build();
     }
 }

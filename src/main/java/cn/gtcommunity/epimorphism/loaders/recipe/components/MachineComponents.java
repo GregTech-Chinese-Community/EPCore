@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
@@ -421,6 +422,22 @@ public class MachineComponents {
                 'P', new UnificationEntry(plate, Ruridit),
                 'R', new UnificationEntry(stick, Duranium),
                 'F', new UnificationEntry(frameGt, NaquadahAlloy)
+        );
+
+        //  Drill Head
+        ModHandler.addShapedRecipe("component_grinder_boron_nitride", EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm(),
+                "PDP", "DGD", "PDP",
+                'P', new UnificationEntry(plate, CubicBoronNitride),
+                'D', new UnificationEntry(plateDouble, Vibranium),
+                'G', new UnificationEntry(gem, CubicHeterodiamond));
+
+        ModHandler.addShapedRecipe(true, "industrial_drill_head", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.DRILL_HEAD),
+                "PGP", "MHM", "SSS",
+                'P', ELECTRIC_PISTON_UV.getStackForm(),
+                'G', new UnificationEntry(gear, Orichalcum),
+                'M', ELECTRIC_MOTOR_UV.getStackForm(),
+                'H', HULL[UV].getStackForm(),
+                'S', EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()
         );
 
         //  Naquadria Casing

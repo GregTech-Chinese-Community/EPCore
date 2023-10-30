@@ -6,7 +6,6 @@ metaitem.milled.tooltip.flotation=使用§6工业浮选机§7进行进一步精�
 item.material.oreprefix.seedCrystal=%s晶种
 item.material.oreprefix.boule=人造%s
 
-
 #  Tools
 gt.tool.class.bending_cylinder=弯曲绕筒
 gt.tool.class.small_bending_cylinder=小型弯曲绕筒
@@ -315,6 +314,7 @@ tile.ep_crucible_casing.tungsten.name=钨坩埚
 metaitem.magnetron.name=磁控管
 metaitem.carbon_allotrope.name=碳同素异构体混合物
 metaitem.graphene_aligned.name=石墨烯排列碳纳米管
+metaitem.grinder.boron_nitride.name=氮化硼磨头
 
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
@@ -372,6 +372,12 @@ epimorphism.multiblock.universal.problem.soldering_iron=%s§7电路板短路了�
 epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
 epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
 epimorphism.machine.large_naquadah_reactor.tooltip.2=最高产生§3UV§7级的能量
+
+recipemap.hyper_reactor_mk1_recipes.name=磁约束超能聚变
+recipemap.hyper_reactor_mk2_recipes.name=力场约束超能聚变
+recipemap.hyper_reactor_mk3_recipes.name=自控制超能聚变
+
+recipemap.fuel_refine_factory_recipes.name=燃料精炼
 
 epimorphism.machine.sonicator.name=超声振荡器
 recipemap.sonication_recipes.name=超声振荡
@@ -539,6 +545,7 @@ gregtech.material.orichalcum=山铜
 gregtech.material.vibranium=振金
 gregtech.material.adamantium=精金
 gregtech.material.taranium=塔兰金属
+gregtech.material.plutonium_244=钚-244
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -705,6 +712,21 @@ gregtech.material.bismuth_tellurite=亚碲酸铋
 gregtech.material.prasiolite=堇云石
 gregtech.material.magneto_resonatic=共振紫晶
 gregtech.material.yttrium_trioxide=三氧化二钇
+gregtech.material.heavy_taranium_fuel=重塔兰金属燃料
+gregtech.material.medium_taranium_fuel=塔兰金属燃料
+gregtech.material.light_taranium_fuel=轻塔兰金属燃料
+gregtech.material.heavy_enriched_taranium_fuel=重富集塔兰金属燃料
+gregtech.material.medium_enriched_taranium_fuel=富集塔兰金属燃料
+gregtech.material.light_enriched_taranium_fuel=轻塔兰金属燃料
+gregtech.material.light_hyper_fuel=轻超能燃料
+gregtech.material.medium_hyper_fuel=超能燃料
+gregtech.material.heavy_hyper_fuel=重超能燃料
+gregtech.material.adamantite=精金石
+gregtech.material.adamantium_unstable=不稳定精金
+gregtech.material.orichalcum_energized=充能山铜
+gregtech.material.adamantium_enriched=富集精金
+gregtech.material.deep_iron=深铁
+gregtech.material.vibranium_unstable=不稳定振金
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -830,12 +852,39 @@ gregtech.material.chalcogen_anode_mud=硫系元素阳极泥
 gregtech.material.precious_metal=贵金属
 gregtech.material.iridium_platinum_metal_dust=铱铂金属残渣
 gregtech.material.rarest_metal_residue=稀有金属残余物
-gregtech.material.fracturing_fluid=压裂液
 gregtech.material.crude_naquadah_fuel=粗制硅岩燃料
 gregtech.material.heavy_naquadah_fuel=重硅岩燃料
 gregtech.material.medium_naquadah_fuel=硅岩燃料
 gregtech.material.light_naquadah_fuel=轻硅岩燃料
 gregtech.material.naquadah_gas=硅岩气
+gregtech.material.fracturing_fluid=压裂液
+gregtech.material.bedrock=基岩
+gregtech.material.bedrock_smoke=未处理基岩烟
+gregtech.material.bedrock_soot_solution=基岩烟灰溶液
+gregtech.material.clean_bedrock_solution=洁净基岩烟灰溶液
+gregtech.material.heavy_bedrock_smoke=重基岩烟
+gregtech.material.medium_bedrock_smoke=基岩烟
+gregtech.material.light_bedrock_smoke=轻基岩烟
+gregtech.material.ultralight_bedrock_smoke=超轻基岩烟
+gregtech.material.heavy_taranium_gas=重塔兰金属气
+gregtech.material.medium_taranium_gas=塔兰金属气
+gregtech.material.light_taranium_gas=轻塔兰金属气
+gregtech.material.bedrock_gas=基岩气
+gregtech.material.cracked_heavy_taranium=氟裂化重塔兰金属气
+gregtech.material.cracked_medium_taranium=氟裂化塔兰金属气
+gregtech.material.cracked_light_taranium=氟裂化轻塔兰金属气
+gregtech.material.enriched_bedrock_soot_solution=富集基岩烟灰溶液
+gregtech.material.clean_enriched_bedrock_solution=洁净富集基岩烟灰溶液
+gregtech.material.heavy_enriched_bedrock_smoke=重富集基岩烟
+gregtech.material.medium_enriched_bedrock_smoke=富集基岩烟
+gregtech.material.light_enriched_bedrock_smoke=轻富集基岩烟
+gregtech.material.heavy_enriched_taranium_gas=重富集塔兰金属气
+gregtech.material.medium_enriched_taranium_gas=富集塔兰金属气
+gregtech.material.light_enriched_taranium_gas=轻富集塔兰金属气
+gregtech.material.cracked_heavy_enriched_taranium=氡裂化重富集塔兰金属气
+gregtech.material.cracked_medium_enriched_taranium=氡裂化富集塔兰金属气
+gregtech.material.cracked_light_enriched_taranium=氡裂化轻富集塔兰金属气
+gregtech.material.energetic_naquadria=充能超能硅岩
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

@@ -31,8 +31,16 @@ public class EPMaterialPropertyAddition {
         Neptunium.setProperty(PropertyKey.DUST, new DustProperty());
         Neptunium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Zirconium.setProperty(PropertyKey.DUST, new DustProperty());
+        Calcium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Dubnium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Dubnium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Seaborgium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Seaborgium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Seaborgium.setProperty(PropertyKey.WIRE, new WireProperties((int) V[UEV], 32, 32, false));
+        Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Rutherfordium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Livermorium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Livermorium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

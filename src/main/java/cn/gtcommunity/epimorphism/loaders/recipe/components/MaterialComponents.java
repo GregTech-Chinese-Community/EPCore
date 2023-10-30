@@ -137,9 +137,9 @@ public class MaterialComponents {
                 {6, MetaItems.COMPONENT_GRINDER_TUNGSTEN.getStackForm()},
                 {7, MetaItems.COMPONENT_GRINDER_TUNGSTEN.getStackForm()},
                 {8, MetaItems.COMPONENT_GRINDER_TUNGSTEN.getStackForm()},
-//                {9, COMPONENT_GRINDER_BORON_NITRIDE.getStackForm()},
-//                {10, COMPONENT_GRINDER_BORON_NITRIDE.getStackForm()},
-//                {11, COMPONENT_GRINDER_BORON_NITRIDE.getStackForm()},
+                {9, EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()},
+                {10, EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()},
+                {11, EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()},
 //                {12, },
 //                {13, },
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -170,19 +170,19 @@ public class MaterialComponents {
 
         COIL_ELECTRIC.appendIngredients(Stream.of(new Object[][]{
                   {9, new UnificationEntry(OrePrefix.wireGtOctal, AwakenedDraconium)},
-//                {10, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
-//                {11, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
-//                {12, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
-//                {13, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
+                  {10, new UnificationEntry(OrePrefix.wireGtOctal, Seaborgium)},
+//                  {11, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
+//                  {12, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
+//                  {13, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         //  TODO Magnetic Samarium Cobalt Alloy?
         STICK_MAGNETIC.appendIngredients(Stream.of(new Object[][]{
                   {9, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
-//                {10, new UnificationEntry(OrePrefix.stickLong, Trinium)},
-//                {11, new UnificationEntry(OrePrefix.stickLong, Trinium)},
-//                {12, new UnificationEntry(OrePrefix.stickLong, Trinium)},
-//                {13, new UnificationEntry(OrePrefix.stickLong, Trinium)},
+                  {10, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
+//                  {11, new UnificationEntry(OrePrefix.stickLong, Trinium)},
+//                  {12, new UnificationEntry(OrePrefix.stickLong, Trinium)},
+//                  {13, new UnificationEntry(OrePrefix.stickLong, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         STICK_DISTILLATION.appendIngredients(Stream.of(new Object[][]{
