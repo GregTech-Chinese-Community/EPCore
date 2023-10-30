@@ -4,10 +4,15 @@ import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.core.unification.material.internal.MaterialRegistryManager;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+
+import java.util.Collection;
 
 import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
@@ -31,6 +36,22 @@ public class EPOverrideRecipes {
                 "ChC", " P ",
                 'C', new UnificationEntry(plateCurved, Iron),
                 'P', new UnificationEntry(plate, Iron));
+        //  Tool Override Recipe
+        Collection<Material> list = MaterialRegistryManager.getInstance().getRegisteredMaterials();
+        for (Material material : list) {
+            if (material.hasFlag(MaterialFlags.GENERATE_FOIL) && !material.hasFlag(MaterialFlags.NO_SMASHING)) {
+                ModHandler.removeRecipeByName(String.format("gregtech:foil_%s", material));
+            }
+            if (material.hasFlag(MaterialFlags.GENERATE_RING) && !material.hasFlag(MaterialFlags.NO_SMASHING)) {
+                ModHandler.removeRecipeByName(String.format("gregtech:ring_%s", material));
+            }
+            if (material.hasFlag(MaterialFlags.GENERATE_SPRING) && !material.hasFlag(MaterialFlags.NO_SMASHING)) {
+                ModHandler.removeRecipeByName(String.format("gregtech:spring_%s", material));
+            }
+            if (material.hasFlag(MaterialFlags.GENERATE_SPRING_SMALL) && !material.hasFlag(MaterialFlags.NO_SMASHING)) {
+                ModHandler.removeRecipeByName(String.format("gregtech:spring_small_%s", material));
+            }
+        }
     }
 
     private static void GTOverrideRecipes() {

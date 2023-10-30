@@ -332,6 +332,15 @@ public EPMaterials() {}
     public static Material
     public static Material
     public static Material*/
+    public static Material FracturingFluid;
+    public static Material DryRedAlgae;
+    public static Material RedAlgae;
+    public static Material DryGreenAlgae;
+    public static Material GreenAlgae;
+    public static Material DryGoldenAlgae;
+    public static Material GoldenAlgae;
+    public static Material DryBrownAlgae;
+    public static Material BrownAlgae;
 
     //  Range: 24000-28000
     public static void init() {
@@ -342,6 +351,7 @@ public EPMaterials() {}
         EPSecondDegreeMaterials.init();
         EPOrganicChemistryMaterials.register();
         EPUnknownCompositionMaterials.register();
+        EPBiologicalMaterials.register();
         EPMachineCasingMaterials.register();
         EPModCompatibilityMaterials.init();
     }

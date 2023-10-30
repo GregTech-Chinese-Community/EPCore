@@ -120,5 +120,10 @@ public class EPUnknownCompositionMaterials {
                 .color(0x0CD985)
                 .iconSet(GAS)
                 .build();
+        //  25221 Fracturing Fluid
+        FracturingFluid = new Material.Builder(25221, gregtechId("fracturing_fluid"))
+                .fluid()
+                .color(0x96D6D5)
+                .build();
     }
 }
