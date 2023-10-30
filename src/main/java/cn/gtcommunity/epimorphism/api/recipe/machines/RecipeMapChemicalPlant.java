@@ -1,14 +1,27 @@
 package cn.gtcommunity.epimorphism.api.recipe.machines;
 
+import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
+import cn.gtcommunity.epimorphism.api.recipe.properties.CatalystAProperty;
+import cn.gtcommunity.epimorphism.api.recipe.properties.CatalystBProperty;
+import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
+import gregtech.api.GTValues;
 import gregtech.api.capability.impl.FluidTankList;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.ModularUI;
 import gregtech.api.gui.widgets.RecipeProgressWidget;
+import gregtech.api.gui.widgets.SlotWidget;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.util.GTTransferUtils;
+import gregtech.api.util.GTUtility;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public class RecipeMapChemicalPlant<R extends RecipeBuilder<R>> extends RecipeMap<R> {
 
