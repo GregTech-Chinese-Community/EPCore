@@ -14,6 +14,7 @@ public EPMaterials() {}
     public static Material Vibranium;
     public static Material Adamantium;
     public static Material Taranium;
+    public static Material Plutonium244;
 
     //  First Degree Materials
     public static Material GrapheneOxide;

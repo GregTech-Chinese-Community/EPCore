@@ -314,6 +314,7 @@ tile.ep_crucible_casing.tungsten.name=钨坩埚
 metaitem.magnetron.name=磁控管
 metaitem.carbon_allotrope.name=碳同素异构体混合物
 metaitem.graphene_aligned.name=石墨烯排列碳纳米管
+metaitem.grinder.boron_nitride.name=氮化硼磨头
 
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
@@ -544,6 +545,7 @@ gregtech.material.orichalcum=山铜
 gregtech.material.vibranium=振金
 gregtech.material.adamantium=精金
 gregtech.material.taranium=塔兰金属
+gregtech.material.plutonium_244=钚-244
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -718,7 +720,7 @@ gregtech.material.medium_enriched_taranium_fuel=富集塔兰金属燃料
 gregtech.material.light_enriched_taranium_fuel=轻塔兰金属燃料
 gregtech.material.light_hyper_fuel=轻超能燃料
 gregtech.material.medium_hyper_fuel=超能燃料
-gregtech.material.heavy_hyper_fuel=超能燃料
+gregtech.material.heavy_hyper_fuel=重超能燃料
 gregtech.material.adamantite=精金石
 gregtech.material.adamantium_unstable=不稳定精金
 gregtech.material.orichalcum_energized=充能山铜

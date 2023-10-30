@@ -114,6 +114,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem CUBIC_ZIRCONIA_EUROPIUM_WAFER;
     public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_WAFER;
     public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_CHIP;
+    public static MetaItem<?>.MetaValueItem BORON_NITRIDE_GRINDER;
 
     //  Others
     public static MetaItem<?>.MetaValueItem MAGNETRON;

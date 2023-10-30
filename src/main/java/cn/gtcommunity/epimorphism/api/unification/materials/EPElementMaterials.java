@@ -80,5 +80,12 @@ public class EPElementMaterials {
                 .element(EPElements.Taranium)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
+        Plutonium244 = new Material.Builder(26007, gregtechId("plutonium_244"))
+                .ingot()
+                .fluid()
+                .color(0xF03232)
+                .iconSet(SHINY)
+                .element(EPElements.Plutonium244)
+                .build();
     }
 }

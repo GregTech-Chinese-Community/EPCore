@@ -36,5 +36,15 @@ public class EPFusionLoader {
                 .duration(160)
                 .EUToStart(380000000L)
                 .buildAndRegister();
+
+        //  Plutonium-244 + Calcium -> Seaborgium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium244.getFluid(16))
+                .fluidInputs(Calcium.getFluid(32))
+                .fluidOutputs(Seaborgium.getFluid(48))
+                .EUt(VA[ZPM])
+                .duration(320)
+                .EUToStart(400000000L)
+                .buildAndRegister();
     }
 }

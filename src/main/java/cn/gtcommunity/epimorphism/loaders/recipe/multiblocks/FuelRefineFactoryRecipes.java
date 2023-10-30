@@ -9,6 +9,91 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 public class FuelRefineFactoryRecipes {
     public static void init() {
 
+        //  Cetane Boosted Diesel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .fluidInputs(Diesel.getFluid(1000))
+                .fluidInputs(Nitrogen.getFluid(1000))
+                .fluidOutputs(CetaneBoostedDiesel.getFluid(6000))
+                .EUt(VA[EV])
+                .duration(20)
+                .buildAndRegister();
+
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .fluidInputs(BioDiesel.getFluid(1000))
+                .fluidInputs(Nitrogen.getFluid(1000))
+                .fluidOutputs(CetaneBoostedDiesel.getFluid(6000))
+                .EUt(VA[EV])
+                .duration(20)
+                .buildAndRegister();
+
+        //  High Octane Gasoline
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .fluidInputs(Gasoline.getFluid(1000))
+                .fluidInputs(Octane.getFluid(1000))
+                .fluidOutputs(HighOctaneGasoline.getFluid(6000))
+                .EUt(VA[IV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Light Naquadah Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Naquadah)
+                .fluidInputs(Uranium235.getFluid(500))
+                .fluidInputs(Nitrogen.getFluid(500))
+                .fluidOutputs(LightNaquadahFuel.getFluid(6000))
+                .duration(300)
+                .EUt(VA[ZPM])
+                .buildAndRegister();
+
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, GalliumSulfide)
+                .fluidInputs(EnergeticNaquadria.getFluid(1000))
+                .fluidInputs(Nitrogen.getPlasma(1000))
+                .fluidOutputs(LightNaquadahFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
+        //  Medium Naquadah Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, NaquadahEnriched)
+                .fluidInputs(Uranium235.getFluid(500))
+                .fluidInputs(Plutonium241.getFluid(500))
+                .output(dust, Plutonium244)
+                .fluidOutputs(MediumNaquadahFuel.getFluid(6000))
+                .duration(300)
+                .EUt(VA[ZPM])
+                .buildAndRegister();
+
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, IndiumPhosphide)
+                .fluidInputs(EnergeticNaquadria.getFluid(1000))
+                .fluidInputs(Nitrogen.getPlasma(1000))
+                .fluidOutputs(MediumNaquadahFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
+        //  Heavy Naquadah Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Naquadria)
+                .input(dust, Plutonium239)
+                .fluidInputs(Nitrogen.getPlasma(500))
+                .output(dust, Naquadah)
+                .fluidOutputs(HeavyNaquadahFuel.getFluid(6000))
+                .duration(300)
+                .EUt(VA[ZPM])
+                .buildAndRegister();
+
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Trinium)
+                .fluidInputs(EnergeticNaquadria.getFluid(1000))
+                .fluidInputs(Nitrogen.getPlasma(1000))
+                .fluidOutputs(HeavyNaquadahFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
         //  Energetic Naquadria
         FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
                 .input(dust, Naquadria)

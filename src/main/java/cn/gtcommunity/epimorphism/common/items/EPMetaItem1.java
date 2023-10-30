@@ -134,6 +134,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         VOLTAGE_COIL_MAX = this.addItem(106, "voltage_coil.max");
         CARBON_ALLOTROPE = this.addItem(107, "carbon_allotrope");
         GRAPHENE_ALIGNED = this.addItem(108, "graphene_aligned");
+        BORON_NITRIDE_GRINDER = this.addItem(109, "grinder.boron_nitride");
 
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");
