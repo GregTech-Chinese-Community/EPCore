@@ -89,6 +89,7 @@ public class EPMaterialFlagAddition {
         Materials.Copper.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.Duranium.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.Europium.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
+        Materials.Gold.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.Iridium.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.Lead.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.Naquadah.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
