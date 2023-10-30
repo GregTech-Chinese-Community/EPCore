@@ -70,6 +70,48 @@ public class NaquadahReactorRecipes {
                 .duration(60)
                 .buildAndRegister();
 
+        //  Heavy Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(HeavyTaraniumFuel.getFluid(1))
+                .EUt(-4096)
+                .duration(360)
+                .buildAndRegister();
+
+        //  Medium Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(MediumTaraniumFuel.getFluid(1))
+                .EUt(-4096)
+                .duration(240)
+                .buildAndRegister();
+
+        //  Light Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(LightTaraniumFuel.getFluid(1))
+                .EUt(-4096)
+                .duration(120)
+                .buildAndRegister();
+
+        //  Heavy Enriched Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(HeavyEnrichedTaraniumFuel.getFluid(1))
+                .EUt(-8192)
+                .duration(720)
+                .buildAndRegister();
+
+        //  Medium Enriched Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(MediumEnrichedTaraniumFuel.getFluid(1))
+                .EUt(-8192)
+                .duration(480)
+                .buildAndRegister();
+
+        //  Light Enriched Taranium Fuel
+        NAQUADAH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(LightEnrichedTaraniumFuel.getFluid(1))
+                .EUt(-8192)
+                .duration(240)
+                .buildAndRegister();
+
         //  Naquadah Gas
         GAS_TURBINE_FUELS.recipeBuilder()
                 .fluidInputs(NaquadahGas.getFluid(1))

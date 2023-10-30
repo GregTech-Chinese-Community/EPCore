@@ -181,6 +181,21 @@ public EPMaterials() {}
     public static Material Prasiolite;
     public static Material MagnetoResonatic;
     public static Material YttriumTrioxide;
+    public static Material HeavyTaraniumFuel;
+    public static Material MediumTaraniumFuel;
+    public static Material LightTaraniumFuel;
+    public static Material HeavyEnrichedTaraniumFuel;
+    public static Material MediumEnrichedTaraniumFuel;
+    public static Material LightEnrichedTaraniumFuel;
+    public static Material LightHyperFuel;
+    public static Material MediumHyperFuel;
+    public static Material HeavyHyperFuel;
+    public static Material Adamantite;
+    public static Material AdamantiumUnstable;
+    public static Material OrichalcumEnergized;
+    public static Material AdamantiumEnriched;
+    public static Material DeepIron;
+    public static Material VibraniumUnstable;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -310,6 +325,34 @@ public EPMaterials() {}
     public static Material MediumNaquadahFuel;
     public static Material LightNaquadahFuel;
     public static Material NaquadahGas;
+    public static Material FracturingFluid;
+    public static Material Bedrock;
+    public static Material BedrockSmoke;
+    public static Material BedrockSootSolution;
+    public static Material CleanBedrockSolution;
+    public static Material HeavyBedrockSmoke;
+    public static Material MediumBedrockSmoke;
+    public static Material LightBedrockSmoke;
+    public static Material UltralightBedrockSmoke;
+    public static Material HeavyTaraniumGas;
+    public static Material MediumTaraniumGas;
+    public static Material LightTaraniumGas;
+    public static Material BedrockGas;
+    public static Material CrackedHeavyTaranium;
+    public static Material CrackedMediumTaranium;
+    public static Material CrackedLightTaranium;
+    public static Material EnrichedBedrockSootSolution;
+    public static Material CleanEnrichedBedrockSolution;
+    public static Material HeavyEnrichedBedrockSmoke;
+    public static Material MediumEnrichedBedrockSmoke;
+    public static Material LightEnrichedBedrockSmoke;
+    public static Material HeavyEnrichedTaraniumGas;
+    public static Material MediumEnrichedTaraniumGas;
+    public static Material LightEnrichedTaraniumGas;
+    public static Material CrackedHeavyEnrichedTaranium;
+    public static Material CrackedMediumEnrichedTaranium;
+    public static Material CrackedLightEnrichedTaranium;
+    public static Material EnergeticNaquadria;
 
     //  Machine Casing Materials
     public static Material Inconel625;
@@ -332,7 +375,6 @@ public EPMaterials() {}
     public static Material
     public static Material
     public static Material*/
-    public static Material FracturingFluid;
     public static Material DryRedAlgae;
     public static Material RedAlgae;
     public static Material DryGreenAlgae;
