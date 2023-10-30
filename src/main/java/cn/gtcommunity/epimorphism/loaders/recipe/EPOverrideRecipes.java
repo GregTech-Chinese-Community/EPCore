@@ -2,10 +2,14 @@ package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.stack.UnificationEntry;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
+import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
@@ -16,6 +20,20 @@ import static gregtech.common.items.MetaItems.*;
 
 public class EPOverrideRecipes {
     public static void init() {
+        VanillaOverrideRecipes();
+        GTOverrideRecipes();
+    }
+
+    private static void VanillaOverrideRecipes() {
+        //  Iron bucket
+        ModHandler.removeRecipeByName("gregtech:iron_bucket");
+        ModHandler.addShapedRecipe("iron_bucket", new ItemStack(Items.BUCKET),
+                "ChC", " P ",
+                'C', new UnificationEntry(plateCurved, Iron),
+                'P', new UnificationEntry(plate, Iron));
+    }
+
+    private static void GTOverrideRecipes() {
         //  Neutronium Boule
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
                 new ItemStack[]{OreDictUnifier.get(block, Silicon, 32),

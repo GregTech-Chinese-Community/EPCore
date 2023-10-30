@@ -5,7 +5,9 @@ import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
+import cn.gtcommunity.epimorphism.loaders.recipe.GTOverrideRecipes;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
+import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.loaders.recipe.CraftingComponent;
@@ -79,6 +81,12 @@ public class CommonProxy {
         CasingTierProperty.registerCasingTier(3, "C");
         CasingTierProperty.registerCasingTier(4, "D");
         CasingTierProperty.registerCasingTier(5, "E");
+    }
+
+    @SubscribeEvent
+    public static void registerRecipeHandlers(RegistryEvent.Register<IRecipe> event) {
+        EPRecipeHandlerList.register();
+        GTOverrideRecipes.init();
     }
 
     //  Crafting Component Event
