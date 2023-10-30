@@ -5,7 +5,6 @@ import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
-import cn.gtcommunity.epimorphism.loaders.recipe.GTOverrideRecipes;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
 import gregtech.api.GregTechAPI;
@@ -86,7 +85,6 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerRecipeHandlers(RegistryEvent.Register<IRecipe> event) {
         EPRecipeHandlerList.register();
-        GTOverrideRecipes.init();
     }
 
     //  Crafting Component Event
