@@ -9,7 +9,7 @@ import net.minecraftforge.fluids.FluidStack;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
-import static gregtech.api.unification.material.MarkerMaterials.Color.Red;
+import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
@@ -117,8 +117,11 @@ public class EPOverrideRecipes {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  FIXME why remove craftingLens<Color> kill all recipes of lens???
-        //  TODO Dubnium wafer needs to inherit all recipes of original Neutronium wafer, and Neutronium wafer may needs add UHSoC for Gooware circuits.
+        //  Red: Integrated Logic Circuit Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Red));
+
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(DUBNIUM_WAFER)
                 .notConsumable(craftingLens, Red)
@@ -128,8 +131,6 @@ public class EPOverrideRecipes {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  TODO Example of new Neutronium wafer recipes, need to delete original recipes.
-        /*
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(NEUTRONIUM_WAFER)
                 .notConsumable(craftingLens, Red)
@@ -138,6 +139,258 @@ public class EPOverrideRecipes {
                 .duration(50)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
-         */
+
+        //  Green: RAM Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Green));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Green)
+                .output(RANDOM_ACCESS_MEMORY_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Green)
+                .output(RANDOM_ACCESS_MEMORY_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Light Blue: CPU Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, LightBlue));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, LightBlue)
+                .output(CENTRAL_PROCESSING_UNIT_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, LightBlue)
+                .output(CENTRAL_PROCESSING_UNIT_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Blue: ULPIC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Blue));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Blue)
+                .output(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Blue)
+                .output(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Orange: LPIC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Orange));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Orange)
+                .output(LOW_POWER_INTEGRATED_CIRCUIT_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Orange)
+                .output(LOW_POWER_INTEGRATED_CIRCUIT_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Cyan: Simple SoC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Cyan));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Cyan)
+                .output(SIMPLE_SYSTEM_ON_CHIP_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Cyan)
+                .output(SIMPLE_SYSTEM_ON_CHIP_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Gray: NAND Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Gray));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Gray)
+                .output(NAND_MEMORY_CHIP_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Gray)
+                .output(NAND_MEMORY_CHIP_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Pink: NOR Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Pink));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Pink)
+                .output(NOR_MEMORY_CHIP_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Pink)
+                .output(NOR_MEMORY_CHIP_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Brown: PIC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Brown));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Brown)
+                .output(POWER_INTEGRATED_CIRCUIT_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Brown)
+                .output(POWER_INTEGRATED_CIRCUIT_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Yellow: SoC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Yellow));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Yellow)
+                .output(SYSTEM_ON_CHIP_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Yellow)
+                .output(SYSTEM_ON_CHIP_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Purple: ASoC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Purple));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Purple)
+                .output(ADVANCED_SYSTEM_ON_CHIP_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Purple)
+                .output(ADVANCED_SYSTEM_ON_CHIP_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Black: HASoC Wafer
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                NEUTRONIUM_WAFER.getStackForm(),
+                OreDictUnifier.get(craftingLens, Black));
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(DUBNIUM_WAFER)
+                .notConsumable(craftingLens, Black)
+                .output(HIGHLY_ADVANCED_SOC_WAFER, 16)
+                .EUt(VA[IV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(NEUTRONIUM_WAFER)
+                .notConsumable(craftingLens, Black)
+                .output(HIGHLY_ADVANCED_SOC_WAFER, 32)
+                .EUt(VA[LuV])
+                .duration(50)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
     }
 }

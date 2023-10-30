@@ -3,13 +3,13 @@ package cn.gtcommunity.epimorphism.loaders.recipe.circuits;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
-import gregtech.api.unification.material.MarkerMaterials;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
@@ -18,7 +18,7 @@ public class CrystalCircuits {
     public static void init() {
         GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
                 CRYSTAL_CENTRAL_PROCESSING_UNIT.getStackForm(),
-                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Blue)
+                OreDictUnifier.get(craftingLens, Blue)
         );
 
         //  Cubic Zirconia + Europium -> Europium-doped Cubic Zirconia Boule
@@ -43,7 +43,7 @@ public class CrystalCircuits {
         //  Europium-doped Cubic Zirconia Wafer -> Crystal Interface Wafer
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(CUBIC_ZIRCONIA_EUROPIUM_WAFER)
-                .notConsumable(lens, Diamond)
+                .notConsumable(craftingLens, LightBlue)
                 .output(CRYSTAL_INTERFACE_WAFER)
                 .duration(20)
                 .EUt(VA[LuV])
@@ -62,7 +62,7 @@ public class CrystalCircuits {
         //  Sapphire Crystal Chip
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(gemExquisite, Sapphire)
-                .notConsumable(GLASS_LENSES.get(MarkerMaterials.Color.Blue))
+                .notConsumable(craftingLens, Blue)
                 .output(SAPPHIRE_CHIP)
                 .duration(1200)
                 .EUt(VA[HV])
@@ -72,7 +72,7 @@ public class CrystalCircuits {
         //  Ruby Crystal Chip
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(gemExquisite, Ruby)
-                .notConsumable(GLASS_LENSES.get(MarkerMaterials.Color.Red))
+                .notConsumable(craftingLens, Red)
                 .output(RUBY_CHIP)
                 .duration(1200)
                 .EUt(VA[HV])
@@ -82,7 +82,7 @@ public class CrystalCircuits {
         //  Diamond Crystal Chip
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(gemExquisite, Diamond)
-                .notConsumable(GLASS_LENSES.get(MarkerMaterials.Color.LightBlue))
+                .notConsumable(craftingLens, LightBlue)
                 .output(DIAMOND_CHIP)
                 .duration(1200)
                 .EUt(VA[HV])
