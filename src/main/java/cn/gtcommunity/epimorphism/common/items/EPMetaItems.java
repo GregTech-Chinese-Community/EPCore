@@ -147,6 +147,12 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem DNA_DECODE_ENCODER;
     public static MetaItem<?>.MetaValueItem GRINDBALL_SOAPSTONE;
     public static MetaItem<?>.MetaValueItem GRINDBALL_ALUMINIUM;
+    public static MetaItem<?>.MetaValueItem ORDINARY_ALGAE;
+    public static MetaItem<?>.MetaValueItem RED_ALGA;
+    public static MetaItem<?>.MetaValueItem GREEN_ALGA;
+    public static MetaItem<?>.MetaValueItem CHRYSOPHYCEAE;
+    public static MetaItem<?>.MetaValueItem BROWN_ALGA;
+
 
     //  Chemical Items
     public static MetaItem<?>.MetaValueItem IMPURITIES_PRECIOUS_METAL_SLUDGE_DUST;

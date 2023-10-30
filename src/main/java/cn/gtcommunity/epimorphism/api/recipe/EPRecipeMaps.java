@@ -1,18 +1,23 @@
 package cn.gtcommunity.epimorphism.api.recipe;
 
 import cn.gtcommunity.epimorphism.api.recipe.builder.*;
+import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapChemicalPlant;
+import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapGeneral;
 import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
+import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.builders.BlastRecipeBuilder;
+import gregtech.api.recipes.builders.ComputationRecipeBuilder;
 import gregtech.api.recipes.builders.FuelRecipeBuilder;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 import gregtech.core.sound.GTSoundEvents;
 
 public class EPRecipeMaps {
 
-    //  Machines
+    //  SimpleMachines
     public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES = new RecipeMap<>("dryer_recipes", 0, 1, 0, 2, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
             .setSlotOverlay(false, false, true, GuiTextures.FURNACE_OVERLAY_1)
             .setSlotOverlay(false, true, true, GuiTextures.FURNACE_OVERLAY_2)
@@ -20,6 +25,7 @@ public class EPRecipeMaps {
             .setSlotOverlay(true, false, true, GuiTextures.DUST_OVERLAY)
             .setSound(GTSoundEvents.FURNACE);
 
+    //  Multiblocks
     public static final RecipeMap<BlastRecipeBuilder> CRYSTALLIZER_RECIPES = new RecipeMap<>("crystallization_recipes", 0, 6, 1, 1, 0, 3, 0, 0, new BlastRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.FURNACE);
@@ -88,8 +94,12 @@ public class EPRecipeMaps {
             .setSlotOverlay(true, true, true, GuiTextures.FURNACE_OVERLAY_2)
             .setSound(GTSoundEvents.FURNACE);
 
-    public static final RecipeMap<CasingTierRecipeBuilder> CHEMICAL_PLANT_RECIPES = new RecipeMap<>("chemical_plant_recipes", 4, 4, 4, 4, new CasingTierRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
+    public static final RecipeMap<CasingTierRecipeBuilder> CHEMICAL_PLANT_RECIPES = new RecipeMapChemicalPlant<>("chemical_plant_recipes", 4, 4, 4, 4, new CasingTierRecipeBuilder(), false)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_MIXER, ProgressWidget.MoveType.CIRCULAR)
+            .setSlotOverlay(false, false, GuiTextures.MOLECULAR_OVERLAY_1)
+            .setSlotOverlay(false, true, GuiTextures.MOLECULAR_OVERLAY_4)
+            .setSlotOverlay(true, false, GuiTextures.VIAL_OVERLAY_1)
+            .setSlotOverlay(true, true, GuiTextures.VIAL_OVERLAY_2)
             .setSound(GTSoundEvents.CHEMICAL_REACTOR);
 
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> ROASTER_RECIPES = new RecipeMap<>("roaster_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new NoCoilTemperatureRecipeBuilder(), false)
@@ -99,6 +109,27 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTATER_RECIPES = new RecipeMap<>("ion_implanter_recipes", 1, 3, 1, 1, 0, 1, 0, 0, new SimpleRecipeBuilder(), false)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ELECTROLYZER);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK_RECIPES = new RecipeMap<>("dissolution_tank_recipes", 2, 2, 4, 4, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DRILLING_RECIPES = new RecipeMap<>("drill_recipes", 1, 1, 0, 1, 0, 0, 0, 1, new SimpleRecipeBuilder(), false)
+            .setSlotOverlay(false, false, true, GuiTextures.CRUSHED_ORE_OVERLAY)
+            .setSlotOverlay(true, false, true, GuiTextures.DUST_OVERLAY)
+            .setSound(GTSoundEvents.MACERATOR);
+
+    public static final RecipeMap<ComputationRecipeBuilder> COMPUTING_TERMINAL_RECIPES = new RecipeMap<>("computing_terminal_recipes", 1, 4, 1, 4, 0, 0, 0, 0, new ComputationRecipeBuilder(), false)
+            .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
+            .setSlotOverlay(true, false, GuiTextures.DATA_ORB_OVERLAY)
+            .setSound(GTValues.FOOLS.get() ? GTSoundEvents.SCIENCE : GTSoundEvents.COMPUTATION);
+
+    public static final RecipeMap<AltitudeRecipeBuilder> COSMIC_RAY_DETECTOR_RECIPES = new RecipeMap<>("cosmic_ray_detector_recipes", 1, 2, 1, 3, 0, 2, 0, 3,new AltitudeRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER_RECIPES = new RecipeMap<>("digester_recipes", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    //  Pseudo RecipeMap used in General Processing Plant
+    public static final RecipeMapGeneral<SimpleRecipeBuilder> GENERAL_RECIPES_A = new RecipeMapGeneral<>("general_recipes_a", 1, 2, 1, 1, new SimpleRecipeBuilder(),  RecipeMaps.COMPRESSOR_RECIPES, RecipeMaps.LATHE_RECIPES, RecipeMaps.POLARIZER_RECIPES, true);
+    public static final RecipeMapGeneral<SimpleRecipeBuilder> GENERAL_RECIPES_B = new RecipeMapGeneral<>("general_recipes_b", 2, 2, 1, 1, new SimpleRecipeBuilder(), RecipeMaps.FERMENTING_RECIPES, RecipeMaps.EXTRACTOR_RECIPES, RecipeMaps.CANNER_RECIPES, true);
+    public static final RecipeMapGeneral<SimpleRecipeBuilder> GENERAL_RECIPES_C = new RecipeMapGeneral<>("general_recipes_c", 2, 2, 1, 1, new SimpleRecipeBuilder(), RecipeMaps.LASER_ENGRAVER_RECIPES, RecipeMaps.AUTOCLAVE_RECIPES, RecipeMaps.FLUID_SOLIDFICATION_RECIPES, true);
 
     //  Generators
     public static final RecipeMap<FuelRecipeBuilder> NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

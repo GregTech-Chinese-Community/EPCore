@@ -154,10 +154,15 @@ public class EPMetaItem1 extends StandardMetaItem {
         DNA_ENCODER = this.addItem(307, "biological.components.dna_encoder");
         DNA_DECODER = this.addItem(308, "biological.components.dna_decoder");
         DNA_DECODE_ENCODER = this.addItem(309, "biological.components.dna_decode_encoder");
+        ORDINARY_ALGAE = this.addItem(350, "algae.ordinary_algae");
+        RED_ALGA = this.addItem(351, "algae.red_alga");
+        GREEN_ALGA = this.addItem(352, "algae.green_alga");
+        CHRYSOPHYCEAE = this.addItem(353, "algae.chrysophyceae");
+        BROWN_ALGA = this.addItem(354, "algae.brown_alga");
 
         //  Mill Balls
-        GRINDBALL_SOAPSTONE = this.addItem(350, "mill.grindball_soapstone").setMaxStackSize(1).addComponents(new MillBallBehavior());
-        GRINDBALL_ALUMINIUM = this.addItem(351, "mill.grindball_aluminium").setMaxStackSize(1).addComponents(new MillBallBehavior());
+        GRINDBALL_SOAPSTONE = this.addItem(370, "mill.grindball_soapstone").setMaxStackSize(1).addComponents(new MillBallBehavior());
+        GRINDBALL_ALUMINIUM = this.addItem(371, "mill.grindball_aluminium").setMaxStackSize(1).addComponents(new MillBallBehavior());
 
     }
 }

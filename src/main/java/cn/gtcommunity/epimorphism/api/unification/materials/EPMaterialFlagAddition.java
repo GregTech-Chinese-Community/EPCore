@@ -4,6 +4,8 @@ import cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialFlags;
 
+import static gregtech.api.unification.material.Materials.*;
+
 public class EPMaterialFlagAddition {
 
     public static void init() {
@@ -145,5 +147,16 @@ public class EPMaterialFlagAddition {
         Materials.Nickel.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         // Materials.PolyvinylChloride.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
         Materials.RoseGold.addFlags(EPMaterialFlags.GENERATE_CURVED_PLATE);
+
+        // Disable Crystallization
+        Monazite.addFlags(EPMaterialFlags.DISABLE_CRYSTALLIZATION);
+
+        // Crystallizable
+        Sapphire.addFlags(MaterialFlags.CRYSTALLIZABLE);
+        Ruby.addFlags(MaterialFlags.CRYSTALLIZABLE);
+        Emerald.addFlags(MaterialFlags.CRYSTALLIZABLE);
+        Olivine.addFlags(MaterialFlags.CRYSTALLIZABLE);
+        Amethyst.addFlags(MaterialFlags.CRYSTALLIZABLE);
+        Opal.addFlags(MaterialFlags.CRYSTALLIZABLE);
     }
 }
