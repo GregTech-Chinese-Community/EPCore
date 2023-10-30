@@ -38,6 +38,8 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -138,11 +140,13 @@ public class EPMetaTileEntityCrystallizationCrucible extends RecipeMapMultiblock
         tooltip.add(I18n.format("gregtech.machine.electric_blast_furnace.tooltip.3"));
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return Textures.STABLE_TITANIUM_CASING;
     }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected OrientedOverlayRenderer getFrontOverlay() {

@@ -8,5 +8,7 @@ public class OrePrefixAdditions {
         MetaItems.addOrePrefix(EPOrePrefix.coil);
         MetaItems.addOrePrefix(EPOrePrefix.plateCurved);
         MetaItems.addOrePrefix(EPOrePrefix.milled);
+        MetaItems.addOrePrefix(EPOrePrefix.seedCrystal);
+        MetaItems.addOrePrefix(EPOrePrefix.boule);
     }
 }

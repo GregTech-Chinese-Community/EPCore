@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.EPCapabilities;
+import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.IBall;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.GrindBallTierProperty;
@@ -31,6 +31,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -70,7 +72,7 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
                 .where('E', states(getCasingState()).setMinGlobalLimited(31)
                         .or(abilities(MultiblockAbility.MUFFLER_HATCH).setExactLimit(1))
                         .or(abilities(MultiblockAbility.MAINTENANCE_HATCH).setExactLimit(1))
-                        .or(abilities(EPCapabilities.GRINDBALL_MULTIBLOCK_ABILITY).setExactLimit(1))
+                        .or(abilities(EPMultiblockAbilities.GRINDBALL_MULTIBLOCK_ABILITY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2).setPreviewCount(1)))
@@ -79,12 +81,13 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
     }
 
     public IBall getBallHolder() {
-        List<IBall> abilities = getAbilities(EPCapabilities.GRINDBALL_MULTIBLOCK_ABILITY);
+        List<IBall> abilities = getAbilities(EPMultiblockAbilities.GRINDBALL_MULTIBLOCK_ABILITY);
         if (abilities.isEmpty())
             return null;
         return abilities.get(0);
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return EPTextures.ISA_MILL_CASING;
@@ -139,6 +142,7 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
         EPTextures.ISA_MILL.renderSided(renderState, translation, pipeline, getFrontFacing(), isStructureFormed(), this.getRecipeLogic().isActive());
     }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected ICubeRenderer getFrontOverlay() {
