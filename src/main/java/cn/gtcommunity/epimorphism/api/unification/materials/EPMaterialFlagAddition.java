@@ -9,9 +9,6 @@ import static gregtech.api.unification.material.Materials.*;
 public class EPMaterialFlagAddition {
 
     public static void init() {
-        //  Darmstadtium Frame for Gooware Mainframe
-        Materials.Darmstadtium.addFlags(MaterialFlags.GENERATE_FRAME);
-
         /*
         *  Coils for Motor wires
         *  Copper      | LV Motor

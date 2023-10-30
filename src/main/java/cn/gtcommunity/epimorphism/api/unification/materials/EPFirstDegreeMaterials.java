@@ -6,6 +6,7 @@ import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
 
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -71,8 +72,7 @@ public class EPFirstDegreeMaterials {
                 .gem()
                 .color(0x545572)
                 .iconSet(DIAMOND)
-                //  TODO DISABLE_CRYSTALLIZATION
-                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION, CRYSTALLIZABLE, FLAMMABLE, EXPLOSIVE)
+                .flags(GENERATE_PLATE, DISABLE_DECOMPOSITION, DISABLE_CRYSTALLIZATION, FLAMMABLE, EXPLOSIVE)
                 .components(Boron, 1, Nitrogen, 1)
                 .toolStats(new ToolProperty(14.0F, 9.0F, 12400, 15))
                 .build()
@@ -1198,8 +1198,7 @@ public class EPFirstDegreeMaterials {
                 .gem()
                 .color(0x43634B)
                 .iconSet(MAGNETIC)
-                //  TODO CRYSTALLIZABLE
-                .flags(GENERATE_PLATE)
+                .flags(CRYSTALLIZABLE, GENERATE_PLATE)
                 .components(BismuthTrioxide, 2, FerricOxide, 2)
                 .build()
                 .setFormula("BiFeO3", true);
@@ -1226,8 +1225,7 @@ public class EPFirstDegreeMaterials {
                 .gem()
                 .color(0xFFDFE2)
                 .iconSet(DIAMOND)
-                //  TODO CRYSTALLIZABLE
-                .flags(DISABLE_DECOMPOSITION)
+                .flags(CRYSTALLIZABLE, DISABLE_DECOMPOSITION)
                 .components(Zirconium, 1, Oxygen, 2)
                 .build();
         //  24161 Bismuth Tellurite

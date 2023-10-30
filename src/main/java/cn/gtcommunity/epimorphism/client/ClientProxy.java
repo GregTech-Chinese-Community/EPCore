@@ -10,8 +10,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
-    public ClientProxy() {
-    }
+    public ClientProxy() {}
 
     public void preLoad() {
         super.preLoad();

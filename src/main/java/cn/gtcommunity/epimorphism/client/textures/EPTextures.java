@@ -33,8 +33,7 @@ public class EPTextures {
     // EPMultiRenderer
     public static IsaMillRenderer ISA_MILL = new IsaMillRenderer();
 
-    public EPTextures() {
-    }
+    public EPTextures() {}
 
     public static void preInit() {}
 
