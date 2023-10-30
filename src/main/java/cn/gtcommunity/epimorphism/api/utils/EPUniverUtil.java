@@ -1,10 +1,17 @@
 package cn.gtcommunity.epimorphism.api.utils;
 
+import gregtech.api.metatileentity.MetaTileEntity;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockPart;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
+import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.List;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
@@ -86,5 +93,69 @@ public class EPUniverUtil {
             return tag.getInteger(key);
         }
         return defaultValue;
+    }
+
+    public static int stackToInt(ItemStack stack) {
+        if (isStackInvalid(stack)) return 0;
+        return itemToInt(stack.getItem(), stack.getMetadata());
+    }
+
+    public static int itemToInt(Item item, int meta) {
+        return Item.getIdFromItem(item) | (meta << 16);
+    }
+
+    public static boolean isStackInvalid(Object stack) {
+        return !(stack instanceof ItemStack) || ((ItemStack) stack).getCount() < 0;
+    }
+
+    public static boolean isStackValid(Object aStack) {
+        return (aStack instanceof ItemStack) && ((ItemStack) aStack).getCount() >= 0;
+    }
+
+    public static ItemStack intToStack(int aStack) {
+        int tID = aStack & (~0 >>> 16), tMeta = aStack >>> 16;
+        Item tItem = Item.getItemById(tID);
+        if (tItem != null) return new ItemStack(tItem, 1, tMeta);
+        return null;
+    }
+
+    public static ItemStack copyAmountUnsafe(long aAmount, Object... aStacks) {
+        ItemStack rStack = copy(aStacks);
+        if (isStackInvalid(rStack)) return null;
+        if (aAmount > Integer.MAX_VALUE) aAmount = Integer.MAX_VALUE;
+        else if (aAmount < 0) aAmount = 0;
+        rStack.setCount((int) aAmount);
+        return rStack;
+    }
+
+    public static ItemStack copy(Object... aStacks) {
+        for (Object tStack : aStacks) if (isStackValid(tStack)) return ((ItemStack) tStack).copy();
+        return null;
+    }
+
+    public static <T> MetaTileEntity[] getGTTierHatches(MultiblockAbility<T> ability, int tier) {
+        return MultiblockAbility.REGISTRY.get(ability).stream()
+                .filter(mte -> {
+                    if (mte != null && mte instanceof MetaTileEntityMultiblockPart) {
+                        return ((MetaTileEntityMultiblockPart) mte).getTier() <= tier;
+                    }
+                    return false;
+                }).toArray(MetaTileEntity[]::new);
+    }
+
+    public static <T> int maxLength(List<List<T>> lists) {
+        return lists.stream().mapToInt(List::size).max().orElse(0);
+    }
+
+    public static <T> List<T> consistentList(List<T> list, int length) {
+        if (list.size() >= length) {
+            return list;
+        }
+        List<T> finalList = new ArrayList<>(list);
+        T last = list.get(list.size() - 1);
+        for (int i = 0; i < length - list.size(); i++) {
+            finalList.add(last);
+        }
+        return finalList;
     }
 }

@@ -1,12 +1,13 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.capability.EPCapabilities;
+import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.ICatalyst;
-import cn.gtcommunity.epimorphism.api.capability.impl.WrappedCatalyst;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import gregtech.api.capability.impl.NotifiableItemStackHandler;
 import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
-import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockNotifiablePart;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
@@ -29,57 +30,47 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
-public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart implements IMultiblockAbilityPart<ICatalyst> {
-    private final ItemStackHandler itemStack = new ItemStackHandler(1){
-        @Override
-        public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-            return stack.getItem() instanceof ICatalyst;
-        }
-
+public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockNotifiablePart implements IMultiblockAbilityPart<ICatalyst> ,ICatalyst{
+    private final IItemHandlerModifiable itemStack = new NotifiableItemStackHandler(1, null, false){
         @Override
         protected void onLoad() {
             onContentsChanged(0);
         }
 
         @Override
-        protected void onContentsChanged(int slot) {
+        public void onContentsChanged(int slot) {
+            super.onContentsChanged(slot);
             needUpdate = true;
-            ItemStack item = this.getStackInSlot(0);
-            catalyst.update(item.isEmpty() ? () -> Optional.of("") : (ICatalyst)item.getItem() );
-        }
-    };
-    private final WrappedCatalyst catalyst = new WrappedCatalyst(Optional::empty){
-        @Override
-        public void consumeCatalyst(int amount) {
-            ItemStack item = itemStack.getStackInSlot(0);
-            if(!item.isEmpty() && item.isItemStackDamageable()){
-                int left = item.getMaxDamage() - item.getItemDamage();
-                if(left>amount){
-                    item.setItemDamage(item.getItemDamage()+amount);
-                }
-                else {
-                    item.shrink(1);
-                }
-            }
-
         }
     };
 
     private boolean needUpdate = false;
 
-
     public EPMetaTileEntityCatalystHatch(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, 4);
+        super(metaTileEntityId, 4, false);
+        initializeInventory();
     }
 
+    @Override
+    public void addToMultiBlock(MultiblockControllerBase controllerBase) {
+        super.addToMultiBlock(controllerBase);
+        ((NotifiableItemStackHandler)itemStack).addNotifiableMetaTileEntity(controllerBase);
+        ((NotifiableItemStackHandler)itemStack).addToNotifiedList(this, this.itemStack, false);
+    }
+
+    @Override
+    public void removeFromMultiBlock(MultiblockControllerBase controllerBase) {
+        super.removeFromMultiBlock(controllerBase);
+        ((NotifiableItemStackHandler)itemStack).removeNotifiableMetaTileEntity(controllerBase);
+    }
 
     @Override
     public void update() {
@@ -95,16 +86,6 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
         return new EPMetaTileEntityCatalystHatch(this.metaTileEntityId);
     }
 
-//    @Override
-//    public void addToMultiBlock(MultiblockControllerBase controllerBase) {
-//        super.addToMultiBlock(controllerBase);
-//    }
-//
-//    @Override
-//    public void removeFromMultiBlock(MultiblockControllerBase controllerBase) {
-//        super.removeFromMultiBlock(controllerBase);
-//
-//    }
 
     @Override
     @SideOnly(Side.CLIENT)
@@ -131,25 +112,40 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
 
     @Override
     public MultiblockAbility<ICatalyst> getAbility() {
-        return EPCapabilities.CATALYST_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbilities.CATALYST_MULTIBLOCK_ABILITY;
     }
 
     @Override
     public void registerAbilities(List<ICatalyst> list) {
-        list.add(catalyst);
+        list.add(this);
+    }
+
+    @Override
+    public void consumeCatalyst(int amount) {
+        ItemStack item = itemStack.getStackInSlot(0);
+        if(!item.isEmpty() && item.isItemStackDamageable()){
+            int left = item.getMaxDamage() - item.getItemDamage();
+            if(left>amount){
+                item.setItemDamage(item.getItemDamage()+amount);
+            }
+            else {
+                item.shrink(1);
+            }
+        }
+
     }
 
     public void writeInitialSyncData(PacketBuffer buf) {
         super.writeInitialSyncData(buf);
         buf.writeBoolean(this.needUpdate);
-        buf.writeCompoundTag(itemStack.serializeNBT());
+        buf.writeCompoundTag(((ItemStackHandler)itemStack).serializeNBT());
     }
 
     public void receiveInitialSyncData(PacketBuffer buf) {
         super.receiveInitialSyncData(buf);
         this.needUpdate = buf.readBoolean();
         try {
-            itemStack.deserializeNBT(buf.readCompoundTag());
+            ((ItemStackHandler)itemStack).deserializeNBT(buf.readCompoundTag());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -158,7 +154,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
     public NBTTagCompound writeToNBT(NBTTagCompound data) {
         super.writeToNBT(data);
         data.setBoolean("needUpdate", this.needUpdate);
-        data.setTag("item", this.itemStack.serializeNBT());
+        data.setTag("item", ((ItemStackHandler)itemStack).serializeNBT());
         return data;
     }
 
@@ -169,9 +165,14 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
         }
 
         if (data.hasKey("item")) {
-            itemStack.deserializeNBT(data.getCompoundTag("item"));
+            ((ItemStackHandler)itemStack).deserializeNBT(data.getCompoundTag("item"));
         }
 
+    }
+
+    @Override
+    public void getDrops(NonNullList<ItemStack> dropsList, @Nullable EntityPlayer harvester) {
+        dropsList.add(itemStack.getStackInSlot(0));
     }
 
     @Override
@@ -186,7 +187,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
 
     @Override
     public <T> T getCapability(Capability<T> capability, EnumFacing side) {
-        return capability== CapabilityItemHandler.ITEM_HANDLER_CAPABILITY ?
+        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY ?
                 CapabilityItemHandler.ITEM_HANDLER_CAPABILITY.cast(itemStack) : super.getCapability(capability, side);
     }
 
@@ -203,5 +204,38 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockPart 
         tooltip.add(I18n.format("gregtech.tool_action.screwdriver.access_covers"));
         tooltip.add(I18n.format("gregtech.tool_action.wrench.set_facing"));
         super.addToolUsages(stack, world, tooltip, advanced);
+    }
+
+    @Override
+    public int getSlots() {
+        return itemStack.getSlots();
+    }
+
+    @Nonnull
+    @Override
+    public ItemStack getStackInSlot(int slot) {
+        return itemStack.getStackInSlot(slot);
+    }
+
+    @Nonnull
+    @Override
+    public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
+        return itemStack.insertItem(slot, stack, simulate);
+    }
+
+    @Nonnull
+    @Override
+    public ItemStack extractItem(int slot, int amount, boolean simulate) {
+        return itemStack.extractItem(slot, amount, simulate);
+    }
+
+    @Override
+    public int getSlotLimit(int slot) {
+        return itemStack.getSlotLimit(slot);
+    }
+
+    @Override
+    public void setStackInSlot(int slot, @Nonnull ItemStack stack) {
+        itemStack.setStackInSlot(slot, stack);
     }
 }

@@ -16,6 +16,7 @@ import gregtech.api.capability.impl.HeatingCoilRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -24,7 +25,6 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.GTUtility;
-import gregtech.api.util.TextFormattingUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockWireCoil;
@@ -38,6 +38,8 @@ import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -46,7 +48,7 @@ import java.util.List;
 public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockController implements IHeatingCoil {
 
     private int blastFurnaceTemperature;
-    protected static int heatingCoilLevel;
+    protected int heatingCoilLevel;
     protected int heatingCoilDiscount;
     protected int coilTier;
 
@@ -224,7 +226,7 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                         " GW  A  WG ",
                         " DDDDDDDDD ",
                         " DDDDDDDDD ",
-                        "  DDDDDDD  ")
+                        "  DDDMDDD  ")
                 .aisle(
                         "BDHDDDDDHDB",
                         "C  W   W  C",
@@ -336,9 +338,10 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                 .where('D', states(getCasingState()))
                 .where('G', EPTraceabilityPredicate.EP_GLASS.get())
                 .where('H', states(getVentState()))
-                .where('V', states(getPipeState()))
+                .where('V', states(getBoilerState()))
                 .where('W', TraceabilityPredicate.HEATING_COILS.get())
-                .where('C', states(getCasingState()).or(autoAbilities()))
+                .where('C', states(getCasingState()).or(autoAbilities(true, true, true, true, true, true, false)))
+                .where('M', abilities(MultiblockAbility.MUFFLER_HATCH))
                 .where(' ', any())
                 .build();
     }
@@ -350,7 +353,7 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
         return GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.HEAT_VENT);
      }
 
-     private static IBlockState getPipeState() {
+     private static IBlockState getBoilerState() {
         return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE);
      }
 
@@ -358,11 +361,15 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
         return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.BRONZE_PIPE);
      }
 
+     //TODO 预览
+
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return GCYMTextures.BLAST_CASING;
     }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected ICubeRenderer getFrontOverlay() {
@@ -390,11 +397,10 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                 long maxVoltage = Math.max(energyContainer.getInputVoltage(), energyContainer.getOutputVoltage());
                 int voltage = Math.min(GTUtility.getFloorTierByVoltage(maxVoltage), getGlassTier());
                 String voltageName = GTValues.VNF[voltage];
-                textList.remove(1);
-                textList.add(1, new TextComponentTranslation("gregtech.multiblock.blast_furnace.max_temperature", blastFurnaceTemperature)
+                textList.add(2, new TextComponentTranslation("epimorphism.machine.multiblock.max_parallel", getMaxParallel(heatingCoilLevel)));
+                textList.add(2, new TextComponentTranslation("epimorphism.machine.multiblock.max_voltage", voltageName));
+                textList.add(2, new TextComponentTranslation("gregtech.multiblock.blast_furnace.max_temperature", blastFurnaceTemperature)
                         .setStyle(new Style().setColor(TextFormatting.RED)));
-                textList.add(2, new TextComponentTranslation("epimorphism.machine.mega_alloy_blast_smelter.max_parallel", getMaxParallel(heatingCoilLevel)));
-                textList.add(2, new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", new Object[]{TextFormattingUtil.formatNumbers(GTValues.V[voltage]), voltageName}));
             }
         }
     }
@@ -434,7 +440,12 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
 
         @Override
         protected long getMaxVoltage() {
-            return GTValues.V[((GlassTierMultiblockController)this.metaTileEntity).getGlassTier()];
+            return Math.min(GTValues.V[((GlassTierMultiblockController)this.metaTileEntity).getGlassTier()], super.getMaxVoltage());
+        }
+
+        @Override
+        protected long getMaxParallelVoltage() {
+            return super.getMaxVoltage();
         }
 
         @Override
