@@ -46,7 +46,7 @@ public class MetaTileEntityRecipes {
     private static void HullRecipes() {
         //  UHV Hull
         ModHandler.removeRecipeByName("gregtech:casing_uhv");
-        ModHandler.addShapedRecipe(true, "epimorphism:casing_uhv", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV),
+        ModHandler.addShapedRecipe(true, "casing_uhv", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UHV),
                 "PPP", "PwP", "PPP",
                 'P', new UnificationEntry(plate, Draconium));
 
