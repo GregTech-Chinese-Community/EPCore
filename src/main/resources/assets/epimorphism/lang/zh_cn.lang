@@ -273,6 +273,7 @@ tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
 tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外壳
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
+tile.ep_multiblock_casing.drill_head.name=钻头
 tile.ep_multiblock_casing.naquadria_casing.name=超能硅岩抗辐射机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
@@ -362,10 +363,10 @@ epimorphism.machine.naquadah_reactor.luv.tooltip=取之不尽，用之不竭
 epimorphism.machine.naquadah_reactor.zpm.name=精英硅岩反应堆 III
 epimorphism.machine.naquadah_reactor.zpm.tooltip=取之不尽，用之不竭
 
-epimorphism.machine.multiblock.glass_tier=当前玻璃等级为：%s (%s)
+epimorphism.machine.multiblock.glass_tier=当前玻璃等级：%s (%s)
 epimorphism.machine.multiblock.max_parallel=最大并行数：%s
-epimorphism.machine.multiblock.max_voltage=最大电压为：%s
-epimorphism.machine.multiblock.mode=当前模式为：%s
+epimorphism.machine.multiblock.max_voltage=最大电压：%s
+epimorphism.machine.multiblock.mode=当前模式：%s
 epimorphism.multiblock.universal.problem.soldering_iron=%s§7电路板短路了。 (§a电烙铁§7)
 
 epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
@@ -404,9 +405,9 @@ epimorphism.multiblock.roaster.tooltip.4=钨钢燃烧室: §c2500K
 recipemap.roaster_recipes.name=高温焙烧
 
 epimorphism.machine.industrial_fishing_pond.name=珠海渔场
-epimorphism.multiblock.industrial_fisher.mode1=模式：捕鱼
-epimorphism.multiblock.industrial_fisher.mode2=模式：捞垃圾
-epimorphism.multiblock.industrial_fisher.mode0=模式: 捞宝藏
+epimorphism.multiblock.industrial_fisher.mode1=模式：捕捞鱼类
+epimorphism.multiblock.industrial_fisher.mode2=模式：捕捞垃圾
+epimorphism.multiblock.industrial_fisher.mode0=模式: 捕捞宝藏
 epimorphism.multiblock.industrial_fisher.inv_full=输出槽已满
 
 epimorphism.machine.algae_farm.name=藻类农场
@@ -423,7 +424,7 @@ epimorphism.machine.fermentation_tank.extra2=缓冲剂：/n 硫酸：-3.15 1.55/
 
 epimorphism.machine.buffer_hatch.name=缓冲剂仓
 epimorphism.machine.buffer_hatch.import.tooltip=为多方块结构输入缓冲剂
-epimorphism.multipart.ph.name=当前pH值为：%s
+epimorphism.multipart.ph.name=当前pH值：%s
 
 epimorphism.machine.mill_ball_hatch.name=研磨球仓
 epimorphism.multipart.ball.only=仅能放入研磨球
@@ -497,11 +498,11 @@ epimorphism.multiblock.general_processing_plant.shift_tooltip.3=模式B：20-发
 epimorphism.multiblock.general_processing_plant.shift_tooltip.4=模式C：20-精密激光蚀刻机 21-高压釜 22-流体固化机
 
 epimorphism.machine.integrated_ore_factory.name=集成矿石处理厂
-epimorphism.machine.integrated_ore_factory.mode.0=处理模式：打粉-洗矿-热力离心-打粉
-epimorphism.machine.integrated_ore_factory.mode.1=处理模式：打粉-洗矿-打粉-离心
-epimorphism.machine.integrated_ore_factory.mode.2=处理模式：打粉-打粉-离心
-epimorphism.machine.integrated_ore_factory.mode.3=处理模式：打粉-洗矿-筛选
-epimorphism.machine.integrated_ore_factory.mode.4=处理模式：打粉-化学浸洗-打粉-离心
+epimorphism.machine.integrated_ore_factory.mode.0=处理模式：研磨-洗矿-热力离心-研磨
+epimorphism.machine.integrated_ore_factory.mode.1=处理模式：研磨-洗矿-研磨-离心
+epimorphism.machine.integrated_ore_factory.mode.2=处理模式：研磨-研磨-离心
+epimorphism.machine.integrated_ore_factory.mode.3=处理模式：研磨-洗矿-筛选
+epimorphism.machine.integrated_ore_factory.mode.4=处理模式：研磨-化学浸洗-打粉-离心
 
 epimorphism.machine.integrated_ore_factory.void.true=石粉销毁已开启
 epimorphism.machine.integrated_ore_factory.void.false=石粉销毁已关闭
