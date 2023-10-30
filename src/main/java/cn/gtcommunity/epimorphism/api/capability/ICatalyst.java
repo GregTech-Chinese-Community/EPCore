@@ -1,9 +1,9 @@
 package cn.gtcommunity.epimorphism.api.capability;
 
-import java.util.Optional;
+import net.minecraftforge.items.IItemHandlerModifiable;
 
-public interface ICatalyst {
-    Optional<String> getName();
+
+public interface ICatalyst extends IItemHandlerModifiable {
 
     default void consumeCatalyst(int amount){
 

@@ -42,6 +42,8 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -189,11 +191,13 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
         }
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return EPTextures.ADVANCED_INVAR_CASING;
     }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected OrientedOverlayRenderer getFrontOverlay() {

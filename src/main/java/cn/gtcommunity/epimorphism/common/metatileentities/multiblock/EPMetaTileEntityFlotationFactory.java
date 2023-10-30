@@ -6,8 +6,6 @@ import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -17,6 +15,8 @@ import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.client.renderer.ICubeRenderer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 
@@ -69,6 +69,7 @@ public class EPMetaTileEntityFlotationFactory extends RecipeMapMultiblockControl
         return EPMetablocks.EP_MILL_CASING.getState(EPBlockMillCasing.CasingType.FLOTATION_CASING_GEARBOX);
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return EPTextures.FLOTATION_CASING;

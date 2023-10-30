@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.EPCapabilities;
+import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHChangeProperty;
@@ -10,7 +10,6 @@ import cn.gtcommunity.epimorphism.api.utils.EPMathUtil;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -33,6 +32,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 
@@ -41,7 +42,6 @@ import java.util.Collections;
 import java.util.List;
 
 import static gregicality.multiblocks.api.unification.GCYMMaterials.WatertightSteel;
-import static gregtech.api.unification.material.Materials.Steel;
 
 public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockController implements IPHValue {
     private double pH = 7;
@@ -87,7 +87,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
                 .aisle("AXXXA", "XEEEX", "XEEEX", "XEEEX", "XEEEX", "XEEEX", "AXXXA")
                 .aisle("FAAAF", "FXSXF", "FXGXF", "FXGXF", "FXGXF", "FXXXF", "AAAAA")
                 .where('S', selfPredicate())
-                .where('X', states(getCasingState()).setMinGlobalLimited(42).or(autoAbilities()).or(abilities(EPCapabilities.BUFFER_MULTIBLOCK_ABILITY).setExactLimit(1)))
+                .where('X', states(getCasingState()).setMinGlobalLimited(42).or(autoAbilities()).or(abilities(EPMultiblockAbilities.BUFFER_MULTIBLOCK_ABILITY).setExactLimit(1)))
                 .where('G', states(getGlassState()))
                 .where('F', states(getFrameState()))
                 .where('P', states(getBoilerState()))
@@ -129,12 +129,14 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
         return list.toArray(new String[0]);
     }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected OrientedOverlayRenderer getFrontOverlay() {
         return EPTextures.CVD_UNIT_OVERLAY;
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return Textures.CLEAN_STAINLESS_STEEL_CASING;

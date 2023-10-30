@@ -32,6 +32,8 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -108,6 +110,7 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
         return GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.ELECTROLYTIC_CELL);
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return GCYMTextures.CORROSION_PROOF_CASING;
@@ -124,6 +127,7 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
 //        }
 //    }
 
+    @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
     protected ICubeRenderer getFrontOverlay() {

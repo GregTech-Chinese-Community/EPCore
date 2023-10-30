@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.EPValues;
-import cn.gtcommunity.epimorphism.api.capability.EPCapabilities;
+import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.capability.IBuffer;
 import codechicken.lib.render.CCRenderState;
@@ -163,7 +163,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
 
     public void setPH() {
         if (!this.getWorld().isRemote) {
-            this.writeCustomData(EPValues.EP_CHANNEL_1, (buf) -> {
+            this.writeCustomData(EPDataCode.EP_CHANNEL_1, (buf) -> {
                 buf.writeString(getPH());
             });
         }
@@ -172,7 +172,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     @Override
     public void receiveCustomData(int dataId, PacketBuffer buf) {
         super.receiveCustomData(dataId, buf);
-        if (dataId == EPValues.EP_CHANNEL_1){
+        if (dataId == EPDataCode.EP_CHANNEL_1){
             this.ph = buf.readString(99);
         }
     }
@@ -277,7 +277,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
 
     @Override
     public MultiblockAbility<IBuffer> getAbility() {
-        return EPCapabilities.BUFFER_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbilities.BUFFER_MULTIBLOCK_ABILITY;
     }
 
     @Override
