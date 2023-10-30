@@ -423,6 +423,16 @@ public class MachineComponents {
                 'F', new UnificationEntry(frameGt, NaquadahAlloy)
         );
 
+        //  Drill Head
+        ModHandler.addShapedRecipe(true, "industrial_drill_head", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.DRILL_HEAD),
+                "PGP", "MHM", "SSS",
+                'P', ELECTRIC_PISTON_UV.getStackForm(),
+                'G', new UnificationEntry(gear, Orichalcum),
+                'M', ELECTRIC_MOTOR_UV.getStackForm(),
+                'H', HULL[UV].getStackForm(),
+                'S', COMPONENT_GRINDER_TUNGSTEN.getStackForm()
+        );
+
         //  Naquadria Casing
         ModHandler.addShapedRecipe(true, "naquadria_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.NAQUADRIA_CASING, 2),
                 "PhP", "TFT","PwP",

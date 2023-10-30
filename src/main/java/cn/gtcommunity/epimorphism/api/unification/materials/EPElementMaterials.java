@@ -49,7 +49,7 @@ public class EPElementMaterials {
                 .color(0x72A0C1)
                 .iconSet(METALLIC)
                 .element(EPElements.Orichalcum)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_GEAR)
                 .blastTemp(9000, BlastProperty.GasTier.HIGH)
                 .build();
         Vibranium = new Material.Builder(26004, gregtechId("vibranium"))
