@@ -201,6 +201,14 @@ metaitem.boule.dubnium.name=Dubnium-doped Monocrystalline Silicon Boule
 metaitem.boule.dubnium.tooltip=Raw Circuit
 metaitem.wafer.dubnium.name=Dubnium-doped Wafer
 metaitem.wafer.dubnium.tooltip=Raw Circuit
+metaitem.boule.cubic_zirconia.europium.name=Europium-doped Monocrystalline Cubic Zirconia Boule
+metaitem.boule.cubic_zirconia.europium.tooltip=Raw Crystal
+metaitem.wafer.cubic_zirconia.europium.name=Europium-doped Cubic Zirconia Wafer
+metaitem.wafer.cubic_zirconia.europium.tooltip=Raw Crystal
+metaitem.wafer.crystal_interface.name=Crystal Interface Wafer
+metaitem.wafer.crystal_interface.tooltip=Raw Crystal Interface
+metaitem.wafer.chip.crystal_interface.name=Crystal Interface Chip
+metaitem.wafer.chip.crystal_interface.tooltip=Crystal Interface
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=Electrochemical Gradient Recorder
@@ -222,7 +230,23 @@ metaitem.biological.components.dna_encoder.tooltip=Part of a Self-replicating Tu
 metaitem.biological.components.dna_decode_encoder.name=DNA Decode-encoder
 metaitem.biological.components.dna_decode_encoder.tooltip=Will deplete the universe in order to calculate
 
-#   Mill Balls
+#  Crystal Components
+metaitem.crystal.diamond_chip.name=Engraved Diamond Crystal Chip
+metaitem.crystal.diamond_chip.tooltip=Raw Crystal Logic Circuit
+metaitem.crystal.ruby_chip.name=Engraved Ruby Crystal Chip
+metaitem.crystal.ruby_chip.tooltip=Raw Crystal Control Circuit
+metaitem.crystal.sapphire_chip.name=Engraved Sapphire Crystal Chip
+metaitem.crystal.sapphire_chip.tooltip=Raw Crystal Conversion Circuit
+metaitem.crystal.diamond_modulator.name=Diamond Crystal Modulator
+metaitem.crystal.diamond_modulator.tooltip=Logic Processing Circuit
+metaitem.crystal.ruby_modulator.name=Ruby Crystal Modulator
+metaitem.crystal.ruby_modulator.tooltip=Control Processing Circuit
+metaitem.crystal.sapphire_modulator.name=Sapphire Crystal Modulator
+metaitem.crystal.sapphire_modulator.tooltip=Conversion Processing Circuit
+metaitem.crystal.system_on_chip_socket.name=Crystal SoC Socket
+metaitem.crystal.system_on_chip_socket.tooltip=Bridging Crystal and Circuit
+
+#  Mill Balls
 metaitem.mill.grindball_soapstone.name=Soapstone Grindball
 metaitem.mill.grindball_aluminium.name=Aluminium Grindball
 

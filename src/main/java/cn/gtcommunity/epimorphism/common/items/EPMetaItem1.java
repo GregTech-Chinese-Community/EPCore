@@ -119,17 +119,30 @@ public class EPMetaItem1 extends StandardMetaItem {
         ZEPTO_PIC_CHIP = this.addItem(79, "wafer.chip.zepto_pic");
         DUBNIUM_BOULE = this.addItem(80, "boule.dubnium");
         DUBNIUM_WAFER = this.addItem(81, "wafer.dubnium");
+        CUBIC_ZIRCONIA_EUROPIUM_BOULE = this.addItem(82, "boule.cubic_zirconia.europium");
+        CUBIC_ZIRCONIA_EUROPIUM_WAFER = this.addItem(83, "wafer.cubic_zirconia.europium");
+        CRYSTAL_INTERFACE_WAFER = this.addItem(84, "wafer.crystal_interface");
+        CRYSTAL_INTERFACE_CHIP = this.addItem(85, "wafer.chip.crystal_interface");
 
         //  Others
-        MAGNETRON = this.addItem(82, "magnetron");
-        VOLTAGE_COIL_UHV = this.addItem(83, "voltage_coil.uhv");
-        VOLTAGE_COIL_UEV = this.addItem(84, "voltage_coil.uev");
-        VOLTAGE_COIL_UIV = this.addItem(85, "voltage_coil.uiv");
-        VOLTAGE_COIL_UXV = this.addItem(86, "voltage_coil.uxv");
-        VOLTAGE_COIL_OPV = this.addItem(87, "voltage_coil.opv");
-        VOLTAGE_COIL_MAX = this.addItem(88, "voltage_coil.max");
-        CARBON_ALLOTROPE = this.addItem(89, "carbon_allotrope");
-        GRAPHENE_ALIGNED = this.addItem(90, "graphene_aligned");
+        MAGNETRON = this.addItem(100, "magnetron");
+        VOLTAGE_COIL_UHV = this.addItem(101, "voltage_coil.uhv");
+        VOLTAGE_COIL_UEV = this.addItem(102, "voltage_coil.uev");
+        VOLTAGE_COIL_UIV = this.addItem(103, "voltage_coil.uiv");
+        VOLTAGE_COIL_UXV = this.addItem(104, "voltage_coil.uxv");
+        VOLTAGE_COIL_OPV = this.addItem(105, "voltage_coil.opv");
+        VOLTAGE_COIL_MAX = this.addItem(106, "voltage_coil.max");
+        CARBON_ALLOTROPE = this.addItem(107, "carbon_allotrope");
+        GRAPHENE_ALIGNED = this.addItem(108, "graphene_aligned");
+
+        //  Crystal Components
+        DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");
+        RUBY_CHIP = this.addItem(151, "crystal.ruby_chip");
+        SAPPHIRE_CHIP = this.addItem(152, "crystal.sapphire_chip");
+        DIAMOND_MODULATOR = this.addItem(153, "crystal.diamond_modulator");
+        RUBY_MODULATOR = this.addItem(154, "crystal.ruby_modulator");
+        SAPPHIRE_MODULATOR = this.addItem(155, "crystal.sapphire_modulator");
+        CRYSTAL_SOC_SOCKET = this.addItem(156, "crystal.system_on_chip_socket");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");

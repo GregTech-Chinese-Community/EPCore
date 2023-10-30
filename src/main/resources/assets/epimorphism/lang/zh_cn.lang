@@ -201,6 +201,14 @@ metaitem.boule.dubnium.name=钅杜掺杂的单晶硅
 metaitem.boule.dubnium.tooltip=待处理电路
 metaitem.wafer.dubnium.name=钅杜掺杂的晶圆
 metaitem.wafer.dubnium.tooltip=待处理电路
+metaitem.boule.cubic_zirconia.europium.name=铕掺杂的单晶立方氧化锆
+metaitem.boule.cubic_zirconia.europium.tooltip=待处理晶体
+metaitem.wafer.cubic_zirconia.europium.name=铕掺杂的立方氧化锆晶片
+metaitem.wafer.cubic_zirconia.europium.tooltip=待处理晶体
+metaitem.wafer.crystal_interface.name=晶体触面晶圆
+metaitem.wafer.crystal_interface.tooltip=待处理晶体接口
+metaitem.wafer.chip.crystal_interface.name=晶体触面晶片
+metaitem.wafer.chip.crystal_interface.tooltip=晶体接口
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪
@@ -222,7 +230,23 @@ metaitem.biological.components.dna_encoder.tooltip=自复制图灵机的一部�
 metaitem.biological.components.dna_decode_encoder.name=DNA解-编码器
 metaitem.biological.components.dna_decode_encoder.tooltip=会为了计算饮干宇宙
 
-#   Mill Balls
+#  Crystal Components
+metaitem.crystal.diamond_chip.name=刻蚀钻石晶片
+metaitem.crystal.diamond_chip.tooltip=待处理晶体逻辑电路
+metaitem.crystal.ruby_chip.name=刻蚀红宝石晶片
+metaitem.crystal.ruby_chip.tooltip=待处理晶体控制电路
+metaitem.crystal.sapphire_chip.name=刻蚀蓝宝石晶片
+metaitem.crystal.sapphire_chip.tooltip=待处理晶体转换电路
+metaitem.crystal.diamond_modulator.name=钻石晶体调节器
+metaitem.crystal.diamond_modulator.tooltip=逻辑处理电路
+metaitem.crystal.ruby_modulator.name=红宝石晶体调节器
+metaitem.crystal.ruby_modulator.tooltip=控制处理电路
+metaitem.crystal.sapphire_modulator.name=蓝宝石晶体调节器
+metaitem.crystal.sapphire_modulator.tooltip=转换处理电路
+metaitem.crystal.system_on_chip_socket.name=晶体SoC插槽
+metaitem.crystal.system_on_chip_socket.tooltip=桥接晶体和电路
+
+#  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球
 

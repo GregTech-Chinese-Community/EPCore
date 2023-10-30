@@ -70,6 +70,7 @@ public class EPRecipeManager {
     }
 
     public static void initCircuits() {
+        CrystalCircuits.init();
         WetwareCircuits.init();
         GoowareCircuits.init();
         OpticalCircuits.init();
