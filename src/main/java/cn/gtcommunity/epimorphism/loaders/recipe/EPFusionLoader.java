@@ -46,5 +46,25 @@ public class EPFusionLoader {
                 .duration(320)
                 .EUToStart(400000000L)
                 .buildAndRegister();
+
+        //  Plutonium-244 + Neon -> Rutherfordium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium244.getFluid(16))
+                .fluidInputs(Neon.getFluid(16))
+                .fluidOutputs(Rutherfordium.getFluid(16))
+                .EUt(VA[LuV])
+                .duration(180)
+                .EUToStart(150000000L)
+                .buildAndRegister();
+
+        //  [lutonium-244 + Titanium -> Livermorium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium244.getFluid(32))
+                .fluidInputs(Titanium.getFluid(32))
+                .fluidOutputs(Livermorium.getFluid(64))
+                .EUt(VA[UV])
+                .duration(600)
+                .EUToStart(360000000L)
+                .buildAndRegister();
     }
 }
