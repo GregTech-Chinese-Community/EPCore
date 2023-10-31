@@ -125,5 +125,16 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_PLATE)
                 .components(Cobalt, 4, Chrome, 3, Phosphorus, 2, Molybdenum, 1)
                 .build();
+        //  24511 Black Plutonium
+        BlackPlutonium = new Material.Builder(24511, gregtechId("black_plutonium"))
+                .ingot()
+                .fluid()
+                .color(0x060606)
+                .iconSet(BRIGHT)
+                //  TODO UEV stage coil??
+                .blastTemp(10600, BlastProperty.GasTier.HIGHEST, VA[UHV], 3600)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .components(Plutonium244, 18, Cerium, 9, Gadolinium, 3, Dysprosium, 3, Thulium, 2, TungstenCarbide, 6, RedSteel, 6, Duranium, 2, Radon, 2)
+                .build();
     }
 }

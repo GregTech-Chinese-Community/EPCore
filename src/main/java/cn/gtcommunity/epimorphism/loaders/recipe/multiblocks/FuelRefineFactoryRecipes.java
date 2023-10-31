@@ -94,6 +94,39 @@ public class FuelRefineFactoryRecipes {
                 .EUt(VA[UV])
                 .buildAndRegister();
 
+        //  Light Taranium Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Taranium)
+                .input(dust, Gallium)
+                .fluidInputs(LightNaquadahFuel.getFluid(12000))
+                .fluidInputs(Krypton.getFluid(6000))
+                .fluidOutputs(LightTaraniumFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
+        //  Medium Taranium Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Taranium)
+                .input(dust, Duranium)
+                .fluidInputs(MediumNaquadahFuel.getFluid(12000))
+                .fluidInputs(Xenon.getFluid(6000))
+                .fluidOutputs(MediumTaraniumFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
+        //  Heavy Taranium Fuel
+        FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
+                .input(dust, Taranium)
+                .input(dust, Tritanium)
+                .fluidInputs(HeavyNaquadahFuel.getFluid(12000))
+                .fluidInputs(Radon.getFluid(6000))
+                .fluidOutputs(HeavyTaraniumFuel.getFluid(12000))
+                .duration(300)
+                .EUt(VA[UV])
+                .buildAndRegister();
+
         //  Energetic Naquadria
         FUEL_REFINE_FACTORY_RECIPES.recipeBuilder()
                 .input(dust, Naquadria)
@@ -118,7 +151,7 @@ public class FuelRefineFactoryRecipes {
                 .output(dust, Naquadah)
                 .fluidOutputs(LightHyperFuel.getFluid(2000))
                 .duration(460)
-                .EUt(196608)
+                .EUt(VA[UHV])
                 .buildAndRegister();
 
         //  Medium Hyper Fuel
@@ -131,7 +164,7 @@ public class FuelRefineFactoryRecipes {
                 .output(dust, NaquadahEnriched)
                 .fluidOutputs(MediumHyperFuel.getFluid(2000))
                 .duration(520)
-                .EUt(VA[UV])
+                .EUt(VA[UHV])
                 .buildAndRegister();
 
         //  Heavy Hyper Fuel
@@ -144,7 +177,7 @@ public class FuelRefineFactoryRecipes {
                 .output(dust, NaquadahEnriched)
                 .fluidOutputs(HeavyHyperFuel.getFluid(2000))
                 .duration(580)
-                .EUt(VA[UV])
+                .EUt(VA[UHV])
                 .buildAndRegister();
 
         //  Adamantium + Bedrock Gas + Sulfuric Acid -> Adamantium Enriched + Deep Iron + Naquadah + Osmium + Diluted Sulfuric Acid
@@ -158,7 +191,7 @@ public class FuelRefineFactoryRecipes {
                 .output(dust, Osmium, 2)
                 .fluidOutputs(DilutedSulfuricAcid.getFluid(900))
                 .duration(200)
-                .EUt(VA[UV])
+                .EUt(VA[UHV])
                 .buildAndRegister();
     }
 }

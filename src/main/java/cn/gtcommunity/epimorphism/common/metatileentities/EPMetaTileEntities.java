@@ -53,6 +53,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
     public static EPMetaTileEntityLargeNaquadahReactor LARGE_NAQUADAH_REACTOR;
     public static EPMetaTileEntityFuelRefineFactory FUEL_REFINE_FACTORY;
+    public static EPMetaTileEntityHyperReactorMk1 HYPER_REACTOR_MK1;
+
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
         if (id > 1000) return null;
@@ -101,5 +103,6 @@ public class EPMetaTileEntities {
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
         LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
         FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
+        HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(36, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
     }
 }

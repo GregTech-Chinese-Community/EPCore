@@ -392,6 +392,16 @@ public class MetaTileEntityRecipes {
                         .EUt(VA[UV])
                         .duration(48000))
                 .buildAndRegister();
+
+        //  Fuel Refine Factory
+        ModHandler.addShapedRecipe(true, "fuel_refine_factory", FUEL_REFINE_FACTORY.getStackForm(),
+                "RFR", "CHC", "PWP",
+                'H', MetaTileEntities.HULL[UHV].getStackForm(),
+                'P', ELECTRIC_PUMP_UHV,
+                'F', new UnificationEntry(pipeHugeFluid, Lafium),
+                'R', new UnificationEntry(rotor, Draconium),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UHV),
+                'W', new UnificationEntry(cableGtQuadruple, SiliconCarbide));
     }
 
     private static void GCYMOverrideRecipes() {
