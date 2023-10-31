@@ -56,24 +56,6 @@
           "all": "epimorphism:blocks/casings/solid/hyper_casing"
         }
       },
-      "hyper_core_mk1": {
-        "model": "minecraft:cube_all",
-        "textures": {
-          "all": "epimorphism:blocks/casings/solid/hyper_core_mk1"
-        }
-      },
-      "hyper_core_mk2": {
-        "model": "minecraft:cube_all",
-        "textures": {
-          "all": "epimorphism:blocks/casings/solid/hyper_core_mk2"
-        }
-      },
-      "hyper_core_mk3": {
-        "model": "minecraft:cube_all",
-        "textures": {
-          "all": "epimorphism:blocks/casings/solid/hyper_core_mk3"
-        }
-      },
       "talonite_casing": {
         "model": "minecraft:cube_all",
         "textures": {
