@@ -19,7 +19,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xbe49ed)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME)
                 .element(EPElements.Draconium)
                 .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV])

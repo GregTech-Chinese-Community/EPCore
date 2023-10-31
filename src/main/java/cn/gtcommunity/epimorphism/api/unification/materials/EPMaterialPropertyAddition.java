@@ -59,9 +59,12 @@ public class EPMaterialPropertyAddition {
         RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
         Darmstadtium.addFlags(GENERATE_FRAME);
         Naquadria.addFlags(GENERATE_FRAME);
+        Neutronium.addFlags(GENERATE_FRAME);
         Neutronium.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);
         Dubnium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
+        Rutherfordium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
+        Livermorium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
         Stellite100.addFlags(GENERATE_DOUBLE_PLATE);
         MaragingSteel300.addFlags(GENERATE_DOUBLE_PLATE);
         TitaniumTungstenCarbide.addFlags(GENERATE_DOUBLE_PLATE);

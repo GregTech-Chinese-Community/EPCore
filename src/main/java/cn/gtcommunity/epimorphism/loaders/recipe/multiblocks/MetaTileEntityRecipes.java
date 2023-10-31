@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.recipes.GTRecipeHandler;
@@ -402,6 +403,48 @@ public class MetaTileEntityRecipes {
                 'R', new UnificationEntry(rotor, Draconium),
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UHV),
                 'W', new UnificationEntry(cableGtQuadruple, SiliconCarbide));
+
+        //  Hyper Core Mk I
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Darmstadtium)
+                .input(plate, Orichalcum, 4)
+                .input(EMITTER_UHV, 2)
+                .input(SENSOR_UHV, 2)
+                .input(FIELD_GENERATOR_UHV, 2)
+                .input(screw, Dubnium, 16)
+                .fluidInputs(Naquadah.getFluid(144))
+                .outputs(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getItemVariant(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.HYPER_CORE_MK1))
+                .EUt(VA[UHV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Hyper Core Mk II
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Draconium)
+                .input(plate, Adamantium, 4)
+                .input(EMITTER_UEV, 2)
+                .input(SENSOR_UEV, 2)
+                .input(FIELD_GENERATOR_UEV, 2)
+                .input(screw, Rutherfordium, 16)
+                .fluidInputs(Trinium.getFluid(144))
+                .outputs(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getItemVariant(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.HYPER_CORE_MK2))
+                .EUt(VA[UEV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Hyper Core Mk III
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Neutronium)
+                .input(plate, Vibranium, 4)
+                .input(EMITTER_UIV, 2)
+                .input(SENSOR_UIV, 2)
+                .input(FIELD_GENERATOR_UIV, 2)
+                .input(screw, Livermorium, 16)
+                .fluidInputs(Tritanium.getFluid(144))
+                .outputs(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getItemVariant(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.HYPER_CORE_MK3))
+                .EUt(VA[UIV])
+                .duration(1200)
+                .buildAndRegister();
 
         //  Hyper Reactor Mk I
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
