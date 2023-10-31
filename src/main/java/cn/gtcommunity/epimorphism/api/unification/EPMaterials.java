@@ -363,6 +363,8 @@ public EPMaterials() {}
     public static Material Grisium;
     public static Material Hdcs;
     public static Material Abyssalloy;
+    public static Material Lafium;
+    public static Material BlackTitanium;
 
     //  Mod Compatibility Materials
     public static Material Mana;
