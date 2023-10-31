@@ -31,6 +31,9 @@ public class EPBlockActiveMultiblockCasing extends VariantActiveBlock<EPBlockAct
 
     public enum ActiveMultiblockCasingType implements IStringSerializable {
 
+        HYPER_CORE_MK1("hyper_core_mk1"),
+        HYPER_CORE_MK2("hyper_core_mk2"),
+        HYPER_CORE_MK3("hyper_core_mk3"),
         FLOTATION_INTAKE_CASING("flotation_intake_casing");
 
         private final String name;

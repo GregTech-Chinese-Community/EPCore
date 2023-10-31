@@ -277,9 +277,9 @@ tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机�
 tile.ep_multiblock_casing.drill_head.name=钻头
 tile.ep_multiblock_casing.naquadria_casing.name=超能硅岩抗辐射机器外壳
 tile.ep_multiblock_casing.hyper_casing.name=超致密黑钚机器外壳
-tile.ep_multiblock_casing.hyper_core_mk1.name=超能核心 Mk I
-tile.ep_multiblock_casing.hyper_core_mk2.name=超能核心 Mk II
-tile.ep_multiblock_casing.hyper_core_mk3.name=超能核心 Mk III
+tile.ep_active_multiblock_casing.hyper_core_mk1.name=超能核心 Mk I
+tile.ep_active_multiblock_casing.hyper_core_mk2.name=超能核心 Mk II
+tile.ep_active_multiblock_casing.hyper_core_mk3.name=超能核心 Mk III
 tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
@@ -552,6 +552,15 @@ recipemap.plasma_cvd_recipes.name=等离子体增强化学气相沉积
 
 epimorphism.machine.laser_cvd_unit.name=激光诱导化学气相沉积单元
 recipemap.laser_cvd_recipes.name=激光诱导化学气相沉积
+
+epimorphism.machine.pcb_factory.name=PCB工厂
+epimorphism.machine.pcb_factory.tier.0=结构等级 1
+epimorphism.machine.pcb_factory.tier.1=结构等级 2
+epimorphism.machine.pcb_factory.tier.2=结构等级 3
+epimorphism.machine.pcb_factory.biological_chamber=生物室控制模块：%s
+epimorphism.machine.pcb_factory.cooling_tower=冷却塔控制模块：%s
+epimorphism.machine.pcb_factory.module.false=§4离线
+epimorphism.machine.pcb_factory.module.true=§2在线
 
 #  Materials
 

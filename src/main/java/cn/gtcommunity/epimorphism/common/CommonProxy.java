@@ -74,8 +74,6 @@ public class CommonProxy {
     @SubscribeEvent(priority = EventPriority.LOW)
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         EPLog.logger.info("Registering recipes...");
-        FormulaManager.init();
-        EPRecipeManager.init();
         FusionEUToStartProperty.registerFusionTier(9, "(MK4)");
         FusionEUToStartProperty.registerFusionTier(10, "(MK5)");
         FusionEUToStartProperty.registerFusionTier(11, "(MK6)");
@@ -84,6 +82,8 @@ public class CommonProxy {
         CasingTierProperty.registerCasingTier(3, "C");
         CasingTierProperty.registerCasingTier(4, "D");
         CasingTierProperty.registerCasingTier(5, "E");
+        FormulaManager.init();
+        EPRecipeManager.init();
     }
 
     @SubscribeEvent
