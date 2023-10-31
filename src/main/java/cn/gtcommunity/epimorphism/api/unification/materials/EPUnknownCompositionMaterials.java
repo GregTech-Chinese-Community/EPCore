@@ -3,6 +3,8 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 
+import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
@@ -275,6 +277,98 @@ public class EPUnknownCompositionMaterials {
         HeavyHyperFuel = new Material.Builder(25251, gregtechId("heavy_hyper_fuel"))
                 .fluid()
                 .color(0x1E5064)
+                .build();
+        //  25252 Crude Rare Earth Turbid Solution
+        CrudeRareEarthTurbidSolution = new Material.Builder(25252, gregtechId("crude_rare_earth_turbid_solution"))
+                .fluid()
+                .color(0x9C5C6B)
+                .iconSet(DULL)
+                .build();
+        //  25253 Nitrated Rare Earth Turbid Solution
+        NitratedRareEarthTurbidSolution = new Material.Builder(25253, gregtechId("nitrated_rare_earth_turbid_solution"))
+                .fluid()
+                .color(0x754550)
+                .iconSet(DULL)
+                .build();
+        //  25254 Rare Earth Hydroxides Solution
+        RareEarthHydroxidesSolution = new Material.Builder(25254, gregtechId("rare_earth_hydroxides_solution"))
+                .fluid()
+                .color(0x434327)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(RareEarth, 1, Oxygen, 1, Hydrogen, 1, Water, 1)
+                .build();
+        //  25255 Rare Earth Chlorides Slurry
+        RareEarthChloridesSlurry = new Material.Builder(25255, gregtechId("rare_earth_chlorides_slurry"))
+                .dust()
+                .color(0x838367)
+                .iconSet(ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(RareEarth, 1, Chlorine, 1, Water, 1)
+                .build();
+        //  25256 Low-purity Rare Earth Chlorides Solution
+        LowPurityRareEarthChloridesSolution = new Material.Builder(25256, gregtechId("low_purity_rare_earth_chlorides_solution"))
+                .fluid()
+                .color(0x838333)
+                .iconSet(DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(RareEarth, 1, Chlorine, 1, Water, 2)
+                .build();
+        //  25257 Roughly Purified Rare Earth Chlorides Solution
+        RoughlyPurifiedRareEarthChloridesSolution = new Material.Builder(25257, gregtechId("roughly_purified_rare_earth_chlorides_solution"))
+                .fluid()
+                .color(0xA2A27F)
+                .iconSet(DULL)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(LowPurityRareEarthChloridesSolution, 4, AquaRegia, 2)
+                .build();
+        //  25258 High Purity Rare Earth Chlorides Slurry
+        HighPurityRareEarthChloridesSlurry = new Material.Builder(25258, gregtechId("high_purity_rare_earth_chlorides_slurry"))
+                .dust()
+                .color(0x838367)
+                .iconSet(ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(RareEarth, 1, Chlorine, 1, Water, 1)
+                .build();
+        //  25259 High Purity Rare Earth Chlorides Solution
+        HighPurityRareEarthChloridesSolution = new Material.Builder(25259, gregtechId("high_purity_rare_earth_chlorides_solution"))
+                .fluid()
+                .color(0x838367)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(RareEarth, 1, Chlorine, 1, Water, 1)
+                .build();
+        //  25260 Low Purity Rare Earth Chlorides Slag
+        LowPurityRareEarthChloridesSlag = new Material.Builder(25260, gregtechId("low_purity_rare_earth_chlorides_slag"))
+                .dust()
+                .color(0x62624D)
+                .iconSet(DULL)
+                .build();
+        //  25261 La-Pr-Nd-Ce Oxides Solution
+        LaPrNdCeOxidesSolution = new Material.Builder(25261, gregtechId("la_pr_nd_ce_oxides_solution"))
+                .fluid()
+                .color(0x9CE3DB)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(LanthanumOxide, 1, PraseodymiumOxide, 1, NeodymiumOxide, 1, CeriumOxide, 1)
+                .build();
+        //  25262 Sc-Eu-Gd-Sm Oxides Solution
+        ScEuGdSmOxidesSolution = new Material.Builder(25262, gregtechId("sc_eu_gd_sm_oxides_solution"))
+                .fluid()
+                .color(0xFFFF99)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(ScandiumOxide, 1, EuropiumOxide, 1, GadoliniumOxide, 1, SamariumOxide, 1)
+                .build();
+        //  25263 Y-Tb-Dy-Ho Oxides Solution
+        YTbDyHoOxidesSolution = new Material.Builder(25263, gregtechId("y_tb_dy_ho_oxides_solution"))
+                .fluid()
+                .color(0x99FF99)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(YttriumOxide, 1, TerbiumOxide, 1, DysprosiumOxide, 1, HolmiumOxide, 1)
+                .build();
+        //  25264 Er-Tm-Yb-Lu Oxides Solution
+        ErTmYbLuOxidesSolution = new Material.Builder(25264, gregtechId("er_tm_yb_lu_oxides_solution"))
+                .fluid()
+                .color(0xFFB3FF)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(ErbiumOxide, 1, ThuliumOxide, 1, YtterbiumOxide, 1, LutetiumOxide, 1)
                 .build();
     }
 }

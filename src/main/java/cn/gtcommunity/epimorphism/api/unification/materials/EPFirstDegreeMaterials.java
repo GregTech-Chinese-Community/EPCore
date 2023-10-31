@@ -1344,5 +1344,113 @@ public class EPFirstDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Vibranium, 1)
                 .build();
+        //  24177 Lanthanum Oxide
+        LanthanumOxide = new Material.Builder(24177, gregtechId("lanthanum_oxide"))
+                .dust()
+                .color(0x5F7777)
+                .iconSet(SHINY)
+                .components(Lanthanum, 2, Oxygen, 3)
+                .build();
+        //  24178 Praseodymium Oxide
+        PraseodymiumOxide = new Material.Builder(24178, gregtechId("praseodymium_oxide"))
+                .dust()
+                .color(0xD0D0D0)
+                .iconSet(METALLIC)
+                .components(Praseodymium, 2, Oxygen, 3)
+                .build();
+        //  24179 Neodymium Oxide
+        NeodymiumOxide = new Material.Builder(24179, gregtechId("neodymium_oxide"))
+                .dust()
+                .color(0x868686)
+                .components(Neodymium, 2, Oxygen, 3)
+                .build();
+        //  24180 Cerium Oxide
+        CeriumOxide = new Material.Builder(24180, gregtechId("cerium_oxide"))
+                .dust()
+                .color(0x10937F)
+                .iconSet(METALLIC)
+                .components(Cerium, 1, Oxygen, 2)
+                .build();
+        //  24181 Scandium Oxide
+        ScandiumOxide = new Material.Builder(24181, gregtechId("scandium_oxide"))
+                .dust()
+                .color(0x43964F)
+                .iconSet(METALLIC)
+                .components(Scandium, 2, Oxygen, 3)
+                .build();
+        //  24182 Europium Oxide
+        EuropiumOxide = new Material.Builder(24182, gregtechId("europium_oxide"))
+                .dust()
+                .color(0x20AAAA)
+                .iconSet(SHINY)
+                .components(Europium, 2, Oxygen, 3)
+                .build();
+        //  24183 Gadolinium Oxide
+        GadoliniumOxide = new Material.Builder(24183, gregtechId("gadolinium_oxide"))
+                .dust()
+                .color(0xEEEEFF)
+                .iconSet(METALLIC)
+                .components(Gadolinium, 2, Oxygen, 3)
+                .build();
+        //  24184 Samarium Oxide
+        SamariumOxide = new Material.Builder(24184, gregtechId("samarium_oxide"))
+                .dust()
+                .color(0xFFFFDD)
+                .components(Samarium, 2, Oxygen, 3)
+                .build();
+        //  24185 Yttrium Oxide
+        YttriumOxide = new Material.Builder(24185, gregtechId("yttrium_oxide"))
+                .dust()
+                .color(0x78544E)
+                .iconSet(SHINY)
+                .components(Yttrium, 2, Oxygen, 3)
+                .build();
+        //  24186 Terbium Oxide
+        TerbiumOxide = new Material.Builder(24186, gregtechId("terbium_oxide"))
+                .dust()
+                .color(0xA264A2)
+                .iconSet(METALLIC)
+                .components(Terbium, 2, Oxygen, 3)
+                .build();
+        //  24187 Dysprosium Oxide
+        DysprosiumOxide = new Material.Builder(24187, gregtechId("dysprosium_oxide"))
+                .dust()
+                .color(0xD273D2)
+                .iconSet(METALLIC)
+                .components(Dysprosium, 2, Oxygen, 3)
+                .build();
+        //  24188 Holmium Oxide
+        HolmiumOxide = new Material.Builder(24188, gregtechId("holmium_oxide"))
+                .dust()
+                .color(0xAF7F2A)
+                .iconSet(SHINY)
+                .components(Holmium, 2, Oxygen, 3)
+                .build();
+        //  24189 Erbium Oxide
+        ErbiumOxide = new Material.Builder(24189, gregtechId("erbium_oxide"))
+                .dust()
+                .color(0xE07A32)
+                .iconSet(METALLIC)
+                .components(Erbium, 2, Oxygen, 3)
+                .build();
+        //  24190 Thulium Oxide
+        ThuliumOxide = new Material.Builder(24190, gregtechId("thulium_oxide"))
+                .dust()
+                .color(0x3B9E8B)
+                .components(Thulium, 2, Oxygen, 3)
+                .build();
+        //  24191 Ytterbium Oxide
+        YtterbiumOxide = new Material.Builder(24191, gregtechId("ytterbium_oxide"))
+                .dust()
+                .color(0xA9A9A9)
+                .components(Ytterbium, 2, Oxygen, 3)
+                .build();
+        //  24192 Lutetium Oxide
+        LutetiumOxide = new Material.Builder(24192, gregtechId("lutetium_oxide"))
+                .dust()
+                .color(0x11BBFF)
+                .iconSet(METALLIC)
+                .components(Lutetium, 2, Oxygen, 3)
+                .build();
     }
 }

@@ -188,15 +188,28 @@ public EPMaterials() {}
     public static Material HeavyEnrichedTaraniumFuel;
     public static Material MediumEnrichedTaraniumFuel;
     public static Material LightEnrichedTaraniumFuel;
-    public static Material LightHyperFuel;
-    public static Material MediumHyperFuel;
-    public static Material HeavyHyperFuel;
     public static Material Adamantite;
     public static Material AdamantiumUnstable;
     public static Material OrichalcumEnergized;
     public static Material AdamantiumEnriched;
     public static Material DeepIron;
     public static Material VibraniumUnstable;
+    public static Material LanthanumOxide;
+    public static Material PraseodymiumOxide;
+    public static Material NeodymiumOxide;
+    public static Material CeriumOxide;
+    public static Material ScandiumOxide;
+    public static Material EuropiumOxide;
+    public static Material GadoliniumOxide;
+    public static Material SamariumOxide;
+    public static Material YttriumOxide;
+    public static Material TerbiumOxide;
+    public static Material DysprosiumOxide;
+    public static Material HolmiumOxide;
+    public static Material ErbiumOxide;
+    public static Material ThuliumOxide;
+    public static Material YtterbiumOxide;
+    public static Material LutetiumOxide;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -304,6 +317,8 @@ public EPMaterials() {}
     public static Material Dibromoacrolein;
     public static Material FormicAcid;
     public static Material SodiumFormate;
+    public static Material Ethylhexanol;
+    public static Material DiethylhexylPhosphoricAcid;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -354,6 +369,22 @@ public EPMaterials() {}
     public static Material CrackedMediumEnrichedTaranium;
     public static Material CrackedLightEnrichedTaranium;
     public static Material EnergeticNaquadria;
+    public static Material LightHyperFuel;
+    public static Material MediumHyperFuel;
+    public static Material HeavyHyperFuel;
+    public static Material CrudeRareEarthTurbidSolution;
+    public static Material NitratedRareEarthTurbidSolution;
+    public static Material RareEarthHydroxidesSolution;
+    public static Material RareEarthChloridesSlurry;
+    public static Material LowPurityRareEarthChloridesSolution;
+    public static Material RoughlyPurifiedRareEarthChloridesSolution;
+    public static Material HighPurityRareEarthChloridesSlurry;
+    public static Material HighPurityRareEarthChloridesSolution;
+    public static Material LowPurityRareEarthChloridesSlag;
+    public static Material LaPrNdCeOxidesSolution;
+    public static Material ScEuGdSmOxidesSolution;
+    public static Material YTbDyHoOxidesSolution;
+    public static Material ErTmYbLuOxidesSolution;
 
     //  Machine Casing Materials
     public static Material Inconel625;

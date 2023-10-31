@@ -756,5 +756,19 @@ public class EPOrganicChemistryMaterials {
                 .iconSet(ROUGH)
                 .components(Carbon, 1, Hydrogen, 1, Oxygen, 2, Sodium, 1)
                 .build();
+        //  25101 Ethylhexanol
+        Ethylhexanol = new Material.Builder(25101, gregtechId("ethylhexanol"))
+                .fluid()
+                .color(0xFEEA9A)
+                .components(Carbon, 8, Hydrogen, 10, Oxygen, 1)
+                .build();
+        //  25102 Diethylhexyl Phosphoric Acid
+        DiethylhexylPhosphoricAcid = new Material.Builder(25102, gregtechId("diethylhexyl_phosphoric_acid"))
+                .fluid()
+                .color(0xFFFF99)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 16, Hydrogen, 35, Oxygen, 4, Phosphorus, 1)
+                .build()
+                .setFormula("(C8H7O)2PO2H", true);
     }
 }
