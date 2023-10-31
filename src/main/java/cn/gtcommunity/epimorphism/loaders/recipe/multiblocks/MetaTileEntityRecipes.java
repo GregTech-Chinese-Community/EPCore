@@ -402,6 +402,35 @@ public class MetaTileEntityRecipes {
                 'R', new UnificationEntry(rotor, Draconium),
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UHV),
                 'W', new UnificationEntry(cableGtQuadruple, SiliconCarbide));
+
+        //  Hyper Reactor Mk I
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(LARGE_NAQUADAH_REACTOR)
+                .input(frameGt, BlackPlutonium, 4)
+                .input(pipeLargeFluid, Lafium, 4)
+                .input(ELECTRIC_PUMP_UHV, 16)
+                .input(FIELD_GENERATOR_UHV, 16)
+                .input(circuit, MarkerMaterials.Tier.UEV, 8)
+                .input(NANO_PIC_CHIP, 32)
+                .input(rotor, Draconium, 8)
+                .input(plate, BlackTitanium, 8)
+                .input(stick, Americium, 64)
+                .input(spring, YttriumBariumCuprate, 32)
+                .input(screw, Dubnium, 32)
+                .input(wireGtQuadruple, QuantumAlloy, 16)
+                .fluidInputs(Stellite100.getFluid(5760))
+                .fluidInputs(Zeron100.getFluid(5760))
+                .fluidInputs(Polyetheretherketone.getFluid(2880))
+                .fluidInputs(Tritanium.getFluid(1440))
+                .output(HYPER_REACTOR_MK1)
+                .EUt(VA[UHV])
+                .duration(6400)
+                .research(b -> b
+                        .researchStack(LARGE_NAQUADAH_REACTOR.getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UHV])
+                        .duration(64000))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
