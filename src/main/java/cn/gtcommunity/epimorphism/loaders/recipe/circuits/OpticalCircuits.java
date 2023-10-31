@@ -129,7 +129,7 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  Lasers
+        //  Empty Laser
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(DIELECTRIC_MIRROR)
                 .input(plate, SterlingSilver, 2)
@@ -140,6 +140,59 @@ public class OpticalCircuits {
                 .duration(100)
                 .EUt(VA[IV])
                 .buildAndRegister();
+
+        //  Helium Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(Helium.getFluid(1000))
+                .output(HELIUM_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Neon Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(Neon.getFluid(1000))
+                .output(NEON_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Argon Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(Argon.getFluid(1000))
+                .output(ARGON_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Krypton Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(Krypton.getFluid(1000))
+                .output(KRYPTON_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Xenon Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(Xenon.getFluid(1000))
+                .output(XENON_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  TODO Helium-Neon Laser
+        //  TODO Nd:YAG Laser
 
         //  Optical SMDs
         ASSEMBLER_RECIPES.recipeBuilder()
@@ -191,8 +244,6 @@ public class OpticalCircuits {
                 .EUt(VA[UV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
-
-        //  TODO Lasers
 
         //  Optical Laser Control Unit
         ASSEMBLER_RECIPES.recipeBuilder()
