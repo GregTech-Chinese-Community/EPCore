@@ -60,6 +60,7 @@ public class SpintronicCircuits {
                 .input(dust, PedotTMA, 2)
                 .input(foil, Abyssalloy, 8)
                 .input(wireFine, CarbonNanotube, 16)
+                .output(SPINTRONIC_NAND_MEMORY_CHIP, 1)
                 .duration(200)
                 .EUt(VA[UEV])
                 .cleanroom(CleanroomType.CLEANROOM)

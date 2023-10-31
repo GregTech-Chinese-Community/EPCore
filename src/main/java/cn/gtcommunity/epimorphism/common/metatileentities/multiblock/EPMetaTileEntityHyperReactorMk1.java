@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
@@ -72,7 +73,7 @@ public class EPMetaTileEntityHyperReactorMk1 extends FuelMultiblockController {
                                                              && container.getOutputAmperage() == 2;
                                 })
                                 .toArray(MetaTileEntity[]::new)).setExactLimit(1).setPreviewCount(1)))
-                .where('H', states(EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.HYPER_CORE_MK1)))
+                .where('H', states(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getState(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.HYPER_CORE_MK1)))
                 .where('G', states(getGlassState()))
                 .where('F', states(getFrameState()))
                 .where('V', states(getUniqueCasingState()))
