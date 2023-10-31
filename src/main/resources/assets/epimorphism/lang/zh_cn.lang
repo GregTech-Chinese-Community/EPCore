@@ -718,15 +718,28 @@ gregtech.material.light_taranium_fuel=轻塔兰金属燃料
 gregtech.material.heavy_enriched_taranium_fuel=重富集塔兰金属燃料
 gregtech.material.medium_enriched_taranium_fuel=富集塔兰金属燃料
 gregtech.material.light_enriched_taranium_fuel=轻塔兰金属燃料
-gregtech.material.light_hyper_fuel=轻超能燃料
-gregtech.material.medium_hyper_fuel=超能燃料
-gregtech.material.heavy_hyper_fuel=重超能燃料
 gregtech.material.adamantite=精金石
 gregtech.material.adamantium_unstable=不稳定精金
 gregtech.material.orichalcum_energized=充能山铜
 gregtech.material.adamantium_enriched=富集精金
 gregtech.material.deep_iron=深铁
 gregtech.material.vibranium_unstable=不稳定振金
+gregtech.material.lanthanum_oxide=氧化镧
+gregtech.material.praseodymium_oxide=氧化镨
+gregtech.material.neodymium_oxide=氧化钕
+gregtech.material.cerium_oxide=氧化铈
+gregtech.material.scandium_oxide=氧化钪
+gregtech.material.europium_oxide=氧化铕
+gregtech.material.gadolinium_oxide=氧化钆
+gregtech.material.samarium_oxide=氧化钐
+gregtech.material.yttrium_oxide=氧化钇
+gregtech.material.terbium_oxide=氧化铽
+gregtech.material.dysprosium_oxide=氧化镝
+gregtech.material.holmium_oxide=氧化钬
+gregtech.material.erbium_oxide=氧化铒
+gregtech.material.thulium_oxide=氧化铥
+gregtech.material.ytterbium_oxide=氧化镱
+gregtech.material.lutetium_oxide=氧化镥
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -835,6 +848,8 @@ gregtech.material.chloroethane=氯乙烷
 gregtech.material.dibromoacrolein=二溴丙烯醛
 gregtech.material.formic_acid=甲酸
 gregtech.material.sodium_formate=甲酸钠
+gregtech.material.ethylhexanol=2-乙基己醇
+gregtech.material.diethylhexyl_phosphoric_acid=二-(2-乙基己基)磷酸
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -885,6 +900,22 @@ gregtech.material.cracked_heavy_enriched_taranium=氡裂化重富集塔兰金属
 gregtech.material.cracked_medium_enriched_taranium=氡裂化富集塔兰金属气
 gregtech.material.cracked_light_enriched_taranium=氡裂化轻富集塔兰金属气
 gregtech.material.energetic_naquadria=充能超能硅岩
+gregtech.material.light_hyper_fuel=轻超能燃料
+gregtech.material.medium_hyper_fuel=超能燃料
+gregtech.material.heavy_hyper_fuel=重超能燃料
+gregtech.material.crude_rare_earth_turbid_solution=粗制稀土浊溶液
+gregtech.material.nitrated_rare_earth_turbid_solution=硝化稀土浊溶液
+gregtech.material.rare_earth_hydroxides_solution=稀土氢氧化物溶液
+gregtech.material.rare_earth_chlorides_slurry=稀土氯化物泥浆
+gregtech.material.low_purity_rare_earth_chlorides_solution=低纯度稀土氯化物溶液
+gregtech.material.roughly_purified_rare_earth_chlorides_solution=粗提纯稀土氯化物溶液
+gregtech.material.high_purity_rare_earth_chlorides_slurry=高纯度稀土氯化物泥浆
+gregtech.material.high_purity_rare_earth_chlorides_solution=高纯度稀土氯化物溶液
+gregtech.material.low_purity_rare_earth_chlorides_slag=低纯度稀土氯化物残渣
+gregtech.material.la_pr_nd_ce_oxides_solution=镧-镨-钕-铈氧化物溶液
+gregtech.material.sc_eu_gd_sm_oxides_solution=钪-铕-钆-钐氧化物溶液
+gregtech.material.y_tb_dy_ho_oxides_solution=钇-铽-镝-钬氧化物溶液
+gregtech.material.er_tm_yb_lu_oxides_solution=铒-铥-镱-镥氧化物溶液
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

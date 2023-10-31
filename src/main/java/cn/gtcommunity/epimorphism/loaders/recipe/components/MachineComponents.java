@@ -16,6 +16,8 @@ import gregtech.common.metatileentities.MetaTileEntities;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingType.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.GRINDBALL_ALUMINIUM;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.GRINDBALL_SOAPSTONE;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
@@ -455,6 +457,21 @@ public class MachineComponents {
                 .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.NAQUADRIA_CASING, 2))
                 .EUt(VA[LV])
                 .duration(50)
+                .buildAndRegister();
+
+        //  Grinder Balls
+        COMPRESSOR_RECIPES.recipeBuilder()
+                .input(dust, Soapstone, 4)
+                .outputs(GRINDBALL_SOAPSTONE.getStackForm())
+                .EUt(VA[MV])
+                .duration(300)
+                .buildAndRegister();
+
+        COMPRESSOR_RECIPES.recipeBuilder()
+                .input(dust, Aluminium, 4)
+                .outputs(GRINDBALL_ALUMINIUM.getStackForm())
+                .EUt(VA[MV])
+                .duration(300)
                 .buildAndRegister();
 
         //  Isa Mill

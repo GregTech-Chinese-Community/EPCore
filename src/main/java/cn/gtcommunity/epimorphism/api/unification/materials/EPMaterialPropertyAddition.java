@@ -41,6 +41,11 @@ public class EPMaterialPropertyAddition {
         Rutherfordium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Livermorium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Livermorium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Gadolinium.setProperty(PropertyKey.DUST, new DustProperty());
+        Dysprosium.setProperty(PropertyKey.DUST, new DustProperty());
+        Holmium.setProperty(PropertyKey.DUST, new DustProperty());
+        Thulium.setProperty(PropertyKey.DUST, new DustProperty());
+        Ytterbium.setProperty(PropertyKey.DUST, new DustProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
