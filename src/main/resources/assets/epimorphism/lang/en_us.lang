@@ -173,10 +173,12 @@ metaitem.bose_einstein_condensate.tooltip=2,000 §cRb-87§7 Atoms at §b170nK§7
 #  Wafers
 metaitem.wafer.chip.phase_change_memory.name=PRAM
 metaitem.wafer.chip.phase_change_memory.tooltip=Phase-change Memory
-metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM
-metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=Spin-Transfer Torque Memory
 metaitem.wafer.chip.optical_nor_memory_chip.name=ACNOR
 metaitem.wafer.chip.optical_nor_memory_chip.tooltip=All-optical Cascaded logic NOR
+metaitem.wafer.chip.spin_transfer_torque_memory.name=STTRAM
+metaitem.wafer.chip.spin_transfer_torque_memory.tooltip=Spin-Transfer Torque Memory
+metaitem.wafer.chip.spintronic_nand_memory_chip.name=MDNAND
+metaitem.wafer.chip.spintronic_nand_memory_chip.tooltip=Magnetic Domain-wall Invertic logic NAND
 metaitem.wafer.nano_pic.name=NPIC Wafer
 metaitem.wafer.nano_pic.tooltip=Raw Nano Power Circuit
 metaitem.wafer.chip.nano_pic.name=NPIC

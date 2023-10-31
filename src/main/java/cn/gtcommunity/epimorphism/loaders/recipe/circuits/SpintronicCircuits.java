@@ -54,6 +54,17 @@ public class SpintronicCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
+        //  MDNAND
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(NAND_MEMORY_CHIP)
+                .input(dust, PedotTMA, 2)
+                .input(foil, Abyssalloy, 8)
+                .input(wireFine, CarbonNanotube, 16)
+                .duration(200)
+                .EUt(VA[UEV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
         //  Quantum Dot
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Cadmium)
@@ -219,7 +230,7 @@ public class SpintronicCircuits {
                 .input(SPINTRONIC_CIRCUIT_BOARD)
                 .input(SPINTRONIC_ASSEMBLY, 2)
                 .input(SPINTRONIC_DIODE, 8)
-                .input(OPTICAL_NOR_MEMORY_CHIP, 16)// TODO new NOR Gate
+                .input(SPINTRONIC_NAND_MEMORY_CHIP, 16)
                 .input(SPIN_TRANSFER_TORQUE_MEMORY, 32)
                 .input(wireFine, CarbonNanotube, 24)
                 .input(foil, Fullerene, 32)
