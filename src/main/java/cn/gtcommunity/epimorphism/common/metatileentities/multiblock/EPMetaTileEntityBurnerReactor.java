@@ -64,7 +64,6 @@ public class EPMetaTileEntityBurnerReactor extends RecipeMapMultiblockController
                 .build();
     }
 
-
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {

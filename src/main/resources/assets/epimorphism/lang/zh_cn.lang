@@ -274,6 +274,11 @@ tile.ep_multiblock_casing.advanced_invar_casing.name=镀层殷钢绝热机器外
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机器外壳
 tile.ep_multiblock_casing.drill_head.name=钻头
 tile.ep_multiblock_casing.naquadria_casing.name=超能硅岩抗辐射机器外壳
+tile.ep_multiblock_casing.hyper_casing.name=超致密黑钚机器外壳
+tile.ep_multiblock_casing.hyper_core_mk1.name=超能核心 Mk I
+tile.ep_multiblock_casing.hyper_core_mk2.name=超能核心 Mk II
+tile.ep_multiblock_casing.hyper_core_mk3.name=超能核心 Mk III
+tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -377,6 +382,7 @@ recipemap.hyper_reactor_mk1_recipes.name=磁约束超能聚变
 recipemap.hyper_reactor_mk2_recipes.name=力场约束超能聚变
 recipemap.hyper_reactor_mk3_recipes.name=自控制超能聚变
 
+epimorphism.machine.fuel_refine_factory.name=燃料精炼厂
 recipemap.fuel_refine_factory_recipes.name=燃料精炼
 
 epimorphism.machine.sonicator.name=超声振荡器
@@ -942,3 +948,4 @@ gregtech.material.hdcs=高强度复合钢
 gregtech.material.abyssalloy=渊狱合金
 gregtech.material.lafium=路菲恩
 gregtech.material.black_titanium=黑钛合金
+gregtech.material.talonite=铬钴磷酸盐合金

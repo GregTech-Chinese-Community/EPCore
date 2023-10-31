@@ -342,19 +342,7 @@ public class TaraniumChain {
                 .EUt(VA[IV])
                 .buildAndRegister();
 
-        //  TODO New neutronium recipes in Advanced Fusion Reactor
         GTRecipeHandler.removeRecipesByInputs(FUSION_RECIPES, Americium.getFluid(128), Naquadria.getFluid(128));
-
-        //  Orichalcum
-        FUSION_RECIPES.recipeBuilder()
-                .fluidInputs(Americium.getFluid(128))
-                .fluidInputs(Naquadria.getFluid(128))
-                .fluidOutputs(Orichalcum.getFluid(32))
-                .EUToStart(600000000)
-                .duration(200)
-                .EUt(VA[LuV] * 3)
-                .buildAndRegister();
-
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES, OreDictUnifier.get(dust, Orichalcum), IntCircuitIngredient.getIntegratedCircuit(1));
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES, new ItemStack[]{OreDictUnifier.get(dust, Orichalcum), IntCircuitIngredient.getIntegratedCircuit(2)}, new FluidStack[]{Argon.getFluid(50)});
 
