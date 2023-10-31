@@ -33,7 +33,12 @@ public class EPBlockMultiblockCasing extends VariantBlock<EPBlockMultiblockCasin
         ADVANCED_ALUMINIUM_CASING("advanced_aluminium_casing"),
         VACUUM_CASING("vacuum_casing"),
         DRILL_HEAD("drill_head"),
-        NAQUADRIA_CASING("naquadria_casing");
+        NAQUADRIA_CASING("naquadria_casing"),
+        HYPER_CASING("hyper_casing"),
+        HYPER_CORE_MK1("hyper_core_mk1"),
+        HYPER_CORE_MK2("hyper_core_mk2"),
+        HYPER_CORE_MK3("hyper_core_mk3"),
+        TALONITE_CASING("talonite_casing");
 
         private final String name;
 

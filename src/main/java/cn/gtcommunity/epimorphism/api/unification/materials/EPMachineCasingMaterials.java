@@ -45,8 +45,9 @@ public class EPMachineCasingMaterials {
                 .fluidTemp(4110)
                 .color(0x9991A5)
                 .iconSet(METALLIC)
-                .blastTemp(4310, BlastProperty.GasTier.HIGHER, VA[IV], 1200)
+                .blastTemp(4310, BlastProperty.GasTier.HIGHER, VA[EV], 1200)
                 .components(Chrome, 9, Cobalt, 9, Manganese, 5, Titanium, 2)
+                .flags(GENERATE_ROD, GENERATE_FRAME)
                 .build();
         //  24504 Quantum Alloy
         QuantumAlloy = new Material.Builder(24504, gregtechId("quantum_alloy"))
@@ -113,6 +114,16 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROD)
                 .components(Titanium, 26, Lanthanum, 6, TungstenSteel, 4, Cobalt, 3, Manganese, 2, Phosphorus, 2, Palladium, 2, Niobium, 1, Argon, 5)
                 .toolStats(new ToolProperty(9.0F, 30.0F, 32000, 20))
+                .build();
+        //  24510 Talonite
+        Talonite = new Material.Builder(24510, gregtechId("talonite"))
+                .ingot()
+                .fluid()
+                .color(0x9991A5)
+                .iconSet(SHINY)
+                .blastTemp(3454)
+                .flags(GENERATE_PLATE)
+                .components(Cobalt, 4, Chrome, 3, Phosphorus, 2, Molybdenum, 1)
                 .build();
     }
 }

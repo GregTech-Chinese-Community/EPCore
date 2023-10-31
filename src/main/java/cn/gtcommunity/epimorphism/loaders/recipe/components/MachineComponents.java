@@ -459,6 +459,21 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Talonite Casing
+        ModHandler.addShapedRecipe(true, "talonite_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.TALONITE_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, Talonite),
+                'F', new UnificationEntry(frameGt, Stellite));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Talonite, 6)
+                .input(frameGt, Stellite)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.TALONITE_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+        
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)

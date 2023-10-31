@@ -9,6 +9,7 @@ import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.loaders.recipe.CraftingComponent;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -75,6 +76,9 @@ public class CommonProxy {
         EPLog.logger.info("Registering recipes...");
         FormulaManager.init();
         EPRecipeManager.init();
+        FusionEUToStartProperty.registerFusionTier(9, "(MK4)");
+        FusionEUToStartProperty.registerFusionTier(10, "(MK5)");
+        FusionEUToStartProperty.registerFusionTier(11, "(MK6)");
         CasingTierProperty.registerCasingTier(1, "A");
         CasingTierProperty.registerCasingTier(2, "B");
         CasingTierProperty.registerCasingTier(3, "C");
