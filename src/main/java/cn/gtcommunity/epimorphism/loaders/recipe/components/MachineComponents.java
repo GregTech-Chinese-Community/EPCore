@@ -473,7 +473,24 @@ public class MachineComponents {
                 .EUt(VA[LV])
                 .duration(50)
                 .buildAndRegister();
-        
+
+        //  Hyper Casing
+        ModHandler.addShapedRecipe(true, "hyper_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.HYPER_CASING, 2),
+                "PhP", "TFT","PwP",
+                'P', new UnificationEntry(plateDouble, BlackPlutonium),
+                'T', new UnificationEntry(plate, BlackTitanium),
+                'F', new UnificationEntry(frameGt, Tritanium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plateDouble, BlackPlutonium, 4)
+                .input(plate, BlackTitanium, 2)
+                .input(frameGt, Tritanium)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.HYPER_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
