@@ -133,7 +133,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(BRIGHT)
                 //  TODO UEV stage coil??
                 .blastTemp(10600, BlastProperty.GasTier.HIGHEST, VA[UHV], 3600)
-                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Plutonium244, 18, Cerium, 9, Gadolinium, 3, Dysprosium, 3, Thulium, 2, TungstenCarbide, 6, RedSteel, 6, Duranium, 2, Radon, 2)
                 .build();
     }

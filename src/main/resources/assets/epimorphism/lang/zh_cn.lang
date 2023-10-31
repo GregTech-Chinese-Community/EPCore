@@ -378,9 +378,19 @@ epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
 epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
 epimorphism.machine.large_naquadah_reactor.tooltip.2=最高产生§3UV§7级的能量
 
-recipemap.hyper_reactor_mk1_recipes.name=磁约束超能聚变
-recipemap.hyper_reactor_mk2_recipes.name=力场约束超能聚变
-recipemap.hyper_reactor_mk3_recipes.name=自控制超能聚变
+epimorphism.machine.hyper_reactor_mk1.name=超能反应堆 Mk I
+epimorphism.machine.hyper_reactor_mk1.tooltip.1=磁约束超能聚变
+epimorphism.machine.hyper_reactor_mk1.tooltip.2=最高产生§4UHV§7级的能量
+epimorphism.machine.hyper_reactor_mk2.name=超能反应堆 Mk II
+epimorphism.machine.hyper_reactor_mk2.tooltip.1=力场约束超能聚变
+epimorphism.machine.hyper_reactor_mk2.tooltip.2=最高产生§aUEV§7级的能量
+epimorphism.machine.hyper_reactor_mk3.name=超能反应堆 Mk III
+epimorphism.machine.hyper_reactor_mk3.tooltip.1=自控制超能聚变
+epimorphism.machine.hyper_reactor_mk3.tooltip.2=最高产生§2UIV§7级的能量
+
+recipemap.hyper_reactor_mk1_recipes.name=超能聚变 Mk I
+recipemap.hyper_reactor_mk2_recipes.name=超能聚变 Mk II
+recipemap.hyper_reactor_mk3_recipes.name=超能聚变 Mk III
 
 epimorphism.machine.fuel_refine_factory.name=燃料精炼厂
 recipemap.fuel_refine_factory_recipes.name=燃料精炼
