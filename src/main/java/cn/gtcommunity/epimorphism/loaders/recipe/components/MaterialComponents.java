@@ -86,7 +86,7 @@ public class MaterialComponents {
 
         PIPE_NORMAL.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.pipeNormalFluid, Duranium)},
-                {10, new UnificationEntry(OrePrefix.pipeNormalFluid, Neutronium)}, // TODO find new pipe
+                {10, new UnificationEntry(OrePrefix.pipeNormalFluid, Lafium)},
 //                {11, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
@@ -94,7 +94,7 @@ public class MaterialComponents {
 
         PIPE_LARGE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.pipeLargeFluid, Duranium)},
-                {10, new UnificationEntry(OrePrefix.pipeNormalFluid, Neutronium)}, // TODO find new pipe
+                {10, new UnificationEntry(OrePrefix.pipeNormalFluid, Lafium)},
 //                {11, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.pipeNormalFluid, Trinium)},
@@ -146,7 +146,7 @@ public class MaterialComponents {
 
         SAWBLADE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, CubicBoronNitride)},
-                {10, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, Hdcs)},//TODO Find better material
+                {10, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, BlackTitanium)},
 //                {11, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.toolHeadBuzzSaw, Trinium)},

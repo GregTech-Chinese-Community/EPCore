@@ -20,7 +20,7 @@ public class EPMachineCasingMaterials {
                 .ingot()
                 .fluid()
                 .fluidTemp(3700)
-                .fluidPipeProperties(5500, 640, true, true, true, true)
+                .fluidPipeProperties(5500, 640, true, true, true, false)
                 .color(0x3fcc60)
                 .iconSet(METALLIC)
                 .flags(GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_GEAR)
@@ -91,6 +91,28 @@ public class EPMachineCasingMaterials {
                 .components(StainlessSteel, 5, TungstenCarbide, 5, Nichrome, 5, IncoloyMA956, 5, Germanium, 1, Rutherfordium, 1, Radon, 1)
                 .cableProperties(V[UEV], 64, 64, false)
                 .flags(GENERATE_FINE_WIRE)
+                .build();
+        //  24508 Lafium
+        Lafium = new Material.Builder(24508, gregtechId("lafium"))
+                .ingot()
+                .fluid()
+                .color(0x0D0D60)
+                .iconSet(SHINY)
+                .blastTemp(9865, BlastProperty.GasTier.HIGHEST, VA[UEV], 1860)
+                .components(HastelloyN, 8, Naquadria, 4, Samarium, 2, Tungsten, 4, Aluminium, 6, Nickel, 8, Titanium, 4, Carbon, 2, Argon, 2)
+                .fluidPipeProperties(23000, 8000, true, true, true, true)
+                .build();
+        //  24509 Black Titanium
+        BlackTitanium = new Material.Builder(24509, gregtechId("black_titanium"))
+                .ingot()
+                .fluid()
+                .color(0x6C003B)
+                .iconSet(SHINY)
+                //  TODO UEV stage coil?? Maybe 11500K this material needs...
+                .blastTemp(10500, BlastProperty.GasTier.HIGHEST, VA[UEV], 4580)
+                .flags(GENERATE_PLATE, GENERATE_ROD)
+                .components(Titanium, 26, Lanthanum, 6, TungstenSteel, 4, Cobalt, 3, Manganese, 2, Phosphorus, 2, Palladium, 2, Niobium, 1, Argon, 5)
+                .toolStats(new ToolProperty(9.0F, 30.0F, 32000, 20))
                 .build();
     }
 }

@@ -4,7 +4,7 @@ import gregtech.api.unification.Element;
 import gregtech.api.unification.Elements;
 
 public class EPElements {
-    //  Elements adn Isotopes
+    //  Elements and Isotopes
     public static final Element Plutonium244 = Elements.add(94, 152, -1, null, "Plutonium-244", "Pu-244", true);
 
     //  Fantasy Materials
