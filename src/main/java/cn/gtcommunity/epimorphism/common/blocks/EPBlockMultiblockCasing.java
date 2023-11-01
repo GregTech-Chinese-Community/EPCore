@@ -41,7 +41,8 @@ public class EPBlockMultiblockCasing extends VariantBlock<EPBlockMultiblockCasin
         FARM_CASING("farm_casing"),
         BREEDING_CASING("breeding_casing"),
         TRITANIUM_CASING("tritanium_casing"),
-        QUANTUM__CASING("quantum__casing");
+        QUANTUM_CASING("quantum_casing"),
+        REFLECTIVE_CASING("reflective_casing");
         private final String name;
 
         CasingType(String name) {
