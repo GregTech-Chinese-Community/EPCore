@@ -330,7 +330,7 @@ public class OpticalCircuits {
 
         //  Optical Mainframe
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, Tritanium, 2)
+                .input(frameGt, Draconium, 2)
                 .input(OPTICAL_COMPUTER, 2)
                 .input(OPTICAL_DIODE, 16)
                 .input(OPTICAL_CAPACITOR, 16)

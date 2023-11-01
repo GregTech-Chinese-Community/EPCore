@@ -3,12 +3,24 @@ item.material.oreprefix.coil=%s Coil
 item.material.oreprefix.plateCurved=Curved %s Plate
 item.material.oreprefix.milled=Milled %s Dust
 metaitem.milled.tooltip.flotation=Further processing requires §6Industrial Flotation Factory§7.
+item.material.oreprefix.seedCrystal=%s Seed Crystal
+item.material.oreprefix.boule=%s Boule
 
 #  Tools
+gt.tool.class.bending_cylinder=Bending Cylinder
+gt.tool.class.small_bending_cylinder=Small Bending Cylinder
+gt.tool.class.soldering_iron=Soldering Iron
+
 item.gt.tool.universal_spade.name=%s Universal Spade
 item.gt.tool.combination_wrench.name=%s Combination Wrench
 item.gt.tool.bending_cylinder.name=%s Bending Cylinder
 item.gt.tool.small_bending_cylinder.name=%s Small Bneding Cylinder
+item.gt.tool.soldering_iron_lv.name=%s Electric Soldering Iron
+item.gt.tool.soldering_iron_lv.tooltip=Better than flint knife
+item.gt.tool.soldering_iron_hv.name=%s Electric Soldering Iron
+item.gt.tool.soldering_iron_hv.tooltip=Be careful of hot hands!
+item.gt.tool.soldering_iron_iv.name=%s Electric Soldering Iron
+item.gt.tool.soldering_iron_iv.tooltip=Circuit Board Repairer MK523
 
 #  Boards
 metaitem.board.gooware.name=Kapton™ Board
@@ -231,6 +243,11 @@ metaitem.biological.components.dna_encoder.name=DNA Encoder
 metaitem.biological.components.dna_encoder.tooltip=Part of a Self-replicating Turing Machine
 metaitem.biological.components.dna_decode_encoder.name=DNA Decode-encoder
 metaitem.biological.components.dna_decode_encoder.tooltip=Will deplete the universe in order to calculate
+metaitem.algae.ordinary_algae.name=Ordinary Algae
+metaitem.algae.red_alga.name=Red Alga
+metaitem.algae.green_alga.name=Green Alga
+metaitem.algae.chrysophyceae.name=Chrysophyceae
+metaitem.algae.brown_alga.name=Brown Alga
 
 #  Crystal Components
 metaitem.crystal.diamond_chip.name=Engraved Diamond Crystal Chip
@@ -257,7 +274,13 @@ tile.ep_multiblock_casing.substrate_casing.name=Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Machine Casing
 tile.ep_multiblock_casing.advanced_invar_casing.name=Plated Adiabatic Invar Machine Casing
 tile.ep_multiblock_casing.advanced_aluminium_casing.name=Plated Antifreeze Aluminium Machine Casing
+tile.ep_multiblock_casing.drill_head.name=Drill Head
 tile.ep_multiblock_casing.naquadria_casing.name=Naquadria Radiation Resistant Machine Casing
+tile.ep_multiblock_casing.hyper_casing.name=Extremely Dense Black Plutonium Machine Casing
+tile.ep_active_multiblock_casing.hyper_core_mk1.name=Hyper Core Mk I
+tile.ep_active_multiblock_casing.hyper_core_mk2.name=Hyper Core Mk II
+tile.ep_active_multiblock_casing.hyper_core_mk3.name=Hyper Core Mk III
+tile.ep_multiblock_casing.talonite_casing.name=Low Friction Talonite Machine Casing
 tile.ep_mill_casing.isa_mill_casing.name=Inconel-625 Machine Casing
 tile.ep_mill_casing.isa_mill_casing_pipe.name=Inconel-625 Mild dispersion Pipe Casing
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=Inconel-625 Ball-milling Gearbox Casing
@@ -298,6 +321,8 @@ tile.ep_crucible_casing.tungsten.name=Tungsten Crucible
 metaitem.magnetron.name=Magnetron
 metaitem.carbon_allotrope.name=Carbon Allotrope Mixture
 metaitem.graphene_aligned.name=Graphene-Aligned Carbon Nanotube
+metaitem.grinder.boron_nitride.name=Boron Nitride Grinder
+metaitem.component.vacuum_tube.name=Vacuum Tube Component
 
 #  Recipe Properties
 epimorphism.recipe.temperature=Temperature:%,d K
@@ -307,8 +332,10 @@ epimorphism.recipe.ph_change=pH Change:%d
 epimorphism.recipe.ph_error_range=pH Error Range:±%d
 epimorphism.recipe.grind_ball_soapstone=Grindball material: Soapstone
 epimorphism.recipe.grind_ball_aluminium=Grindball material: Aluminium
+epimorphism.recipe.altitude=Minimum height:%s
 
 #  Machines
+recipemap.dryer_recipes.name=Drying
 epimorphism.machine.dryer.lv.name=Basic Chemical Dryer
 epimorphism.machine.dryer.lv.tooltip=Not for Hair
 epimorphism.machine.dryer.mv.name=Advanced Chemical Dryer
@@ -336,6 +363,38 @@ epimorphism.machine.dryer.uxv.tooltip=Moisture Remover
 epimorphism.machine.dryer.opv.name=Legendary Chemical Dryer
 epimorphism.machine.dryer.opv.tooltip=Moisture Remover
 
+recipemap.vacuum_chamber_recipes.name=Vacuum Chamber
+epimorphism.machine.vacuum_chamber.bronze.name=Steam Vacuum Chamber
+epimorphism.machine.vacuum_chamber.bronze.tooltip=Your first Vacuum.
+epimorphism.machine.vacuum_chamber.steel.name=High Pressure Steam Vacuum Chamber
+epimorphism.machine.vacuum_chamber.steel.tooltip=Small Vacuum.
+epimorphism.machine.vacuum_chamber.lv.name=Basic Vacuum Chamber
+epimorphism.machine.vacuum_chamber.lv.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.mv.name=Advanced Vacuum Chamber
+epimorphism.machine.vacuum_chamber.mv.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.hv.name=Advanced Vacuum Chamber II
+epimorphism.machine.vacuum_chamber.hv.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.ev.name=Advanced Vacuum Chamber III
+epimorphism.machine.vacuum_chamber.ev.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.iv.name=Elite Vacuum Chamber
+epimorphism.machine.vacuum_chamber.iv.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.luv.name=Elite Vacuum Chamber II
+epimorphism.machine.vacuum_chamber.luv.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.zpm.name=Elite Vacuum Chamber III
+epimorphism.machine.vacuum_chamber.zpm.tooltip=Air Isolator
+epimorphism.machine.vacuum_chamber.uv.name=Ultimate Vacuum Chamber
+epimorphism.machine.vacuum_chamber.uv.tooltip=Perfect Vacuum
+epimorphism.machine.vacuum_chamber.uhv.name=Epic Vacuum Chamber
+epimorphism.machine.vacuum_chamber.uhv.tooltip=Perfect Vacuum
+epimorphism.machine.vacuum_chamber.uev.name=Epic Vacuum Chamber II
+epimorphism.machine.vacuum_chamber.uev.tooltip=Perfect Vacuum
+epimorphism.machine.vacuum_chamber.uiv.name=Epic Vacuum Chamber III
+epimorphism.machine.vacuum_chamber.uiv.tooltip=Perfect Vacuum
+epimorphism.machine.vacuum_chamber.uxv.name=Epic Vacuum Chamber IV
+epimorphism.machine.vacuum_chamber.uxv.tooltip=Perfect Vacuum
+epimorphism.machine.vacuum_chamber.opv.name=Legendary Vacuum Chamber
+epimorphism.machine.vacuum_chamber.opv.tooltip=Perfect Vacuum
+
 recipemap.naquadah_reactor_recipes.name=Naquadah Reactor
 epimorphism.machine.naquadah_reactor.iv.name=Elite Naquadah Reactor
 epimorphism.machine.naquadah_reactor.iv.tooltip=Endless energy
@@ -344,17 +403,38 @@ epimorphism.machine.naquadah_reactor.luv.tooltip=Endless energy
 epimorphism.machine.naquadah_reactor.zpm.name=Elite Naquadah Reactor III
 epimorphism.machine.naquadah_reactor.zpm.tooltip=Endless energy
 
+epimorphism.machine.multiblock.glass_tier=Glass Tier: %s (%s)
+epimorphism.machine.multiblock.max_parallel=Maximum Parallel: %s
+epimorphism.machine.multiblock.max_voltage=Maximum Voltage: %s
+epimorphism.machine.multiblock.mode=Mode: %s
+epimorphism.multiblock.universal.problem.soldering_iron=%s§7Circuit board is short circuited. (§aSoldering Iron§7)
+
 epimorphism.machine.large_naquadah_reactor.name=Large Naquadah Reactor
 epimorphism.machine.large_naquadah_reactor.tooltip.1=Take energy in moderation
 epimorphism.machine.large_naquadah_reactor.tooltip.2=Produces up to §3UV§7 power.
+
+epimorphism.machine.hyper_reactor_mk1.name=Hyper Reactor Mk I
+epimorphism.machine.hyper_reactor_mk1.tooltip.1=Magnetically constrained Hyper Fusion
+epimorphism.machine.hyper_reactor_mk1.tooltip.2=Produces up to §4UHV§7 power.
+epimorphism.machine.hyper_reactor_mk2.name=Hyper Reactor Mk II
+epimorphism.machine.hyper_reactor_mk2.tooltip.1=Force field constrained Hyper Fusion
+epimorphism.machine.hyper_reactor_mk2.tooltip.2=Produces up to §aUEV§7 power.
+epimorphism.machine.hyper_reactor_mk3.name=Hyper Reactor Mk III
+epimorphism.machine.hyper_reactor_mk3.tooltip.1=Self-control Hyper Fusion
+epimorphism.machine.hyper_reactor_mk3.tooltip.2=Produces up to §2UIV§7 power.
+
+recipemap.hyper_reactor_mk1_recipes.name=Hyper Fusion Mk I
+recipemap.hyper_reactor_mk2_recipes.name=Hyper Fusion Mk II
+recipemap.hyper_reactor_mk3_recipes.name=Hyper Fusion Mk III
+
+epimorphism.machine.fuel_refine_factory.name=Fuel Refine Factory
+recipemap.fuel_refine_factory_recipes.name=Fuel Refine
 
 epimorphism.machine.sonicator.name=Sonicator
 recipemap.sonication_recipes.name=Sonication
 
 epimorphism.machine.cvd_unit.name=CVD Unit
 recipemap.cvd_recipes.name=Chemical Vapor Deposition
-
-epimorphism.machine.multiblock.glass_tier=Glass tier: %s (%s)
 
 epimorphism.machine.nanoscale_fabricator.name=Nanoscale Fabricator
 epimorphism.machine.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
@@ -365,6 +445,33 @@ recipemap.crystallization_recipes.name=Crystallization
 
 epimorphism.machine.catalytic_reformer.name=Catalytic Reformer
 recipemap.catalytic_reformer_recipes.name=Catalytic Reformation
+
+epimorphism.machine.fracker.name=Fracker
+epimorphism.multiblock.fracker.tooltip.1=Uses 1000L of Fracturing Fluid to replenish veins under bedrock.
+epimorphism.multiblock.fracker.tooltip.2=Consumes §a%s EU/t§7.
+
+epimorphism.machine.industrial_drill.name=Industrial Drilling Rig
+epimorphism.multiblock.industrial_drill.tooltip.1=Drills the block placed beneath the Drill Head.
+epimorphism.multiblock.industrial_drill.tooltip.2=The target block is not broken when non-consumable.
+recipemap.drill_recipes.name=Drilling
+
+epimorphism.machine.roaster.name=Industrial Roaster
+epimorphism.multiblock.roaster.tooltip.1=Bronze Firebox: §c1000K
+epimorphism.multiblock.roaster.tooltip.2=Steel Firebox: §c1500K
+epimorphism.multiblock.roaster.tooltip.3=Titanium Firebox: §c2000K
+epimorphism.multiblock.roaster.tooltip.4=Tungstensteel Firebox: §c2500K
+recipemap.roaster_recipes.name=High Temperature Roasting
+
+epimorphism.machine.industrial_fishing_pond.name=Industrial Fishing Pond
+epimorphism.multiblock.industrial_fisher.mode1=Mode: Fish
+epimorphism.multiblock.industrial_fisher.mode2=Mode: Waste
+epimorphism.multiblock.industrial_fisher.mode0=Mode: Treasure
+epimorphism.multiblock.industrial_fisher.inv_full=Inventory Full!
+
+epimorphism.machine.algae_farm.name=Algae Farm
+epimorphism.multiblock.algae_farm.mode0=Mode: Natural Growth
+epimorphism.multiblock.algae_farm.mode1=Mode: Industrial Cultivation
+epimorphism.multiblock.algae_farm.inv_full=Inventory Full!
 
 epimorphism.machine.fermentation_tank.name=Fermentation Tank
 recipemap.fermentation_tank_recipes.name=Biological Fermentation
@@ -383,6 +490,8 @@ epimorphism.multipart.ball.only=Only grindballs can be placed
 epimorphism.machine.catalyst_hatch.name=Catalyst Hatch
 epimorphism.multipart.catalyst.only=Only catalysts can be placed
 
+epimorphism.machine.industrial_maintenance_hatch.name=Industrial Maintenance Hatch
+
 epimorphism.machine.burner_reactor.name=Burner Reactor
 recipemap.burner_reactor_recipes.name=Combustion Reaction
 
@@ -390,12 +499,19 @@ epimorphism.machine.cryogenic_reactor.name=Cryogenic Reactor
 recipemap.cryogenic_reactor_recipes.name=Low-temperature Reaction
 
 epimorphism.machine.mega_alloy_blast_smelter.name=Mega Alloy Blast Smelter
-epimorphism.machine.mega_alloy_blast_smelter.max_parallel=Max parallel: %s
+epimorphism.machine.mega_alloy_blast_smelter.max_parallel=Maximum parallel: %s
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.1=Glass level determines the maximum voltage.
-epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=Max parallel is four times the coil level.
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=Maximum parallel is four times the coil level.
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=For each level higher than cupronickel, duration required for recipes increases to 0.8.
 
-recipemap.dryer_recipes.name=Drying
+epimorphism.machine.mega_oil_cracking_unit.name=Mega Oil Cracking Unit
+epimorphism.machine.mega_oil_cracking_unit.tooltip.1=Glass level determines the maximum voltage.
+epimorphism.machine.mega_oil_cracking_unit.tooltip.2=Maximum parallel is four times the coil level.
+epimorphism.machine.mega_oil_cracking_unit.tooltip.3=For each level higher than cupronickel, duration required for recipes increases to 0.8.
+
+epimorphism.machine.mega_chemical_reactor.name=Mega Chemical Reactor
+epimorphism.machine.mega_chemical_reactor.tooltip.1=Glass level determines the maximum voltage.
+epimorphism.machine.mega_chemical_reactor.tooltip.2=Maximum parallel is 256.
 
 epimorphism.machine.blazing_blast_furnace.name=Volcanus
 epimorphism.machine.blazing_blast_furnace.amount=Blazing Pyrotheum: %sL
@@ -403,7 +519,7 @@ epimorphism.machine.blazing_blast_furnace.heat=Blazing Pyrotheum are converting 
 epimorphism.machine.blazing_blast_furnace.warning=Insufficient Blazing Pyrotheum
 epimorphism.machine.blazing_blast_furnace.tooltip.1=Need to provide §cBlazing Pyrotheum§7 for work
 epimorphism.machine.blazing_blast_furnace.tooltip.2=When no §cBlazing Pyrotheum§7 are provided, Volcanus will shut down.
-epimorphism.machine.blazing_blast_furnace.tooltip.3=The max parallels is determined based on the Coil level, and each improvement will increase max parallels to twice the original number.
+epimorphism.machine.blazing_blast_furnace.tooltip.3=The maximum parallels is determined based on the Coil level, and each improvement will increase maximum parallels to twice the original number.
 
 epimorphism.machine.cryogenic_freezer.name=Cryogenic Freezer
 epimorphism.machine.cryogenic_freezer.amount=Gelid Cryotheum: %sL
@@ -428,7 +544,39 @@ epimorphism.machine.chemical_plant.casing_tier=Casing level: %d
 epimorphism.machine.chemical_plant.tube_tier=Pipe level: %d
 epimorphism.machine.chemical_plant.tier=Tier: %d
 
-recipemap.roaster_recipes.name=Roaster
+epimorphism.machine.general_processing_plant.name=Universal Processing Plant
+recipemap.general_recipes_a.name=Mode-A
+recipemap.general_recipes_b.name=Mode-B
+recipemap.general_recipes_c.name=Mode-C
+epimorphism.multiblock.general_processing_plant.tooltip.1=Universal Processing Plants are 2.5 times faster than single block machines of the same voltage.
+epimorphism.multiblock.general_processing_plant.tooltip.2=Universal Processing Plants only need to use 0.8 * the required power in the recipe.
+epimorphism.multiblock.general_processing_plant.tooltip.3=For each voltage increase, the maximum parallel number is increased 2.
+epimorphism.multiblock.general_processing_plant.shift_tooltip.1=Using Programming circuit to control the recipe in the current mode:
+epimorphism.multiblock.general_processing_plant.shift_tooltip.2=Mode-A: 20-Compressor 21-Lathe 22-Polarizer
+epimorphism.multiblock.general_processing_plant.shift_tooltip.3=Mode-B: 20-Fermenter 21-Extractor 22-Canner
+epimorphism.multiblock.general_processing_plant.shift_tooltip.4=Mode-C: 20-Laser Engraver 21-Autoclave 22-Fluid Solidifier
+
+epimorphism.machine.integrated_ore_factory.name=Integrated Ore Processing Factory
+epimorphism.machine.integrated_ore_factory.mode.0=Processing Mode: Pulverization-Ore Washer-Thermal Centrifuge-Pulverization
+epimorphism.machine.integrated_ore_factory.mode.1=Processing Mode: Pulverization-Ore Washer-Pulverization-Centrifuge
+epimorphism.machine.integrated_ore_factory.mode.2=Processing Mode: Pulverization-Pulverization-Centrifuge
+epimorphism.machine.integrated_ore_factory.mode.3=Processing Mode: Pulverization-Ore Washer-Sifter
+epimorphism.machine.integrated_ore_factory.mode.4=Processing Mode: Pulverization-Chemical Bath-Pulverization-Centrifuge
+
+epimorphism.machine.integrated_ore_factory.void.true=Stone Dust Voiding Enabled
+epimorphism.machine.integrated_ore_factory.void.false=Stone Dust Voiding Disabled
+
+epimorphism.machine.dissolution_tank.name=Dissolution Tank
+recipemap.dissolution_tank_recipes.name=Homogeneous Mixture
+
+epimorphism.machine.digester.name=Digester
+recipemap.digester_recipes.name=High Temperature Digestion
+
+epimorphism.machine.computing_terminal.name=Computing Terminal
+recipemap.computing_terminal_recipes.name=Data Computation
+
+epimorphism.machine.cosmic_ray_detector.name=Cosmic Ray Detector
+recipemap.cosmic_ray_detector_recipes.name=Cosmic Ray Detection
 
 epimorphism.machine.ion_implantater.name=Ion Implantater
 recipemap.ion_implanter_recipes.name=Vacuum Ion Implantation
@@ -438,6 +586,15 @@ recipemap.plasma_cvd_recipes.name=Plasma-enhanced Chemical Vapor Deposition
 
 epimorphism.machine.laser_cvd_unit.name=Laser-induced Chemical Vapor Deposition Unit
 recipemap.laser_cvd_recipes.name=Laser-induced Chemical Vapor Deposition
+
+epimorphism.machine.pcb_factory.name=PCB Factory
+epimorphism.machine.pcb_factory.tier.0=Structure Level 1
+epimorphism.machine.pcb_factory.tier.1=Structure Level 2
+epimorphism.machine.pcb_factory.tier.2=Structure Level 3
+epimorphism.machine.pcb_factory.biological_chamber=Biological Chamber Control Module: %s
+epimorphism.machine.pcb_factory.cooling_tower=Cooling Tower Control Module: %s
+epimorphism.machine.pcb_factory.module.false=§4Offline
+epimorphism.machine.pcb_factory.module.true=§2Online
 
 #  Materials
 
@@ -449,6 +606,7 @@ gregtech.material.orichalcum=Orichalcum
 gregtech.material.vibranium=Vibranium
 gregtech.material.adamantium=Adamantium
 gregtech.material.taranium=Taranium
+gregtech.material.plutonium_244=Plutonium-244
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=Graphene Oxide
@@ -614,6 +772,34 @@ gregtech.material.bismuth_tellurite=Bismuth Tellurite
 gregtech.material.prasiolite=Prasiolite
 gregtech.material.magneto_resonatic=Magneto Resonatic
 gregtech.material.yttrium_trioxide=Yttrium Trioxide
+gregtech.material.heavy_taranium_fuel=Heavy Taranium Fuel
+gregtech.material.medium_taranium_fuel=Medium Taranium Fuel
+gregtech.material.light_taranium_fuel=Light Taranium Fuel
+gregtech.material.heavy_enriched_taranium_fuel=Heavy Enriched Taranium Fuel
+gregtech.material.medium_enriched_taranium_fuel=Medium Enriched Taranium Fuel
+gregtech.material.light_enriched_taranium_fuel=Light Enriched Taranium Fuel
+gregtech.material.adamantite=Adamantite
+gregtech.material.adamantium_unstable=Unstable Adamantium
+gregtech.material.orichalcum_energized=Energized Orichalcum
+gregtech.material.adamantium_enriched=Enriched Adamantium
+gregtech.material.deep_iron=Deep Iron
+gregtech.material.vibranium_unstable=Unstable Vibranium
+gregtech.material.lanthanum_oxide=Lanthanum Oxide
+gregtech.material.praseodymium_oxide=Praseodymium Oxide
+gregtech.material.neodymium_oxide=Neodymium Oxide
+gregtech.material.cerium_oxide=Cerium Oxide
+gregtech.material.scandium_oxide=Scandium Oxide
+gregtech.material.europium_oxide=Europium Oxide
+gregtech.material.gadolinium_oxide=Gadolinium Oxide
+gregtech.material.samarium_oxide=Samarium Oxide
+gregtech.material.yttrium_oxide=Yttrium Oxide
+gregtech.material.terbium_oxide=Terbium Oxide
+gregtech.material.dysprosium_oxide=Dysprosium Oxide
+gregtech.material.holmium_oxide=Holmium Oxide
+gregtech.material.erbium_oxide=Erbium Oxide
+gregtech.material.thulium_oxide=Thulium Oxide
+gregtech.material.ytterbium_oxide=Ytterbium Oxide
+gregtech.material.lutetium_oxide=Lutetium Oxide
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=Dragon Breath
@@ -635,7 +821,7 @@ gregtech.material.potassium_bromate=Potassium Bromate
 gregtech.material.malonic_acid=Malonic Acid
 gregtech.material.chloroacetic_acid=Chloroacetic Acid
 gregtech.material.trichloroethylene=Trichloroethylene
-gregtech.material.dichloroethane=Dichloroethane
+gregtech.material.dichloroethane=1,2-Dichloroethane
 gregtech.material.hydrobromic_acid=Hydrobromic Acid
 gregtech.material.butanediol=Butanediol
 gregtech.material.diacetyl=Diacetyl
@@ -670,13 +856,13 @@ gregtech.material.n_methyl_pyrrolidone=N-Methyl-2-Pyrrolidone
 gregtech.material.nitroaniline=Nitroaniline
 gregtech.material.durene=Durene
 gregtech.material.pyromellitic_dianhydride=Pyromellitic Dianhydride (PDMA)
-gregtech.material.aminophenol=Aminophenol
+gregtech.material.aminophenol=4-Aminophenol
 gregtech.material.aniline=Aniline
-gregtech.material.oxydianiline=Oxydianiline (ODA)
+gregtech.material.oxydianiline=4,4'-Oxydianiline (ODA)
 gregtech.material.dimethylformamide=Dimethylformamide (DMF)
 gregtech.material.phthalic_anhydride=Phthalic Anhydride
 gregtech.material.biphenyl_tetracarboxylic_acid_dianhydride=Biphenyl Tetracarboxylic Acid Dianhydride (BPDA)
-gregtech.material.bistrichloromethylbenzene=Bistrichloromethylbenzene
+gregtech.material.bistrichloromethylbenzene=1,4-Bis(trichloromethyl)benzene
 gregtech.material.tetrabromoethane=Tetrabromoethane
 gregtech.material.terephthalic_acid=Terephthalic Acid (PTA)
 gregtech.material.gamma_butyrolactone=γ-Butyrolactone
@@ -694,8 +880,8 @@ gregtech.material.butanol=Butanol
 gregtech.material.bromobutane=Bromobutane
 gregtech.material.cyanonaphthalene=Cyanonaphthalene
 gregtech.material.triphenylphosphine=Triphenylphosphine
-gregtech.material.ethylanthraquinone=Ethylanthraquinone
-gregtech.material.ethylanthrahydroquinone=Ethylanthrahydroquinone
+gregtech.material.ethylanthraquinone=2-Ethylanthraquinone
+gregtech.material.ethylanthrahydroquinone=2-Ethylanthrahydroquinone
 gregtech.material.ethylenediamine=Ethylenediamine
 gregtech.material.tetrasodium_edta=Ethylenediaminetetraacetic Acid Tetrasodium
 gregtech.material.ethylenediaminetetraacetic_acid=Ethylenediaminetetraacetic Acid (EDTA)
@@ -722,6 +908,8 @@ gregtech.material.chloroethane=Chloroethane
 gregtech.material.dibromoacrolein=Dibromoacrolein
 gregtech.material.formic_acid=Formic Acid
 gregtech.material.sodium_formate=Sodium Formate
+gregtech.material.ethylhexanol=2-Ethylhexanol
+gregtech.material.diethylhexyl_phosphoric_acid=Di-(2-ethylhexyl)phosphoric Acid
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=Belousov-Zhabotinsky Medium
@@ -744,17 +932,75 @@ gregtech.material.heavy_naquadah_fuel=Heavy Naquadah Fuel
 gregtech.material.medium_naquadah_fuel=Medium Naquadah Fuel
 gregtech.material.light_naquadah_fuel=Light Naquadah Fuel
 gregtech.material.naquadah_gas=Naquadah Gas
+gregtech.material.fracturing_fluid=Fracturing Fluid
+gregtech.material.bedrock=Bedrock
+gregtech.material.bedrock_smoke=Bedrock Smoke
+gregtech.material.bedrock_soot_solution=Bedrock Soot Solution
+gregtech.material.clean_bedrock_solution=Clean Bedrock Solution
+gregtech.material.heavy_bedrock_smoke=Heavy Bedrock Smoke
+gregtech.material.medium_bedrock_smoke=Medium Bedrock Smoke
+gregtech.material.light_bedrock_smoke=Light Bedrock Smoke
+gregtech.material.ultralight_bedrock_smoke=Ultralight Bedrock Smoke
+gregtech.material.heavy_taranium_gas=Heavy Taranium Gas
+gregtech.material.medium_taranium_gas=Medium Taranium Gas
+gregtech.material.light_taranium_gas=Light Taranium Gas
+gregtech.material.bedrock_gas=Bedrock Gas
+gregtech.material.cracked_heavy_taranium=Fluorine-Cracked Heavy Taranium Gas
+gregtech.material.cracked_medium_taranium=Fluorine-Crackd Medium Taranium Gas
+gregtech.material.cracked_light_taranium=Fluorine-Crackd Light Taranium Gas
+gregtech.material.enriched_bedrock_soot_solution=Enriched Bedrock Soot Solution
+gregtech.material.clean_enriched_bedrock_solution=Clean Enriched Bedrock Soot Solution
+gregtech.material.heavy_enriched_bedrock_smoke=Heavy Enriched Bedrock Smoke
+gregtech.material.medium_enriched_bedrock_smoke=Medium Enriched Bedrock Smoke
+gregtech.material.light_enriched_bedrock_smoke=Light Enriched Bedrock Smoke
+gregtech.material.heavy_enriched_taranium_gas=Heavy Enriched Taranium Gas
+gregtech.material.medium_enriched_taranium_gas=Medium Enriched Taranium Gas
+gregtech.material.light_enriched_taranium_gas=Light Enriched Taranium Gas
+gregtech.material.cracked_heavy_enriched_taranium=Radon-Cracked Heavy Enriched Taranium Gas
+gregtech.material.cracked_medium_enriched_taranium=Radon-Cracked Medium Enriched Taranium Gas
+gregtech.material.cracked_light_enriched_taranium=Radon-Cracked Light Enriched Taranium Gas
+gregtech.material.energetic_naquadria=Energetic Naquadria
+gregtech.material.light_hyper_fuel=Light Hyper Fuel
+gregtech.material.medium_hyper_fuel=Hyper Fuel
+gregtech.material.heavy_hyper_fuel=Heavy Hyper Fuel
+gregtech.material.crude_rare_earth_turbid_solution=Crude Rare earth Turbid Solution
+gregtech.material.nitrated_rare_earth_turbid_solution=Nitrated Rare earth Turbid Solution
+gregtech.material.rare_earth_hydroxides_solution=Rare earth Hydroxides Solution
+gregtech.material.rare_earth_chlorides_slurry=Rare earth Chlorides Slurry
+gregtech.material.low_purity_rare_earth_chlorides_solution=Low purity Rare earth Chlorides Solution
+gregtech.material.roughly_purified_rare_earth_chlorides_solution=Roughly purified Rare earth Chlorides Solution
+gregtech.material.high_purity_rare_earth_chlorides_slurry=High purity Rare earth Chlorides Slurry
+gregtech.material.high_purity_rare_earth_chlorides_solution=High purity Rare earth Chlorides Solution
+gregtech.material.low_purity_rare_earth_chlorides_slag=Low purity Rare earth Chlorides Slag
+gregtech.material.la_pr_nd_ce_oxides_solution=La-Pr-Nd-Ce Oxides Solution
+gregtech.material.sc_eu_gd_sm_oxides_solution=Sc-Eu-Gd-Sm Oxides Solution
+gregtech.material.y_tb_dy_ho_oxides_solution=Y-Tb-Dy-Ho Oxides Solution
+gregtech.material.er_tm_yb_lu_oxides_solution=Er-Tm-Yb-Lu Oxides Solution
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=Mana
 gregtech.material.primal_mana=Primal Mana
 gregtech.material.dawnstone=Dawnstone
 
+##  Biological Production Line
+gregtech.material.dry_red_algae=Dry Red algae
+gregtech.material.red_algae=Red algae
+gregtech.material.dry_green_algae=Dry Green algae
+gregtech.material.green_algae=Green algae
+gregtech.material.dry_golden_algae=Dry Golden algae
+gregtech.material.golden_algae=Golden algae
+gregtech.material.dry_brown_algae=Dry Brown algae
+gregtech.material.brown_algae=Brown algae
+
 ##  Machine Casing Materials
 gregtech.material.inconel_625=Inconel-625
 gregtech.material.hastelloy_n=Hastelloy-N
-gregtech.material.stellite=Stellite Alloy
+gregtech.material.stellite=Stellite
 gregtech.material.quantum_alloy=Quantum Alloy
 gregtech.material.grisium=Grisium
 gregtech.material.hdcs=High Durability Compound Steel
 gregtech.material.abyssalloy=Abyssal Alloy
+gregtech.material.lafium=Lafium
+gregtech.material.black_titanium=Black Titanium
+gregtech.material.talonite=Talonite
+gregtech.material.black_plutonium=Black Plutonium

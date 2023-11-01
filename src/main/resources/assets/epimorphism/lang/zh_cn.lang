@@ -560,7 +560,7 @@ epimorphism.machine.integrated_ore_factory.mode.0=处理模式：研磨-洗矿-�
 epimorphism.machine.integrated_ore_factory.mode.1=处理模式：研磨-洗矿-研磨-离心
 epimorphism.machine.integrated_ore_factory.mode.2=处理模式：研磨-研磨-离心
 epimorphism.machine.integrated_ore_factory.mode.3=处理模式：研磨-洗矿-筛选
-epimorphism.machine.integrated_ore_factory.mode.4=处理模式：研磨-化学浸洗-打粉-离心
+epimorphism.machine.integrated_ore_factory.mode.4=处理模式：研磨-化学浸洗-研磨-离心
 
 epimorphism.machine.integrated_ore_factory.void.true=石粉销毁已开启
 epimorphism.machine.integrated_ore_factory.void.false=石粉销毁已关闭
