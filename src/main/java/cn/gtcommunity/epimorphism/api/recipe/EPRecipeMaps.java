@@ -26,7 +26,7 @@ public class EPRecipeMaps {
             .setSound(GTSoundEvents.FURNACE);
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_CHAMBER_RECIPES = new RecipeMap<>("vacuum_chamber_recipes", 1, 4, 1, 1, 0, 2, 0, 1, new SimpleRecipeBuilder(), false)
             .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT_ASSEMBLER, ProgressWidget.MoveType.HORIZONTAL)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, ProgressWidget.MoveType.HORIZONTAL)
             .setSound(GTSoundEvents.ASSEMBLER);
 
     //  Multiblocks
