@@ -16,4 +16,7 @@ public class EPGuiTextures {
     public static final TextureArea NANOSCALE_OVERLAY_1 = TextureArea.fullImage("textures/gui/overlay/nanoscale_overlay_1.png");
     public static final TextureArea NANOSCALE_OVERLAY_2 = TextureArea.fullImage("textures/gui/overlay/nanoscale_overlay_2.png");
     public static final TextureArea FOIL_OVERLAY = TextureArea.fullImage("textures/gui/overlay/foil_overlay.png");
+
+    //  Button
+    public static final TextureArea BUTTON_STRUCTURE_SWITCHING = TextureArea.fullImage("textures/gui/widget/button_structure_switching.png");
 }

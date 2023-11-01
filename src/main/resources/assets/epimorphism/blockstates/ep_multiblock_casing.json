@@ -94,10 +94,16 @@
           "all": "epimorphism:blocks/casings/solid/tritanium_casing"
         }
       },
-      "quantum__casing": {
+      "quantum_casing": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/solid/quantum__casing"
+          "all": "epimorphism:blocks/casings/solid/quantum_casing"
+        }
+      },
+      "reflective_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/reflective_casing"
         }
       }
     }
