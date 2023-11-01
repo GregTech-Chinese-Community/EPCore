@@ -55,6 +55,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityFuelRefineFactory FUEL_REFINE_FACTORY;
     public static EPMetaTileEntityHyperReactorMk1 HYPER_REACTOR_MK1;
     public static EPMetaTileEntityHyperReactorMk2 HYPER_REACTOR_MK2;
+    public static EPMetaTileEntityHyperReactorMk3 HYPER_REACTOR_MK3;
 
     //  Range: 12301-13300
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
@@ -106,5 +107,6 @@ public class EPMetaTileEntities {
         FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
         HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(36, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
+        HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
     }
 }
