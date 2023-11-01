@@ -136,6 +136,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         CARBON_ALLOTROPE = this.addItem(107, "carbon_allotrope");
         GRAPHENE_ALIGNED = this.addItem(108, "graphene_aligned");
         BORON_NITRIDE_GRINDER = this.addItem(109, "grinder.boron_nitride");
+        VACUUM_TUBE_COMPONENT = this.addItem(110, "component.vacuum_tube");
 
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");

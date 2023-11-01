@@ -127,6 +127,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MAX;
     public static MetaItem<?>.MetaValueItem CARBON_ALLOTROPE;
     public static MetaItem<?>.MetaValueItem GRAPHENE_ALIGNED;
+    public static MetaItem<?>.MetaValueItem VACUUM_TUBE_COMPONENT;
 
     //  Crystal Components
     public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;
