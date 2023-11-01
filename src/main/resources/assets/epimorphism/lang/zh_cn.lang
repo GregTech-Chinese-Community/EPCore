@@ -277,9 +277,12 @@ tile.ep_multiblock_casing.advanced_aluminium_casing.name=镀层铝制防冻机�
 tile.ep_multiblock_casing.drill_head.name=钻头
 tile.ep_multiblock_casing.naquadria_casing.name=超能硅岩抗辐射机器外壳
 tile.ep_multiblock_casing.hyper_casing.name=超致密黑钚机器外壳
-tile.ep_active_multiblock_casing.hyper_core_mk1.name=超能核心 Mk I
-tile.ep_active_multiblock_casing.hyper_core_mk2.name=超能核心 Mk II
-tile.ep_active_multiblock_casing.hyper_core_mk3.name=超能核心 Mk III
+tile.ep_multiblock_casing.iridium_casing.name=镀铱强化机器外壳
+tile.ep_multiblock_casing.farm_casing.name=富生农场机器外壳
+tile.ep_multiblock_casing.farm_pipe_casing.name=水培管道机械方块
+tile.ep_multiblock_casing.breeding_casing.name=水产养殖机器外壳
+tile.ep_multiblock_casing.tritanium_casing.name=极限强度三钛合金机器外壳
+tile.ep_multiblock_casing.quantum__casing.name=超重量子合金机器外壳
 tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
@@ -287,6 +290,9 @@ tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱
 tile.ep_mill_casing.flotation_casing.name=哈斯特洛依合金-N机器外壳
 tile.ep_mill_casing.flotation_casing_pipe.name=哈斯特洛依合金-N油膜管道外壳
 tile.ep_mill_casing.flotation_casing_gearbox.name=哈斯特洛依合金-N齿轮箱外壳
+tile.ep_active_multiblock_casing.hyper_core_mk1.name=超能核心 Mk I
+tile.ep_active_multiblock_casing.hyper_core_mk2.name=超能核心 Mk II
+tile.ep_active_multiblock_casing.hyper_core_mk3.name=超能核心 Mk III
 tile.ep_active_multiblock_casing.flotation_intake_casing.name=哈斯特洛依合金-N筛选用进气口外壳
 
 #  Glasses
