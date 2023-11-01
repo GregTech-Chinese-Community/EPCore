@@ -9,6 +9,7 @@ import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityCatalystHatch;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityIndustrialMaintenanceHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
@@ -30,6 +31,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityBufferHatch MULTIPART_BUFFER_HATCH;
     public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
     public static EPMetaTileEntityCatalystHatch MULTIPART_CATALYST_HATCH;
+    public static EPMetaTileEntityIndustrialMaintenanceHatch INDUSTRIAL_MAINTENANCE_HATCH;
 
     //  SingleBlock---SimpleMachines Range:301-600
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
@@ -53,8 +55,22 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCryogenicReactor CRYOGENIC_REACTOR;
     public static EPMetaTileEntityMegaAlloyBlastSmelter MEGA_ALLOY_BLAST_SMELTER;
     public static EPMetaTileEntityChemicalPlant CHEMICAL_PLANT;
-
-    //  16-29
+    public static EPMetaTileEntityMegaOilCrackingUnit MEGA_OIL_CRACKING_UNIT;
+    public static EPMetaTileEntityMegaChemicalReactor MEGA_CHEMICAL_REACTOR;
+//    public static EPMetaTileEntityAlgaeFarm ALGAE_FARM;
+    public static EPMetaTileEntityIndustrialFishingPond INDUSTRIAL_FISHING_POND;
+    public static EPMetaTileEntityRoaster ROASTER;
+    public static EPMetaTileEntityIndustrialDrill INDUSTRIAL_DRILL;
+    public static EPMetaTileEntityFracker FRACKER;
+    public static EPMetaTileEntityGeneralProcessingPlant GENERAL_PROCESSING_PLANT;
+    public static EPMetaTileEntityIntegratedOreFactory INTEGRATED_ORE_FACTORY;
+    public static EPMetaTileEntityDissolutionTank DISSOLUTION_TANK;
+    public static EPMetaTileEntityDigester DIGESTER;
+//    public static EPMetaTileEntityBiologicalReactionChamber BIOLOGICAL_REACTION_CHAMBER;
+//    public static EPMetaTileEntityComputingTerminal COMPUTING_TERMINAL;
+//    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
+//    public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
+    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
 
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
@@ -89,6 +105,7 @@ public class EPMetaTileEntities {
         MULTIPART_BUFFER_HATCH = registerSingleMetaTileEntity(1, new EPMetaTileEntityBufferHatch(epId("buffer_hatch")));
         MULTIPART_BALL_HATCH = registerSingleMetaTileEntity(2, new EPMetaTileEntityMillBallHatch(epId("mill_ball_hatch")));
         MULTIPART_CATALYST_HATCH = registerSingleMetaTileEntity(3, new EPMetaTileEntityCatalystHatch(epId("catalyst_hatch")));
+        INDUSTRIAL_MAINTENANCE_HATCH = registerSingleMetaTileEntity(4, new EPMetaTileEntityIndustrialMaintenanceHatch(epId("industrial_maintenance_hatch")));
 
         //  SimpleMachines: Id 12601_12900   15 ids for each machine
         registerSimpleMetaTileEntity(DRYER, 12601, "dryer", EPRecipeMaps.DRYER_RECIPES, EPTextures.DRYER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
@@ -114,14 +131,29 @@ public class EPMetaTileEntities {
         CRYOGENIC_REACTOR = registerMultiMetaTileEntity(13, new EPMetaTileEntityCryogenicReactor(epId("cryogenic_reactor")));
         MEGA_ALLOY_BLAST_SMELTER = registerMultiMetaTileEntity(14, new EPMetaTileEntityMegaAlloyBlastSmelter(epId("mega_alloy_blast_smelter")));
         CHEMICAL_PLANT = registerMultiMetaTileEntity(15, new EPMetaTileEntityChemicalPlant(epId("chemical_plant")));
-        // 16-30
+        MEGA_OIL_CRACKING_UNIT = registerMultiMetaTileEntity(16, new EPMetaTileEntityMegaOilCrackingUnit(epId("mega_oil_cracking_unit")));
+        MEGA_CHEMICAL_REACTOR = registerMultiMetaTileEntity(17, new EPMetaTileEntityMegaChemicalReactor(epId("mega_chemical_reactor")));
+//        ALGAE_FARM = registerMultiMetaTileEntity(18, new EPMetaTileEntityAlgaeFarm(epId("algae_farm")));
+        INDUSTRIAL_FISHING_POND = registerMultiMetaTileEntity(19, new EPMetaTileEntityIndustrialFishingPond(epId("industrial_fishing_pond")));
+        ROASTER = registerMultiMetaTileEntity(20, new EPMetaTileEntityRoaster(epId("roaster")));
+        INDUSTRIAL_DRILL = registerMultiMetaTileEntity(21, new EPMetaTileEntityIndustrialDrill(epId("industrial_drill")));
+        FRACKER = registerMultiMetaTileEntity(22, new EPMetaTileEntityFracker(epId("fracker"), GTValues.ZPM));
+        GENERAL_PROCESSING_PLANT = registerMultiMetaTileEntity(23, new EPMetaTileEntityGeneralProcessingPlant(epId("general_processing_plant")));
+        INTEGRATED_ORE_FACTORY = registerMultiMetaTileEntity(24, new EPMetaTileEntityIntegratedOreFactory(epId("integrated_ore_factory")));
+        DISSOLUTION_TANK = registerMultiMetaTileEntity(25, new EPMetaTileEntityDissolutionTank(epId("dissolution_tank")));
+        DIGESTER = registerMultiMetaTileEntity(26, new EPMetaTileEntityDigester(epId("digester")));
+//        BIOLOGICAL_REACTION_CHAMBER = registerMultiMetaTileEntity(27, new EPMetaTileEntityBiologicalReactionChamber(epId()));
+//        COMPUTING_TERMINAL = registerMultiMetaTileEntity(28, new EPMetaTileEntityComputingTerminal(epId("computing_terminal")));
+//        ELECTRON_CRYOMICROSCOPY = registerMultiMetaTileEntity(29, new EPMetaTileEntityElectronCryomicroscopy(epId()));
+//        COSMIC_RAY_DETECTOR = registerMultiMetaTileEntity(30, new EPMetaTileEntityCosmicRayDetector(epId("cosmic_ray_detector")));
         ION_IMPLANTATER = registerMultiMetaTileEntity(31, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
         LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
-        FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
-        HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(36, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
-        HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
-        HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
+//        PCB_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityPCBFactory(epId("pcb_factory")));
+        FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(36, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
+        HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
+        HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
+        HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(39, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
     }
 }
