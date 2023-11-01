@@ -61,6 +61,44 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/talonite_casing"
         }
+      },
+      "iridium_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/iridium_casing"
+        }
+      },
+      "farm_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/farm_casing"
+        }
+      },
+      "farm_pipe_casing": {
+        "model": "minecraft:cube_bottom_top",
+        "textures": {
+          "top": "epimorphism:blocks/casings/solid/farm_pipe_casing",
+          "side": "epimorphism:blocks/casings/solid/farm_pipe_side_casing",
+          "bottom": "epimorphism:blocks/casings/solid/farm_pipe_casing"
+        }
+      },
+      "breeding_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/breeding_casing"
+        }
+      },
+      "tritanium_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/tritanium_casing"
+        }
+      },
+      "quantum__casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/quantum__casing"
+        }
       }
     }
   }

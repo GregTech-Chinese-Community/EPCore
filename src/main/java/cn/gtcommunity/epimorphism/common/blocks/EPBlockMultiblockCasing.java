@@ -35,8 +35,13 @@ public class EPBlockMultiblockCasing extends VariantBlock<EPBlockMultiblockCasin
         DRILL_HEAD("drill_head"),
         NAQUADRIA_CASING("naquadria_casing"),
         HYPER_CASING("hyper_casing"),
-        TALONITE_CASING("talonite_casing");
-
+        TALONITE_CASING("talonite_casing"),
+        IRIDIUM_CASING("iridium_casing"),
+        FARM_PIPE_CASING("farm_pipe_casing"),
+        FARM_CASING("farm_casing"),
+        BREEDING_CASING("breeding_casing"),
+        TRITANIUM_CASING("tritanium_casing"),
+        QUANTUM__CASING("quantum__casing");
         private final String name;
 
         CasingType(String name) {
