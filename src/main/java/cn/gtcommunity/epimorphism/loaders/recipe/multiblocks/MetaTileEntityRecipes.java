@@ -474,6 +474,8 @@ public class MetaTileEntityRecipes {
                         .EUt(VA[UHV])
                         .duration(64000))
                 .buildAndRegister();
+
+        //  TODO Hyper Reactor Mk II (Require higher fluid pipe and frame...)
     }
 
     private static void GCYMOverrideRecipes() {
