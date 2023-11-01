@@ -70,7 +70,7 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityComputingTerminal COMPUTING_TERMINAL;
 //    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
 //    public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
-    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
+//    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
 
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
