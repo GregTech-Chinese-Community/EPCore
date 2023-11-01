@@ -28,5 +28,4 @@ public class EPEventHandler {
     public void attachChunkPollutionCapability(AttachCapabilitiesEvent<Chunk> event) {
         event.addCapability(new ResourceLocation(Epimorphism.MODID, "pollution_cap"), new PollutionProvider());
     }
-
 }
