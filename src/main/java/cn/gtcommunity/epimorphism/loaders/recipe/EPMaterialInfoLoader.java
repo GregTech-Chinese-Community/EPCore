@@ -53,6 +53,20 @@ public class EPMaterialInfoLoader {
                 new MaterialStack(ChromiumGermaniumTellurideMagnetic, M / 2),
                 new MaterialStack(Vibranium, M * 2)));
 
+        //  UEV Voltage Coil
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(stick, ChromiumGermaniumTellurideMagnetic)
+                .input(wireFine, Seaborgium, 16)
+                .circuitMeta(1)
+                .output(VOLTAGE_COIL_UEV)
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(VOLTAGE_COIL_UEV.getStackForm(), new ItemMaterialInfo (
+                new MaterialStack(ChromiumGermaniumTellurideMagnetic, M / 2),
+                new MaterialStack(Seaborgium, M * 2)));
+
         //  PMMA
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(plate, PMMA, 4)
