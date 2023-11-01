@@ -1,5 +1,8 @@
 package cn.gtcommunity.epimorphism.common.metatileentities;
 
+import cn.gtcommunity.epimorphism.api.metatileentity.single.SimpleSteamMetaTileEntity;
+import cn.gtcommunity.epimorphism.api.metatileentity.single.SteamProgressIndicator;
+import cn.gtcommunity.epimorphism.api.metatileentity.single.SteamProgressIndicators;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
@@ -12,7 +15,10 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
+import gregtech.api.recipes.RecipeMap;
 import gregtech.api.util.GTUtility;
+import gregtech.client.renderer.ICubeRenderer;
+import gregtech.client.renderer.texture.Textures;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 import static gregtech.api.util.GTUtility.*;
@@ -28,6 +34,8 @@ public class EPMetaTileEntities {
     //  SingleBlock---SimpleMachines Range:301-600
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static final SimpleGeneratorMetaTileEntity[] NAQUADAH_REACTOR = new SimpleGeneratorMetaTileEntity[3];
+    public static SimpleSteamMetaTileEntity[] STEAM_VACUUM_CHAMBER = new SimpleSteamMetaTileEntity[2];
+    public static SimpleMachineMetaTileEntity[] VACUUM_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -58,6 +66,11 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityHyperReactorMk3 HYPER_REACTOR_MK3;
 
     //  Range: 12301-13300
+    private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
+        machines[0] = registerMetaTileEntity(startId, new SimpleSteamMetaTileEntity(epId(String.format("%s.bronze", name)), recipeMap, progressIndicator, texture, isBricked, false));
+        machines[1] = registerMetaTileEntity(startId + 1, new SimpleSteamMetaTileEntity(epId(String.format("%s.steel", name)), recipeMap, progressIndicator, texture, isBricked, true));
+    }
+
     private static <F extends MetaTileEntity> F registerSingleMetaTileEntity(int id, F mte) {
         if (id > 1000) return null;
         return registerMetaTileEntity(id + 12300, mte);
@@ -82,6 +95,8 @@ public class EPMetaTileEntities {
         NAQUADAH_REACTOR[0] = registerMetaTileEntity(12614, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.iv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 5, genericGeneratorTankSizeFunction));
         NAQUADAH_REACTOR[1] = registerMetaTileEntity(12615, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.luv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 6, genericGeneratorTankSizeFunction));
         NAQUADAH_REACTOR[2] = registerMetaTileEntity(12616, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.zpm"),  EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 7, genericGeneratorTankSizeFunction));
+        registerSimpleSteamMetaTileEntity(STEAM_VACUUM_CHAMBER, 12617, "vacuum_chamber", EPRecipeMaps.VACUUM_CHAMBER_RECIPES, SteamProgressIndicators.COMPRESS, Textures.GAS_COLLECTOR_OVERLAY, false);
+        registerSimpleMetaTileEntity(VACUUM_CHAMBER, 12619, "vacuum_chamber", EPRecipeMaps.VACUUM_CHAMBER_RECIPES, Textures.GAS_COLLECTOR_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
 
         //Multiblocks: Id 13301-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));

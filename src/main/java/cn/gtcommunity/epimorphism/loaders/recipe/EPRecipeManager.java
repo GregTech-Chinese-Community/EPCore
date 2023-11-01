@@ -68,6 +68,7 @@ public class EPRecipeManager {
     }
 
     public static void initCircuits() {
+        PrimitiveCircuit.init();
         CrystalCircuits.init();
         WetwareCircuits.init();
         GoowareCircuits.init();
