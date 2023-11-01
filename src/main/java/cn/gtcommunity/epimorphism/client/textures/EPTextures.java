@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.client.textures;
 
-import cn.gtcommunity.epimorphism.client.textures.Renderer.IsaMillRenderer;
+import cn.gtcommunity.epimorphism.client.textures.renderer.IsaMillRenderer;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 
 public class EPTextures {
@@ -16,6 +16,9 @@ public class EPTextures {
     public static OrientedOverlayRenderer CRYOGENIC_REACTOR_OVERLAY = new OrientedOverlayRenderer("multiblock/cryogenic_reactor");
     public static OrientedOverlayRenderer VACUUM_DRYING_FURNACE_OVERLAY = new OrientedOverlayRenderer("multiblock/vacuum_drying_furnace");
     public static OrientedOverlayRenderer CHEMICAL_PLANT_OVERLAY = new OrientedOverlayRenderer("multiblock/ep_chemical_plant");
+    public static OrientedOverlayRenderer INDUSTRIAL_DRILL_OVERLAY = new OrientedOverlayRenderer("multiblock/industrial_drill");
+    public static OrientedOverlayRenderer FRACKER_OVERLAY = new OrientedOverlayRenderer("multiblock/fracker");
+    public static OrientedOverlayRenderer ROASTER_OVERLAY = new OrientedOverlayRenderer("multiblock/roaster");
     public static OrientedOverlayRenderer DRYER_OVERLAY = new OrientedOverlayRenderer("machines/dryer");
     public static OrientedOverlayRenderer NAQUADAH_REACTOR_OVERLAY = new OrientedOverlayRenderer("machines/naquadah_reactor");
 
@@ -28,6 +31,9 @@ public class EPTextures {
     public static EPOverlayRenderer NAQUADRIA_CASING = new EPOverlayRenderer("casings/solid/naquadria_casing");
     public static EPOverlayRenderer HYPER_CASING = new EPOverlayRenderer("casings/solid/hyper_casing");
     public static EPOverlayRenderer TALONITE_CASING = new EPOverlayRenderer("casings/solid/talonite_casing");
+    public static EPOverlayRenderer BREEDING_CASING = new EPOverlayRenderer("casings/solid/breeding_casing");
+    public static EPOverlayRenderer FARM_CASING = new EPOverlayRenderer("casings/solid/farm_casing");
+
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");
