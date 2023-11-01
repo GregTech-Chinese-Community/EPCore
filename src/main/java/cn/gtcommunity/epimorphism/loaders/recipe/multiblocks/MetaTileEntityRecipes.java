@@ -186,6 +186,15 @@ public class MetaTileEntityRecipes {
                 'H', CraftingComponent.HULL
         );
 
+        //  Vacuum Chamber recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, VACUUM_CHAMBER,
+                "GCG", "PHP", "GWG",
+                'W', CraftingComponent.CABLE,
+                'C', CraftingComponent.CIRCUIT,
+                'P', CraftingComponent.PUMP,
+                'G', CraftingComponent.GLASS,
+                'H', CraftingComponent.HULL);
+
         //  Naquadah Reactor recipes
         MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
                 "RCR", "FHF", "WCW",
