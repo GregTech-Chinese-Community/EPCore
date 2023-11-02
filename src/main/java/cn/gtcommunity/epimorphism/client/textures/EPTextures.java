@@ -19,6 +19,7 @@ public class EPTextures {
     public static OrientedOverlayRenderer INDUSTRIAL_DRILL_OVERLAY = new OrientedOverlayRenderer("multiblock/industrial_drill");
     public static OrientedOverlayRenderer FRACKER_OVERLAY = new OrientedOverlayRenderer("multiblock/fracker");
     public static OrientedOverlayRenderer ROASTER_OVERLAY = new OrientedOverlayRenderer("multiblock/roaster");
+    public static OrientedOverlayRenderer ALGAE_FARM_OVERLAY = new OrientedOverlayRenderer("multiblock/algae_farm");
     public static OrientedOverlayRenderer DRYER_OVERLAY = new OrientedOverlayRenderer("machines/dryer");
     public static OrientedOverlayRenderer NAQUADAH_REACTOR_OVERLAY = new OrientedOverlayRenderer("machines/naquadah_reactor");
 
@@ -33,6 +34,8 @@ public class EPTextures {
     public static EPOverlayRenderer TALONITE_CASING = new EPOverlayRenderer("casings/solid/talonite_casing");
     public static EPOverlayRenderer BREEDING_CASING = new EPOverlayRenderer("casings/solid/breeding_casing");
     public static EPOverlayRenderer FARM_CASING = new EPOverlayRenderer("casings/solid/farm_casing");
+    public static EPOverlayRenderer QUANTUM_CASING = new EPOverlayRenderer("casings/solid/quantum_casing");
+    public static EPOverlayRenderer MARAGING_STEEL_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/maraging_steel_250_casing");
 
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");

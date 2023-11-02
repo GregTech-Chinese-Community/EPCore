@@ -79,7 +79,7 @@
         "textures": {
           "top": "epimorphism:blocks/casings/solid/farm_pipe_casing",
           "side": "epimorphism:blocks/casings/solid/farm_pipe_side_casing",
-          "bottom": "epimorphism:blocks/casings/solid/farm_pipe_casing"
+          "bottom": "epimorphism:blocks/casings/solid/farm_casing"
         }
       },
       "breeding_casing": {

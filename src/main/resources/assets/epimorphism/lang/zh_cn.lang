@@ -284,6 +284,8 @@ tile.ep_multiblock_casing.breeding_casing.name=水产养殖机器外壳
 tile.ep_multiblock_casing.tritanium_casing.name=极限强度三钛合金机器外壳
 tile.ep_multiblock_casing.quantum_casing.name=超重量子合金机器外壳
 tile.ep_multiblock_casing.reflective_casing.name=抗形变反射面机器外壳
+tile.ep_multiblock_casing_b.maraging_steel_casing.name=高耐久马氏体时效钢250机器外壳
+tile.ep_multiblock_casing_b.general_processing_casing.name=通用加工机械方块
 tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
@@ -576,6 +578,9 @@ epimorphism.multiblock.general_processing_plant.shift_tooltip.3=模式B：20-发
 epimorphism.multiblock.general_processing_plant.shift_tooltip.4=模式C：20-精密激光蚀刻机 21-高压釜 22-流体固化机
 
 epimorphism.machine.integrated_ore_factory.name=集成矿石处理厂
+epimorphism.machine.integrated_ore_factory.tooltip.1=一步完成矿物处理
+epimorphism.machine.integrated_ore_factory.tooltip_shift.1=使用螺丝刀右键控制器以切换处理模式
+epimorphism.machine.integrated_ore_factory.tooltip_shift.2=潜行使用螺丝刀右键控制器以开关石粉销毁
 epimorphism.machine.integrated_ore_factory.mode.0=处理模式：研磨-洗矿-热力离心-研磨
 epimorphism.machine.integrated_ore_factory.mode.1=处理模式：研磨-洗矿-研磨-离心
 epimorphism.machine.integrated_ore_factory.mode.2=处理模式：研磨-研磨-离心
@@ -586,6 +591,7 @@ epimorphism.machine.integrated_ore_factory.void.true=石粉销毁已开启
 epimorphism.machine.integrated_ore_factory.void.false=石粉销毁已关闭
 
 epimorphism.machine.dissolution_tank.name=溶解罐
+epimorphism.machine.dissolution_tank.tooltip.1=物品和流体需要按照配方比例输入
 recipemap.dissolution_tank_recipes.name=均质混合
 
 epimorphism.machine.digester.name=煮解池
