@@ -45,17 +45,18 @@ public class PrimitiveCircuit {
                 'W', new UnificationEntry(wireGtSingle, Lead),
                 'G', GLASS_TUBE.getStackForm());
 
-        //  Vacuum Tube Component + Steel Ring + Copper fine wire -> Vacuum Tube
+        //  Vacuum Tube (ULV): Vacuum Tube Component + Steel Ring + Copper fine wire -> Vacuum Tube
         VACUUM_CHAMBER_RECIPES.recipeBuilder()
                 .inputs(VACUUM_TUBE_COMPONENT.getStackForm())
                 .input(ring, Steel, 2)
                 .input(wireFine, Copper, 4)
-                .fluidInputs(Glue.getFluid(500))
+                .fluidInputs(Glue.getFluid(200))
                 .outputs(VACUUM_TUBE.getStackForm())
                 .EUt(8)
                 .duration(400)
                 .buildAndRegister();
 
+        //  Vacuum Tube (LV): Vacuum Tube Component + Copper fine wire -> Vacuum Tube
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(VACUUM_TUBE_COMPONENT.getStackForm())
                 .input(wireFine, Copper, 4)
