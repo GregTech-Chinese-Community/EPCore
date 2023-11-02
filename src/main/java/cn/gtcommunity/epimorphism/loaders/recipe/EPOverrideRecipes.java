@@ -68,6 +68,23 @@ public class EPOverrideRecipes {
                 'C', new UnificationEntry(plateCurved, Gold),
                 'R', new UnificationEntry(bolt, RedAlloy));
 
+        //  Fishing Rod
+        ModHandler.removeRecipeByName("minecraft:fishing_rod");
+        ModHandler.addShapedRecipe("fishing_rod", new ItemStack(Items.FISHING_ROD),
+                "  R", " RS", "R I",
+                'R', new UnificationEntry(stickLong, Wood),
+                'S', "string",
+                'I', new UnificationEntry(ring, Iron));
+
+        //  Shears
+        ModHandler.removeRecipeByName("minecraft:shears");
+        ModHandler.addShapedRecipe("shears", new ItemStack(Items.SHEARS),
+                "PSP", "hRf", "XsX",
+                'P', new UnificationEntry(plate, Iron),
+                'S', new UnificationEntry(screw, Iron),
+                'R', new UnificationEntry(ring, Iron),
+                'X', new UnificationEntry(stick, Wood));
+
         //  Tool Override Recipe
         Collection<Material> list = MaterialRegistryManager.getInstance().getRegisteredMaterials();
         for (Material material : list) {

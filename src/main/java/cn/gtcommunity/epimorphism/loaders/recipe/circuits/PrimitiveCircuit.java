@@ -10,6 +10,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
+import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -28,11 +29,13 @@ public class PrimitiveCircuit {
                 new FluidStack[]{RedAlloy.getFluid(18)});
 
         //  ULV Glue recipe
-        EXTRACTOR_RECIPES.recipeBuilder()
-                .input(STICKY_RESIN)
-                .fluidOutputs(Glue.getFluid(100))
+        VACUUM_CHAMBER_RECIPES.recipeBuilder()
+                .input(STICKY_RESIN, 4)
+                .notConsumable(stickLong, Iron)
+                .fluidInputs(Water.getFluid(1000))
+                .fluidOutputs(Glue.getFluid(200))
                 .EUt(8)
-                .duration(400)
+                .duration(1200)
                 .buildAndRegister();
 
         //  Glass Tube -> Vacuum Tube Component
@@ -50,7 +53,15 @@ public class PrimitiveCircuit {
                 .fluidInputs(Glue.getFluid(500))
                 .outputs(VACUUM_TUBE.getStackForm())
                 .EUt(8)
-                .duration(600)
+                .duration(400)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(VACUUM_TUBE_COMPONENT.getStackForm())
+                .input(wireFine, Copper, 4)
+                .outputs(VACUUM_TUBE.getStackForm(2))
+                .EUt(VA[LV])
+                .duration(120)
                 .buildAndRegister();
     }
 }
