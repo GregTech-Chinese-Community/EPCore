@@ -18,15 +18,17 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.fluids.IFluidTank;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class EPMetaTileEntityDissolutionTank extends RecipeMapMultiblockController {
@@ -98,16 +100,20 @@ public class EPMetaTileEntityDissolutionTank extends RecipeMapMultiblockControll
                 .aisle("     ", "MNNNM", "G###G", "G###G", "MMMMM")
                 .aisle("M   M", "MMSMM", "MGGGM", "MGGGM", " MMM ")
                 .where('S', selfPredicate())
-                .where('M', states(getCasingState()).or(autoAbilities()))
+                .where('M', states(getCasingAState()).or(autoAbilities()))
                 .where('G', states(getGlassState()))
-                .where('N', states(getCasingState()))
+                .where('N', states(getCasingBState()))
                 .where('#', air())
                 .where(' ', any())
                 .build();
     }
 
-    private static IBlockState getCasingState() {
+    private static IBlockState getCasingAState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
+    }
+
+    private static IBlockState getCasingBState() {
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF);
     }
 
     private static IBlockState getGlassState() {
@@ -125,5 +131,11 @@ public class EPMetaTileEntityDissolutionTank extends RecipeMapMultiblockControll
     @Override
     protected ICubeRenderer getFrontOverlay() {
         return EPTextures.CVD_UNIT_OVERLAY;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World world, @Nonnull List<String> tooltip, boolean advanced) {
+        super.addInformation(stack, world, tooltip, advanced);
+        tooltip.add(I18n.format("epimorphism.machine.dissolution_tank.tooltip.1"));
     }
 }

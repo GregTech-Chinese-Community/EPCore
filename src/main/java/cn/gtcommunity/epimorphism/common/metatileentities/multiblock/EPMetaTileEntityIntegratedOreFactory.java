@@ -3,13 +3,13 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 import cn.gtcommunity.epimorphism.api.capability.impl.OreProcessingLogic;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import codechicken.lib.raytracer.CuboidRayTraceResult;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import com.google.common.collect.Lists;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import gregtech.api.GTValues;
 import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IEnergyContainer;
@@ -34,6 +34,7 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.*;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -50,6 +51,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandlerModifiable;
+import org.lwjgl.input.Keyboard;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -232,7 +234,7 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
     }
 
     private static IBlockState getCasingAState() {
-        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.HIGH_TEMPERATURE_CASING);
+        return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.IRIDIUM_CASING);
     }
     private static IBlockState getCasingBState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
@@ -247,7 +249,7 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
         return MetaBlocks.FRAMES.get(TungstenSteel).getBlock(TungstenSteel);
     }
     private static IBlockState getGearBoxState() {
-        return MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TUNGSTENSTEEL_GEARBOX);
+        return MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STEEL_GEARBOX);
     }
 
     @SideOnly(Side.CLIENT)
@@ -316,6 +318,13 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, world, tooltip, advanced);
+        tooltip.add(I18n.format("epimorphism.machine.integrated_ore_factory.tooltip.1"));
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+            tooltip.add(I18n.format("epimorphism.machine.integrated_ore_factory.tooltip_shift.1"));
+            tooltip.add(I18n.format("epimorphism.machine.integrated_ore_factory.tooltip_shift.2"));
+        }else {
+            tooltip.add(I18n.format("gregtech.tooltip.hold_shift"));
+        }
     }
 
     @Override

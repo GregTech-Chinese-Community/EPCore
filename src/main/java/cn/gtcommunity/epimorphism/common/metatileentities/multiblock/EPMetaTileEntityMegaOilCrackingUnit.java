@@ -106,27 +106,27 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                 .aisle(
                         "CCCCCCCCCCCCC",
                         " GALALALALAG ",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
-                        " CGGGCCCGGGC "
-                )
-                .aisle(
-                        "CCCCCCCCCCCCC",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
-                        " GALALALALAG ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
                         " GALALALALAG ",
                         " CGGGCCCGGGC "
                 )
                 .aisle(
                         "CCCCCCCCCCCCC",
                         " GALALALALAG ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
                         " GALALALALAG ",
+                        " CGGGCCCGGGC "
+                )
+                .aisle(
+                        "CCCCCCCCCCCCC",
                         " GALALALALAG ",
-                        " GALALALALAG ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
+                        " EALALALALAD ",
                         " GALALALALAG ",
                         " CGGGCCCGGGC "
                 )
@@ -161,6 +161,8 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                 .where('C', states(getCasingState()).or(autoAbilities()))
                 .where('G', EPTraceabilityPredicate.EP_GLASS.get())
                 .where('L', TraceabilityPredicate.HEATING_COILS.get())
+                .where('D', states(getCasingState()))
+                .where('E', states(getCasingState()))
                 .where(' ', any())
                 .where('A', air())
                 .build();

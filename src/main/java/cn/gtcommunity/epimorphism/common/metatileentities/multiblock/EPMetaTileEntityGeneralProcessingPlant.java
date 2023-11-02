@@ -3,11 +3,11 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.IIndustrialMaintenance;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
+import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregicality.multiblocks.api.render.GCYMTextures;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import gregtech.api.GTValues;
 import gregtech.api.capability.IMaintenanceHatch;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
@@ -109,11 +109,11 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
                 .aisle(" CCSCC ", "       ", "       ", "       ", "       ", "       ")
                 .where('S', selfPredicate())
                 .where('C', autoAbilities(false, false, true, true, true, true, false))
-                .where('G', states(getCasingState()))
+                .where('G', states(getCasingAState()))
                 .where('M', abilities(EPMultiblockAbilities.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY))
-                .where('E',states(getCasingState()).or(abilities(MultiblockAbility.INPUT_ENERGY)))
+                .where('E',states(getCasingAState()).or(abilities(MultiblockAbility.INPUT_ENERGY)))
                 .where('B', states(getGearBoxState()))
-                .where('P', states(getBoilerState()))
+                .where('P', states(getCasingBState()))
                 .where('L', states(getSubstrateState()))
                 .where('T', states(getGlassState()))
                 .where('F', states(getFrameState()))
@@ -121,12 +121,12 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
 
     }
 
-    private static IBlockState getCasingState() {
-        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.STEAM_CASING);
+    private static IBlockState getCasingAState() {
+        return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.MARAGING_STEEL_CASING);
     }
 
-    private static IBlockState getBoilerState() {
-        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE);
+    private static IBlockState getCasingBState() {
+        return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.GENERAL_PROCESSING_CASING);
     }
 
     private static IBlockState getGlassState() {
@@ -147,7 +147,7 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
 
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
-        return GCYMTextures.STEAM_CASING;
+        return EPTextures.MARAGING_STEEL_CASING;
     }
 
     @SideOnly(Side.CLIENT)
