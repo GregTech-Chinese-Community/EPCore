@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.api.cover;
+package cn.gtcommunity.epimorphism.common.covers;
 
 import cn.gtcommunity.epimorphism.Epimorphism;
 import gregtech.api.GTValues;

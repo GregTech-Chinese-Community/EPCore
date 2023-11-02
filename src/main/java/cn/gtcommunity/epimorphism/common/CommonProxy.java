@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common;
 
-import cn.gtcommunity.epimorphism.api.cover.EPCoverBehavior;
+import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
