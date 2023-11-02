@@ -125,7 +125,7 @@ public class OpticalCircuits {
                 .output(DIELECTRIC_MIRROR)
                 .duration(600)
                 .EUt(VA[LuV])
-                .temperature(2520)
+                .temperature(2820)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
