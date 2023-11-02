@@ -92,7 +92,7 @@ public class BoronChain {
                 .output(dust, CoACABCatalyst)
                 .EUt(VA[UHV])
                 .duration(240)
-                .temperature(688)
+                .temperature(2688)
                 .buildAndRegister();
     }
 }

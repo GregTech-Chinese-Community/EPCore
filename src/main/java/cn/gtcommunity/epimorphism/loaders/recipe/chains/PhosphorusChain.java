@@ -59,7 +59,7 @@ public class PhosphorusChain {
                 .output(dust, BluePhosphorus)
                 .duration(100)
                 .EUt(VA[ZPM])
-                .temperature(1488)
+                .temperature(3188)
                 .buildAndRegister();
 
         //  Sodium Hydroxide + Black Phosphorus + Distilled Water + N-Methyl Pyrrolidone -> Phosphorene Solution

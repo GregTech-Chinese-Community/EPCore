@@ -40,7 +40,7 @@ public class CasingTierProperty extends RecipeProperty<Integer> {
             throw new IllegalArgumentException("Tier is above registered maximum Casing Tier.");
         }
 
-        return String.format(" - %s", mapEntry.getValue());
+        return String.format("%s", mapEntry.getValue());
     }
 
     public static void registerCasingTier(int tier, String shortName) {

@@ -154,6 +154,7 @@ public class SpintronicCircuits {
                 .output(dust, BismuthChalcogenide, 5)
                 .duration(80)
                 .EUt(VA[UV])
+                .temperature(4876)
                 .buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()

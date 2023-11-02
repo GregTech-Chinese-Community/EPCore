@@ -14,6 +14,7 @@ import gregtech.api.cover.CoverDefinition;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.loaders.recipe.CraftingComponent;
 import net.minecraft.block.Block;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.crafting.IRecipe;
@@ -87,11 +88,11 @@ public class CommonProxy {
         FusionEUToStartProperty.registerFusionTier(9, "(MK4)");
         FusionEUToStartProperty.registerFusionTier(10, "(MK5)");
         FusionEUToStartProperty.registerFusionTier(11, "(MK6)");
-        CasingTierProperty.registerCasingTier(1, "A");
-        CasingTierProperty.registerCasingTier(2, "B");
-        CasingTierProperty.registerCasingTier(3, "C");
-        CasingTierProperty.registerCasingTier(4, "D");
-        CasingTierProperty.registerCasingTier(5, "E");
+        CasingTierProperty.registerCasingTier(1, I18n.format("epimorphism.recipe.casing_tier.1"));
+        CasingTierProperty.registerCasingTier(2, I18n.format("epimorphism.recipe.casing_tier.2"));
+        CasingTierProperty.registerCasingTier(3, I18n.format("epimorphism.recipe.casing_tier.3"));
+        CasingTierProperty.registerCasingTier(4, I18n.format("epimorphism.recipe.casing_tier.4"));
+        CasingTierProperty.registerCasingTier(5, I18n.format("epimorphism.recipe.casing_tier.5"));
         FormulaManager.init();
         EPRecipeManager.init();
     }
