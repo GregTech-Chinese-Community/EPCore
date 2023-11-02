@@ -18,7 +18,7 @@ public class MaterialComponents {
     public static void init() {
         WIRE_ELECTRIC.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
-//                {10, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
+                {10, new UnificationEntry(OrePrefix.wireGtSingle, Adamantium)},
 //                {11, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
@@ -155,7 +155,7 @@ public class MaterialComponents {
         COIL_HEATING.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
                 {10, new UnificationEntry(OrePrefix.wireGtDouble, Tritanium)},
-//                {11, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
+                {11, new UnificationEntry(OrePrefix.wireGtDouble, Adamantium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -163,7 +163,7 @@ public class MaterialComponents {
         COIL_HEATING_DOUBLE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
                 {10, new UnificationEntry(OrePrefix.wireGtQuadruple, Tritanium)},
-//                {11, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
+                {11, new UnificationEntry(OrePrefix.wireGtDouble, Adamantium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtDouble, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -188,7 +188,7 @@ public class MaterialComponents {
         STICK_DISTILLATION.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.spring, Trinium)},
                 {10, new UnificationEntry(OrePrefix.spring, Tritanium)},
-//                {11, new UnificationEntry(OrePrefix.spring, Trinium)},
+                {11, new UnificationEntry(OrePrefix.spring, Adamantium)},
 //                {12, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.spring, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -206,9 +206,8 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         STICK_RADIOACTIVE.appendIngredients(Stream.of(new Object[][]{
-//                {9, new UnificationEntry(OrePrefix.stick, Trinium)},
-//                {9, new UnificationEntry(OrePrefix.stick, Trinium)},
-//                {10, new UnificationEntry(OrePrefix.stick, Trinium)},
+                {9, new UnificationEntry(OrePrefix.stick, Dubnium)},
+                {10, new UnificationEntry(OrePrefix.stick, Livermorium)},
 //                {11, new UnificationEntry(OrePrefix.stick, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.stick, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.stick, Trinium)},
@@ -243,7 +242,7 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         SPRING.appendIngredients(Stream.of(new Object[][]{
-                  {10, new UnificationEntry(OrePrefix.spring, PedotTMA)},
+                {10, new UnificationEntry(OrePrefix.spring, PedotTMA)},
 //                {11, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.spring, Trinium)},

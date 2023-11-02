@@ -68,9 +68,10 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xFF0040)
                 .iconSet(METALLIC)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROUND)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROUND, GENERATE_SPRING)
                 .element(EPElements.Adamantium)
                 .blastTemp(5225, BlastProperty.GasTier.HIGH)
+                .cableProperties(VA[UHV], 18, 9, false)
                 .build();
         Taranium = new Material.Builder(26006, gregtechId("taranium"))
                 .ingot()
