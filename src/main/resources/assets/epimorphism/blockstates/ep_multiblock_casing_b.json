@@ -1,0 +1,19 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "variant": {
+      "general_processing_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/general_processing_casing"
+        }
+      },
+      "maraging_steel_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/maraging_steel_250_casing"
+        }
+      }
+    }
+  }
+}
