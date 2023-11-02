@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
+import cn.gtcommunity.epimorphism.api.recipe.properties.NoCoilTemperatureProperty;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
@@ -17,7 +18,6 @@ import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.*;
 import gregtech.api.recipes.Recipe;
-import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.BlockInfo;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
@@ -206,7 +206,7 @@ public class EPMetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockCont
 
         @Override
         public boolean checkRecipe(@Nonnull Recipe recipe) {
-            int delta = temperature - recipe.getProperty(TemperatureProperty.getInstance(), 0);
+            int delta = temperature - recipe.getProperty(NoCoilTemperatureProperty.getInstance(), 0);
             return (delta > 0 && delta < 250);
         }
     }

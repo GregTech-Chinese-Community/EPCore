@@ -35,6 +35,7 @@ public class EPTextures {
     public static EPOverlayRenderer BREEDING_CASING = new EPOverlayRenderer("casings/solid/breeding_casing");
     public static EPOverlayRenderer FARM_CASING = new EPOverlayRenderer("casings/solid/farm_casing");
     public static EPOverlayRenderer QUANTUM_CASING = new EPOverlayRenderer("casings/solid/quantum_casing");
+    public static EPOverlayRenderer IRIDIUM_CASING = new EPOverlayRenderer("casings/solid/iridium_casing");
     public static EPOverlayRenderer MARAGING_STEEL_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/maraging_steel_250_casing");
 
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
