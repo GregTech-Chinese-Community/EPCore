@@ -21,14 +21,14 @@ import java.util.concurrent.Callable;
         modid = "epimorphism",
         name = "Epimorphism",
         acceptedMinecraftVersions = "[1.12.2,1.13)",
-        version = "0.0.1-beta",
+        version = "0.0.2-alpha",
         dependencies = "required-after:gcym"
 )
 public class Epimorphism {
 
     public static final String MODID = "epimorphism";
     public static final String NAME = "Epimorphism";
-    public static final String VERSION = "0.0.1-beta";
+    public static final String VERSION = "0.0.2-alpha";
 
     @SidedProxy(
             modId = MODID,
