@@ -35,6 +35,7 @@ public class EPRecipeManager {
         BZMediumChain.init();
         CaesiumRubidiumChain.init();
         CalciumChain.init();
+        ChlorineChain.init();
         CarbonNanotubeChain.init();
         CyanogenChain.init();
         EDTAChain.init();
@@ -52,6 +53,7 @@ public class EPRecipeManager {
         MagnetoResonaticChain.init();
         MolybdenumRheniumChain.init();
         NaquadahChain.init();
+        NdYAGChain.init();
         NiobiumTantalumChain.init();
         PEDOTChain.init();
         PEEKChain.init();

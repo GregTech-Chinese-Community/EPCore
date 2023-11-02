@@ -156,6 +156,14 @@ public class EPMetaItem1 extends StandardMetaItem {
         EMITTER_ULV = this.addItem(205, "cover.emitter.ulv");
         SENSOR_ULV = this.addItem(206, "cover.sensor.ulv");
         FIELD_GENERATOR_ULV = this.addItem(207, "cover.field_generator.ulv");
+        ELECTRIC_MOTOR_MAX = this.addItem(208, "cover.electric_motor.max");
+        ELECTRIC_PISTON_MAX = this.addItem(209, "cover.electric_piston.max");
+        ELECTRIC_PUMP_MAX = this.addItem(210, "cover.electric_pump.max");
+        CONVEYOR_MODULE_MAX = this.addItem(211, "cover.conveyor_module.max");
+        ROBOT_ARM_MAX = this.addItem(212, "cover.robot_arm.max");
+        EMITTER_MAX = this.addItem(213, "cover.emitter.max");
+        SENSOR_MAX = this.addItem(214, "cover.sensor.max");
+        FIELD_GENERATOR_MAX = this.addItem(215, "cover.field_generator.max");
 
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");

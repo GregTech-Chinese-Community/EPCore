@@ -346,6 +346,18 @@ metaitem.cover.emitter.ulv.name=发射器（ULV）
 metaitem.cover.sensor.ulv.name=传感器（ULV）
 metaitem.cover.field_generator.ulv.name=力场发生器（ULV）
 
+metaitem.cover.electric_motor.max.name=电动马达（MAX）
+metaitem.cover.electric_piston.max.name=电力活塞（MAX）
+metaitem.cover.electric_pump.max.name=电动泵（MAX）
+metaitem.cover.electric_pump.max.tooltip=作§f覆盖板§7时以特定速率传输§f流体§7。/n§b传输速率:§f1048576 L/t§7
+metaitem.cover.conveyor_module.max.name=传送带（MAX）
+metaitem.cover.conveyor_module.max.tooltip=作§f覆盖板§7时以特定速率传输§f物品§7。/n§b传输速率:§f16 组物品/s§7
+metaitem.cover.robot_arm.max.name=机械臂（MAX）
+metaitem.cover.robot_arm.max.tooltip=作§f覆盖板§7时对§f物品§7的量加以限制。/n§b传输速率:§f16 组物品/s§7
+metaitem.cover.emitter.max.name=发射器（MAX）
+metaitem.cover.sensor.max.name=传感器（MAX）
+metaitem.cover.field_generator.max.name=力场发生器（MAX）
+
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s
@@ -833,6 +845,17 @@ gregtech.material.erbium_oxide=氧化铒
 gregtech.material.thulium_oxide=氧化铥
 gregtech.material.ytterbium_oxide=氧化镱
 gregtech.material.lutetium_oxide=氧化镥
+gregtech.material.manganese_sulfate=硫酸锰
+gregtech.material.potassium_sulfate=硫酸钾
+gregtech.material.ammonium_cyanate=氰酸铵
+gregtech.material.carbamide=碳酰胺
+gregtech.material.neodymium_doped_yttrium_oxide=钕掺杂的氧化钇粉
+gregtech.material.alumina_solution=三氧化二铝溶液
+gregtech.material.crude_alumina_solution=粗制三氧化二铝溶液
+gregtech.material.carbon_tetrachloride=四氯化碳
+gregtech.material.aluminium_nitrate=硝酸铝
+gregtech.material.unprocessed_nd_yag_solution=未处理铝掺杂的钇铝榴石溶液
+gregtech.material.nd_yag=铝掺杂的钇铝榴石
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -943,6 +966,8 @@ gregtech.material.formic_acid=甲酸
 gregtech.material.sodium_formate=甲酸钠
 gregtech.material.ethylhexanol=2-乙基己醇
 gregtech.material.diethylhexyl_phosphoric_acid=二-(2-乙基己基)磷酸
+gregtech.material.dichloromethane=二氯甲烷
+gregtech.material.tributylamine=三丁胺
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -1009,6 +1034,7 @@ gregtech.material.la_pr_nd_ce_oxides_solution=镧-镨-钕-铈氧化物溶液
 gregtech.material.sc_eu_gd_sm_oxides_solution=钪-铕-钆-钐氧化物溶液
 gregtech.material.y_tb_dy_ho_oxides_solution=钇-铽-镝-钬氧化物溶液
 gregtech.material.er_tm_yb_lu_oxides_solution=铒-铥-镱-镥氧化物溶液
+gregtech.material.chlorinated_solvents=有机氯溶液
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

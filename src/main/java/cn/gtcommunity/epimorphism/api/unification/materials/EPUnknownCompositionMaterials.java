@@ -370,5 +370,12 @@ public class EPUnknownCompositionMaterials {
                 .flags(DECOMPOSITION_BY_CENTRIFUGING)
                 .components(ErbiumOxide, 1, ThuliumOxide, 1, YtterbiumOxide, 1, LutetiumOxide, 1)
                 .build();
+        //  25265 Chlorinated Solvents
+        ChlorinatedSolvents = new Material.Builder(25265, gregtechId("chlorinated_solvents"))
+                .fluid()
+                .color(0x40804c)
+                .build()
+                .setFormula("(CH4)2Cl5", true);
+
     }
 }
