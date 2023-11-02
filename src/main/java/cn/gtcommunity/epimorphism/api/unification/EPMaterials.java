@@ -210,6 +210,17 @@ public EPMaterials() {}
     public static Material ThuliumOxide;
     public static Material YtterbiumOxide;
     public static Material LutetiumOxide;
+    public static Material ManganeseSulfate;
+    public static Material PotassiumSulfate;
+    public static Material AmmoniumCyanate;
+    public static Material Carbamide;
+    public static Material NeodymiumDopedYttriumOxide;
+    public static Material AluminaSolution;
+    public static Material CrudeAluminaSolution;
+    public static Material CarbonTetrachloride;
+    public static Material AluminiumNitrate;
+    public static Material UnprocessedNdYAGSolution;
+    public static Material NdYAG;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -319,6 +330,8 @@ public EPMaterials() {}
     public static Material SodiumFormate;
     public static Material Ethylhexanol;
     public static Material DiethylhexylPhosphoricAcid;
+    public static Material Dichloromethane;
+    public static Material Tributylamine;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -385,6 +398,7 @@ public EPMaterials() {}
     public static Material ScEuGdSmOxidesSolution;
     public static Material YTbDyHoOxidesSolution;
     public static Material ErTmYbLuOxidesSolution;
+    public static Material ChlorinatedSolvents;
 
     //  Machine Casing Materials
     public static Material Inconel625;

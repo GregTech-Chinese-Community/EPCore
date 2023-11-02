@@ -192,7 +192,16 @@ public class OpticalCircuits {
                 .buildAndRegister();
 
         //  TODO Helium-Neon Laser
-        //  TODO Nd:YAG Laser
+
+        //  Nd:YAG Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .input(gem, NdYAG)
+                .output(ND_YAG_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
 
         //  Optical SMDs
         ASSEMBLER_RECIPES.recipeBuilder()

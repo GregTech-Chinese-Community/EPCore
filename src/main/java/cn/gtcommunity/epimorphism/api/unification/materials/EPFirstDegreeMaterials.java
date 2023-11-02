@@ -1452,5 +1452,82 @@ public class EPFirstDegreeMaterials {
                 .iconSet(METALLIC)
                 .components(Lutetium, 2, Oxygen, 3)
                 .build();
+        //  24193 Manganese Sulfate
+        ManganeseSulfate = new Material.Builder(24193, gregtechId("manganese_sulfate"))
+                .dust()
+                .color(0xF0F895)
+                .iconSet(ROUGH)
+                .components(Manganese, 1, Sulfur, 1, Oxygen, 4)
+                .build();
+        //  24194 Potassium Sulfate
+        PotassiumSulfate = new Material.Builder(24194, gregtechId("potassium_sulfate"))
+                .dust()
+                .color(0xF4FBB0)
+                .iconSet(DULL)
+                .components(Potassium, 2, Sulfur, 1, Oxygen, 4)
+                .build();
+        //  24195 Ammonium Cyanate
+        AmmoniumCyanate = new Material.Builder(24195, gregtechId("ammonium_cyanate"))
+                .fluid()
+                .color(0x3a5dcf)
+                .components(Hydrogen, 4, Nitrogen, 2, Carbon, 1, Oxygen, 1)
+                .build()
+                .setFormula("NH4CNO", true);
+        //  24196 Carbamide
+        Carbamide = new Material.Builder(24196, gregtechId("carbamide"))
+                .dust()
+                .color(0x16EF57)
+                .iconSet(ROUGH)
+                .components(Carbon, 1, Hydrogen, 4, Nitrogen, 2, Oxygen, 1)
+                .build();
+        //  24197 Neodymium-Doped Yttrium Oxide
+        NeodymiumDopedYttriumOxide = new Material.Builder(24197, gregtechId("neodymium_doped_yttrium_oxide"))
+                .dust()
+                .color(0x5AD55F)
+                .iconSet(DULL)
+                .build()
+                .setFormula("Nd:Y?", false);
+        //  24198 Alumina Solution
+        AluminaSolution = new Material.Builder(24198, gregtechId("alumina_solution"))
+                .fluid()
+                .color(0x6C4DC1)
+                .build()
+                .setFormula("(Al2O3)(CH2Cl2)(C12H27N)2", true);
+        //  24199 Crude Alumina Solution
+        CrudeAluminaSolution = new Material.Builder(24199, gregtechId("crude_alumina_solution"))
+                .fluid()
+                .color(0x8974C1)
+                .build()
+                .setFormula("(Al(NO3)3)2(CH2Cl2)(C12H27N)", true);
+        //  24200 Carbon Tetrachloride
+        CarbonTetrachloride = new Material.Builder(24200, gregtechId("carbon_tetrachloride"))
+                .fluid()
+                .color(0x2d8020)
+                .components(Carbon, 1, Chlorine, 4)
+                .build();
+        //  24201 Aluminium Nitrate
+        AluminiumNitrate = new Material.Builder(24201, gregtechId("aluminium_nitrate"))
+                .dust()
+                .color(0x3AB3AA)
+                .iconSet(SHINY)
+                .components(Aluminium, 1, Nitrogen, 3, Oxygen, 9)
+                .build()
+                .setFormula("Al(NO3)3", true);
+        //  24202 Unprocessed Nd:YAG Solution
+        UnprocessedNdYAGSolution = new Material.Builder(24202, gregtechId("unprocessed_nd_yag_solution"))
+                .fluid()
+                .color(0x6f20af)
+                .iconSet(DULL)
+                .build()
+                .setFormula("Nd:YAG", false);
+        //  24203 Nd:YAG
+        NdYAG = new Material.Builder(24203, gregtechId("nd_yag"))
+                .gem()
+                .color(0xD99DE4)
+                .iconSet(GEM_VERTICAL)
+                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING)
+                .components(YttriumOxide, 2, NeodymiumOxide, 1, Alumina, 5)
+                .build()
+                .setFormula("NdY2Al5O12", true);
     }
 }

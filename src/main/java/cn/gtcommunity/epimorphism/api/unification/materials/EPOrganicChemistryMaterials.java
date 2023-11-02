@@ -770,5 +770,18 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 16, Hydrogen, 35, Oxygen, 4, Phosphorus, 1)
                 .build()
                 .setFormula("(C8H7O)2PO2H", true);
+        //  25103 Dichloromethane
+        Dichloromethane = new Material.Builder(25103, gregtechId("dichloromethane"))
+                .fluid()
+                .color(0xB87FC7)
+                .components(Carbon, 1, Hydrogen, 2, Chlorine, 2)
+                .build();
+        //  25104 Tributylamine
+        Tributylamine = new Material.Builder(25104, gregtechId("tributylamine"))
+                .fluid()
+                .color(0x801a80)
+                .components(Carbon, 12, Hydrogen, 27, Nitrogen, 1)
+                .build()
+                .setFormula("(C4H9)3N", true);
     }
 }

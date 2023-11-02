@@ -29,5 +29,16 @@ public class CatalyticReformerRecipes {
                 .duration(120)
                 .EUt(VA[MV])
                 .buildAndRegister();
+
+        CATALYTIC_REFORMER_RECIPES.recipeBuilder()
+                .notConsumable(plate, Palladium)
+                .fluidInputs(ChlorinatedSolvents.getFluid(14000))
+                .fluidOutputs(Chloromethane.getFluid(1330))
+                .fluidOutputs(Dichloromethane.getFluid(2170))
+                .fluidOutputs(Chloroform.getFluid(2170))
+                .fluidOutputs(CarbonTetrachloride.getFluid(1330))
+                .duration(360)
+                .EUt(VA[EV])
+                .buildAndRegister();
     }
 }
