@@ -11,10 +11,7 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import com.google.common.collect.Lists;
 import gregtech.api.GTValues;
-import gregtech.api.capability.GregtechTileCapabilities;
-import gregtech.api.capability.IEnergyContainer;
-import gregtech.api.capability.IMultipleTankHandler;
-import gregtech.api.capability.IWorkable;
+import gregtech.api.capability.*;
 import gregtech.api.capability.impl.EnergyContainerList;
 import gregtech.api.capability.impl.FluidTankList;
 import gregtech.api.capability.impl.ItemHandlerList;
@@ -33,6 +30,8 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.*;
+import gregtech.common.metatileentities.multi.multiblockpart.*;
+import gregtech.common.metatileentities.multi.multiblockpart.appeng.MetaTileEntityMEInputBus;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
@@ -255,7 +254,15 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        if ((iMultiblockPart instanceof MetaTileEntityItemBus && ((MetaTileEntityItemBus)iMultiblockPart).getExportItems().getSlots() == 0)
+                || iMultiblockPart instanceof MetaTileEntityMEInputBus
+                || iMultiblockPart instanceof MetaTileEntityEnergyHatch
+                || iMultiblockPart instanceof IMaintenanceHatch
+        ) {
+            return EPTextures.IRIDIUM_CASING;
+        } else {
+            return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        }
     }
 
     @SideOnly(Side.CLIENT)
