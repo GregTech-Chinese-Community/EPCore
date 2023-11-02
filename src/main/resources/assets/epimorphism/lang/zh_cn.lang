@@ -331,6 +331,19 @@ metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 metaitem.grinder.boron_nitride.name=氮化硼磨头
 metaitem.component.vacuum_tube.name=真空管组件
 
+#  Covers
+metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
+metaitem.cover.electric_piston.ulv.name=电力活塞（ULV）
+metaitem.cover.electric_pump.ulv.name=电动泵（ULV）
+metaitem.cover.electric_pump.ulv.tooltip=作§f覆盖板§7时以特定速率传输§f流体§7。/n§b传输速率:§f32 L/t§7
+metaitem.cover.conveyor_module.ulv.name=传送带（ULV）
+metaitem.cover.conveyor_module.ulv.tooltip=作§f覆盖板§7时以特定速率传输§f物品§7。/n§b传输速率:§f4 件物品/s§7
+metaitem.cover.robot_arm.ulv.name=机械臂（ULV）
+metaitem.cover.robot_arm.ulv.tooltip=作§f覆盖板§7时对§f物品§7的量加以限制。/n§b传输速率:§f4 件物品/s§7
+metaitem.cover.emitter.ulv.name=发射器（ULV）
+metaitem.cover.sensor.ulv.name=传感器（ULV）
+metaitem.cover.field_generator.ulv.name=力场发生器（ULV）
+
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s

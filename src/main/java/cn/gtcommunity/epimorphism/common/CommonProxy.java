@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common;
 
+import cn.gtcommunity.epimorphism.api.cover.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
@@ -9,6 +10,7 @@ import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
 import cn.gtcommunity.epimorphism.loaders.recipe.handlers.EPRecipeHandlerList;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.cover.CoverDefinition;
 import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.loaders.recipe.CraftingComponent;
 import net.minecraft.block.Block;
@@ -68,6 +70,12 @@ public class CommonProxy {
         ItemBlock itemBlock = (ItemBlock)producer.apply(block);
         itemBlock.setRegistryName((ResourceLocation) Objects.requireNonNull(block.getRegistryName()));
         return itemBlock;
+    }
+
+    //  Cover Behavior Event
+    @SubscribeEvent
+    public static void registerCoverBehavior(GregTechAPI.RegisterEvent<CoverDefinition> event) {
+        EPCoverBehavior.init();
     }
 
     //  Recipe Event
