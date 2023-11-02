@@ -51,6 +51,7 @@ public class EPMaterialPropertyAddition {
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
 
         //  Flags
+        WroughtIron.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
         Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
         Nickel.addFlags(GENERATE_FOIL);
         Titanium.addFlags(GENERATE_FOIL);
