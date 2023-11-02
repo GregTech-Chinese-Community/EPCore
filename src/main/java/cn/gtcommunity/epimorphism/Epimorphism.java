@@ -15,8 +15,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import java.util.concurrent.Callable;
-
 @Mod(
         modid = "epimorphism",
         name = "Epimorphism",
