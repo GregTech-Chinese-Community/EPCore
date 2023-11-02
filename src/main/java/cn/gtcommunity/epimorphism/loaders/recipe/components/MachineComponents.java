@@ -69,11 +69,10 @@ public class MachineComponents {
                 .output(ELECTRIC_MOTOR_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_MOTOR_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -91,11 +90,10 @@ public class MachineComponents {
                 .output(ELECTRIC_MOTOR_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_MOTOR_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -120,11 +118,10 @@ public class MachineComponents {
                 .output(CONVEYOR_MODULE_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(CONVEYOR_MODULE_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -141,11 +138,10 @@ public class MachineComponents {
                 .output(CONVEYOR_MODULE_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(CONVEYOR_MODULE_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -174,11 +170,10 @@ public class MachineComponents {
                 .output(ELECTRIC_PISTON_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_PISTON_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -197,11 +192,10 @@ public class MachineComponents {
                 .output(ELECTRIC_PISTON_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_PISTON_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -231,11 +225,10 @@ public class MachineComponents {
                 .output(ROBOT_ARM_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ROBOT_ARM_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -255,11 +248,10 @@ public class MachineComponents {
                 .output(ROBOT_ARM_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ROBOT_ARM_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -288,11 +280,10 @@ public class MachineComponents {
                 .output(ELECTRIC_PUMP_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_PUMP_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -310,11 +301,10 @@ public class MachineComponents {
                 .output(ELECTRIC_PUMP_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ELECTRIC_PUMP_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -341,11 +331,10 @@ public class MachineComponents {
                 .output(EMITTER_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(EMITTER_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -363,11 +352,10 @@ public class MachineComponents {
                 .output(EMITTER_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(EMITTER_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -394,11 +382,10 @@ public class MachineComponents {
                 .output(SENSOR_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SENSOR_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -416,11 +403,10 @@ public class MachineComponents {
                 .output(SENSOR_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SENSOR_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 
@@ -447,11 +433,10 @@ public class MachineComponents {
                 .output(FIELD_GENERATOR_UHV)
                 .duration(1200)
                 .EUt(400000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(FIELD_GENERATOR_UV.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -469,11 +454,10 @@ public class MachineComponents {
                 .output(FIELD_GENERATOR_UEV)
                 .duration(1800)
                 .EUt(2000000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(FIELD_GENERATOR_UHV.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(12000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 

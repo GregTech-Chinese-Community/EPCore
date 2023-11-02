@@ -153,7 +153,7 @@ dependencies {
 
     //APIs
     implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848")
-    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4701483")
+    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:4799055")
     implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:4701685")
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:4716101")
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:4773115")

@@ -321,11 +321,10 @@ public class OpticalCircuits {
                 .output(OPTICAL_COMPUTER)
                 .duration(400)
                 .EUt(VA[UHV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(OPTICAL_ASSEMBLY.getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UHV])
-                        .duration(16000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
 
         //  Optical Mainframe
@@ -348,11 +347,10 @@ public class OpticalCircuits {
                 .output(OPTICAL_MAINFRAME)
                 .duration(1200)
                 .EUt(VA[UEV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(OPTICAL_COMPUTER.getStackForm())
                         .CWUt(384)
-                        .EUt(VA[UEV])
-                        .duration(16000))
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
     }
 }
