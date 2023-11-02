@@ -1,9 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.components;
 
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.blocks.*;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -537,6 +534,53 @@ public class MachineComponents {
                 .input(frameGt, Tritanium)
                 .circuitMeta(6)
                 .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.HYPER_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Quantum Casing
+        ModHandler.addShapedRecipe(true, "quantum_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.QUANTUM_CASING, 2),
+                "PhP", "PFP", "PwP",
+                'P', new UnificationEntry(plate, QuantumAlloy),
+                'F', new UnificationEntry(frameGt, Trinaquadalloy));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, QuantumAlloy, 6)
+                .input(frameGt, Trinaquadalloy)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.QUANTUM_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Tritanium Casing
+        ModHandler.addShapedRecipe(true, "tritanium_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.TRITANIUM_CASING, 2),
+                "PhP", "PFP", "PwP",
+                'P', new UnificationEntry(plate, Tritanium),
+                'F', new UnificationEntry(frameGt, HSSS));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Tritanium, 6)
+                .input(frameGt, HSSS)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.TRITANIUM_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Maraging Steel-250 Casing
+        ModHandler.addShapedRecipe(true, "maraging_steel_250_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.MARAGING_STEEL_CASING, 2),
+                "PhP", "TFT","PwP",
+                'P', new UnificationEntry(plateDouble, MaragingSteel300),
+                'T', new UnificationEntry(plate, MaragingSteel250),
+                'F', new UnificationEntry(frameGt, HSSE));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plateDouble, MaragingSteel300, 4)
+                .input(plate, MaragingSteel250, 2)
+                .input(frameGt, HSSE)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.MARAGING_STEEL_CASING, 2))
                 .EUt(VA[LV])
                 .duration(50)
                 .buildAndRegister();

@@ -3,11 +3,11 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.IIndustrialMaintenance;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
+import cn.gtcommunity.epimorphism.api.unification.EPMaterials;
 import cn.gtcommunity.epimorphism.client.textures.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import gregicality.multiblocks.api.render.GCYMTextures;
 import gregtech.api.GTValues;
 import gregtech.api.capability.IMaintenanceHatch;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
@@ -22,7 +22,6 @@ import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.IRecipePropertyStorage;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.ConfigHolder;
@@ -134,7 +133,7 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
     }
 
     private static IBlockState getFrameState() {
-        return MetaBlocks.FRAMES.get(Materials.Brass).getBlock(Materials.Brass);
+        return MetaBlocks.FRAMES.get(EPMaterials.MaragingSteel250).getBlock(EPMaterials.MaragingSteel250);
     }
 
     private static IBlockState getGearBoxState() {

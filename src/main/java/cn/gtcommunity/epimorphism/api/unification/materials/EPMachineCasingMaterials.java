@@ -58,6 +58,7 @@ public class EPMachineCasingMaterials {
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV], 1600)
                 .components(Stellite, 15, Emerald, 5, Gallium, 5, Americium, 5, Germanium, 5, TitaniumTungstenCarbide, 5)
                 .cableProperties(V[UHV], 24, 0, true)
+                .flags(GENERATE_PLATE)
                 .build();
         //  24505 Grisium
         Grisium = new Material.Builder(24505, gregtechId("grisium"))
@@ -135,6 +136,16 @@ public class EPMachineCasingMaterials {
                 .blastTemp(10600, BlastProperty.GasTier.HIGHEST, VA[UHV], 3600)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Plutonium244, 18, Cerium, 9, Gadolinium, 3, Dysprosium, 3, Thulium, 2, TungstenCarbide, 6, RedSteel, 6, Duranium, 2, Radon, 2)
+                .build();
+        //  24512 Maraging Steel-250
+        MaragingSteel250 = new Material.Builder(24512, gregtechId("maraging_steel_250"))
+                .ingot()
+                .fluid()
+                .color(0xA5ADB2)
+                .iconSet(SHINY)
+                .blastTemp(2413, BlastProperty.GasTier.MID, VA[EV], 680)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .components(Steel, 16, Molybdenum, 1, Titanium, 1, Nickel, 4, Cobalt, 2)
                 .build();
     }
 }
