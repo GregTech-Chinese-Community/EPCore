@@ -24,6 +24,9 @@ public class EPCoverBehavior {
         registerBehavior(113, new ResourceLocation(Epimorphism.MODID, "pump.ulv"), ELECTRIC_PUMP_ULV, (tile, side) -> new CoverPump(tile, side, GTValues.ULV, 320));
         registerBehavior(114, new ResourceLocation(Epimorphism.MODID, "conveyor_module.ulv"), CONVEYOR_MODULE_ULV, (tile, side) -> new CoverConveyor(tile, side, GTValues.ULV, 4));
         registerBehavior(115, new ResourceLocation(Epimorphism.MODID, "robot_arm.ulv"), ROBOT_ARM_ULV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.ULV, 4));
+        registerBehavior(116, new ResourceLocation(Epimorphism.MODID, "pump.max"), ELECTRIC_PUMP_MAX, (tile, side) -> new CoverPump(tile, side, GTValues.MAX, 1048576));
+        registerBehavior(117,  new ResourceLocation(Epimorphism.MODID, "conveyor_module.max"), CONVEYOR_MODULE_MAX, (tile, side) -> new CoverConveyor(tile, side, GTValues.MAX, 1024));
+        registerBehavior(118, new ResourceLocation(Epimorphism.MODID, "robot_arm.max"), ROBOT_ARM_MAX, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.MAX, 1024));
     }
 
     public static void registerBehavior(int coverNetworkId, ResourceLocation coverId, MetaItem.MetaValueItem placerItem, BiFunction<ICoverable, EnumFacing, CoverBehavior> behaviorCreator) {

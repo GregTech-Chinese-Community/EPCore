@@ -346,6 +346,18 @@ metaitem.cover.emitter.ulv.name=发射器（ULV）
 metaitem.cover.sensor.ulv.name=传感器（ULV）
 metaitem.cover.field_generator.ulv.name=力场发生器（ULV）
 
+metaitem.cover.electric_motor.max.name=电动马达（MAX）
+metaitem.cover.electric_piston.max.name=电力活塞（MAX）
+metaitem.cover.electric_pump.max.name=电动泵（MAX）
+metaitem.cover.electric_pump.max.tooltip=作§f覆盖板§7时以特定速率传输§f流体§7。/n§b传输速率:§f1048576 L/t§7
+metaitem.cover.conveyor_module.max.name=传送带（MAX）
+metaitem.cover.conveyor_module.max.tooltip=作§f覆盖板§7时以特定速率传输§f物品§7。/n§b传输速率:§f16 组物品/s§7
+metaitem.cover.robot_arm.max.name=机械臂（MAX）
+metaitem.cover.robot_arm.max.tooltip=作§f覆盖板§7时对§f物品§7的量加以限制。/n§b传输速率:§f16 组物品/s§7
+metaitem.cover.emitter.max.name=发射器（MAX）
+metaitem.cover.sensor.max.name=传感器（MAX）
+metaitem.cover.field_generator.max.name=力场发生器（MAX）
+
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s
