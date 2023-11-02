@@ -138,6 +138,16 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SAPPHIRE_MODULATOR;
     public static MetaItem<?>.MetaValueItem CRYSTAL_SOC_SOCKET;
 
+    //  Covers
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_ULV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_ULV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_ULV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_ULV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_ULV;
+    public static MetaItem<?>.MetaValueItem EMITTER_ULV;
+    public static MetaItem<?>.MetaValueItem SENSOR_ULV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_ULV;
+
     //  Biological
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;
     public static MetaItem<?>.MetaValueItem ULTRA_MICRO_PHASE_SEPARATOR;

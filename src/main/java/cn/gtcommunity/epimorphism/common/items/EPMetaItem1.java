@@ -147,6 +147,16 @@ public class EPMetaItem1 extends StandardMetaItem {
         SAPPHIRE_MODULATOR = this.addItem(155, "crystal.sapphire_modulator");
         CRYSTAL_SOC_SOCKET = this.addItem(156, "crystal.system_on_chip_socket");
 
+        //  Covers
+        ELECTRIC_MOTOR_ULV = this.addItem(200, "cover.electric_motor.ulv");
+        ELECTRIC_PISTON_ULV = this.addItem(201, "cover.electric_piston.ulv");
+        ELECTRIC_PUMP_ULV = this.addItem(202, "cover.electric_pump.ulv");
+        CONVEYOR_MODULE_ULV = this.addItem(203, "cover.conveyor_module.ulv");
+        ROBOT_ARM_ULV = this.addItem(204, "cover.robot_arm.ulv");
+        EMITTER_ULV = this.addItem(205, "cover.emitter.ulv");
+        SENSOR_ULV = this.addItem(206, "cover.sensor.ulv");
+        FIELD_GENERATOR_ULV = this.addItem(207, "cover.field_generator.ulv");
+
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");
         ULTRA_MICRO_PHASE_SEPARATOR = this.addItem(302, "biological.components.ultra_micro_phase_separator");

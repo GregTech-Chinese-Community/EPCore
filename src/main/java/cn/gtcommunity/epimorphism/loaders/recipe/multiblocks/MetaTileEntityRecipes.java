@@ -485,6 +485,36 @@ public class MetaTileEntityRecipes {
                 .buildAndRegister();
 
         //  TODO Hyper Reactor Mk II (Require higher fluid pipe and frame...)
+        //  TODO Hyper Reactor Mk III (Require higher fluid pipe and frame...)
+
+        //  Industrial Drill
+        ModHandler.addShapedRecipe(true, "industrial_drill", INDUSTRIAL_DRILL.getStackForm(),
+                "PKP", "CHC", "MMM",
+                'P', ELECTRIC_PISTON_UV.getStackForm(),
+                'K', new UnificationEntry(cableGtQuadruple, YttriumBariumCuprate),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UHV),
+                'H', MetaTileEntities.HULL[UV].getStackForm(),
+                'M', ELECTRIC_MOTOR_UV.getStackForm());
+
+        //  Roaster
+        ModHandler.addShapedRecipe(true, "roaster", ROASTER.getStackForm(),
+                "KSK", "CHC", "PPP",
+                'K', new UnificationEntry(cableGtQuadruple, Platinum),
+                'S', new UnificationEntry(spring, Tungsten),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
+                'H', MetaTileEntities.HULL[EV].getStackForm(),
+                'P', new UnificationEntry(plate, TitaniumCarbide)
+        );
+
+        //  Fracker
+        ModHandler.addShapedRecipe(true, "fracker", FRACKER.getStackForm(),
+                "CLC", "GHG", "PPP",
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.UV),
+                'L', new UnificationEntry(pipeLargeFluid, Naquadah),
+                'G', new UnificationEntry(gear, NaquadahAlloy),
+                'H', MetaTileEntities.HULL[ZPM].getStackForm(),
+                'P', ELECTRIC_PUMP_ZPM.getStackForm()
+        );
     }
 
     private static void GCYMOverrideRecipes() {
