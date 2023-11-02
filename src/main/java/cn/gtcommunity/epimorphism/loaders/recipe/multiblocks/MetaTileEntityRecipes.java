@@ -141,7 +141,7 @@ public class MetaTileEntityRecipes {
                 .output(ENERGY_INPUT_HATCH[UHV])
                 .duration(1000)
                 .EUt(VA[UHV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ENERGY_INPUT_HATCH[UV].getStackForm())
                         .CWUt(128)
                         .EUt(VA[UV]))
@@ -167,7 +167,7 @@ public class MetaTileEntityRecipes {
                 .output(ENERGY_OUTPUT_HATCH[UHV])
                 .duration(1000)
                 .EUt(VA[UHV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(ENERGY_OUTPUT_HATCH[UV].getStackForm())
                         .CWUt(128)
                         .EUt(VA[UV]))
@@ -298,11 +298,10 @@ public class MetaTileEntityRecipes {
                 .output(ISA_MILL)
                 .EUt(30720)
                 .duration(12000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(LARGE_MACERATOR.getStackForm())
                         .CWUt(30)
-                        .EUt(VA[LuV])
-                        .duration(12000))
+                        .EUt(VA[LuV]))
                 .buildAndRegister();
 
         //  Flotation Factory
@@ -326,11 +325,10 @@ public class MetaTileEntityRecipes {
                 .output(FLOTATION_FACTORY)
                 .EUt(30720)
                 .duration(12000)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(LARGE_DISTILLERY.getStackForm())
                         .CWUt(30)
-                        .EUt(VA[LuV])
-                        .duration(12000))
+                        .EUt(VA[LuV]))
                 .buildAndRegister();
 
         //  Chemical Plant
@@ -396,11 +394,10 @@ public class MetaTileEntityRecipes {
                 .output(LARGE_NAQUADAH_REACTOR)
                 .EUt(VA[UV])
                 .duration(4800)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(NAQUADAH_REACTOR[2].getStackForm())
                         .CWUt(64)
-                        .EUt(VA[UV])
-                        .duration(48000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         //  Fuel Refine Factory
@@ -477,11 +474,10 @@ public class MetaTileEntityRecipes {
                 .output(HYPER_REACTOR_MK1)
                 .EUt(VA[UHV])
                 .duration(6400)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(LARGE_NAQUADAH_REACTOR.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(64000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
 
         //  TODO Hyper Reactor Mk II (Require higher fluid pipe and frame...)
@@ -537,11 +533,10 @@ public class MetaTileEntityRecipes {
                 .output(MEGA_BLAST_FURNACE)
                 .EUt(VA[UHV])
                 .duration(3600)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(BLAZING_BLAST_FURNACE.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(24000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
 
         ModHandler.removeRecipeByName("gcym:mega_vacuum_freezer");
@@ -562,11 +557,10 @@ public class MetaTileEntityRecipes {
                 .output(MEGA_VACUUM_FREEZER)
                 .EUt(VA[UHV])
                 .duration(3600)
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(CRYOGENIC_FREEZER.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UHV])
-                        .duration(24000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
     }
 }

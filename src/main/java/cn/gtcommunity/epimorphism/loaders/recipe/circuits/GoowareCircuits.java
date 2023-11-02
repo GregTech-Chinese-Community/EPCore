@@ -112,11 +112,10 @@ public class GoowareCircuits {
                 .output(GOOWARE_COMPUTER)
                 .duration(400)
                 .EUt(VA[UV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(GOOWARE_ASSEMBLY.getStackForm())
                         .CWUt(32)
-                        .EUt(VA[UV])
-                        .duration(8000))
+                        .EUt(VA[UV]))
                 .buildAndRegister();
 
         //  Gooware Mainframe
@@ -137,11 +136,10 @@ public class GoowareCircuits {
                 .output(GOOWARE_MAINFRAME)
                 .duration(800)
                 .EUt(VA[UHV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(GOOWARE_COMPUTER.getStackForm())
                         .CWUt(192)
-                        .EUt(VA[UHV])
-                        .duration(8000))
+                        .EUt(VA[UHV]))
                 .buildAndRegister();
 
         // Test

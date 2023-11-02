@@ -242,11 +242,10 @@ public class SpintronicCircuits {
                 .output(SPINTRONIC_COMPUTER)
                 .duration(400)
                 .EUt(VA[UEV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SPINTRONIC_ASSEMBLY.getStackForm())
                         .CWUt(128)
-                        .EUt(VA[UEV])
-                        .duration(32000))
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -268,11 +267,10 @@ public class SpintronicCircuits {
                 .output(SPINTRONIC_MAINFRAME)
                 .duration(1600)
                 .EUt(VA[UIV])
-                .research(b -> b
+                .stationResearch(b -> b
                         .researchStack(SPINTRONIC_COMPUTER.getStackForm())
                         .CWUt(768)
-                        .EUt(VA[UIV])
-                        .duration(32000))
+                        .EUt(VA[UIV]))
                 .buildAndRegister();
     }
 }
