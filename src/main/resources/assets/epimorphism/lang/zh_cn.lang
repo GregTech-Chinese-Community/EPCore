@@ -6,6 +6,9 @@ metaitem.milled.tooltip.flotation=使用§6工业浮选机§7进行进一步精�
 item.material.oreprefix.seedCrystal=%s晶种
 item.material.oreprefix.boule=人造%s
 
+#  Behavior
+behavior.ep_data_item.require_decoding=存有需要解码的未知信息
+
 #  Tools
 gt.tool.class.bending_cylinder=弯曲绕筒
 gt.tool.class.small_bending_cylinder=小型弯曲绕筒
@@ -444,6 +447,8 @@ epimorphism.machine.multiblock.max_voltage=最大电压：%s
 epimorphism.machine.multiblock.mode=当前模式：%s
 epimorphism.multiblock.universal.problem.soldering_iron=%s§7电路板短路了。 (§a电烙铁§7)
 
+epimorphism.multiblock.pattern.error.rotor_holder=必须使用同一等级的转子固定器
+
 epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
 epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
 epimorphism.machine.large_naquadah_reactor.tooltip.2=最高产生§3UV§7级的能量
@@ -621,6 +626,12 @@ epimorphism.machine.computing_terminal.name=计算终端
 recipemap.computing_terminal_recipes.name=数据计算
 
 epimorphism.machine.cosmic_ray_detector.name=宇宙射线探测器
+epimorphism.machine.cosmic_ray_detector.tooltip.1=收集来自宇宙的信息和粒子
+epimorphism.machine.cosmic_ray_detector.tooltip_shift.1=高度由顶端的传感器方块决定
+epimorphism.machine.cosmic_ray_detector.tooltip_shift.2=传感器上方不能有非透明方块
+epimorphism.machine.cosmic_ray_detector.altitude=当前高度为：%s
+epimorphism.machine.cosmic_ray_detector.can_see_sky.false=§c传感器看不到天空
+epimorphism.machine.cosmic_ray_detector.can_see_sky.true=传感器工作正常
 recipemap.cosmic_ray_detector_recipes.name=射线探测
 
 epimorphism.machine.ion_implantater.name=离子注入机
@@ -1041,6 +1052,8 @@ gregtech.material.sc_eu_gd_sm_oxides_solution=钪-铕-钆-钐氧化物溶液
 gregtech.material.y_tb_dy_ho_oxides_solution=钇-铽-镝-钬氧化物溶液
 gregtech.material.er_tm_yb_lu_oxides_solution=铒-铥-镱-镥氧化物溶液
 gregtech.material.chlorinated_solvents=有机氯溶液
+gregtech.material.superheated_steam=过热蒸汽
+gregtech.material.supercritical_steam=超临界蒸汽
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

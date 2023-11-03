@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.client.textures;
+package cn.gtcommunity.epimorphism.client.renderer.texture;
 
 import cn.gtcommunity.epimorphism.Epimorphism;
 import codechicken.lib.render.CCRenderState;

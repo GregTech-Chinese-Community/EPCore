@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
@@ -10,7 +10,6 @@ import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.capability.IHeatingCoil;
 import gregtech.api.capability.IMultipleTankHandler;
 import gregtech.api.capability.impl.HeatingCoilRecipeLogic;
-import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;

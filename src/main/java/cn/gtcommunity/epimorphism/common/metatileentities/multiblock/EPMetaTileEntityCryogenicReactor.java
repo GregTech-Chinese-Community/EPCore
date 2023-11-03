@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;

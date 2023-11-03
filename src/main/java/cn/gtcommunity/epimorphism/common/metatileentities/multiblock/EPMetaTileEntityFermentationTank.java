@@ -7,7 +7,7 @@ import cn.gtcommunity.epimorphism.api.recipe.properties.PHChangeProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHErrorRangeProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPMathUtil;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;

@@ -5,8 +5,9 @@ import cn.gtcommunity.epimorphism.api.metatileentity.single.SteamProgressIndicat
 import cn.gtcommunity.epimorphism.api.metatileentity.single.SteamProgressIndicators;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.utils.EPUtils;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityMegaTurbine;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityCatalystHatch;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityIndustrialMaintenanceHatch;
@@ -17,9 +18,12 @@ import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockTurbineCasing;
+import gregtech.common.blocks.MetaBlocks;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 import static gregtech.api.util.GTUtility.*;
@@ -71,7 +75,6 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
 //    public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
 //    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
-
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
@@ -81,6 +84,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityHyperReactorMk2 HYPER_REACTOR_MK2;
     public static EPMetaTileEntityHyperReactorMk3 HYPER_REACTOR_MK3;
     public static EPMetaTileEntityLargeVacuumChamber LARGE_VACUUM_CHAMBER;
+//    public static EPMetaTileEntityMegaTurbine MEGA_STEAM_TURBINE;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -157,5 +161,6 @@ public class EPMetaTileEntities {
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
         HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(39, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
         LARGE_VACUUM_CHAMBER = registerMultiMetaTileEntity(40, new EPMetaTileEntityLargeVacuumChamber(epId("large_vacuum_chamber")));
+//        MEGA_STEAM_TURBINE = registerMultiMetaTileEntity(41, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.steam"), RecipeMaps.GAS_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), Textures.CLEAN_STAINLESS_STEEL_CASING, false, Textures.LARGE_GAS_TURBINE_OVERLAY));
     }
 }

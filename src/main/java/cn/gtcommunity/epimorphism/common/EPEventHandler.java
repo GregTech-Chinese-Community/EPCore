@@ -2,9 +2,9 @@ package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.Epimorphism;
 import cn.gtcommunity.epimorphism.api.capability.pollution.PollutionProvider;
+import cn.gtcommunity.epimorphism.api.fluids.EPMetaFluids;
 import cn.gtcommunity.epimorphism.api.unification.EPMaterials;
 import cn.gtcommunity.epimorphism.api.unification.OrePrefixAdditions;
-import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.items.EPToolItems;
 import gregtech.api.unification.material.event.MaterialEvent;
 import net.minecraft.util.ResourceLocation;
@@ -20,6 +20,7 @@ public class EPEventHandler {
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void registerMaterials(MaterialEvent event) {
         EPMaterials.init();
+        EPMetaFluids.init();
         OrePrefixAdditions.init();
         EPToolItems.init();
     }
