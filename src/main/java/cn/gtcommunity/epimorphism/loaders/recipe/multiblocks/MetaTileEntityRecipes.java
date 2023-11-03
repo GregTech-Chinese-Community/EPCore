@@ -12,6 +12,7 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
+import gregtech.common.blocks.BlockSteamCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.loaders.recipe.CraftingComponent;
@@ -188,6 +189,22 @@ public class MetaTileEntityRecipes {
         );
 
         //  Vacuum Chamber recipes
+        ModHandler.addShapedRecipe(true, "steam_vacuum_chamber_bronze", STEAM_VACUUM_CHAMBER[0].getStackForm(),
+                "GCG", "PHP", "GWG",
+                'W', new UnificationEntry(pipeTinyFluid, Bronze),
+                'C', GLASS_TUBE.getStackForm(),
+                'P', ELECTRIC_PUMP_ULV.getStackForm(),
+                'G', "blockGlass",
+                'H', MetaBlocks.STEAM_CASING.getItemVariant(BlockSteamCasing.SteamCasingType.BRONZE_HULL));
+
+        ModHandler.addShapedRecipe(true, "steam_vacuum_chamber_steel", STEAM_VACUUM_CHAMBER[1].getStackForm(),
+                "GCG", "PHP", "GWG",
+                'W', new UnificationEntry(pipeTinyFluid, TinAlloy),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.ULV),
+                'P', ELECTRIC_PUMP_ULV.getStackForm(),
+                'G', "blockGlass",
+                'H', MetaBlocks.STEAM_CASING.getItemVariant(BlockSteamCasing.SteamCasingType.STEEL_HULL));
+
         MetaTileEntityLoader.registerMachineRecipe(true, VACUUM_CHAMBER,
                 "GCG", "PHP", "GWG",
                 'W', CraftingComponent.CABLE,
@@ -522,6 +539,32 @@ public class MetaTileEntityRecipes {
                 'X', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'W', new UnificationEntry(cableGtSingle, Platinum),
                 'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS));
+
+        //  Vacuum Drying Furnace
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HastelloyC276)
+                .input(VOLTAGE_COIL_LuV, 4)
+                .input(ELECTRIC_PISTON_LUV, 8)
+                .input(FLUID_REGULATOR_LUV, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 8)
+                .input(gear, Rhodium, 8)
+                .input(plate, HSSS, 32)
+                .input(plateDouble, Ruthenium, 8)
+                .input(plateDouble, TitaniumCarbide, 8)
+                .input(screw, Platinum, 32)
+                .input(wireFine, Naquadah, 64)
+                .input(cableGtQuadruple, NiobiumTitanium, 8)
+                .fluidInputs(HastelloyX.getFluid(2304))
+                .fluidInputs(NaquadahAlloy.getFluid(4608))
+                .fluidInputs(Titanium.getFluid(4608))
+                .outputs(VACUUM_DRYING_FURNACE.getStackForm())
+                .EUt(VA[LuV])
+                .duration(12000)
+                .stationResearch(b -> b
+                        .researchStack(ELECTRIC_BLAST_FURNACE.getStackForm())
+                        .CWUt(30)
+                        .EUt(VA[LuV]))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {

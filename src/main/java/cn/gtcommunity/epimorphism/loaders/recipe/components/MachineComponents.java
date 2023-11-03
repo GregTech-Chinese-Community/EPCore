@@ -613,6 +613,23 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Vacuum Casing
+        ModHandler.addShapedRecipe(true, "vacuum_casing", EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.VACUUM_CASING, 2),
+                "PhP", "TFT","PwP",
+                'P', new UnificationEntry(plateDouble, RedSteel),
+                'T', new UnificationEntry(plate, TitaniumCarbide),
+                'F', new UnificationEntry(frameGt, CobaltBrass));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plateDouble, RedSteel, 4)
+                .input(plate, TitaniumCarbide, 2)
+                .input(frameGt, CobaltBrass)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.VACUUM_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)

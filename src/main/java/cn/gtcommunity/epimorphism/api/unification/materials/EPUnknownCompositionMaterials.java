@@ -2,7 +2,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.info.MaterialIconSet;
+import gregtech.api.unification.material.Materials;
 
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -38,14 +38,13 @@ public class EPUnknownCompositionMaterials {
                 .build();
         //  25205 Blazing Pyrotheum
         BlazingPyrotheum = new Material.Builder(getMaterialsId(), gregtechId("blazing_pyrotheum"))
-                .fluid(FluidTypes.LIQUID, true)
-                .color(0xE19352)
-                .iconSet(DULL)
+                .fluid()
+                .color(Materials.Blaze.getMaterialRGB())
                 .fluidTemp(8000)
                 .build();
         //  25206 Gelid Cryotheum
         GelidCryotheum = new Material.Builder(getMaterialsId(), gregtechId("gelid_cryotheum"))
-                .fluid(FluidTypes.LIQUID, true)
+                .fluid()
                 .color(0x40B8FB)
                 .fluidTemp(8)
                 .build();

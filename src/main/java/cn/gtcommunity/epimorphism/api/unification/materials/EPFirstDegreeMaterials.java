@@ -176,7 +176,7 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(0x05090C)
                 .iconSet(BRIGHT)
-                .flags(DISABLE_DECOMPOSITION, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FINE_WIRE, GENERATE_SPRING)
+                .flags(DISABLE_DECOMPOSITION, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FINE_WIRE, GENERATE_SPRING, GENERATE_COIL)
                 .cableProperties(V[UEV], 8, 6)
                 .components(Carbon, 48)
                 .build()

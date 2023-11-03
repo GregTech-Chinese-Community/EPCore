@@ -4,6 +4,7 @@ import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
 
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -30,7 +31,7 @@ public class EPModCompatibilityMaterials {
                 .fluid(FluidTypes.LIQUID, true)
                 .blastTemp(2300).components(Gold, 1, Copper, 1)
                 .iconSet(MaterialIconSet.SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_CURVED_PLATE)
                 .build();
     }
 
