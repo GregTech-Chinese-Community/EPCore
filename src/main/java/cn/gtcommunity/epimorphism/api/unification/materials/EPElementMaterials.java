@@ -1,6 +1,8 @@
 package cn.gtcommunity.epimorphism.api.unification.materials;
 
 import cn.gtcommunity.epimorphism.api.unification.EPElements;
+import gregtech.api.fluids.fluidType.FluidTypes;
+import gregtech.api.unification.Elements;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
@@ -87,6 +89,32 @@ public class EPElementMaterials {
                 .color(0xF03232)
                 .iconSet(SHINY)
                 .element(EPElements.Plutonium244)
+                .build();
+        //  TODO Titanium-50 + Californium-252 -> Oganesson Breeding Base + Californium-250 -> Hot Oganesson -> Metastable Oganesson
+        MetastableOganesson = new Material.Builder(26008, gregtechId("metastable_oganesson"))
+                .ingot()
+                .fluid(FluidTypes.GAS)
+                .color(0xE61C24)
+                .iconSet(SHINY)
+                .element(Elements.Og)
+                .build();
+        //  TODO Radium-Radon Mixture + Scandium-Titanium-50 Mixture -> Metastable Hassium
+        MetastableHassium = new Material.Builder(26009, gregtechId("metastable_hassium"))
+                .ingot()
+                .fluid()
+                .color(0x2D3A9D)
+                .iconSet(BRIGHT)
+                .element(Elements.Hs)
+                .flags(GENERATE_ROD)
+                .build();
+        //  TODO Uranium-238 -> Quasi-fissioning Plasma -> Flerovium-Ytterbium Plasma -> Metastable Flerovium + Ytterbium-178
+        MetastableFlerovium = new Material.Builder(26010, gregtechId("metastable_flerovium"))
+                .ingot()
+                .fluid()
+                .color(0x521973)
+                .iconSet(SHINY)
+                .element(Elements.Fl)
+                .flags(GENERATE_ROD)
                 .build();
     }
 }

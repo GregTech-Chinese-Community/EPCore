@@ -78,7 +78,7 @@ public class NdYAGChain {
                 .buildAndRegister();
 
         //  Crude Alumina Solution + Tributylamine + Hydrogen Peroxide -> Alumina Solution + Nitric Acid + Nitrogen Dioxide
-        CHEMICAL_PLANT_RECIPES.recipeBuilder()
+        DISSOLUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(CrudeAluminaSolution.getFluid(1000))
                 .fluidInputs(Tributylamine.getFluid(1000))
                 .fluidInputs(HydrogenPeroxide.getFluid(1000))
@@ -87,7 +87,6 @@ public class NdYAGChain {
                 .fluidOutputs(NitrogenDioxide.getFluid(1000))
                 .EUt(VA[HV])
                 .duration(210)
-                .CasingTier(3)
                 .buildAndRegister();
 
         //  Unprocessed Nd:YAG Solution

@@ -208,8 +208,8 @@ public class MaterialComponents {
         STICK_RADIOACTIVE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.stick, Dubnium)},
                 {10, new UnificationEntry(OrePrefix.stick, Livermorium)},
-//                {11, new UnificationEntry(OrePrefix.stick, Trinium)},
-//                {12, new UnificationEntry(OrePrefix.stick, Trinium)},
+                {11, new UnificationEntry(OrePrefix.stick, MetastableFlerovium)},
+                {12, new UnificationEntry(OrePrefix.stick, MetastableHassium)},
 //                {13, new UnificationEntry(OrePrefix.stick, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
