@@ -598,6 +598,21 @@ public class MachineComponents {
                 .duration(600)
                 .buildAndRegister();
 
+        //  Babbitt Alloy Casing
+        ModHandler.addShapedRecipe(true, "babbitt_alloy_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.BABBITT_ALLOY_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, BabbittAlloy),
+                'F', new UnificationEntry(frameGt, BabbittAlloy));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, BabbittAlloy, 6)
+                .input(frameGt, BabbittAlloy)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.BABBITT_ALLOY_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
@@ -731,6 +746,18 @@ public class MachineComponents {
     }
 
     private static void Materials() {
+        //  Babbitt Alloy
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Tin, 5)
+                .input(dust, Lead, 36)
+                .input(dust, Antimony, 8)
+                .input(dust, Astatine)
+                .circuitMeta(32)
+                .output(dust, BabbittAlloy, 50)
+                .EUt(VA[HV])
+                .duration(1200)
+                .buildAndRegister();
+
         //  Staballoy
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Uranium238, 9)

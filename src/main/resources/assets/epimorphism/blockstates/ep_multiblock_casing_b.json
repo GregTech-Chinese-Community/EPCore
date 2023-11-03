@@ -13,6 +13,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/maraging_steel_250_casing"
         }
+      },
+      "babbitt_alloy_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/babbitt_alloy_casing"
+        }
       }
     }
   }

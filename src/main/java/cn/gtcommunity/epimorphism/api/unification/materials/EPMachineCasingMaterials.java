@@ -157,5 +157,15 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Uranium238, 9, Titanium, 1)
                 .build();
+        //  24514 Babbitt Alloy
+        BabbittAlloy = new Material.Builder(24514, gregtechId("babbitt_alloy"))
+                .ingot()
+                .fluid()
+                .color(0xA19CA4)
+                .iconSet(SHINY)
+                .components(Tin, 5, Lead, 36, Antimony, 8, Astatine, 1)
+                .blastTemp(737, BlastProperty.GasTier.MID, VA[MV], 214)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .build();
     }
 }
