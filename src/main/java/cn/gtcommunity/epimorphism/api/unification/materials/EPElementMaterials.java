@@ -7,6 +7,7 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
 
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
@@ -25,7 +26,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xbe49ed)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME, GENERATE_CURVED_PLATE)
                 .element(EPElements.Draconium)
                 .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV])
@@ -64,7 +65,7 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xC880FF)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE, GENERATE_FINE_WIRE, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_COIL)
                 .element(EPElements.Vibranium)
                 .blastTemp(4852, BlastProperty.GasTier.HIGH)
                 .build();
@@ -74,7 +75,7 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xFF0040)
                 .iconSet(METALLIC)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROUND, GENERATE_SPRING)
+                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_ROUND, GENERATE_SPRING, GENERATE_CURVED_PLATE)
                 .element(EPElements.Adamantium)
                 .blastTemp(5225, BlastProperty.GasTier.HIGH)
                 .cableProperties(VA[UHV], 18, 9, false)

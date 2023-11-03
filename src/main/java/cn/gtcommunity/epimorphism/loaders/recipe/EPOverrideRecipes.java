@@ -100,6 +100,9 @@ public class EPOverrideRecipes {
             if (material.hasFlag(MaterialFlags.GENERATE_SPRING_SMALL) && !material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.removeRecipeByName(String.format("gregtech:spring_small_%s", material));
             }
+            if (material.hasFlag(MaterialFlags.GENERATE_ROTOR) && !material.hasFlag(MaterialFlags.NO_SMASHING))  {
+                ModHandler.removeRecipeByName(String.format("gregtech:rotor_%s", material));
+            }
         }
     }
 

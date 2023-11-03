@@ -4,6 +4,7 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
 
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -37,7 +38,7 @@ public class EPMachineCasingMaterials {
                 .fluidTemp(3980)
                 .color(0x939554)
                 .iconSet(DULL)
-                .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_ROTOR, GENERATE_FRAME)
+                .flags(GENERATE_GEAR, GENERATE_BOLT_SCREW, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_CURVED_PLATE)
                 .blastTemp(4550, BlastProperty.GasTier.HIGHER, VA[EV], 800)
                 .components(Nickel, 15, Molybdenum, 4, Chrome, 2, Titanium, 2, Yttrium, 2)
                 .build();

@@ -16,12 +16,12 @@ public class EPPartsRecipeHandler {
 
     private EPPartsRecipeHandler() {/**/}
     public static void register() {
-        EPOrePrefix.plateCurved.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processPlateCurved);
-        OrePrefix.ring.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processRing);
-        OrePrefix.spring.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processSpring);
-        OrePrefix.springSmall.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processSpringSmall);
-        OrePrefix.foil.addProcessingHandler(PropertyKey.INGOT,EPPartsRecipeHandler::processFoil);
-
+        EPOrePrefix.plateCurved.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processPlateCurved);
+        OrePrefix.ring.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processRing);
+        OrePrefix.spring.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processSpring);
+        OrePrefix.springSmall.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processSpringSmall);
+        OrePrefix.foil.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processFoil);
+        OrePrefix.rotor.addProcessingHandler(PropertyKey.INGOT, EPPartsRecipeHandler::processRotor);
     }
 
     public static void processPlateCurved(OrePrefix curvedPrefix, Material material, IngotProperty property) {
@@ -33,6 +33,11 @@ public class EPPartsRecipeHandler {
                 RecipeMaps.BENDER_RECIPES.recipeBuilder().EUt(32).duration(40)
                         .input(OrePrefix.plate, material, 1)
                         .output(curvedPrefix, material)
+                        .circuitMeta(5)
+                        .buildAndRegister();
+                RecipeMaps.BENDER_RECIPES.recipeBuilder().EUt(32).duration(40)
+                        .input(curvedPrefix, material)
+                        .output(OrePrefix.plate, material, 1)
                         .circuitMeta(5)
                         .buildAndRegister();
             }
@@ -71,6 +76,18 @@ public class EPPartsRecipeHandler {
                 ModHandler.addShapedRecipe(String.format("bending_foil_%s", material),
                         OreDictUnifier.get(OrePrefix.foil, material, 2),
                         "hPB", 'P', new UnificationEntry(OrePrefix.plate,material), 'B', EPToolItems.SMALL_BENDING_CYLINDER);
+            }
+        }
+    }
+    public static void processRotor(OrePrefix rotorPrefix, Material material, IngotProperty property) {
+        if (material.hasFlag(MaterialFlags.GENERATE_PLATE)) {
+            if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
+                ModHandler.addShapedRecipe(String.format("curved_plate_rotor_%s", material),
+                        OreDictUnifier.get(OrePrefix.rotor, material),
+                        "PhP", "SRf", "PdP",
+                        'P', new UnificationEntry(EPOrePrefix.plateCurved, material),
+                        'S', new UnificationEntry(OrePrefix.screw, material),
+                        'R', new UnificationEntry(OrePrefix.ring, material));
             }
         }
     }
