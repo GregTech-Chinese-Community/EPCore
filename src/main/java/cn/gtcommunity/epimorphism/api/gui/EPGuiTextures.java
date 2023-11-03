@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.client.textures;
+package cn.gtcommunity.epimorphism.api.gui;
 
 
 import gregtech.api.gui.resources.SteamTexture;

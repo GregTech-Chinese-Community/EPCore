@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
@@ -99,9 +99,9 @@ public class EPMetaTileEntityVacuumDryingFurnace extends MultiMapMultiblockContr
     @Override
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle("XXX", "CCC", "CCC", "XXX")
-                .aisle("XXX", "C#C", "C#C", "XMX")
-                .aisle("XSX", "CCC", "CCC", "XXX")
+                .aisle("XXX", "CCC", "CCC", "CCC", "XXX")
+                .aisle("XXX", "C#C", "C#C", "C#C", "XMX")
+                .aisle("XSX", "CCC", "CCC", "CCC", "XXX")
                 .where('S', this.selfPredicate())
                 .where('X', states(new IBlockState[]{this.getCasingState()})
                         .setMinGlobalLimited(9)
@@ -159,9 +159,9 @@ public class EPMetaTileEntityVacuumDryingFurnace extends MultiMapMultiblockContr
         MultiblockShapeInfo.Builder builder = null;
         if (Blocks.AIR != null) {
             builder = MultiblockShapeInfo.builder()
-                    .aisle("EEM", "CCC", "CCC", "XXX")
-                    .aisle("FXD", "C#C", "C#C", "XHX")
-                    .aisle("ISO", "CCC", "CCC", "XXX")
+                    .aisle("EEM", "CCC", "CCC", "CCC", "XXX")
+                    .aisle("FXD", "C#C", "C#C", "C#C", "XHX")
+                    .aisle("ISO", "CCC", "CCC", "CCC", "XXX")
                     .where('S', EPMetaTileEntities.VACUUM_DRYING_FURNACE, EnumFacing.SOUTH)
                     .where('X', getCasingState())
                     .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[6], EnumFacing.NORTH)

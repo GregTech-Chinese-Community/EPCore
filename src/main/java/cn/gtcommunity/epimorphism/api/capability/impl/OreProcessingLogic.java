@@ -146,7 +146,7 @@ public class OreProcessingLogic implements IWorkable, IControllable {
                 int t_id = EPUniverUtil.stackToInt(stack);
                 if (checkTypes(t_id, tables)) {
                     Recipe recipe = RecipeMaps.MACERATOR_RECIPES
-                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), new ArrayList<>());
+                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), Collections.emptyList());
                     if (recipe != null) {
                         t_product.addAll(getOutputStack(recipe, stack.getCount()));
                     } else {
@@ -193,7 +193,7 @@ public class OreProcessingLogic implements IWorkable, IControllable {
                 int t_id = EPUniverUtil.stackToInt(stack);
                 if (checkTypes(t_id, tables)) {
                     Recipe recipe = RecipeMaps.THERMAL_CENTRIFUGE_RECIPES
-                            .findRecipe(GTValues.V[14],  Collections.singletonList(stack), new ArrayList<>());
+                            .findRecipe(GTValues.V[14],  Collections.singletonList(stack), Collections.emptyList());
                     if (recipe != null) {
                         t_product.addAll(getOutputStack(recipe, stack.getCount()));
                     } else {
@@ -215,7 +215,7 @@ public class OreProcessingLogic implements IWorkable, IControllable {
                 int t_id = EPUniverUtil.stackToInt(stack);
                 if (checkTypes(t_id, tables)) {
                     Recipe recipe = RecipeMaps.CENTRIFUGE_RECIPES
-                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), new ArrayList<>());
+                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), Collections.emptyList());
                     if (recipe != null) {
                         t_product.addAll(getOutputStack(recipe, stack.getCount()));
                     } else {
@@ -237,7 +237,7 @@ public class OreProcessingLogic implements IWorkable, IControllable {
                 int t_id = EPUniverUtil.stackToInt(stack);
                 if (checkTypes(t_id, tables)) {
                     Recipe recipe = RecipeMaps.SIFTER_RECIPES
-                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), new ArrayList<>());
+                            .findRecipe(GTValues.V[14], Collections.singletonList(stack), Collections.emptyList());
                     if (recipe != null) {
                         t_product.addAll(getOutputStack(recipe, stack.getCount()));
                     } else {

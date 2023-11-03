@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.api.utils;
 
 import gregtech.api.metatileentity.MetaTileEntity;
+import gregtech.api.metatileentity.MetaTileEntityHolder;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockPart;
 import net.minecraft.item.Item;
@@ -157,5 +158,13 @@ public class EPUniverUtil {
             finalList.add(last);
         }
         return finalList;
+    }
+
+    public static MetaTileEntityHolder getTileEntity(MetaTileEntity tile) {
+        MetaTileEntityHolder holder = new MetaTileEntityHolder();
+        holder.setMetaTileEntity(tile);
+        holder.getMetaTileEntity().onPlacement();
+        holder.getMetaTileEntity().setFrontFacing(EnumFacing.SOUTH);
+        return holder;
     }
 }

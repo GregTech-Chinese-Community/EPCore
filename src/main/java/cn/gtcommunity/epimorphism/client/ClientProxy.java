@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.client;
 
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import net.minecraftforge.client.event.ModelRegistryEvent;

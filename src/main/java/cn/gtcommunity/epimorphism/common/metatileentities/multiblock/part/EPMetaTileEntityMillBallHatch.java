@@ -2,7 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
 import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.IBall;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import codechicken.lib.render.CCRenderState;

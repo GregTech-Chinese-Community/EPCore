@@ -7,7 +7,7 @@ import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import cn.gtcommunity.epimorphism.loaders.formula.CatalystFormula;

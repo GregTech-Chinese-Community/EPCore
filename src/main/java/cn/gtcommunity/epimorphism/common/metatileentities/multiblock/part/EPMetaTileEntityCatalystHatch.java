@@ -2,7 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
 import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
 import cn.gtcommunity.epimorphism.api.capability.ICatalyst;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import gregtech.api.capability.impl.NotifiableItemStackHandler;
 import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;

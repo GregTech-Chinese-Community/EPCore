@@ -3,7 +3,7 @@ package cn.gtcommunity.epimorphism.api.recipe;
 import cn.gtcommunity.epimorphism.api.recipe.builder.*;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapChemicalPlant;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapGeneral;
-import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
+import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
@@ -223,7 +223,7 @@ public class EPRecipeMaps {
                 .setSound(GTValues.FOOLS.get() ? GTSoundEvents.SCIENCE : GTSoundEvents.COMPUTATION);
 
         //  Cosmic Ray Detector Recipemap
-        COSMIC_RAY_DETECTOR_RECIPES = new RecipeMap<>("cosmic_ray_detector_recipes", 1, 2, 1, 3, 0, 2, 0, 3,new AltitudeRecipeBuilder(), false);
+        COSMIC_RAY_DETECTOR_RECIPES = new RecipeMap<>("cosmic_ray_detector_recipes", 2, 3, 2, 3, new AltitudeRecipeBuilder(), false);
 
         //  Digester Recipemap
         DIGESTER_RECIPES = new RecipeMap<>("digester_recipes", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
