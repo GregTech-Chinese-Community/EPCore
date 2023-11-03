@@ -498,9 +498,9 @@ epimorphism.multiblock.roaster.tooltip.4=钨钢燃烧室: §c2500K
 recipemap.roaster_recipes.name=高温焙烧
 
 epimorphism.machine.industrial_fishing_pond.name=珠海渔场
-epimorphism.multiblock.industrial_fisher.mode1=模式：捕捞鱼类
-epimorphism.multiblock.industrial_fisher.mode2=模式：捕捞垃圾
-epimorphism.multiblock.industrial_fisher.mode0=模式: 捕捞宝藏
+epimorphism.multiblock.industrial_fisher.mode1=模式：捕捞垃圾
+epimorphism.multiblock.industrial_fisher.mode2=模式：捕捞宝藏
+epimorphism.multiblock.industrial_fisher.mode0=模式: 捕捞鱼类
 epimorphism.multiblock.industrial_fisher.inv_full=输出槽已满
 
 epimorphism.machine.algae_farm.name=藻类农场
@@ -855,7 +855,7 @@ gregtech.material.manganese_sulfate=硫酸锰
 gregtech.material.potassium_sulfate=硫酸钾
 gregtech.material.ammonium_cyanate=氰酸铵
 gregtech.material.carbamide=碳酰胺
-gregtech.material.neodymium_doped_yttrium_oxide=钕掺杂的氧化钇粉
+gregtech.material.neodymium_doped_yttrium_oxide=钕掺杂的氧化钇
 gregtech.material.alumina_solution=三氧化二铝溶液
 gregtech.material.crude_alumina_solution=粗制三氧化二铝溶液
 gregtech.material.carbon_tetrachloride=四氯化碳
