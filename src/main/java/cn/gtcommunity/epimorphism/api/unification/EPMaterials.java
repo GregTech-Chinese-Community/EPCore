@@ -15,6 +15,9 @@ public EPMaterials() {}
     public static Material Adamantium;
     public static Material Taranium;
     public static Material Plutonium244;
+    public static Material MetastableOganesson;
+    public static Material MetastableHassium;
+    public static Material MetastableFlerovium;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -413,6 +416,7 @@ public EPMaterials() {}
     public static Material Talonite;
     public static Material BlackPlutonium;
     public static Material MaragingSteel250;
+    public static Material Staballoy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

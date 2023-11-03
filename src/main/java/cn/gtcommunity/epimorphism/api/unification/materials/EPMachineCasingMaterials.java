@@ -147,5 +147,15 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Steel, 16, Molybdenum, 1, Titanium, 1, Nickel, 4, Cobalt, 2)
                 .build();
+        //  24513 Staballoy
+        Staballoy = new Material.Builder(24513, gregtechId("staballoy"))
+                .ingot()
+                .fluid()
+                .color(0x444B42)
+                .iconSet(SHINY)
+                .blastTemp(3450, BlastProperty.GasTier.HIGH, VA[EV], 462)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .components(Uranium238, 9, Titanium, 1)
+                .build();
     }
 }

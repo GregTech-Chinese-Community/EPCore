@@ -171,7 +171,7 @@ metaitem.laser.emitter.krypton.name=氪激光镭射器
 metaitem.laser.emitter.xenon.name=氙激光镭射器
 metaitem.laser.emitter.helium_neon.name=氦-氖混合气激光镭射器
 metaitem.laser.emitter.helium_neon.tooltip=用于弱光学设备
-metaitem.laser.emitter.nd_yag.name=掺钕钇铝石榴石激光镭射器
+metaitem.laser.emitter.nd_yag.name=钕掺杂的钇铝榴石激光镭射器
 metaitem.laser.emitter.nd_yag.tooltip=用于强光学设备
 
 #  Condenser Components
@@ -651,6 +651,9 @@ gregtech.material.vibranium=振金
 gregtech.material.adamantium=精金
 gregtech.material.taranium=塔兰金属
 gregtech.material.plutonium_244=钚-244
+gregtech.material.metastable_oganesson=亚稳态气奥
+gregtech.material.metastable_hassium=亚稳态钅黑
+gregtech.material.metastable_flerovium=亚稳态钅夫
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -854,8 +857,8 @@ gregtech.material.alumina_solution=三氧化二铝溶液
 gregtech.material.crude_alumina_solution=粗制三氧化二铝溶液
 gregtech.material.carbon_tetrachloride=四氯化碳
 gregtech.material.aluminium_nitrate=硝酸铝
-gregtech.material.unprocessed_nd_yag_solution=未处理铝掺杂的钇铝榴石溶液
-gregtech.material.nd_yag=铝掺杂的钇铝榴石
+gregtech.material.unprocessed_nd_yag_solution=未处理钕掺杂的钇铝榴石溶液
+gregtech.material.nd_yag=钕掺杂的钇铝榴石
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1064,3 +1067,4 @@ gregtech.material.black_titanium=黑钛合金
 gregtech.material.talonite=铬钴磷酸盐合金
 gregtech.material.black_plutonium=黑钚
 gregtech.material.maraging_steel_250=马氏体时效钢-250
+gregtech.material.staballoy=贫铀合金
