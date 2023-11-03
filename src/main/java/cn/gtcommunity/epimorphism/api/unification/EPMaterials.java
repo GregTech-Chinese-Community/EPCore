@@ -416,6 +416,7 @@ public EPMaterials() {}
     public static Material Talonite;
     public static Material BlackPlutonium;
     public static Material MaragingSteel250;
+    public static Material Staballoy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

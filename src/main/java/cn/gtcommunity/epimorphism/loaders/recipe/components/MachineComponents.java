@@ -585,6 +585,19 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Universal Processing Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Staballoy)
+                .input(plate, Staballoy, 4)
+                .input(plate, TungstenSteel, 4)
+                .input(spring, MolybdenumDisilicide, 2)
+                .input(wireFine, Platinum, 16)
+                .fluidInputs(BlueSteel.getFluid(288))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.GENERAL_PROCESSING_CASING, 2))
+                .EUt(VA[HV])
+                .duration(600)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
@@ -718,6 +731,16 @@ public class MachineComponents {
     }
 
     private static void Materials() {
+        //  Staballoy
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Uranium238, 9)
+                .input(dust, Titanium, 1)
+                .circuitMeta(10)
+                .output(dust, Staballoy, 10)
+                .EUt(VA[MV])
+                .duration(340)
+                .buildAndRegister();
+
         //  Silicon Carbide
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Graphite)
