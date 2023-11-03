@@ -72,8 +72,12 @@ public class EPMaterialPropertyAddition {
         WatertightSteel.addFlags(GENERATE_DOUBLE_PLATE);
         HSLASteel.addFlags(GENERATE_DOUBLE_PLATE);
         Trinaquadalloy.addFlags(GENERATE_FRAME);
+        CobaltBrass.addFlags(GENERATE_FRAME);
         Trinium.addFlags(GENERATE_SPRING);
         Tritanium.addFlags(GENERATE_SPRING);
+        RedSteel.addFlags(GENERATE_DOUBLE_PLATE);
+        Ruthenium.addFlags(GENERATE_DOUBLE_PLATE);
+        TitaniumCarbide.addFlags(GENERATE_DOUBLE_PLATE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

@@ -522,6 +522,32 @@ public class MetaTileEntityRecipes {
                 'X', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'W', new UnificationEntry(cableGtSingle, Platinum),
                 'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS));
+
+        //  Vacuum Drying Furnace
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, HastelloyC276)
+                .input(VOLTAGE_COIL_LuV, 4)
+                .input(ELECTRIC_PISTON_LUV, 8)
+                .input(FLUID_REGULATOR_LUV, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 8)
+                .input(gear, Rhodium, 8)
+                .input(plate, HSSS, 32)
+                .input(plateDouble, Ruthenium, 8)
+                .input(plateDouble, TitaniumCarbide, 8)
+                .input(screw, Platinum, 32)
+                .input(wireFine, Naquadah, 64)
+                .input(cableGtQuadruple, NiobiumTitanium, 8)
+                .fluidInputs(HastelloyX.getFluid(2304))
+                .fluidInputs(NaquadahAlloy.getFluid(4608))
+                .fluidInputs(Titanium.getFluid(4608))
+                .outputs(VACUUM_DRYING_FURNACE.getStackForm())
+                .EUt(VA[LuV])
+                .duration(12000)
+                .stationResearch(b -> b
+                        .researchStack(ELECTRIC_BLAST_FURNACE.getStackForm())
+                        .CWUt(30)
+                        .EUt(VA[LuV]))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
