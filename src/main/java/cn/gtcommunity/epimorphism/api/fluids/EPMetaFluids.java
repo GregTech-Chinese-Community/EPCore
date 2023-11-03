@@ -11,6 +11,8 @@ public class EPMetaFluids {
     }
 
     private static void setCustomTextures() {
+        MetaFluids.setMaterialFluidTexture(EPMaterials.BlazingPyrotheum, FluidTypes.LIQUID);
+        MetaFluids.setMaterialFluidTexture(EPMaterials.GelidCryotheum, FluidTypes.LIQUID);
         MetaFluids.setMaterialFluidTexture(EPMaterials.SuperheatedSteam, FluidTypes.GAS);
         MetaFluids.setMaterialFluidTexture(EPMaterials.SupercriticalSteam, FluidTypes.GAS);
     }
