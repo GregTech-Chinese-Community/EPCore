@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.api.metatileentity.single;
 
-import cn.gtcommunity.epimorphism.client.textures.EPGuiTextures;
+import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
 import gregtech.api.GTValues;
 import gregtech.api.capability.impl.*;
 import gregtech.api.gui.GuiTextures;

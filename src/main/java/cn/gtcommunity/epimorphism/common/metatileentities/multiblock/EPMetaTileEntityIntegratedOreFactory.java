@@ -2,7 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.capability.impl.OreProcessingLogic;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
-import cn.gtcommunity.epimorphism.client.textures.EPTextures;
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import codechicken.lib.raytracer.CuboidRayTraceResult;

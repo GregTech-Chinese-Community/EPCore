@@ -1,6 +1,6 @@
-package cn.gtcommunity.epimorphism.client.textures;
+package cn.gtcommunity.epimorphism.client.renderer.texture;
 
-import cn.gtcommunity.epimorphism.client.textures.renderer.IsaMillRenderer;
+import cn.gtcommunity.epimorphism.client.renderer.texture.custom.IsaMillRenderer;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 
 public class EPTextures {

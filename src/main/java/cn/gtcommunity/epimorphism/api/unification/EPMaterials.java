@@ -402,6 +402,8 @@ public EPMaterials() {}
     public static Material YTbDyHoOxidesSolution;
     public static Material ErTmYbLuOxidesSolution;
     public static Material ChlorinatedSolvents;
+    public static Material SuperheatedSteam;
+    public static Material SupercriticalSteam;
 
     //  Machine Casing Materials
     public static Material Inconel625;

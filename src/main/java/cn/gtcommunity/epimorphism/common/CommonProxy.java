@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.items.BehaviorAddition;
 import cn.gtcommunity.epimorphism.loaders.formula.FormulaManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.EPRecipeManager;
 import cn.gtcommunity.epimorphism.loaders.recipe.components.MaterialComponents;
@@ -67,6 +68,7 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_CRUCIBLE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_MILL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING, VariantItemBlock::new));
+        BehaviorAddition.init();
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

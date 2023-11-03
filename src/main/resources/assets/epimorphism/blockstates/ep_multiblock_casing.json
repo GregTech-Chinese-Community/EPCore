@@ -31,9 +31,11 @@
         }
       },
       "vacuum_casing": {
-        "model": "minecraft:cube_all",
+        "model": "minecraft:cube_bottom_top",
         "textures": {
-          "all": "epimorphism:blocks/casings/solid/vacuum_casing"
+          "top": "epimorphism:blocks/casings/solid/vacuum_casing",
+          "side": "epimorphism:blocks/casings/solid/vacuum_casing_side",
+          "bottom": "epimorphism:blocks/casings/solid/vacuum_casing"
         }
       },
       "naquadria_casing": {

@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.client.textures.renderer;
+package cn.gtcommunity.epimorphism.client.renderer.texture.custom;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;

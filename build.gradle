@@ -165,6 +165,7 @@ dependencies {
     runtimeOnly 'curse.maven:top-245211:2667280'
 
     compileOnly(rfg.deobf('CraftTweaker2:CraftTweaker2-API:4.1.20.684'))
+    compileOnly(rfg.deobf("curse.maven:ctm-267602:2915363"))
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'
