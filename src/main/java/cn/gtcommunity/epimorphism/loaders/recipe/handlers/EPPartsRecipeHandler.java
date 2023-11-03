@@ -29,7 +29,9 @@ public class EPPartsRecipeHandler {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("plate_curved_%s", material),
                         OreDictUnifier.get(EPOrePrefix.plateCurved, material),
-                        "h", "P", "B", 'P', new UnificationEntry(OrePrefix.plate,material), 'B', EPToolItems.BENDING_CYLINDER);
+                        "h", "P", "B",
+                        'P', new UnificationEntry(OrePrefix.plate,material),
+                        'B', EPToolItems.BENDING_CYLINDER);
                 RecipeMaps.BENDER_RECIPES.recipeBuilder().EUt(32).duration(40)
                         .input(OrePrefix.plate, material, 1)
                         .output(curvedPrefix, material)
@@ -48,7 +50,9 @@ public class EPPartsRecipeHandler {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_ring_%s", material),
                         OreDictUnifier.get(OrePrefix.ring, material),
-                        "h", "S", "B", 'S', new UnificationEntry(OrePrefix.stick, material), 'B', EPToolItems.SMALL_BENDING_CYLINDER);
+                        "h", "S", "B",
+                        'S', new UnificationEntry(OrePrefix.stick, material),
+                        'B', EPToolItems.SMALL_BENDING_CYLINDER);
             }
         }
     }
@@ -57,7 +61,9 @@ public class EPPartsRecipeHandler {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_spring_%s", material),
                         OreDictUnifier.get(OrePrefix.spring, material),
-                        "hSB", 'S', new UnificationEntry(OrePrefix.stickLong, material), 'B', EPToolItems.BENDING_CYLINDER);
+                        "hSB",
+                        'S', new UnificationEntry(OrePrefix.stickLong, material),
+                        'B', EPToolItems.BENDING_CYLINDER);
             }
         }
     }
@@ -66,7 +72,9 @@ public class EPPartsRecipeHandler {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_small_spring_%s", material),
                         OreDictUnifier.get(OrePrefix.springSmall, material),
-                        "hSB", 'S', new UnificationEntry(OrePrefix.stick, material), 'B', EPToolItems.SMALL_BENDING_CYLINDER);
+                        "hSB",
+                        'S', new UnificationEntry(OrePrefix.stick, material),
+                        'B', EPToolItems.SMALL_BENDING_CYLINDER);
             }
         }
     }
@@ -75,7 +83,9 @@ public class EPPartsRecipeHandler {
             if (!material.hasFlag(MaterialFlags.NO_SMASHING)) {
                 ModHandler.addShapedRecipe(String.format("bending_foil_%s", material),
                         OreDictUnifier.get(OrePrefix.foil, material, 2),
-                        "hPB", 'P', new UnificationEntry(OrePrefix.plate,material), 'B', EPToolItems.SMALL_BENDING_CYLINDER);
+                        "hPB",
+                        'P', new UnificationEntry(OrePrefix.plate,material),
+                        'B', EPToolItems.SMALL_BENDING_CYLINDER);
             }
         }
     }

@@ -12,6 +12,7 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
+import gregtech.common.blocks.BlockSteamCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.loaders.recipe.CraftingComponent;
@@ -188,6 +189,22 @@ public class MetaTileEntityRecipes {
         );
 
         //  Vacuum Chamber recipes
+        ModHandler.addShapedRecipe(true, "steam_vacuum_chamber_bronze", STEAM_VACUUM_CHAMBER[0].getStackForm(),
+                "GCG", "PHP", "GWG",
+                'W', new UnificationEntry(pipeTinyFluid, Bronze),
+                'C', GLASS_TUBE.getStackForm(),
+                'P', ELECTRIC_PUMP_ULV.getStackForm(),
+                'G', "blockGlass",
+                'H', MetaBlocks.STEAM_CASING.getItemVariant(BlockSteamCasing.SteamCasingType.BRONZE_HULL));
+
+        ModHandler.addShapedRecipe(true, "steam_vacuum_chamber_steel", STEAM_VACUUM_CHAMBER[1].getStackForm(),
+                "GCG", "PHP", "GWG",
+                'W', new UnificationEntry(pipeTinyFluid, TinAlloy),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.ULV),
+                'P', ELECTRIC_PUMP_ULV.getStackForm(),
+                'G', "blockGlass",
+                'H', MetaBlocks.STEAM_CASING.getItemVariant(BlockSteamCasing.SteamCasingType.STEEL_HULL));
+
         MetaTileEntityLoader.registerMachineRecipe(true, VACUUM_CHAMBER,
                 "GCG", "PHP", "GWG",
                 'W', CraftingComponent.CABLE,
