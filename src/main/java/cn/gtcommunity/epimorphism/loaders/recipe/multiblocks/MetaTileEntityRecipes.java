@@ -10,6 +10,7 @@ import gregtech.api.unification.material.MarkerMaterials;
 
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -511,6 +512,16 @@ public class MetaTileEntityRecipes {
                 'H', MetaTileEntities.HULL[ZPM].getStackForm(),
                 'P', ELECTRIC_PUMP_ZPM.getStackForm()
         );
+
+        //  Large Vacuum Chamber
+        ModHandler.addShapedRecipe(true, "large_vacuum_chamber", LARGE_VACUUM_CHAMBER.getStackForm(),
+                "GXG", "PCQ", "GWG",
+                'C', VACUUM_CHAMBER[5].getStackForm(),
+                'P', ELECTRIC_PUMP_IV.getStackForm(),
+                'Q', FLUID_REGULATOR_IV.getStackForm(),
+                'X', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
+                'W', new UnificationEntry(cableGtSingle, Platinum),
+                'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS));
     }
 
     private static void GCYMOverrideRecipes() {

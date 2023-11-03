@@ -287,6 +287,7 @@ tile.ep_multiblock_casing.reflective_casing.name=抗形变反射面机器外壳
 tile.ep_multiblock_casing_b.maraging_steel_casing.name=高耐久马氏体时效钢250机器外壳
 tile.ep_multiblock_casing_b.general_processing_casing.name=通用加工机械方块
 tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
+tile.ep_multiblock_casing_b.babbitt_alloy_casing.name=抗瘿巴氏合金机械方块
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -639,6 +640,8 @@ epimorphism.machine.pcb_factory.biological_chamber=生物室控制模块：%s
 epimorphism.machine.pcb_factory.cooling_tower=冷却塔控制模块：%s
 epimorphism.machine.pcb_factory.module.false=§4离线
 epimorphism.machine.pcb_factory.module.true=§2在线
+
+epimorphism.machine.large_vacuum_chamber.name=大型真空室
 
 #  Materials
 
@@ -1066,5 +1069,6 @@ gregtech.material.lafium=路菲恩
 gregtech.material.black_titanium=黑钛合金
 gregtech.material.talonite=铬钴磷酸盐合金
 gregtech.material.black_plutonium=黑钚
-gregtech.material.maraging_steel_250=马氏体时效钢-250
+gregtech.material.maraging_steel_250=马氏体时效钢250
 gregtech.material.staballoy=贫铀合金
+gregtech.material.babbitt_alloy=巴氏合金

@@ -26,7 +26,8 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
     }
     public static enum CasingType implements IStringSerializable {
         GENERAL_PROCESSING_CASING("general_processing_casing"),
-        MARAGING_STEEL_CASING("maraging_steel_casing");
+        MARAGING_STEEL_CASING("maraging_steel_casing"),
+        BABBITT_ALLOY_CASING("babbitt_alloy_casing");
         private final String name;
 
         CasingType(String name) {

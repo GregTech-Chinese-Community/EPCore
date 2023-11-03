@@ -80,6 +80,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityHyperReactorMk1 HYPER_REACTOR_MK1;
     public static EPMetaTileEntityHyperReactorMk2 HYPER_REACTOR_MK2;
     public static EPMetaTileEntityHyperReactorMk3 HYPER_REACTOR_MK3;
+    public static EPMetaTileEntityLargeVacuumChamber LARGE_VACUUM_CHAMBER;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -155,5 +156,6 @@ public class EPMetaTileEntities {
         HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
         HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(39, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
+        LARGE_VACUUM_CHAMBER = registerMultiMetaTileEntity(40, new EPMetaTileEntityLargeVacuumChamber(epId("large_vacuum_chamber")));
     }
 }
