@@ -21,7 +21,6 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockTurbineCasing;
 import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityRotorHolder;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 import static gregtech.api.util.GTUtility.*;

@@ -672,6 +672,7 @@ public class MachineComponents {
                 .EUt(1920)
                 .duration(480)
                 .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, HSSS)
                 .input(gear, Inconel625, 3)
@@ -683,6 +684,7 @@ public class MachineComponents {
                 .EUt(32720)
                 .duration(1200)
                 .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.BOILER_CASING.getItemVariant(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE))
                 .input(frameGt, MaragingSteel300)
@@ -693,6 +695,7 @@ public class MachineComponents {
                 .EUt(28560)
                 .duration(680)
                 .buildAndRegister();
+
         //  Flotation Factory
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(MetaTileEntities.HULL[EV], 2)
@@ -705,6 +708,7 @@ public class MachineComponents {
                 .EUt(4480)
                 .duration(1080)
                 .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, HSSG)
                 .input(plate, HSSG, 4)
@@ -716,6 +720,7 @@ public class MachineComponents {
                 .EUt(11300)
                 .duration(580)
                 .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.BOILER_CASING.getItemVariant(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE))
                 .input(frameGt, WatertightSteel)
@@ -727,6 +732,7 @@ public class MachineComponents {
                 .EUt(23760)
                 .duration(1200)
                 .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(MetaBlocks.MULTIBLOCK_CASING.getItemVariant(BlockMultiblockCasing.MultiblockCasingType.EXTREME_ENGINE_INTAKE_CASING))
                 .input(frameGt, HastelloyN)
@@ -739,6 +745,7 @@ public class MachineComponents {
                 .EUt(VA[5])
                 .duration(880)
                 .buildAndRegister();
+
         //  Mill Ball Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, TungstenSteel)
@@ -751,6 +758,7 @@ public class MachineComponents {
                 .EUt(7680)
                 .duration(1600)
                 .buildAndRegister();
+
         //  Catalyst Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, Titanium)
@@ -763,6 +771,7 @@ public class MachineComponents {
                 .EUt(VA[HV])
                 .duration(1200)
                 .buildAndRegister();
+
         //  Buffer Hatch
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(frameGt, RhodiumPlatedPalladium)
@@ -774,6 +783,124 @@ public class MachineComponents {
                 .outputs(MULTIPART_BUFFER_HATCH.getStackForm())
                 .EUt(VA[IV])
                 .duration(1800)
+                .buildAndRegister();
+
+        //  Reinforced Rotor Holder
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, RhodiumPlatedPalladium)
+                .inputs(ROTOR_HOLDER[3].getStackForm())
+                .input(ELECTRIC_MOTOR_LuV, 2)
+                .input(rotor, Staballoy, 4)
+                .input(stickLong, Titanium, 2)
+                .input(wireFine, Platinum, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .outputs(REINFORCED_ROTOR_HOLDER[0].getStackForm())
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, NaquadahAlloy)
+                .inputs(ROTOR_HOLDER[4].getStackForm())
+                .input(ELECTRIC_MOTOR_ZPM, 2)
+                .input(rotor, Inconel792, 4)
+                .input(stickLong, TungstenSteel, 2)
+                .input(wireFine, NiobiumTitanium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .outputs(REINFORCED_ROTOR_HOLDER[1].getStackForm())
+                .EUt(VA[ZPM])
+                .duration(1200)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Darmstadtium)
+                .inputs(ROTOR_HOLDER[5].getStackForm())
+                .input(ELECTRIC_MOTOR_UV, 2)
+                .input(rotor, Inconel625, 4)
+                .input(stickLong, RhodiumPlatedPalladium, 2)
+                .input(wireFine, VanadiumGallium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .outputs(REINFORCED_ROTOR_HOLDER[2].getStackForm())
+                .EUt(VA[UV])
+                .duration(1200)
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Draconium)
+                .inputs(REINFORCED_ROTOR_HOLDER[2].getStackForm())
+                .input(ELECTRIC_MOTOR_UHV, 2)
+                .input(CONVEYOR_MODULE_UHV, 2)
+                .input(rotor, Adamantium, 4)
+                .input(stickLong, HSSS, 2)
+                .input(wireFine, YttriumBariumCuprate, 32)
+                .fluidInputs(SolderingAlloy.getFluid(L * 10))
+                .outputs(REINFORCED_ROTOR_HOLDER[3].getStackForm())
+                .EUt(VA[UHV])
+                .duration(1200)
+                .scannerResearch(b -> b
+                        .researchStack(REINFORCED_ROTOR_HOLDER[2].getStackForm())
+                        .EUt(VA[UV])
+                        .duration(600))
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Fullerene)
+                .inputs(REINFORCED_ROTOR_HOLDER[3].getStackForm())
+                .input(ELECTRIC_MOTOR_UEV, 2)
+                .input(CONVEYOR_MODULE_UEV, 2)
+                .input(rotor, Neutronium, 4) // TODO may be find better material
+                .input(stickLong, PlutoniumPhosphide, 2)
+                .input(wireFine, ThalliumCopperChloride, 32)
+                .fluidInputs(SolderingAlloy.getFluid(L * 10))
+                .outputs(REINFORCED_ROTOR_HOLDER[4].getStackForm())
+                .EUt(VA[UEV])
+                .duration(1200)
+                .scannerResearch(b -> b
+                        .researchStack(REINFORCED_ROTOR_HOLDER[3].getStackForm())
+                        .EUt(VA[UHV])
+                        .duration(1200))
+                .buildAndRegister();
+
+        //  TODO UIV Reinforced Rotor Holder
+
+        //  Industrial Maintenance Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MAINTENANCE_HATCH.getStackForm())
+                .input(circuit, MarkerMaterials.Tier.LuV)
+                .input(EMITTER_LuV)
+                .input(SENSOR_LuV)
+                .input(cableGtSingle, Platinum, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .outputs(INDUSTRIAL_MAINTENANCE_HATCH.getStackForm())
+                .EUt(VA[IV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Universal Processing Unit
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, MaragingSteel250)
+                .input(FIELD_GENERATOR_LuV, 2)
+                .inputs(COMPRESSOR[LuV].getStackForm())
+                .inputs(LATHE[LuV].getStackForm())
+                .inputs(POLARIZER[LuV].getStackForm())
+                .inputs(FERMENTER[LuV].getStackForm())
+                .inputs(EXTRACTOR[LuV].getStackForm())
+                .inputs(CANNER[LuV].getStackForm())
+                .inputs(LASER_ENGRAVER[LuV].getStackForm())
+                .inputs(AUTOCLAVE[LuV].getStackForm())
+                .inputs(FLUID_SOLIDIFIER[LuV].getStackForm())
+                .input(plate, HSSS, 4)
+                .input(cableGtQuadruple, Platinum, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Osmiridium.getFluid(L * 16))
+                .fluidInputs(VanadiumGallium.getFluid(L * 8))
+                .outputs(GENERAL_PROCESSING_PLANT.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.GENERAL_PROCESSING_CASING))
+                        .EUt(IV)
+                        .duration(3600))
+                .EUt(VA[LuV])
+                .duration(1200)
                 .buildAndRegister();
     }
 
