@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.capability.IBuffer;
@@ -277,7 +277,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
 
     @Override
     public MultiblockAbility<IBuffer> getAbility() {
-        return EPMultiblockAbilities.BUFFER_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbility.BUFFER_MULTIBLOCK_ABILITY;
     }
 
     @Override

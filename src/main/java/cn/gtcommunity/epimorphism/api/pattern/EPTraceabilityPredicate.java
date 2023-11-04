@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.pattern;
 import cn.gtcommunity.epimorphism.api.EPAPI;
 import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
 import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.pattern.predicates.TierTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
 import gregtech.api.capability.IRotorHolder;
@@ -50,7 +51,7 @@ public class EPTraceabilityPredicate {
     public static Supplier<TraceabilityPredicate> ROTOR_HOLDER = () -> new TraceabilityPredicate(blockWorldState -> {
         TileEntity tileEntity = blockWorldState.getTileEntity();
         if (tileEntity instanceof IGregTechTileEntity) {
-            List<ResourceLocation> list = MultiblockAbility.REGISTRY.get(MultiblockAbility.ROTOR_HOLDER).stream()
+            List<ResourceLocation> list = MultiblockAbility.REGISTRY.get(EPMultiblockAbility.REINFORCED_ROTOR_MULTIBLOCK_ABILITY).stream()
                     .map(mte -> mte.metaTileEntityId)
                     .collect(Collectors.toList());
             MetaTileEntity mte = ((IGregTechTileEntity)tileEntity).getMetaTileEntity();
@@ -67,7 +68,7 @@ public class EPTraceabilityPredicate {
             }
         }
         return false;
-    }, () -> MultiblockAbility.REGISTRY.get(MultiblockAbility.ROTOR_HOLDER).stream()
+    }, () -> MultiblockAbility.REGISTRY.get(EPMultiblockAbility.REINFORCED_ROTOR_MULTIBLOCK_ABILITY).stream()
             .sorted(Comparator.comparingInt(mte -> ((ITieredMetaTileEntity) mte).getTier()))
             .map(mte -> new BlockInfo(MetaBlocks.MACHINE.getDefaultState(), EPUniverUtil.getTileEntity(mte)))
             .toArray(BlockInfo[]::new))

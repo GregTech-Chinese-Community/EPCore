@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IBall;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
@@ -158,7 +158,7 @@ public class EPMetaTileEntityMillBallHatch extends MetaTileEntityMultiblockPart 
 
     @Override
     public MultiblockAbility<IBall> getAbility() {
-        return EPMultiblockAbilities.GRINDBALL_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbility.GRINDBALL_MULTIBLOCK_ABILITY;
     }
 
     @Override

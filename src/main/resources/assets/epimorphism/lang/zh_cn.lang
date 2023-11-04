@@ -451,6 +451,14 @@ epimorphism.multiblock.universal.problem.soldering_iron=%s§7电路板短路了�
 
 epimorphism.multiblock.pattern.error.rotor_holder=必须使用同一等级的转子固定器
 
+epimorphism.multiblock.mega_turbine.description=特大涡轮是大型涡轮的升级版。
+
+epimorphism.machine.mega_turbine.steam.name=特大蒸汽涡轮
+epimorphism.machine.mega_turbine.gas.name=特大燃气涡轮
+epimorphism.machine.mega_turbine.plasma.name=特大等离子涡轮
+epimorphism.machine.mega_turbine.mode.0=正常模式
+epimorphism.machine.mega_turbine.mode.1=高速模式
+
 epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
 epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
 epimorphism.machine.large_naquadah_reactor.tooltip.2=最高产生§3UV§7级的能量
@@ -533,6 +541,13 @@ epimorphism.machine.catalyst_hatch.name=催化剂仓
 epimorphism.multipart.catalyst.only=仅能放入当前反应的催化剂
 
 epimorphism.machine.industrial_maintenance_hatch.name=工业级维护仓
+
+epimorphism.machine.reinforced_rotor_holder.luv.name=强化转子固定器（LuV）
+epimorphism.machine.reinforced_rotor_holder.zpm.name=强化转子固定器（ZPM）
+epimorphism.machine.reinforced_rotor_holder.uv.name=强化转子固定器（UV）
+epimorphism.machine.reinforced_rotor_holder.uhv.name=强化转子固定器（UHV）
+epimorphism.machine.reinforced_rotor_holder.uev.name=强化转子固定器（UEV）
+epimorphism.machine.reinforced_rotor_holder.uiv.name=强化转子固定器（UIV）
 
 epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
