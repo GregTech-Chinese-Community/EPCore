@@ -31,6 +31,7 @@ import gregtech.common.items.behaviors.TurbineRotorBehavior;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
@@ -266,7 +267,7 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
                 .where('C', states(getCasingState()))
                 .where('G', states(getGearBoxState()))
                 .where('R', EPTraceabilityPredicate.ROTOR_HOLDER.get())
-                .where('M', states(getCasingState()).or(abilities(MultiblockAbility.MUFFLER_HATCH).setExactLimit(1)))
+                .where('M', states(getCasingState()).or(abilities(MultiblockAbility.MUFFLER_HATCH)))
                 .where('A', states(getCasingState())
                         .or(abilities(MultiblockAbility.OUTPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2))
                         .or(abilities(MultiblockAbility.MAINTENANCE_HATCH).setExactLimit(1))
@@ -347,7 +348,7 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
-        tooltip.add(I18n.format("gregtech.universal.tooltip.base_production_eut", GTValues.V[tier] * 2));
+        tooltip.add(I18n.format("gregtech.universal.tooltip.base_production_eut", GTValues.V[tier] * 2 * 16));
         tooltip.add(I18n.format("gregtech.multiblock.turbine.efficiency_tooltip", GTValues.VNF[tier]));
     }
 
@@ -415,5 +416,29 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
     @Override
     protected boolean shouldShowVoidingModeButton() {
         return false;
+    }
+
+    @Override
+    public void writeInitialSyncData(PacketBuffer buf) {
+        super.writeInitialSyncData(buf);
+        buf.writeByte(mode);
+    }
+
+    @Override
+    public void receiveInitialSyncData(PacketBuffer buf) {
+        super.receiveInitialSyncData(buf);
+        this.mode = buf.readByte();
+    }
+
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound data) {
+        data.setByte("mode", (byte) mode);
+        return super.writeToNBT(data);
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound data) {
+        super.readFromNBT(data);
+        this.mode = data.getByte("mode");
     }
 }
