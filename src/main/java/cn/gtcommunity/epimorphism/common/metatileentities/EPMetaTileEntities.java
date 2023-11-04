@@ -86,6 +86,9 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityLargeVacuumChamber LARGE_VACUUM_CHAMBER;
 //    public static EPMetaTileEntityMegaTurbine MEGA_STEAM_TURBINE;
 
+
+    public static EPMetaTileEntityPlasmaCondenser PLASMA_CONDENSER;
+
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
         machines[0] = registerMetaTileEntity(startId, new SimpleSteamMetaTileEntity(epId(String.format("%s.bronze", name)), recipeMap, progressIndicator, texture, isBricked, false));
@@ -162,5 +165,6 @@ public class EPMetaTileEntities {
         HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(39, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
         LARGE_VACUUM_CHAMBER = registerMultiMetaTileEntity(40, new EPMetaTileEntityLargeVacuumChamber(epId("large_vacuum_chamber")));
 //        MEGA_STEAM_TURBINE = registerMultiMetaTileEntity(41, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.steam"), RecipeMaps.GAS_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), Textures.CLEAN_STAINLESS_STEEL_CASING, false, Textures.LARGE_GAS_TURBINE_OVERLAY));
+        PLASMA_CONDENSER = registerMultiMetaTileEntity(44, new EPMetaTileEntityPlasmaCondenser(epId("plasma_condenser")));
     }
 }

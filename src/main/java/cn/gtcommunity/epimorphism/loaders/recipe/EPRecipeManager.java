@@ -86,5 +86,6 @@ public class EPRecipeManager {
         NaquadahReactorRecipes.init();
         FuelRefineFactoryRecipes.init();
         HyperReactorRecipes.init();
+        PlasmaCondenserRecipes.init();
     }
 }
