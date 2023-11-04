@@ -332,6 +332,7 @@ public class EPMetaTileEntityReinforcedRotorHolder extends MetaTileEntityMultibl
             this.frontFaceFree = buf.readBoolean();
         } else if (dataId == EPDataCode.EP_CHANNEL_5) {
             this.rotorColor = buf.readInt();
+            scheduleRenderUpdate();
         }
     }
 
