@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PHChangeProperty;
@@ -87,7 +87,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
                 .aisle("AXXXA", "XEEEX", "XEEEX", "XEEEX", "XEEEX", "XEEEX", "AXXXA")
                 .aisle("FAAAF", "FXSXF", "FXGXF", "FXGXF", "FXGXF", "FXXXF", "AAAAA")
                 .where('S', selfPredicate())
-                .where('X', states(getCasingState()).setMinGlobalLimited(42).or(autoAbilities()).or(abilities(EPMultiblockAbilities.BUFFER_MULTIBLOCK_ABILITY).setExactLimit(1)))
+                .where('X', states(getCasingState()).setMinGlobalLimited(42).or(autoAbilities()).or(abilities(EPMultiblockAbility.BUFFER_MULTIBLOCK_ABILITY).setExactLimit(1)))
                 .where('G', states(getGlassState()))
                 .where('F', states(getFrameState()))
                 .where('P', states(getBoilerState()))

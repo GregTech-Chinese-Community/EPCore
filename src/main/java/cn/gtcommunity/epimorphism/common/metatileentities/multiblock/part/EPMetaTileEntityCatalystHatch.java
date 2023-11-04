@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.ICatalyst;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import gregtech.api.capability.impl.NotifiableItemStackHandler;
@@ -112,7 +112,7 @@ public class EPMetaTileEntityCatalystHatch extends MetaTileEntityMultiblockNotif
 
     @Override
     public MultiblockAbility<ICatalyst> getAbility() {
-        return EPMultiblockAbilities.CATALYST_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IIndustrialMaintenance;
 import cn.gtcommunity.epimorphism.api.items.toolitem.EPToolClasses;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
@@ -333,7 +333,7 @@ public class EPMetaTileEntityIndustrialMaintenanceHatch extends MetaTileEntityMu
 
     @Override
     public MultiblockAbility<IIndustrialMaintenance> getAbility() {
-        return EPMultiblockAbilities.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY;
+        return EPMultiblockAbility.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY;
     }
 
     @Override
