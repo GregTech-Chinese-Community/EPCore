@@ -7,19 +7,21 @@ import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityBufferHatch;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityCatalystHatch;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityIndustrialMaintenanceHatch;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.EPMetaTileEntityMillBallHatch;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityMegaTurbine;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.*;
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockTurbineCasing;
+import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityRotorHolder;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 import static gregtech.api.util.GTUtility.*;
@@ -32,6 +34,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityMillBallHatch MULTIPART_BALL_HATCH;
     public static EPMetaTileEntityCatalystHatch MULTIPART_CATALYST_HATCH;
     public static EPMetaTileEntityIndustrialMaintenanceHatch INDUSTRIAL_MAINTENANCE_HATCH;
+    public static final EPMetaTileEntityReinforcedRotorHolder[] REINFORCED_ROTOR_HOLDER = new EPMetaTileEntityReinforcedRotorHolder[6]; //LuV, ZPM, UV, UHV, UEV, UIV
 
     //  SingleBlock---SimpleMachines Range:301-600
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
@@ -69,7 +72,7 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityBiologicalReactionChamber BIOLOGICAL_REACTION_CHAMBER;
 //    public static EPMetaTileEntityComputingTerminal COMPUTING_TERMINAL;
 //    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
-//    public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
+    public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
 //    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
@@ -80,7 +83,9 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityHyperReactorMk2 HYPER_REACTOR_MK2;
     public static EPMetaTileEntityHyperReactorMk3 HYPER_REACTOR_MK3;
     public static EPMetaTileEntityLargeVacuumChamber LARGE_VACUUM_CHAMBER;
-//    public static EPMetaTileEntityMegaTurbine MEGA_STEAM_TURBINE;
+    public static EPMetaTileEntityMegaTurbine MEGA_STEAM_TURBINE;
+    public static EPMetaTileEntityMegaTurbine MEGA_GAS_TURBINE;
+    public static EPMetaTileEntityMegaTurbine MEGA_PLASMA_TURBINE;
 
 
     public static EPMetaTileEntityPlasmaCondenser PLASMA_CONDENSER;
@@ -110,6 +115,13 @@ public class EPMetaTileEntities {
         MULTIPART_BALL_HATCH = registerSingleMetaTileEntity(2, new EPMetaTileEntityMillBallHatch(epId("mill_ball_hatch")));
         MULTIPART_CATALYST_HATCH = registerSingleMetaTileEntity(3, new EPMetaTileEntityCatalystHatch(epId("catalyst_hatch")));
         INDUSTRIAL_MAINTENANCE_HATCH = registerSingleMetaTileEntity(4, new EPMetaTileEntityIndustrialMaintenanceHatch(epId("industrial_maintenance_hatch")));
+        // Reinforced Rotor Holder
+        REINFORCED_ROTOR_HOLDER[0] = registerSingleMetaTileEntity(5, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.luv"), GTValues.LuV));
+        REINFORCED_ROTOR_HOLDER[1] = registerSingleMetaTileEntity(6, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.zpm"), GTValues.ZPM));
+        REINFORCED_ROTOR_HOLDER[2] = registerSingleMetaTileEntity(7, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uv"), GTValues.UV));
+        REINFORCED_ROTOR_HOLDER[3] = registerSingleMetaTileEntity(8, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uhv"), GTValues.UHV));
+        REINFORCED_ROTOR_HOLDER[4] = registerSingleMetaTileEntity(9, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uev"), GTValues.UEV));
+        REINFORCED_ROTOR_HOLDER[5] = registerSingleMetaTileEntity(10, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uiv"), GTValues.UIV));
 
         //  SimpleMachines: Id 12601_12900   15 ids for each machine
         registerSimpleMetaTileEntity(DRYER, 12601, "dryer", EPRecipeMaps.DRYER_RECIPES, EPTextures.DRYER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
@@ -149,7 +161,7 @@ public class EPMetaTileEntities {
 //        BIOLOGICAL_REACTION_CHAMBER = registerMultiMetaTileEntity(27, new EPMetaTileEntityBiologicalReactionChamber(epId()));
 //        COMPUTING_TERMINAL = registerMultiMetaTileEntity(28, new EPMetaTileEntityComputingTerminal(epId("computing_terminal")));
 //        ELECTRON_CRYOMICROSCOPY = registerMultiMetaTileEntity(29, new EPMetaTileEntityElectronCryomicroscopy(epId()));
-//        COSMIC_RAY_DETECTOR = registerMultiMetaTileEntity(30, new EPMetaTileEntityCosmicRayDetector(epId("cosmic_ray_detector")));
+        COSMIC_RAY_DETECTOR = registerMultiMetaTileEntity(30, new EPMetaTileEntityCosmicRayDetector(epId("cosmic_ray_detector")));
         ION_IMPLANTATER = registerMultiMetaTileEntity(31, new EPMetaTileEntityIonImplantater(epId("ion_implantater")));
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
@@ -160,7 +172,9 @@ public class EPMetaTileEntities {
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
         HYPER_REACTOR_MK3 = registerMultiMetaTileEntity(39, new EPMetaTileEntityHyperReactorMk3(epId("hyper_reactor_mk3")));
         LARGE_VACUUM_CHAMBER = registerMultiMetaTileEntity(40, new EPMetaTileEntityLargeVacuumChamber(epId("large_vacuum_chamber")));
-//        MEGA_STEAM_TURBINE = registerMultiMetaTileEntity(41, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.steam"), RecipeMaps.GAS_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), Textures.CLEAN_STAINLESS_STEEL_CASING, false, Textures.LARGE_GAS_TURBINE_OVERLAY));
+        MEGA_STEAM_TURBINE = registerMultiMetaTileEntity(41, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.steam"), RecipeMaps.STEAM_TURBINE_FUELS, 3, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STEEL_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STEEL_GEARBOX), Textures.SOLID_STEEL_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
+        MEGA_GAS_TURBINE = registerMultiMetaTileEntity(42, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.gas"), RecipeMaps.GAS_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), Textures.CLEAN_STAINLESS_STEEL_CASING, true, EPTextures.MEGA_TURBINE_OVERLAY));
+        MEGA_PLASMA_TURBINE = registerMultiMetaTileEntity(43, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.plasma"), RecipeMaps.PLASMA_GENERATOR_FUELS, 5, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TUNGSTENSTEEL_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TUNGSTENSTEEL_GEARBOX), Textures.ROBUST_TUNGSTENSTEEL_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
         PLASMA_CONDENSER = registerMultiMetaTileEntity(44, new EPMetaTileEntityPlasmaCondenser(epId("plasma_condenser")));
     }
 }

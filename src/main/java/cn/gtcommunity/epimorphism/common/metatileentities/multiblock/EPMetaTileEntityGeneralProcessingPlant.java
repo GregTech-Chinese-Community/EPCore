@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IIndustrialMaintenance;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.unification.EPMaterials;
@@ -73,9 +73,9 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
         if (this.hasMaintenanceMechanics() && ConfigHolder.machines.enableMaintenance) { // nothing extra if no maintenance
-            if (getAbilities(EPMultiblockAbilities.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY).isEmpty())
+            if (getAbilities(EPMultiblockAbility.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY).isEmpty())
                 return;
-            maintenanceHatch = getAbilities(EPMultiblockAbilities.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY).get(0);
+            maintenanceHatch = getAbilities(EPMultiblockAbility.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY).get(0);
             if (maintenanceHatch.startWithoutProblems() && !initialMaintenanceDone) {
                 this.maintenance_problems = (byte) 0b1111111;
                 this.initialMaintenanceDone = true;
@@ -109,7 +109,7 @@ public class EPMetaTileEntityGeneralProcessingPlant extends MultiMapMultiblockCo
                 .where('S', selfPredicate())
                 .where('C', autoAbilities(false, false, true, true, true, true, false))
                 .where('G', states(getCasingAState()))
-                .where('M', abilities(EPMultiblockAbilities.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY))
+                .where('M', abilities(EPMultiblockAbility.INDUSTRIAL_MAINTENANCE_MULTIBLOCK_ABILITY))
                 .where('E',states(getCasingAState()).or(abilities(MultiblockAbility.INPUT_ENERGY)))
                 .where('B', states(getGearBoxState()))
                 .where('P', states(getCasingBState()))

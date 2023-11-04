@@ -8,7 +8,7 @@ import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import cn.gtcommunity.epimorphism.loaders.formula.CatalystFormula;
 import codechicken.lib.render.CCRenderState;
@@ -131,7 +131,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     @Override
     protected void initializeAbilities() {
         List<IItemHandlerModifiable> inputItem = new ArrayList<>(this.getAbilities(MultiblockAbility.IMPORT_ITEMS));
-        inputItem.addAll(this.getAbilities(EPMultiblockAbilities.CATALYST_MULTIBLOCK_ABILITY));
+        inputItem.addAll(this.getAbilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY));
         this.inputInventory = new ItemHandlerList(inputItem);
         this.inputFluidInventory = new FluidTankList(this.allowSameFluidFillForOutputs(), this.getAbilities(MultiblockAbility.IMPORT_FLUIDS));
         this.outputInventory = new ItemHandlerList(this.getAbilities(MultiblockAbility.EXPORT_ITEMS));
@@ -169,7 +169,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMinGlobalLimited(1).setPreviewCount(1))
-                        .or(abilities(EPMultiblockAbilities.CATALYST_MULTIBLOCK_ABILITY).setMaxGlobalLimited(2).setPreviewCount(1))
+                        .or(abilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY).setMaxGlobalLimited(2).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2).setPreviewCount(1)))
                 .where('C',EPTraceabilityPredicate.EP_CP_CASING.get())
                 .where('X', heatingCoils())
@@ -300,7 +300,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
         @Override
         public boolean checkRecipe(@Nonnull Recipe recipe) {
             if (super.checkRecipe(recipe) && (recipe.getProperty(CasingTierProperty.getInstance(), 0) <= tier)) {
-                List<ItemStack> list = getAbilities(EPMultiblockAbilities.CATALYST_MULTIBLOCK_ABILITY).stream().map(c -> c.getStackInSlot(0)).filter(c -> !c.isEmpty()).collect(Collectors.toList());
+                List<ItemStack> list = getAbilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY).stream().map(c -> c.getStackInSlot(0)).filter(c -> !c.isEmpty()).collect(Collectors.toList());
                 List<GTRecipeInput> list_r = recipe.getInputs().stream().filter(GTRecipeInput::isNonConsumable).filter(r -> !CatalystFormula.checkCatalyst(Arrays.stream(r.getInputStacks()).collect(Collectors.toList()))).collect(Collectors.toList());
                 int count = 0;
                 for (GTRecipeInput input_r : list_r) {

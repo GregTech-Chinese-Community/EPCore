@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.EPMultiblockAbilities;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IBall;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.GrindBallTierProperty;
@@ -72,7 +72,7 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
                 .where('E', states(getCasingState()).setMinGlobalLimited(31)
                         .or(abilities(MultiblockAbility.MUFFLER_HATCH).setExactLimit(1))
                         .or(abilities(MultiblockAbility.MAINTENANCE_HATCH).setExactLimit(1))
-                        .or(abilities(EPMultiblockAbilities.GRINDBALL_MULTIBLOCK_ABILITY).setExactLimit(1))
+                        .or(abilities(EPMultiblockAbility.GRINDBALL_MULTIBLOCK_ABILITY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2).setPreviewCount(1)))
@@ -81,7 +81,7 @@ public class EPMetaTileEntityIsaMill extends RecipeMapMultiblockController {
     }
 
     public IBall getBallHolder() {
-        List<IBall> abilities = getAbilities(EPMultiblockAbilities.GRINDBALL_MULTIBLOCK_ABILITY);
+        List<IBall> abilities = getAbilities(EPMultiblockAbility.GRINDBALL_MULTIBLOCK_ABILITY);
         if (abilities.isEmpty())
             return null;
         return abilities.get(0);
