@@ -421,6 +421,7 @@ public EPMaterials() {}
     public static Material Staballoy;
     public static Material BabbittAlloy;
     public static Material ZirconiumCarbide;
+    public static Material Inconel792;
 
     //  Mod Compatibility Materials
     public static Material Mana;

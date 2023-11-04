@@ -181,6 +181,16 @@ public class EPMachineCasingMaterials {
                 .blastTemp(1200, BlastProperty.GasTier.MID, VA[HV], 344)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
+        //  24516 Inconel-792
+        Inconel792 = new Material.Builder(getMaterialsId(), gregtechId("inconel_792"))
+                .ingot()
+                .fluid()
+                .color(0x6CF076)
+                .iconSet(SHINY)
+                .components(Nickel, 2, Niobium, 1, Aluminium, 2, Nichrome, 1)
+                .blastTemp(6200, BlastProperty.GasTier.HIGHER, VA[IV], 1266)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .build();
     }
 
     private static int getMaterialsId() {
