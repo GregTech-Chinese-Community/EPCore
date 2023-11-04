@@ -27,7 +27,7 @@ public class EPMachineCasingMaterials {
                 .fluidPipeProperties(5500, 640, true, true, true, false)
                 .color(0x3fcc60)
                 .iconSet(METALLIC)
-                .flags(GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_GEAR)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
                 .blastTemp(4850, BlastProperty.GasTier.HIGHEST, VA[IV], 1000)
                 .components(Nickel, 8, Chrome, 6, Molybdenum, 4, Niobium, 4, Titanium, 3, Iron, 2, Aluminium, 2)
                 .build();
@@ -158,7 +158,7 @@ public class EPMachineCasingMaterials {
                 .color(0x444B42)
                 .iconSet(SHINY)
                 .blastTemp(3450, BlastProperty.GasTier.HIGH, VA[EV], 462)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
                 .components(Uranium238, 9, Titanium, 1)
                 .build();
         //  24514 Babbitt Alloy
@@ -189,7 +189,8 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(Nickel, 2, Niobium, 1, Aluminium, 2, Nichrome, 1)
                 .blastTemp(6200, BlastProperty.GasTier.HIGHER, VA[IV], 1266)
-                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
+                .fluidPipeProperties(4900, 220, true, true, true, false)
                 .build();
     }
 
