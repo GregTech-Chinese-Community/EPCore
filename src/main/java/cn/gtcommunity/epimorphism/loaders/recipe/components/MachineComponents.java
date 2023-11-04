@@ -630,6 +630,21 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Zirconium Carbide Casing
+        ModHandler.addShapedRecipe(true, "zirconium_carbide_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.ZIRCONIUM_CARBIDE_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, ZirconiumCarbide),
+                'F', new UnificationEntry(frameGt, ZirconiumCarbide));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, ZirconiumCarbide, 6)
+                .input(frameGt, ZirconiumCarbide)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.ZIRCONIUM_CARBIDE_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
@@ -773,6 +788,16 @@ public class MachineComponents {
                 .output(dust, BabbittAlloy, 50)
                 .EUt(VA[HV])
                 .duration(1200)
+                .buildAndRegister();
+
+        //  Zirconium Carbide
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Zirconium, 1)
+                .input(dust, Carbon, 1)
+                .circuitMeta(2)
+                .output(dust, ZirconiumCarbide, 2)
+                .EUt(VA[EV])
+                .duration(220)
                 .buildAndRegister();
 
         //  Staballoy

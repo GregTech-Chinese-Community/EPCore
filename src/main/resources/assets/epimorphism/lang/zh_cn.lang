@@ -292,6 +292,7 @@ tile.ep_multiblock_casing_b.general_processing_casing.name=通用加工机械方
 tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机器外壳
 tile.ep_multiblock_casing_b.babbitt_alloy_casing.name=抗瘿巴氏合金机器外壳
 tile.ep_multiblock_casing.vacuum_casing.name=高气密红钢机器外壳
+tile.ep_multiblock_casing_b.zirconium_carbide_casing.name=超耐热碳化锆机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -654,6 +655,9 @@ epimorphism.machine.pcb_factory.module.false=§4离线
 epimorphism.machine.pcb_factory.module.true=§2在线
 
 epimorphism.machine.large_vacuum_chamber.name=大型真空室
+
+epimorphism.machine.plasma_condenser.name=等离子冷凝器
+recipemap.plasma_condenser_recipes.name=等离子冷凝
 
 #  Materials
 
@@ -1086,3 +1090,4 @@ gregtech.material.black_plutonium=黑钚
 gregtech.material.maraging_steel_250=马氏体时效钢250
 gregtech.material.staballoy=贫铀合金
 gregtech.material.babbitt_alloy=巴氏合金
+gregtech.material.zirconium_carbide=碳化锆

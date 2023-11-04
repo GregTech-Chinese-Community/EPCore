@@ -171,6 +171,16 @@ public class EPMachineCasingMaterials {
                 .blastTemp(737, BlastProperty.GasTier.MID, VA[MV], 214)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
+        //  24515 Zirconium Carbide
+        ZirconiumCarbide = new Material.Builder(getMaterialsId(), gregtechId("zirconium_carbide"))
+                .ingot()
+                .fluid()
+                .color(0xFFDACD)
+                .iconSet(SHINY)
+                .components(Zirconium, 1, Carbon, 1)
+                .blastTemp(1200, BlastProperty.GasTier.MID, VA[HV], 344)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .build();
     }
 
     private static int getMaterialsId() {

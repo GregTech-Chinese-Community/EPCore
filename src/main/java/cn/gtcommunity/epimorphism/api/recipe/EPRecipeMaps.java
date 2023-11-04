@@ -79,6 +79,8 @@ public class EPRecipeMaps {
     public static final RecipeMapGeneral<SimpleRecipeBuilder> GENERAL_RECIPES_C;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> FUEL_REFINE_FACTORY_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> PLASMA_CONDENSER_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -243,6 +245,11 @@ public class EPRecipeMaps {
                 .setSlotOverlay(true, true, GuiTextures.VIAL_OVERLAY_2)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTValues.FOOLS.get() ? GTSoundEvents.SCIENCE : GTSoundEvents.CHEMICAL_REACTOR);
+
+        //  Plasma Condenser Recipemap
+        PLASMA_CONDENSER_RECIPES = new RecipeMap<>("plasma_condenser_recipes", 0, 2, 0, 2, 0, 2, 0, 2, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.ARC);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

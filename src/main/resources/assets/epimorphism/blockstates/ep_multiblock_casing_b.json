@@ -19,6 +19,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/babbitt_alloy_casing"
         }
+      },
+      "zirconium_carbide_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/zirconium_carbide_casing"
+        }
       }
     }
   }
