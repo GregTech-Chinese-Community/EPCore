@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.*;
 
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -78,6 +79,8 @@ public class EPMaterialPropertyAddition {
         RedSteel.addFlags(GENERATE_DOUBLE_PLATE);
         Ruthenium.addFlags(GENERATE_DOUBLE_PLATE);
         TitaniumCarbide.addFlags(GENERATE_DOUBLE_PLATE);
+        Tritanium.addFlags(GENERATE_CURVED_PLATE, GENERATE_ROTOR);
+        Nichrome.addFlags(GENERATE_FINE_WIRE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
