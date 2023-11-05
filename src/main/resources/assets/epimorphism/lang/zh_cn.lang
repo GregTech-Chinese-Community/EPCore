@@ -688,6 +688,7 @@ gregtech.material.plutonium_244=钚-244
 gregtech.material.metastable_oganesson=亚稳态气奥
 gregtech.material.metastable_hassium=亚稳态钅黑
 gregtech.material.metastable_flerovium=亚稳态钅夫
+gregtech.material.cosmic_neutronium=宇宙中子素
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -900,6 +901,8 @@ gregtech.material.sodium_phosphotungstate=磷钨酸钠
 gregtech.material.sodium_molybdate=钼酸钠
 gregtech.material.sodium_phosphomolybdate=磷钼酸钠
 gregtech.material.sodium_acetate=乙酸钠
+gregtech.material.neutron_star_core_material=中子星内核物质
+gregtech.material.magneto_hydrodynamically_constrained_star_matter=磁流体动力学约束恒星等离子体物质
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

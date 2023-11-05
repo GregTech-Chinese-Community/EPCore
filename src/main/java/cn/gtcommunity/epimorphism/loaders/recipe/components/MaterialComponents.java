@@ -27,7 +27,7 @@ public class MaterialComponents {
         WIRE_QUAD.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtQuadruple, Europium)},
                 {10, new UnificationEntry(OrePrefix.wireGtQuadruple, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
+                {11, new UnificationEntry(OrePrefix.wireGtQuadruple, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtQuadruple, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -35,7 +35,7 @@ public class MaterialComponents {
         WIRE_OCT.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtOctal, Europium)},
                 {10, new UnificationEntry(OrePrefix.wireGtOctal, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
+                {11, new UnificationEntry(OrePrefix.wireGtOctal, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -43,42 +43,42 @@ public class MaterialComponents {
         WIRE_HEX.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtHex, Europium)},
                 {10, new UnificationEntry(OrePrefix.wireGtHex, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.wireGtHex, Trinium)},
+                {11, new UnificationEntry(OrePrefix.wireGtHex, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtHex, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtHex, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         CABLE.appendIngredients(Stream.of(new Object[][]{
                 {10, new UnificationEntry(OrePrefix.cableGtSingle, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
+                {11, new UnificationEntry(OrePrefix.cableGtSingle, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         CABLE_QUAD.appendIngredients(Stream.of(new Object[][]{
                 {10, new UnificationEntry(OrePrefix.cableGtQuadruple, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.cableGtQuadruple, Trinium)},
+                {11, new UnificationEntry(OrePrefix.cableGtQuadruple, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.cableGtQuadruple, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.cableGtQuadruple, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         CABLE_OCT.appendIngredients(Stream.of(new Object[][]{
                 {10, new UnificationEntry(OrePrefix.cableGtOctal, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.cableGtOctal, Trinium)},
+                {11, new UnificationEntry(OrePrefix.cableGtOctal, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.cableGtOctal, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.cableGtOctal, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         CABLE_HEX.appendIngredients(Stream.of(new Object[][]{
                 {10, new UnificationEntry(OrePrefix.cableGtHex, CarbonNanotube)},
-//                {11, new UnificationEntry(OrePrefix.cableGtHex, Trinium)},
+                {11, new UnificationEntry(OrePrefix.cableGtHex, CosmicNeutronium)},
 //                {12, new UnificationEntry(OrePrefix.cableGtHex, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.cableGtHex, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         CABLE_TIER_UP.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.cableGtSingle, CarbonNanotube)},
-//                {10, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
+                {10, new UnificationEntry(OrePrefix.cableGtSingle, CosmicNeutronium)},
 //                {11, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
 //                {12, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.cableGtSingle, Trinium)},
@@ -111,7 +111,7 @@ public class MaterialComponents {
         PLATE.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.plate, Draconium)},
                 {10, new UnificationEntry(OrePrefix.plate, Neutronium)},
-//                {11, new UnificationEntry(OrePrefix.plate, Trinium)},
+                {11, new UnificationEntry(OrePrefix.plate, NeutronStarCoreMaterial)},
 //                {12, new UnificationEntry(OrePrefix.plate, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.plate, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -128,7 +128,7 @@ public class MaterialComponents {
         ROTOR.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.rotor, Draconium)},
                 {10, new UnificationEntry(OrePrefix.rotor, Neutronium)},
-//                {11, new UnificationEntry(OrePrefix.rotor, Trinium)},
+                {11, new UnificationEntry(OrePrefix.rotor, NeutronStarCoreMaterial)},
 //                {12, new UnificationEntry(OrePrefix.rotor, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.rotor, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));

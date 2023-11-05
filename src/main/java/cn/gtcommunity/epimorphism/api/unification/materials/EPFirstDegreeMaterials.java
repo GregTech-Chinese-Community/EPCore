@@ -7,6 +7,7 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.CUSTOM_MHCSM;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -1585,6 +1586,23 @@ public class EPFirstDegreeMaterials {
                 .components(SodiumHydroxide, 1, Ethenone, 1)
                 .build()
                 .setFormula("C2H3NaO2", true);
+        //  24211 Neutron Star Core Material
+        NeutronStarCoreMaterial = new Material.Builder(getMaterialsId(), gregtechId("neutron_star_core_material"))
+                .ingot()
+                .fluid()
+                .fluidTemp(2147483647)
+                .color(0x70ecff)
+                .iconSet(BRIGHT)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
+                .build();
+        //  24212 Magneto Hydrodynamically Constrained Star Matter
+        MagnetoHydrodynamicallyConstrainedStarMatter = new Material.Builder(getMaterialsId(), gregtechId("magneto_hydrodynamically_constrained_star_matter"))
+                .ingot()
+                .fluid()
+                .fluidTemp(600000000)
+                .iconSet(CUSTOM_MHCSM)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
+                .build();
     }
 
     private static int getMaterialsId() {
