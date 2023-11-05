@@ -1532,6 +1532,59 @@ public class EPFirstDegreeMaterials {
                 .components(YttriumOxide, 2, NeodymiumOxide, 1, Alumina, 5)
                 .build()
                 .setFormula("NdY2Al5O12", true);
+        //  24204 Au-Pd-C Catalyst
+        AuPdCCatalyst = new Material.Builder(getMaterialsId(), gregtechId("au_pd_c_catalyst"))
+                .dust()
+                .color(0xB7B305)
+                .iconSet(SHINY)
+                .components(Gold, 1, PalladiumOnCarbon, 1)
+                .build();
+        //  24205 Sodium Oxide
+        SodiumOxide = new Material.Builder(getMaterialsId(), gregtechId("sodium_oxide"))
+                .dust()
+                .color(0x2C96FC)
+                .iconSet(BRIGHT)
+                .components(Sodium, 2, Oxygen, 1)
+                .build();
+        //  24206 Sodium Tungstate
+        SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodium_tungstate"))
+                .fluid()
+                .color(0x595E54)
+                .components(Sodium, 1, Tungsten, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24207 Sodium Phosphotungstate
+        SodiumPhosphotungstate = new Material.Builder(getMaterialsId(), gregtechId("sodium_phosphotungstate"))
+                .dust()
+                .color(0x4D3635)
+                .components(Oxygen, 40, Tungsten, 12, Sodium, 3, Phosphorus, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(WO3)12Na3PO4", true);
+        //  24208 Sodium Molybdate
+        SodiumMolybdate = new Material.Builder(getMaterialsId(), gregtechId("sodium_molybdate"))
+                .dust()
+                .color(0xCCCC99)
+                .iconSet(ROUGH)
+                .components(Sodium, 2, Molybdenum, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24209 Sodium Phosphomolybdate
+        SodiumPhosphomolybdate = new Material.Builder(getMaterialsId(), gregtechId("sodium_phosphomolybdate"))
+                .dust()
+                .color(0xF3E0A8)
+                .iconSet(BRIGHT)
+                .components(Oxygen, 40, Molybdenum, 12, Sodium, 3, Phosphorus, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(MoO3)12Na3PO4", true);
+        //  24210 Sodium Acetate
+        SodiumAcetate = new Material.Builder(getMaterialsId(), gregtechId("sodium_acetate"))
+                .fluid()
+                .color(0xC5D624)
+                .components(SodiumHydroxide, 1, Ethenone, 1)
+                .build()
+                .setFormula("C2H3NaO2", true);
     }
 
     private static int getMaterialsId() {

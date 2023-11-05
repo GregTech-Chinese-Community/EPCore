@@ -63,10 +63,12 @@ public class EPRecipeManager {
         PreciousMetalChain.init();
         RareEarthChain.init();
         SeleniumTelluriumChain.init();
+        SodiumChain.init();
         SuperconductorsChain.init();
         TaraniumChain.init();
         ThalliumChain.init();
         TungstenChain.init();
+        ZylonChain.init();
     }
 
     public static void initCircuits() {

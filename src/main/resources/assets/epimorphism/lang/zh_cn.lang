@@ -893,6 +893,13 @@ gregtech.material.carbon_tetrachloride=四氯化碳
 gregtech.material.aluminium_nitrate=硝酸铝
 gregtech.material.unprocessed_nd_yag_solution=未处理钕掺杂的钇铝榴石溶液
 gregtech.material.nd_yag=钕掺杂的钇铝榴石
+gregtech.material.au_pd_c_catalyst=金-钯碳混合催化剂
+gregtech.material.sodium_oxide=氧化钠
+gregtech.material.sodium_tungstate=钨酸钠
+gregtech.material.sodium_phosphotungstate=磷钨酸钠
+gregtech.material.sodium_molybdate=钼酸钠
+gregtech.material.sodium_phosphomolybdate=磷钼酸钠
+gregtech.material.sodium_acetate=乙酸钠
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1005,6 +1012,12 @@ gregtech.material.ethylhexanol=2-乙基己醇
 gregtech.material.diethylhexyl_phosphoric_acid=二-(2-乙基己基)磷酸
 gregtech.material.dichloromethane=二氯甲烷
 gregtech.material.tributylamine=三丁胺
+gregtech.material.zylon=柴隆纤维
+gregtech.material.pre_zylon=预处理柴隆纤维
+gregtech.material.terephthalaldehyde=对苯二甲醛
+gregtech.material.dibromomethylbenzene=二溴甲苯
+gregtech.material.isochloropropane=氯丙烷
+gregtech.material.dinitrodipropanyloxybenzene=二硝基二丙氧基苯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
