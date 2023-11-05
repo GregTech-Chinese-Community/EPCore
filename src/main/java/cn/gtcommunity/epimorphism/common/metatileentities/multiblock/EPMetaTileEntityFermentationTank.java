@@ -149,8 +149,7 @@ public class EPMetaTileEntityFermentationTank extends RecipeMapMultiblockControl
 
     @Override
     public void changeCurrentPHValue(double ph_change) {
-        double ph = this.pH + ph_change;
-        this.pH = EPMathUtil.clamp(ph, 0, 14);
+        this.pH = EPMathUtil.clamp(pH + ph_change, 0, 14);
         /*if (ph < 0){
             this.pH = 0D;
         } else if (ph > 14){
