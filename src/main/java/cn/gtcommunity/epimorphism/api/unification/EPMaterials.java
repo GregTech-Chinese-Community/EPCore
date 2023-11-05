@@ -224,6 +224,13 @@ public EPMaterials() {}
     public static Material AluminiumNitrate;
     public static Material UnprocessedNdYAGSolution;
     public static Material NdYAG;
+    public static Material AuPdCCatalyst;
+    public static Material SodiumOxide;
+    public static Material SodiumTungstate;
+    public static Material SodiumPhosphotungstate;
+    public static Material SodiumMolybdate;
+    public static Material SodiumPhosphomolybdate;
+    public static Material SodiumAcetate;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -335,6 +342,12 @@ public EPMaterials() {}
     public static Material DiethylhexylPhosphoricAcid;
     public static Material Dichloromethane;
     public static Material Tributylamine;
+    public static Material Zylon;
+    public static Material PreZylon;
+    public static Material Terephthalaldehyde;
+    public static Material Dibromomethylbenzene;
+    public static Material Isochloropropane;
+    public static Material Dinitrodipropanyloxybenzene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
