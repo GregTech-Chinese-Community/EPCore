@@ -44,6 +44,7 @@ public class EPRecipeManager {
         GalliumNitrideChain.init();
         GermaniumChain.init();
         GrapheneChain.init();
+        HexanitrohexaaxaisowurtzitaneChain.init();
         HydrogenPeroxideChain.init();
         IodineChain.init();
         KaptonChain.init();

@@ -934,6 +934,23 @@ gregtech.material.instantons=瞬子
 gregtech.material.temporal_fluid=富快子时间流体
 gregtech.material.higgs_bosons=希格斯玻色子
 gregtech.material.cosmic_computing_mixture=宇宙信息混合物
+gregtech.material.silica_gel=硅胶
+gregtech.material.silica_gel_base=硅胶基质
+gregtech.material.nitronium_tetrafluoroborate=四氟硝铵
+gregtech.material.nitrosonium_tetrafluoroborate=四氟硼酸亚硝铵
+gregtech.material.tetrafluoroboric_acid=四氟硼酸
+gregtech.material.nitrogen_monoxide=一氧化氮
+gregtech.material.hydroxylammonium_sulfate=硫酸羟铵
+gregtech.material.potassium_hydroxylaminedisulfonate=羟胺二磺酸钾
+gregtech.material.potassium_bisulfite=亚硫酸氢钾
+gregtech.material.potassium_carbonate=碳酸钾
+gregtech.material.nitrous_acid=亚硝酸
+gregtech.material.potassium_nitrite=亚硝酸钾
+gregtech.material.barium_dichloride=三氯化钡
+gregtech.material.hydroxylamine_hydrochloride=盐酸羟胺
+gregtech.material.barium_sulfate_suspension=硫酸钡悬浊液
+gregtech.material.ammonium_acetate=乙酸铵
+gregtech.material.ammonium_carbonate=碳酸铵
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1052,6 +1069,20 @@ gregtech.material.terephthalaldehyde=对苯二甲醛
 gregtech.material.dibromomethylbenzene=二溴甲苯
 gregtech.material.isochloropropane=氯丙烷
 gregtech.material.dinitrodipropanyloxybenzene=二硝基二丙氧基苯
+gregtech.material.hexanitrohexaaxaisowurtzitane=六硝基六轴异伍兹烷
+gregtech.material.crude_hexanitrohexaaxaisowurtzitane=粗制六硝基六轴异伍兹烷
+gregtech.material.tetraacetyldinitrosohexaazaisowurtzitane=四乙酰二硝基六氮杂异戊二烯
+gregtech.material.dibenzyltetraacetylhexaazaisowurtzitane=二苄基四乙酰六氮杂异纤锌烷
+gregtech.material.succinimidyl_acetate=琥珀酰亚胺醋酸酯
+gregtech.material.n_hydroxysuccinimide=N-羟基丁二酰亚胺
+gregtech.material.tetrahydrofuran=四氢呋喃
+gregtech.material.succinic_anhydride=琥珀酸酐
+gregtech.material.hexabenzylhexaazaisowurtzitane=六苄基六氮杂异伍兹烷
+gregtech.material.acetonitrile=乙腈
+gregtech.material.acetamide=乙酰胺
+gregtech.material.benzylamine=苄胺
+gregtech.material.benzyl_chloride=氯化苄
+gregtech.material.hexamethylenetetramine=六亚甲基四胺
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

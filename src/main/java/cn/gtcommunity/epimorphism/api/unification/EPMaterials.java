@@ -245,6 +245,23 @@ public EPMaterials() {}
     public static Material TemporalFluid;
     public static Material HiggsBosons;
     public static Material CosmicComputingMixture;
+    public static Material SilicaGel;
+    public static Material SilicaGelBase;
+    public static Material NitroniumTetrafluoroborate;
+    public static Material NitrosoniumTetrafluoroborate;
+    public static Material TetrafluoroboricAcid;
+    public static Material NitrogenMonoxide;
+    public static Material HydroxylammoniumSulfate;
+    public static Material PotassiumHydroxylaminedisulfonate;
+    public static Material PotassiumBisulfite;
+    public static Material PotassiumCarbonate;
+    public static Material NitrousAcid;
+    public static Material PotassiumNitrite;
+    public static Material BariumDichloride;
+    public static Material HydroxylamineHydrochloride;
+    public static Material BariumSulfateSuspension;
+    public static Material AmmoniumAcetate;
+    public static Material AmmoniumCarbonate;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -362,6 +379,20 @@ public EPMaterials() {}
     public static Material Dibromomethylbenzene;
     public static Material Isochloropropane;
     public static Material Dinitrodipropanyloxybenzene;
+    public static Material Hexanitrohexaaxaisowurtzitane;
+    public static Material CrudeHexanitrohexaaxaisowurtzitane;
+    public static Material Tetraacetyldinitrosohexaazaisowurtzitane;
+    public static Material Dibenzyltetraacetylhexaazaisowurtzitane;
+    public static Material SuccinimidylAcetate;
+    public static Material NHydroxysuccinimide;
+    public static Material Tetrahydrofuran;
+    public static Material SuccinicAnhydride;
+    public static Material Hexabenzylhexaazaisowurtzitane;
+    public static Material Acetonitrile;
+    public static Material Acetamide;
+    public static Material Benzylamine;
+    public static Material BenzylChloride;
+    public static Material Hexamethylenetetramine;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

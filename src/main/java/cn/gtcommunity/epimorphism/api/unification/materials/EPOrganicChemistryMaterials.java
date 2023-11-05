@@ -828,7 +828,107 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 12, Hydrogen, 16, Oxygen, 6, Nitrogen, 2)
                 .build()
                 .setFormula("C12H16O2(NO2)2", true);
-    }
+        //  25111 Hexanitrohexaaxaisowurtzitane
+        Hexanitrohexaaxaisowurtzitane = new Material.Builder(getMaterialsId(), gregtechId("hexanitrohexaaxaisowurtzitane"))
+                .dust()
+                .color(0x0B7222)
+                .iconSet(BRIGHT)
+                .components(Carbon, 6, Hydrogen, 6, Nitrogen, 12, Oxygen, 12)
+                .build();
+        //  25112 Crude Hexanitrohexaaxaisowurtzitane
+        CrudeHexanitrohexaaxaisowurtzitane = new Material.Builder(getMaterialsId(), gregtechId("crude_hexanitrohexaaxaisowurtzitane"))
+                .dust()
+                .color(0x5799EC)
+                .iconSet(DULL)
+                .components(Carbon, 6, Hydrogen, 6, Nitrogen, 12, Oxygen, 12)
+                .build();
+        //  25113 Tetraacetyldinitrosohexaazaisowurtzitane
+        Tetraacetyldinitrosohexaazaisowurtzitane = new Material.Builder(getMaterialsId(), gregtechId("tetraacetyldinitrosohexaazaisowurtzitane"))
+                .dust()
+                .color(0xEA7584)
+                .iconSet(ROUGH)
+                .components(Carbon, 14, Hydrogen, 18, Nitrogen, 8, Oxygen, 6)
+                .build();
+        //  25114 Dibenzyltetraacetylhexaazaisowurtzitane
+        Dibenzyltetraacetylhexaazaisowurtzitane = new Material.Builder(getMaterialsId(), gregtechId("dibenzyltetraacetylhexaazaisowurtzitane"))
+                .dust()
+                .color(0xB7E8EE)
+                .iconSet(DULL)
+                .components(Carbon, 28, Hydrogen, 32, Nitrogen, 6, Oxygen, 4)
+                .build();
+        //  25113 Succinimidyl Acetate
+        SuccinimidylAcetate = new Material.Builder(getMaterialsId(), gregtechId("succinimidyl_acetate"))
+                .dust()
+                .color(0x1D3605)
+                .iconSet(ROUGH)
+                .components(Carbon, 6, Hydrogen, 7, Nitrogen, 1, Oxygen, 4)
+                .build();
+        //  25114 N-Hydroxysuccinimide
+        NHydroxysuccinimide = new Material.Builder(getMaterialsId(), gregtechId("n_hydroxysuccinimide"))
+                .dust()
+                .color(0x33BAFB)
+                .iconSet(DULL)
+                .components(Carbon, 4, Hydrogen, 5, Nitrogen, 1, Oxygen, 3)
+                .build()
+                .setFormula("(CH2CO)2NOH", true);
+        //  25115 Tetrahydrofuran
+        Tetrahydrofuran = new Material.Builder(getMaterialsId(), gregtechId("tetrahydrofuran"))
+                .fluid()
+                .color(0x0BCF52)
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 1)
+                .build()
+                .setFormula("(CH2)4O", true);
+        //  25116 Succinic Anhydride
+        SuccinicAnhydride = new Material.Builder(getMaterialsId(), gregtechId("succinic_anhydride"))
+                .dust()
+                .color(0xA2569D)
+                .components(Carbon, 4, Hydrogen, 4, Oxygen, 3)
+                .build()
+                .setFormula("(CH2CO)2O");
+        //  25117 Hexabenzylhexaazaisowurtzitane
+        Hexabenzylhexaazaisowurtzitane = new Material.Builder(getMaterialsId(), gregtechId("hexabenzylhexaazaisowurtzitane"))
+                .dust()
+                .color(0x48561E)
+                .iconSet(DULL)
+                .components(Carbon, 48, Hydrogen, 48 ,Nitrogen, 6)
+                .build();
+        //  25118 Acetonitrile
+        Acetonitrile = new Material.Builder(getMaterialsId(), gregtechId("acetonitrile"))
+                .dust()
+                .color(0x7D82A3)
+                .iconSet(ROUGH)
+                .components(Carbon, 2, Hydrogen, 3, Nitrogen, 1)
+                .build()
+                .setFormula("CH3CN");
+        //  25119 Acetamide
+        Acetamide = new Material.Builder(getMaterialsId(), gregtechId("acetamide"))
+                .dust()
+                .color(0x7D82A3)
+                .iconSet(DULL)
+                .components(Carbon, 2, Hydrogen, 5, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("CH3CONH2", true);
+        //  25120 Benzylamine
+        Benzylamine = new Material.Builder(getMaterialsId(), gregtechId("benzylamine"))
+                .fluid()
+                .color(0x527A92)
+                .components(Carbon, 7, Hydrogen, 9, Nitrogen, 1)
+                .build();
+        //  25121 Benzyl Chloride
+        BenzylChloride = new Material.Builder(getMaterialsId(), gregtechId("benzyl_chloride"))
+                .fluid()
+                .color(0x6699CC)
+                .components(Carbon, 7, Hydrogen, 7, Chlorine, 1)
+                .build();
+        //  25122 Hexamethylenetetramine
+        Hexamethylenetetramine = new Material.Builder(getMaterialsId(), gregtechId("hexamethylenetetramine"))
+                .dust()
+                .color(0x53576D)
+                .iconSet(DULL)
+                .components(Carbon, 6, Hydrogen, 12, Nitrogen, 4)
+                .build()
+                .setFormula("(CH2)6N4", true);
+  }
 
     private static int getMaterialsId() {
         if (startId < END_ID) {

@@ -1670,6 +1670,131 @@ public class EPFirstDegreeMaterials {
                 .components(HeavyLeptonMixture, 32, HeavyQuarks, 8, Gluons, 8, Instantons, 4, TemporalFluid, 4, HiggsBosons, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24224 Silica Gel
+        SilicaGel = new Material.Builder(getMaterialsId(), gregtechId("silica_gel"))
+                .dust()
+                .color(0x9695FD)
+                .iconSet(SHINY)
+                .components(Silicon, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24225 Silica Gel Base
+        SilicaGelBase = new Material.Builder(getMaterialsId(), gregtechId("silica_gel_base"))
+                .fluid()
+                .color(0x9695FD)
+                .iconSet(ROUGH)
+                .components(SiliconDioxide, 1, HydrochloricAcid, 1, SodiumHydroxide, 1, Water, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24226 Nitronium Tetrafluoroborate
+        NitroniumTetrafluoroborate = new Material.Builder(getMaterialsId(), gregtechId("nitronium_tetrafluoroborate"))
+                .dust()
+                .color(0x787449)
+                .iconSet(DULL)
+                .components(Sodium, 1, Oxygen, 2, Boron, 1, Fluorine, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24227 Nitrosonium Tetrafluoroborate
+        NitrosoniumTetrafluoroborate = new Material.Builder(getMaterialsId(), gregtechId("nitrosonium_tetrafluoroborate"))
+                .dust()
+                .color(0xA32A8C)
+                .iconSet(ROUGH)
+                .components(Sodium, 1, Oxygen, 1, Boron, 1, Fluorine, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24228 Tetrafluoroboric Acid
+        TetrafluoroboricAcid = new Material.Builder(getMaterialsId(), gregtechId("tetrafluoroboric_acid"))
+                .fluid()
+                .color(0x83A731)
+                .components(Hydrogen, 1, Boron, 1, Fluorine, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24229 Nitrogen Monoxide
+        NitrogenMonoxide = new Material.Builder(getMaterialsId(), gregtechId("nitrogen_monoxide"))
+                .fluid()
+                .color(0x98BCDA)
+                .components(Nitrogen, 1, Oxygen, 1)
+                .build();
+        //  24230 Hydroxylammonium Sulfate
+        HydroxylammoniumSulfate = new Material.Builder(getMaterialsId(), gregtechId("hydroxylammonium_sulfate"))
+                .dust()
+                .color(0x999933)
+                .iconSet(DULL)
+                .components(Nitrogen, 2, Hydrogen, 8, Oxygen, 6, Sulfur, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(NH3OH)2SO4", true);
+        //  24231 Potassium Hydroxylaminedisulfonate
+        PotassiumHydroxylaminedisulfonate = new Material.Builder(getMaterialsId(), gregtechId("potassium_hydroxylaminedisulfonate"))
+                .dust()
+                .color(0x627D25)
+                .iconSet(ROUGH)
+                .components(Potassium, 2, Nitrogen, 1, Hydrogen, 1, Sulfur, 2, Oxygen, 7)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24232 Potassium Bisulfite
+        PotassiumBisulfite = new Material.Builder(getMaterialsId(), gregtechId("potassium_bisulfite"))
+                .dust()
+                .color(344314)
+                .iconSet(DULL)
+                .components(Potassium, 1, Hydrogen, 1, Sulfur, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24233 Potassium Carbonate
+        PotassiumCarbonate = new Material.Builder(getMaterialsId(), gregtechId("potassium_carbonate"))
+                .dust()
+                .color(0x7C89D9)
+                .iconSet(ROUGH)
+                .components(Potassium, 2, Carbon, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24234 Nitrous Acid
+        NitrousAcid = new Material.Builder(getMaterialsId(), gregtechId("nitrous_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(0x7D82A3)
+                .components(Hydrogen, 1, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  24235 Potassium Nitrite
+        PotassiumNitrite = new Material.Builder(getMaterialsId(), gregtechId("potassium_nitrite"))
+                .dust()
+                .color(0xB9B9B9)
+                .components(Potassium, 1, Nitrogen, 1, Oxygen, 2)
+                .build();
+        //  24236 Barium Dichloride
+        BariumDichloride = new Material.Builder(getMaterialsId(), gregtechId("barium_dichloride"))
+                .dust()
+                .color(0xBF6700)
+                .iconSet(BRIGHT)
+                .components(Barium, 1, Chlorine, 2)
+                .build();
+        //  24237 Hydroxylamine Hydrochloride
+        HydroxylamineHydrochloride = new Material.Builder(getMaterialsId(), gregtechId("hydroxylamine_hydrochloride"))
+                .fluid()
+                .color(0x893E28)
+                .components(Hydrogen, 4, Oxygen, 1, Nitrogen, 1, Chlorine,1 )
+                .build()
+                .setFormula("HONH2HCl", true);
+        //  24238 Barium Sulfate Suspension
+        BariumSulfateSuspension = new Material.Builder(getMaterialsId(), gregtechId("barium_sulfate_suspension"))
+                .fluid()
+                .color(0x71560B)
+                .components(Barium, 1, Sulfur, 1, Oxygen, 4, Water, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24239 Ammonium Acetate
+        AmmoniumAcetate = new Material.Builder(getMaterialsId(), gregtechId("ammonium_acetate"))
+                .dust()
+                .color(0x646882)
+                .components(Carbon, 2, Hydrogen, 7, Oxygen, 2, Nitrogen, 1)
+                .build()
+                .setFormula("NH4CH3CO2", true);
+        //  24240 Ammonium Carbonate
+        AmmoniumCarbonate = new Material.Builder(getMaterialsId(), gregtechId("ammonium_carbonate"))
+                .dust()
+                .color(0x7C89D9)
+                .components(Carbon, 1, Hydrogen, 8, Oxygen, 3, Nitrogen, 2)
+                .build()
+                .setFormula("(NH4)2CO3", true);
     }
 
     private static int getMaterialsId() {
