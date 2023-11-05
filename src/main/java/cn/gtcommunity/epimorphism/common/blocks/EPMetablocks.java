@@ -17,6 +17,7 @@ public class EPMetablocks {
     public static EPBlockCrucibleCasing EP_CRUCIBLE_CASING;
     public static EPBlockMillCasing EP_MILL_CASING;
     public static EPBlockActiveMultiblockCasing EP_ACTIVE_MULTIBLOCK_CASING;
+    public static EPBlockExplosive EP_EXPLOSIVE_BLOCK;
 
     private EPMetablocks() {/**/}
 
@@ -35,6 +36,8 @@ public class EPMetablocks {
         EP_MILL_CASING.setRegistryName("ep_mill_casing");
         EP_ACTIVE_MULTIBLOCK_CASING = new EPBlockActiveMultiblockCasing();
         EP_ACTIVE_MULTIBLOCK_CASING.setRegistryName("ep_active_multiblock_casing");
+        EP_EXPLOSIVE_BLOCK = new EPBlockExplosive();
+        EP_EXPLOSIVE_BLOCK.setRegistryName("ep_explosive_block");
     }
 
     @SideOnly(Side.CLIENT)
@@ -43,6 +46,7 @@ public class EPMetablocks {
         registerItemModel(EP_CRUCIBLE_CASING);
         registerItemModel(EP_MILL_CASING);
         registerItemModel(EP_MULTIBLOCK_CASING_B);
+        registerItemModel(EP_EXPLOSIVE_BLOCK);
 
         //  VariantActiveBlock Registry
         EP_GLASS_CASING.onModelRegister();
