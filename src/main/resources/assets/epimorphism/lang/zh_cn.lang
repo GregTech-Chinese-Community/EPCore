@@ -903,6 +903,7 @@ gregtech.material.sodium_phosphomolybdate=磷钼酸钠
 gregtech.material.sodium_acetate=乙酸钠
 gregtech.material.neutron_star_core_material=中子星内核物质
 gregtech.material.magneto_hydrodynamically_constrained_star_matter=磁流体动力学约束恒星等离子体物质
+gregtech.material.white_dwarf_matter=白矮星物质
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

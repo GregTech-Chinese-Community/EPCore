@@ -1603,6 +1603,14 @@ public class EPFirstDegreeMaterials {
                 .iconSet(CUSTOM_MHCSM)
                 .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
                 .build();
+        //  24213 White Dwarf Matter
+        WhiteDwarfMatter = new Material.Builder(getMaterialsId(), gregtechId("white_dwarf_matter"))
+                .ingot()
+                .fluid()
+                .fluidTemp(288000000)
+                .iconSet(MAGNETIC)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD)
+                .build();
     }
 
     private static int getMaterialsId() {

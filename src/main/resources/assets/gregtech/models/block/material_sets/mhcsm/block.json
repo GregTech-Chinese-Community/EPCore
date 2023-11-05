@@ -1,5 +1,5 @@
 {
-  "parent": "gregtech:block/tinted_cube_column",
+  "parent": "gregtech:block/tinted_cube_all",
   "textures": {
     "all": "gregtech:blocks/material_sets/mhcsm/block"
   }

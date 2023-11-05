@@ -234,6 +234,7 @@ public EPMaterials() {}
     public static Material SodiumAcetate;
     public static Material NeutronStarCoreMaterial;
     public static Material MagnetoHydrodynamicallyConstrainedStarMatter;
+    public static Material WhiteDwarfMatter;
 
     //  Second Degree Materials
     public static Material DragonBreath;
