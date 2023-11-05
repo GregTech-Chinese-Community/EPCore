@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
-    <a href="https://www.curseforge.com/minecraft/mc-mods/gregtech-ce-unofficial"><img src="https://img.shields.io/badge/Available%20for-MC%201.12.2%20-informational?style=for-the-badge" alt="Supported Versions"></a>
+    <a href="https://modrinth.com/mod/epcore"><img src="https://img.shields.io/badge/Available%20for-MC%201.12.2%20-informational?style=for-the-badge" alt="Supported Versions"></a>
     <a href="https://gitlab.com/gtcnc/epimorphism-core/blob/overhaul/LICENSE"><img src="https://img.shields.io/gitlab/license/gtcnc/epimorphism-core?style=for-the-badge" alt="License"></a>
 </h1>
 
@@ -31,14 +31,18 @@ Improve difficulty and QoL of GregTech CEu, based on GregTech 6, Gregicality Leg
 
 ###  Credited Works
 
+* Some material textures from **[GregTech 5 Unofficial](https://github.com/GTNewHorizons/GT5-Unofficial)**
+
 * Some tool textures from **[GregTech 6](https://github.com/GregTech6/gregtech6)**.
 
 * Curved Plate textures and recipes, Cosmic SMD textures from **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**.
+
+* Cosmic Inductor, Supracausal SMD and some circuit component textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
 
 * Machine overlay textures and circuit textures from **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**.
 
 * Machine textures from **[GregTech++](https://github.com/GTNewHorizons/GTplusplus)**.
 
-* Cosmic Inductor, Supracausal SMD and some circuit component textures from **[GregTech Lite](https://gitlab.com/sweep_tosho/gregtech-lite)**.
+* Machine structures from **[bartworks](https://github.com/GTNewHorizons/bartworks)**.
 
 * README.md base from **[GregTech CEu](https://github.com/GregTechCEu/GregTech)**.
