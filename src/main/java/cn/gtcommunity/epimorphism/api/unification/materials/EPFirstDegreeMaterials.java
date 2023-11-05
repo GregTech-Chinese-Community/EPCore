@@ -1611,6 +1611,65 @@ public class EPFirstDegreeMaterials {
                 .iconSet(MAGNETIC)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD)
                 .build();
+        //  24214 BlackDwarfMatter
+        BlackDwarfMatter = new Material.Builder(getMaterialsId(), gregtechId("black_dwarf_matter"))
+                .fluid()
+                .fluidTemp(266000000)
+                .color(0x000000)
+                .build();
+        //  24215 Raw Star Matter
+        RawStarMatter = new Material.Builder(getMaterialsId(), gregtechId("raw_star_matter"))
+                .fluid()
+                .fluidTemp(600000000)
+                .build();
+        //  24216 Dimensionally Transcendent Residue
+        DimensionallyTranscendentResidue = new Material.Builder(getMaterialsId(), gregtechId("dimensionally_transcendent_residue"))
+                .fluid()
+                .fluidTemp(999999999)
+                .build();
+        //  24217 Heavy Lepton Mixture
+        HeavyLeptonMixture = new Material.Builder(getMaterialsId(), gregtechId("heavy_lepton_mixture"))
+                .fluid()
+                .fluidTemp(524288)
+                .build()
+                .setFormula("(t2)u", true);
+        //  24218 Heavy Quarks
+        HeavyQuarks = new Material.Builder(getMaterialsId(), gregtechId("heavy_quarks"))
+                .fluid()
+                .fluidTemp(131072)
+                .build()
+                .setFormula("(u₂)ds", true);
+        //  24219 Gluons
+        Gluons = new Material.Builder(getMaterialsId(), gregtechId("gluons"))
+                .fluid()
+                .fluidTemp(2097152)
+                .build()
+                .setFormula("g", false);
+        //  24220 Instantons
+        Instantons = new Material.Builder(getMaterialsId(), gregtechId("instantons"))
+                .fluid()
+                .fluidTemp(8388608)
+                .build()
+                .setFormula("i", false);
+        //  24221 Temporal Fluid
+        TemporalFluid = new Material.Builder(getMaterialsId(), gregtechId("temporal_fluid"))
+                .fluid()
+                .fluidTemp(134217728)
+                .build()
+                .setFormula("t", false);
+        //  24222 Higgs Bosons
+        HiggsBosons = new Material.Builder(getMaterialsId(), gregtechId("higgs_bosons"))
+                .fluid()
+                .fluidTemp(0)
+                .build()
+                .setFormula("h", false);
+        //  24223 Cosmic Computing Mixture
+        CosmicComputingMixture = new Material.Builder(getMaterialsId(), gregtechId("cosmic_computing_mixture"))
+                .fluid()
+                .fluidTemp(536870912)
+                .components(HeavyLeptonMixture, 32, HeavyQuarks, 8, Gluons, 8, Instantons, 4, TemporalFluid, 4, HiggsBosons, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
     }
 
     private static int getMaterialsId() {

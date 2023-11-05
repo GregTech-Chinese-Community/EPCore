@@ -235,6 +235,16 @@ public EPMaterials() {}
     public static Material NeutronStarCoreMaterial;
     public static Material MagnetoHydrodynamicallyConstrainedStarMatter;
     public static Material WhiteDwarfMatter;
+    public static Material BlackDwarfMatter;
+    public static Material RawStarMatter;
+    public static Material DimensionallyTranscendentResidue;
+    public static Material HeavyLeptonMixture;
+    public static Material HeavyQuarks;
+    public static Material Gluons;
+    public static Material Instantons;
+    public static Material TemporalFluid;
+    public static Material HiggsBosons;
+    public static Material CosmicComputingMixture;
 
     //  Second Degree Materials
     public static Material DragonBreath;

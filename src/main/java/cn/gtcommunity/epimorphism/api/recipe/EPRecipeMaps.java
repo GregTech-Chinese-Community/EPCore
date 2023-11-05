@@ -80,6 +80,10 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> PLASMA_CONDENSER_RECIPES;
     @ZenProperty
     public static final RecipeMap<FlowRateRecipeBuilder> HEAT_EXCHANGE_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> STELLAR_FURNACE_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> DIMENSIONAL_OSCILLATOR_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -253,6 +257,28 @@ public class EPRecipeMaps {
         //  Large Heat Exchanger Recipemap
         HEAT_EXCHANGE_RECIPES = new RecipeMap<>("heat_exchanger_recipes", 0, 0, 2, 3, new FlowRateRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL);
+
+        //  Stellar Furnace Recipemap
+        STELLAR_FURNACE_RECIPES = new RecipeMap<>("stellar_furnace_recipes", 0, 6, 0, 6, 0, 6, 0, 6, new NoCoilTemperatureRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, ProgressWidget.MoveType.HORIZONTAL)
+                .setSlotOverlay(false, true, false, GuiTextures.FURNACE_OVERLAY_2)
+                .setSlotOverlay(false, true, true, GuiTextures.FURNACE_OVERLAY_2)
+                .setSlotOverlay(true, true, false, GuiTextures.FURNACE_OVERLAY_2)
+                .setSlotOverlay(true, true, true, GuiTextures.FURNACE_OVERLAY_2)
+                .setSound(GTSoundEvents.ARC);
+
+        //  Dimensional Oscillator Recipemap
+        DIMENSIONAL_OSCILLATOR_RECIPES = new RecipeMap<>("dimensional_oscillator_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT_ASSEMBLER, ProgressWidget.MoveType.HORIZONTAL)
+                .setSlotOverlay(false, false, false, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(false, false, true, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(false, true, false, GuiTextures.MOLECULAR_OVERLAY_1)
+                .setSlotOverlay(false, true, true, GuiTextures.MOLECULAR_OVERLAY_1)
+                .setSlotOverlay(true, false, false, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(true, false, true, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(true, true, false, GuiTextures.MOLECULAR_OVERLAY_2)
+                .setSlotOverlay(true, true, true, GuiTextures.MOLECULAR_OVERLAY_2)
+                .setSound(GTSoundEvents.SCIENCE);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
