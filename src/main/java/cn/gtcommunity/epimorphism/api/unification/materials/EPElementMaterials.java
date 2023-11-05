@@ -121,6 +121,16 @@ public class EPElementMaterials {
                 .element(Elements.Fl)
                 .flags(GENERATE_ROD)
                 .build();
+        CosmicNeutronium = new Material.Builder(getMaterialsId(), gregtechId("cosmic_neutronium"))
+                .ingot()
+                .fluid()
+                .color(0x323232)
+                .iconSet(BRIGHT)
+                .flags(NO_SMELTING, NO_SMASHING)
+                .fluidTemp(2000000000)
+                .element(EPElements.CosmicNeutronium)
+                .cableProperties(V[UIV], 256, 128, false)
+                .build();
     }
 
     private static int getMaterialsId() {

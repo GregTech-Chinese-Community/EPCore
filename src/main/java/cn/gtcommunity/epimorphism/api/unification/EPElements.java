@@ -15,4 +15,5 @@ public class EPElements {
     public static final Element Vibranium = Elements.add(152, 226, -1, null, "Vibranium", "Vb", false);
     public static final Element Adamantium = Elements.add(222, 580, -1, null, "Adamantium", "Ad", false);
     public static final Element Taranium = Elements.add(321, 478, -1, null, "Taranium", "Tn", false);
+    public static final Element CosmicNeutronium = Elements.add(9999, 9999, -1, null, "CosmicNeutronium", "SpNt", false);
 }

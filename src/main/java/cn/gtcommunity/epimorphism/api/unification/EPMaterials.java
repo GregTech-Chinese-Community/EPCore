@@ -18,6 +18,7 @@ public EPMaterials() {}
     public static Material MetastableOganesson;
     public static Material MetastableHassium;
     public static Material MetastableFlerovium;
+    public static Material CosmicNeutronium;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -231,6 +232,8 @@ public EPMaterials() {}
     public static Material SodiumMolybdate;
     public static Material SodiumPhosphomolybdate;
     public static Material SodiumAcetate;
+    public static Material NeutronStarCoreMaterial;
+    public static Material MagnetoHydrodynamicallyConstrainedStarMatter;
 
     //  Second Degree Materials
     public static Material DragonBreath;
