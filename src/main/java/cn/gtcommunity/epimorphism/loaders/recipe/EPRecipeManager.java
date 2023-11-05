@@ -81,7 +81,9 @@ public class EPRecipeManager {
     }
 
     public static void initMultiblockRecipes() {
+        MetaTileEntityRecipes.init();
         CatalyticReformerRecipes.init();
+        DimensionalOscillatorRecipes.init();
         FrackerRecipes.init();
         IndustrialDrillRecipes.init();
         MetaTileEntityRecipes.init();
@@ -89,6 +91,7 @@ public class EPRecipeManager {
         FuelRefineFactoryRecipes.init();
         HyperReactorRecipes.init();
         PlasmaCondenserRecipes.init();
+        StellarFurnaceRecipes.init();
         HeatExchangerRecipes.init();
     }
 }

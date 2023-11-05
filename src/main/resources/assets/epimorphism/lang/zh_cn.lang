@@ -686,6 +686,10 @@ epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid=§e基础�
 epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip=升温耗时：§f%ss
 epimorphism.multiblock.large_heat_exchanger.explosion_tooltip=蒸馏水供应不足会导致爆炸！
 
+recipemap.stellar_furnace_recipes.name=恒星热能熔炼
+
+recipemap.dimensional_oscillator_recipes.name=超维度震荡
+
 #  Materials
 
 ##  Element Materials
@@ -916,6 +920,16 @@ gregtech.material.sodium_acetate=乙酸钠
 gregtech.material.neutron_star_core_material=中子星内核物质
 gregtech.material.magneto_hydrodynamically_constrained_star_matter=磁流体动力学约束恒星等离子体物质
 gregtech.material.white_dwarf_matter=白矮星物质
+gregtech.material.black_dwarf_matter=黑矮星物质
+gregtech.material.raw_star_matter=原始恒星等离子体物质
+gregtech.material.dimensionally_transcendent_residue=超维度残余物
+gregtech.material.heavy_lepton_mixture=重轻子混合物
+gregtech.material.heavy_quarks=重夸克
+gregtech.material.gluons=胶子
+gregtech.material.instantons=瞬子
+gregtech.material.temporal_fluid=富快子时间流体
+gregtech.material.higgs_bosons=希格斯玻色子
+gregtech.material.cosmic_computing_mixture=宇宙信息混合物
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
