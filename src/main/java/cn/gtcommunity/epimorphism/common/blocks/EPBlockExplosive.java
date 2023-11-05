@@ -13,37 +13,27 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public class EPBlockMultiblockCasing extends VariantBlock<EPBlockMultiblockCasing.CasingType> {
-    public EPBlockMultiblockCasing() {
+public class EPBlockExplosive extends VariantBlock<EPBlockExplosive.CasingType> {
+    public EPBlockExplosive() {
         super(Material.IRON);
-        this.setTranslationKey("ep_multiblock_casing");
-        this.setHardness(5.0F);
+        this.setTranslationKey("ep_explosive_block");
+        this.setHardness(10.0F);
         this.setResistance(10.0F);
-        this.setSoundType(SoundType.METAL);
+        this.setSoundType(SoundType.SLIME);
         this.setHarvestLevel("wrench", 2);
-        this.setDefaultState(this.getState(CasingType.SUBSTRATE_CASING));
+        this.setDefaultState(this.getState(CasingType.NAQUADRIA_CHARGE));
     }
+
     public boolean canCreatureSpawn(@Nonnull IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EntityLiving.SpawnPlacementType type) {
         return false;
     }
 
     public static enum CasingType implements IStringSerializable {
-        SUBSTRATE_CASING("substrate_casing"),
-        ADVANCED_SUBSTRATE_CASING("advanced_substrate_casing"),
-        ADVANCED_INVAR_CASING("advanced_invar_casing"),
-        ADVANCED_ALUMINIUM_CASING("advanced_aluminium_casing"),
-        VACUUM_CASING("vacuum_casing"),
-        DRILL_HEAD("drill_head"),
-        NAQUADRIA_CASING("naquadria_casing"),
-        HYPER_CASING("hyper_casing"),
-        TALONITE_CASING("talonite_casing"),
-        IRIDIUM_CASING("iridium_casing"),
-        FARM_PIPE_CASING("farm_pipe_casing"),
-        FARM_CASING("farm_casing"),
-        BREEDING_CASING("breeding_casing"),
-        TRITANIUM_CASING("tritanium_casing"),
-        QUANTUM_CASING("quantum_casing"),
-        REFLECTIVE_CASING("reflective_casing");
+        NAQUADRIA_CHARGE("naquadria_charge"),
+        TARANIUM_CHARGE("taranium_charge"),
+        LEPTONIC_CHARGE("leptonic_charge"),
+        QUANTUM_CHROMODYNAMIC_CHARGE("quantum_chromodynamic_charge");
+
         private final String name;
 
         CasingType(String name) {

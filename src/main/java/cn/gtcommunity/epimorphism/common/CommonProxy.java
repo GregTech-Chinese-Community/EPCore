@@ -55,6 +55,7 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_CRUCIBLE_CASING);
         registry.register(EPMetablocks.EP_MILL_CASING);
         registry.register(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING);
+        registry.register(EPMetablocks.EP_EXPLOSIVE_BLOCK);
     }
 
     @SubscribeEvent
@@ -68,6 +69,7 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_CRUCIBLE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_MILL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_EXPLOSIVE_BLOCK, VariantItemBlock::new));
         BehaviorAddition.init();
     }
 
