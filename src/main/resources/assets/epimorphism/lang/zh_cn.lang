@@ -373,6 +373,7 @@ epimorphism.recipe.ph_error_range=pH值误差范围:±%d
 epimorphism.recipe.grind_ball_soapstone=研磨球材质：皂石
 epimorphism.recipe.grind_ball_aluminium=研磨球材质：铝
 epimorphism.recipe.altitude=最低高度:%s
+epimorphism.recipe.flow_rate=流量阈值： %s L/s
 
 #  Machines
 recipemap.dryer_recipes.name=脱水
@@ -558,12 +559,12 @@ recipemap.cryogenic_reactor_recipes.name=低温反应
 epimorphism.machine.mega_alloy_blast_smelter.name=巨型合金冶炼炉
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.1=玻璃等级决定了最大电压。
 epimorphism.machine.mega_alloy_blast_smelter.tooltip.2=最大并行数量为线圈等级的四倍。
-epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=线圈每比白铜高一个层级，配方所需时间变为原来的0.8。
+epimorphism.machine.mega_alloy_blast_smelter.tooltip.3=线圈每比白铜高一个层级，配方所需时间变为原来的80%%。
 
 epimorphism.machine.mega_oil_cracking_unit.name=巨型石油裂化机
 epimorphism.machine.mega_oil_cracking_unit.tooltip.1=玻璃等级决定了最大电压。
 epimorphism.machine.mega_oil_cracking_unit.tooltip.2=最大并行数量为线圈等级的四倍。
-epimorphism.machine.mega_oil_cracking_unit.tooltip.3=线圈每比白铜高一个层级，配方能耗减少0.1。
+epimorphism.machine.mega_oil_cracking_unit.tooltip.3=线圈每比白铜高一个层级，配方能耗减少10%%。
 
 epimorphism.machine.mega_chemical_reactor.name=巨型化学反应釜
 epimorphism.machine.mega_chemical_reactor.tooltip.1=玻璃等级决定了最大电压。
@@ -612,7 +613,7 @@ recipemap.general_recipes_a.name=加工模式A
 recipemap.general_recipes_b.name=加工模式B
 recipemap.general_recipes_c.name=加工模式C
 epimorphism.multiblock.general_processing_plant.tooltip.1=比相同电压的单方块机器快2.5倍
-epimorphism.multiblock.general_processing_plant.tooltip.2=只需要使用配方要求功率的0.8
+epimorphism.multiblock.general_processing_plant.tooltip.2=只需要使用配方要求功率的80%%
 epimorphism.multiblock.general_processing_plant.tooltip.3=每提升一个电压等级，最大并行数加2
 epimorphism.multiblock.general_processing_plant.shift_tooltip.1=使用编程电路控制当前模式下的配方
 epimorphism.multiblock.general_processing_plant.shift_tooltip.2=模式A：20-压缩机 21-车床 22-两极磁化机
@@ -673,6 +674,17 @@ epimorphism.machine.large_vacuum_chamber.name=大型真空室
 
 epimorphism.machine.plasma_condenser.name=等离子冷凝器
 recipemap.plasma_condenser_recipes.name=等离子冷凝
+
+epimorphism.machine.large_heat_exchanger.name=大型热交换机
+recipemap.heat_exchanger_recipes.name=热力交换
+epimorphism.multiblock.large_heat_exchanger.threshold=流量阈值：%s
+epimorphism.multiblock.large_heat_exchanger.threshold.tooltip=热交换器能以降低基础热流体输入流量为代价，降低生产过热蒸汽的流量阈值。
+epimorphism.multiblock.large_heat_exchanger.threshold_decrement=§c降低5%%流量阈值 /n§7效率降低3%%
+epimorphism.multiblock.large_heat_exchanger.threshold_increment=§a增加5%%流量阈值 /n§7效率增加3%%
+epimorphism.multiblock.large_heat_exchanger.description=大型热交换器是你第一台能生产高压蒸汽的多方块。
+epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid=§e基础热流体输入流量：§f%s L/s
+epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip=升温耗时：§f%ss
+epimorphism.multiblock.large_heat_exchanger.explosion_tooltip=蒸馏水供应不足会导致爆炸！
 
 #  Materials
 
@@ -1091,6 +1103,8 @@ gregtech.material.er_tm_yb_lu_oxides_solution=铒-铥-镱-镥氧化物溶液
 gregtech.material.chlorinated_solvents=有机氯溶液
 gregtech.material.superheated_steam=过热蒸汽
 gregtech.material.supercritical_steam=超临界蒸汽
+gregtech.material.high_temperature_exhaust_gas=高温废气
+gregtech.material.exhaust_gas=废气
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力
