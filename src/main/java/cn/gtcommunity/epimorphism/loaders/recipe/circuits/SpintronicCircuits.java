@@ -262,7 +262,7 @@ public class SpintronicCircuits {
                 .input(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 16)//  TODO new UIV superconductor
                 .input(plate, NeptuniumAluminide, 8)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
-                .fluidInputs(CarbonNanotube.getFluid(L * 15))//  TODO Zylon
+                .fluidInputs(Zylon.getFluid(L * 15))
                 .fluidInputs(Kevlar.getFluid(L * 12))
                 .fluidInputs(Neutronium.getFluid(L * 9))
                 .output(SPINTRONIC_MAINFRAME)

@@ -192,6 +192,16 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
                 .fluidPipeProperties(4900, 220, true, true, true, false)
                 .build();
+        //  24517 Incoloy-MA813
+        IncoloyMA813 = new Material.Builder(getMaterialsId(), gregtechId("incoloy_ma_813"))
+                .ingot()
+                .fluid()
+                .color(0x6CF076)
+                .iconSet(SHINY)
+                .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
+                .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 4277)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .build();
     }
 
     private static int getMaterialsId() {
