@@ -395,6 +395,18 @@ public class EPUnknownCompositionMaterials {
                 .components(Hydrogen, 2, Oxygen, 1)
                 .fluidTemp(873)
                 .build();
+        // 25268 High-Temperature Exhaust Gas
+        HighTemperatureExhaustGas = new Material.Builder(getMaterialsId(), gregtechId("high_temperature_exhaust_gas"))
+                .fluid(FluidTypes.GAS)
+                .color(0xF0EAD6)
+                .fluidTemp(1123)
+                .build();
+        // 25269 Exhaust Gas
+        ExhaustGas = new Material.Builder(getMaterialsId(), gregtechId("exhaust_gas"))
+                .fluid(FluidTypes.GAS)
+                .color(0xEDEADE)
+                .fluidTemp(298)
+                .build();
     }
 
     private static int getMaterialsId() {

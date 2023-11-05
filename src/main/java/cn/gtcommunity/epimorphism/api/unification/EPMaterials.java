@@ -440,6 +440,8 @@ public EPMaterials() {}
     public static Material ZirconiumCarbide;
     public static Material Inconel792;
     public static Material IncoloyMA813;
+    public static Material HighTemperatureExhaustGas;
+    public static Material ExhaustGas;
 
     //  Mod Compatibility Materials
     public static Material Mana;

@@ -89,5 +89,6 @@ public class EPRecipeManager {
         FuelRefineFactoryRecipes.init();
         HyperReactorRecipes.init();
         PlasmaCondenserRecipes.init();
+        HeatExchangerRecipes.init();
     }
 }
