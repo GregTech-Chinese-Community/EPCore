@@ -1797,6 +1797,26 @@ public class EPFirstDegreeMaterials {
                 .components(Carbon, 1, Hydrogen, 8, Oxygen, 3, Nitrogen, 2)
                 .build()
                 .setFormula("(NH4)2CO3", true);
+        //  24241 Free Electron Gas
+        FreeElectronGas = new Material.Builder(getMaterialsId(), gregtechId("free_electron_gas"))
+                .fluid(FluidTypes.GAS)
+                .color(0x507BB3)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§ee" + TextFormatting.OBFUSCATED + "a", false);
+        //  24242 Quark Gluon Plasma
+        QuarkGluonPlasma = new Material.Builder(getMaterialsId(), gregtechId("quark_gluon_plasma"))
+                .fluid(FluidTypes.PLASMA)
+                .color(HeavyQuarks.getMaterialRGB() + Gluons.getMaterialRGB())
+                .fluidTemp((int) (V[ZPM] + V[UHV])/2)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§e(u2)d(c2)s(t2)bg" + TextFormatting.OBFUSCATED + "a", false);
+        //  24243 Light Quarks
+        LightQuarks = new Material.Builder(getMaterialsId(), gregtechId("light_quarks"))
+                .fluid()
+                .color(QuarkGluonPlasma.getMaterialRGB() - HeavyQuarks.getMaterialRGB())
+                .fluidTemp((VA[ZPM] + VA[UHV])/2)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§e(c2)(t2)b" + TextFormatting.OBFUSCATED + "a", false);
     }
 
     private static int getMaterialsId() {

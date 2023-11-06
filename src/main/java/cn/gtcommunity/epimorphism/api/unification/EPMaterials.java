@@ -263,6 +263,9 @@ public EPMaterials() {}
     public static Material BariumSulfateSuspension;
     public static Material AmmoniumAcetate;
     public static Material AmmoniumCarbonate;
+    public static Material FreeElectronGas;
+    public static Material QuarkGluonPlasma;
+    public static Material LightQuarks;
 
     //  Second Degree Materials
     public static Material DragonBreath;

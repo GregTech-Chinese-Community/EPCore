@@ -112,6 +112,7 @@ public class EPElementMaterials {
                 .color(0xE61C24)
                 .iconSet(SHINY)
                 .element(Elements.Og)
+                .flags(GENERATE_PLATE)
                 .build();
         //  TODO Radium-Radon Mixture + Scandium-Titanium-50 Mixture -> Metastable Hassium
         //  26010 Metastable Hassium
@@ -147,8 +148,7 @@ public class EPElementMaterials {
         //  26013 Degenerate Rhenium
         DegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("degenerate_rhenium"))
                 .dust()
-                .fluid()
-                .plasma()
+                .fluid(FluidTypes.PLASMA)
                 .color(0x6666FF)
                 .iconSet(CUSTOM_DEGENERATE_RHENIUM)
                 .element(Elements.Rh)
