@@ -81,6 +81,8 @@ public class EPMaterialPropertyAddition {
         TitaniumCarbide.addFlags(GENERATE_DOUBLE_PLATE);
         Tritanium.addFlags(GENERATE_CURVED_PLATE, GENERATE_ROTOR);
         Nichrome.addFlags(GENERATE_FINE_WIRE);
+        Uranium238.addFlags(GENERATE_FRAME);
+        Plutonium241.addFlags(GENERATE_FRAME);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

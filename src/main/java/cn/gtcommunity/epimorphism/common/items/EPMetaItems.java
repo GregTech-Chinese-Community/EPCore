@@ -156,6 +156,10 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SENSOR_MAX;
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_MAX;
 
+    //  High Energy Physics items
+    public static MetaItem<?>.MetaValueItem PLASMA_CONTAINMENT_CELL;
+    public static MetaItem<?>.MetaValueItem RHENIUM_PLASMA_CONTAINMENT_CELL;
+
     //  Biological
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;
     public static MetaItem<?>.MetaValueItem ULTRA_MICRO_PHASE_SEPARATOR;

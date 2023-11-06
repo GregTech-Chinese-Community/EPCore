@@ -8,6 +8,7 @@ import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
@@ -21,6 +22,7 @@ public class EPElementMaterials {
 
     public static void register() {
 
+        //  26001 Draconium
         Draconium = new Material.Builder(getMaterialsId(), gregtechId("draconium"))
                 .ingot()
                 .fluid()
@@ -31,6 +33,7 @@ public class EPElementMaterials {
                 .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .build();
+        //  26002 Awakened Draconium
         AwakenedDraconium = new Material.Builder(getMaterialsId(), gregtechId("awakened_draconium"))
                 .ingot()
                 .fluid()
@@ -40,6 +43,7 @@ public class EPElementMaterials {
                 .element(EPElements.AwakenedDraconium)
                 .cableProperties(V[UHV], 16, 4)
                 .build();
+        //  26003 Chaotic Draconium
         ChaoticDraconium = new Material.Builder(getMaterialsId(), gregtechId("chaotic_draconium"))
                 .ingot()
                 .fluid()
@@ -50,6 +54,7 @@ public class EPElementMaterials {
                 .cableProperties(V[UEV], 32, 16)
                 .build();
         //  FIXME Pay attention to these materials, they are just foil (not foil in gregtech)!
+        //  26004 Orichalcum
         Orichalcum = new Material.Builder(getMaterialsId(), gregtechId("orichalcum"))
                 .ingot()
                 .fluid()
@@ -59,6 +64,7 @@ public class EPElementMaterials {
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_GEAR)
                 .blastTemp(9000, BlastProperty.GasTier.HIGH)
                 .build();
+        //  26005 Vibranium
         Vibranium = new Material.Builder(getMaterialsId(), gregtechId("vibranium"))
                 .ingot()
                 .fluid()
@@ -69,6 +75,7 @@ public class EPElementMaterials {
                 .element(EPElements.Vibranium)
                 .blastTemp(4852, BlastProperty.GasTier.HIGH)
                 .build();
+        //  26006 Adamantium
         Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
                 .ingot()
                 .fluid()
@@ -80,6 +87,7 @@ public class EPElementMaterials {
                 .blastTemp(5225, BlastProperty.GasTier.HIGH)
                 .cableProperties(VA[UHV], 18, 9, false)
                 .build();
+        //  26007 Taranium
         Taranium = new Material.Builder(getMaterialsId(), gregtechId("taranium"))
                 .ingot()
                 .fluid()
@@ -88,6 +96,7 @@ public class EPElementMaterials {
                 .element(EPElements.Taranium)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
+        //  26008 Plutonium-244
         Plutonium244 = new Material.Builder(getMaterialsId(), gregtechId("plutonium_244"))
                 .ingot()
                 .fluid()
@@ -96,6 +105,7 @@ public class EPElementMaterials {
                 .element(EPElements.Plutonium244)
                 .build();
         //  TODO Titanium-50 + Californium-252 -> Oganesson Breeding Base + Californium-250 -> Hot Oganesson -> Metastable Oganesson
+        //  26009 Metastable Oganesson
         MetastableOganesson = new Material.Builder(getMaterialsId(), gregtechId("metastable_oganesson"))
                 .ingot()
                 .fluid(FluidTypes.GAS)
@@ -104,6 +114,7 @@ public class EPElementMaterials {
                 .element(Elements.Og)
                 .build();
         //  TODO Radium-Radon Mixture + Scandium-Titanium-50 Mixture -> Metastable Hassium
+        //  26010 Metastable Hassium
         MetastableHassium = new Material.Builder(getMaterialsId(), gregtechId("metastable_hassium"))
                 .ingot()
                 .fluid()
@@ -113,6 +124,7 @@ public class EPElementMaterials {
                 .flags(GENERATE_ROD)
                 .build();
         //  TODO Uranium-238 -> Quasi-fissioning Plasma -> Flerovium-Ytterbium Plasma -> Metastable Flerovium + Ytterbium-178
+        //  26011 Metastable Flerovium
         MetastableFlerovium = new Material.Builder(getMaterialsId(), gregtechId("metastable_flerovium"))
                 .ingot()
                 .fluid()
@@ -121,6 +133,7 @@ public class EPElementMaterials {
                 .element(Elements.Fl)
                 .flags(GENERATE_ROD)
                 .build();
+        //  26012 Cosmic Neutronium
         CosmicNeutronium = new Material.Builder(getMaterialsId(), gregtechId("cosmic_neutronium"))
                 .ingot()
                 .fluid()
@@ -131,6 +144,17 @@ public class EPElementMaterials {
                 .element(EPElements.CosmicNeutronium)
                 .cableProperties(V[UIV], 256, 128, false)
                 .build();
+        //  26013 Degenerate Rhenium
+        DegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("degenerate_rhenium"))
+                .dust()
+                .fluid()
+                .plasma()
+                .color(0x6666FF)
+                .iconSet(CUSTOM_DEGENERATE_RHENIUM)
+                .element(Elements.Rh)
+                .flags(GENERATE_PLATE)
+                .build()
+                .setFormula("§cR§dh", false);
     }
 
     private static int getMaterialsId() {

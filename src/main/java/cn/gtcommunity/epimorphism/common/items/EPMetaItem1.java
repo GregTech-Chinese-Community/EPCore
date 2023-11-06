@@ -165,6 +165,10 @@ public class EPMetaItem1 extends StandardMetaItem {
         SENSOR_MAX = this.addItem(214, "cover.sensor.max");
         FIELD_GENERATOR_MAX = this.addItem(215, "cover.field_generator.max");
 
+        //  High Energy Physics items
+        PLASMA_CONTAINMENT_CELL = this.addItem(250, "plasma_containment_cell");
+        RHENIUM_PLASMA_CONTAINMENT_CELL = this.addItem(251, "rhenium_plasma_containment_cell");
+
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");
         ULTRA_MICRO_PHASE_SEPARATOR = this.addItem(302, "biological.components.ultra_micro_phase_separator");
