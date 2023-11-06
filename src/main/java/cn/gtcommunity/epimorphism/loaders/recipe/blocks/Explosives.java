@@ -49,6 +49,23 @@ public class Explosives {
                         .duration(1200))
                 .buildAndRegister();
 
-        //  TODO Lepton Charge and QCD Charge
+        //  Leptonic Charge
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.TARANIUM_CHARGE))
+                .input(plate, MetastableOganesson)
+                .input(plate, Vibranium)
+                .input(bolt, Dubnium, 4)
+                .fluidInputs(Tritanium.getFluid(576))
+                .fluidInputs(FreeElectronGas.getFluid(1000))
+                .outputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                .EUt(VA[UEV])
+                .duration(100)
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.TARANIUM_CHARGE))
+                        .EUt(VA[UHV])
+                        .duration(1200))
+                .buildAndRegister();
+
+        //  TODO QCD Charge
     }
 }

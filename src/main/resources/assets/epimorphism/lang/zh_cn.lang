@@ -961,6 +961,9 @@ gregtech.material.hydroxylamine_hydrochloride=盐酸羟胺
 gregtech.material.barium_sulfate_suspension=硫酸钡悬浊液
 gregtech.material.ammonium_acetate=乙酸铵
 gregtech.material.ammonium_carbonate=碳酸铵
+gregtech.material.free_electron_gas=自由电子气体
+gregtech.material.quark_gluon_plasma=夸克-胶子
+gregtech.material.light_quarks=轻夸克
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

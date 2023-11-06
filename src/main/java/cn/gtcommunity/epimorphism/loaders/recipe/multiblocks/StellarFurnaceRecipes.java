@@ -14,24 +14,40 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 public class StellarFurnaceRecipes {
     public static void init() {
 
+        //  A few hint: Rhenium + Naquadria Charge -> Degenerate Rhenium -> Quark Gluon Plasma (and others) -> QCD Charge
+
         //  Degenerated Rhenium
         STELLAR_FURNACE_RECIPES.recipeBuilder()
                 .input(ingot, Rhenium)
                 .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.NAQUADRIA_CHARGE))
-                .fluidOutputs(DegenerateRhenium.getPlasma(1000))
+                .fluidOutputs(DegenerateRhenium.getFluid(1000))
                 .EUt(VA[UHV])
                 .duration(20)
+                .temperature((int) (V[LuV] + V[UV])/2)
                 .buildAndRegister();
 
         CANNER_RECIPES.recipeBuilder()
                 .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
-                .fluidInputs(DegenerateRhenium.getPlasma(1000))
+                .fluidInputs(DegenerateRhenium.getFluid(1000))
                 .outputs(RHENIUM_PLASMA_CONTAINMENT_CELL.getStackForm())
                 .EUt(VA[LuV])
                 .duration(20)
                 .buildAndRegister();
 
-        //  TODO components of Cosmic Computing Mixture
+        //  Quark Gluon Plasma
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(plate, DegenerateRhenium)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                .fluidOutputs(QuarkGluonPlasma.getFluid(1000))
+                .EUt(VA[UEV])
+                .duration(60)
+                .temperature((int) (V[ZPM] + V[UHV])/2)
+                .buildAndRegister();
+
+        //  TODO QGP Centrifuge
+
+
+        //  TODO other components of Cosmic Computing Mixture
 
         //  Cosmic Computing Mixture
         STELLAR_FURNACE_RECIPES.recipeBuilder()
