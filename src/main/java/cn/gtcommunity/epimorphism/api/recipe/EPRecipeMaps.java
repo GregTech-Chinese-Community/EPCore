@@ -81,7 +81,7 @@ public class EPRecipeMaps {
     @ZenProperty
     public static final RecipeMap<FlowRateRecipeBuilder> HEAT_EXCHANGE_RECIPES;
     @ZenProperty
-    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> STELLAR_FURNACE_RECIPES;
+    public static final RecipeMap<NoCoilHigherTemperatureRecipeBuilder> STELLAR_FURNACE_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> DIMENSIONAL_OSCILLATOR_RECIPES;
 
@@ -259,7 +259,7 @@ public class EPRecipeMaps {
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, ProgressWidget.MoveType.HORIZONTAL);
 
         //  Stellar Furnace Recipemap
-        STELLAR_FURNACE_RECIPES = new RecipeMap<>("stellar_furnace_recipes", 0, 6, 0, 6, 0, 6, 0, 6, new NoCoilTemperatureRecipeBuilder(), false)
+        STELLAR_FURNACE_RECIPES = new RecipeMap<>("stellar_furnace_recipes", 0, 6, 0, 6, 0, 6, 0, 6, new NoCoilHigherTemperatureRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, ProgressWidget.MoveType.HORIZONTAL)
                 .setSlotOverlay(false, true, false, GuiTextures.FURNACE_OVERLAY_2)
                 .setSlotOverlay(false, true, true, GuiTextures.FURNACE_OVERLAY_2)
