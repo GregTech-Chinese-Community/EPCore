@@ -23,6 +23,7 @@ public class EPTextures {
     public static OrientedOverlayRenderer MEGA_TURBINE_OVERLAY = new OrientedOverlayRenderer("multiblock/mega_turbine");
     public static OrientedOverlayRenderer DRYER_OVERLAY = new OrientedOverlayRenderer("machines/dryer");
     public static OrientedOverlayRenderer NAQUADAH_REACTOR_OVERLAY = new OrientedOverlayRenderer("machines/naquadah_reactor");
+    public static OrientedOverlayRenderer STELLAR_FURNACE_OVERLAY = new OrientedOverlayRenderer("multiblock/stellar_furnace");
 
     //  EPOverlayRenderer
     public static EPOverlayRenderer ADVANCED_INVAR_CASING = new EPOverlayRenderer("casings/solid/advanced_invar_casing");
@@ -40,6 +41,7 @@ public class EPTextures {
     public static EPOverlayRenderer MARAGING_STEEL_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/maraging_steel_250_casing");
     public static EPOverlayRenderer BABBITT_ALLOY_CASING = new EPOverlayRenderer("casings/solid/babbitt_alloy_casing");
     public static EPOverlayRenderer ZIRCONIUM_CARBIDE_CASING = new EPOverlayRenderer("casings/solid/zirconium_carbide_casing");
+    public static EPOverlayRenderer TRITANIUM_CASING = new EPOverlayRenderer("casings/solid/tritanium_casing");
 
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");

@@ -25,6 +25,18 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/zirconium_carbide_casing"
         }
+      },
+      "hastelloy_x78_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/hastelloy_x78_casing"
+        }
+      },
+      "stellar_containment_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/stellar_containment_casing"
+        }
       }
     }
   }

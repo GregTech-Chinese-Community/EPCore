@@ -645,6 +645,23 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Hastelloy-X78 Casing
+        ModHandler.addShapedRecipe(true, "hastelloy_x78_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.HASTELLOYX78_CASING, 2),
+                "PhP", "TFT","PwP",
+                'P', new UnificationEntry(plateDouble, HastelloyX),
+                'T', new UnificationEntry(plate, HastelloyX78),
+                'F', new UnificationEntry(frameGt, HastelloyX78));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plateDouble, HastelloyX, 4)
+                .input(plate, HastelloyX78, 2)
+                .input(frameGt, HastelloyX78)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.HASTELLOYX78_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
