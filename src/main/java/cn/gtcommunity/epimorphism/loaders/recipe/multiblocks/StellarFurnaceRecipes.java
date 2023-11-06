@@ -3,6 +3,8 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockExplosive;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 
+import java.math.BigInteger;
+
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
@@ -23,7 +25,7 @@ public class StellarFurnaceRecipes {
                 .fluidOutputs(DegenerateRhenium.getFluid(1000))
                 .EUt(VA[UHV])
                 .duration(20)
-                .temperature((int) (V[LuV] + V[UV])/2)
+                .temperature(BigInteger.valueOf((10 * V[UV]) - (10 * V[ZPM])))
                 .buildAndRegister();
 
         CANNER_RECIPES.recipeBuilder()
@@ -41,7 +43,7 @@ public class StellarFurnaceRecipes {
                 .fluidOutputs(QuarkGluonPlasma.getFluid(1000))
                 .EUt(VA[UEV])
                 .duration(60)
-                .temperature((int) (V[ZPM] + V[UHV])/2)
+                .temperature(BigInteger.valueOf((10 * V[UHV]) - (10 * V[UV])))
                 .buildAndRegister();
 
         //  TODO QGP Centrifuge
@@ -60,7 +62,7 @@ public class StellarFurnaceRecipes {
                 .fluidOutputs(CosmicComputingMixture.getFluid(60000))
                 .EUt(VA[UEV])
                 .duration(1200)
-                .temperature(2147483647)
+                .temperature(BigInteger.valueOf((long) Math.pow(V[MAX], V[MAX])))
                 .buildAndRegister();
 
         //  MHCSM (UEV)
@@ -73,7 +75,7 @@ public class StellarFurnaceRecipes {
                 .fluidOutputs(DimensionallyTranscendentResidue.getFluid(L * 16))
                 .EUt(VA[UEV])
                 .duration(1200)
-                .temperature(6000000)
+                .temperature(BigInteger.valueOf(10 * V[UEV]- 10 * V[UHV]))
                 .buildAndRegister();
 
         //  TODO MHCSM (UXV): use infinity and...?

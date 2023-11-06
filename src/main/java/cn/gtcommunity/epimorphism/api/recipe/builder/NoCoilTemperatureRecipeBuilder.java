@@ -5,8 +5,6 @@ import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.recipeproperties.IRecipePropertyStorage;
-import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.recipes.recipeproperties.RecipePropertyStorage;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTUtility;
@@ -43,25 +41,25 @@ public class NoCoilTemperatureRecipeBuilder extends RecipeBuilder<NoCoilTemperat
             EPLog.logger.error("Temperature cannot be less than or equal to 0", new IllegalArgumentException());
             this.recipeStatus = EnumValidationResult.INVALID;
         }
-        applyProperty((RecipeProperty) NoCoilTemperatureProperty.getInstance(), Integer.valueOf(temperature));
+        applyProperty( NoCoilTemperatureProperty.getInstance(), Integer.valueOf(temperature));
         return this;
     }
 
     public ValidationResult<Recipe> build() {
         if (this.recipePropertyStorage == null)
-            this.recipePropertyStorage = (IRecipePropertyStorage)new RecipePropertyStorage();
-        if (this.recipePropertyStorage.hasRecipeProperty((RecipeProperty)NoCoilTemperatureProperty.getInstance())) {
-            if (((Integer)this.recipePropertyStorage.getRecipePropertyValue((RecipeProperty)NoCoilTemperatureProperty.getInstance(), Integer.valueOf(-1))).intValue() <= 0)
-                this.recipePropertyStorage.store((RecipeProperty)NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
+            this.recipePropertyStorage = new RecipePropertyStorage();
+        if (this.recipePropertyStorage.hasRecipeProperty(NoCoilTemperatureProperty.getInstance())) {
+            if ((this.recipePropertyStorage.getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(-1))).intValue() <= 0)
+                this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
         } else {
-            this.recipePropertyStorage.store((RecipeProperty)NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
+            this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
         }
         return super.build();
     }
 
     public int getTemperature() {
-        return (this.recipePropertyStorage == null) ? 0 : ((Integer)this.recipePropertyStorage
-                .getRecipePropertyValue((RecipeProperty)NoCoilTemperatureProperty.getInstance(), Integer.valueOf(0))).intValue();
+        return (this.recipePropertyStorage == null) ? 0 : (this.recipePropertyStorage
+                .getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(0))).intValue();
     }
 
     public String toString() {
