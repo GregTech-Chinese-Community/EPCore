@@ -24,6 +24,7 @@ public class EPRecipeManager {
 
     public static void initBlocks() {
         Crucibles.init();
+        Explosives.init();
     }
 
     public static void initChains() {

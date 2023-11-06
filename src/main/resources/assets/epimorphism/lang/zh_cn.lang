@@ -268,6 +268,12 @@ metaitem.crystal.sapphire_modulator.tooltip=转换处理电路
 metaitem.crystal.system_on_chip_socket.name=晶体SoC插槽
 metaitem.crystal.system_on_chip_socket.tooltip=桥接晶体和电路
 
+#  High Energy Physics items
+metaitem.plasma_containment_cell.name=等离子体遏制装置
+metaitem.plasma_containment_cell.tooltip=用于封装等离子体
+metaitem.rhenium_plasma_containment_cell.name=铼等离子遏制装置
+metaitem.rhenium_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+
 #  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球
@@ -709,6 +715,7 @@ gregtech.material.metastable_oganesson=亚稳态气奥
 gregtech.material.metastable_hassium=亚稳态钅黑
 gregtech.material.metastable_flerovium=亚稳态钅夫
 gregtech.material.cosmic_neutronium=宇宙中子素
+gregtech.material.degenerate_rhenium=简并态铼
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯

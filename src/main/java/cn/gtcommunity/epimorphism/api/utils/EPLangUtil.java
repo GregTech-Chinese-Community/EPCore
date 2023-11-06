@@ -85,10 +85,10 @@ public class EPLangUtil {
 
     //获得一个彩色字符串
     //根据空格分隔
-    public static String rainbowString(String s,int startIndex){
+    public static String rainbowString(String string,int startIndex){
         StringBuilder builder = new StringBuilder();
         int i = 0;
-        for(String sp : s.split(" ")){
+        for(String sp : string.split(" ")){
             builder.append(modifiers[(startIndex + i) % 16]).append(sp).append(" ");
             i++;
         }
@@ -96,8 +96,8 @@ public class EPLangUtil {
     }
 
     //获得一个根据时间变化的彩色字符串
-    public static String currentRainbowString(String s){
-        return rainbowString(s,currentIndex);
+    public static String currentRainbowString(String string){
+        return rainbowString(string, currentIndex);
     }
 
     public static void updateModifier(){

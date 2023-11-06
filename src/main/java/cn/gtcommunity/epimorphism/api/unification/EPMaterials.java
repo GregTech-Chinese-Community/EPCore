@@ -19,6 +19,7 @@ public EPMaterials() {}
     public static Material MetastableHassium;
     public static Material MetastableFlerovium;
     public static Material CosmicNeutronium;
+    public static Material DegenerateRhenium;
 
     //  First Degree Materials
     public static Material GrapheneOxide;

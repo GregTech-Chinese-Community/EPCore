@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -10,6 +11,30 @@ import static gregtech.common.items.MetaItems.*;
 public class PlasmaCondenserRecipes {
     public static void init() {
 
+        //  Degenerated Rhenium
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .notConsumable(SHAPE_MOLD_PLATE)
+                .inputs(RHENIUM_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(LiquidHelium.getFluid(16000))
+                .output(plate, DegenerateRhenium)
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Helium.getFluid(16000))
+                .EUt(VA[UV])
+                .duration(250)
+                .buildAndRegister();
+
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .notConsumable(SHAPE_MOLD_PLATE)
+                .inputs(RHENIUM_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(GelidCryotheum.getFluid(8000))
+                .output(plate, DegenerateRhenium)
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Ice.getFluid(8000))
+                .EUt(VA[UV])
+                .duration(250)
+                .buildAndRegister();
+
+        /*
         //  Adamantium
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
                 .fluidInputs(Adamantium.getPlasma(144))
@@ -78,6 +103,6 @@ public class PlasmaCondenserRecipes {
                 .output(ingot, Vibranium)
                 .EUt(VA[UIV])
                 .duration(120)
-                .buildAndRegister();
+                .buildAndRegister();*/
     }
 }

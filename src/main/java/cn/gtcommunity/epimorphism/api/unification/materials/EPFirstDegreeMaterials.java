@@ -5,9 +5,10 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
+import net.minecraft.util.text.TextFormatting;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
-import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.CUSTOM_MHCSM;
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -1632,44 +1633,45 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .fluidTemp(524288)
                 .build()
-                .setFormula("(t2)u", true);
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§e(t2)u" + TextFormatting.OBFUSCATED  + "a", true);
         //  24218 Heavy Quarks
         HeavyQuarks = new Material.Builder(getMaterialsId(), gregtechId("heavy_quarks"))
                 .fluid()
                 .fluidTemp(131072)
                 .build()
-                .setFormula("(u₂)ds", true);
+                .setFormula(TextFormatting.OBFUSCATED  + "a"  + TextFormatting.RESET + "§e(u2)ds" + TextFormatting.OBFUSCATED  + "a" , true);
         //  24219 Gluons
         Gluons = new Material.Builder(getMaterialsId(), gregtechId("gluons"))
                 .fluid()
                 .fluidTemp(2097152)
                 .build()
-                .setFormula("g", false);
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§eg" + TextFormatting.OBFUSCATED  + "a", false);
         //  24220 Instantons
         Instantons = new Material.Builder(getMaterialsId(), gregtechId("instantons"))
                 .fluid()
                 .fluidTemp(8388608)
                 .build()
-                .setFormula("i", false);
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§ei" + TextFormatting.OBFUSCATED  + "a", false);
         //  24221 Temporal Fluid
         TemporalFluid = new Material.Builder(getMaterialsId(), gregtechId("temporal_fluid"))
                 .fluid()
                 .fluidTemp(134217728)
                 .build()
-                .setFormula("t", false);
+                .setFormula(TextFormatting.OBFUSCATED  + "a"  + TextFormatting.RESET + "§et" + TextFormatting.OBFUSCATED  + "a", false);
         //  24222 Higgs Bosons
         HiggsBosons = new Material.Builder(getMaterialsId(), gregtechId("higgs_bosons"))
                 .fluid()
                 .fluidTemp(0)
                 .build()
-                .setFormula("h", false);
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§eh" + TextFormatting.OBFUSCATED + "a", false);
         //  24223 Cosmic Computing Mixture
         CosmicComputingMixture = new Material.Builder(getMaterialsId(), gregtechId("cosmic_computing_mixture"))
                 .fluid()
                 .fluidTemp(536870912)
                 .components(HeavyLeptonMixture, 32, HeavyQuarks, 8, Gluons, 8, Instantons, 4, TemporalFluid, 4, HiggsBosons, 4)
                 .flags(DISABLE_DECOMPOSITION)
-                .build();
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED + "aaaaaa", false);
         //  24224 Silica Gel
         SilicaGel = new Material.Builder(getMaterialsId(), gregtechId("silica_gel"))
                 .dust()

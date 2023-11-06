@@ -1,11 +1,37 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockExplosive;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
+import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.ore.OrePrefix.*;
 
 public class StellarFurnaceRecipes {
     public static void init() {
+
+        //  Degenerated Rhenium
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(ingot, Rhenium)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.NAQUADRIA_CHARGE))
+                .fluidOutputs(DegenerateRhenium.getPlasma(1000))
+                .EUt(VA[UHV])
+                .duration(20)
+                .buildAndRegister();
+
+        CANNER_RECIPES.recipeBuilder()
+                .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(DegenerateRhenium.getPlasma(1000))
+                .outputs(RHENIUM_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .EUt(VA[LuV])
+                .duration(20)
+                .buildAndRegister();
+
+        //  TODO components of Cosmic Computing Mixture
 
         //  Cosmic Computing Mixture
         STELLAR_FURNACE_RECIPES.recipeBuilder()
