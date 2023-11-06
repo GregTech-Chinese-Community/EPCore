@@ -47,6 +47,9 @@ public class EPMaterialPropertyAddition {
         Holmium.setProperty(PropertyKey.DUST, new DustProperty());
         Thulium.setProperty(PropertyKey.DUST, new DustProperty());
         Ytterbium.setProperty(PropertyKey.DUST, new DustProperty());
+        Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Polonium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Fermium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -83,6 +86,7 @@ public class EPMaterialPropertyAddition {
         Nichrome.addFlags(GENERATE_FINE_WIRE);
         Uranium238.addFlags(GENERATE_FRAME);
         Plutonium241.addFlags(GENERATE_FRAME);
+        HastelloyX.addFlags(GENERATE_DOUBLE_PLATE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

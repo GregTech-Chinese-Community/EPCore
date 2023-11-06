@@ -463,6 +463,8 @@ public EPMaterials() {}
     public static Material ChlorinatedSolvents;
     public static Material SuperheatedSteam;
     public static Material SupercriticalSteam;
+    public static Material HighTemperatureExhaustGas;
+    public static Material ExhaustGas;
 
     //  Machine Casing Materials
     public static Material Inconel625;
@@ -482,8 +484,7 @@ public EPMaterials() {}
     public static Material ZirconiumCarbide;
     public static Material Inconel792;
     public static Material IncoloyMA813;
-    public static Material HighTemperatureExhaustGas;
-    public static Material ExhaustGas;
+    public static Material HastelloyX78;
 
     //  Mod Compatibility Materials
     public static Material Mana;

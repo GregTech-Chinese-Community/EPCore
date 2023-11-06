@@ -154,7 +154,7 @@ public class EPElementMaterials {
                 .element(Elements.Rh)
                 .flags(GENERATE_PLATE)
                 .build()
-                .setFormula("§cR§dh", false);
+                .setFormula("§cR§de", false);
     }
 
     private static int getMaterialsId() {

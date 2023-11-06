@@ -299,6 +299,8 @@ tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机
 tile.ep_multiblock_casing_b.babbitt_alloy_casing.name=抗瘿巴氏合金机器外壳
 tile.ep_multiblock_casing.vacuum_casing.name=高气密红钢机器外壳
 tile.ep_multiblock_casing_b.zirconium_carbide_casing.name=超耐热碳化锆机器外壳
+tile.ep_multiblock_casing_b.hastelloy_x78_casing.name=矩阵强化哈斯特洛伊合金-X78机器外壳
+tile.ep_multiblock_casing_b.stellar_containment_casing.name=恒星热力容器
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -696,6 +698,7 @@ epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid=§e基础�
 epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip=升温耗时：§f%ss
 epimorphism.multiblock.large_heat_exchanger.explosion_tooltip=蒸馏水供应不足会导致爆炸！
 
+epimorphism.machine.stellar_furnace.name=御星天炉
 recipemap.stellar_furnace_recipes.name=恒星热能熔炼
 
 recipemap.dimensional_oscillator_recipes.name=超维度震荡
@@ -1195,3 +1198,4 @@ gregtech.material.babbitt_alloy=巴氏合金
 gregtech.material.zirconium_carbide=碳化锆
 gregtech.material.inconel_792=镍基合金-792
 gregtech.material.incoloy_ma_813=耐热铬铁合金-MA813
+gregtech.material.hastelloy_x_78=哈斯特洛依合金-X78

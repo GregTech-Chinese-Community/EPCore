@@ -202,6 +202,17 @@ public class EPMachineCasingMaterials {
                 .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 4277)
                 .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
+        //  24518 Hastelloy-X78
+        HastelloyX78 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_x_78"))
+                .ingot()
+                .fluid()
+                .color(0x6BA3E3)
+                .iconSet(SHINY)
+                //  TODO UEV stage coil?? Maybe 12800K this material needs...
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV], 4997)
+                .components(NaquadahAlloy, 10, Rhenium, 5, Naquadria, 4, Gadolinium, 3, Strontium, 2, Polonium, 3, Rutherfordium, 2, Fermium, 1)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .build();
     }
 
     private static int getMaterialsId() {

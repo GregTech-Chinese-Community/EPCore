@@ -28,7 +28,9 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
         GENERAL_PROCESSING_CASING("general_processing_casing"),
         MARAGING_STEEL_CASING("maraging_steel_casing"),
         BABBITT_ALLOY_CASING("babbitt_alloy_casing"),
-        ZIRCONIUM_CARBIDE_CASING("zirconium_carbide_casing");
+        ZIRCONIUM_CARBIDE_CASING("zirconium_carbide_casing"),
+        HASTELLOYX78_CASING("hastelloy_x78_casing"),
+        STELLAR_CONTAINMENT_CASING("stellar_containment_casing");
         private final String name;
 
         CasingType(String name) {
