@@ -62,7 +62,7 @@ public class StellarFurnaceRecipes {
                 .fluidOutputs(CosmicComputingMixture.getFluid(60000))
                 .EUt(VA[UEV])
                 .duration(1200)
-                .temperature(BigInteger.valueOf((long) Math.pow(V[MAX], V[MAX])))
+                .temperature(BigInteger.valueOf(Long.MAX_VALUE))
                 .buildAndRegister();
 
         //  MHCSM (UEV)
