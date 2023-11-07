@@ -299,6 +299,8 @@ tile.ep_multiblock_casing.talonite_casing.name=低摩擦铬钴磷酸盐合金机
 tile.ep_multiblock_casing_b.babbitt_alloy_casing.name=抗瘿巴氏合金机器外壳
 tile.ep_multiblock_casing.vacuum_casing.name=高气密红钢机器外壳
 tile.ep_multiblock_casing_b.zirconium_carbide_casing.name=超耐热碳化锆机器外壳
+tile.ep_multiblock_casing_b.supercritical_fluid_turbine_casing.name=超临界涡轮外壳
+tile.ep_multiblock_casing_b.corrosion_casing.name=抗腐蚀热交换机器外壳
 tile.ep_multiblock_casing_b.hastelloy_x78_casing.name=矩阵强化哈斯特洛伊合金-X78机器外壳
 tile.ep_multiblock_casing_b.stellar_containment_casing.name=恒星热力容器
 tile.ep_multiblock_casing_b.hastelloy_k243_casing.name=高耐久哈斯特洛伊合金-K243机器外壳
@@ -474,6 +476,11 @@ epimorphism.machine.mega_turbine.gas.name=特大燃气涡轮
 epimorphism.machine.mega_turbine.plasma.name=特大等离子涡轮
 epimorphism.machine.mega_turbine.mode.0=正常模式
 epimorphism.machine.mega_turbine.mode.1=高速模式
+
+epimorphism.machine.high_pressure_steam_turbine.name=高压蒸汽涡轮
+epimorphism.machine.supercritical_steam_turbine.name=超临界蒸汽涡轮
+epimorphism.machine.mega_high_pressure_steam_turbine.name=特大高压蒸汽涡轮
+epimorphism.machine.mega_supercritical_steam_turbine.name=特大超临界蒸汽涡轮
 
 epimorphism.machine.large_naquadah_reactor.name=大型硅岩反应堆
 epimorphism.machine.large_naquadah_reactor.tooltip.1=取之有度，用之有节
@@ -700,6 +707,8 @@ epimorphism.multiblock.large_heat_exchanger.description=大型热交换器是你
 epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid=§e基础热流体输入流量：§f%s L/s
 epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip=升温耗时：§f%ss
 epimorphism.multiblock.large_heat_exchanger.explosion_tooltip=蒸馏水供应不足会导致爆炸！
+
+epimorphism.machine.mega_heat_exchanger.name=特大热交换机
 
 epimorphism.machine.stellar_furnace.name=御星天炉
 recipemap.stellar_furnace_recipes.name=恒星热能熔炼

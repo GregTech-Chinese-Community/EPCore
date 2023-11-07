@@ -19,25 +19,25 @@ import static gregtech.common.items.MetaItems.*;
 public class GoowareCircuits {
     public static void init() {
         //  Gooware Board
-       CVD_RECIPES.recipeBuilder()
-               .input(OrePrefix.plate, EPMaterials.KaptonE)
-               .input(OrePrefix.foil, Materials.Europium, 4)
-               .output(GOOWARE_BOARD)
-               .duration(40)
-               .EUt(VA[UV])
-               .temperature(493)
-               .glassTier(7)
-               .cleanroom(CleanroomType.CLEANROOM)
-               .buildAndRegister();
+        CVD_RECIPES.recipeBuilder()
+                .input(OrePrefix.plate, EPMaterials.KaptonE)
+                .input(OrePrefix.foil, Materials.Europium, 4)
+                .output(GOOWARE_BOARD)
+                .duration(40)
+                .EUt(VA[UV])
+                .temperature(493)
+                .glassTier(7)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
 
         //  Gooware Circuit Board
-        for (FluidStack stack : new FluidStack[] {
+        for (FluidStack stack : new FluidStack[]{
                 EPMaterials.TetramethylammoniumHydroxide.getFluid(2000),
-                EPMaterials.EDP.getFluid(500) }) {
+                EPMaterials.EDP.getFluid(500)}) {
             CHEMICAL_RECIPES.recipeBuilder()
                     .input(GOOWARE_BOARD)
                     .input(OrePrefix.foil, Materials.YttriumBariumCuprate, 48)
-                    .fluidInputs(new FluidStack[] { stack })
+                    .fluidInputs(new FluidStack[]{stack})
                     .output(GOOWARE_CIRCUIT_BOARD)
                     .cleanroom(CleanroomType.CLEANROOM)
                     .duration(210)
@@ -141,38 +141,5 @@ public class GoowareCircuits {
                         .CWUt(192)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
-
-        // Test
-        /*FERMENTATION_TANK_RECIPES.recipeBuilder()
-                .input(frameGt, Darmstadtium, 2)
-                .input(GOOWARE_COMPUTER, 2)
-                .input(wireGtDouble, PedotPSS, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 20))
-                .output(GOOWARE_MAINFRAME)
-                .fluidOutputs(KaptonE.getFluid(L * 9))
-                .duration(2000)
-                .EUt(1_200_000)
-                .pH(5.12)
-                .pHChange(-3.14)
-                .pHErrorRange(4.12)
-                .buildAndRegister();
-
-        FLOTATION_FACTORY_RECIPES.recipeBuilder()
-                .input(frameGt, Darmstadtium, 2)
-                .output(GOOWARE_MAINFRAME)
-                .fluidOutputs(KaptonE.getFluid(L * 9))
-                .duration(2000)
-                .EUt(1_200_000)
-                .buildAndRegister();
-
-        CHEMICAL_PLANT.recipeBuilder()
-                .input(frameGt, Darmstadtium, 2)
-                .output(GOOWARE_MAINFRAME)
-                .fluidOutputs(KaptonE.getFluid(L * 9))
-                .CasingTier(5)
-                .duration(2000)
-                .EUt(1_200_000)
-                .buildAndRegister();
-       */
     }
 }

@@ -43,6 +43,18 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/hastelloy_k243_casing"
         }
+      },
+      "supercritical_fluid_turbine_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/supercritical_fluid_turbine_casing"
+        }
+      },
+      "corrosion_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/corrosion_casing"
+        }
       }
     }
   }

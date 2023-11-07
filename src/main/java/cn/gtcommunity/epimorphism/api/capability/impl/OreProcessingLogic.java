@@ -689,13 +689,15 @@ public class OreProcessingLogic implements IWorkable, IControllable {
     }
 
     public void writeInitialData(@Nonnull PacketBuffer buf) {
-        buf.writeBoolean(this.isActive);
-        buf.writeBoolean(this.workingEnabled);
+        buf.writeBoolean(isActive);
+        buf.writeBoolean(workingEnabled);
+        buf.writeBoolean(isVoidStone);
     }
 
     public void receiveInitialData(@Nonnull PacketBuffer buf) {
         this.isActive = buf.readBoolean();
         this.workingEnabled = buf.readBoolean();
+        this.isVoidStone = buf.readBoolean();
     }
 
     @Nonnull

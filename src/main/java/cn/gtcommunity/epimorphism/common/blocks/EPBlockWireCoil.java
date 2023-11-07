@@ -4,12 +4,12 @@ import cn.gtcommunity.epimorphism.api.unification.EPMaterials;
 import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.block.VariantItemBlock;
+import gregtech.api.unification.material.Material;
 import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -29,7 +29,7 @@ import java.util.List;
 
 public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType> {
     public EPBlockWireCoil() {
-        super(Material.IRON);
+        super(net.minecraft.block.material.Material.IRON);
         this.setTranslationKey("ep_wire_coil");
         this.setHardness(5.0F);
         this.setResistance(10.0F);
@@ -45,22 +45,23 @@ public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType
     @SideOnly(Side.CLIENT)
     public void addInformation(@Nonnull ItemStack itemStack, @Nullable World worldIn, List<String> lines, @Nonnull ITooltipFlag tooltipFlag) {
         super.addInformation(itemStack, worldIn, lines, tooltipFlag);
-        VariantItemBlock itemBlock = (VariantItemBlock) itemStack.getItem();
+
+        VariantItemBlock itemBlock = (VariantItemBlock<CoilType, EPBlockWireCoil>) itemStack.getItem();
         IBlockState stackState = itemBlock.getBlockState(itemStack);
         CoilType coilType =  this.getState(stackState);
-        lines.add(I18n.format("tile.wire_coil.tooltip_heat", new Object[]{coilType.coilTemperature}));
+        lines.add(I18n.format("tile.wire_coil.tooltip_heat", coilType.coilTemperature));
         if (TooltipHelper.isShiftDown()) {
             int coilTier = coilType.ordinal();
-            lines.add(I18n.format("tile.wire_coil.tooltip_smelter", new Object[0]));
-            lines.add(I18n.format("tile.wire_coil.tooltip_parallel_smelter", new Object[]{coilType.level * 32}));
+            lines.add(I18n.format("tile.wire_coil.tooltip_smelter"));
+            lines.add(I18n.format("tile.wire_coil.tooltip_parallel_smelter", coilType.level * 32));
             int EUt = MetaTileEntityMultiSmelter.getEUtForParallel(MetaTileEntityMultiSmelter.getMaxParallel(coilType.getLevel()), coilType.getEnergyDiscount());
-            lines.add(I18n.format("tile.wire_coil.tooltip_energy_smelter", new Object[]{EUt}));
-            lines.add(I18n.format("tile.wire_coil.tooltip_pyro", new Object[0]));
-            lines.add(I18n.format("tile.wire_coil.tooltip_speed_pyro", new Object[]{coilTier == 0 ? 75 : 50 * (coilTier + 1)}));
-            lines.add(I18n.format("tile.wire_coil.tooltip_cracking", new Object[0]));
-            lines.add(I18n.format("tile.wire_coil.tooltip_energy_cracking", new Object[]{100 - 10 * coilTier}));
+            lines.add(I18n.format("tile.wire_coil.tooltip_energy_smelter", EUt));
+            lines.add(I18n.format("tile.wire_coil.tooltip_pyro"));
+            lines.add(I18n.format("tile.wire_coil.tooltip_speed_pyro", coilTier == 0 ? 75 : 50 * (coilTier + 1)));
+            lines.add(I18n.format("tile.wire_coil.tooltip_cracking"));
+            lines.add(I18n.format("tile.wire_coil.tooltip_energy_cracking", 100 - 10 * coilTier));
         } else {
-            lines.add(I18n.format("tile.wire_coil.tooltip_extended_info", new Object[0]));
+            lines.add(I18n.format("tile.wire_coil.tooltip_extended_info"));
         }
     }
 
@@ -68,11 +69,11 @@ public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType
         return false;
     }
 
-    protected boolean isBloomEnabled(BlockWireCoil.CoilType value) {
+    protected boolean isBloomEnabled(CoilType value) {
         return ConfigHolder.client.coilsActiveEmissiveTextures;
     }
 
-    public static enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
+    public enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
 
         ADAMANTIUM("adamantium", 12960, 32, 16, EPMaterials.Adamantium);
 
@@ -80,9 +81,9 @@ public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType
         private final int coilTemperature;
         private final int level;
         private final int energyDiscount;
-        private final gregtech.api.unification.material.Material material;
+        private final Material material;
 
-        private CoilType(String name, int coilTemperature, int level, int energyDiscount, gregtech.api.unification.material.Material material) {
+        CoilType(String name, int coilTemperature, int level, int energyDiscount, Material material) {
             this.name = name;
             this.coilTemperature = coilTemperature;
             this.level = level;
@@ -112,7 +113,7 @@ public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType
         }
 
         @Nullable
-        public gregtech.api.unification.material.Material getMaterial() {
+        public Material getMaterial() {
             return this.material;
         }
 

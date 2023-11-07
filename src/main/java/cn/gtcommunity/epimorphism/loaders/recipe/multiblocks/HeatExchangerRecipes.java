@@ -11,10 +11,10 @@ public class HeatExchangerRecipes {
 
         //  Exhaust gas heat exchange
         HEAT_EXCHANGE_RECIPES.recipeBuilder()
-                .fluidInputs(DistilledWater.getFluid(1 * 450))
+                .fluidInputs(DistilledWater.getFluid(1 * 5))
                 .fluidInputs(HighTemperatureExhaustGas.getFluid(1))
-                .fluidOutputs(Steam.getFluid(160 * 450))
-                .fluidOutputs(SuperheatedSteam.getFluid(80 * 450))
+                .fluidOutputs(Steam.getFluid(160 * 5))
+                .fluidOutputs(SuperheatedSteam.getFluid(80 * 5))
                 .fluidOutputs(ExhaustGas.getFluid(1))
                 .flowRate(500)
                 .duration(20)
