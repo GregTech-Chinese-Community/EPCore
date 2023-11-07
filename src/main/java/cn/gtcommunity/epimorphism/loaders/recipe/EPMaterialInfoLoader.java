@@ -39,6 +39,12 @@ public class EPMaterialInfoLoader {
                 new MaterialStack(CarbonNanotube, M),
                 new MaterialStack(Polyetheretherketone, M * 2)));
 
+        //  UIV Machine Hull
+        OreDictUnifier.registerOre(MetaTileEntities.HULL[11].getStackForm(), new ItemMaterialInfo(
+                new MaterialStack(NeutronStarCoreMaterial, M * 8),
+                new MaterialStack(CosmicNeutronium, M),
+                new MaterialStack(Kevlar, M * 2)));
+
         //  UHV Voltage Coil
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(stick, ChromiumGermaniumTellurideMagnetic)
