@@ -92,6 +92,26 @@ public class MachineComponents {
                         .CWUt(128)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
+
+        /*ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, WhiteDwarfMatter)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
+                .input(ring, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
+                .input(round, MagnetoHydrodynamicallyConstrainedStarMatter, 8)
+                .input(wireFine, RutheniumTriniumAmericiumNeutronate, 64)
+                .input(wireFine, RutheniumTriniumAmericiumNeutronate, 64)
+                .input(cableGtSingle, CosmicNeutronium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 8))
+                .fluidInputs(Lubricant.getFluid(5000))//  TODO Biological Lubricant?
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(BlackDwarfMatter.getFluid(L))
+                .output(ELECTRIC_MOTOR_UIV)
+                .duration(2400)
+                .stationResearch(b -> b
+                        .researchStack(ELECTRIC_MOTOR_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();*/
     }
 
     private static void ConveyorModule() {

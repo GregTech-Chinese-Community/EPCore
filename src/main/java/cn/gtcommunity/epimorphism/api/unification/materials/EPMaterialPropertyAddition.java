@@ -56,7 +56,7 @@ public class EPMaterialPropertyAddition {
 
         //  Flags
         WroughtIron.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
-        Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE);
+        Rhenium.addFlags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_DENSE);
         Nickel.addFlags(GENERATE_FOIL);
         Titanium.addFlags(GENERATE_FOIL);
         Germanium.addFlags(GENERATE_FOIL);
@@ -87,6 +87,7 @@ public class EPMaterialPropertyAddition {
         Uranium238.addFlags(GENERATE_FRAME);
         Plutonium241.addFlags(GENERATE_FRAME);
         HastelloyX.addFlags(GENERATE_DOUBLE_PLATE);
+        RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

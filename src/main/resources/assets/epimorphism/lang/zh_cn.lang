@@ -350,6 +350,7 @@ metaitem.carbon_allotrope.name=碳同素异构体混合物
 metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 metaitem.grinder.boron_nitride.name=氮化硼磨头
 metaitem.component.vacuum_tube.name=真空管组件
+metaitem.separation_electromagnet.name=分离用电磁铁
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）

@@ -128,6 +128,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem CARBON_ALLOTROPE;
     public static MetaItem<?>.MetaValueItem GRAPHENE_ALIGNED;
     public static MetaItem<?>.MetaValueItem VACUUM_TUBE_COMPONENT;
+    public static MetaItem<?>.MetaValueItem SEPARATION_ELECTROMAGNET;
 
     //  Crystal Components
     public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;
