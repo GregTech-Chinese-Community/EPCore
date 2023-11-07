@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
@@ -116,6 +117,28 @@ public class MetaTileEntityRecipes {
                 .input(cableGtSingle, CarbonNanotube, 2)
                 .fluidInputs(Polyetheretherketone.getFluid(288))
                 .output(MetaTileEntities.HULL[10])
+                .EUt(16)
+                .duration(50)
+                .buildAndRegister();
+
+        //  UIV Hulls
+        ModHandler.addShapedRecipe(true, "casing_uiv", MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UIV),
+                "PPP", "PwP", "PPP",
+                'P', new UnificationEntry(plate, NeutronStarCoreMaterial));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, NeutronStarCoreMaterial, 8)
+                .circuitMeta(8)
+                .outputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UIV))
+                .duration(50)
+                .EUt(16)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UIV))
+                .input(cableGtSingle, CosmicNeutronium, 2)
+                .fluidInputs(Zylon.getFluid(288))
+                .output(MetaTileEntities.HULL[11])
                 .EUt(16)
                 .duration(50)
                 .buildAndRegister();
@@ -587,9 +610,47 @@ public class MetaTileEntityRecipes {
                         .CWUt(30)
                         .EUt(VA[ZPM]))
                 .buildAndRegister();
+
+        //  Stellar Containment Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, MaragingSteel250)
+                .input(plate, Hdcs, 4)
+                .inputs(VOLTAGE_COIL_ZPM.getStackForm(4))
+                .input(screw, IncoloyMA813, 16)
+                .fluidInputs(Inconel792.getFluid(576))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.STELLAR_CONTAINMENT_CASING, 2))
+                .EUt(VA[UEV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Stellar Furnace
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Hdcs, 16)
+                .inputs(VOLTAGE_COIL_UV.getStackForm(16))
+                .input(circuit, MarkerMaterials.Tier.UEV, 8)
+                .input(plate, IncoloyMA813, 4)
+                .input(plateDouble, IncoloyMA956, 4)
+                .input(gear, Tritanium, 4)
+                .input(gearSmall, Tritanium, 6)
+                .input(screw, Adamantium, 32)
+                .input(wireFine, Abyssalloy, 64)
+                .input(wireFine, Abyssalloy, 64)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Lubricant.getFluid(5760))
+                .fluidInputs(Seaborgium.getFluid(L * 2))
+                .outputs(STELLAR_FURNACE.getStackForm())
+                .stationResearch(b -> b
+                        .researchStack(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.STELLAR_CONTAINMENT_CASING))
+                        .CWUt(128)
+                        .EUt(VA[UEV]))
+                .EUt(VA[UEV])
+                .duration(1200)
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
+
+        //  FIXME If add Mega EBF and VF, should bring it to UV or ZPM...
         //  GCYM Nerf
         ModHandler.removeRecipeByName("gcym:mega_blast_furnace");
         ASSEMBLY_LINE_RECIPES.recipeBuilder()

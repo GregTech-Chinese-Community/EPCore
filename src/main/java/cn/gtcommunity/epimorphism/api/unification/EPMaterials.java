@@ -488,6 +488,7 @@ public EPMaterials() {}
     public static Material Inconel792;
     public static Material IncoloyMA813;
     public static Material HastelloyX78;
+    public static Material HastelloyK243;
 
     //  Mod Compatibility Materials
     public static Material Mana;

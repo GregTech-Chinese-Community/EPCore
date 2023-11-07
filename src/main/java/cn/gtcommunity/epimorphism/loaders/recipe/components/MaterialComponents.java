@@ -171,7 +171,7 @@ public class MaterialComponents {
         COIL_ELECTRIC.appendIngredients(Stream.of(new Object[][]{
                   {9, new UnificationEntry(OrePrefix.wireGtOctal, AwakenedDraconium)},
                   {10, new UnificationEntry(OrePrefix.wireGtOctal, Seaborgium)},
-//                  {11, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
+                  {11, new UnificationEntry(OrePrefix.wireGtOctal, BlackDwarfMatter)},
 //                  {12, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
 //                  {13, new UnificationEntry(OrePrefix.wireGtOctal, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -180,8 +180,8 @@ public class MaterialComponents {
         STICK_MAGNETIC.appendIngredients(Stream.of(new Object[][]{
                   {9, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
                   {10, new UnificationEntry(OrePrefix.stickLong, ChromiumGermaniumTellurideMagnetic)},
-//                  {11, new UnificationEntry(OrePrefix.stickLong, Trinium)},
-//                  {12, new UnificationEntry(OrePrefix.stickLong, Trinium)},
+                  {11, new UnificationEntry(OrePrefix.stickLong, WhiteDwarfMatter)},
+                  {12, new UnificationEntry(OrePrefix.stickLong, WhiteDwarfMatter)},
 //                  {13, new UnificationEntry(OrePrefix.stickLong, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 

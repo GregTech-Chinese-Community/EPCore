@@ -70,8 +70,7 @@ public class EPMachineCasingMaterials {
                 .fluid()
                 .color(0x355D6A)
                 .iconSet(METALLIC)
-                //  TODO UEV stage coil?
-                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 2000)
+                .blastTemp(11800, BlastProperty.GasTier.HIGHEST, VA[UEV], 2000)
                 .components(BETSPerrhenate, 1, Trinaquadalloy, 4, Vibranium, 2, Taranium, 1, TitaniumCarbide, 9, Potassium, 9, Lithium, 9, Sulfur, 6)
                 .cableProperties(V[UEV], 48, 0, true)
                 .build();
@@ -82,8 +81,7 @@ public class EPMachineCasingMaterials {
                 .color(0x334433)
                 .iconSet(SHINY)
                 .toolStats(new ToolProperty(20.0F, 10.0F, 18000, 18))
-                //  TODO UHV stage Coil?
-                .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[UEV], 2400)
+                .blastTemp(11900, BlastProperty.GasTier.HIGHEST, VA[UEV], 2400)
                 .components(TungstenSteel, 12, HSSS, 9, HSSG, 6, Ruridit, 3, MagnetoResonatic, 2, Plutonium241, 1)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
                 .build();
@@ -114,8 +112,7 @@ public class EPMachineCasingMaterials {
                 .fluid()
                 .color(0x6C003B)
                 .iconSet(SHINY)
-                //  TODO UEV stage coil?? Maybe 11500K this material needs...
-                .blastTemp(10500, BlastProperty.GasTier.HIGHEST, VA[UEV], 4580)
+                .blastTemp(11500, BlastProperty.GasTier.HIGHEST, VA[UEV], 4580)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Titanium, 26, Lanthanum, 6, TungstenSteel, 4, Cobalt, 3, Manganese, 2, Phosphorus, 2, Palladium, 2, Niobium, 1, Argon, 5)
                 .toolStats(new ToolProperty(9.0F, 30.0F, 32000, 20))
@@ -136,8 +133,7 @@ public class EPMachineCasingMaterials {
                 .fluid()
                 .color(0x060606)
                 .iconSet(BRIGHT)
-                //  TODO UEV stage coil??
-                .blastTemp(10600, BlastProperty.GasTier.HIGHEST, VA[UHV], 3600)
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UHV], 3600)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .components(Plutonium244, 18, Cerium, 9, Gadolinium, 3, Dysprosium, 3, Thulium, 2, TungstenCarbide, 6, RedSteel, 6, Duranium, 2, Radon, 2)
                 .build();
@@ -200,7 +196,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
                 .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 4277)
-                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
         //  24518 Hastelloy-X78
         HastelloyX78 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_x_78"))
@@ -208,10 +204,18 @@ public class EPMachineCasingMaterials {
                 .fluid()
                 .color(0x6BA3E3)
                 .iconSet(SHINY)
-                //  TODO UEV stage coil?? Maybe 12800K this material needs...
-                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV], 4997)
+                .blastTemp(12800, BlastProperty.GasTier.HIGHEST, VA[UHV], 4997)
                 .components(NaquadahAlloy, 10, Rhenium, 5, Naquadria, 4, Gadolinium, 3, Strontium, 2, Polonium, 3, Rutherfordium, 2, Fermium, 1)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .build();
+        //  24519 Hastelloy-K243
+        HastelloyK243 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_k_243"))
+                .ingot()
+                .fluid()
+                .color(0xa4ff70)
+                .iconSet(BRIGHT)
+                .blastTemp(12400, BlastProperty.GasTier.HIGHEST, VA[UEV], 5032)
+                .components(HastelloyX78, 5, NiobiumNitride, 2, Tritanium, 4, TungstenCarbide, 4, Promethium, 4, Mendelevium, 1)
                 .build();
     }
 

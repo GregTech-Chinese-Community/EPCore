@@ -18,7 +18,20 @@ public class StellarFurnaceRecipes {
 
         //  A few hint: Rhenium + Naquadria Charge -> Degenerate Rhenium -> Quark Gluon Plasma (and others) -> QCD Charge
 
-        //  Degenerated Rhenium
+        //  Separation Electromagnet
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MAGNETRON.getStackForm())
+                .input(plate, NiobiumNitride, 4)
+                .input(stickLong, VanadiumGallium)
+                .input(foil, Polybenzimidazole, 16)
+                .input(wireFine, YttriumBariumCuprate, 32)
+                .fluidInputs(SolderingAlloy.getFluid(L))
+                .outputs(SEPARATION_ELECTROMAGNET.getStackForm())
+                .EUt(VA[ZPM])
+                .duration(600)
+                .buildAndRegister();
+
+        //  Degenerated Rhenium (UHV): Rhenium ingot -> 1kL Degenerate Rhenium Plasma
         STELLAR_FURNACE_RECIPES.recipeBuilder()
                 .input(ingot, Rhenium)
                 .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.NAQUADRIA_CHARGE))
@@ -28,6 +41,17 @@ public class StellarFurnaceRecipes {
                 .temperature(BigInteger.valueOf((10 * V[UV]) - (10 * V[ZPM])))
                 .buildAndRegister();
 
+        //  Degenerate Rhenium (UIV): Rhenium dense plate -> 10kL Degenerate Rhenium Plasma
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(plateDense, Rhenium)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.NAQUADRIA_CHARGE))
+                .fluidOutputs(DegenerateRhenium.getFluid(10000))
+                .EUt(VA[UIV])
+                .duration(20)
+                .temperature(BigInteger.valueOf((10 * V[UHV]) - (10 * V[UV])))
+                .buildAndRegister();
+
+        //  Degenerate Rhenium plasma Containment Cell
         CANNER_RECIPES.recipeBuilder()
                 .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidInputs(DegenerateRhenium.getFluid(1000))
@@ -36,7 +60,7 @@ public class StellarFurnaceRecipes {
                 .duration(20)
                 .buildAndRegister();
 
-        //  Quark Gluon Plasma
+        //  Degenerate Rhenium plate -> Quark Gluon Plasma
         STELLAR_FURNACE_RECIPES.recipeBuilder()
                 .input(plate, DegenerateRhenium)
                 .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
@@ -46,10 +70,64 @@ public class StellarFurnaceRecipes {
                 .temperature(BigInteger.valueOf((10 * V[UHV]) - (10 * V[UV])))
                 .buildAndRegister();
 
-        //  TODO QGP Centrifuge
+        //  Quark Gluon Plasma -> Heavy Quarks + Light Quarks + Gluons
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .notConsumable(SEPARATION_ELECTROMAGNET)
+                .fluidInputs(QuarkGluonPlasma.getFluid(1000))
+                .fluidOutputs(HeavyQuarks.getFluid(200))
+                .fluidOutputs(Gluons.getFluid(200))
+                .fluidOutputs(LightQuarks.getFluid(600))
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
 
+        //  Heavy Lepton Mixture (Check Altitude, when >0:5/tick, >20:10/tick, >40:20/tick, >60:30/tick, >80:40/tick)
+        COSMIC_RAY_DETECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(0)
+                .fluidOutputs(HeavyLeptonMixture.getFluid(5))
+                .EUt((int) V[UHV])
+                .duration(1)
+                .buildAndRegister();
+
+        COSMIC_RAY_DETECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(1)
+                .fluidOutputs(HeavyLeptonMixture.getFluid(10))
+                .EUt((int) V[UHV])
+                .duration(1)
+                .Altitude(20)
+                .buildAndRegister();
+
+        COSMIC_RAY_DETECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(2)
+                .fluidOutputs(HeavyLeptonMixture.getFluid(20))
+                .EUt((int) V[UHV])
+                .duration(1)
+                .Altitude(40)
+                .buildAndRegister();
+
+        COSMIC_RAY_DETECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(3)
+                .fluidOutputs(HeavyLeptonMixture.getFluid(30))
+                .EUt((int) V[UHV])
+                .duration(1)
+                .Altitude(60)
+                .buildAndRegister();
+
+        COSMIC_RAY_DETECTOR_RECIPES.recipeBuilder()
+                .circuitMeta(4)
+                .fluidOutputs(HeavyLeptonMixture.getFluid(40))
+                .Altitude(80)
+                .EUt((int) V[UHV])
+                .duration(1)
+                .buildAndRegister();
+
+        //  TODO three metastable materials + D + Light-Heavy Quarks --Advanced Fusion--> Heavy Quark Degenerate Matter
 
         //  TODO other components of Cosmic Computing Mixture
+
+        //  Instantons
+
+        //  Temporal Fluid
 
         //  Cosmic Computing Mixture
         STELLAR_FURNACE_RECIPES.recipeBuilder()
@@ -64,20 +142,5 @@ public class StellarFurnaceRecipes {
                 .duration(1200)
                 .temperature(BigInteger.valueOf(Long.MAX_VALUE))
                 .buildAndRegister();
-
-        //  MHCSM (UEV)
-        STELLAR_FURNACE_RECIPES.recipeBuilder()
-                .fluidInputs(RawStarMatter.getFluid(L * 32))
-                .fluidInputs(CosmicComputingMixture.getFluid(L * 16))
-                .fluidInputs(BlackDwarfMatter.getFluid(L * 8))
-                .fluidInputs(WhiteDwarfMatter.getFluid(L * 8))
-                .fluidOutputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L * 16))
-                .fluidOutputs(DimensionallyTranscendentResidue.getFluid(L * 16))
-                .EUt(VA[UEV])
-                .duration(1200)
-                .temperature(BigInteger.valueOf(10 * V[UEV]- 10 * V[UHV]))
-                .buildAndRegister();
-
-        //  TODO MHCSM (UXV): use infinity and...?
     }
 }

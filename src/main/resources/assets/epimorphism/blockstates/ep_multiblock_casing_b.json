@@ -37,6 +37,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/stellar_containment_casing"
         }
+      },
+      "hastelloy_k243_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/hastelloy_k243_casing"
+        }
       }
     }
   }

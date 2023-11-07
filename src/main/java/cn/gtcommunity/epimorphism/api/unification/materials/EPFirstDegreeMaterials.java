@@ -1614,9 +1614,12 @@ public class EPFirstDegreeMaterials {
                 .build();
         //  24214 BlackDwarfMatter
         BlackDwarfMatter = new Material.Builder(getMaterialsId(), gregtechId("black_dwarf_matter"))
+                .ingot()
                 .fluid()
                 .fluidTemp(266000000)
                 .color(0x000000)
+                .iconSet(BRIGHT)
+                .cableProperties(V[UIV], 144, 72, false)
                 .build();
         //  24215 Raw Star Matter
         RawStarMatter = new Material.Builder(getMaterialsId(), gregtechId("raw_star_matter"))

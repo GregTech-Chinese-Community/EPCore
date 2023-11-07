@@ -301,6 +301,7 @@ tile.ep_multiblock_casing.vacuum_casing.name=高气密红钢机器外壳
 tile.ep_multiblock_casing_b.zirconium_carbide_casing.name=超耐热碳化锆机器外壳
 tile.ep_multiblock_casing_b.hastelloy_x78_casing.name=矩阵强化哈斯特洛伊合金-X78机器外壳
 tile.ep_multiblock_casing_b.stellar_containment_casing.name=恒星热力容器
+tile.ep_multiblock_casing_b.hastelloy_k243_casing.name=高耐久哈斯特洛伊合金-K243机器外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -315,6 +316,7 @@ tile.ep_explosive_block.naquadria_charge.name=超能硅岩爆弹
 tile.ep_explosive_block.taranium_charge.name=塔兰金属爆弹
 tile.ep_explosive_block.leptonic_charge.name=轻子爆弹
 tile.ep_explosive_block.quantum_chromodynamic_charge.name=量子色动力学爆弹
+tile.ep_wire_coil.adamantium.name=精金线圈方块
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
@@ -350,6 +352,7 @@ metaitem.carbon_allotrope.name=碳同素异构体混合物
 metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 metaitem.grinder.boron_nitride.name=氮化硼磨头
 metaitem.component.vacuum_tube.name=真空管组件
+metaitem.separation_electromagnet.name=分离用电磁铁
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -1202,3 +1205,4 @@ gregtech.material.zirconium_carbide=碳化锆
 gregtech.material.inconel_792=镍基合金-792
 gregtech.material.incoloy_ma_813=耐热铬铁合金-MA813
 gregtech.material.hastelloy_x_78=哈斯特洛依合金-X78
+gregtech.material.hastelloy_k_243=哈斯特洛依合金-K243
