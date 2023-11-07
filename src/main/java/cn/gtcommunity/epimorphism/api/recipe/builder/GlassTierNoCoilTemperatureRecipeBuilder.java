@@ -9,6 +9,7 @@ import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTUtility;
+import gregtech.api.util.TextFormattingUtil;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.annotation.Nonnull;
@@ -72,7 +73,7 @@ public class GlassTierNoCoilTemperatureRecipeBuilder extends RecipeBuilder<Glass
         return (new ToStringBuilder(this))
                 .appendSuper(super.toString())
                 .append(GlassTierProperty.getInstance().getKey(), getGlassTier())
-                .append(NoCoilTemperatureProperty.getInstance().getKey(), GTUtility.formatNumbers(getTemperature()))
+                .append(NoCoilTemperatureProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getTemperature()))
                 .toString();
     }
 }

@@ -6,7 +6,10 @@ import cn.gtcommunity.epimorphism.api.metatileentity.single.SteamProgressIndicat
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityLargeTurbine;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityMegaTurbine;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.*;
 import gregtech.api.GTValues;
@@ -16,9 +19,12 @@ import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockFusionCasing;
+import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockTurbineCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -85,9 +91,18 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityMegaTurbine MEGA_STEAM_TURBINE;
     public static EPMetaTileEntityMegaTurbine MEGA_GAS_TURBINE;
     public static EPMetaTileEntityMegaTurbine MEGA_PLASMA_TURBINE;
-    public static EPMetaTileEntityPlasmaCondenser PLASMA_CONDENSER;
-    //  45-47
     public static EPMetaTileEntityStellarFurnace STELLAR_FURNACE;
+//    public static EPMetaTileEntityCompressedFusionReactor[] COMPACT_FUSION_REACTOR = new EPMetaTileEntityCompressedFusionReactor[5];
+
+
+    public static EPMetaTileEntityPlasmaCondenser PLASMA_CONDENSER;
+    public static EPMetaTileEntityLargeHeatExchanger LARGE_HEAT_EXCHANGER;
+    public static EPMetaTileEntityMegaHeatExchanger MEGA_HEAT_EXCHANGER;
+//    public static EPMetaTileEntityExtremeHeatExchanger EXTREME_HEAT_EXCHANGER;
+    public static EPMetaTileEntityLargeTurbine HIGH_PRESSURE_STEAM_TURBINE;
+    public static EPMetaTileEntityLargeTurbine SUPERCRITICAL_STEAM_TURBINE;
+    public static EPMetaTileEntityMegaTurbine MEGA_HIGH_PRESSURE_STEAM_TURBINE;
+    public static EPMetaTileEntityMegaTurbine MEGA_SUPERCRITICAL_STEAM_TURBINE;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -175,7 +190,18 @@ public class EPMetaTileEntities {
         MEGA_GAS_TURBINE = registerMultiMetaTileEntity(42, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.gas"), RecipeMaps.GAS_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), Textures.CLEAN_STAINLESS_STEEL_CASING, true, EPTextures.MEGA_TURBINE_OVERLAY));
         MEGA_PLASMA_TURBINE = registerMultiMetaTileEntity(43, new EPMetaTileEntityMegaTurbine(epId("mega_turbine.plasma"), RecipeMaps.PLASMA_GENERATOR_FUELS, 5, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TUNGSTENSTEEL_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TUNGSTENSTEEL_GEARBOX), Textures.ROBUST_TUNGSTENSTEEL_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
         PLASMA_CONDENSER = registerMultiMetaTileEntity(44, new EPMetaTileEntityPlasmaCondenser(epId("plasma_condenser")));
-        // 45-47
+        LARGE_HEAT_EXCHANGER = registerMultiMetaTileEntity(45, new EPMetaTileEntityLargeHeatExchanger(epId("large_heat_exchanger")));
+        MEGA_HEAT_EXCHANGER = registerMultiMetaTileEntity(46, new EPMetaTileEntityMegaHeatExchanger(epId("mega_heat_exchanger")));
+//        EXTREME_HEAT_EXCHANGER = registerMultiMetaTileEntity(47, new EPMetaTileEntityExtremeHeatExchanger(epId("extreme_heat_exchanger")));
         STELLAR_FURNACE = registerMultiMetaTileEntity(48, new EPMetaTileEntityStellarFurnace(epId("stellar_furnace")));
+        HIGH_PRESSURE_STEAM_TURBINE = registerMultiMetaTileEntity(50, new EPMetaTileEntityLargeTurbine(epId("high_pressure_steam_turbine"), EPRecipeMaps.HIGH_PRESSURE_STEAM_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_GEARBOX), Textures.STABLE_TITANIUM_CASING, false, Textures.LARGE_STEAM_TURBINE_OVERLAY));
+        SUPERCRITICAL_STEAM_TURBINE = registerMultiMetaTileEntity(51, new EPMetaTileEntityLargeTurbine(epId("supercritical_steam_turbine"), EPRecipeMaps.SUPERCRITICAL_STEAM_TURBINE_FUELS, 6, EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), EPTextures.SUPERCRITICAL_FLUID_TURBINE_CASING, false, Textures.LARGE_STEAM_TURBINE_OVERLAY));
+        MEGA_HIGH_PRESSURE_STEAM_TURBINE = registerMultiMetaTileEntity(52, new EPMetaTileEntityMegaTurbine(epId("mega_high_pressure_steam_turbine"), EPRecipeMaps.HIGH_PRESSURE_STEAM_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_GEARBOX), Textures.STABLE_TITANIUM_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
+        MEGA_SUPERCRITICAL_STEAM_TURBINE = registerMultiMetaTileEntity(53, new EPMetaTileEntityMegaTurbine(epId("mega_supercritical_steam_turbine"), EPRecipeMaps.SUPERCRITICAL_STEAM_TURBINE_FUELS, 6, EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STAINLESS_STEEL_GEARBOX), EPTextures.SUPERCRITICAL_FLUID_TURBINE_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
+//        COMPACT_FUSION_REACTOR[0] = registerMultiMetaTileEntity(54, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk1"), GTValues.LuV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING), MetaBlocks.FRAMES.get(Materials.NaquadahAlloy).getBlock(Materials.NaquadahAlloy), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[1] = registerMultiMetaTileEntity(55, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk2"), GTValues.ZPM, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK2), MetaBlocks.FRAMES.get(Materials.Trinium).getBlock(Materials.Trinium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[2] = registerMultiMetaTileEntity(56, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk3"), GTValues.UV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK3), MetaBlocks.FRAMES.get(Materials.Tritanium).getBlock(Materials.Tritanium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[3] = registerMultiMetaTileEntity(57, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk4"), 9, );
+//        COMPACT_FUSION_REACTOR[4] = registerMultiMetaTileEntity(58, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk5"), 10, );
     }
 }

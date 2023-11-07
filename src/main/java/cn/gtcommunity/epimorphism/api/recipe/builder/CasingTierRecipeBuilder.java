@@ -11,9 +11,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import javax.annotation.Nonnull;
 
 public class CasingTierRecipeBuilder extends RecipeBuilder<CasingTierRecipeBuilder> {
-    public CasingTierRecipeBuilder() {
-
-    }
+    public CasingTierRecipeBuilder() {/**/}
 
     public CasingTierRecipeBuilder(Recipe recipe, RecipeMap<CasingTierRecipeBuilder> recipeMap) {
         super(recipe, recipeMap);

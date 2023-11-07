@@ -12,9 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import javax.annotation.Nonnull;
 
 public class GrindBallTierRecipeBuilder extends RecipeBuilder<GrindBallTierRecipeBuilder> {
-    public GrindBallTierRecipeBuilder() {
-
-    }
+    public GrindBallTierRecipeBuilder() {/**/}
 
     public GrindBallTierRecipeBuilder(Recipe recipe, RecipeMap<GrindBallTierRecipeBuilder> recipeMap) {
         super(recipe, recipeMap);

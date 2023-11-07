@@ -89,6 +89,7 @@ public class EPMaterialPropertyAddition {
         Uranium238.addFlags(GENERATE_FRAME);
         Plutonium241.addFlags(GENERATE_FRAME);
         HastelloyX.addFlags(GENERATE_DOUBLE_PLATE);
+        Trinium.addFlags(GENERATE_FRAME);
         RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE);
         IncoloyMA956.addFlags(GENERATE_DOUBLE_PLATE);
 

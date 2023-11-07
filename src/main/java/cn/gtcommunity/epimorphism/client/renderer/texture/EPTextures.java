@@ -41,6 +41,8 @@ public class EPTextures {
     public static EPOverlayRenderer MARAGING_STEEL_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/maraging_steel_250_casing");
     public static EPOverlayRenderer BABBITT_ALLOY_CASING = new EPOverlayRenderer("casings/solid/babbitt_alloy_casing");
     public static EPOverlayRenderer ZIRCONIUM_CARBIDE_CASING = new EPOverlayRenderer("casings/solid/zirconium_carbide_casing");
+    public static EPOverlayRenderer SUPERCRITICAL_FLUID_TURBINE_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/supercritical_fluid_turbine_casing");
+    public static EPOverlayRenderer CORROSION_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/corrosion_casing");
     public static EPOverlayRenderer TRITANIUM_CASING = new EPOverlayRenderer("casings/solid/tritanium_casing");
 
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");

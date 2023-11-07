@@ -7,6 +7,7 @@ import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.PrimitiveProperty;
 import gregtech.api.util.EnumValidationResult;
+import gregtech.api.util.TextFormattingUtil;
 import gregtech.api.util.ValidationResult;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -58,7 +59,7 @@ public class FlowRateRecipeBuilder extends RecipeBuilder<FlowRateRecipeBuilder> 
     public String toString() {
         return (new ToStringBuilder(this))
                 .appendSuper(super.toString())
-                .append(FlowRateProperty.getInstance().getKey(), getFlowRate())
+                .append(FlowRateProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getFlowRate()))
                 .toString();
     }
 }

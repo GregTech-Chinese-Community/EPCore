@@ -94,6 +94,10 @@ public class EPRecipeMaps {
     public static final RecipeMap<FuelRecipeBuilder> HYPER_REACTOR_MK2_RECIPES;
     @ZenProperty
     public static final RecipeMap<FuelRecipeBuilder> HYPER_REACTOR_MK3_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<FuelRecipeBuilder> HIGH_PRESSURE_STEAM_TURBINE_FUELS;
+    @ZenProperty
+    public static final RecipeMap<FuelRecipeBuilder> SUPERCRITICAL_STEAM_TURBINE_FUELS;
 
     public EPRecipeMaps() {}
 
@@ -299,5 +303,9 @@ public class EPRecipeMaps {
         HYPER_REACTOR_MK3_RECIPES = new RecipeMap<>("hyper_reactor_mk3_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTSoundEvents.ARC);
+        //  High Pressure Steam Turbine Recipemap
+        HIGH_PRESSURE_STEAM_TURBINE_FUELS = new RecipeMap<>("high_pressure_steam_turbine_fuels", 0, 0, 1, 1, new FuelRecipeBuilder(), false);
+        //  Supercritical Steam Turbine Recipemap
+        SUPERCRITICAL_STEAM_TURBINE_FUELS = new RecipeMap<>("supercritical_steam_turbine_fuels",  0, 0, 1, 1, new FuelRecipeBuilder(), false);
     }
 }
