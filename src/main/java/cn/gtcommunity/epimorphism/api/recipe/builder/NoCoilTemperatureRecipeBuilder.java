@@ -7,14 +7,14 @@ import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.RecipePropertyStorage;
 import gregtech.api.util.EnumValidationResult;
-import gregtech.api.util.GTUtility;
+import gregtech.api.util.TextFormattingUtil;
 import gregtech.api.util.ValidationResult;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.annotation.Nonnull;
 
 public class NoCoilTemperatureRecipeBuilder extends RecipeBuilder<NoCoilTemperatureRecipeBuilder> {
-    public NoCoilTemperatureRecipeBuilder() {}
+    public NoCoilTemperatureRecipeBuilder() {/**/}
 
     public NoCoilTemperatureRecipeBuilder(Recipe recipe, RecipeMap<NoCoilTemperatureRecipeBuilder> recipeMap) {
         super(recipe, recipeMap);
@@ -41,7 +41,7 @@ public class NoCoilTemperatureRecipeBuilder extends RecipeBuilder<NoCoilTemperat
             EPLog.logger.error("Temperature cannot be less than or equal to 0", new IllegalArgumentException());
             this.recipeStatus = EnumValidationResult.INVALID;
         }
-        applyProperty( NoCoilTemperatureProperty.getInstance(), Integer.valueOf(temperature));
+        applyProperty(NoCoilTemperatureProperty.getInstance(), temperature);
         return this;
     }
 
@@ -49,23 +49,23 @@ public class NoCoilTemperatureRecipeBuilder extends RecipeBuilder<NoCoilTemperat
         if (this.recipePropertyStorage == null)
             this.recipePropertyStorage = new RecipePropertyStorage();
         if (this.recipePropertyStorage.hasRecipeProperty(NoCoilTemperatureProperty.getInstance())) {
-            if ((this.recipePropertyStorage.getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(-1))).intValue() <= 0)
-                this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
+            if (this.recipePropertyStorage.getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), -1) <= 0)
+                this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), 298);
         } else {
-            this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(298));
+            this.recipePropertyStorage.store(NoCoilTemperatureProperty.getInstance(), 298);
         }
         return super.build();
     }
 
     public int getTemperature() {
-        return (this.recipePropertyStorage == null) ? 0 : (this.recipePropertyStorage
-                .getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), Integer.valueOf(0))).intValue();
+        return (this.recipePropertyStorage == null) ? 0 : this.recipePropertyStorage
+                .getRecipePropertyValue(NoCoilTemperatureProperty.getInstance(), 0);
     }
 
     public String toString() {
         return (new ToStringBuilder(this))
                 .appendSuper(super.toString())
-                .append(NoCoilTemperatureProperty.getInstance().getKey(), GTUtility.formatNumbers(getTemperature()))
+                .append(NoCoilTemperatureProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getTemperature()))
                 .toString();
     }
 }

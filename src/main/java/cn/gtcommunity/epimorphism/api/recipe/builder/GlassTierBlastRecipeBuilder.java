@@ -8,6 +8,7 @@ import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTLog;
+import gregtech.api.util.TextFormattingUtil;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.annotation.Nonnull;
@@ -71,7 +72,7 @@ public class GlassTierBlastRecipeBuilder extends RecipeBuilder<GlassTierBlastRec
         return (new ToStringBuilder(this))
                 .appendSuper(super.toString())
                 .append(GlassTierProperty.getInstance().getKey(), getGlassTier())
-                .append(TemperatureProperty.getInstance().getKey(), getBlastFurnaceTemp())
+                .append(TemperatureProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getBlastFurnaceTemp()))
                 .toString();
     }
 }

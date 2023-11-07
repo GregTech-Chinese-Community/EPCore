@@ -29,6 +29,8 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
         MARAGING_STEEL_CASING("maraging_steel_casing"),
         BABBITT_ALLOY_CASING("babbitt_alloy_casing"),
         ZIRCONIUM_CARBIDE_CASING("zirconium_carbide_casing"),
+        SUPERCRITICAL_FLUID_TURBINE_CASING("supercritical_fluid_turbine_casing"),
+        CORROSION_CASING("corrosion_casing"),
         HASTELLOYX78_CASING("hastelloy_x78_casing"),
         STELLAR_CONTAINMENT_CASING("stellar_containment_casing"),
         HASTELLOYK243_CASING("hastelloy_k243_casing");

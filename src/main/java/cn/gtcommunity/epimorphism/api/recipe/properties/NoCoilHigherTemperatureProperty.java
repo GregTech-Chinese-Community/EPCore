@@ -8,12 +8,12 @@ import javax.annotation.Nonnull;
 import java.math.BigInteger;
 
 public class NoCoilHigherTemperatureProperty extends RecipeProperty<BigInteger> {
-    public static final String KEY = "temperature";
+    public static final String KEY = "temperature_higher";
 
     private static NoCoilHigherTemperatureProperty INSTANCE;
 
     private NoCoilHigherTemperatureProperty() {
-        super("temperature", BigInteger.class);
+        super("temperature_higher", BigInteger.class);
     }
 
     public static NoCoilHigherTemperatureProperty getInstance() {

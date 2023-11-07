@@ -89,7 +89,6 @@ public class EPRecipeManager {
         DimensionalOscillatorRecipes.init();
         FrackerRecipes.init();
         IndustrialDrillRecipes.init();
-        MetaTileEntityRecipes.init();
         NaquadahReactorRecipes.init();
         FuelRefineFactoryRecipes.init();
         HyperReactorRecipes.init();

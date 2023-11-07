@@ -50,7 +50,6 @@ public class EPMetablocks {
         registerItemModel(EP_MILL_CASING);
         registerItemModel(EP_MULTIBLOCK_CASING_B);
         registerItemModel(EP_EXPLOSIVE_BLOCK);
-        registerItemModel(EP_WIRE_COIL);
 
         //  VariantActiveBlock Registry
         EP_GLASS_CASING.onModelRegister();
