@@ -200,7 +200,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
                 .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 4277)
-                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
         //  24518 Hastelloy-X78
         HastelloyX78 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_x_78"))
@@ -212,6 +212,15 @@ public class EPMachineCasingMaterials {
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV], 4997)
                 .components(NaquadahAlloy, 10, Rhenium, 5, Naquadria, 4, Gadolinium, 3, Strontium, 2, Polonium, 3, Rutherfordium, 2, Fermium, 1)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .build();
+        //  24519 Hastelloy-K243
+        HastelloyK243 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_k_243"))
+                .ingot()
+                .fluid()
+                .color(0x6BA3E3)
+                //  TODO UEV stage coil?? Maybe 12400K this material needs...
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 5032)
+                .components(HastelloyX78, 5, NiobiumNitride, 2, Tritanium, 4, TungstenCarbide, 4, Promethium, 4, Mendelevium, 1)
                 .build();
     }
 
