@@ -316,6 +316,7 @@ tile.ep_explosive_block.naquadria_charge.name=超能硅岩爆弹
 tile.ep_explosive_block.taranium_charge.name=塔兰金属爆弹
 tile.ep_explosive_block.leptonic_charge.name=轻子爆弹
 tile.ep_explosive_block.quantum_chromodynamic_charge.name=量子色动力学爆弹
+tile.ep_wire_coil.adamantium.name=精金线圈方块
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃

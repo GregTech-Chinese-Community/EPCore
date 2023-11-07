@@ -23,6 +23,7 @@ public class EPRecipeManager {
     }
 
     public static void initBlocks() {
+        Coils.init();
         Crucibles.init();
         Explosives.init();
     }

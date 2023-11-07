@@ -5,6 +5,7 @@ import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
 import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockWireCoil;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
@@ -17,6 +18,8 @@ import net.minecraft.block.state.IBlockState;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+import static gregtech.api.GregTechAPI.HEATING_COILS;
+
 
 public class EPAPI {
     public static final Object2ObjectMap<IBlockState, IGlassTierBlockState> EP_Glass = new Object2ObjectOpenHashMap<>();
@@ -25,7 +28,6 @@ public class EPAPI {
 //    public static final Object2ObjectOpenHashMap<IBlockState,ITired> MAP_GLASS = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState,ICasingTierBlockState> MAP_CP_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState,ICasingTierBlockState> MAP_CP_TUBE = new Object2ObjectOpenHashMap<>();
-
 
     public static void APIBlockInit() {
         for (EPBlockGlassCasing.CasingType type : EPBlockGlassCasing.CasingType.values()) {
@@ -38,6 +40,10 @@ public class EPAPI {
         }
         for (BlockMachineCasing.MachineCasingType type : Arrays.stream(BlockMachineCasing.MachineCasingType.values()).filter((c)-> c.ordinal()<10).collect(Collectors.toList())) {
             MAP_MACHINE_CASING.put(MetaBlocks.MACHINE_CASING.getState(type),new WrappedIntTired(type,type.ordinal()));
+        }
+
+        for (EPBlockWireCoil.CoilType type : EPBlockWireCoil.CoilType.values()) {
+            HEATING_COILS.put(EPMetablocks.EP_WIRE_COIL.getState(type), type);
         }
 
         MAP_CP_CASING.put(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS),
