@@ -6,6 +6,7 @@ import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockBoilerCasing;
+import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.items.MetaItems;
@@ -682,6 +683,84 @@ public class MachineComponents {
                 .duration(50)
                 .buildAndRegister();
 
+        //  Supercritical Fluid Turbine Casing
+        ModHandler.addShapedRecipe(true, "supercritical_fluid_turbine_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING, 2),
+                "TPT", "RFR", "TPT",
+                'T', new UnificationEntry(plate, IncoloyMA956),
+                'P', new UnificationEntry(plateDouble, WatertightSteel),
+                'R', new UnificationEntry(rotor, MARM200Steel),
+                'F', new UnificationEntry(frameGt, MARM200Steel));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, IncoloyMA956, 4)
+                .input(rotor, MARM200Steel, 2)
+                .input(plateDouble, WatertightSteel, 2)
+                .input(frameGt, MARM200Steel)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING, 2))
+                .EUt(16)
+                .duration(50)
+                .buildAndRegister();
+
+        //  Corrosion Casing
+        ModHandler.addShapedRecipe(true, "corrosion_casing", EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.CORROSION_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, AusteniticStainlessSteel904L),
+                'F', new UnificationEntry(frameGt, AusteniticStainlessSteel904L));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, AusteniticStainlessSteel904L, 6)
+                .input(frameGt, AusteniticStainlessSteel904L)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.CORROSION_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  PA Casings
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.LuV))
+                .inputs(ROBOT_ARM_EV.getStackForm(2))
+                .input(plateDouble, MARM200CeSteel, 2)
+                .input(circuit, MarkerMaterials.Tier.ZPM)
+                .input(gearSmall, Stellite, 8)
+                .input(cableGtQuadruple, Naquadah, 2)
+                .input(screw, HSSG, 32)
+                .fluidInputs(BlackSteel.getFluid(576))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK1, 4))
+                .EUt(VA[IV])
+                .duration(800)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.ZPM))
+                .inputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK1))
+                .inputs(ROBOT_ARM_IV.getStackForm(2))
+                .input(plateDouble, HastelloyC59, 2)
+                .input(circuit, MarkerMaterials.Tier.UV)
+                .input(gearSmall, TanmolyiumBetaC, 8)
+                .input(cableGtQuadruple, Tritanium, 2)
+                .input(screw, HSSE, 32)
+                .fluidInputs(Zeron100.getFluid(576))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK2, 4))
+                .EUt(VA[LuV])
+                .duration(800)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.UV))
+                .inputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK2))
+                .inputs(ROBOT_ARM_LuV.getStackForm(2))
+                .input(plateDouble, HMS1J79Alloy, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(gearSmall, HY1301, 8)
+                .input(cableGtQuadruple, SiliconCarbide, 2)
+                .input(screw, HSSS, 32)
+                .fluidInputs(IncoloyMA813.getFluid(576))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK3, 4))
+                .EUt(VA[ZPM])
+                .duration(800)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
@@ -1041,6 +1120,28 @@ public class MachineComponents {
                 .output(dust, Staballoy, 10)
                 .EUt(VA[MV])
                 .duration(340)
+                .buildAndRegister();
+
+        //  Tanmolyium Beta-C
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Titanium, 5)
+                .input(dust, Molybdenum, 5)
+                .input(dust, Vanadium, 2)
+                .input(dust, Chrome, 3)
+                .input(dust, Aluminium)
+                .circuitMeta(5)
+                .output(dust, TanmolyiumBetaC, 16)
+                .EUt(VA[IV])
+                .duration(120)
+                .buildAndRegister();
+
+        //  MAR-Ce-M200 Steel
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, MARM200Steel, 18)
+                .input(dust, Cerium)
+                .output(dust, MARM200CeSteel, 19)
+                .EUt(VA[IV])
+                .duration(350)
                 .buildAndRegister();
 
         //  Silicon Carbide

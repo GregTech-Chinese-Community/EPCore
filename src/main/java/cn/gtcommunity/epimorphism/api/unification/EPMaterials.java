@@ -489,6 +489,13 @@ public EPMaterials() {}
     public static Material IncoloyMA813;
     public static Material HastelloyX78;
     public static Material HastelloyK243;
+    public static Material MARM200Steel;
+    public static Material MARM200CeSteel;
+    public static Material TanmolyiumBetaC;
+    public static Material HastelloyC59;
+    public static Material HMS1J79Alloy;
+    public static Material HY1301;
+    public static Material AusteniticStainlessSteel904L;
 
     //  Mod Compatibility Materials
     public static Material Mana;

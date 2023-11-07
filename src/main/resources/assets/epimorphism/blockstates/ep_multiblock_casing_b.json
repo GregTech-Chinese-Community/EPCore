@@ -55,6 +55,24 @@
         "textures": {
           "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/corrosion_casing"
         }
+      },
+      "precise_assembler_casing_mk1": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/precise_assembler_casing_mk1"
+        }
+      },
+      "precise_assembler_casing_mk2": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/precise_assembler_casing_mk2"
+        }
+      },
+      "precise_assembler_casing_mk3": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/precise_assembler_casing_mk3"
+        }
       }
     }
   }
