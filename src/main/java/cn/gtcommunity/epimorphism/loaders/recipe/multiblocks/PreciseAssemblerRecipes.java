@@ -1,6 +1,5 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
-
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
@@ -15,7 +14,7 @@ public class PreciseAssemblerRecipes {
         PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(CRYSTAL_SYSTEM_ON_CHIP)
                 .inputs(UHASOC_CHIP.getStackForm(2))
-                .input(wireFine, Adamantium, 4)
+                .input(wireFine, Vibranium, 4)
                 .fluidInputs(SolderingAlloy.getFluid(L * 4))
                 .fluidInputs(Lubricant.getFluid(2000))
                 .outputs(INTRAVITAL_SOC.getStackForm(4))

@@ -245,6 +245,16 @@ public class MetaTileEntityRecipes {
                 'W', CraftingComponent.CABLE,
                 'H', CraftingComponent.HULL);
 
+        //  Component Assembler recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, COMPONENT_ASSEMBLER,
+                "PPP", "CHR", "WXW",
+                'P', CraftingComponent.PLATE,
+                'H', CraftingComponent.HULL,
+                'C', CraftingComponent.CONVEYOR,
+                'R', CraftingComponent.ROBOT_ARM,
+                'W', CraftingComponent.CABLE,
+                'X', CraftingComponent.CIRCUIT);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",
