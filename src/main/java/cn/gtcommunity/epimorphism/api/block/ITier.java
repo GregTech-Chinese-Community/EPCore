@@ -2,7 +2,7 @@ package cn.gtcommunity.epimorphism.api.block;
 
 import net.minecraft.util.IStringSerializable;
 
-public interface ICasingTierBlockState extends IStringSerializable {
+public interface ITier extends IStringSerializable {
     default Object getInfo(){
         return null;
     }

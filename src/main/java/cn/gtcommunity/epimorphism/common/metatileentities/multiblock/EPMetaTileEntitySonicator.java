@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.EPAPI;
-import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
+import cn.gtcommunity.epimorphism.api.block.ITierGlassBlockState;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.GlassTierMultiblockController;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
@@ -147,8 +147,8 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
                 .where('T', () -> {
                     return ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
                 }, EnumFacing.NORTH);
-        EPAPI.EP_Glass.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
-            return ((IGlassTierBlockState)entry.getValue()).getGlassTier();
+        EPAPI.MAP_GLASS.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
+            return ((ITierGlassBlockState)entry.getValue()).getGlassTier();
         })).forEach((entry) -> {
             shapeInfo.add(builder.where('G', (IBlockState)entry.getKey()).build());
         });
