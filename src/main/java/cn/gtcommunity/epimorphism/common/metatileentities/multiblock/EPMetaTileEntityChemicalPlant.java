@@ -171,10 +171,10 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMinGlobalLimited(1).setPreviewCount(1))
                         .or(abilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY).setMaxGlobalLimited(2).setPreviewCount(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2).setPreviewCount(1)))
-                .where('C',EPTraceabilityPredicate.EP_CP_CASING.get())
+                .where('C', EPTraceabilityPredicate.EP_CP_CASING.get())
                 .where('X', heatingCoils())
                 .where('M', EPTraceabilityPredicate.EP_MACHINE_CASINGS.get())
-                .where('T',EPTraceabilityPredicate.EP_CP_TUBE.get())
+                .where('T', EPTraceabilityPredicate.EP_CP_TUBE.get())
                 .where('#', any())
                 .where('A',air())
                 .build();

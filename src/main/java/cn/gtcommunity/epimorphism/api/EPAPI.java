@@ -26,6 +26,7 @@ public class EPAPI {
     public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_CP_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_CP_TUBE = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_PA_CASING = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_PA_INTERNAL_CASING = new Object2ObjectOpenHashMap<>();
 
     public static void APIBlockInit() {
         for (EPBlockGlassCasing.CasingType type : EPBlockGlassCasing.CasingType.values()) {
@@ -72,5 +73,12 @@ public class EPAPI {
                 new WrappedIntTired(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK2, 2));
         MAP_PA_CASING.put(EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK3),
                 new WrappedIntTired(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK3, 3));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.LuV),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.LuV, 1));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.ZPM),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.ZPM, 2));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.UV),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.UV, 3));
+
     }
 }

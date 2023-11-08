@@ -84,6 +84,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<NoCoilHigherTemperatureRecipeBuilder> STELLAR_FURNACE_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> DIMENSIONAL_OSCILLATOR_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<CasingTierRecipeBuilder> PRECISE_ASSEMBLER_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -283,6 +285,9 @@ public class EPRecipeMaps {
                 .setSlotOverlay(true, true, false, GuiTextures.MOLECULAR_OVERLAY_2)
                 .setSlotOverlay(true, true, true, GuiTextures.MOLECULAR_OVERLAY_2)
                 .setSound(GTSoundEvents.SCIENCE);
+
+        //  Precise Assembler Recipemap
+        PRECISE_ASSEMBLER_RECIPES = new RecipeMap<>("precise_assembler_recipes", 0, 4, 0, 1, 0, 4, 0, 0, new CasingTierRecipeBuilder(), false);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

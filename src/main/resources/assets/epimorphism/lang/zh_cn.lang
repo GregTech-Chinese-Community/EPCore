@@ -718,6 +718,14 @@ recipemap.stellar_furnace_recipes.name=恒星热能熔炼
 
 recipemap.dimensional_oscillator_recipes.name=超维度震荡
 
+epimorphism.machine.precise_assembler.name=精密自动组装机MT-3662
+recipemap.precise_assembler_recipes.name=精密组装机
+epimorphism.machine.precise_assembler.tooltip.1=误差不超过7nm
+epimorphism.machine.precise_assembler.tooltip.2=可运行一般的§r组装机§7配方，亦可用于组装精密器件
+epimorphism.machine.precise_assembler.tooltip.3=使用不同的机器外壳判定机器等级
+epimorphism.machine.precise_assembler.tooltip.4=运行§r组装机§7配方时，配方时间减半。
+epimorphism.machine.precise_assembler.tooltip.5=运行§r组装机§7配方时，获得§r2^(机器外壳等级+4)§7次并行。
+
 #  Materials
 
 ##  Element Materials
