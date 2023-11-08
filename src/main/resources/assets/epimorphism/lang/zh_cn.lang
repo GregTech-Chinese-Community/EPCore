@@ -226,6 +226,12 @@ metaitem.wafer.crystal_interface.name=晶体触面晶圆
 metaitem.wafer.crystal_interface.tooltip=待处理晶体接口
 metaitem.wafer.chip.crystal_interface.name=晶体触面晶片
 metaitem.wafer.chip.crystal_interface.tooltip=晶体接口
+metaitem.wafer.uhasoc.name=UHASoC晶圆
+metaitem.wafer.uhasoc.tooltip=待处理极高进阶片上系统
+metaitem.wafer.chip.uhasoc.name=UHASoC晶片
+metaitem.wafer.chip.uhasoc.tooltip=极高进阶片上系统
+metaitem.component.gooware.intravital_soc.name=活体 SoC
+metaitem.component.gooware.intravital_soc.tooltip=蠕动着的电路
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪
