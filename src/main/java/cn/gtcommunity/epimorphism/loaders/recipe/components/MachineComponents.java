@@ -5,10 +5,7 @@ import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
-import gregtech.common.blocks.BlockBoilerCasing;
-import gregtech.common.blocks.BlockMachineCasing;
-import gregtech.common.blocks.BlockMultiblockCasing;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.*;
 import gregtech.common.items.MetaItems;
 import gregtech.common.metatileentities.MetaTileEntities;
 
@@ -761,6 +758,26 @@ public class MachineComponents {
                 .duration(800)
                 .buildAndRegister();
 
+        //  Advanced Invar Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.METAL_CASING.getItemVariant(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF))
+                .circuitMeta(6)
+                .fluidInputs(AusteniticStainlessSteel904L.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.ADVANCED_INVAR_CASING))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Advanced Aluminum Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.METAL_CASING.getItemVariant(BlockMetalCasing.MetalCasingType.ALUMINIUM_FROSTPROOF))
+                .circuitMeta(6)
+                .fluidInputs(TanmolyiumBetaC.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.ADVANCED_ALUMINIUM_CASING))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
         //  Grinder Balls
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(dust, Soapstone, 4)
@@ -784,7 +801,7 @@ public class MachineComponents {
                 .input(bolt, Inconel625, 16)
                 .input(plate, HSSE, 8)
                 .fluidInputs(Titanium.getFluid(8 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(ISA_MILL_CASING))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(ISA_MILL_CASING, 2))
                 .EUt(1920)
                 .duration(480)
                 .buildAndRegister();
@@ -796,7 +813,7 @@ public class MachineComponents {
                 .input(bolt, HSSE, 16)
                 .input(MetaItems.COMPONENT_GRINDER_TUNGSTEN, 4)
                 .fluidInputs(Zeron100.getFluid(2 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_GEARBOX))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_GEARBOX, 2))
                 .EUt(32720)
                 .duration(1200)
                 .buildAndRegister();
@@ -807,7 +824,7 @@ public class MachineComponents {
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .input(bolt, Inconel625, 8)
                 .fluidInputs(NiobiumTitanium.getFluid(4 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_PIPE))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_PIPE, 2))
                 .EUt(28560)
                 .duration(680)
                 .buildAndRegister();
@@ -820,7 +837,7 @@ public class MachineComponents {
                 .input(stickLong, HSSG, 2)
                 .input(bolt, HastelloyN, 16)
                 .fluidInputs(StainlessSteel.getFluid(8 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING, 2))
                 .EUt(4480)
                 .duration(1080)
                 .buildAndRegister();
@@ -832,7 +849,7 @@ public class MachineComponents {
                 .input(gearSmall, HSSG, 6)
                 .input(bolt, TungstenCarbide, 16)
                 .fluidInputs(HastelloyX.getFluid(2 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_GEARBOX))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_GEARBOX, 2))
                 .EUt(11300)
                 .duration(580)
                 .buildAndRegister();
@@ -844,7 +861,7 @@ public class MachineComponents {
                 .input(ELECTRIC_PUMP_LuV, 2)
                 .input(bolt, HastelloyN, 8)
                 .fluidInputs(VanadiumGallium.getFluid(4 * L))
-                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_PIPE))
+                .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_PIPE, 2))
                 .EUt(23760)
                 .duration(1200)
                 .buildAndRegister();
@@ -857,7 +874,7 @@ public class MachineComponents {
                 .input(ring, HSSE, 16)
                 .input(bolt, HSSG, 16)
                 .fluidInputs(Stellite100.getFluid(2 * L))
-                .outputs(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getItemVariant(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.FLOTATION_INTAKE_CASING))
+                .outputs(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING.getItemVariant(EPBlockActiveMultiblockCasing.ActiveMultiblockCasingType.FLOTATION_INTAKE_CASING, 2))
                 .EUt(VA[5])
                 .duration(880)
                 .buildAndRegister();
