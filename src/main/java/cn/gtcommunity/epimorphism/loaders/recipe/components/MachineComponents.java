@@ -14,6 +14,7 @@ import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingT
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
+import static gregicality.multiblocks.common.metatileentities.GCYMMetaTileEntities.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -1080,7 +1081,26 @@ public class MachineComponents {
                 .duration(1200)
                 .buildAndRegister();
 
-
+        //  Precise Assembler
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(LARGE_ASSEMBLER.getStackForm())
+                .input(frameGt, MARM200Steel, 4)
+                .input(ROBOT_ARM_IV, 2)
+                .input(CONVEYOR_MODULE_IV, 2)
+                .input(plate, Stellite100, 4)
+                .input(gear, TanmolyiumBetaC, 8)
+                .input(cableGtQuadruple, Naquadah, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 6))
+                .fluidInputs(Lubricant.getFluid(3000))
+                .fluidInputs(HastelloyN.getFluid(L * 2))
+                .outputs(PRECISE_ASSEMBLER.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(LARGE_ASSEMBLER.getStackForm())
+                        .EUt(VA[IV])
+                        .duration(1200))
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
     }
 
     private static void Materials() {

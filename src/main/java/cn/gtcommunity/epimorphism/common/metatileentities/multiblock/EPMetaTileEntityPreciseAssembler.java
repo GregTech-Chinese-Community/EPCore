@@ -190,7 +190,7 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                     .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('T', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('O', MetaTileEntities.MUFFLER_HATCH[LuV], EnumFacing.UP)
-                    .where('G', getGlassState())
+                    .where('G', MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS))
                     .where('F', getFrameState())
                     .where(' ', Blocks.AIR.getDefaultState());
         }
