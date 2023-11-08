@@ -19,6 +19,37 @@ import java.util.function.Supplier;
 import static net.minecraft.util.EnumFacing.*;
 
 public class EPUniverUtil {
+
+    //  Utils
+    public static int getOrDefault(NBTTagCompound tag, String key, int defaultValue){
+        if(tag.hasKey(key)){
+            return tag.getInteger(key);
+        }
+        return defaultValue;
+    }
+
+    public static <T> T getOrDefault(BooleanSupplier canGet, Supplier<T> getter, T defaultValue){
+        return canGet.getAsBoolean() ? getter.get() : defaultValue;
+    }
+
+    //  List Utils
+    public static <T> int maxLength(List<List<T>> lists) {
+        return lists.stream().mapToInt(List::size).max().orElse(0);
+    }
+
+    public static <T> List<T> consistentList(List<T> list, int length) {
+        if (list.size() >= length) {
+            return list;
+        }
+        List<T> finalList = new ArrayList<>(list);
+        T last = list.get(list.size() - 1);
+        for (int i = 0; i < length - list.size(); i++) {
+            finalList.add(last);
+        }
+        return finalList;
+    }
+
+    //  Set Utils
     public static int intValueOfBitSet(BitSet set){
         int result = 0;
         for(int i = 0; i<set.length();i++){
@@ -43,10 +74,7 @@ public class EPUniverUtil {
         return result;
     }
 
-    public static <T> T getOrDefault(BooleanSupplier canGet, Supplier<T> getter, T defaultValue){
-        return canGet.getAsBoolean() ? getter.get() : defaultValue;
-    }
-
+    //  Face Utils
     public static EnumFacing getFacingFromNeighbor(BlockPos pos, BlockPos neighbor){
         BlockPos rel = neighbor.subtract(pos);
         if(rel.getX() == 1){
@@ -89,13 +117,7 @@ public class EPUniverUtil {
         };
     }
 
-    public static int getOrDefault(NBTTagCompound tag, String key, int defaultValue){
-        if(tag.hasKey(key)){
-            return tag.getInteger(key);
-        }
-        return defaultValue;
-    }
-
+    // Item Utils
     public static int stackToInt(ItemStack stack) {
         if (isStackInvalid(stack)) return 0;
         return itemToInt(stack.getItem(), stack.getMetadata());
@@ -134,6 +156,7 @@ public class EPUniverUtil {
         return null;
     }
 
+    //  MetaTileEntity Utils
     public static <T> MetaTileEntity[] getGTTierHatches(MultiblockAbility<T> ability, int tier) {
         return MultiblockAbility.REGISTRY.get(ability).stream()
                 .filter(mte -> {
@@ -144,27 +167,16 @@ public class EPUniverUtil {
                 }).toArray(MetaTileEntity[]::new);
     }
 
-    public static <T> int maxLength(List<List<T>> lists) {
-        return lists.stream().mapToInt(List::size).max().orElse(0);
-    }
-
-    public static <T> List<T> consistentList(List<T> list, int length) {
-        if (list.size() >= length) {
-            return list;
-        }
-        List<T> finalList = new ArrayList<>(list);
-        T last = list.get(list.size() - 1);
-        for (int i = 0; i < length - list.size(); i++) {
-            finalList.add(last);
-        }
-        return finalList;
-    }
-
     public static MetaTileEntityHolder getTileEntity(MetaTileEntity tile) {
         MetaTileEntityHolder holder = new MetaTileEntityHolder();
         holder.setMetaTileEntity(tile);
         holder.getMetaTileEntity().onPlacement();
         holder.getMetaTileEntity().setFrontFacing(EnumFacing.SOUTH);
         return holder;
+    }
+
+    //  Tier Utils
+    public static int getOpticalGlassTier(int glassTier) {
+        return (int) (Math.floor((double) glassTier / 2) + glassTier % 2 - 2);
     }
 }

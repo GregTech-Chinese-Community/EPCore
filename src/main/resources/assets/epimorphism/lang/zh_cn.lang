@@ -331,19 +331,26 @@ tile.ep_wire_coil.adamantium.name=精金线圈方块
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
-tile.ep_glass_casing.boron_silicate_glass.tooltip=高强玻璃/n§8HV级玻璃
+tile.ep_glass_casing.boron_silicate_glass.tooltip=高强玻璃
 tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硅酸盐硼玻璃
-tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=高强玻璃/n§8EV级玻璃
+tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=高强玻璃
 tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硅酸盐硼玻璃
-tile.ep_glass_casing.w_boron_silicate_glass.tooltip=高强玻璃/n§8IV级玻璃
+tile.ep_glass_casing.w_boron_silicate_glass.tooltip=高强玻璃
 tile.ep_glass_casing.osmir_boron_silicate_glass.name=铱锇强化硅酸盐硼玻璃
-tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=工业水晶/n§8LuV级玻璃
+tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=工业水晶
 tile.ep_glass_casing.naq_boron_silicate_glass.name=硅岩强化硅酸盐硼玻璃
-tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=堪比钻石！/n§8ZPM级玻璃
+tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=堪比钻石！
 tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
-tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！/n§8UV级玻璃
+tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！
 tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
-tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁/n§8UHV级玻璃
+tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁
+epimorphism.glass_tier.tooltip=玻璃等级：%s
+epimorphism.optical_glass_tier.tooltip.0=粗制光学玻璃
+epimorphism.optical_glass_tier.tooltip.1=普通光学玻璃
+epimorphism.optical_glass_tier.tooltip.2=改良光学玻璃
+epimorphism.optical_glass_tier.tooltip.3=优质光学玻璃
+epimorphism.optical_glass_tier.tooltip.4=精密光学玻璃
+epimorphism.optical_glass_tier.tooltip.5=精奇光学玻璃
 
 epimorphism.multiblock.pattern.error.glasses=必须使用同一种玻璃方块。
 
@@ -555,6 +562,7 @@ epimorphism.multiblock.roaster.tooltip.2=钢燃烧室: §c1500K
 epimorphism.multiblock.roaster.tooltip.3=钛燃烧室: §c2000K
 epimorphism.multiblock.roaster.tooltip.4=钨钢燃烧室: §c2500K
 recipemap.roaster_recipes.name=高温焙烧
+epimorphism.multiblock.pattern.error.fire_boxes=必须使用同一种燃烧室方块
 
 epimorphism.machine.industrial_fishing_pond.name=珠海渔场
 epimorphism.multiblock.industrial_fisher.mode1=模式：捕捞垃圾
