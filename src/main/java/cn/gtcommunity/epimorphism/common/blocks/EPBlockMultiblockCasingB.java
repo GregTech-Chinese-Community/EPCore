@@ -33,7 +33,10 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
         CORROSION_CASING("corrosion_casing"),
         HASTELLOYX78_CASING("hastelloy_x78_casing"),
         STELLAR_CONTAINMENT_CASING("stellar_containment_casing"),
-        HASTELLOYK243_CASING("hastelloy_k243_casing");
+        HASTELLOYK243_CASING("hastelloy_k243_casing"),
+        PRECISE_ASSEMBLER_CASING_MK1("precise_assembler_casing_mk1"),
+        PRECISE_ASSEMBLER_CASING_MK2("precise_assembler_casing_mk2"),
+        PRECISE_ASSEMBLER_CASING_MK3("precise_assembler_casing_mk3");
 
         private final String name;
 

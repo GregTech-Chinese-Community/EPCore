@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.api.recipe.builder.*;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapChemicalPlant;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapGeneral;
 import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
+import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapPreciseAssembler;
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
@@ -84,6 +85,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<NoCoilHigherTemperatureRecipeBuilder> STELLAR_FURNACE_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> DIMENSIONAL_OSCILLATOR_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<PACasingTierRecipeBuilder> PRECISE_ASSEMBLER_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -283,6 +286,13 @@ public class EPRecipeMaps {
                 .setSlotOverlay(true, true, false, GuiTextures.MOLECULAR_OVERLAY_2)
                 .setSlotOverlay(true, true, true, GuiTextures.MOLECULAR_OVERLAY_2)
                 .setSound(GTSoundEvents.SCIENCE);
+
+        //  Precise Assembler Recipemap
+        PRECISE_ASSEMBLER_RECIPES = new RecipeMapPreciseAssembler<>("precise_assembler_recipes", 4, 1, 4, 0, new PACasingTierRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
+                .setSlotOverlay(false, false, false, GuiTextures.CIRCUIT_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.CIRCUIT_OVERLAY)
+                .setSound(GTSoundEvents.ASSEMBLER);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

@@ -69,7 +69,7 @@ public class GoowareCircuits {
                 .EUt(VA[IV])
                 .buildAndRegister();
 
-        //  Gooware Processor
+        //  Gooware Processor (UV)
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(GOOWARE_CIRCUIT_BOARD)
                 .input(NONLINEAR_CHEMICAL_OSCILLATOR)
@@ -77,9 +77,23 @@ public class GoowareCircuits {
                 .input(ADVANCED_SMD_CAPACITOR, 16)
                 .input(ADVANCED_SMD_TRANSISTOR, 16)
                 .input(wireFine, Europium, 8)
+                .solderMultiplier(1)
                 .output(GOOWARE_PROCESSOR, 2)
                 .duration(200)
                 .EUt(VA[UV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Gooware Processor (UHV)
+        CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(GOOWARE_CIRCUIT_BOARD)
+                .input(NONLINEAR_CHEMICAL_OSCILLATOR)
+                .inputs(INTRAVITAL_SOC.getStackForm())
+                .input(wireFine, Europium, 8)
+                .solderMultiplier(1)
+                .output(GOOWARE_PROCESSOR, 2)
+                .duration(100)
+                .EUt(VA[UHV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 

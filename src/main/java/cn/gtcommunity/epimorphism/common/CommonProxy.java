@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common;
 
+import cn.gtcommunity.epimorphism.api.recipe.properties.PACasingTierProperty;
 import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
@@ -93,12 +94,16 @@ public class CommonProxy {
         EPLog.logger.info("Registering recipes...");
         FusionEUToStartProperty.registerFusionTier(9, "(MK4)");
         FusionEUToStartProperty.registerFusionTier(10, "(MK5)");
-        FusionEUToStartProperty.registerFusionTier(11, "(MK6)");
         CasingTierProperty.registerCasingTier(1, I18n.format("epimorphism.recipe.casing_tier.1"));
         CasingTierProperty.registerCasingTier(2, I18n.format("epimorphism.recipe.casing_tier.2"));
         CasingTierProperty.registerCasingTier(3, I18n.format("epimorphism.recipe.casing_tier.3"));
         CasingTierProperty.registerCasingTier(4, I18n.format("epimorphism.recipe.casing_tier.4"));
         CasingTierProperty.registerCasingTier(5, I18n.format("epimorphism.recipe.casing_tier.5"));
+        PACasingTierProperty.registerPACasingTier(1, I18n.format("epimorphism.machine.precise_assembler.tier.1"));
+        PACasingTierProperty.registerPACasingTier(2, I18n.format("epimorphism.machine.precise_assembler.tier.2"));
+        PACasingTierProperty.registerPACasingTier(3, I18n.format("epimorphism.machine.precise_assembler.tier.3"));
+
+
         FormulaManager.init();
         EPRecipeManager.init();
     }

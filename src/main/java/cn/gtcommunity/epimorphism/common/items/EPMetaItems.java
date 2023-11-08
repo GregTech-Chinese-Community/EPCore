@@ -115,7 +115,9 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem CUBIC_ZIRCONIA_EUROPIUM_WAFER;
     public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_WAFER;
     public static MetaItem<?>.MetaValueItem CRYSTAL_INTERFACE_CHIP;
-    public static MetaItem<?>.MetaValueItem BORON_NITRIDE_GRINDER;
+    public static MetaItem<?>.MetaValueItem UHASOC_WAFER;
+    public static MetaItem<?>.MetaValueItem UHASOC_CHIP;
+    public static MetaItem<?>.MetaValueItem INTRAVITAL_SOC;
 
     //  Others
     public static MetaItem<?>.MetaValueItem MAGNETRON;
@@ -127,6 +129,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem VOLTAGE_COIL_MAX;
     public static MetaItem<?>.MetaValueItem CARBON_ALLOTROPE;
     public static MetaItem<?>.MetaValueItem GRAPHENE_ALIGNED;
+    public static MetaItem<?>.MetaValueItem BORON_NITRIDE_GRINDER;
     public static MetaItem<?>.MetaValueItem VACUUM_TUBE_COMPONENT;
     public static MetaItem<?>.MetaValueItem SEPARATION_ELECTROMAGNET;
 

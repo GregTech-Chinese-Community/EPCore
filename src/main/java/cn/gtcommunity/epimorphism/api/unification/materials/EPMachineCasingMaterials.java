@@ -51,7 +51,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .blastTemp(4310, BlastProperty.GasTier.HIGHER, VA[EV], 1200)
                 .components(Chrome, 9, Cobalt, 9, Manganese, 5, Titanium, 2)
-                .flags(GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  24504 Quantum Alloy
         QuantumAlloy = new Material.Builder(getMaterialsId(), gregtechId("quantum_alloy"))
@@ -195,7 +195,7 @@ public class EPMachineCasingMaterials {
                 .color(0x6CF076)
                 .iconSet(SHINY)
                 .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
-                .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 4277)
+                .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 1277)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
         //  24518 Hastelloy-X78
@@ -216,6 +216,76 @@ public class EPMachineCasingMaterials {
                 .iconSet(BRIGHT)
                 .blastTemp(12400, BlastProperty.GasTier.HIGHEST, VA[UEV], 5032)
                 .components(HastelloyX78, 5, NiobiumNitride, 2, Tritanium, 4, TungstenCarbide, 4, Promethium, 4, Mendelevium, 1)
+                .build();
+        //  24520 Mar-M200 Steel
+        MARM200Steel = new Material.Builder(getMaterialsId(), gregtechId("mar_m_200_steel"))
+                .ingot()
+                .fluid()
+                .color(0x515151)
+                .iconSet(SHINY)
+                .blastTemp(5000, BlastProperty.GasTier.HIGHER, VA[IV], 200)
+                .components(Niobium, 2, Chrome, 9, Aluminium, 5, Titanium, 2, Cobalt, 10, Tungsten, 13, Nickel, 18)
+                .flags(GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_FRAME)
+                .build();
+        //  24521 Mar-M200-Ce Steel
+        MARM200CeSteel = new Material.Builder(getMaterialsId(), gregtechId("mar_m_200_ce_steel"))
+                .ingot()
+                .fluid()
+                .color(0x383030)
+                .iconSet(BRIGHT)
+                .blastTemp(7500, BlastProperty.GasTier.HIGHEST, VA[LuV], 432)
+                .components(MARM200Steel, 18, Cerium, 1)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .build();
+        //  24522 Tanmolyium Beta-C
+        TanmolyiumBetaC = new Material.Builder(getMaterialsId(), gregtechId("tanmolyium_beta_c"))
+                .ingot()
+                .fluid()
+                .color(0xc72fcc)
+                .iconSet(METALLIC)
+                .blastTemp(5300, BlastProperty.GasTier.HIGHER, VA[IV], 180)
+                .components(Titanium, 5, Molybdenum, 5, Vanadium, 2, Chrome, 3, Aluminium, 1)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .build();
+        //  24523 Hastelloy-C59
+        HastelloyC59 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_c_59"))
+                .ingot()
+                .fluid()
+                .color(0xD6D0F0)
+                .iconSet(DULL)
+                .blastTemp(7600, BlastProperty.GasTier.HIGHER, VA[LuV], 559)
+                .components(Nickel, 18, Chrome, 16, TinAlloy, 8, Cobalt, 6, Niobium, 4, Aluminium, 4, Silicon, 2, Phosphorus, 2)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .build();
+        //  24524 HMS-1J79 Alloy
+        HMS1J79Alloy = new Material.Builder(getMaterialsId(), gregtechId("hms_1_j_79_alloy"))
+                .ingot()
+                .fluid()
+                .color(0xD1CB0B)
+                .iconSet(SHINY)
+                .blastTemp(8100, BlastProperty.GasTier.HIGHEST, VA[LuV], 886)
+                .components(Nickel, 14, Iron, 12, Molybdenum, 11, CobaltBrass, 8, Chrome, 6, Silicon, 4)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .build();
+        //  24525 High Strength Structural Steel-HY130-1
+        HY1301 = new Material.Builder(getMaterialsId(), gregtechId("hy_1301"))
+                .ingot()
+                .fluid()
+                .color(0x6F3E57)
+                .iconSet(SHINY)
+                .blastTemp(7850, BlastProperty.GasTier.HIGHER, VA[LuV], 766)
+                .components(Nickel, 9, NickelZincFerrite, 6, Chrome, 4, Nichrome, 4, Iron, 4, Molybdenum, 4, Rhenium, 2, Silicon, 1)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .build();
+        //  24526 Super Austenitic Stainless Steel-904L
+        AusteniticStainlessSteel904L = new Material.Builder(getMaterialsId(), gregtechId("super_austenitic_stainless_steel_904_l"))
+                .ingot()
+                .fluid()
+                .color(0x881357)
+                .iconSet(METALLIC)
+                .blastTemp(4960, BlastProperty.GasTier.MID, VA[EV], 344)
+                .components(StainlessSteel, 8, NickelZincFerrite, 4, Kanthal, 4, Molybdenum, 4)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
     }
 

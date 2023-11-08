@@ -3,10 +3,7 @@ package cn.gtcommunity.epimorphism.api;
 import cn.gtcommunity.epimorphism.api.block.ICasingTierBlockState;
 import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
 import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockWireCoil;
-import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.blocks.*;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
@@ -24,10 +21,12 @@ import static gregtech.api.GregTechAPI.HEATING_COILS;
 public class EPAPI {
     public static final Object2ObjectMap<IBlockState, IGlassTierBlockState> EP_Glass = new Object2ObjectOpenHashMap<>();
 //    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_ESSENTIA_CELLS = new Object2ObjectOpenHashMap<>();
-    public static final Object2ObjectOpenHashMap<IBlockState,ICasingTierBlockState> MAP_MACHINE_CASING = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_MACHINE_CASING = new Object2ObjectOpenHashMap<>();
 //    public static final Object2ObjectOpenHashMap<IBlockState,ITired> MAP_GLASS = new Object2ObjectOpenHashMap<>();
-    public static final Object2ObjectOpenHashMap<IBlockState,ICasingTierBlockState> MAP_CP_CASING = new Object2ObjectOpenHashMap<>();
-    public static final Object2ObjectOpenHashMap<IBlockState,ICasingTierBlockState> MAP_CP_TUBE = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_CP_CASING = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_CP_TUBE = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_PA_CASING = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ICasingTierBlockState> MAP_PA_INTERNAL_CASING = new Object2ObjectOpenHashMap<>();
 
     public static void APIBlockInit() {
         for (EPBlockGlassCasing.CasingType type : EPBlockGlassCasing.CasingType.values()) {
@@ -67,5 +66,19 @@ public class EPAPI {
                 new WrappedIntTired(BlockBoilerCasing.BoilerCasingType.BRONZE_PIPE,5));
         MAP_CP_TUBE.put(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE),
                 new WrappedIntTired(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE,6));
+
+        MAP_PA_CASING.put(EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK1),
+                new WrappedIntTired(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK1, 1));
+        MAP_PA_CASING.put(EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK2),
+                new WrappedIntTired(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK2, 2));
+        MAP_PA_CASING.put(EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK3),
+                new WrappedIntTired(EPBlockMultiblockCasingB.CasingType.PRECISE_ASSEMBLER_CASING_MK3, 3));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.LuV),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.LuV, 1));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.ZPM),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.ZPM, 2));
+        MAP_PA_INTERNAL_CASING.put(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.UV),
+                new WrappedIntTired(BlockMachineCasing.MachineCasingType.UV, 3));
+
     }
 }

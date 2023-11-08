@@ -124,7 +124,9 @@ public class EPMetaItem1 extends StandardMetaItem {
         CUBIC_ZIRCONIA_EUROPIUM_WAFER = this.addItem(84, "wafer.cubic_zirconia.europium");
         CRYSTAL_INTERFACE_WAFER = this.addItem(85, "wafer.crystal_interface");
         CRYSTAL_INTERFACE_CHIP = this.addItem(86, "wafer.chip.crystal_interface");
-
+        UHASOC_WAFER = this.addItem(87, "wafer.uhasoc");
+        UHASOC_CHIP = this.addItem(88, "wafer.chip.uhasoc");
+        INTRAVITAL_SOC = this.addItem(89, "component.gooware.intravital_soc");
         //  Others
         MAGNETRON = this.addItem(100, "magnetron");
         VOLTAGE_COIL_UHV = this.addItem(101, "voltage_coil.uhv");

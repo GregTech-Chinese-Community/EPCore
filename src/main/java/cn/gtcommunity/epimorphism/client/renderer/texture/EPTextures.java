@@ -44,7 +44,9 @@ public class EPTextures {
     public static EPOverlayRenderer SUPERCRITICAL_FLUID_TURBINE_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/supercritical_fluid_turbine_casing");
     public static EPOverlayRenderer CORROSION_CASING = new EPOverlayRenderer("casings/ep_multiblock_casing_b/corrosion_casing");
     public static EPOverlayRenderer TRITANIUM_CASING = new EPOverlayRenderer("casings/solid/tritanium_casing");
-
+    public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK1 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk1");
+    public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK2 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk2");
+    public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK3 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk3");
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");
