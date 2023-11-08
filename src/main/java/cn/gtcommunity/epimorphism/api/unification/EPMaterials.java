@@ -496,6 +496,9 @@ public EPMaterials() {}
     public static Material HMS1J79Alloy;
     public static Material HY1301;
     public static Material AusteniticStainlessSteel904L;
+    public static Material EglinSteelBase;
+    public static Material EglinSteel;
+    public static Material Pikyonium64B;
 
     //  Mod Compatibility Materials
     public static Material Mana;

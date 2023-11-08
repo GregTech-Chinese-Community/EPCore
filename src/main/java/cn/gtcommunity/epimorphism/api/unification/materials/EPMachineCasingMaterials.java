@@ -287,6 +287,34 @@ public class EPMachineCasingMaterials {
                 .components(StainlessSteel, 8, NickelZincFerrite, 4, Kanthal, 4, Molybdenum, 4)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
+        //  24527 Eglin Steel Base
+        EglinSteelBase = new Material.Builder(getMaterialsId(), gregtechId("eglin_steel_base"))
+                .dust()
+                .color(0x8B4513)
+                .iconSet(SAND)
+                .components(Iron, 4, Kanthal, 1, Invar, 5)
+                .build();
+
+        //  24528 Eglin Steel
+        EglinSteel = new Material.Builder(getMaterialsId(), gregtechId("eglin_steel"))
+                .ingot()
+                .fluid()
+                .color(0x8B4513)
+                .iconSet(METALLIC)
+                .components(EglinSteelBase, 10, Sulfur, 1, Silicon, 1, Carbon, 1)
+                .blastTemp(1048, BlastProperty.GasTier.LOW, VA[MV], 24)
+                .build();
+
+        //  24529 Pikyonium-64B
+        Pikyonium64B = new Material.Builder(getMaterialsId(), gregtechId("pikyonium_64_b"))
+                .ingot()
+                .fluid()
+                .color(0x3467BA)
+                .iconSet(SHINY)
+                .blastTemp(10400, BlastProperty.GasTier.HIGHEST, VA[ZPM], 2487)
+                .components(Inconel792, 8, EglinSteel, 5, NaquadahAlloy, 4, TungstenSteel, 4, Cerium, 3, Antimony, 2, Platinum, 2, Ytterbium, 1)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_SPRING_SMALL)
+                .build();
     }
 
     private static int getMaterialsId() {

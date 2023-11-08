@@ -1037,73 +1037,50 @@ public class MachineComponents {
                 .buildAndRegister();
 
         //  Mega Steam Turbine
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, RhodiumPlatedPalladium, 4)
-                .inputs(LARGE_STEAM_TURBINE.getStackForm(12))
-                .input(turbineBlade, HSSG, 16)
-                .input(ELECTRIC_MOTOR_LuV, 4)
-                .input(ELECTRIC_PUMP_LuV, 4)
-                .input(FLUID_REGULATOR_LUV, 4)
-                .input(plate, Naquadah, 16)
-                .input(rotor, Iridium, 16)
-                .input(stickLong, TungstenSteel, 4)
-                .input(wireFine, Kanthal, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 10))
-                .fluidInputs(BlackSteel.getFluid(L * 8))
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_STEAM_TURBINE.getStackForm())
+                .input(plate, WatertightSteel, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 4)
+                .input(ELECTRIC_PUMP_IV, 2)
+                .input(FLUID_REGULATOR_IV, 2)
+                .input(gear, TanmolyiumBetaC, 4)
+                .input(screw, MARM200Steel, 16)
+                .fluidInputs(BlueSteel.getFluid(576))
                 .outputs(MEGA_STEAM_TURBINE.getStackForm())
-                .scannerResearch(b -> b
-                        .researchStack(LARGE_STEAM_TURBINE.getStackForm())
-                        .EUt(VA[LuV])
-                        .duration(2400))
-                .EUt(VA[LuV])
-                .duration(6000)
+                .EUt(VA[IV])
+                .duration(1200)
                 .buildAndRegister();
 
         //  Mega Gas Turbine
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, NaquadahAlloy, 4)
-                .inputs(LARGE_GAS_TURBINE.getStackForm(12))
-                .input(turbineBlade, HSSE, 16)
-                .input(ELECTRIC_MOTOR_ZPM, 4)
-                .input(ELECTRIC_PUMP_ZPM, 4)
-                .input(FLUID_REGULATOR_ZPM, 4)
-                .input(plate, NaquadahEnriched, 16)
-                .input(rotor, Osmiridium, 16)
-                .input(stickLong, RhodiumPlatedPalladium, 4)
-                .input(wireFine, Nichrome, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 10))
-                .fluidInputs(BlueSteel.getFluid(L * 8))
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_GAS_TURBINE.getStackForm())
+                .input(plate, TantalumCarbide, 8)
+                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
+                .input(ELECTRIC_PUMP_LuV, 2)
+                .input(FLUID_REGULATOR_LUV, 2)
+                .input(rotor, Staballoy, 4)
+                .input(screw, IncoloyMA813, 16)
+                .fluidInputs(Naquadah.getFluid(576))
                 .outputs(MEGA_GAS_TURBINE.getStackForm())
-                .scannerResearch(b -> b
-                        .researchStack(LARGE_GAS_TURBINE.getStackForm())
-                        .EUt(VA[ZPM])
-                        .duration(2400))
-                .EUt(VA[ZPM])
-                .duration(6000)
+                .EUt(VA[LuV])
+                .duration(1200)
                 .buildAndRegister();
 
         //  Mega Plasma Turbine
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, Darmstadtium, 4)
-                .inputs(LARGE_PLASMA_TURBINE.getStackForm(12))
-                .input(turbineBlade, HSSS, 16)
-                .input(ELECTRIC_MOTOR_UV, 4)
-                .input(ELECTRIC_PUMP_UV, 4)
-                .input(FLUID_REGULATOR_UV, 4)
-                .input(plate, Naquadria, 16)
-                .input(rotor, Tritanium, 16)
-                .input(stickLong, NaquadahAlloy, 4)
-                .input(wireFine, TungstenSteel, 16)
-                .fluidInputs(SolderingAlloy.getFluid(L * 10))
-                .fluidInputs(Trinium.getFluid(L * 8))
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_PLASMA_TURBINE.getStackForm())
+                .input(plate, HMS1J79Alloy, 8)
+                .input(circuit, MarkerMaterials.Tier.UV, 4)
+                .input(ELECTRIC_PUMP_ZPM, 2)
+                .input(FLUID_REGULATOR_ZPM, 2)
+                .input(spring, Pikyonium64B, 4)
+                .input(screw, Trinium, 16)
                 .outputs(MEGA_PLASMA_TURBINE.getStackForm())
-                .scannerResearch(b -> b
-                        .researchStack(LARGE_PLASMA_TURBINE.getStackForm())
-                        .EUt(VA[UV])
-                        .duration(2400))
-                .EUt(VA[UV])
-                .duration(6000)
+                .EUt(VA[ZPM])
+                .duration(1200)
                 .buildAndRegister();
+
+
     }
 
     private static void Materials() {
@@ -1127,6 +1104,28 @@ public class MachineComponents {
                 .output(dust, ZirconiumCarbide, 2)
                 .EUt(VA[EV])
                 .duration(220)
+                .buildAndRegister();
+
+        //  Eglin Steel
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Iron, 4)
+                .input(dust, Kanthal)
+                .input(dust, Invar, 5)
+                .circuitMeta(10)
+                .output(dust, EglinSteelBase, 10)
+                .EUt(VA[MV])
+                .duration(100)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, EglinSteelBase, 10)
+                .input(dust, Sulfur)
+                .input(dust, Silicon)
+                .input(dust, Carbon)
+                .circuitMeta(13)
+                .output(dust, EglinSteel, 13)
+                .EUt(VA[MV])
+                .duration(120)
                 .buildAndRegister();
 
         //  Staballoy
