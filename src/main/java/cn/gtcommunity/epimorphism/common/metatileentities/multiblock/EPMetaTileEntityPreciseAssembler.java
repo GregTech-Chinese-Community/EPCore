@@ -178,7 +178,7 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
         MultiblockShapeInfo.Builder builder = null;
         if (Blocks.AIR != null) {
             builder = MultiblockShapeInfo.builder()
-                    .aisle("ETCCCCCCC", "F       F", "F       F", "F       F", "XYZUCCCCC")
+                    .aisle("ETCCCCCCC", "F       F", "F       F", "F       F", "XYZCCCCCC")
                     .aisle("CMMMMMMMC", "CGGGGGGGC", "CGGGGGGGC", "CGGGGGGGC", "CCCCCCCCC")
                     .aisle("CMMMMMMMC", "C       C", "C       C", "C       C", "CCCCOCCCC")
                     .aisle("CMMMMMMMC", "CGGGGGGGC", "CGGGGGGGC", "CGGGGGGGC", "CCCCCCCCC")
@@ -187,7 +187,6 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                     .where('X', MetaTileEntities.ITEM_IMPORT_BUS[LuV], EnumFacing.NORTH)
                     .where('Y', MetaTileEntities.ITEM_EXPORT_BUS[LuV], EnumFacing.NORTH)
                     .where('Z', MetaTileEntities.FLUID_IMPORT_HATCH[LuV], EnumFacing.NORTH)
-                    .where('U', MetaTileEntities.FLUID_EXPORT_HATCH[LuV], EnumFacing.NORTH)
                     .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('T', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('O', MetaTileEntities.MUFFLER_HATCH[LuV], EnumFacing.UP)
@@ -207,6 +206,7 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                     }
                     return midFinalBuilder;
                 }).forEach(b -> shapeInfo.add(b.build()));
+        count = 0;
         return shapeInfo;
     }
 

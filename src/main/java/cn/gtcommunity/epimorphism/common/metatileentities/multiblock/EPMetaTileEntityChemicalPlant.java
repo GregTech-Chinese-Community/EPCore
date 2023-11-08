@@ -246,7 +246,7 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
                     }
                     return midFinalBuilder;
                 }).forEach(b -> shapeInfo.add(b.build()));
-
+        count = 0;
         return shapeInfo;
     }
 
