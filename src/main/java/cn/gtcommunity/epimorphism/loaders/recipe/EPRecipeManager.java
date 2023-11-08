@@ -95,5 +95,6 @@ public class EPRecipeManager {
         PlasmaCondenserRecipes.init();
         StellarFurnaceRecipes.init();
         HeatExchangerRecipes.init();
+        PreciseAssemblerRecipes.init();
     }
 }
