@@ -462,6 +462,18 @@ epimorphism.machine.vacuum_chamber.uxv.tooltip=完美真空
 epimorphism.machine.vacuum_chamber.opv.name=传奇真空室
 epimorphism.machine.vacuum_chamber.opv.tooltip=完美真空
 
+recipemap.component_assembler_recipes.name=部件组装机
+epimorphism.machine.component_assembler.lv.name=基础部件组装机
+epimorphism.machine.component_assembler.lv.tooltip=零部件工厂
+epimorphism.machine.component_assembler.mv.name=进阶部件组装机
+epimorphism.machine.component_assembler.mv.tooltip=零部件工厂
+epimorphism.machine.component_assembler.hv.name=进阶部件组装机 II
+epimorphism.machine.component_assembler.hv.tooltip=零部件工厂
+epimorphism.machine.component_assembler.ev.name=进阶部件组装机 III
+epimorphism.machine.component_assembler.ev.tooltip=零部件工厂
+epimorphism.machine.component_assembler.iv.name=精英部件组装机
+epimorphism.machine.component_assembler.iv.tooltip=零部件工厂
+
 recipemap.naquadah_reactor_recipes.name=硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭

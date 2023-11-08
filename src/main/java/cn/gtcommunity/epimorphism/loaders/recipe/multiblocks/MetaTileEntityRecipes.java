@@ -245,6 +245,16 @@ public class MetaTileEntityRecipes {
                 'W', CraftingComponent.CABLE,
                 'H', CraftingComponent.HULL);
 
+        //  Component Assembler recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, COMPONENT_ASSEMBLER,
+                "PPP", "CHR", "WXW",
+                'P', CraftingComponent.PLATE,
+                'H', CraftingComponent.HULL,
+                'C', CraftingComponent.CONVEYOR,
+                'R', CraftingComponent.ROBOT_ARM,
+                'W', CraftingComponent.CABLE,
+                'X', CraftingComponent.CIRCUIT);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",
@@ -646,6 +656,26 @@ public class MetaTileEntityRecipes {
                 .EUt(VA[UEV])
                 .duration(1200)
                 .buildAndRegister();
+
+        //  Blazing Blast Furnace
+        ModHandler.addShapedRecipe(true, "blazing_blast_furnace", BLAZING_BLAST_FURNACE.getStackForm(),
+                "GXG", "RHR", "PWP",
+                'G', new UnificationEntry(gear, HSSG),
+                'X', new UnificationEntry(circuit, MarkerMaterials.Tier.LuV),
+                'H', ELECTRIC_BLAST_FURNACE.getStackForm(),
+                'R', ROBOT_ARM_IV.getStackForm(),
+                'P', new UnificationEntry(plate, AusteniticStainlessSteel904L),
+                'W', VOLTAGE_COIL_IV.getStackForm());
+
+        //  Cryogenic Freezer
+        ModHandler.addShapedRecipe(true, "cryogenic_freezer", CRYOGENIC_FREEZER.getStackForm(),
+                "SXS", "EHE", "PWP",
+                'S', new UnificationEntry(spring, HSSG),
+                'X', new UnificationEntry(circuit, MarkerMaterials.Tier.LuV),
+                'H', VACUUM_FREEZER.getStackForm(),
+                'E', ELECTRIC_PUMP_IV.getStackForm(),
+                'P', new UnificationEntry(plate, TanmolyiumBetaC),
+                'W', new UnificationEntry(cableGtSingle, Platinum));
     }
 
     private static void GCYMOverrideRecipes() {

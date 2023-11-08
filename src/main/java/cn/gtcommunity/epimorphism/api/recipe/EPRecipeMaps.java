@@ -87,6 +87,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> DIMENSIONAL_OSCILLATOR_RECIPES;
     @ZenProperty
     public static final RecipeMap<PACasingTierRecipeBuilder> PRECISE_ASSEMBLER_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> COMPONENT_ASSEMBLER_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -290,6 +292,12 @@ public class EPRecipeMaps {
         //  Precise Assembler Recipemap
         PRECISE_ASSEMBLER_RECIPES = new RecipeMapPreciseAssembler<>("precise_assembler_recipes", 4, 1, 4, 0, new PACasingTierRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
+                .setSlotOverlay(false, false, false, GuiTextures.CIRCUIT_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.CIRCUIT_OVERLAY)
+                .setSound(GTSoundEvents.ASSEMBLER);
+
+        //  Component Assembler Recipemap
+        COMPONENT_ASSEMBLER_RECIPES = new RecipeMap<>("component_assembler_recipes", 0, 6, 0, 1, 0, 1, 0, 0, new SimpleRecipeBuilder(), false)
                 .setSlotOverlay(false, false, false, GuiTextures.CIRCUIT_OVERLAY)
                 .setSlotOverlay(false, false, true, GuiTextures.CIRCUIT_OVERLAY)
                 .setSound(GTSoundEvents.ASSEMBLER);

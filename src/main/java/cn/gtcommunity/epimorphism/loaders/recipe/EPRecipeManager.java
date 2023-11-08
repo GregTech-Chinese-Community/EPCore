@@ -86,6 +86,7 @@ public class EPRecipeManager {
     public static void initMultiblockRecipes() {
         MetaTileEntityRecipes.init();
         CatalyticReformerRecipes.init();
+        ComponentAssemblerRecipes.init();
         DimensionalOscillatorRecipes.init();
         FrackerRecipes.init();
         IndustrialDrillRecipes.init();

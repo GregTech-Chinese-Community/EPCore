@@ -130,7 +130,7 @@ public class OpticalCircuits {
                 .buildAndRegister();
 
         //  Empty Laser
-        ASSEMBLER_RECIPES.recipeBuilder()
+        VACUUM_CHAMBER_RECIPES.recipeBuilder()
                 .input(DIELECTRIC_MIRROR)
                 .input(plate, SterlingSilver, 2)
                 .input(ring, TungstenSteel, 2)
