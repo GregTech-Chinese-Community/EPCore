@@ -1,23 +1,30 @@
 package cn.gtcommunity.epimorphism.common.blocks;
 
-import cn.gtcommunity.epimorphism.api.block.IGlassTierBlockState;
+import cn.gtcommunity.epimorphism.api.block.ITierGlassBlockState;
 import gregtech.api.GTValues;
 import gregtech.api.block.VariantActiveBlock;
+import gregtech.api.block.VariantItemBlock;
 import gregtech.api.items.toolitem.ToolClasses;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 @ParametersAreNonnullByDefault
 public class EPBlockPMMACasing extends VariantActiveBlock<EPBlockPMMACasing.CasingType> {
@@ -77,10 +84,23 @@ public class EPBlockPMMACasing extends VariantActiveBlock<EPBlockPMMACasing.Casi
                 super.shouldSideBeRendered(state, world, pos, side);
     }
 
-    public enum CasingType implements IStringSerializable, IGlassTierBlockState {
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void addInformation(@Nonnull ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, @Nonnull ITooltipFlag advanced) {
+        super.addInformation(stack, player, tooltip, advanced);
+        VariantItemBlock itemBlock = (VariantItemBlock<EPBlockPMMACasing.CasingType, EPBlockPMMACasing>) stack.getItem();
+        IBlockState stackState = itemBlock.getBlockState(stack);
+        EPBlockPMMACasing.CasingType casingType =  this.getState(stackState);
+        tooltip.add(I18n.format("epimorphism.glass_tier.tooltip", casingType.getTireNameColored()));
+        if (casingType.isOpticalGlass) {
+            tooltip.add(casingType.getOpticalTierName());
+        }
+    }
 
-        PMMA_GLASS("pmma_glass", GTValues.UV, false),
-        NEU_PMMA_GLASS("neu_pmma_glass", GTValues.UHV, false);
+    public enum CasingType implements IStringSerializable, ITierGlassBlockState {
+
+        PMMA_GLASS("pmma_glass", GTValues.UHV, false),
+        NEU_PMMA_GLASS("neu_pmma_glass", GTValues.UIV, true);
 
         private final String name;
         private final int tier;

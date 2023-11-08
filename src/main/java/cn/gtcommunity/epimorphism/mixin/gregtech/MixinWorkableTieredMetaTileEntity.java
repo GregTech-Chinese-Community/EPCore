@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.mixin;
+package cn.gtcommunity.epimorphism.mixin.gregtech;
 
 import cn.gtcommunity.epimorphism.Epimorphism;
 import cn.gtcommunity.epimorphism.api.capability.pollution.PollutionMapManager;

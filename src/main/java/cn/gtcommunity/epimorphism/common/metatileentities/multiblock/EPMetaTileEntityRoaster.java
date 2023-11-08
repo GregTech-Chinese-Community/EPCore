@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
+import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.recipe.properties.NoCoilTemperatureProperty;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
@@ -115,31 +116,10 @@ public class EPMetaTileEntityRoaster extends RecipeMapMultiblockController imple
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
                 .where('F', states(MetaBlocks.FRAMES.get(Materials.Invar).getBlock(Materials.Invar)))
                 .where('M', abilities(MultiblockAbility.MUFFLER_HATCH))
-                .where('B', fireboxPredicate())
+                .where('B', EPTraceabilityPredicate.FIRE_BOX.get())
                 .where('#', air())
                 .where(' ', any())
                 .build();
-    }
-
-    //TODO 把这部分移入EPTraceabilityPredicate
-    private static TraceabilityPredicate fireboxPredicate() {
-        return new TraceabilityPredicate(blockWorldState -> {
-            IBlockState blockState = blockWorldState.getBlockState();
-            if ((blockState.getBlock() instanceof BlockFireboxCasing)) {
-                BlockFireboxCasing BlockFireboxCasing = (BlockFireboxCasing) blockState.getBlock();
-                BlockFireboxCasing.FireboxCasingType casingType = BlockFireboxCasing.getState(blockState);
-                Object currentCasingType = blockWorldState.getMatchContext().getOrPut("CasingType", casingType);
-                if (!currentCasingType.toString().equals(casingType.toString())) {
-                    blockWorldState.setError(new PatternStringError("gregtech.multiblock.pattern.error.coils"));
-                    return false;
-                }
-                blockWorldState.getMatchContext().getOrPut("VABlock", new LinkedList<>()).add(blockWorldState.getPos());
-                return true;
-            }
-            return false;
-        }, () -> ArrayUtils.addAll(Arrays.stream(BlockFireboxCasing.FireboxCasingType.values())
-                .map(type -> new BlockInfo(MetaBlocks.BOILER_FIREBOX_CASING.getState(type), null)).toArray(BlockInfo[]::new)))
-                .addTooltips("gregtech.multiblock.pattern.error.coils");
     }
 
     @Override
@@ -199,7 +179,6 @@ public class EPMetaTileEntityRoaster extends RecipeMapMultiblockController imple
         return list;
     }
 
-    //TODO why does this kill JEI /目前不清楚有什么问题，JEI能正常显示
     @Override
     public List<MultiblockShapeInfo> getMatchingShapes() {
         MultiblockShapeInfo.Builder builder = MultiblockShapeInfo.builder()
