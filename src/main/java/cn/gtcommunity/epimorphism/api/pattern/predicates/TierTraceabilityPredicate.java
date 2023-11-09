@@ -39,10 +39,10 @@ public class TierTraceabilityPredicate extends TraceabilityPredicate {
         }
         else{
             this.errorKey = errorKey;
+            this.addTooltips(this.errorKey);
         }
         this.common.add(new SimplePredicate(predicate(), candidates()));
         this.comparator = comparator;
-        this.addTooltips(this.errorKey);
     }
 
     private Predicate<BlockWorldState> predicate(){
