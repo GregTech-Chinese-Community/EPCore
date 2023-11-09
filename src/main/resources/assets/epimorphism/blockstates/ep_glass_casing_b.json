@@ -1,0 +1,19 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "active=false,variant=infinity_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing_b/infinity_glass"
+      }
+    },
+    "active=true,variant=infinity_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_glass_casing_b/infinity_glass"
+      }
+    }
+  }
+}

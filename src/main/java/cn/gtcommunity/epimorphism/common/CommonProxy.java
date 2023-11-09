@@ -62,6 +62,8 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_BOILER_CASING);
         registry.register(EPMetablocks.EP_EXPLOSIVE_BLOCK);
         registry.register(EPMetablocks.EP_WIRE_COIL);
+        registry.register(EPMetablocks.EP_TRANSPARENT_CASING);
+        registry.register(EPMetablocks.EP_GLASS_CASING_B);
     }
 
     @SubscribeEvent
@@ -80,6 +82,8 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_BOILER_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_EXPLOSIVE_BLOCK, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_WIRE_COIL, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_TRANSPARENT_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING_B, VariantItemBlock::new));
         BehaviorAddition.init();
     }
 

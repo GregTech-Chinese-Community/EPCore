@@ -22,6 +22,8 @@ public class EPMetablocks {
     public static EPBlockBoilerCasing EP_BOILER_CASING;
     public static EPBlockExplosive EP_EXPLOSIVE_BLOCK;
     public static EPBlockWireCoil EP_WIRE_COIL;
+    public static EPBlockTransparentCasing EP_TRANSPARENT_CASING;
+    public static EPBlockGlassCasingB EP_GLASS_CASING_B;
 
     private EPMetablocks() {/**/}
 
@@ -50,6 +52,10 @@ public class EPMetablocks {
         EP_EXPLOSIVE_BLOCK.setRegistryName("ep_explosive_block");
         EP_WIRE_COIL = new EPBlockWireCoil();
         EP_WIRE_COIL.setRegistryName("ep_wire_coil");
+        EP_TRANSPARENT_CASING = new EPBlockTransparentCasing();
+        EP_TRANSPARENT_CASING.setRegistryName("ep_transparent_casing");
+        EP_GLASS_CASING_B = new EPBlockGlassCasingB();
+        EP_GLASS_CASING_B.setRegistryName("ep_glass_casing_b");
     }
 
     @SideOnly(Side.CLIENT)
@@ -68,6 +74,8 @@ public class EPMetablocks {
         EP_PMMA_CASING.onModelRegister();
         EP_ACTIVE_MULTIBLOCK_CASING.onModelRegister();
         EP_WIRE_COIL.onModelRegister();
+        EP_TRANSPARENT_CASING.onModelRegister();
+        EP_GLASS_CASING_B.onModelRegister();
     }
 
     @SideOnly(Side.CLIENT)

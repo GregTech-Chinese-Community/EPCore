@@ -40,6 +40,12 @@ public class EPAPI {
         for (EPBlockPMMACasing.CasingType type : EPBlockPMMACasing.CasingType.values()) {
             MAP_GLASS.put(EPMetablocks.EP_PMMA_CASING.getState(type), type);
         }
+        for (EPBlockTransparentCasing.TransparentCasingType type : EPBlockTransparentCasing.TransparentCasingType.values()) {
+            MAP_GLASS.put(EPMetablocks.EP_TRANSPARENT_CASING.getState(type), type);
+        }
+        for (EPBlockGlassCasingB.GlassType type : EPBlockGlassCasingB.GlassType.values()) {
+            MAP_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(type), type);
+        }
         for (EnumDyeColor enumdyecolor : EnumDyeColor.values()) {
             MAP_GLASS.put(Blocks.STAINED_GLASS.getStateFromMeta(enumdyecolor.getMetadata()), (ITierGlassBlockState) Blocks.STAINED_GLASS);
         }
