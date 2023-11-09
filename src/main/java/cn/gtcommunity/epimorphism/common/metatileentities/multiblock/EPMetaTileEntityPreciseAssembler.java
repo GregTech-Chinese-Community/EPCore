@@ -134,11 +134,11 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                 .build();
     }
 
-    private IBlockState getFrameState() {
+    private static IBlockState getFrameState() {
         return MetaBlocks.FRAMES.get(EPMaterials.MARM200Steel).getBlock(EPMaterials.MARM200Steel);
     }
 
-    private IBlockState getGlassState() {
+    private static IBlockState getGlassState() {
         return MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS);
     }
 
@@ -190,7 +190,7 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                     .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('T', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : MetaTileEntities.ENERGY_INPUT_HATCH[LuV], EnumFacing.NORTH)
                     .where('O', MetaTileEntities.MUFFLER_HATCH[LuV], EnumFacing.UP)
-                    .where('G', MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS))
+                    .where('G', getGlassState())
                     .where('F', getFrameState())
                     .where(' ', Blocks.AIR.getDefaultState());
         }
