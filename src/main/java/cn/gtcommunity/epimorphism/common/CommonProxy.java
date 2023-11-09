@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.common;
 
+import cn.gtcommunity.epimorphism.api.recipe.properties.CACasingTierProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PACasingTierProperty;
 import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
@@ -56,6 +57,7 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_CRUCIBLE_CASING);
         registry.register(EPMetablocks.EP_MILL_CASING);
         registry.register(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING);
+        registry.register(EPMetablocks.EP_COMPONENT_ASSEMBLY_LINE_CASING);
         registry.register(EPMetablocks.EP_EXPLOSIVE_BLOCK);
         registry.register(EPMetablocks.EP_WIRE_COIL);
     }
@@ -71,6 +73,7 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_CRUCIBLE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_MILL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_COMPONENT_ASSEMBLY_LINE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_EXPLOSIVE_BLOCK, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_WIRE_COIL, VariantItemBlock::new));
         BehaviorAddition.init();
@@ -102,8 +105,20 @@ public class CommonProxy {
         PACasingTierProperty.registerPACasingTier(1, I18n.format("epimorphism.machine.precise_assembler.tier.1"));
         PACasingTierProperty.registerPACasingTier(2, I18n.format("epimorphism.machine.precise_assembler.tier.2"));
         PACasingTierProperty.registerPACasingTier(3, I18n.format("epimorphism.machine.precise_assembler.tier.3"));
-
-
+        CACasingTierProperty.registerCACasingTier(1, I18n.format("epimorphism.machine.component_assembly_line.tier.1"));
+        CACasingTierProperty.registerCACasingTier(2, I18n.format("epimorphism.machine.component_assembly_line.tier.2"));
+        CACasingTierProperty.registerCACasingTier(3, I18n.format("epimorphism.machine.component_assembly_line.tier.3"));
+        CACasingTierProperty.registerCACasingTier(4, I18n.format("epimorphism.machine.component_assembly_line.tier.4"));
+        CACasingTierProperty.registerCACasingTier(5, I18n.format("epimorphism.machine.component_assembly_line.tier.5"));
+        CACasingTierProperty.registerCACasingTier(6, I18n.format("epimorphism.machine.component_assembly_line.tier.6"));
+        CACasingTierProperty.registerCACasingTier(7, I18n.format("epimorphism.machine.component_assembly_line.tier.7"));
+        CACasingTierProperty.registerCACasingTier(8, I18n.format("epimorphism.machine.component_assembly_line.tier.8"));
+        CACasingTierProperty.registerCACasingTier(9, I18n.format("epimorphism.machine.component_assembly_line.tier.9"));
+        CACasingTierProperty.registerCACasingTier(10, I18n.format("epimorphism.machine.component_assembly_line.tier.10"));
+        CACasingTierProperty.registerCACasingTier(11, I18n.format("epimorphism.machine.component_assembly_line.tier.11"));
+        CACasingTierProperty.registerCACasingTier(12, I18n.format("epimorphism.machine.component_assembly_line.tier.12"));
+        CACasingTierProperty.registerCACasingTier(13, I18n.format("epimorphism.machine.component_assembly_line.tier.13"));
+        CACasingTierProperty.registerCACasingTier(14, I18n.format("epimorphism.machine.component_assembly_line.tier.14"));
         FormulaManager.init();
         EPRecipeManager.init();
     }
