@@ -152,6 +152,8 @@ public class EPTraceabilityPredicate {
             Comparator.comparing((s) -> ((WrappedIntTired)MAP_PA_CASING.get(s)).getIntTier()), "PACasing", null);
     public static Supplier<TierTraceabilityPredicate> EP_PA_INTERNAL_CASING = () -> new TierTraceabilityPredicate(MAP_PA_INTERNAL_CASING,
             Comparator.comparing((s) -> ((WrappedIntTired)MAP_PA_INTERNAL_CASING.get(s)).getIntTier()), "PAInternalCasing", null);
+    public static Supplier<TierTraceabilityPredicate> EP_CA_TIERED_CASING = () -> new TierTraceabilityPredicate(MAP_CA_TIRED_CASING,
+            Comparator.comparing((s) -> ((WrappedIntTired)MAP_CA_TIRED_CASING.get(s)).getIntTier()), "CATieredCasing", null);
 
     //  Utils
     public static Supplier<BlockInfo[]> getCandidates(IBlockState... allowedStates) {

@@ -306,7 +306,6 @@ public class EPRecipeMaps {
                 .setSound(GTSoundEvents.ASSEMBLER);
 
         //  Component Assembly Line Recipemap
-        //  TODO RecipeMapComponentAssemblyLine
         COMPONENT_ASSEMBLY_LINE_RECIPES = new RecipeMapComponentAssemblyLine<>("component_assembly_line_recipes", 12, 1,  12, 0, new CACasingTierRecipeBuilder(), false)
                 .setSound(GTSoundEvents.ASSEMBLER);
 

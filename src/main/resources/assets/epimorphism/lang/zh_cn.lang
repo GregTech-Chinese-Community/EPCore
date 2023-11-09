@@ -796,8 +796,14 @@ epimorphism.machine.precise_assembler.tier.1=MK1
 epimorphism.machine.precise_assembler.tier.2=MK2
 epimorphism.machine.precise_assembler.tier.3=MK3
 
+epimorphism.machine.component_assembly_line.name=部件装配线
 recipemap.component_assembly_line_recipes.name=部件装配线
 epimorphism.machine.component_assembly_line.tier=装配外壳等级：
+epimorphism.machine.component_assembly_line.tooltip.1=批量装配各式各样的零部件
+epimorphism.machine.component_assembly_line.tooltip.2=效率碾压同等级组装机/装配线！
+epimorphism.machine.component_assembly_line.tooltip.3=需要不同等级的§6部件装配线外壳§7
+epimorphism.machine.component_assembly_line.tooltip.4=机器运行的§r最大电压等级§7由部件装配线外壳决定
+
 epimorphism.machine.component_assembly_line.tier.1=简易 (LV)
 epimorphism.machine.component_assembly_line.tier.2=粗制 (MV)
 epimorphism.machine.component_assembly_line.tier.3=优质 (HV)
