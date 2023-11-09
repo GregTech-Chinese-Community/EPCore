@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockTransparentCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.stack.ItemMaterialInfo;
@@ -83,6 +84,28 @@ public class EPMaterialInfoLoader {
 
         OreDictUnifier.registerOre(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS),
                 new ItemMaterialInfo(new MaterialStack(PMMA, M * 4)));
+
+        //  BPA Polycarbonate
+        COMPRESSOR_RECIPES.recipeBuilder()
+                .input(plate, BPAPolycarbonate, 4)
+                .outputs(EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.BPA_POLYCARBONATE_GLASS))
+                .duration(400)
+                .EUt(2)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.BPA_POLYCARBONATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BPAPolycarbonate, M * 4)));
+
+        //  CBDO Polycarbonate
+        COMPRESSOR_RECIPES.recipeBuilder()
+                .input(plate, CBDOPolycarbonate, 4)
+                .outputs(EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.CBDO_POLYCARBONATE_GLASS))
+                .duration(400)
+                .EUt(2)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.CBDO_POLYCARBONATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(CBDOPolycarbonate, M * 4)));
 
         //  TODO other glass info
     }

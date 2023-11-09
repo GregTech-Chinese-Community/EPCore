@@ -397,6 +397,14 @@ public EPMaterials() {}
     public static Material Benzylamine;
     public static Material BenzylChloride;
     public static Material Hexamethylenetetramine;
+    public static Material DimethylCarbonate;
+    public static Material DiphenylCarbonate;
+    public static Material BPAPolycarbonate;
+    public static Material IsobutyricAcid;
+    public static Material IsobutyricAnhydride;
+    public static Material Dimethylketene;
+    public static Material Tetramethylcyclobutanediol;
+    public static Material CBDOPolycarbonate;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
