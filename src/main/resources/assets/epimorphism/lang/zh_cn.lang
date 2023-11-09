@@ -375,6 +375,10 @@ tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
 tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！
 tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁
+tile.ep_transparent_casing.bpa_polycarbonate_glass.name=BPA聚碳酸酯玻璃
+tile.ep_transparent_casing.cbdo_polycarbonate_glass.name=CBDO聚碳酸酯玻璃
+tile.ep_glass_casing_b.infinity_glass.name=无尽玻璃
+
 epimorphism.glass_tier.tooltip=玻璃等级：%s
 epimorphism.optical_glass_tier.tooltip.0=粗制光学玻璃
 epimorphism.optical_glass_tier.tooltip.1=普通光学玻璃

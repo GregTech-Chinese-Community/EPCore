@@ -1,6 +1,8 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.components;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockTransparentCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import gregtech.api.unification.ore.OrePrefix;
@@ -101,11 +103,13 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         GLASS.appendIngredients(Stream.of(new Object[][]{
+                {7, EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.BPA_POLYCARBONATE_GLASS)},
+                {8, EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.BPA_POLYCARBONATE_GLASS)},
                 {9, EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS)},
                 {10, EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS)},
-//                {11, EPMetablocks.EP_GLASS_CASING.getItemVariant(BlockTransparentCasing.CasingType.)},
-//                {12, EPMetablocks.EP_GLASS_CASING.getItemVariant(BlockTransparentCasing.CasingType.)},
-//                {13, EPMetablocks.EP_GLASS_CASING.getItemVariant(BlockTransparentCasing.CasingType.)},
+                {11, EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.CBDO_POLYCARBONATE_GLASS)},
+                {12, EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.CBDO_POLYCARBONATE_GLASS)},
+                {13, EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.INFINITY_GLASS)}
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         PLATE.appendIngredients(Stream.of(new Object[][]{
