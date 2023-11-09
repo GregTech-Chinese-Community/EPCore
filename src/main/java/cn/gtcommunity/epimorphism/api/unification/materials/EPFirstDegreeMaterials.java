@@ -1082,6 +1082,7 @@ public class EPFirstDegreeMaterials {
         //  24143 Silicon Carbide
         SiliconCarbide = new Material.Builder(getMaterialsId(), gregtechId("silicon_carbide"))
                 .dust()
+                .fluid()
                 .color(0x4D4D4D)
                 .iconSet(METALLIC)
                 .flags(GENERATE_FINE_WIRE)

@@ -100,5 +100,6 @@ public class EPRecipeManager {
         StellarFurnaceRecipes.init();
         HeatExchangerRecipes.init();
         PreciseAssemblerRecipes.init();
+        ComponentAssemblyLineRecipes.init();
     }
 }

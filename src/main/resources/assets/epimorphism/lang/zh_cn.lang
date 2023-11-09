@@ -797,7 +797,7 @@ epimorphism.machine.precise_assembler.tier.2=MK2
 epimorphism.machine.precise_assembler.tier.3=MK3
 
 recipemap.component_assembly_line_recipes.name=部件装配线
-epimorphism.machine.component_assembly_line.tier=部件装配外壳等级：
+epimorphism.machine.component_assembly_line.tier=装配外壳等级：
 epimorphism.machine.component_assembly_line.tier.1=简易 (LV)
 epimorphism.machine.component_assembly_line.tier.2=粗制 (MV)
 epimorphism.machine.component_assembly_line.tier.3=优质 (HV)
