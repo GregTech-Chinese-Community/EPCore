@@ -17,6 +17,7 @@ import static gregtech.api.GregTechAPI.HEATING_COILS;
 
 public class EPAPI {
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_GLASS = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_GLASS_SHAPE_INFO = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_MACHINE_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_CP_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_CP_TUBE = new Object2ObjectOpenHashMap<>();
@@ -46,10 +47,14 @@ public class EPAPI {
         for (EPBlockGlassCasingB.GlassType type : EPBlockGlassCasingB.GlassType.values()) {
             MAP_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(type), type);
         }
+        MAP_GLASS.put(Blocks.GLASS.getDefaultState(), (ITierGlassBlockState) Blocks.GLASS);
+
+        MAP_GLASS_SHAPE_INFO.putAll(MAP_GLASS);
+
         for (EnumDyeColor enumdyecolor : EnumDyeColor.values()) {
             MAP_GLASS.put(Blocks.STAINED_GLASS.getStateFromMeta(enumdyecolor.getMetadata()), (ITierGlassBlockState) Blocks.STAINED_GLASS);
         }
-        MAP_GLASS.put(Blocks.GLASS.getDefaultState(), (ITierGlassBlockState) Blocks.GLASS);
+
 
         //  MAP_MACHINE_CASING Init
         for (BlockMachineCasing.MachineCasingType type : Arrays.stream(BlockMachineCasing.MachineCasingType.values()).filter((c)-> c.ordinal()<10).collect(Collectors.toList())) {

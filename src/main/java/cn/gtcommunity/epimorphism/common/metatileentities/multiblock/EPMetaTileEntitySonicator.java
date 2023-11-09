@@ -46,29 +46,6 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
         return new EPMetaTileEntitySonicator(metaTileEntityId);
     }
 
-//    @Override
-//    public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
-//        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0) && super.checkRecipe(recipe, consumeIfSuccess);
-//    }
-//
-//    @Override
-//    protected void formStructure(PatternMatchContext context) {
-//        super.formStructure(context);
-//        Object type = context.get("CasingType");
-//        if (type instanceof IGlassTierBlockState) {
-//            this.glassTier = ((IGlassTierBlockState) type).getGlassTier();
-//        } else {
-//            this.glassTier = 0;
-//        }
-//
-//    }
-//
-//    @Override
-//    public void invalidateStructure() {
-//        super.invalidateStructure();
-//        this.glassTier = 0;
-//    }
-
     @Nonnull
     @Override
     protected BlockPattern createStructurePattern() {
@@ -109,17 +86,6 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
         return GCYMTextures.CORROSION_PROOF_CASING;
     }
 
-
-
-//    @Override
-//    protected void addDisplayText(List<ITextComponent> textList) {
-//        super.addDisplayText(textList);
-//        if (this.isStructureFormed() && glassTier > 0) {
-//            String tierName = GTValues.VNF[glassTier];
-//            textList.add(new TextComponentTranslation("epimorphism.machine.multiblock.glass_tier", new Object[]{glassTier, tierName}));
-//        }
-//    }
-
     @SideOnly(Side.CLIENT)
     @Nonnull
     @Override
@@ -147,7 +113,7 @@ public class EPMetaTileEntitySonicator extends GlassTierMultiblockController {
                 .where('T', () -> {
                     return ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
                 }, EnumFacing.NORTH);
-        EPAPI.MAP_GLASS.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
+        EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream().sorted(Comparator.comparingInt((entry) -> {
             return ((ITierGlassBlockState)entry.getValue()).getGlassTier();
         })).forEach((entry) -> {
             shapeInfo.add(builder.where('G', (IBlockState)entry.getKey()).build());

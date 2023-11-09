@@ -100,7 +100,7 @@ public class EPMetaTileEntityCVDUnit extends GlassTierMultiblockController {
                 .where('T', () -> {
                     return ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
                 }, EnumFacing.NORTH);
-        EPAPI.MAP_GLASS.entrySet().stream().sorted(Comparator.comparingInt((entry) -> ((ITierGlassBlockState)entry.getValue()).getGlassTier())).forEach((entry) -> {
+        EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream().sorted(Comparator.comparingInt((entry) -> ((ITierGlassBlockState)entry.getValue()).getGlassTier())).forEach((entry) -> {
             shapeInfo.add(builder.where('G', entry.getKey()).build());
         });
         return shapeInfo;
