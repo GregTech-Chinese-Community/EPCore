@@ -16,11 +16,16 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.blocks.BlockFusionCasing;
 import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class EPMetaTileEntityStellarFurnace extends RecipeMapMultiblockController {
 
@@ -90,5 +95,14 @@ public class EPMetaTileEntityStellarFurnace extends RecipeMapMultiblockControlle
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
         return EPTextures.TRITANIUM_CASING;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+        super.addInformation(stack, player, tooltip, advanced);
+        tooltip.add(I18n.format("epimorphism.machine.stellar_furnace.tooltip.1"));
+        tooltip.add(I18n.format("epimorphism.machine.stellar_furnace.tooltip.2"));
+        tooltip.add(I18n.format("epimorphism.machine.stellar_furnace.tooltip.3"));
+        tooltip.add(I18n.format("epimorphism.machine.stellar_furnace.tooltip.4"));
     }
 }
