@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockBoilerCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregicality.multiblocks.api.render.GCYMTextures;
@@ -16,7 +17,6 @@ import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.unification.material.Materials;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockFusionCasing;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -94,7 +94,7 @@ public class EPMetaTileEntityIonImplantater extends RecipeMapMultiblockControlle
     }
 
     private IBlockState getPipeCasingState() {
-        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE);
+        return EPMetablocks.EP_BOILER_CASING.getState(EPBlockBoilerCasing.BoilerCasingType.POLYBENZIMIDAZOLE);
     }
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {

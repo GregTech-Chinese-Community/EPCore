@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockBoilerCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
@@ -20,7 +21,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
-import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
@@ -97,7 +97,7 @@ public class EPMetaTileEntityLargeNaquadahReactor extends FuelMultiblockControll
     }
 
     private IBlockState getPipeCasingState() {
-        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE);
+        return EPMetablocks.EP_BOILER_CASING.getState(EPBlockBoilerCasing.BoilerCasingType.POLYBENZIMIDAZOLE);
     }
 
     @Nonnull

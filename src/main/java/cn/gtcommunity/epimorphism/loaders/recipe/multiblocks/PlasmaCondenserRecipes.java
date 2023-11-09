@@ -104,5 +104,6 @@ public class PlasmaCondenserRecipes {
                 .EUt(VA[UIV])
                 .duration(120)
                 .buildAndRegister();*/
+
     }
 }
