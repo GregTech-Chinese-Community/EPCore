@@ -29,7 +29,7 @@ public abstract class GlassTierMultiblockController extends RecipeMapMultiblockC
     @Override
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
-        Object type = context.get("CasingType");
+        Object type = context.get("GlassTiredStats");
         if (type instanceof ITierGlassBlockState) {
             this.glassTier = ((ITierGlassBlockState) type).getGlassTier();
         } else {
