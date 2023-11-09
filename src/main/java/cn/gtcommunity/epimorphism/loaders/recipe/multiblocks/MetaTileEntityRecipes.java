@@ -347,12 +347,12 @@ public class MetaTileEntityRecipes {
                 .fluidInputs(Trinium.getFluid(4608))
                 .fluidInputs(HastelloyC276.getFluid(4608))
                 .output(ISA_MILL)
-                .EUt(30720)
-                .duration(12000)
-                .stationResearch(b -> b
+                .EUt(VA[LuV])
+                .duration(3200)
+                .scannerResearch(b -> b
                         .researchStack(LARGE_MACERATOR.getStackForm())
-                        .CWUt(30)
-                        .EUt(VA[LuV]))
+                        .EUt(VA[IV])
+                        .duration(1200))
                 .buildAndRegister();
 
         //  Flotation Factory
@@ -374,12 +374,12 @@ public class MetaTileEntityRecipes {
                 .fluidInputs(NaquadahEnriched.getFluid(4608))
                 .fluidInputs(TitaniumTungstenCarbide.getFluid(4608))
                 .output(FLOTATION_FACTORY)
-                .EUt(30720)
-                .duration(12000)
-                .stationResearch(b -> b
+                .EUt(VA[LuV])
+                .duration(3200)
+                .scannerResearch(b -> b
                         .researchStack(LARGE_DISTILLERY.getStackForm())
-                        .CWUt(30)
-                        .EUt(VA[LuV]))
+                        .EUt(VA[IV])
+                        .duration(1200))
                 .buildAndRegister();
 
         //  Chemical Plant
@@ -592,11 +592,11 @@ public class MetaTileEntityRecipes {
                 .fluidInputs(Titanium.getFluid(4608))
                 .outputs(VACUUM_DRYING_FURNACE.getStackForm())
                 .EUt(VA[LuV])
-                .duration(12000)
-                .stationResearch(b -> b
-                        .researchStack(ELECTRIC_BLAST_FURNACE.getStackForm())
-                        .CWUt(30)
-                        .EUt(VA[LuV]))
+                .duration(3200)
+                .scannerResearch(b -> b
+                        .researchStack(DRYER[LuV].getStackForm())
+                        .EUt(VA[IV])
+                        .duration(1200))
                 .buildAndRegister();
 
         //  Plasma Condenser
@@ -614,7 +614,7 @@ public class MetaTileEntityRecipes {
                 .fluidInputs(CobaltBrass.getFluid(2880))
                 .outputs(PLASMA_CONDENSER.getStackForm())
                 .EUt(VA[UV])
-                .duration(6000)
+                .duration(3000)
                 .stationResearch(b -> b
                         .researchStack(VACUUM_FREEZER.getStackForm())
                         .CWUt(30)
@@ -654,7 +654,7 @@ public class MetaTileEntityRecipes {
                         .CWUt(128)
                         .EUt(VA[UEV]))
                 .EUt(VA[UEV])
-                .duration(1200)
+                .duration(3000)
                 .buildAndRegister();
 
         //  Blazing Blast Furnace
@@ -676,6 +676,39 @@ public class MetaTileEntityRecipes {
                 'E', ELECTRIC_PUMP_IV.getStackForm(),
                 'P', new UnificationEntry(plate, TanmolyiumBetaC),
                 'W', new UnificationEntry(cableGtSingle, Platinum));
+
+        //  Fermentation Tank
+        ModHandler.addShapedRecipe(true, "fermentation_tank", FERMENTATION_TANK.getStackForm(),
+                "GPG", "SHS", "WOW",
+                'H', FERMENTER[LuV].getStackForm(),
+                'S', new UnificationEntry(spring, Naquadah),
+                'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS),
+                'P', ELECTRIC_PUMP_LuV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, NiobiumTitanium),
+                'O', new UnificationEntry(circuit, MarkerMaterials.Tier.LuV));
+
+        //  Mega Alloy Blast Furnace
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, AusteniticStainlessSteel904L, 4)
+                .inputs(ALLOY_BLAST_SMELTER.getStackForm(16))
+                .input(circuit, MarkerMaterials.Tier.LuV, 16)
+                .input(plateDouble, HMS1J79Alloy, 4)
+                .input(plateDouble, HastelloyC59, 4)
+                .input(gear, HY1301, 4)
+                .input(gearSmall, TanmolyiumBetaC, 16)
+                .input(wireGtQuadruple, NiobiumTitanium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Inconel792.getFluid(2880))
+                .fluidInputs(MARM200CeSteel.getFluid(1440))
+                .fluidInputs(Lubricant.getFluid(3000))
+                .outputs(MEGA_ALLOY_BLAST_SMELTER.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(ALLOY_BLAST_SMELTER.getStackForm())
+                        .EUt(VA[IV])
+                        .duration(1200))
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
