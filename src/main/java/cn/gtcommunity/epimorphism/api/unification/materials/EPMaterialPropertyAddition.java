@@ -69,6 +69,7 @@ public class EPMaterialPropertyAddition {
         Neutronium.addFlags(GENERATE_FRAME);
         Neutronium.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
         HSSE.addFlags(GENERATE_DOUBLE_PLATE);
+        HSSS.addFlags(GENERATE_DOUBLE_PLATE);
         Dubnium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
         Rutherfordium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
         Livermorium.addFlags(GENERATE_ROD, GENERATE_BOLT_SCREW);
@@ -80,11 +81,10 @@ public class EPMaterialPropertyAddition {
         Trinaquadalloy.addFlags(GENERATE_FRAME);
         CobaltBrass.addFlags(GENERATE_FRAME);
         Trinium.addFlags(GENERATE_SPRING);
-        Tritanium.addFlags(GENERATE_SPRING);
+        Tritanium.addFlags(GENERATE_SPRING, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_DOUBLE_PLATE);
         RedSteel.addFlags(GENERATE_DOUBLE_PLATE);
         Ruthenium.addFlags(GENERATE_DOUBLE_PLATE);
         TitaniumCarbide.addFlags(GENERATE_DOUBLE_PLATE);
-        Tritanium.addFlags(GENERATE_CURVED_PLATE, GENERATE_ROTOR);
         Nichrome.addFlags(GENERATE_FINE_WIRE);
         Uranium238.addFlags(GENERATE_FRAME);
         Plutonium241.addFlags(GENERATE_FRAME);
@@ -94,6 +94,9 @@ public class EPMaterialPropertyAddition {
         IncoloyMA956.addFlags(GENERATE_DOUBLE_PLATE);
         Polybenzimidazole.addFlags(GENERATE_ROD, GENERATE_FRAME);
         Steel.addFlags(GENERATE_DENSE);
+        IronMagnetic.addFlags(GENERATE_LONG_ROD);
+        SteelMagnetic.addFlags(GENERATE_LONG_ROD);
+        NeodymiumMagnetic.addFlags(GENERATE_LONG_ROD);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
