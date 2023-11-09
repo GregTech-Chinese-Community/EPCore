@@ -987,7 +987,7 @@ public class MachineComponents {
                 .fluidInputs(Zeron100.getFluid(2 * L))
                 .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.ISA_MILL_CASING_GEARBOX, 2))
                 .EUt(32720)
-                .duration(1200)
+                .duration(600)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
@@ -1035,7 +1035,7 @@ public class MachineComponents {
                 .fluidInputs(VanadiumGallium.getFluid(4 * L))
                 .outputs(EPMetablocks.EP_MILL_CASING.getItemVariant(EPBlockMillCasing.CasingType.FLOTATION_CASING_PIPE, 2))
                 .EUt(23760)
-                .duration(1200)
+                .duration(600)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
@@ -1061,7 +1061,7 @@ public class MachineComponents {
                 .fluidInputs(BlueSteel.getFluid(1152))
                 .outputs(MULTIPART_BALL_HATCH.getStackForm())
                 .EUt(7680)
-                .duration(1600)
+                .duration(600)
                 .buildAndRegister();
 
         //  Catalyst Hatch
@@ -1074,7 +1074,7 @@ public class MachineComponents {
                 .fluidInputs(BlackSteel.getFluid(1152))
                 .outputs(MULTIPART_CATALYST_HATCH.getStackForm())
                 .EUt(VA[HV])
-                .duration(1200)
+                .duration(600)
                 .buildAndRegister();
 
         //  Buffer Hatch
@@ -1087,7 +1087,7 @@ public class MachineComponents {
                 .fluidInputs(TitaniumTungstenCarbide.getFluid(1152))
                 .outputs(MULTIPART_BUFFER_HATCH.getStackForm())
                 .EUt(VA[IV])
-                .duration(1800)
+                .duration(600)
                 .buildAndRegister();
 
         //  Reinforced Rotor Holder
