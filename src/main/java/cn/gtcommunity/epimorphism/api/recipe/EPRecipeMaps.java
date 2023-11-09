@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.api.recipe;
 
 import cn.gtcommunity.epimorphism.api.recipe.builder.*;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapChemicalPlant;
+import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapComponentAssemblyLine;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapGeneral;
 import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
 import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapPreciseAssembler;
@@ -306,7 +307,7 @@ public class EPRecipeMaps {
 
         //  Component Assembly Line Recipemap
         //  TODO RecipeMapComponentAssemblyLine
-        COMPONENT_ASSEMBLY_LINE_RECIPES = new RecipeMap<>("component_assembly_line_recipes", 0, 12, 0, 1, 0, 12, 0, 0, new CACasingTierRecipeBuilder(), false)
+        COMPONENT_ASSEMBLY_LINE_RECIPES = new RecipeMapComponentAssemblyLine<>("component_assembly_line_recipes", 12, 1,  12, 0, new CACasingTierRecipeBuilder(), false)
                 .setSound(GTSoundEvents.ASSEMBLER);
 
         //  Naquadah Reactor Recipemap

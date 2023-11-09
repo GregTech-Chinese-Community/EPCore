@@ -11,6 +11,8 @@ public class EPGuiTextures {
 
     //  Progress Bar
     public static TextureArea PROGRESS_BAR_NANOSCALE = TextureArea.fullImage("textures/gui/progress_bar/progress_bar_nanoscale.png");
+    public static TextureArea PROGRESS_BAR_COMPONENT_ASSEMBLY_LINE_1 = TextureArea.fullImage("textures/gui/progress_bar/progress_bar_component_assembly_line_1.png");
+    public static TextureArea PROGRESS_BAR_COMPONENT_ASSEMBLY_LINE_2 = TextureArea.fullImage("textures/gui/progress_bar/progress_bar_component_assembly_line_2.png");
 
     //  Overlay
     public static final TextureArea NANOSCALE_OVERLAY_1 = TextureArea.fullImage("textures/gui/overlay/nanoscale_overlay_1.png");
