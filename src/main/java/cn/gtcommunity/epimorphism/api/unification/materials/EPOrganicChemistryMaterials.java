@@ -9,6 +9,7 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static gregtechfoodoption.GTFOMaterialHandler.AceticAnhydride;
 
 public class EPOrganicChemistryMaterials {
     //  Range 25001-25200
@@ -928,6 +929,59 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 6, Hydrogen, 12, Nitrogen, 4)
                 .build()
                 .setFormula("(CH2)6N4", true);
+        //  25123 Dimethyl Carbonate
+        DimethylCarbonate = new Material.Builder(getMaterialsId(), gregtechId("dimethyl_carbonate"))
+                .fluid()
+                .color(0xC5EB9E)
+                .components(Carbon, 3, Hydrogen, 6, Oxygen, 3)
+                .build()
+                .setFormula("(CH3O)2CO", true);
+        //  25124 Diphenyl Carbonate
+        DiphenylCarbonate = new Material.Builder(getMaterialsId(), gregtechId("diphenyl_carbonate"))
+                .fluid()
+                .color(DimethylCarbonate.getMaterialRGB() + Benzene.getMaterialRGB())
+                .components(Carbon, 13, Hydrogen, 10, Oxygen, 3)
+                .build();
+        //  25125 BPA Polycarbonate
+        BPAPolycarbonate = new Material.Builder(getMaterialsId(), gregtechId("bpa_polycarbonate"))
+                .ingot()
+                .fluid()
+                .color(0xE3EBDA)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .components(Carbon, 16, Hydrogen, 14, Oxygen, 3)
+                .build();
+        //  25126 Isobutyric Acid
+        IsobutyricAcid = new Material.Builder(getMaterialsId(), gregtechId("isobutyric_acid"))
+                .fluid()
+                .color(Propene.getMaterialRGB() + Propadiene.getMaterialRGB())
+                .components(Carbon, 4, Hydrogen, 8, Oxygen, 2)
+                .build();
+        //  25127 Isobutyric Anhydride
+        IsobutyricAnhydride = new Material.Builder(getMaterialsId(), gregtechId("isobutyric_anhydride"))
+                .fluid()
+                .color(IsobutyricAcid.getMaterialRGB() - AceticAnhydride.getMaterialRGB())
+                .components(Carbon, 8, Hydrogen, 14, Oxygen, 3)
+                .build();
+        //  25128 Dimethylketene
+        Dimethylketene = new Material.Builder(getMaterialsId(), gregtechId("dimethylketene"))
+                .fluid()
+                .color(0x0925BE)
+                .components(Carbon, 4, Hydrogen, 6, Oxygen, 2)
+                .build();
+        //  25129 Tetramethylcyclobutanediol
+        Tetramethylcyclobutanediol = new Material.Builder(getMaterialsId(), gregtechId("tetramethylcyclobutanediol"))
+                .fluid()
+                .color(Dimethylketene.getMaterialRGB() + Hydrogen.getMaterialRGB())
+                .components(Carbon, 8, Hydrogen, 16, Oxygen, 2)
+                .build();
+        //  25130 CBDO Polycarbonate
+        CBDOPolycarbonate = new Material.Builder(getMaterialsId(), gregtechId("cbdo_polycarbonate"))
+                .ingot()
+                .fluid()
+                .color(0xDFDFDF)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .components(Carbon, 9, Hydrogen, 14, Oxygen, 3)
+                .build();
   }
 
     private static int getMaterialsId() {

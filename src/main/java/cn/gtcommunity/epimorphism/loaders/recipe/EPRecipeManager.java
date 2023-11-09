@@ -34,12 +34,14 @@ public class EPRecipeManager {
         BismuthVanadiumChain.init();
         BoronChain.init();
         BoronNitrideChain.init();
+        BPAPolycarbonateChain.init();
         BromineChain.init();
         BZMediumChain.init();
         CaesiumRubidiumChain.init();
         CalciumChain.init();
         ChlorineChain.init();
         CarbonNanotubeChain.init();
+        CBDOPolycarbonateChain.init();
         CyanogenChain.init();
         EDTAChain.init();
         EtchingMaterialsChain.init();

@@ -1206,6 +1206,14 @@ gregtech.material.acetamide=乙酰胺
 gregtech.material.benzylamine=苄胺
 gregtech.material.benzyl_chloride=氯化苄
 gregtech.material.hexamethylenetetramine=六亚甲基四胺
+gregtech.material.dimethyl_carbonate=碳酸二甲酯
+gregtech.material.diphenyl_carbonate=碳酸二苯酯
+gregtech.material.bpa_polycarbonate=双酚A聚碳酸酯
+gregtech.material.isobutyric_acid=异丁酸
+gregtech.material.isobutyric_anhydride=异丁酸酐
+gregtech.material.dimethylketene=二甲基乙烯酮
+gregtech.material.tetramethylcyclobutanediol=2,2,4,4-四甲基-1,3-环丁二醇（CBDO）
+gregtech.material.cbdo_polycarbonate=CBDO聚碳酸酯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
