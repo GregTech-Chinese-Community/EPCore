@@ -26,6 +26,7 @@ public class EPRecipeManager {
         Coils.init();
         Crucibles.init();
         Explosives.init();
+        Pipes.init();
     }
 
     public static void initChains() {

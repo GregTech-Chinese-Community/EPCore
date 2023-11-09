@@ -92,6 +92,7 @@ public class EPMaterialPropertyAddition {
         Trinium.addFlags(GENERATE_FRAME);
         RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE);
         IncoloyMA956.addFlags(GENERATE_DOUBLE_PLATE);
+        Polybenzimidazole.addFlags(GENERATE_ROD, GENERATE_FRAME);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
