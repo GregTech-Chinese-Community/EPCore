@@ -63,8 +63,8 @@ public class EPMaterialPropertyAddition {
         Titanium.addFlags(GENERATE_FOIL);
         Germanium.addFlags(GENERATE_FOIL);
         Tungsten.addFlags(GENERATE_FINE_WIRE);
-        RhodiumPlatedPalladium.addFlags(GENERATE_FRAME);
-        Darmstadtium.addFlags(GENERATE_FRAME);
+        RhodiumPlatedPalladium.addFlags(GENERATE_FRAME, GENERATE_GEAR);
+        Darmstadtium.addFlags(GENERATE_FRAME, GENERATE_GEAR);
         Naquadria.addFlags(GENERATE_FRAME);
         Neutronium.addFlags(GENERATE_FRAME);
         Neutronium.addFlags(GENERATE_ROTOR, GENERATE_SMALL_GEAR);
@@ -93,6 +93,7 @@ public class EPMaterialPropertyAddition {
         RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE);
         IncoloyMA956.addFlags(GENERATE_DOUBLE_PLATE);
         Polybenzimidazole.addFlags(GENERATE_ROD, GENERATE_FRAME);
+        Steel.addFlags(GENERATE_DENSE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

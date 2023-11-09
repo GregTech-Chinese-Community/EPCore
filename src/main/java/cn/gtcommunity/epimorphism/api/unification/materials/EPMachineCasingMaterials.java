@@ -294,7 +294,6 @@ public class EPMachineCasingMaterials {
                 .iconSet(SAND)
                 .components(Iron, 4, Kanthal, 1, Invar, 5)
                 .build();
-
         //  24528 Eglin Steel
         EglinSteel = new Material.Builder(getMaterialsId(), gregtechId("eglin_steel"))
                 .ingot()

@@ -770,8 +770,12 @@ epimorphism.multiblock.large_heat_exchanger.explosion_tooltip=蒸馏水供应不
 
 epimorphism.machine.mega_heat_exchanger.name=特大热交换机
 
-epimorphism.machine.stellar_furnace.name=御星天炉
+epimorphism.machine.stellar_furnace.name=恒星炎炀锻炉
 recipemap.stellar_furnace_recipes.name=恒星热能熔炼
+epimorphism.machine.stellar_furnace.tooltip.1=驾驭恒星之力
+epimorphism.machine.stellar_furnace.tooltip.2=需要使用不同的§c爆弹§7在机器内部模拟超新星爆发
+epimorphism.machine.stellar_furnace.tooltip.3=产物以极高温的等离子喷流或等离子聚合液体的形态产出
+epimorphism.machine.stellar_furnace.tooltip.4=部分产物在使用相应的§6遏制装置§7约束后方可冷凝
 
 recipemap.dimensional_oscillator_recipes.name=超维度震荡
 
@@ -788,6 +792,7 @@ epimorphism.machine.precise_assembler.tier.1=MK1
 epimorphism.machine.precise_assembler.tier.2=MK2
 epimorphism.machine.precise_assembler.tier.3=MK3
 
+recipemap.component_assembly_line_recipes.name=部件装配线
 epimorphism.machine.component_assembly_line.tier=部件装配外壳等级：
 epimorphism.machine.component_assembly_line.tier.1=简易 (LV)
 epimorphism.machine.component_assembly_line.tier.2=粗制 (MV)
