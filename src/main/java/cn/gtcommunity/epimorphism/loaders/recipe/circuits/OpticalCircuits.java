@@ -191,7 +191,15 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  TODO Helium-Neon Laser
+        //  Helium-Neon Laser
+        CANNER_RECIPES.recipeBuilder()
+                .input(EMPTY_LASER_ASSEMBLY)
+                .fluidInputs(HeliumNeon.getFluid(1000))
+                .output(HELIUM_NEON_LASER)
+                .EUt(VA[HV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
 
         //  Nd:YAG Laser
         CANNER_RECIPES.recipeBuilder()

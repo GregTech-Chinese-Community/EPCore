@@ -53,7 +53,7 @@ public class EPElementMaterials {
                 .element(EPElements.ChaoticDraconium)
                 .cableProperties(V[UEV], 32, 16)
                 .build();
-        //  FIXME Pay attention to these materials, they are just foil (not foil in gregtech)!
+        //  Pay attention to these materials, they are just foil (not foil in gregtech)!
         //  26004 Orichalcum
         Orichalcum = new Material.Builder(getMaterialsId(), gregtechId("orichalcum"))
                 .ingot()

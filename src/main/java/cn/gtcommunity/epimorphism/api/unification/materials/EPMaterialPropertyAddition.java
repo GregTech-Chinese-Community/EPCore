@@ -50,6 +50,7 @@ public class EPMaterialPropertyAddition {
         Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Polonium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Fermium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Fermium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Promethium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Mendelevium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Bohrium.setProperty(PropertyKey.INGOT, new IngotProperty());

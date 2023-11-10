@@ -1216,6 +1216,15 @@ public class MachineComponents {
     }
 
     private static void Materials() {
+        //  Helium-Neon Gas
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Helium.getFluid(1000))
+                .fluidInputs(Neon.getFluid(1000))
+                .fluidOutputs(HeliumNeon.getFluid(1000))
+                .EUt(VA[MV])
+                .duration(100)
+                .buildAndRegister();
+
         //  Babbitt Alloy
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Tin, 5)

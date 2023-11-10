@@ -47,6 +47,7 @@ public class EPTextures {
     public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK1 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk1");
     public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK2 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk2");
     public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK3 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk3");
+    public static EPOverlayRenderer HASTELLOY_X78_CASING = new EPOverlayRenderer("casings/solid/hastelloy_x78_casing");
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");

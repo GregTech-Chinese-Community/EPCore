@@ -66,6 +66,7 @@ public class EPRecipeManager {
         PhosphorusChain.init();
         PhotoresistivesChain.init();
         PMMAChain.init();
+        PoloniumChain.init();
         PreciousMetalChain.init();
         RareEarthChain.init();
         RubbersChain.init();

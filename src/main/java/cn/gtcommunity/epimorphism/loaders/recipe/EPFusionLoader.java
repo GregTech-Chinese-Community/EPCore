@@ -87,14 +87,24 @@ public class EPFusionLoader {
                 .EUToStart(280000000L)
                 .buildAndRegister();
 
-        //  (Mk IV) Curium + Sodium -> Bohrium
+        //  (Mk III) Curium + Sodium -> Bohrium
         FUSION_RECIPES.recipeBuilder()
                 .fluidInputs(Curium.getFluid(288))
                 .fluidInputs(Sodium.getFluid(288))
                 .fluidOutputs(Bohrium.getFluid(576))
                 .EUt(VA[UHV])
                 .duration(140)
-                .EUToStart(800000000L)
+                .EUToStart(400000000L)
+                .buildAndRegister();
+
+        //  (Mk III) Plutonium-241 + Neutron -> Fermium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium241.getFluid(144))
+                .fluidInputs(Neutron.getPlasma(144))
+                .fluidOutputs(Fermium.getFluid(288))
+                .EUt(VA[UV])
+                .duration(80)
+                .EUToStart(500000000L)
                 .buildAndRegister();
     }
 }

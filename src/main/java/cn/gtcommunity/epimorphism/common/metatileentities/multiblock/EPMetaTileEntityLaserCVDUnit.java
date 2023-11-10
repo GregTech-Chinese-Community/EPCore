@@ -3,11 +3,9 @@ package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
-import gregicality.multiblocks.api.render.GCYMTextures;
 import gregicality.multiblocks.api.unification.GCYMMaterials;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -55,7 +53,7 @@ public class EPMetaTileEntityLaserCVDUnit extends RecipeMapMultiblockController 
     }
 
     private static IBlockState getCasingState() {
-        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.MIXER_CASING);
+        return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.HASTELLOYX78_CASING);
     }
 
     private static IBlockState getSubstrateState() {
@@ -78,7 +76,7 @@ public class EPMetaTileEntityLaserCVDUnit extends RecipeMapMultiblockController 
 
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart iMultiblockPart) {
-        return GCYMTextures.MIXER_CASING;
+        return EPTextures.HASTELLOY_X78_CASING;
     }
 }
 

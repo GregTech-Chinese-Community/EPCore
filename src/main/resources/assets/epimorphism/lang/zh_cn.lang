@@ -1123,6 +1123,10 @@ gregtech.material.quark_gluon_plasma=夸克-胶子
 gregtech.material.light_quarks=轻夸克
 gregtech.material.ferric_catalyst=铁-过氧化氢混合催化剂
 gregtech.material.neutron=中子
+gregtech.material.helium_neon=氦-氖混合气
+gregtech.material.polonium_nitrate=硝酸钋
+gregtech.material.polonium_chloride=氯化亚钋
+gregtech.material.celestite=天青石
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

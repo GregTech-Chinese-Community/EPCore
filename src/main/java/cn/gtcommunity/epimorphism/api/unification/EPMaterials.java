@@ -268,6 +268,10 @@ public EPMaterials() {}
     public static Material LightQuarks;
     public static Material FerricCatalyst;
     public static Material Neutron;
+    public static Material HeliumNeon;
+    public static Material PoloniumNitrate;
+    public static Material PoloniumChloride;
+    public static Material Celestite;
 
     //  Second Degree Materials
     public static Material DragonBreath;
