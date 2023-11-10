@@ -1080,6 +1080,7 @@ gregtech.material.ammonium_carbonate=碳酸铵
 gregtech.material.free_electron_gas=自由电子气体
 gregtech.material.quark_gluon_plasma=夸克-胶子
 gregtech.material.light_quarks=轻夸克
+gregtech.material.ferric_catalyst=铁-过氧化氢混合催化剂
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1222,6 +1223,10 @@ gregtech.material.tetramethylcyclobutanediol=2,2,4,4-四甲基-1,3-环丁二醇�
 gregtech.material.cbdo_polycarbonate=CBDO聚碳酸酯
 gregtech.material.nitrile_butadiene_rubber=丁腈橡胶
 gregtech.material.poly_phosphonitrile_fluoro_rubber=聚膦腈氟橡胶
+gregtech.material.acrylonitrile=丙烯腈
+gregtech.material.phosphonitrilic_chloride_trimer=六氯环三磷腈
+gregtech.material.sodium_trifluoroethanolate=三氟乙醇钠
+gregtech.material.octafluoro_pentanol=八氟戊醇
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
