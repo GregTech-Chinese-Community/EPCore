@@ -7,7 +7,7 @@ public interface ITier extends IStringSerializable {
         return null;
     }
 
-    default Object getTire(){
-        return this.getName();
+    default Object getTier(){
+        return 0;
     }
 }

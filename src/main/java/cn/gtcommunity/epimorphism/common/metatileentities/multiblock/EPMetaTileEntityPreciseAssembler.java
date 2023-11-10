@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.EPAPI;
-import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
+import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTier;
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
@@ -58,12 +58,12 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
     private int tier;
 
     List<IBlockState> ListCasing = EPAPI.MAP_PA_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTired) entry.getValue()).getIntTier()))
+            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
 
     List<IBlockState> ListInternalCasing = EPAPI.MAP_PA_INTERNAL_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTired) entry.getValue()).getIntTier()))
+            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
 
@@ -91,13 +91,13 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
     @Override
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
-        Object CasingTier = context.get("PACasingTiredStats");
-        Object InternalCasingTier = context.get("PAInternalCasingTiredStats");
+        Object CasingTier = context.get("PACasingTieredStats");
+        Object InternalCasingTier = context.get("PAInternalCasingTieredStats");
 
-        this.CasingTier = EPUniverUtil.getOrDefault(() -> CasingTier instanceof WrappedIntTired,
-                () -> ((WrappedIntTired) CasingTier).getIntTier(), 0);
-        this.InternalCasingTier = EPUniverUtil.getOrDefault(() -> InternalCasingTier instanceof WrappedIntTired,
-                () -> ((WrappedIntTired) InternalCasingTier).getIntTier(), 0);
+        this.CasingTier = EPUniverUtil.getOrDefault(() -> CasingTier instanceof WrappedIntTier,
+                () -> ((WrappedIntTier) CasingTier).getIntTier(), 0);
+        this.InternalCasingTier = EPUniverUtil.getOrDefault(() -> InternalCasingTier instanceof WrappedIntTier,
+                () -> ((WrappedIntTier) InternalCasingTier).getIntTier(), 0);
 
         this.tier = this.CasingTier = this.InternalCasingTier;
 

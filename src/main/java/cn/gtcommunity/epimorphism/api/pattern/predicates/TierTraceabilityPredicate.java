@@ -24,13 +24,21 @@ public class TierTraceabilityPredicate extends TraceabilityPredicate {
     private Supplier<BlockInfo[]> candidatesCache;
 
     private final Comparator<IBlockState> comparator;
-
+    private final Predicate<IBlockState> predicate;
 
     public TierTraceabilityPredicate(Object2ObjectOpenHashMap<IBlockState, ITier> map, String name, @Nullable String errorKey){
-        this(map,Comparator.comparing((s) -> map.get(s).getName()),name,errorKey);
+        this(map, Comparator.comparing((s) -> map.get(s).getName()), BlockState -> true, name, errorKey);
+    }
+
+    public TierTraceabilityPredicate(Object2ObjectOpenHashMap<IBlockState, ITier> map, Predicate<IBlockState> predicate, String name, @Nullable String errorKey){
+        this(map, Comparator.comparing((s) -> map.get(s).getName()), predicate, name, errorKey);
     }
 
     public TierTraceabilityPredicate(Object2ObjectOpenHashMap<IBlockState, ITier> map, Comparator<IBlockState> comparator, String name, @Nullable String errorKey){
+        this(map, comparator, BlockState -> true, name, errorKey);
+    }
+
+    public TierTraceabilityPredicate(Object2ObjectOpenHashMap<IBlockState, ITier> map, Comparator<IBlockState> comparator, Predicate<IBlockState> predicate, String name, @Nullable String errorKey){
         super();
         this.map = map;
         this.name = name;
@@ -43,6 +51,7 @@ public class TierTraceabilityPredicate extends TraceabilityPredicate {
         }
         this.common.add(new SimplePredicate(predicate(), candidates()));
         this.comparator = comparator;
+        this.predicate = predicate;
     }
 
     private Predicate<BlockWorldState> predicate(){
@@ -50,13 +59,13 @@ public class TierTraceabilityPredicate extends TraceabilityPredicate {
             IBlockState blockState = blockWorldState.getBlockState();
             if (map.containsKey(blockState)) {
                 ITier stats = map.get(blockState);
-                Object tier = stats.getTire();
-                Object current = blockWorldState.getMatchContext().getOrPut(name, tier);
-                if (!current.equals(tier)) {
+                Object tier = stats.getTier();
+                Object currentTier = blockWorldState.getMatchContext().getOrPut(name, tier);
+                if (!currentTier.equals(tier)) {
                     blockWorldState.setError(new PatternStringError(errorKey));
                     return false;
                 } else {
-                    blockWorldState.getMatchContext().getOrPut(name + "TiredStats", stats);
+                    blockWorldState.getMatchContext().getOrPut(name + "TieredStats", stats);
                     if(blockState.getBlock() instanceof VariantActiveBlock){
                         (blockWorldState.getMatchContext().getOrPut("VABlock", new LinkedList<>())).add(blockWorldState.getPos());
                     }
@@ -71,6 +80,7 @@ public class TierTraceabilityPredicate extends TraceabilityPredicate {
     private Supplier<BlockInfo[]> candidates(){
         if(candidatesCache == null) {
             candidatesCache = () -> map.keySet().stream()
+                    .filter(predicate)
                     .sorted(comparator)
                     .map(type -> new BlockInfo(type, null,map.get(type).getInfo()))
                     .toArray(BlockInfo[]::new);
