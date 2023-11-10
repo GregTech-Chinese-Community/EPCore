@@ -196,7 +196,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
                 .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 1277)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
         //  24518 Hastelloy-X78
         HastelloyX78 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_x_78"))
@@ -303,7 +303,6 @@ public class EPMachineCasingMaterials {
                 .components(EglinSteelBase, 10, Sulfur, 1, Silicon, 1, Carbon, 1)
                 .blastTemp(1048, BlastProperty.GasTier.LOW, VA[MV], 24)
                 .build();
-
         //  24529 Pikyonium-64B
         Pikyonium64B = new Material.Builder(getMaterialsId(), gregtechId("pikyonium_64_b"))
                 .ingot()
@@ -312,7 +311,27 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .blastTemp(10400, BlastProperty.GasTier.HIGHEST, VA[ZPM], 2487)
                 .components(Inconel792, 8, EglinSteel, 5, NaquadahAlloy, 4, TungstenSteel, 4, Cerium, 3, Antimony, 2, Platinum, 2, Ytterbium, 1)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_SPRING_SMALL)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_SPRING_SMALL)
+                .build();
+        //  24530 Cinobite
+        Cinobite = new Material.Builder(getMaterialsId(), gregtechId("cinobite"))
+                .ingot()
+                .fluid()
+                .color(0x010101)
+                .iconSet(SHINY)
+                .blastTemp(11465, BlastProperty.GasTier.HIGHEST, VA[UV], 3608)
+                .components(Zeron100, 8, Stellite100, 6, Titanium, 6, Naquadria, 4, Osmiridium, 3, Aluminium, 2, Tin, 1, Mercury, 1)
+                .flags(GENERATE_ROD, GENERATE_FRAME)
+                .build();
+        //  24531 Titan Steel
+        TitanSteel = new Material.Builder(getMaterialsId(), gregtechId("titan_steel"))
+                .ingot()
+                .fluid()
+                .color(0xAA0D0D)
+                .iconSet(SHINY)
+                .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV], 4550)
+                .components(TitaniumTungstenCarbide, 18, Ruridit, 9, AusteniticStainlessSteel904L, 6, Naquadah, 4, RedSteel, 4, BlueSteel, 4)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
     }
 

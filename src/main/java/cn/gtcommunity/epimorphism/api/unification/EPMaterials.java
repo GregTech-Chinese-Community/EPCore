@@ -514,6 +514,8 @@ public EPMaterials() {}
     public static Material EglinSteelBase;
     public static Material EglinSteel;
     public static Material Pikyonium64B;
+    public static Material Cinobite;
+    public static Material TitanSteel;
 
     //  Mod Compatibility Materials
     public static Material Mana;

@@ -361,22 +361,26 @@ tile.ep_explosive_block.quantum_chromodynamic_charge.name=量子色动力学爆�
 tile.ep_wire_coil.adamantium.name=精金线圈方块
 
 #  Glasses
-tile.ep_glass_casing.boron_silicate_glass.name=硅酸盐硼玻璃
-tile.ep_glass_casing.boron_silicate_glass.tooltip=高强玻璃
-tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硅酸盐硼玻璃
-tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=高强玻璃
-tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硅酸盐硼玻璃
+tile.ep_glass_casing.boron_silicate_glass.name=硼硅酸盐玻璃
+tile.ep_glass_casing.boron_silicate_glass.tooltip=比钢化玻璃更好
+tile.ep_glass_casing.ti_boron_silicate_glass.name=钛强化硼硅酸盐玻璃
+tile.ep_glass_casing.ti_boron_silicate_glass.tooltip=粉红水晶
+tile.ep_glass_casing.thy_boron_silicate_glass.name=钍强化的硼硅酸盐玻璃
+tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=绿油油
+tile.ep_glass_casing.w_boron_silicate_glass.name=钨强化硼硅酸盐玻璃
 tile.ep_glass_casing.w_boron_silicate_glass.tooltip=高强玻璃
-tile.ep_glass_casing.osmir_boron_silicate_glass.name=铱锇强化硅酸盐硼玻璃
-tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=工业水晶
-tile.ep_glass_casing.naq_boron_silicate_glass.name=硅岩强化硅酸盐硼玻璃
-tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=堪比钻石！
+tile.ep_glass_casing.osmir_boron_silicate_glass.name=铱锇合金强化硼硅酸盐玻璃
+tile.ep_glass_casing.osmir_boron_silicate_glass.tooltip=工业之星
+tile.ep_glass_casing.naq_boron_silicate_glass.name=硅岩强化硼硅酸盐玻璃
+tile.ep_glass_casing.naq_boron_silicate_glass.tooltip=无惧冲击
 tile.ep_pmma_casing.pmma_glass.name=PMMA玻璃
-tile.ep_pmma_casing.pmma_glass.tooltip=强度与韧性兼得！
-tile.ep_pmma_casing.neu_pmma_glass.name=中子强化PMMA玻璃
+tile.ep_pmma_casing.pmma_glass.tooltip=亚克力玻璃
+tile.ep_pmma_casing.neu_pmma_glass.name=中子素强化PMMA玻璃
 tile.ep_pmma_casing.neu_pmma_glass.tooltip=心之壁
 tile.ep_transparent_casing.bpa_polycarbonate_glass.name=BPA聚碳酸酯玻璃
+tile.ep_transparent_casing.bpa_polycarbonate_glass.tooltip=灰色石英
 tile.ep_transparent_casing.cbdo_polycarbonate_glass.name=CBDO聚碳酸酯玻璃
+tile.ep_transparent_casing.cbdo_polycarbonate_glass.tooltip=并不是挡风玻璃
 tile.ep_glass_casing_b.infinity_glass.name=无尽玻璃
 
 epimorphism.glass_tier.tooltip=玻璃等级：%s
@@ -388,10 +392,6 @@ epimorphism.optical_glass_tier.tooltip.4=精密光学玻璃
 epimorphism.optical_glass_tier.tooltip.5=精奇光学玻璃
 
 epimorphism.multiblock.pattern.error.glasses=必须使用同一种玻璃方块。
-
-#  Optical Glasses
-tile.ep_glass_casing.thy_boron_silicate_glass.name=掺钍钇硼硅玻璃
-tile.ep_glass_casing.thy_boron_silicate_glass.tooltip=精密光学玻璃
 
 #  Crucibles
 tile.ep_crucible_casing.boron_nitride.name=氮化硼坩埚
@@ -851,6 +851,12 @@ epimorphism.machine.component_assembly_line.tier.11=大尺度结构 (UIV)
 epimorphism.machine.component_assembly_line.tier.12=超结构 (UXV)
 epimorphism.machine.component_assembly_line.tier.13=宇宙 (OpV)
 epimorphism.machine.component_assembly_line.tier.14=时空 (MAX)
+
+epimorphism.machine.compact_fusion_reactor_mk1.name=压缩核聚变反应堆控制电脑 Mk I
+epimorphism.machine.compact_fusion_reactor_mk2.name=压缩核聚变反应堆控制电脑 Mk II
+epimorphism.machine.compact_fusion_reactor_mk3.name=压缩核聚变反应堆控制电脑 Mk III
+epimorphism.machine.compact_fusion_reactor_mk4.name=压缩核聚变反应堆控制电脑 Mk IV
+epimorphism.machine.compact_fusion_reactor_mk5.name=压缩核聚变反应堆控制电脑 Mk V
 
 #  Materials
 
@@ -1377,3 +1383,5 @@ gregtech.material.super_austenitic_stainless_steel_904_l=超级奥氏体不锈�
 gregtech.material.eglin_steel_base=埃格林钢粗胚
 gregtech.material.eglin_steel=埃格林钢
 gregtech.material.pikyonium_64_b=皮卡优合金-64B
+gregtech.material.cinobite=西诺柏
+gregtech.material.titan_steel=泰坦精钢

@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockTransparentCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
@@ -74,7 +75,7 @@ public class EPMaterialInfoLoader {
                 new MaterialStack(ChromiumGermaniumTellurideMagnetic, M / 2),
                 new MaterialStack(Seaborgium, M * 2)));
 
-        //  PMMA
+        //  PMMA Glass
         COMPRESSOR_RECIPES.recipeBuilder()
                 .input(plate, PMMA, 4)
                 .outputs(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS))
@@ -107,6 +108,93 @@ public class EPMaterialInfoLoader {
         OreDictUnifier.registerOre(EPMetablocks.EP_TRANSPARENT_CASING.getItemVariant(EPBlockTransparentCasing.TransparentCasingType.CBDO_POLYCARBONATE_GLASS),
                 new ItemMaterialInfo(new MaterialStack(CBDOPolycarbonate, M * 4)));
 
-        //  TODO other glass info
+        //  Boron Silicate Glass
+        COMPRESSOR_RECIPES.recipeBuilder()
+                .input(dust, BorosilicateGlass, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .duration(400)
+                .EUt(2)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4)));
+
+        //  Titanium-reinforced Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .input(plate, Titanium, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.TI_BORON_SILICATE_GLASS))
+                .EUt(VA[HV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.TI_BORON_SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4),
+                                     new MaterialStack(Titanium, M * 4)));
+
+        //  Tungsten-reinforced Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .input(plate, Tungsten, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.W_BORON_SILICATE_GLASS))
+                .EUt(VA[EV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.W_BORON_SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4),
+                                     new MaterialStack(Tungsten, M * 4)));
+
+        //  Thorium-reinforced Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .input(plate, Thorium, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.THY_BORON_SILICATE_GLASS))
+                .EUt(VA[HV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.THY_BORON_SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4),
+                                     new MaterialStack(Thorium, M * 4)));
+
+        //  Osmiridium-reinforced Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .input(plate, Osmiridium, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.OSMIR_BORON_SILICATE_GLASS))
+                .EUt(VA[IV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.OSMIR_BORON_SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4),
+                                     new MaterialStack(Osmiridium, M * 4)));
+
+        //  Naquadah-reinforced Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.SILICATE_GLASS))
+                .input(plate, Naquadah, 4)
+                .outputs(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.NAQ_BORON_SILICATE_GLASS))
+                .EUt(VA[LuV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING.getItemVariant(EPBlockGlassCasing.CasingType.NAQ_BORON_SILICATE_GLASS),
+                new ItemMaterialInfo(new MaterialStack(BorosilicateGlass, M * 4),
+                                     new MaterialStack(Naquadah, M * 4)));
+
+        //  Neutronium-reinforced PMMA Glass
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS))
+                .input(plate, Neutronium, 4)
+                .outputs(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.NEU_PMMA_GLASS))
+                .EUt(VA[UV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.NEU_PMMA_GLASS),
+                new ItemMaterialInfo(new MaterialStack(PMMA, M * 4),
+                                     new MaterialStack(Neutronium, M * 4)));
     }
 }

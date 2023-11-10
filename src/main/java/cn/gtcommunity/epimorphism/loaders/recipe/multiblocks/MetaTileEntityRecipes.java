@@ -709,6 +709,122 @@ public class MetaTileEntityRecipes {
                 .EUt(VA[LuV])
                 .duration(1200)
                 .buildAndRegister();
+
+        //  Universal Processing Unit
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, MaragingSteel250)
+                .input(FIELD_GENERATOR_LuV, 2)
+                .inputs(COMPRESSOR[LuV].getStackForm())
+                .inputs(LATHE[LuV].getStackForm())
+                .inputs(POLARIZER[LuV].getStackForm())
+                .inputs(FERMENTER[LuV].getStackForm())
+                .inputs(EXTRACTOR[LuV].getStackForm())
+                .inputs(CANNER[LuV].getStackForm())
+                .inputs(LASER_ENGRAVER[LuV].getStackForm())
+                .inputs(AUTOCLAVE[LuV].getStackForm())
+                .inputs(FLUID_SOLIDIFIER[LuV].getStackForm())
+                .input(plate, HSSS, 4)
+                .input(cableGtQuadruple, Platinum, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Osmiridium.getFluid(L * 16))
+                .fluidInputs(VanadiumGallium.getFluid(L * 8))
+                .outputs(GENERAL_PROCESSING_PLANT.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.GENERAL_PROCESSING_CASING))
+                        .EUt(IV)
+                        .duration(3600))
+                .EUt(VA[LuV])
+                .duration(6000)
+                .buildAndRegister();
+
+        //  Mega Steam Turbine
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_STEAM_TURBINE.getStackForm())
+                .input(plate, WatertightSteel, 8)
+                .input(circuit, MarkerMaterials.Tier.LuV, 4)
+                .input(ELECTRIC_PUMP_IV, 2)
+                .input(FLUID_REGULATOR_IV, 2)
+                .input(gear, TanmolyiumBetaC, 4)
+                .input(screw, MARM200Steel, 16)
+                .fluidInputs(BlueSteel.getFluid(576))
+                .outputs(MEGA_STEAM_TURBINE.getStackForm())
+                .EUt(VA[IV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Mega Gas Turbine
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_GAS_TURBINE.getStackForm())
+                .input(plate, TantalumCarbide, 8)
+                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
+                .input(ELECTRIC_PUMP_LuV, 2)
+                .input(FLUID_REGULATOR_LUV, 2)
+                .input(rotor, Staballoy, 4)
+                .input(screw, IncoloyMA813, 16)
+                .fluidInputs(Naquadah.getFluid(576))
+                .outputs(MEGA_GAS_TURBINE.getStackForm())
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Mega Plasma Turbine
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(LARGE_PLASMA_TURBINE.getStackForm())
+                .input(plate, HMS1J79Alloy, 8)
+                .input(circuit, MarkerMaterials.Tier.UV, 4)
+                .input(ELECTRIC_PUMP_ZPM, 2)
+                .input(FLUID_REGULATOR_ZPM, 2)
+                .input(spring, Pikyonium64B, 4)
+                .input(screw, Trinium, 16)
+                .outputs(MEGA_PLASMA_TURBINE.getStackForm())
+                .EUt(VA[ZPM])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Precise Assembler
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(LARGE_ASSEMBLER.getStackForm())
+                .input(frameGt, MARM200Steel, 4)
+                .input(ROBOT_ARM_IV, 2)
+                .input(CONVEYOR_MODULE_IV, 2)
+                .input(plate, Stellite100, 4)
+                .input(gear, TanmolyiumBetaC, 8)
+                .input(cableGtQuadruple, Naquadah, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 6))
+                .fluidInputs(Lubricant.getFluid(3000))
+                .fluidInputs(HastelloyN.getFluid(L * 2))
+                .outputs(PRECISE_ASSEMBLER.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(LARGE_ASSEMBLER.getStackForm())
+                        .EUt(VA[IV])
+                        .duration(1200))
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
+
+        //  Component Assembly Line
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(ASSEMBLY_LINE.getStackForm())
+                .input(frameGt, Cinobite, 4)
+                .inputs(PRECISE_ASSEMBLER.getStackForm(4))
+                .inputs(COMPONENT_ASSEMBLER[IV].getStackForm(16))
+                .input(ROBOT_ARM_UV, 4)
+                .input(CONVEYOR_MODULE_UV, 4)
+                .input(plateDouble, IncoloyMA813, 8)
+                .input(plateDouble, Pikyonium64B, 4)
+                .input(gear, TitanSteel)
+                .input(gearSmall, TitanSteel, 3)
+                .input(wireGtQuadruple, EnrichedNaquadahTriniumEuropiumDuranide, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Lubricant.getFluid(16000))
+                .outputs(COMPONENT_ASSEMBLY_LINE.getStackForm())
+                .EUt(VA[UV])
+                .duration(1200)
+                .stationResearch(b -> b
+                        .researchStack(COMPONENT_ASSEMBLER[IV].getStackForm())
+                        .CWUt(32)
+                        .EUt(VA[UV]))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
