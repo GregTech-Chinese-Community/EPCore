@@ -83,7 +83,7 @@ public class EPMachineCasingMaterials {
                 .toolStats(new ToolProperty(20.0F, 10.0F, 18000, 18))
                 .blastTemp(11900, BlastProperty.GasTier.HIGHEST, VA[UEV], 2400)
                 .components(TungstenSteel, 12, HSSS, 9, HSSG, 6, Ruridit, 3, MagnetoResonatic, 2, Plutonium241, 1)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_DOUBLE_PLATE, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  24507 Abyssalloy
         Abyssalloy = new Material.Builder(getMaterialsId(), gregtechId("abyssalloy"))

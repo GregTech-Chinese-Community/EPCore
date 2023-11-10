@@ -182,6 +182,22 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem CHRYSOPHYCEAE;
     public static MetaItem<?>.MetaValueItem BROWN_ALGA;
 
+    //  Wrap Items
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_ULV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_LV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_MV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_HV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_EV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_IV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_LuV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_ZPM;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UHV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UEV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UIV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UXV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_OpV;
+    public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_MAX;
 
     //  Chemical Items
     public static MetaItem<?>.MetaValueItem IMPURITIES_PRECIOUS_METAL_SLUDGE_DUST;

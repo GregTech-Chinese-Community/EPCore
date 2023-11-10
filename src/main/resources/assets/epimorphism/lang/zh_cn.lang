@@ -432,6 +432,38 @@ metaitem.cover.emitter.max.name=发射器（MAX）
 metaitem.cover.sensor.max.name=传感器（MAX）
 metaitem.cover.field_generator.max.name=力场发生器（MAX）
 
+#  Wrap Items
+metaitem.wrap.circuit.ulv.name=封装电路板（ULV）
+metaitem.wrap.circuit.ulv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.lv.name=封装电路板（LV）
+metaitem.wrap.circuit.lv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.mv.name=封装电路板（MV）
+metaitem.wrap.circuit.mv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.hv.name=封装电路板（HV）
+metaitem.wrap.circuit.hv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.ev.name=封装电路板（EV）
+metaitem.wrap.circuit.ev.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.iv.name=封装电路板（IV）
+metaitem.wrap.circuit.iv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.luv.name=封装电路板（LuV）
+metaitem.wrap.circuit.luv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.zpm.name=封装电路板（ZPM）
+metaitem.wrap.circuit.zpm.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.uv.name=封装电路板（UV）
+metaitem.wrap.circuit.uv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.uhv.name=封装电路板（UHV）
+metaitem.wrap.circuit.uhv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.uev.name=封装电路板（UEV）
+metaitem.wrap.circuit.uev.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.uiv.name=封装电路板（UIV）
+metaitem.wrap.circuit.uiv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.uxv.name=封装电路板（UXV）
+metaitem.wrap.circuit.uxv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.opv.name=封装电路板（OpV）
+metaitem.wrap.circuit.opv.tooltip=用于在§6部件装配线§7中进行批量组装
+metaitem.wrap.circuit.max.name=封装电路板（MAX）
+metaitem.wrap.circuit.max.tooltip=用于在§6部件装配线§7中进行批量组装
+
 #  Recipe Properties
 epimorphism.recipe.temperature=温度:%,d K
 epimorphism.recipe.glass_tier=玻璃等级:%s

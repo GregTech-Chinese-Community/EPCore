@@ -127,6 +127,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         UHASOC_WAFER = this.addItem(87, "wafer.uhasoc");
         UHASOC_CHIP = this.addItem(88, "wafer.chip.uhasoc");
         INTRAVITAL_SOC = this.addItem(89, "component.gooware.intravital_soc");
+
         //  Others
         MAGNETRON = this.addItem(100, "magnetron");
         VOLTAGE_COIL_UHV = this.addItem(101, "voltage_coil.uhv");
@@ -192,5 +193,21 @@ public class EPMetaItem1 extends StandardMetaItem {
         GRINDBALL_SOAPSTONE = this.addItem(370, "mill.grindball_soapstone").setMaxStackSize(1).addComponents(new MillBallBehavior());
         GRINDBALL_ALUMINIUM = this.addItem(371, "mill.grindball_aluminium").setMaxStackSize(1).addComponents(new MillBallBehavior());
 
+        //  Wrap Circuits
+        WRAP_CIRCUIT_ULV = this.addItem(400, "wrap.circuit.ulv");
+        WRAP_CIRCUIT_LV = this.addItem(401, "wrap.circuit.lv");
+        WRAP_CIRCUIT_MV = this.addItem(402, "wrap.circuit.mv");
+        WRAP_CIRCUIT_HV = this.addItem(403, "wrap.circuit.hv");
+        WRAP_CIRCUIT_EV = this.addItem(404, "wrap.circuit.ev");
+        WRAP_CIRCUIT_IV = this.addItem(405, "wrap.circuit.iv");
+        WRAP_CIRCUIT_LuV = this.addItem(406, "wrap.circuit.luv");
+        WRAP_CIRCUIT_ZPM = this.addItem(407, "wrap.circuit.zpm");
+        WRAP_CIRCUIT_UV = this.addItem(408, "wrap.circuit.uv");
+        WRAP_CIRCUIT_UHV = this.addItem(409, "wrap.circuit.uhv");
+        WRAP_CIRCUIT_UEV = this.addItem(410, "wrap.circuit.uev");
+        WRAP_CIRCUIT_UIV = this.addItem(411, "wrap.circuit.uiv");
+        WRAP_CIRCUIT_UXV = this.addItem(412, "wrap.circuit.uxv");
+        WRAP_CIRCUIT_OpV = this.addItem(413, "wrap.circuit.opv");
+        WRAP_CIRCUIT_MAX = this.addItem(414, "wrap.circuit.max");
     }
 }
