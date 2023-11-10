@@ -172,7 +172,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         //  High Energy Physics items
         PLASMA_CONTAINMENT_CELL = this.addItem(250, "plasma_containment_cell");
         RHENIUM_PLASMA_CONTAINMENT_CELL = this.addItem(251, "rhenium_plasma_containment_cell");
-
+        NEUTRON_PLASMA_CONTAINMENT_CELL = this.addItem(252, "neutron_plasma_containment_cell");
         //  Biological Components
         ELECTROCHEMICAL_GRADIENT_RECORDER = this.addItem(301, "biological.components.electrochemical_gradient_recorder");
         ULTRA_MICRO_PHASE_SEPARATOR = this.addItem(302, "biological.components.ultra_micro_phase_separator");

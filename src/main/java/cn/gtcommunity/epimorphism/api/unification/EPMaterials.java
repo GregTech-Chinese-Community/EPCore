@@ -267,6 +267,7 @@ public EPMaterials() {}
     public static Material QuarkGluonPlasma;
     public static Material LightQuarks;
     public static Material FerricCatalyst;
+    public static Material Neutron;
 
     //  Second Degree Materials
     public static Material DragonBreath;

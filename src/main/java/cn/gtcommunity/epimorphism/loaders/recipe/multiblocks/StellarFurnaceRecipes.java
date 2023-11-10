@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockExplosive;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 
 import java.math.BigInteger;
@@ -12,11 +13,23 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
 
 public class StellarFurnaceRecipes {
     public static void init() {
 
-        //  A few hint: Rhenium + Naquadria Charge -> Degenerate Rhenium -> Quark Gluon Plasma (and others) -> QCD Charge
+        //  Plasma Containment Cell
+        VACUUM_CHAMBER_RECIPES.recipeBuilder()
+                .input(FIELD_GENERATOR_UV)
+                .input(stickLong, NaquadahAlloy)
+                .input(plate, Osmiridium, 4)
+                .inputs(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.PMMA_GLASS, 2))
+                .fluidInputs(SolderingAlloy.getFluid(L * 4))
+                .fluidInputs(TinAlloy.getFluid(L * 4))
+                .output(PLASMA_CONTAINMENT_CELL)
+                .EUt(VA[ZPM])
+                .duration(400)
+                .buildAndRegister();
 
         //  Separation Electromagnet
         ASSEMBLER_RECIPES.recipeBuilder()
@@ -56,6 +69,35 @@ public class StellarFurnaceRecipes {
                 .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidInputs(DegenerateRhenium.getFluid(1000))
                 .outputs(RHENIUM_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .EUt(VA[LuV])
+                .duration(20)
+                .buildAndRegister();
+
+        //  Neutronium (UHV): Bohrium ingot -> 1kL Neutron Plasma
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(ingot, Bohrium)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.TARANIUM_CHARGE))
+                .fluidOutputs(Neutron.getPlasma(1000))
+                .EUt(VA[UHV])
+                .duration(20)
+                .temperature(BigInteger.valueOf((10 * V[UV]) - (10 * V[ZPM])))
+                .buildAndRegister();
+
+        //  Neutronium (UIV): Bohrium dense plate -> 10kL Neutron Plasma
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(plateDense, Bohrium)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.TARANIUM_CHARGE))
+                .fluidOutputs(Neutron.getPlasma(10000))
+                .EUt(VA[UIV])
+                .duration(20)
+                .temperature(BigInteger.valueOf((10 * V[UHV]) - (10 * V[UV])))
+                .buildAndRegister();
+
+        //  Neutron plasma Containment Cell
+        CANNER_RECIPES.recipeBuilder()
+                .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(Neutron.getPlasma(1000))
+                .outputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
                 .EUt(VA[LuV])
                 .duration(20)
                 .buildAndRegister();

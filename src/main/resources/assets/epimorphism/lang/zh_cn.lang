@@ -279,6 +279,8 @@ metaitem.plasma_containment_cell.name=等离子体遏制装置
 metaitem.plasma_containment_cell.tooltip=用于封装等离子体
 metaitem.rhenium_plasma_containment_cell.name=铼等离子遏制装置
 metaitem.rhenium_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.neutron_plasma_containment_cell.name=中子等离子遏制装置
+metaitem.neutron_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 
 #  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
@@ -1120,6 +1122,7 @@ gregtech.material.free_electron_gas=自由电子气体
 gregtech.material.quark_gluon_plasma=夸克-胶子
 gregtech.material.light_quarks=轻夸克
 gregtech.material.ferric_catalyst=铁-过氧化氢混合催化剂
+gregtech.material.neutron=中子
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

@@ -149,6 +149,7 @@ public class EPElementMaterials {
         DegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("degenerate_rhenium"))
                 .dust()
                 .fluid(FluidTypes.PLASMA)
+                .fluidTemp((int) V[UV])
                 .color(0x6666FF)
                 .iconSet(CUSTOM_DEGENERATE_RHENIUM)
                 .element(Elements.Rh)

@@ -1827,6 +1827,13 @@ public class EPFirstDegreeMaterials {
                 .color(FerricOxide.getMaterialRGB() + HydrogenPeroxide.getMaterialRGB())
                 .components(FerricOxide, 1, HydrogenPeroxide, 1)
                 .build();
+        //  24245 Neutron
+        Neutron = new Material.Builder(getMaterialsId(), gregtechId("neutron"))
+                .plasma()
+                .fluidTemp((int) V[UXV])
+                .color(0xFCFCFC)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "n§e" + TextFormatting.OBFUSCATED + "a", false);
     }
 
     private static int getMaterialsId() {
