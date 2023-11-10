@@ -266,6 +266,7 @@ public EPMaterials() {}
     public static Material FreeElectronGas;
     public static Material QuarkGluonPlasma;
     public static Material LightQuarks;
+    public static Material FerricCatalyst;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -407,6 +408,10 @@ public EPMaterials() {}
     public static Material CBDOPolycarbonate;
     public static Material NitrileButadieneRubber;
     public static Material PolyPhosphonitrileFluoroRubber;
+    public static Material Acrylonitrile;
+    public static Material PhosphonitrilicChlorideTrimer;
+    public static Material SodiumTrifluoroethanolate;
+    public static Material OctafluoroPentanol;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

@@ -1821,6 +1821,12 @@ public class EPFirstDegreeMaterials {
                 .fluidTemp((VA[ZPM] + VA[UHV])/2)
                 .build()
                 .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "§e(c2)(t2)b" + TextFormatting.OBFUSCATED + "a", false);
+        //  24244 Ferric Catalyst
+        FerricCatalyst = new Material.Builder(getMaterialsId(), gregtechId("ferric_catalyst"))
+                .dust()
+                .color(FerricOxide.getMaterialRGB() + HydrogenPeroxide.getMaterialRGB())
+                .components(FerricOxide, 1, HydrogenPeroxide, 1)
+                .build();
     }
 
     private static int getMaterialsId() {

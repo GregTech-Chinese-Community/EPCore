@@ -68,6 +68,7 @@ public class EPRecipeManager {
         PMMAChain.init();
         PreciousMetalChain.init();
         RareEarthChain.init();
+        RubbersChain.init();
         SeleniumTelluriumChain.init();
         SodiumChain.init();
         SuperconductorsChain.init();

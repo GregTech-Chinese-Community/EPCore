@@ -997,6 +997,33 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, GENERATE_RING)
                 .components(Carbon, 24, Hydrogen, 16, Oxygen, 8, Nitrogen, 4, Phosphorus, 4, Fluorine, 40)
                 .build();
+        //  25133 Acrylonitrile
+        Acrylonitrile = new Material.Builder(getMaterialsId(), gregtechId("acrylonitrile"))
+                .fluid()
+                .color(Propene.getMaterialRGB())
+                .components(Carbon, 3, Hydrogen, 3, Nitrogen, 1)
+                .build();
+        //  25134 Phosphonitrilic Chloride Trimer
+        PhosphonitrilicChlorideTrimer = new Material.Builder(getMaterialsId(), gregtechId("phosphonitrilic_chloride_trimer"))
+                .fluid()
+                .color(0x082C38)
+                .components(Chlorine, 6, Nitrogen, 3, Phosphorus, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25135 Sodium Trifluoroethanolate
+        SodiumTrifluoroethanolate = new Material.Builder(getMaterialsId(), gregtechId("sodium_trifluoroethanolate"))
+                .dust()
+                .color(0x50083E)
+                .iconSet(ROUGH)
+                .components(Carbon, 2, Hydrogen, 4, Fluorine, 3, Sodium, 1, Oxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25136 Octafluoro Pentanol
+        OctafluoroPentanol = new Material.Builder(getMaterialsId(), gregtechId("octafluoro_pentanol"))
+                .fluid()
+                .color(0xE5EBDE)
+                .components(Carbon, 5, Hydrogen, 4, Fluorine, 8, Oxygen, 1)
+                .build();
     }
 
     private static int getMaterialsId() {
