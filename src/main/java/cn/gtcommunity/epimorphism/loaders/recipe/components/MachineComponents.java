@@ -15,7 +15,6 @@ import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingT
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
-import static gregicality.multiblocks.common.metatileentities.GCYMMetaTileEntities.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -1205,96 +1204,14 @@ public class MachineComponents {
                 .duration(1200)
                 .buildAndRegister();
 
-        //  Universal Processing Unit
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(frameGt, MaragingSteel250)
-                .input(FIELD_GENERATOR_LuV, 2)
-                .inputs(COMPRESSOR[LuV].getStackForm())
-                .inputs(LATHE[LuV].getStackForm())
-                .inputs(POLARIZER[LuV].getStackForm())
-                .inputs(FERMENTER[LuV].getStackForm())
-                .inputs(EXTRACTOR[LuV].getStackForm())
-                .inputs(CANNER[LuV].getStackForm())
-                .inputs(LASER_ENGRAVER[LuV].getStackForm())
-                .inputs(AUTOCLAVE[LuV].getStackForm())
-                .inputs(FLUID_SOLIDIFIER[LuV].getStackForm())
-                .input(plate, HSSS, 4)
-                .input(cableGtQuadruple, Platinum, 4)
-                .fluidInputs(SolderingAlloy.getFluid(L * 32))
-                .fluidInputs(Osmiridium.getFluid(L * 16))
-                .fluidInputs(VanadiumGallium.getFluid(L * 8))
-                .outputs(GENERAL_PROCESSING_PLANT.getStackForm())
-                .scannerResearch(b -> b
-                        .researchStack(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.GENERAL_PROCESSING_CASING))
-                        .EUt(IV)
-                        .duration(3600))
-                .EUt(VA[LuV])
-                .duration(6000)
-                .buildAndRegister();
-
-        //  Mega Steam Turbine
+        //  Iridium Casing
         ASSEMBLER_RECIPES.recipeBuilder()
-                .inputs(LARGE_STEAM_TURBINE.getStackForm())
-                .input(plate, WatertightSteel, 8)
-                .input(circuit, MarkerMaterials.Tier.LuV, 4)
-                .input(ELECTRIC_PUMP_IV, 2)
-                .input(FLUID_REGULATOR_IV, 2)
-                .input(gear, TanmolyiumBetaC, 4)
-                .input(screw, MARM200Steel, 16)
-                .fluidInputs(BlueSteel.getFluid(576))
-                .outputs(MEGA_STEAM_TURBINE.getStackForm())
-                .EUt(VA[IV])
-                .duration(1200)
-                .buildAndRegister();
-
-        //  Mega Gas Turbine
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .inputs(LARGE_GAS_TURBINE.getStackForm())
-                .input(plate, TantalumCarbide, 8)
-                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
-                .input(ELECTRIC_PUMP_LuV, 2)
-                .input(FLUID_REGULATOR_LUV, 2)
-                .input(rotor, Staballoy, 4)
-                .input(screw, IncoloyMA813, 16)
-                .fluidInputs(Naquadah.getFluid(576))
-                .outputs(MEGA_GAS_TURBINE.getStackForm())
-                .EUt(VA[LuV])
-                .duration(1200)
-                .buildAndRegister();
-
-        //  Mega Plasma Turbine
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .inputs(LARGE_PLASMA_TURBINE.getStackForm())
-                .input(plate, HMS1J79Alloy, 8)
-                .input(circuit, MarkerMaterials.Tier.UV, 4)
-                .input(ELECTRIC_PUMP_ZPM, 2)
-                .input(FLUID_REGULATOR_ZPM, 2)
-                .input(spring, Pikyonium64B, 4)
-                .input(screw, Trinium, 16)
-                .outputs(MEGA_PLASMA_TURBINE.getStackForm())
-                .EUt(VA[ZPM])
-                .duration(1200)
-                .buildAndRegister();
-
-        //  Precise Assembler
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .inputs(LARGE_ASSEMBLER.getStackForm())
-                .input(frameGt, MARM200Steel, 4)
-                .input(ROBOT_ARM_IV, 2)
-                .input(CONVEYOR_MODULE_IV, 2)
-                .input(plate, Stellite100, 4)
-                .input(gear, TanmolyiumBetaC, 8)
-                .input(cableGtQuadruple, Naquadah, 4)
-                .fluidInputs(SolderingAlloy.getFluid(L * 6))
-                .fluidInputs(Lubricant.getFluid(3000))
-                .fluidInputs(HastelloyN.getFluid(L * 2))
-                .outputs(PRECISE_ASSEMBLER.getStackForm())
-                .scannerResearch(b -> b
-                        .researchStack(LARGE_ASSEMBLER.getStackForm())
-                        .EUt(VA[IV])
-                        .duration(1200))
-                .EUt(VA[LuV])
-                .duration(1200)
+                .inputs(MetaBlocks.METAL_CASING.getItemVariant(BlockMetalCasing.MetalCasingType.STEEL_SOLID))
+                .fluidInputs(Iridium.getFluid(288))
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.IRIDIUM_CASING))
+                .EUt(VA[LV])
+                .duration(50)
                 .buildAndRegister();
     }
 
