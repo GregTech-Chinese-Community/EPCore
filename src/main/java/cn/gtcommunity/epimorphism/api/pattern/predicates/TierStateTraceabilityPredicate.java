@@ -56,12 +56,12 @@ public class TierStateTraceabilityPredicate extends TraceabilityPredicate {
             IBlockState blockState = blockWorldState.getBlockState();
             if (map.containsKey(blockState)) {
                 ITier stats = map.get(blockState);
-                Object currentStats = blockWorldState.getMatchContext().getOrPut(name, stats);
-                if (!currentStats.equals(stats)) {
+                Object currentState = blockWorldState.getMatchContext().getOrPut(name, stats.getName());
+                if (!currentState.equals(stats.getName())) {
                     blockWorldState.setError(new PatternStringError(errorKey));
                     return false;
                 } else {
-                    blockWorldState.getMatchContext().getOrPut(name + "TiredStats", stats);
+                    blockWorldState.getMatchContext().getOrPut(name + "TieredStats", stats);
                     if (blockState.getBlock() instanceof VariantActiveBlock) {
                         (blockWorldState.getMatchContext().getOrPut("VABlock", new LinkedList<>())).add(blockWorldState.getPos());
                     }

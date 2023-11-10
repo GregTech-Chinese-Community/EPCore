@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
 import cn.gtcommunity.epimorphism.api.EPAPI;
-import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
+import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTier;
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
@@ -71,15 +71,15 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
     List<IBlockState> listCasing = EPAPI.MAP_CP_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTired) entry.getValue()).getIntTier()))
+            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
     List<IBlockState> listTube = EPAPI.MAP_CP_TUBE.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTired) entry.getValue()).getIntTier()))
+            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
     List<IBlockState> listMachineCasing = EPAPI.MAP_MACHINE_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTired) entry.getValue()).getIntTier()))
+            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
             .map(Map.Entry::getKey)
             .collect(Collectors.toList());
     int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
@@ -107,20 +107,20 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
         Object coilType = context.get("CoilType");
-        Object casingTier = context.get("ChemicalPlantCasingTiredStats");
-        Object tubeTier = context.get("ChemicalPlantTubeTiredStats");
-        Object voltageTier = context.get("MachineCasingTypeTiredStats");
+        Object casingTier = context.get("ChemicalPlantCasingTieredStats");
+        Object tubeTier = context.get("ChemicalPlantTubeTieredStats");
+        Object voltageTier = context.get("MachineCasingTypeTieredStats");
         this.coilLevel = EPUniverUtil.getOrDefault(() -> coilType instanceof IHeatingCoilBlockStats,
                 () ->  ((IHeatingCoilBlockStats) coilType).getLevel(),
                 BlockWireCoil.CoilType.CUPRONICKEL.getLevel());
-        this.casingTier = EPUniverUtil.getOrDefault(() -> casingTier instanceof WrappedIntTired,
-                () -> ((WrappedIntTired)casingTier).getIntTier(),
+        this.casingTier = EPUniverUtil.getOrDefault(() -> casingTier instanceof WrappedIntTier,
+                () -> ((WrappedIntTier)casingTier).getIntTier(),
                 0);
-        this.tubeTier = EPUniverUtil.getOrDefault(() -> tubeTier instanceof WrappedIntTired,
-                () -> ((WrappedIntTired)tubeTier).getIntTier(),
+        this.tubeTier = EPUniverUtil.getOrDefault(() -> tubeTier instanceof WrappedIntTier,
+                () -> ((WrappedIntTier)tubeTier).getIntTier(),
                 0);
-        this.voltageTier = EPUniverUtil.getOrDefault(() -> voltageTier instanceof WrappedIntTired,
-                () -> ((WrappedIntTired)voltageTier).getIntTier(),
+        this.voltageTier = EPUniverUtil.getOrDefault(() -> voltageTier instanceof WrappedIntTier,
+                () -> ((WrappedIntTier)voltageTier).getIntTier(),
                 0);
 
         this.tier = Math.min(this.casingTier,this.tubeTier);

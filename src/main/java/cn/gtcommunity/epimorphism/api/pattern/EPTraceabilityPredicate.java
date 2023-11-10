@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.api.pattern;
 
 import cn.gtcommunity.epimorphism.api.block.ITierGlassBlockState;
-import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTired;
+import cn.gtcommunity.epimorphism.api.block.impl.WrappedIntTier;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.pattern.predicates.TierStateTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.pattern.predicates.TierTraceabilityPredicate;
@@ -145,15 +145,15 @@ public class EPTraceabilityPredicate {
     //  Tier Traceability Predicates
     public static Supplier<TierTraceabilityPredicate> EP_MACHINE_CASINGS = () -> new TierTraceabilityPredicate(MAP_MACHINE_CASING,"MachineCasingType",null);
     public static Supplier<TierTraceabilityPredicate> EP_CP_CASING = () -> new TierTraceabilityPredicate(MAP_CP_CASING,
-            Comparator.comparing((s) -> ((WrappedIntTired)MAP_CP_CASING.get(s)).getIntTier()),"ChemicalPlantCasing",null);
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_CP_CASING.get(s)).getIntTier()),"ChemicalPlantCasing",null);
     public static Supplier<TierTraceabilityPredicate> EP_CP_TUBE = () -> new TierTraceabilityPredicate(MAP_CP_TUBE,
-            Comparator.comparing((s) -> ((WrappedIntTired)MAP_CP_TUBE.get(s)).getIntTier()),"ChemicalPlantTube",null);
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_CP_TUBE.get(s)).getIntTier()),"ChemicalPlantTube",null);
     public static Supplier<TierTraceabilityPredicate> EP_PA_CASING = () -> new TierTraceabilityPredicate(MAP_PA_CASING,
-            Comparator.comparing((s) -> ((WrappedIntTired)MAP_PA_CASING.get(s)).getIntTier()), "PACasing", null);
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_PA_CASING.get(s)).getIntTier()), "PACasing", null);
     public static Supplier<TierTraceabilityPredicate> EP_PA_INTERNAL_CASING = () -> new TierTraceabilityPredicate(MAP_PA_INTERNAL_CASING,
-            Comparator.comparing((s) -> ((WrappedIntTired)MAP_PA_INTERNAL_CASING.get(s)).getIntTier()), "PAInternalCasing", null);
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_PA_INTERNAL_CASING.get(s)).getIntTier()), "PAInternalCasing", null);
     public static Supplier<TierTraceabilityPredicate> EP_CA_TIERED_CASING = () -> new TierTraceabilityPredicate(MAP_CA_TIRED_CASING,
-            Comparator.comparing((s) -> ((WrappedIntTired)MAP_CA_TIRED_CASING.get(s)).getIntTier()), "CATieredCasing", null);
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_CA_TIRED_CASING.get(s)).getIntTier()), "CATieredCasing", null);
 
     //  Utils
     public static Supplier<BlockInfo[]> getCandidates(IBlockState... allowedStates) {

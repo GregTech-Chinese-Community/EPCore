@@ -8,7 +8,7 @@ import net.minecraft.client.resources.I18n;
 public interface ITierGlassBlockState extends ITier{
 
     @Override
-    default Object getTire() {
+    default Object getTier() {
         return this.getGlassTier();
     }
 
