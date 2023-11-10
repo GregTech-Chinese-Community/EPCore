@@ -85,6 +85,7 @@ public class EPRecipeManager {
         GoowareCircuits.init();
         OpticalCircuits.init();
         SpintronicCircuits.init();
+        WrapCircuits.init();
     }
 
     public static void initMultiblockRecipes() {
