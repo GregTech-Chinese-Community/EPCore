@@ -5,10 +5,10 @@ import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public class WrappedTired implements ITier {
+public class WrappedTier implements ITier {
     private final IStringSerializable inner;
 
-    public WrappedTired(IStringSerializable inner) {
+    public WrappedTier(IStringSerializable inner) {
         this.inner = inner;
     }
 

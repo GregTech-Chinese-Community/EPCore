@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.api.metatileentity.multiblock;
 
 import cn.gtcommunity.epimorphism.api.block.ITierGlassBlockState;
 import cn.gtcommunity.epimorphism.api.recipe.properties.GlassTierProperty;
+import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.PatternMatchContext;
@@ -29,12 +30,9 @@ public abstract class GlassTierMultiblockController extends RecipeMapMultiblockC
     @Override
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
-        Object type = context.get("GlassTiredStats");
-        if (type instanceof ITierGlassBlockState) {
-            this.glassTier = ((ITierGlassBlockState) type).getGlassTier();
-        } else {
-            this.glassTier = 0;
-        }
+        Object type = context.get("GlassTieredStats");
+        this.glassTier = EPUniverUtil.getOrDefault(() -> type instanceof ITierGlassBlockState,
+                () -> ((ITierGlassBlockState)type).getGlassTier(), 0);
     }
 
     @Override

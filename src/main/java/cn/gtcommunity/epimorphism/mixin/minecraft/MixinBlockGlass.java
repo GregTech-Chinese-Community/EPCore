@@ -6,6 +6,7 @@ import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.BlockStainedGlass;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
@@ -33,7 +34,7 @@ public abstract class MixinBlockGlass extends BlockBreakable implements ITierGla
 
     @Override
     public String getName() {
-        return String.valueOf(GTValues.LV);
+        return getRegistryName().toString();
     }
 
     @Override
