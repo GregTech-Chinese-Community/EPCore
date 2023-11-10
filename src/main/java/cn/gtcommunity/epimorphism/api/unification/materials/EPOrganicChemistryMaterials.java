@@ -78,7 +78,7 @@ public class EPOrganicChemistryMaterials {
                 .ingot()
                 .fluid()
                 .color(6201057)
-                .flags(DISABLE_DECOMPOSITION, GENERATE_ROD, GENERATE_SPRING, GENERATE_LONG_ROD)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_ROD, GENERATE_SPRING, GENERATE_LONG_ROD, GENERATE_FINE_WIRE)
                 .components(Edot, 1, PMMA, 2)
                 .cableProperties(V[UEV], 8, 6)
                 .build();

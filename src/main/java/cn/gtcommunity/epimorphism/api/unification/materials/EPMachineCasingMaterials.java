@@ -314,6 +314,24 @@ public class EPMachineCasingMaterials {
                 .components(Inconel792, 8, EglinSteel, 5, NaquadahAlloy, 4, TungstenSteel, 4, Cerium, 3, Antimony, 2, Platinum, 2, Ytterbium, 1)
                 .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_SPRING, GENERATE_SPRING_SMALL)
                 .build();
+        //  24530 Cinobite
+        Cinobite = new Material.Builder(getMaterialsId(), gregtechId("cinobite"))
+                .ingot()
+                .fluid()
+                .color(0x010101)
+                .iconSet(SHINY)
+                .blastTemp(11465, BlastProperty.GasTier.HIGHEST, VA[UV], 3608)
+                .components(Zeron100, 8, Stellite100, 6, Titanium, 6, Naquadria, 4, Osmiridium, 3, Aluminium, 2, Tin, 1, Mercury, 1)
+                .build();
+        //  24531 Titan Steel
+        TitanSteel = new Material.Builder(getMaterialsId(), gregtechId("titan_steel"))
+                .ingot()
+                .fluid()
+                .color(0xAA0D0D)
+                .iconSet(SHINY)
+                .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV], 4550)
+                .components(TitaniumTungstenCarbide, 18, Ruridit, 9, AusteniticStainlessSteel904L, 6, Naquadah, 4, RedSteel, 4, BlueSteel, 4)
+                .build();
     }
 
     private static int getMaterialsId() {

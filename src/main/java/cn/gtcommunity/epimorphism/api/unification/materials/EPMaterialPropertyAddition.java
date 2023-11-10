@@ -97,6 +97,8 @@ public class EPMaterialPropertyAddition {
         IronMagnetic.addFlags(GENERATE_LONG_ROD);
         SteelMagnetic.addFlags(GENERATE_LONG_ROD);
         NeodymiumMagnetic.addFlags(GENERATE_LONG_ROD);
+        Chrome.addFlags(GENERATE_LONG_ROD);
+        Ruridit.addFlags(GENERATE_DOUBLE_PLATE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
