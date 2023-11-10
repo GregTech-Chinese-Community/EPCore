@@ -24,7 +24,7 @@ public class EPMachineCasingMaterials {
                 .ingot()
                 .fluid()
                 .fluidTemp(3700)
-                .fluidPipeProperties(5500, 640, true, true, true, false)
+                .fluidPipeProperties(5500, 340, true, true, true, false)
                 .color(0x3fcc60)
                 .iconSet(METALLIC)
                 .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_RING, GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
@@ -196,7 +196,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(VanadiumSteel, 4, Osmiridium, 2, HSSS, 3, Germanium, 4, Duranium, 5, Dubnium, 1)
                 .blastTemp(9900, BlastProperty.GasTier.HIGHEST, VA[ZPM], 1277)
-                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_FRAME)
                 .build();
         //  24518 Hastelloy-X78
         HastelloyX78 = new Material.Builder(getMaterialsId(), gregtechId("hastelloy_x_78"))
@@ -302,6 +302,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .components(EglinSteelBase, 10, Sulfur, 1, Silicon, 1, Carbon, 1)
                 .blastTemp(1048, BlastProperty.GasTier.LOW, VA[MV], 24)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD)
                 .build();
         //  24529 Pikyonium-64B
         Pikyonium64B = new Material.Builder(getMaterialsId(), gregtechId("pikyonium_64_b"))
@@ -332,6 +333,55 @@ public class EPMachineCasingMaterials {
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV], 4550)
                 .components(TitaniumTungstenCarbide, 18, Ruridit, 9, AusteniticStainlessSteel904L, 6, Naquadah, 4, RedSteel, 4, BlueSteel, 4)
                 .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .build();
+        //  24532 Incoloy-DS
+        IncoloyDS = new Material.Builder(getMaterialsId(), gregtechId("incoloy_ds"))
+                .ingot()
+                .fluid()
+                .color(0x6746B7)
+                .iconSet(BRIGHT)
+                .blastTemp(5680, BlastProperty.GasTier.HIGHER, VA[IV], 680)
+                .components(Iron, 23, Cobalt, 9, Chrome, 9, Nickel, 9)
+                .flags(GENERATE_PLATE)
+                .build();
+        //  24533 Inconel-690
+        Inconel690 = new Material.Builder(getMaterialsId(), gregtechId("inconel_690"))
+                .ingot()
+                .fluid()
+                .color(0x4FC050)
+                .iconSet(SHINY)
+                .components(Chrome, 1, Niobium, 2, Molybdenum, 2, Nichrome, 3)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .blastTemp(3440, BlastProperty.GasTier.MID, VA[HV], 45)
+                .build();
+        //  24534 Tantalloy61
+        Tantalloy61 = new Material.Builder(getMaterialsId(), gregtechId("tantalloy_61"))
+                .ingot()
+                .fluid()
+                .color(0x717171)
+                .iconSet(METALLIC)
+                .components(Tantalum, 13, Tungsten, 12, Titanium, 6, Yttrium, 4)
+                .blastTemp(6900, BlastProperty.GasTier.HIGHER, VA[LuV], 801)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .build();
+        //  24535 Inconel-020
+        Incoloy020 = new Material.Builder(getMaterialsId(), gregtechId("incoloy_020"))
+                .ingot()
+                .fluid()
+                .color(0xF8BFFC)
+                .iconSet(METALLIC)
+                .components(Iron, 10, Nickel, 9, Chrome, 5, Copper, 1)
+                .blastTemp(3400, BlastProperty.GasTier.MID, VA[MV], 53)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .build();
+        //  24536 HG-1223
+        HG1223 = new Material.Builder(getMaterialsId(), gregtechId("hg_1223"))
+                .ingot()
+                .fluid()
+                .color(0x235497)
+                .iconSet(SHINY)
+                .components(Mercury, 1, Barium, 2, Calcium, 2, Copper, 3, Oxygen, 8)
+                .blastTemp(5325, BlastProperty.GasTier.HIGH, VA[EV], 301)
                 .build();
     }
 

@@ -73,6 +73,18 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/precise_assembler_casing_mk3"
         }
+      },
+      "cyclotron_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/cyclotron_casing"
+        }
+      },
+      "cyclotron_coil": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/cyclotron_coil"
+        }
       }
     }
   }

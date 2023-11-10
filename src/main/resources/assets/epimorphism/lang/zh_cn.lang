@@ -315,6 +315,8 @@ tile.ep_multiblock_casing_b.hastelloy_k243_casing.name=高耐久哈斯特洛伊�
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk1.name=精密电子单元机械方块 Mk I
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk2.name=精密电子单元机械方块 Mk II
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk3.name=精密电子单元机械方块 Mk III
+tile.ep_multiblock_casing_b.cyclotron_casing.name=回旋加速机械方块
+tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -860,6 +862,11 @@ epimorphism.machine.compact_fusion_reactor_mk3.name=压缩核聚变反应堆控�
 epimorphism.machine.compact_fusion_reactor_mk4.name=压缩核聚变反应堆控制电脑 Mk IV
 epimorphism.machine.compact_fusion_reactor_mk5.name=压缩核聚变反应堆控制电脑 Mk V
 
+epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
+epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
+epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在186个周期以上的运动中被加速至80%%光素
+epimorphism.machine.compact_cyclotron.tooltip.3=能够以590 MeV的能量产生一个持续2.2mA的粒子束流
+
 #  Materials
 
 ##  Element Materials
@@ -1392,3 +1399,8 @@ gregtech.material.eglin_steel=埃格林钢
 gregtech.material.pikyonium_64_b=皮卡优合金-64B
 gregtech.material.cinobite=西诺柏
 gregtech.material.titan_steel=泰坦精钢
+gregtech.material.incoloy_ds=耐热铬铁合金-DS
+gregtech.material.inconel_690=镍基合金-690
+gregtech.material.tantalloy_61=钽钨合金-61
+gregtech.material.incoloy_020=耐热铬铁合金-020
+gregtech.material.hg_1223=HG-1223

@@ -36,8 +36,9 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
         HASTELLOYK243_CASING("hastelloy_k243_casing"),
         PRECISE_ASSEMBLER_CASING_MK1("precise_assembler_casing_mk1"),
         PRECISE_ASSEMBLER_CASING_MK2("precise_assembler_casing_mk2"),
-        PRECISE_ASSEMBLER_CASING_MK3("precise_assembler_casing_mk3");
-
+        PRECISE_ASSEMBLER_CASING_MK3("precise_assembler_casing_mk3"),
+        CYCLOTRON_CASING("cyclotron_casing"),
+        CYCLOTRON_COIL("cyclotron_coil");
         private final String name;
 
         CasingType(String name) {

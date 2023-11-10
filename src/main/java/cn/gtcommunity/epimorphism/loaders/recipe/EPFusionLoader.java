@@ -42,7 +42,7 @@ public class EPFusionLoader {
                 .fluidInputs(Americium.getFluid(16))
                 .fluidInputs(Neon.getFluid(125))
                 .fluidOutputs(Dubnium.getFluid(125))
-                .EUt(VA[UV])
+                .EUt(VA[ZPM])
                 .duration(160)
                 .EUToStart(380000000L)
                 .buildAndRegister();
@@ -52,7 +52,7 @@ public class EPFusionLoader {
                 .fluidInputs(Plutonium244.getFluid(16))
                 .fluidInputs(Calcium.getFluid(32))
                 .fluidOutputs(Seaborgium.getFluid(48))
-                .EUt(VA[ZPM])
+                .EUt(VA[UV])
                 .duration(220)
                 .EUToStart(400000000L)
                 .buildAndRegister();

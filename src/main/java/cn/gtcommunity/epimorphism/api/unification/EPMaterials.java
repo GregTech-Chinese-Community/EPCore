@@ -521,6 +521,11 @@ public EPMaterials() {}
     public static Material Pikyonium64B;
     public static Material Cinobite;
     public static Material TitanSteel;
+    public static Material IncoloyDS;
+    public static Material Inconel690;
+    public static Material Tantalloy61;
+    public static Material Incoloy020;
+    public static Material HG1223;
 
     //  Mod Compatibility Materials
     public static Material Mana;
