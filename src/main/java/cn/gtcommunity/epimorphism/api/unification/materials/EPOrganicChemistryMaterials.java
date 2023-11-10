@@ -982,7 +982,22 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
                 .components(Carbon, 9, Hydrogen, 14, Oxygen, 3)
                 .build();
-  }
+        //  25131 Nitrile Butadiene Rubber
+        NitrileButadieneRubber = new Material.Builder(getMaterialsId(), gregtechId("nitrile_butadiene_rubber"))
+                .polymer()
+                .color(0x211A18)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, GENERATE_RING)
+                .components(Carbon, 7, Hydrogen, 9, Nitrogen, 1)
+                .fluidTemp(433)
+                .build();
+        //  25132 Poly (Phosphonitrile Fluoro) Rubber
+        PolyPhosphonitrileFluoroRubber = new Material.Builder(getMaterialsId(), gregtechId("poly_phosphonitrile_fluoro_rubber"))
+                .polymer()
+                .color(0x372B28)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, GENERATE_RING)
+                .components(Carbon, 24, Hydrogen, 16, Oxygen, 8, Nitrogen, 4, Phosphorus, 4, Fluorine, 40)
+                .build();
+    }
 
     private static int getMaterialsId() {
         if (startId < END_ID) {

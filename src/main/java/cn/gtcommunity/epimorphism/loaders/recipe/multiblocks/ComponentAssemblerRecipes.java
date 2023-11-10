@@ -4,6 +4,8 @@ import gregtech.api.unification.material.MarkerMaterials;
 import net.minecraftforge.fluids.FluidStack;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.NitrileButadieneRubber;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.PolyPhosphonitrileFluoroRubber;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -210,7 +212,9 @@ public class ComponentAssemblerRecipes {
         for (FluidStack stack : new FluidStack[]{
                 Rubber.getFluid(L * 6),
                 SiliconeRubber.getFluid(L * 6),
-                StyreneButadieneRubber.getFluid(L * 6)}) {
+                StyreneButadieneRubber.getFluid(L * 6),
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
             COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                     .input(cableGtSingle, Tin)
                     .input(ELECTRIC_MOTOR_LV, 2)
@@ -226,7 +230,9 @@ public class ComponentAssemblerRecipes {
         for (FluidStack stack : new FluidStack[]{
                 Rubber.getFluid(L * 6),
                 SiliconeRubber.getFluid(L * 6),
-                StyreneButadieneRubber.getFluid(L * 6)}) {
+                StyreneButadieneRubber.getFluid(L * 6),
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
             COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                     .input(cableGtSingle, Copper)
                     .input(ELECTRIC_MOTOR_MV, 2)
@@ -242,7 +248,9 @@ public class ComponentAssemblerRecipes {
         for (FluidStack stack : new FluidStack[]{
                 Rubber.getFluid(L * 6),
                 SiliconeRubber.getFluid(L * 6),
-                StyreneButadieneRubber.getFluid(L * 6)}) {
+                StyreneButadieneRubber.getFluid(L * 6),
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
             COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                     .input(cableGtSingle, Gold)
                     .input(ELECTRIC_MOTOR_HV, 2)
@@ -258,7 +266,9 @@ public class ComponentAssemblerRecipes {
         for (FluidStack stack : new FluidStack[]{
                 Rubber.getFluid(L * 6),
                 SiliconeRubber.getFluid(L * 6),
-                StyreneButadieneRubber.getFluid(L * 6)}) {
+                StyreneButadieneRubber.getFluid(L * 6),
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
             COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                     .input(cableGtSingle, Aluminium)
                     .input(ELECTRIC_MOTOR_EV, 2)
@@ -273,7 +283,9 @@ public class ComponentAssemblerRecipes {
         //  IV
         for (FluidStack stack : new FluidStack[]{
                 SiliconeRubber.getFluid(L * 6),
-                StyreneButadieneRubber.getFluid(L * 6)}) {
+                StyreneButadieneRubber.getFluid(L * 6),
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
             COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                     .input(cableGtSingle, Tungsten)
                     .input(ELECTRIC_MOTOR_IV, 2)
@@ -337,6 +349,30 @@ public class ComponentAssemblerRecipes {
                 .duration(20)
                 .buildAndRegister();
 
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(pipeTinyFluid, Bronze)
+                .input(pipeNormalFluid, Copper)
+                .input(screw, WroughtIron)
+                .input(rotor, WroughtIron)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_ULV)
+                .output(ELECTRIC_PUMP_ULV)
+                .EUt(VA[ULV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(pipeTinyFluid, Bronze)
+                .input(pipeNormalFluid, Copper)
+                .input(screw, WroughtIron)
+                .input(rotor, WroughtIron)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_ULV)
+                .output(ELECTRIC_PUMP_ULV)
+                .EUt(VA[ULV])
+                .duration(20)
+                .buildAndRegister();
+
         //  LV
         COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(cableGtSingle, Tin)
@@ -368,6 +404,30 @@ public class ComponentAssemblerRecipes {
                 .input(screw, Tin)
                 .input(rotor, Tin)
                 .input(ring, StyreneButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_LV)
+                .output(ELECTRIC_PUMP_LV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tin)
+                .input(pipeNormalFluid, Bronze)
+                .input(screw, Tin)
+                .input(rotor, Tin)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_LV)
+                .output(ELECTRIC_PUMP_LV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tin)
+                .input(pipeNormalFluid, Bronze)
+                .input(screw, Tin)
+                .input(rotor, Tin)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
                 .input(ELECTRIC_MOTOR_LV)
                 .output(ELECTRIC_PUMP_LV)
                 .EUt(VA[LV])
@@ -411,6 +471,30 @@ public class ComponentAssemblerRecipes {
                 .duration(20)
                 .buildAndRegister();
 
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Copper)
+                .input(pipeNormalFluid, Steel)
+                .input(screw, Bronze)
+                .input(rotor, Bronze)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_MV)
+                .output(ELECTRIC_PUMP_MV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Copper)
+                .input(pipeNormalFluid, Steel)
+                .input(screw, Bronze)
+                .input(rotor, Bronze)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_MV)
+                .output(ELECTRIC_PUMP_MV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
         //  HV
         COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(cableGtSingle, Gold)
@@ -442,6 +526,30 @@ public class ComponentAssemblerRecipes {
                 .input(screw, Steel)
                 .input(rotor, Steel)
                 .input(ring, StyreneButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_HV)
+                .output(ELECTRIC_PUMP_HV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Gold)
+                .input(pipeNormalFluid, StainlessSteel)
+                .input(screw, Steel)
+                .input(rotor, Steel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_HV)
+                .output(ELECTRIC_PUMP_HV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Gold)
+                .input(pipeNormalFluid, StainlessSteel)
+                .input(screw, Steel)
+                .input(rotor, Steel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
                 .input(ELECTRIC_MOTOR_HV)
                 .output(ELECTRIC_PUMP_HV)
                 .EUt(VA[LV])
@@ -485,6 +593,30 @@ public class ComponentAssemblerRecipes {
                 .duration(20)
                 .buildAndRegister();
 
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Aluminium)
+                .input(pipeNormalFluid, Titanium)
+                .input(screw, StainlessSteel)
+                .input(rotor, StainlessSteel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_EV)
+                .output(ELECTRIC_PUMP_EV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Aluminium)
+                .input(pipeNormalFluid, Titanium)
+                .input(screw, StainlessSteel)
+                .input(rotor, StainlessSteel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_EV)
+                .output(ELECTRIC_PUMP_EV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
         //  IV
         COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(cableGtSingle, Tungsten)
@@ -504,6 +636,30 @@ public class ComponentAssemblerRecipes {
                 .input(screw, TungstenSteel)
                 .input(rotor, TungstenSteel)
                 .input(ring, StyreneButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_IV)
+                .output(ELECTRIC_PUMP_IV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tungsten)
+                .input(pipeNormalFluid, TungstenSteel)
+                .input(screw, TungstenSteel)
+                .input(rotor, TungstenSteel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_IV)
+                .output(ELECTRIC_PUMP_IV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        COMPONENT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tungsten)
+                .input(pipeNormalFluid, TungstenSteel)
+                .input(screw, TungstenSteel)
+                .input(rotor, TungstenSteel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
                 .input(ELECTRIC_MOTOR_IV)
                 .output(ELECTRIC_PUMP_IV)
                 .EUt(VA[LV])

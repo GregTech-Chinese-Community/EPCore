@@ -1220,6 +1220,8 @@ gregtech.material.isobutyric_anhydride=异丁酸酐
 gregtech.material.dimethylketene=二甲基乙烯酮
 gregtech.material.tetramethylcyclobutanediol=2,2,4,4-四甲基-1,3-环丁二醇（CBDO）
 gregtech.material.cbdo_polycarbonate=CBDO聚碳酸酯
+gregtech.material.nitrile_butadiene_rubber=丁腈橡胶
+gregtech.material.poly_phosphonitrile_fluoro_rubber=聚膦腈氟橡胶
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
