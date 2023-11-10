@@ -405,6 +405,8 @@ public EPMaterials() {}
     public static Material Dimethylketene;
     public static Material Tetramethylcyclobutanediol;
     public static Material CBDOPolycarbonate;
+    public static Material NitrileButadieneRubber;
+    public static Material PolyPhosphonitrileFluoroRubber;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

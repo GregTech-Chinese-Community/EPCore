@@ -15,7 +15,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import java.util.Collection;
 
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.MagnetoResonatic;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
@@ -108,11 +108,16 @@ public class EPOverrideRecipes {
     }
 
     private static void GTOverrideRecipes() {
+        NeutroniumWaferOverride();
+        NewRubberOverride();
+    }
+
+    private static void NeutroniumWaferOverride() {
         //  Neutronium Boule
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
                 new ItemStack[]{OreDictUnifier.get(block, Silicon, 32),
-                                OreDictUnifier.get(ingot, Neutronium, 4),
-                                OreDictUnifier.get(dust, GalliumArsenide, 2)},
+                        OreDictUnifier.get(ingot, Neutronium, 4),
+                        OreDictUnifier.get(dust, GalliumArsenide, 2)},
                 new FluidStack[]{Xenon.getFluid(8000)});
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
@@ -518,5 +523,355 @@ public class EPOverrideRecipes {
                 .EUt(VA[LuV])
                 .duration(900)
                 .buildAndRegister();
+    }
+
+    private static void NewRubberOverride() {
+
+        //  Conveyor Module Recipes
+        ModHandler.addShapedRecipe(true, "conveyor_module_lv_nitrile_butadiene_rubber", CONVEYOR_MODULE_LV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, NitrileButadieneRubber),
+                'M', ELECTRIC_MOTOR_LV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tin));
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_lv_poly_phosphonitrile_fluoro_rubber", CONVEYOR_MODULE_LV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, PolyPhosphonitrileFluoroRubber),
+                'M', ELECTRIC_MOTOR_LV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tin));
+
+        for (FluidStack stack : new FluidStack[]{
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
+            ASSEMBLER_RECIPES.recipeBuilder()
+                    .input(cableGtSingle, Tin)
+                    .input(ELECTRIC_MOTOR_LV, 2)
+                    .circuitMeta(1)
+                    .fluidInputs(new FluidStack[]{stack})
+                    .output(CONVEYOR_MODULE_LV)
+                    .EUt(VA[LV])
+                    .duration(100)
+                    .buildAndRegister();
+        }
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_mv_nitrile_butadiene_rubber", CONVEYOR_MODULE_MV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, NitrileButadieneRubber),
+                'M', ELECTRIC_MOTOR_MV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Copper));
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_mv_poly_phosphonitrile_fluoro_rubber", CONVEYOR_MODULE_MV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, PolyPhosphonitrileFluoroRubber),
+                'M', ELECTRIC_MOTOR_MV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Copper));
+
+        for (FluidStack stack : new FluidStack[]{
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
+            ASSEMBLER_RECIPES.recipeBuilder()
+                    .input(cableGtSingle, Copper)
+                    .input(ELECTRIC_MOTOR_MV, 2)
+                    .circuitMeta(1)
+                    .fluidInputs(new FluidStack[]{stack})
+                    .output(CONVEYOR_MODULE_MV)
+                    .EUt(VA[LV])
+                    .duration(100)
+                    .buildAndRegister();
+        }
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_hv_nitrile_butadiene_rubber", CONVEYOR_MODULE_HV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, NitrileButadieneRubber),
+                'M', ELECTRIC_MOTOR_HV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Gold));
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_hv_poly_phosphonitrile_fluoro_rubber", CONVEYOR_MODULE_HV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, PolyPhosphonitrileFluoroRubber),
+                'M', ELECTRIC_MOTOR_HV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Gold));
+
+        for (FluidStack stack : new FluidStack[]{
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
+            ASSEMBLER_RECIPES.recipeBuilder()
+                    .input(cableGtSingle, Gold)
+                    .input(ELECTRIC_MOTOR_HV, 2)
+                    .circuitMeta(1)
+                    .fluidInputs(new FluidStack[]{stack})
+                    .output(CONVEYOR_MODULE_HV)
+                    .EUt(VA[LV])
+                    .duration(100)
+                    .buildAndRegister();
+        }
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_ev_nitrile_butadiene_rubber", CONVEYOR_MODULE_EV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, NitrileButadieneRubber),
+                'M', ELECTRIC_MOTOR_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Aluminium));
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_ev_poly_phosphonitrile_fluoro_rubber", CONVEYOR_MODULE_EV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, PolyPhosphonitrileFluoroRubber),
+                'M', ELECTRIC_MOTOR_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Aluminium));
+
+        for (FluidStack stack : new FluidStack[]{
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
+            ASSEMBLER_RECIPES.recipeBuilder()
+                    .input(cableGtSingle, Aluminium)
+                    .input(ELECTRIC_MOTOR_EV, 2)
+                    .circuitMeta(1)
+                    .fluidInputs(new FluidStack[]{stack})
+                    .output(CONVEYOR_MODULE_EV)
+                    .EUt(VA[LV])
+                    .duration(100)
+                    .buildAndRegister();
+        }
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_iv_nitrile_butadiene_rubber", CONVEYOR_MODULE_IV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, NitrileButadieneRubber),
+                'M', ELECTRIC_MOTOR_IV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tungsten));
+
+        ModHandler.addShapedRecipe(true, "conveyor_module_iv_poly_phosphonitrile_fluoro_rubber", CONVEYOR_MODULE_IV.getStackForm(),
+                "PPP", "MWM", "PPP",
+                'P', new UnificationEntry(plate, PolyPhosphonitrileFluoroRubber),
+                'M', ELECTRIC_MOTOR_IV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tungsten));
+
+        for (FluidStack stack : new FluidStack[]{
+                NitrileButadieneRubber.getFluid(L * 6),
+                PolyPhosphonitrileFluoroRubber.getFluid(L * 6)}) {
+            ASSEMBLER_RECIPES.recipeBuilder()
+                    .input(cableGtSingle, Tungsten)
+                    .input(ELECTRIC_MOTOR_EV, 2)
+                    .circuitMeta(1)
+                    .fluidInputs(new FluidStack[]{stack})
+                    .output(CONVEYOR_MODULE_EV)
+                    .EUt(VA[LV])
+                    .duration(100)
+                    .buildAndRegister();
+        }
+
+        //  TODO LuV-UV
+
+        //  Electric Pump Recipes
+        ModHandler.addShapedRecipe(true, "electric_pump_lv_nitrile_butadiene_rubber", ELECTRIC_PUMP_LV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Tin),
+                'R', new UnificationEntry(rotor, Tin),
+                'O', new UnificationEntry(ring, NitrileButadieneRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Bronze),
+                'M', ELECTRIC_MOTOR_LV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tin));
+
+        ModHandler.addShapedRecipe(true, "electric_pump_lv_poly_phosphonitrile_fluoro_rubber", ELECTRIC_PUMP_LV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Tin),
+                'R', new UnificationEntry(rotor, Tin),
+                'O', new UnificationEntry(ring, PolyPhosphonitrileFluoroRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Bronze),
+                'M', ELECTRIC_MOTOR_LV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tin));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tin)
+                .input(pipeNormalFluid, Bronze)
+                .input(screw, Tin)
+                .input(rotor, Tin)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_LV)
+                .output(ELECTRIC_PUMP_LV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tin)
+                .input(pipeNormalFluid, Bronze)
+                .input(screw, Tin)
+                .input(rotor, Tin)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_LV)
+                .output(ELECTRIC_PUMP_LV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ModHandler.addShapedRecipe(true, "electric_pump_mv_nitrile_butadiene_rubber", ELECTRIC_PUMP_MV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Bronze),
+                'R', new UnificationEntry(rotor, Bronze),
+                'O', new UnificationEntry(ring, NitrileButadieneRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Steel),
+                'M', ELECTRIC_MOTOR_MV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Copper));
+
+        ModHandler.addShapedRecipe(true, "electric_pump_mv_poly_phosphonitrile_fluoro_rubber", ELECTRIC_PUMP_MV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Bronze),
+                'R', new UnificationEntry(rotor, Bronze),
+                'O', new UnificationEntry(ring, PolyPhosphonitrileFluoroRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Steel),
+                'M', ELECTRIC_MOTOR_MV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Copper));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Copper)
+                .input(pipeNormalFluid, Steel)
+                .input(screw, Bronze)
+                .input(rotor, Bronze)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_MV)
+                .output(ELECTRIC_PUMP_MV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Copper)
+                .input(pipeNormalFluid, Steel)
+                .input(screw, Bronze)
+                .input(rotor, Bronze)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_MV)
+                .output(ELECTRIC_PUMP_MV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ModHandler.addShapedRecipe(true, "electric_pump_hv_nitrile_butadiene_rubber", ELECTRIC_PUMP_HV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Steel),
+                'R', new UnificationEntry(rotor, Steel),
+                'O', new UnificationEntry(ring, NitrileButadieneRubber),
+                'P', new UnificationEntry(pipeNormalFluid, StainlessSteel),
+                'M', ELECTRIC_MOTOR_HV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Gold));
+
+        ModHandler.addShapedRecipe(true, "electric_pump_hv_poly_phosphonitrile_fluoro_rubber", ELECTRIC_PUMP_HV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, Steel),
+                'R', new UnificationEntry(rotor, Steel),
+                'O', new UnificationEntry(ring, PolyPhosphonitrileFluoroRubber),
+                'P', new UnificationEntry(pipeNormalFluid, StainlessSteel),
+                'M', ELECTRIC_MOTOR_HV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Gold));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Gold)
+                .input(pipeNormalFluid, StainlessSteel)
+                .input(screw, Steel)
+                .input(rotor, Steel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_HV)
+                .output(ELECTRIC_PUMP_HV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Gold)
+                .input(pipeNormalFluid, StainlessSteel)
+                .input(screw, Steel)
+                .input(rotor, Steel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_HV)
+                .output(ELECTRIC_PUMP_HV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ModHandler.addShapedRecipe(true, "electric_pump_ev_nitrile_butadiene_rubber", ELECTRIC_PUMP_EV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, StainlessSteel),
+                'R', new UnificationEntry(rotor, StainlessSteel),
+                'O', new UnificationEntry(ring, NitrileButadieneRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Titanium),
+                'M', ELECTRIC_MOTOR_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Aluminium));
+
+        ModHandler.addShapedRecipe(true, "electric_pump_ev_poly_phosphonitrile_fluoro_rubber", ELECTRIC_PUMP_EV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, StainlessSteel),
+                'R', new UnificationEntry(rotor, StainlessSteel),
+                'O', new UnificationEntry(ring, PolyPhosphonitrileFluoroRubber),
+                'P', new UnificationEntry(pipeNormalFluid, Titanium),
+                'M', ELECTRIC_MOTOR_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Aluminium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Aluminium)
+                .input(pipeNormalFluid, Titanium)
+                .input(screw, StainlessSteel)
+                .input(rotor, StainlessSteel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_EV)
+                .output(ELECTRIC_PUMP_EV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Aluminium)
+                .input(pipeNormalFluid, Titanium)
+                .input(screw, StainlessSteel)
+                .input(rotor, StainlessSteel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_EV)
+                .output(ELECTRIC_PUMP_EV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ModHandler.addShapedRecipe(true, "electric_pump_iv_nitrile_butadiene_rubber", ELECTRIC_PUMP_IV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, TungstenSteel),
+                'R', new UnificationEntry(rotor, TungstenSteel),
+                'O', new UnificationEntry(ring, NitrileButadieneRubber),
+                'P', new UnificationEntry(pipeNormalFluid, TungstenSteel),
+                'M', ELECTRIC_MOTOR_IV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tungsten));
+
+        ModHandler.addShapedRecipe(true, "electric_pump_iv_poly_phosphonitrile_fluoro_rubber", ELECTRIC_PUMP_IV.getStackForm(),
+                "SRO", "dPw", "OMW",
+                'S', new UnificationEntry(screw, TungstenSteel),
+                'R', new UnificationEntry(rotor, TungstenSteel),
+                'O', new UnificationEntry(ring, PolyPhosphonitrileFluoroRubber),
+                'P', new UnificationEntry(pipeNormalFluid, TungstenSteel),
+                'M', ELECTRIC_MOTOR_IV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tungsten));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tungsten)
+                .input(pipeNormalFluid, TungstenSteel)
+                .input(screw, TungstenSteel)
+                .input(rotor, TungstenSteel)
+                .input(ring, NitrileButadieneRubber, 2)
+                .input(ELECTRIC_MOTOR_IV)
+                .output(ELECTRIC_PUMP_IV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(cableGtSingle, Tungsten)
+                .input(pipeNormalFluid, TungstenSteel)
+                .input(screw, TungstenSteel)
+                .input(rotor, TungstenSteel)
+                .input(ring, PolyPhosphonitrileFluoroRubber, 2)
+                .input(ELECTRIC_MOTOR_IV)
+                .output(ELECTRIC_PUMP_IV)
+                .EUt(VA[LV])
+                .duration(20)
+                .buildAndRegister();
+
+        //  TODO LuV-UV
+
     }
 }
