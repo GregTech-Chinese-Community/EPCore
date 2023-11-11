@@ -55,6 +55,26 @@ public class PlasmaCondenserRecipes {
                 .duration(200)
                 .buildAndRegister();
 
+        //  hypogen
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(HYPOGEN_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(LiquidHelium.getFluid(16000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Hypogen.getFluid(1000))
+                .fluidOutputs(Helium.getFluid(16000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(HYPOGEN_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(GelidCryotheum.getFluid(8000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Hypogen.getFluid(1000))
+                .fluidOutputs(Ice.getFluid(8000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
         /*
         //  Adamantium
         PLASMA_CONDENSER_RECIPES.recipeBuilder()

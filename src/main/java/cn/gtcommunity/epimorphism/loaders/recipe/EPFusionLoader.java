@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -125,6 +126,15 @@ public class EPFusionLoader {
                 .EUt(VA[UEV])
                 .duration(600)
                 .EUToStart(1800000000L)
+                .buildAndRegister();
+
+        //  Hypogen plasma Containment Cell
+        CANNER_RECIPES.recipeBuilder()
+                .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(Hypogen.getPlasma(1000))
+                .outputs(HYPOGEN_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .EUt(VA[LuV])
+                .duration(20)
                 .buildAndRegister();
     }
 }
