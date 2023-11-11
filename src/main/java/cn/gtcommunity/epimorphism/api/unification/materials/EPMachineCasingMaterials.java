@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
+import net.minecraftforge.client.model.obj.OBJModel;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
@@ -302,7 +303,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .components(EglinSteelBase, 10, Sulfur, 1, Silicon, 1, Carbon, 1)
                 .blastTemp(1048, BlastProperty.GasTier.LOW, VA[MV], 24)
-                .flags(GENERATE_ROD, GENERATE_LONG_ROD)
+                .flags(GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_FRAME)
                 .build();
         //  24529 Pikyonium-64B
         Pikyonium64B = new Material.Builder(getMaterialsId(), gregtechId("pikyonium_64_b"))
@@ -382,6 +383,16 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(Mercury, 1, Barium, 2, Calcium, 2, Copper, 3, Oxygen, 8)
                 .blastTemp(5325, BlastProperty.GasTier.HIGH, VA[EV], 301)
+                .build();
+        //  24537 HMS-1J22 Alloy
+        HMS1J22Alloy = new Material.Builder(getMaterialsId(), gregtechId("hms_1_j_22_alloy"))
+                .ingot()
+                .fluid()
+                .color(0x9E927D)
+                .iconSet(DULL)
+                .components(Nickel, 12, TinAlloy, 8, Chrome, 4, Phosphorus, 2, Silicon, 2)
+                .blastTemp(4330, BlastProperty.GasTier.MID, VA[EV], 290)
+                .flags(GENERATE_PLATE)
                 .build();
     }
 
