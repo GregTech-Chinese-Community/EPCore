@@ -887,6 +887,9 @@ gregtech.material.metastable_hassium=亚稳态钅黑
 gregtech.material.metastable_flerovium=亚稳态钅夫
 gregtech.material.cosmic_neutronium=宇宙中子素
 gregtech.material.degenerate_rhenium=简并态铼
+gregtech.material.infinity=无尽
+gregtech.material.rhugnor=鲁格诺
+gregtech.material.hypogen=海珀珍
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1158,6 +1161,7 @@ gregtech.material.thorium_oxide=氧化钍
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
 gregtech.material.concentrate_dragon_breath=浓缩龙息
+gregtech.material.dragon_blood=龙血
 gregtech.material.impuritie_precious_metal_cold_solution=含杂贵金属冷溶液
 
 ##  Organic Chemistry Materials

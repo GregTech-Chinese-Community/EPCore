@@ -106,5 +106,25 @@ public class EPFusionLoader {
                 .duration(80)
                 .EUToStart(500000000L)
                 .buildAndRegister();
+
+        //  (Mk IV) Infinity + Chaotic Draconium -> Rhugnor
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Infinity.getFluid(L))
+                .fluidInputs(ChaoticDraconium.getFluid(L * 2))
+                .fluidOutputs(Rhugnor.getFluid(L))
+                .EUt(VA[UV])
+                .duration(200)
+                .EUToStart(800000000L)
+                .buildAndRegister();
+
+        //  (Mk V) Dragon Blood + Rhugnor -> Hypogen
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Rhugnor.getFluid(L * 2))
+                .fluidInputs(DragonBlood.getFluid(L))
+                .fluidOutputs(Hypogen.getPlasma(L))
+                .EUt(VA[UEV])
+                .duration(600)
+                .EUToStart(1800000000L)
+                .buildAndRegister();
     }
 }
