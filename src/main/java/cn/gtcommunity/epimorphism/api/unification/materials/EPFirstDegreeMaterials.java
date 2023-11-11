@@ -1859,12 +1859,125 @@ public class EPFirstDegreeMaterials {
         //  24249 Celestite
         Celestite = new Material.Builder(getMaterialsId(), gregtechId("celestite"))
                 .gem()
-                .ore(1, 1, true)// TODO Why the vein no generate in world?!!!
-                .addOreByproducts(Barium)
                 .color(0x4AE3E6)
                 .iconSet(OPAL)
                 .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
-                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(CRYSTALLIZABLE, DISABLE_DECOMPOSITION)// TODO Lens?
+                .build();
+        //  24250 Strontium Carbonate
+        StrontiumCarbonate = new Material.Builder(getMaterialsId(), gregtechId("strontium_carbonate"))
+                .dust()
+                .color(0x1DAFD3)
+                .iconSet(SAND)
+                .components(Strontium, 1, Carbon, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24251 Strontium Oxide
+        StrontiumOxide = new Material.Builder(getMaterialsId(), gregtechId("stronium_oxide"))
+                .dust()
+                .color(0x16839E)
+                .iconSet(BRIGHT)
+                .components(Strontium, 1, Oxygen, 1)
+                .build();
+        //  24252 Acidic Pyrochlore
+        AcidicPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("acidic_pyrochlore"))
+                .dust()
+                .color(Pyrochlore.getMaterialRGB() + SulfuricAcid.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Pyrochlore, 1, SulfuricAcid, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24253 Thorium-Uranium Solution
+        ThoriumUraniumSolution = new Material.Builder(getMaterialsId(), gregtechId("thorium_uranium_solution"))
+                .fluid()
+                .color(Thorium.getMaterialRGB() + Uranium235.getMaterialRGB())
+                .iconSet(DULL)
+                .build()
+                .setFormula("?SO4", true);
+        //  24254 Leaching Pyrochlore
+        LeachingPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("leaching_pyrochlore"))
+                .dust()
+                .color(0xE2502C)
+                .iconSet(BRIGHT)
+                .build()
+                .setFormula("(Nb2O5)9Ta2O5?", true);
+        //  24255 Barium-Strontium-Radium Solution
+        BariumStrontiumRadiumSolution = new Material.Builder(getMaterialsId(), gregtechId("barium_strontium_radium_solution"))
+                .fluid()
+                .color(Barite.getMaterialRGB())
+                .components(Barite, 1, Gypsum, 1, Celestite, 1, Radium, 1, Water, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24256 Fluoroniobic Acid
+        FluoroniobicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluoroniobic_acid"))
+                .fluid(FluidTypes.ACID)
+                .color(Niobium.getMaterialRGB() + HydrofluoricAcid.getMaterialRGB())
+                .components(Niobium, 1, Hydrogen, 1, Fluorine, 7)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24257 Oxypentafluoroniobate
+        Oxypentafluoroniobate = new Material.Builder(getMaterialsId(), gregtechId("oxypentafluoroniobate"))
+                .fluid()
+                .color(0x17F742)
+                .components(Hydrogen, 2, Niobium, 1, Oxygen, 1, Fluorine, 5)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24258 Heptafluorotantalate
+        Heptafluorotantalate = new Material.Builder(getMaterialsId(), gregtechId("heptafluorotantalate"))
+                .fluid()
+                .color(0x16EB3F)
+                .components(Hydrogen, 2, Tantalum, 1, Fluorine, 7)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24259 Potassium Fluoride
+        PotassiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoride"))
+                .dust()
+                .color(Potassium.getMaterialRGB() + Fluorine.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Potassium, 1, Fluorine, 1)
+                .build();
+        //  24260 Potassium Fluoniobate
+        PotassiumFluoniobate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoniobate"))
+                .dust()
+                .color(PotassiumFluoride.getMaterialRGB() + FluoroniobicAcid.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Potassium, 2, Niobium, 1, Fluorine, 7)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24261 Potassium Fluotantalate
+        PotassiumFluotantalate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluotantalate"))
+                .dust()
+                .color(Tantalum.getMaterialRGB() + PotassiumFluoniobate.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Potassium, 2, Tantalum, 1, Fluorine, 7)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24262 Uranium Thorium Nitrate
+        UraniumThoriumNitrate = new Material.Builder(getMaterialsId(), gregtechId("uranium_thorium_nitrate"))
+                .dust()
+                .color(Uranium238.getMaterialRGB() + Thorium.getMaterialRGB() + Nitrogen.getMaterialRGB())
+                .iconSet(SHINY)
+                .build()
+                .setFormula("UO2(NO3)2Th(NO3)4", true);
+        //  24263 Uranium Oxide Thorium Nitrate
+        UraniumOxideThoriumNitrate = new Material.Builder(getMaterialsId(), gregtechId("uranium_oxide_thorium_nitrate"))
+                .dust()
+                .color(Uranium238.getMaterialRGB() + Oxygen.getMaterialRGB())
+                .iconSet(SHINY)
+                .build()
+                .setFormula("UO2Th(NO3)4", true);
+        //  24264 Thorium Nitrate Solution
+        ThoriumNitrateSolution = new Material.Builder(getMaterialsId(), gregtechId("thorium_nitrate_solution"))
+                .fluid()
+                .color(Thorium.getMaterialRGB())
+                .build()
+                .setFormula("Th(NO3)4(H2O)", true);
+        //  24265 Thorium Oxide
+        ThoriumOxide = new Material.Builder(getMaterialsId(), gregtechId("thorium_oxide"))
+                .dust()
+                .color(Thorium.getMaterialRGB() + Oxygen.getMaterialRGB())
+                .components(Thorium, 1, Oxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .build();
     }
 

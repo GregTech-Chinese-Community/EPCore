@@ -20,8 +20,8 @@ public class MaterialComponents {
     public static void init() {
         WIRE_ELECTRIC.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
-                {10, new UnificationEntry(OrePrefix.wireGtSingle, Adamantium)},
-//                {11, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
+                {10, new UnificationEntry(OrePrefix.wireGtSingle, Tritanium)},
+                {11, new UnificationEntry(OrePrefix.wireGtSingle, Adamantium)},
 //                {12, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.wireGtSingle, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
@@ -202,7 +202,7 @@ public class MaterialComponents {
                 {5, new UnificationEntry(OrePrefix.stick, VanadiumGallium)},
                 {6, new UnificationEntry(OrePrefix.stick, VanadiumGallium)},
                 {7, new UnificationEntry(OrePrefix.stick, VanadiumGallium)},
-                {8, new UnificationEntry(OrePrefix.stick, VanadiumGallium)},
+                {8, new UnificationEntry(OrePrefix.stickLong, VanadiumGallium)},
                 {9, new UnificationEntry(OrePrefix.stickLong, VanadiumGallium)},
                 {10, new UnificationEntry(OrePrefix.stick, PedotTMA)},
                 {11, new UnificationEntry(OrePrefix.stick, PedotTMA)},
@@ -248,7 +248,7 @@ public class MaterialComponents {
 
         SPRING.appendIngredients(Stream.of(new Object[][]{
                 {10, new UnificationEntry(OrePrefix.spring, PedotTMA)},
-//                {11, new UnificationEntry(OrePrefix.spring, Trinium)},
+                {11, new UnificationEntry(OrePrefix.spring, RutheniumTriniumAmericiumNeutronate)},
 //                {12, new UnificationEntry(OrePrefix.spring, Trinium)},
 //                {13, new UnificationEntry(OrePrefix.spring, Trinium)},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
