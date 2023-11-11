@@ -92,6 +92,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> COMPONENT_ASSEMBLER_RECIPES;
     @ZenProperty
     public static final RecipeMap<CACasingTierRecipeBuilder> COMPONENT_ASSEMBLY_LINE_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> CYCLOTRON_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -308,6 +310,14 @@ public class EPRecipeMaps {
         //  Component Assembly Line Recipemap
         COMPONENT_ASSEMBLY_LINE_RECIPES = new RecipeMapComponentAssemblyLine<>("component_assembly_line_recipes", 12, 1,  12, 0, new CACasingTierRecipeBuilder(), false)
                 .setSound(GTSoundEvents.ASSEMBLER);
+
+        //  Cyclotron Recipemap
+        CYCLOTRON_RECIPES = new RecipeMap<>("cyclotron_recipes", 0, 6, 0, 6, 0 , 6, 0, 6, new SimpleRecipeBuilder(), false)
+                .setSlotOverlay(false, false, false, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(false, false, true, GuiTextures.IMPLOSION_OVERLAY_2)
+                .setSlotOverlay(true, false, false, GuiTextures.IMPLOSION_OVERLAY_1)
+                .setSlotOverlay(true, false, true, GuiTextures.IMPLOSION_OVERLAY_1)
+                .setSound(GTSoundEvents.SCIENCE);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

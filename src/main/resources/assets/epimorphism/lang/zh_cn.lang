@@ -281,6 +281,7 @@ metaitem.rhenium_plasma_containment_cell.name=铼等离子遏制装置
 metaitem.rhenium_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.neutron_plasma_containment_cell.name=中子等离子遏制装置
 metaitem.neutron_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.quantum_anomaly.name=量子反常
 
 #  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
@@ -864,8 +865,8 @@ epimorphism.machine.compact_fusion_reactor_mk5.name=压缩核聚变反应堆控�
 
 epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
 epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
-epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在186个周期以上的运动中被加速至80%%光素
-epimorphism.machine.compact_cyclotron.tooltip.3=能够以590 MeV的能量产生一个持续2.2mA的粒子束流
+epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
+epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590 MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
 
 #  Materials
 

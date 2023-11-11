@@ -104,5 +104,7 @@ public class EPRecipeManager {
         HeatExchangerRecipes.init();
         PreciseAssemblerRecipes.init();
         ComponentAssemblyLineRecipes.init();
+//        LargeCircuitAssemblyLineRecipes.init();
+        CyclotronRecipes.init();
     }
 }
