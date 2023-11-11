@@ -85,6 +85,19 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/cyclotron_coil"
         }
+      },
+      "supercritical_fluid_turbine_shaft_block": {
+        "model": "epimorphism:shaft",
+        "textures": {
+          "side": "epimorphism:blocks/casings/ep_multiblock_casing_b/supercritical_fluid_turbine_shaft_block_side",
+          "end": "epimorphism:blocks/casings/ep_multiblock_casing_b/supercritical_fluid_turbine_shaft_block_end"
+        }
+      },
+      "alloy_smelting_pipe_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/ep_multiblock_casing_b/alloy_smelting_pipe_casing"
+        }
       }
     }
   }

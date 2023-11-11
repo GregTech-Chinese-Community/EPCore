@@ -37,6 +37,8 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
         PRECISE_ASSEMBLER_CASING_MK1("precise_assembler_casing_mk1"),
         PRECISE_ASSEMBLER_CASING_MK2("precise_assembler_casing_mk2"),
         PRECISE_ASSEMBLER_CASING_MK3("precise_assembler_casing_mk3"),
+        SUPERCRITICAL_FLUID_TURBINE_SHAFT_BLOCK("supercritical_fluid_turbine_shaft_block"),
+        ALLOY_SMELTING_PIPE_CASING("alloy_smelting_pipe_casing"),
         CYCLOTRON_CASING("cyclotron_casing"),
         CYCLOTRON_COIL("cyclotron_coil");
         private final String name;

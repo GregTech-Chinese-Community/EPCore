@@ -22,6 +22,8 @@ import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.unification.material.Materials;
 import gregtech.client.renderer.ICubeRenderer;
+import gregtech.common.ConfigHolder;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -234,7 +236,7 @@ public class EPMetaTileEntityComponentAssemblyLine extends RecipeMapMultiblockCo
                 .where('N', MetaBlocks.FRAMES.get(Materials.TungstenSteel).getBlock(Materials.TungstenSteel))
                 .where('K', MetaTileEntities.ITEM_EXPORT_BUS[4], EnumFacing.NORTH)
                 .where('L', MetaTileEntities.ENERGY_INPUT_HATCH[5], EnumFacing.SOUTH)
-                .where('I', MetaTileEntities.MAINTENANCE_HATCH, EnumFacing.SOUTH)
+                .where('I', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : getCasingState(), EnumFacing.SOUTH)
                 .where('Q', MetaTileEntities.ITEM_IMPORT_BUS[4], EnumFacing.WEST)
                 .where('P', MetaTileEntities.FLUID_IMPORT_HATCH[4], EnumFacing.EAST);
         EPAPI.MAP_CA_TIRED_CASING.entrySet().stream()
