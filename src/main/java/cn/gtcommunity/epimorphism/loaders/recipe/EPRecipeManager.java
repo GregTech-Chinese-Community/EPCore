@@ -72,6 +72,7 @@ public class EPRecipeManager {
         RubbersChain.init();
         SeleniumTelluriumChain.init();
         SodiumChain.init();
+        StrontiumRadiumChain.init();
         SuperconductorsChain.init();
         TaraniumChain.init();
         ThalliumChain.init();

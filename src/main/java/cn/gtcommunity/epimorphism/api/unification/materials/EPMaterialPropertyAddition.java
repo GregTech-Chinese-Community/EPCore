@@ -58,6 +58,7 @@ public class EPMaterialPropertyAddition {
         Curium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Curium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Radium.setProperty(PropertyKey.DUST, new DustProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -96,7 +97,7 @@ public class EPMaterialPropertyAddition {
         Plutonium241.addFlags(GENERATE_FRAME);
         HastelloyX.addFlags(GENERATE_DOUBLE_PLATE);
         Trinium.addFlags(GENERATE_FRAME);
-        RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE);
+        RutheniumTriniumAmericiumNeutronate.addFlags(GENERATE_FINE_WIRE, GENERATE_ROD, GENERATE_SPRING);
         IncoloyMA956.addFlags(GENERATE_DOUBLE_PLATE);
         Polybenzimidazole.addFlags(GENERATE_ROD, GENERATE_FRAME);
         Steel.addFlags(GENERATE_DENSE);

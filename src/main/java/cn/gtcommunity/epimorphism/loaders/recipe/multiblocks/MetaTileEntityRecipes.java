@@ -842,6 +842,24 @@ public class MetaTileEntityRecipes {
                 .EUt(VA[ZPM])
                 .duration(1200)
                 .buildAndRegister();
+
+        //  Dissolution Tank
+        ModHandler.addShapedRecipe(true, "dissolution_tank", DISSOLUTION_TANK.getStackForm(),
+                "WSW", "PHP", "WDW",
+                'H', HULL[EV].getStackForm(),
+                'D', TUNGSTENSTEEL_DRUM.getStackForm(),
+                'P', ELECTRIC_PUMP_EV.getStackForm(),
+                'S', new UnificationEntry(spring, TungstenSteel),
+                'W', new UnificationEntry(cableGtSingle, Tungsten));
+
+        //  Digester
+        ModHandler.addShapedRecipe(true, "digester", DIGESTER.getStackForm(),
+                "WXW", "PHP", "WCW",
+                'H', HULL[EV].getStackForm(),
+                'X', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
+                'C', VOLTAGE_COIL_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Tungsten),
+                'P', ELECTRIC_PUMP_EV.getStackForm());
     }
 
     private static void GCYMOverrideRecipes() {

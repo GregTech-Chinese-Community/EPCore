@@ -866,6 +866,7 @@ epimorphism.machine.compact_fusion_reactor_mk4.name=压缩核聚变反应堆控�
 epimorphism.machine.compact_fusion_reactor_mk5.name=压缩核聚变反应堆控制电脑 Mk V
 
 epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
+recipemap.cyclotron_recipes.name=回旋加速器
 epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
 epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
 epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590 MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
@@ -1137,6 +1138,22 @@ gregtech.material.helium_neon=氦-氖混合气
 gregtech.material.polonium_nitrate=硝酸钋
 gregtech.material.polonium_chloride=氯化亚钋
 gregtech.material.celestite=天青石
+gregtech.material.strontium_carbonate=碳酸锶
+gregtech.material.stronium_oxide=氧化锶
+gregtech.material.acidic_pyrochlore=酸浸烧绿石
+gregtech.material.thorium_uranium_solution=钍铀杂质溶液
+gregtech.material.leaching_pyrochlore=浸出烧绿石
+gregtech.material.barium_strontium_radium_solution=碱性钡-锶-镭溶液
+gregtech.material.fluoroniobic_acid=氟铌酸
+gregtech.material.potassium_fluoride=氟化钾
+gregtech.material.oxypentafluoroniobate=氧五氟铌酸盐
+gregtech.material.heptafluorotantalate=七氟钽酸盐
+gregtech.material.potassium_fluoniobate=氟铌酸钾
+gregtech.material.potassium_fluotantalate=氟钽酸钾
+gregtech.material.uranium_thorium_nitrate=硝酸铀酰-硝酸钍混合物
+gregtech.material.uranium_oxide_thorium_nitrate=二氧化铀-硝酸钍混合物
+gregtech.material.thorium_nitrate_solution=硝酸钍溶液
+gregtech.material.thorium_oxide=氧化钍
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1283,6 +1300,11 @@ gregtech.material.acrylonitrile=丙烯腈
 gregtech.material.phosphonitrilic_chloride_trimer=六氯环三磷腈
 gregtech.material.sodium_trifluoroethanolate=三氟乙醇钠
 gregtech.material.octafluoro_pentanol=八氟戊醇
+gregtech.material.tributyl_phosphate=磷酸三丁酯（TBP）
+gregtech.material.methyl_isobutyl_ketone=甲基异丁基酮（MIBK）
+gregtech.material.tbp_mibk_solution=TBP:MIBK分离液
+gregtech.material.mesityl_oxide=异亚丙基丙酮
+gregtech.material.electrolyte_reflector_mixture=电介质反射镜形成混合物
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

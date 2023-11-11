@@ -272,6 +272,22 @@ public EPMaterials() {}
     public static Material PoloniumNitrate;
     public static Material PoloniumChloride;
     public static Material Celestite;
+    public static Material StrontiumCarbonate;
+    public static Material StrontiumOxide;
+    public static Material AcidicPyrochlore;
+    public static Material ThoriumUraniumSolution;
+    public static Material LeachingPyrochlore;
+    public static Material BariumStrontiumRadiumSolution;
+    public static Material FluoroniobicAcid;
+    public static Material Oxypentafluoroniobate;
+    public static Material Heptafluorotantalate;
+    public static Material PotassiumFluoride;
+    public static Material PotassiumFluoniobate;
+    public static Material PotassiumFluotantalate;
+    public static Material UraniumThoriumNitrate;
+    public static Material UraniumOxideThoriumNitrate;
+    public static Material ThoriumNitrateSolution;
+    public static Material ThoriumOxide;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -417,6 +433,11 @@ public EPMaterials() {}
     public static Material PhosphonitrilicChlorideTrimer;
     public static Material SodiumTrifluoroethanolate;
     public static Material OctafluoroPentanol;
+    public static Material TributylPhosphate;
+    public static Material MethylIsobutylKetone;
+    public static Material TBPMIBKSolution;
+    public static Material MesitylOxide;
+    public static Material ElectrolyteReflectorMixture;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

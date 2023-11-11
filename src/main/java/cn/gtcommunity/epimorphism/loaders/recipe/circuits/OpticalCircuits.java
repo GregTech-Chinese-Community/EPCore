@@ -294,6 +294,19 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
+        //  TODO Optical SoC
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, ManganeseDifluoride, 3)
+                .input(dust, ZincSulfide, 2)
+                .input(dust, TantalumPentoxide, 7)
+                .input(dust, Rutile, 3)
+                .fluidInputs(Ethanol.getFluid(1000))
+                .fluidOutputs(ElectrolyteReflectorMixture.getFluid(1000))
+                .EUt(VA[UHV])
+                .duration(270)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
         //  Optical Processor
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(OPTICAL_LASER_CONTROL_UNIT)

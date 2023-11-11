@@ -1024,6 +1024,41 @@ public class EPOrganicChemistryMaterials {
                 .color(0xE5EBDE)
                 .components(Carbon, 5, Hydrogen, 4, Fluorine, 8, Oxygen, 1)
                 .build();
+        //  25137 Tributyl Phosphate
+        TributylPhosphate = new Material.Builder(getMaterialsId(), gregtechId("tributyl_phosphate"))
+                .fluid()
+                .color(0xBED323)
+                .components(Carbon, 12, Hydrogen, 27, Phosphorus, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(C4H9)3PO4", true);
+        //  25138 Methyl Isobutyl Ketone
+        MethylIsobutylKetone = new Material.Builder(getMaterialsId(), gregtechId("methyl_isobutyl_ketone"))
+                .fluid()
+                .color(0x2F5687)
+                .components(Carbon, 6, Hydrogen, 12, Oxygen, 1)
+                .build();
+        //  25139 tbp_mibk_solution
+        TBPMIBKSolution = new Material.Builder(getMaterialsId(), gregtechId("tbp_mibk_solution"))
+                .fluid()
+                .color(TributylPhosphate.getMaterialRGB() + MethylIsobutylKetone.getMaterialRGB())
+                .components(TributylPhosphate, 1, MethylIsobutylKetone, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25140 Mesityl Oxide
+        MesitylOxide = new Material.Builder(getMaterialsId(), gregtechId("mesityl_oxide"))
+                .fluid()
+                .color(0x783E50)
+                .components(Carbon, 6, Hydrogen, 10, Oxygen, 1)
+                .build();
+        //  25141 Electrolyte Reflector Mixture
+        ElectrolyteReflectorMixture = new Material.Builder(getMaterialsId(), gregtechId("electrolyte_reflector_mixture"))
+                .fluid()
+                .fluidTemp(209)
+                .color(0xE62A35)
+                .components(ManganeseDifluoride, 1, ZincSulfide, 1, TantalumPentoxide, 1, Rutile, 1, Ethanol, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
     }
 
     private static int getMaterialsId() {
