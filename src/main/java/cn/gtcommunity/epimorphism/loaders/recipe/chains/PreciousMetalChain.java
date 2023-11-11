@@ -16,6 +16,23 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 public class PreciousMetalChain {
     public static void init() {
 
+        //  Primitive Gold
+        PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, PreciousMetal)
+                .input("fuelCoke", 2)
+                .output(nugget, Gold)
+                .duration(300)
+                .buildAndRegister();
+
+        //  Fix
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[]{OreDictUnifier.get(dust, Gold, 2)},
+                new FluidStack[]{HydrochloricAcid.getFluid(8000)});
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[]{OreDictUnifier.get(dust, Gold, 2)},
+                new FluidStack[]{HydrochloricAcid.getFluid(8000)});
+
         //  Gold Copper Mixture
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Copper, 3)

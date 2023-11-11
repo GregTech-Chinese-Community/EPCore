@@ -1864,7 +1864,7 @@ public class EPFirstDegreeMaterials {
                 .color(0x4AE3E6)
                 .iconSet(OPAL)
                 .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
-                .flags(CRYSTALLIZABLE, DISABLE_DECOMPOSITION)// TODO Lens?
+                .flags(CRYSTALLIZABLE, DISABLE_DECOMPOSITION, GENERATE_LENS)
                 .build();
         //  24250 Strontium Carbonate
         StrontiumCarbonate = new Material.Builder(getMaterialsId(), gregtechId("strontium_carbonate"))
@@ -1989,7 +1989,7 @@ public class EPFirstDegreeMaterials {
                 .components(Copper, 3, Gold, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
-                .setFormula("Cu3Au?");
+                .setFormula("Cu3Au?", true);
         //  24267 Leaching Gold
         LeachingGold = new Material.Builder(getMaterialsId(), gregtechId("leaching_gold"))
                 .dust()
@@ -1998,7 +1998,7 @@ public class EPFirstDegreeMaterials {
                 .components(Copper, 3, Gold, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
-                .setFormula("Cu3Au?");
+                .setFormula("Cu3Au?", true);
         //  24268 Chloroauric Acid
         ChloroauricAcid = new Material.Builder(getMaterialsId(), gregtechId("chloroauric_acid"))
                 .fluid()
@@ -2006,7 +2006,7 @@ public class EPFirstDegreeMaterials {
                 .components(Hydrogen, 1, Gold, 1, Chlorine, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
-                .setFormula("HAuCl?", true);
+                .setFormula("HAuCl?", false);
         //  24269 Leaching Copper
         LeachingCopper = new Material.Builder(getMaterialsId(), gregtechId("leaching_copper"))
                 .dust()

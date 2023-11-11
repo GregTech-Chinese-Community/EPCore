@@ -12,7 +12,7 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 public class DragonChain {
     public static void init() {
 
-        //  TODO Dr, Dr+ and *Dr*
+        //  TODO Dr, Dr+ and *Dr*, maybe draconium ore...
 
         //  Dragon Breath compatibility
         EXTRACTOR_RECIPES.recipeBuilder()

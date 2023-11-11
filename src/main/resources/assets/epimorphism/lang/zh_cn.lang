@@ -281,6 +281,8 @@ metaitem.rhenium_plasma_containment_cell.name=铼等离子遏制装置
 metaitem.rhenium_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.neutron_plasma_containment_cell.name=中子等离子遏制装置
 metaitem.neutron_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.hypogen_plasma_containment_cell.name=海珀珍等离子遏制装置
+metaitem.hypogen_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.quantum_anomaly.name=量子反常
 
 #  Mill Balls

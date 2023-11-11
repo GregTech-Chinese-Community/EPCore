@@ -860,6 +860,32 @@ public class MetaTileEntityRecipes {
                 'C', VOLTAGE_COIL_EV.getStackForm(),
                 'W', new UnificationEntry(cableGtSingle, Tungsten),
                 'P', ELECTRIC_PUMP_EV.getStackForm());
+
+        //  Supercritical Steam Turbine
+        ModHandler.addShapedRecipe(true, "supercritical_steam_turbine", SUPERCRITICAL_STEAM_TURBINE.getStackForm(),
+                "XPX", "GHG", "FPF",
+                'X', new UnificationEntry(circuit, MarkerMaterials.Tier.LuV),
+                'P', new UnificationEntry(plate, MARM200CeSteel),
+                'G', new UnificationEntry(gear, TungstenCarbide),
+                'H', HULL[LuV].getStackForm(),
+                'F', new UnificationEntry(pipeLargeFluid, Inconel792));
+
+        //  Mega Supercritical Steam Turbine
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(SUPERCRITICAL_STEAM_TURBINE.getStackForm())
+                .input(plate, IncoloyMA813, 4)
+                .input(plate, Pikyonium64B, 4)
+                .input(circuit, MarkerMaterials.Tier.ZPM, 8)
+                .input(ELECTRIC_PUMP_ZPM, 2)
+                .input(FLUID_REGULATOR_ZPM, 2)
+                .input(gear, HY1301, 4)
+                .input(screw, Tantalloy61, 16)
+                .fluidInputs(HMS1J79Alloy.getFluid(L * 4))
+                .outputs(MEGA_SUPERCRITICAL_STEAM_TURBINE.getStackForm())
+                .EUt(VA[ZPM])
+                .duration(1200)
+                .buildAndRegister();
+
     }
 
     private static void GCYMOverrideRecipes() {
