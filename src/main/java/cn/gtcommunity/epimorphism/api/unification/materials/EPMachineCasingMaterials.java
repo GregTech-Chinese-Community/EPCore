@@ -3,7 +3,6 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
-import net.minecraftforge.client.model.obj.OBJModel;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;

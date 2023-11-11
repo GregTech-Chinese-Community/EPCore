@@ -156,6 +156,31 @@ public class EPElementMaterials {
                 .flags(GENERATE_PLATE)
                 .build()
                 .setFormula("§cR§de", false);
+        //  26014 Infinity
+        Infinity = new Material.Builder(getMaterialsId(), gregtechId("infinity"))
+                .fluid()
+                .fluidTemp((int) V[UIV])
+                .element(EPElements.Infinity)
+                .build();
+        //  26015 Rhugnor
+        Rhugnor = new Material.Builder(getMaterialsId(), gregtechId("rhugnor"))
+                .fluid()
+                .fluidTemp((int) (V[UIV] - V[UV]))
+                .color(0xBE00FF)
+                .element(EPElements.Rhugnor)
+                .build();
+        //  26016 Hypogen
+        Hypogen = new Material.Builder(getMaterialsId(), gregtechId("hypogen"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .fluidTemp((int) (V[UXV] - V[LuV]))
+                .element(EPElements.Hypogen)
+                .color(0xDC784B)
+                .iconSet(CUSTOM_HYPOGEN)
+                .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200).unbreakable().enchantability(33).magnetic().build())
+                .flags(GENERATE_PLATE)
+                .build();
     }
 
     private static int getMaterialsId() {

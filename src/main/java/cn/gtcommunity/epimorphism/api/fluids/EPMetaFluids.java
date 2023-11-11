@@ -24,5 +24,6 @@ public class EPMetaFluids {
         MetaFluids.setMaterialFluidTexture(EPMaterials.GelidCryotheum, FluidTypes.LIQUID);
         MetaFluids.setMaterialFluidTexture(EPMaterials.SuperheatedSteam, FluidTypes.GAS);
         MetaFluids.setMaterialFluidTexture(EPMaterials.SupercriticalSteam, FluidTypes.GAS);
+        MetaFluids.setMaterialFluidTexture(EPMaterials.Infinity, FluidTypes.LIQUID);
     }
 }

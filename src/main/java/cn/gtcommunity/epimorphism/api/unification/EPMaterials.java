@@ -20,6 +20,9 @@ public EPMaterials() {}
     public static Material MetastableFlerovium;
     public static Material CosmicNeutronium;
     public static Material DegenerateRhenium;
+    public static Material Infinity;
+    public static Material Rhugnor;
+    public static Material Hypogen;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -292,6 +295,7 @@ public EPMaterials() {}
     //  Second Degree Materials
     public static Material DragonBreath;
     public static Material ConcentrateDragonBreath;
+    public static Material DragonBlood;
     public static Material ImpuritiesPreciousMetalColdSolution;
 
     //  Organic Chemistry Materials
