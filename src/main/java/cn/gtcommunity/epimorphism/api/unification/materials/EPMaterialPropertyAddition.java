@@ -11,6 +11,12 @@ import static gregtech.api.unification.material.info.MaterialFlags.*;
 
 public class EPMaterialPropertyAddition {
     public static void init() {
+        //  Setter
+        RarestMetalMixture.setFormula("Ir2O2(SiO2)2Au3?");
+        IridiumMetalResidue.setFormula("Ir2O4(SiO2)2Au3");
+        AcidicOsmiumSolution.setFormula("OsO4(H2O)(HCl)");
+        PalladiumRaw.setFormula("PdCl2?");
+
         //  Properties
         Iodine.setProperty(PropertyKey.DUST, new DustProperty());
         Iodine.setProperty(PropertyKey.FLUID, new FluidProperty());

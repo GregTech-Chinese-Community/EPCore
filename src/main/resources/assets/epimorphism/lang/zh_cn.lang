@@ -1157,6 +1157,25 @@ gregtech.material.uranium_thorium_nitrate=硝酸铀酰-硝酸钍混合物
 gregtech.material.uranium_oxide_thorium_nitrate=二氧化铀-硝酸钍混合物
 gregtech.material.thorium_nitrate_solution=硝酸钍溶液
 gregtech.material.thorium_oxide=氧化钍
+gregtech.material.gold_copper_mixture=铜金混合物
+gregtech.material.leaching_gold=金浸出物
+gregtech.material.chloroauric_acid=氯金酸
+gregtech.material.leaching_copper=铜浸出物
+gregtech.material.potassium_metabisulfite=焦亚硫酸钾
+gregtech.material.platinum_metal=铂金属
+gregtech.material.platinum_slag=铂残渣
+gregtech.material.palladium_metal=钯金属
+gregtech.material.concentrate_platinum=浓缩铂溶液
+gregtech.material.crude_platinum=粗铂混合物
+gregtech.material.palladium_rich_ammonia=富钯氨
+gregtech.material.iridium_dioxide=二氧化铱
+gregtech.material.acidic_iridium_solution=酸性铱溶液
+gregtech.material.osmium_tetrachloride=四氯化锇
+gregtech.material.ruthenium_chloride=三氯化钌
+gregtech.material.sodium_peroxide=过氧化钠
+gregtech.material.rhodium_oxide=三氧化二铑
+gregtech.material.platinum_group_sludge_solution=铂族金属泥浆液
+gregtech.material.ammonium_hexachloro_platinum_group_sludge=六氯铵酸化铂族金属泥浆液
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

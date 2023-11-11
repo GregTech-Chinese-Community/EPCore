@@ -291,6 +291,25 @@ public EPMaterials() {}
     public static Material UraniumOxideThoriumNitrate;
     public static Material ThoriumNitrateSolution;
     public static Material ThoriumOxide;
+    public static Material GoldCopperMixture;
+    public static Material LeachingGold;
+    public static Material ChloroauricAcid;
+    public static Material LeachingCopper;
+    public static Material PotassiumMetabisulfite;
+    public static Material PlatinumMetal;
+    public static Material PlatinumSlag;
+    public static Material PalladiumMetal;
+    public static Material ConcentratePlatinum;
+    public static Material CrudePlatinum;
+    public static Material PalladiumRichAmmonia;
+    public static Material IridiumDioxide;
+    public static Material AcidicIridiumSolution;
+    public static Material OsmiumTetrachloride;
+    public static Material RutheniumChloride;
+    public static Material SodiumPeroxide;
+    public static Material RhodiumOxide;
+    public static Material PlatinumGroupSludgeSolution;
+    public static Material AmmoniumHexachloroPlatinumGroupSludge;
 
     //  Second Degree Materials
     public static Material DragonBreath;
