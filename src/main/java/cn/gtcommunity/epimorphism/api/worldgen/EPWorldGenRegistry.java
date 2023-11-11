@@ -35,10 +35,15 @@ public class EPWorldGenRegistry {
         extractJarVeinDefinitions(configPath, veinPath);
 
         //  Add WorldGen
-        WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/nether/precious_metal.json"));
+        WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/overworld/prasiolite_vein.json"));
+        WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/overworld/magnetite_vein.json"));
+        WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/nether/banded_iron_vein.json"));
+        WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/end/magnetite_vein.json"));
 
         //  Remove WorldGen
         overrideList.add("overworld/magnetite_vein.json");
+        overrideList.add("nether/banded_iron_vein");
+        overrideList.add("end/magnetite_vein.json");
     }
 
     public static void override() {

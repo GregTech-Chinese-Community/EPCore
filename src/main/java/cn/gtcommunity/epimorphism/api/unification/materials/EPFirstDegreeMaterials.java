@@ -1244,9 +1244,11 @@ public class EPFirstDegreeMaterials {
         //  24162 Prasiolite
         Prasiolite = new Material.Builder(getMaterialsId(), gregtechId("prasiolite"))
                 .gem()
+                .ore(1, 3, false)
+                .addOreByproducts(SiliconDioxide)
                 .color(0x9EB749)
                 .iconSet(QUARTZ)
-                .components(Silicon, 5, Oxygen, 10, Iron, 1)
+                .components(SiliconDioxide, 5, Iron, 1)
                 .build();
         //  24163 Magneto Resonatic
         MagnetoResonatic = new Material.Builder(getMaterialsId(), gregtechId("magneto_resonatic"))
@@ -1979,6 +1981,159 @@ public class EPFirstDegreeMaterials {
                 .components(Thorium, 1, Oxygen, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24266 Gold Copper Mixture
+        GoldCopperMixture = new Material.Builder(getMaterialsId(), gregtechId("gold_copper_mixture"))
+                .dust()
+                .color(0xD2D242)
+                .iconSet(SHINY)
+                .components(Copper, 3, Gold, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Cu3Au?");
+        //  24267 Leaching Gold
+        LeachingGold = new Material.Builder(getMaterialsId(), gregtechId("leaching_gold"))
+                .dust()
+                .color(0xA7650F)
+                .iconSet(ROUGH)
+                .components(Copper, 3, Gold, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Cu3Au?");
+        //  24268 Chloroauric Acid
+        ChloroauricAcid = new Material.Builder(getMaterialsId(), gregtechId("chloroauric_acid"))
+                .fluid()
+                .color(LeachingGold.getMaterialRGB() + HydrochloricAcid.getMaterialRGB())
+                .components(Hydrogen, 1, Gold, 1, Chlorine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("HAuCl?", true);
+        //  24269 Leaching Copper
+        LeachingCopper = new Material.Builder(getMaterialsId(), gregtechId("leaching_copper"))
+                .dust()
+                .color(Copper.getMaterialRGB() + LeachingGold.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Copper, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Cu3?", true);
+        //  24270 Potassium Metabisulfite
+        PotassiumMetabisulfite = new Material.Builder(getMaterialsId(), gregtechId("potassium_metabisulfite"))
+                .dust()
+                .color(Potassium.getMaterialRGB() + Sulfur.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Potassium, 2, Sulfur, 2, Oxygen, 5)
+                .build();
+        //  24271 Platinum Metal
+        PlatinumMetal = new Material.Builder(getMaterialsId(), gregtechId("platinum_metal"))
+                .dust()
+                .color(PlatinumRaw.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Platinum, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Pt?", false);
+        //  24272 Platinum Slag
+        PlatinumSlag = new Material.Builder(getMaterialsId(), gregtechId("platinum_slag"))
+                .dust()
+                .color(PlatinumRaw.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Platinum, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Pt?", false);
+        //  24273 Palladium Metal
+        PalladiumMetal = new Material.Builder(getMaterialsId(), gregtechId("palladium_metal"))
+                .dust()
+                .color(Palladium.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Palladium, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Pd?", false);
+        //  24274 Concentrate Platinum
+        ConcentratePlatinum = new Material.Builder(getMaterialsId(), gregtechId("concentrate_platinum"))
+                .fluid()
+                .color(Platinum.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Platinum, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Pt?", false);
+        //  24275 Crude Platinum
+        CrudePlatinum = new Material.Builder(getMaterialsId(), gregtechId("crude_platinum"))
+                .dust()
+                .color(PlatinumRaw.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Platinum, 1, Chlorine, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("PtCl2?", true);
+        //  24276 Palladium Rich Ammonia
+        PalladiumRichAmmonia = new Material.Builder(getMaterialsId(), gregtechId("palladium_rich_ammonia"))
+                .fluid(FluidTypes.GAS)
+                .color(Palladium.getMaterialRGB() + Ammonia.getMaterialRGB())
+                .components(Palladium, 1, Ammonia, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Pd(NH3)?", true);
+        //  24277 Iridium Dioxide
+        IridiumDioxide = new Material.Builder(getMaterialsId(), gregtechId("iridium_dioxide"))
+                .dust()
+                .color(Iridium.getMaterialRGB() + Oxygen.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Iridium, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24278 Acidic Iridium Solution
+        AcidicIridiumSolution = new Material.Builder(getMaterialsId(), gregtechId("acidic_iridium_solution"))
+                .fluid()
+                .color(IridiumDioxide.getMaterialRGB() + HydrochloricAcid.getMaterialRGB())
+                .components(IridiumDioxide, 2, HydrochloricAcid, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24279 Osmium Tetrachloride
+        OsmiumTetrachloride = new Material.Builder(getMaterialsId(), gregtechId("osmium_tetrachloride"))
+                .dust()
+                .color(0x29080A)
+                .iconSet(METALLIC)
+                .components(Osmium, 1, Chlorine, 4)
+                .build();
+        //  24280 Ruthenium Chloride
+        RutheniumChloride = new Material.Builder(getMaterialsId(), gregtechId("ruthenium_chloride"))
+                .dust()
+                .color(0x605C6C)
+                .iconSet(METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Ruthenium, 1, Chlorine, 3)
+                .build();
+        //  24281 Sodium Peroxide
+        SodiumPeroxide = new Material.Builder(getMaterialsId(), gregtechId("sodium_peroxide"))
+                .dust()
+                .color(0xECFF80)
+                .iconSet(ROUGH)
+                .components(Sodium, 2, Oxygen, 2)
+                .build();
+        //  24282 Rhodium Oxide
+        RhodiumOxide = new Material.Builder(getMaterialsId(), gregtechId("rhodium_oxide"))
+                .dust()
+                .color(0xD93D16)
+                .iconSet(METALLIC)
+                .components(Rhodium, 2, Oxygen, 3)
+                .build();
+        //  24283 Platinum Group Sludge Solution
+        PlatinumGroupSludgeSolution = new Material.Builder(getMaterialsId(), gregtechId("platinum_group_sludge_solution"))
+                .fluid()
+                .color(PlatinumGroupSludge.getMaterialRGB())
+                .iconSet(DULL)
+                .build()
+                .setFormula("Au?Ag(SiO2)2Pt?Pd?Ru?Rh?(H2O)(HCl)", true);
+        //  24284 Ammonium Hexachloro Platinum Group Sludge
+        AmmoniumHexachloroPlatinumGroupSludge = new Material.Builder(getMaterialsId(), gregtechId("ammonium_hexachloro_platinum_group_sludge"))
+                .fluid()
+                .color(0xFEF0C2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(NH4)Au?Ag(SiO2)2Pt?Pd?Ru?Rh?Cl6(H2O)(HCl)", true);
     }
 
     private static int getMaterialsId() {

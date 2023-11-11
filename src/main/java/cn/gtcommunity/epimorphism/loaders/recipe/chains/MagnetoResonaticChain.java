@@ -44,18 +44,6 @@ public class MagnetoResonaticChain {
                 .duration(160)
                 .buildAndRegister();
 
-        //  Banded Iron + Silicon Dioxide + Silicon + Oxygen -> Prasiolite + Ash
-        ROASTER_RECIPES.recipeBuilder()
-                .input(dust, BandedIron)
-                .input(dust, SiliconDioxide, 8)
-                .input(dust, Silicon, 2)
-                .fluidInputs(Oxygen.getFluid(1000))
-                .output(dust, Prasiolite, 2)
-                .output(dustTiny, Ash, 2)
-                .EUt(VA[MV])
-                .duration(800)
-                .buildAndRegister();
-
         //  Magneto Resonatic
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, BismuthTellurite, 4)

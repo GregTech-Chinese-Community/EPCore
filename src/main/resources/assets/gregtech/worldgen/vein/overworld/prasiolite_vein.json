@@ -1,15 +1,12 @@
 {
-  "weight": 12,
+  "weight": 40,
   "density": 0.25,
+  "max_height": 60,
   "min_height": 20,
-  "max_height": 50,
   "vein_populator": {
     "type": "surface_rock",
-    "material": "precious_metal"
+    "material": "prasiolite"
   },
-  "dimension_filter": [
-    "is_nether"
-  ],
   "generator": {
     "type": "layered",
     "radius": [
@@ -21,16 +18,16 @@
     "type": "layered",
     "values": [
       {
-        "primary": "ore:wulfenite"
+        "primary": "ore:prasiolite"
       },
       {
-        "secondary": "ore:molybdenite"
+        "secondary": "ore:soapstone"
       },
       {
-        "between": "ore:molybdenum"
+        "between": "ore:almandine"
       },
       {
-        "sporadic": "ore:powellite"
+        "sporadic": "ore:grossular"
       }
     ]
   }

@@ -82,21 +82,25 @@ public class EPUnknownCompositionMaterials {
                 .build();
         //  25213 Precious Metal
         PreciousMetal = new Material.Builder(getMaterialsId(), gregtechId("precious_metal"))
+                .ore(1, 1, false)
                 .dust()
+                .addOreByproducts(Iron)
                 .color(0xDAA520)
-                .ore()
-                .build();
+                .iconSet(DULL)
+                .build()
+                .setFormula("Au?", false);
         //  25214 Iridium Platinum Metal Dust
         IridiumPlatinumMetalDust = new Material.Builder(getMaterialsId(), gregtechId("iridium_platinum_metal_dust"))
                 .dust()
                 .color(0x87CEFA)
-                .ore()
-                .build();
+                .iconSet(ROUGH)
+                .build()
+                .setFormula("Ir2O4(SiO2)2Au3Pt?", true);
         //  25215 Rarest Metal Residue
         RarestMetalResidue = new Material.Builder(getMaterialsId(), gregtechId("rarest_metal_residue"))
                 .dust()
                 .color(0xA0522D)
-                .ore()
+                .iconSet(DULL)
                 .build();
         //  25216 Crude Naquadah Fuel
         CrudeNaquadahFuel = new Material.Builder(getMaterialsId(), gregtechId("crude_naquadah_fuel"))
