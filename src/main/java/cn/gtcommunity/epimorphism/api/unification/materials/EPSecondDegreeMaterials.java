@@ -32,11 +32,6 @@ public class EPSecondDegreeMaterials {
                 .iconSet(DULL)
                 .build()
                 .setFormula("*Dr*Rn?", true);
-        //  25404 Impurities Precious Metal Cold Solution
-        ImpuritiesPreciousMetalColdSolution = new Material.Builder(getMaterialsId(), gregtechId("impuritie_precious_metal_cold_solution"))
-                .fluid(FluidTypes.LIQUID, false)
-                .color(0x6495ED)
-                .build();
     }
 
     private static int getMaterialsId() {

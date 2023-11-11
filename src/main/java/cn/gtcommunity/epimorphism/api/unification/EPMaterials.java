@@ -310,12 +310,13 @@ public EPMaterials() {}
     public static Material RhodiumOxide;
     public static Material PlatinumGroupSludgeSolution;
     public static Material AmmoniumHexachloroPlatinumGroupSludge;
+    public static Material LeachingNickel;
+    public static Material GoldNickelMixture;
 
     //  Second Degree Materials
     public static Material DragonBreath;
     public static Material ConcentrateDragonBreath;
     public static Material DragonBlood;
-    public static Material ImpuritiesPreciousMetalColdSolution;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

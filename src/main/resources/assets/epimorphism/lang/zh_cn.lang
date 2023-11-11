@@ -1176,12 +1176,13 @@ gregtech.material.sodium_peroxide=过氧化钠
 gregtech.material.rhodium_oxide=三氧化二铑
 gregtech.material.platinum_group_sludge_solution=铂族金属泥浆液
 gregtech.material.ammonium_hexachloro_platinum_group_sludge=六氯铵酸化铂族金属泥浆液
+gregtech.material.leaching_nickel=镍浸出物
+gregtech.material.gold_nickel_mixture=镍金混合物
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
 gregtech.material.concentrate_dragon_breath=浓缩龙息
 gregtech.material.dragon_blood=龙血
-gregtech.material.impuritie_precious_metal_cold_solution=含杂贵金属冷溶液
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

@@ -25,6 +25,14 @@ public class PreciousMetalChain {
                 .duration(200)
                 .buildAndRegister();
 
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Nickel, 3)
+                .input(dust, PreciousMetal)
+                .output(dust, GoldNickelMixture, 4)
+                .EUt(VA[LV])
+                .duration(200)
+                .buildAndRegister();
+
         //  Gold Copper Mixture -> Leaching Gold
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, GoldCopperMixture, 4)
@@ -35,11 +43,30 @@ public class PreciousMetalChain {
                 .duration(80)
                 .buildAndRegister();
 
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, GoldNickelMixture, 4)
+                .fluidInputs(NitricAcid.getFluid(1000))
+                .output(dust, LeachingNickel, 4)
+                .fluidOutputs(NitrogenDioxide.getFluid(2000))
+                .EUt(VA[LV])
+                .duration(80)
+                .buildAndRegister();
+
         //  Leaching Gold Electrolyzer recipe
         ELECTROLYZER_RECIPES.recipeBuilder()
                 .input(dust, LeachingGold, 4)
                 .fluidInputs(Hydrogen.getFluid(1000))
                 .output(dust, Copper, 3)
+                .output(dustTiny, Gold, 8)
+                .fluidOutputs(Water.getFluid(1000))
+                .EUt(VA[LV])
+                .duration(300)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, LeachingNickel, 4)
+                .fluidInputs(Hydrogen.getFluid(1000))
+                .output(dust, Nickel, 3)
                 .output(dustTiny, Gold, 8)
                 .fluidOutputs(Water.getFluid(1000))
                 .EUt(VA[LV])
@@ -132,6 +159,15 @@ public class PreciousMetalChain {
                 .fluidInputs(AquaRegia.getFluid(100))
                 .output(dust, PlatinumGroupSludge, 2)
                 .fluidOutputs(SulfuricCopperSolution.getFluid(1000))
+                .EUt(VA[HV])
+                .duration(140)
+                .buildAndRegister();
+
+        DISSOLUTION_TANK_RECIPES.recipeBuilder()
+                .input(dust, LeachingNickel, 4)
+                .fluidInputs(AquaRegia.getFluid(100))
+                .output(dust, PlatinumGroupSludge, 2)
+                .fluidOutputs(SulfuricNickelSolution.getFluid(1000))
                 .EUt(VA[HV])
                 .duration(140)
                 .buildAndRegister();
