@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.api.EPAPI;
 import cn.gtcommunity.epimorphism.api.capability.pollution.IPollution;
 import cn.gtcommunity.epimorphism.api.capability.pollution.PollutionProvider;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.api.worldgen.EPWorldGenRegistry;
 import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
@@ -14,6 +15,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import java.io.IOException;
 
 @Mod(
         modid = "epimorphism",
@@ -44,7 +47,7 @@ public class Epimorphism {
     }
 
     @Mod.EventHandler
-    public void onPreInit(FMLPreInitializationEvent event) {
+    public void onPreInit(FMLPreInitializationEvent event) throws IOException {
         EPLog.init(event.getModLog());
         ConfigHolder.machines.highTierContent = true;
         EPLog.logger.info("Enabled GregTechCEu highTierContent");
@@ -52,6 +55,7 @@ public class Epimorphism {
         EPMetablocks.init();
         EPAPI.APIBlockInit();
         EPMetaTileEntities.init();
+        EPWorldGenRegistry.init();
 
         CapabilityManager.INSTANCE.register(IPollution.class, new PollutionProvider.Storage(), PollutionProvider.Impl::new);
         proxy.preLoad();
