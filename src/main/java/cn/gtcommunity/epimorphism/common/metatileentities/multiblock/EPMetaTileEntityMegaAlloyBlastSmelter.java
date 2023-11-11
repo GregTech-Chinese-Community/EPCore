@@ -1,14 +1,20 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
+import cn.gtcommunity.epimorphism.api.EPAPI;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.GlassTierMultiblockController;
 import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
 import gregicality.multiblocks.api.recipes.GCYMRecipeMaps;
 import gregicality.multiblocks.api.render.GCYMTextures;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 import gregtech.api.GTValues;
+import gregtech.api.GregTechAPI;
 import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.capability.IEnergyContainer;
 import gregtech.api.capability.IHeatingCoil;
@@ -18,20 +24,19 @@ import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
-import gregtech.api.pattern.BlockPattern;
-import gregtech.api.pattern.FactoryBlockPattern;
-import gregtech.api.pattern.PatternMatchContext;
-import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.api.pattern.*;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
-import gregtech.common.blocks.BlockBoilerCasing;
+import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockWireCoil;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.Style;
@@ -43,7 +48,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockController implements IHeatingCoil {
 
@@ -51,6 +60,22 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
     protected int heatingCoilLevel;
     protected int heatingCoilDiscount;
     protected int coilTier;
+
+    private int count = 0;
+    List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
+            .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
+            .map(Map.Entry::getKey)
+            .collect(Collectors.toList());
+    List<IBlockState> listGlass = EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream()
+            .sorted(Comparator.comparingInt(entry -> (int) entry.getValue().getTier()))
+            .map(Map.Entry::getKey)
+            .collect(Collectors.toList());
+    int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
+        add(listCoil);
+        add(listGlass);
+    }});
+    List<IBlockState> finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
+    List<IBlockState> finalListGlass = EPUniverUtil.consistentList(listGlass, maxLeng);
 
     public EPMetaTileEntityMegaAlloyBlastSmelter(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GCYMRecipeMaps.ALLOY_BLAST_RECIPES);
@@ -104,23 +129,22 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                 .aisle("   BBBBB   ", "   CCCCC   ", "   CCCCC   ", "   CCCCC   ", "   BBBBB   ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ")
                 .aisle("  BDDDDDB  ", "  G     G  ", "  G     G  ", "  G     G  ", "  BDDDDDB  ", "   DDDDD   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   DDDDD   ", "   DDDDD   ", "           ")
                 .aisle(" BDDHHHDDB ", " G       G ", " G       G ", " G       G ", " BDDHHHDDB ", "  DVVVVVD  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  DDDDDDD  ", "  DDDDDDD  ", "   DDDDD   ")
-                .aisle("BDDDDDDDDDB", "C  AWWWA  C", "C  ABBBA  C", "C  ABBBA  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                .aisle("BDDDDDDDDDB", "C  VWWWV  C", "C  VBBBV  C", "C  VBBBV  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
                 .aisle("BDHDDDDDHDB", "C  W   W  C", "C  B   B  C", "C  B   B  C", "BDHDDDDDHDB", " DVVVVVVVD ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
-                .aisle("BDHDDDDDHDB", "C  W A W  C", "C  B A B  C", "C  B A B  C", "BDHDDADDHDB", " DVVVAVVVD ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " GW  A  WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDMDDD  ")
+                .aisle("BDHDDDDDHDB", "C  W V W  C", "C  B V B  C", "C  B V B  C", "BDHDDVDDHDB", " DVVVVVVVD ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDMDDD  ")
                 .aisle("BDHDDDDDHDB", "C  W   W  C", "C  B   B  C", "C  B   B  C", "BDHDDDDDHDB", " DVVVVVVVD ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
-                .aisle("BDDDDDDDDDB", "C  AWWWA  C", "C  ABBBA  C", "C  ABBBA  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                .aisle("BDDDDDDDDDB", "C  VWWWV  C", "C  VBBBV  C", "C  VBBBV  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
                 .aisle(" BDDHHHDDB ", " G       G ", " G       G ", " G       G ", " BDDHHHDDB ", "  DVVVVVD  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  DDDDDDD  ", "  DDDDDDD  ", "   DDDDD   ")
                 .aisle("  BDDDDDB  ", "  G     G  ", "  G     G  ", "  G     G  ", "  BDDDDDB  ", "   DDDDD   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   DDDDD   ", "   DDDDD   ", "           ")
                 .aisle("   BBBBB   ", "   CCCCC   ", "   CCSCC   ", "   CCCCC   ", "   BBBBB   ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ")
                 .where('S', selfPredicate())
-                .where('A', states(getUnknowState()))
                 .where('B', states(getVentState()))
                 .where('D', states(getCasingState()))
                 .where('G', EPTraceabilityPredicate.EP_GLASS.get())
                 .where('H', states(getVentState()))
                 .where('V', states(getBoilerState()))
                 .where('W', TraceabilityPredicate.HEATING_COILS.get())
-                .where('C', states(getCasingState()).or(autoAbilities(true, true, true, true, true, true, false)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(15).or(autoAbilities(true, true, true, false, true, true, false)))
                 .where('M', abilities(MultiblockAbility.MUFFLER_HATCH))
                 .where(' ', any())
                 .build();
@@ -134,14 +158,8 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
      }
 
      private static IBlockState getBoilerState() {
-        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE);
+        return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.ALLOY_SMELTING_PIPE_CASING);
      }
-
-     private static IBlockState getUnknowState() {
-        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.BRONZE_PIPE);
-     }
-
-     //TODO 预览
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -183,6 +201,53 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                         .setStyle(new Style().setColor(TextFormatting.RED)));
             }
         }
+    }
+
+    @Override
+    public List<MultiblockShapeInfo> getMatchingShapes() {
+        ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList<>();
+        MultiblockShapeInfo.Builder builder = null;
+        if (Blocks.AIR != null) {
+            builder = MultiblockShapeInfo.builder()
+                    .aisle("   BBBBB   ", "   CCENC   ", "   CCCCC   ", "   CCCCC   ", "   BBBBB   ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ")
+                    .aisle("  BDDDDDB  ", "  G     G  ", "  G     G  ", "  G     G  ", "  BDDDDDB  ", "   DDDDD   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   DDDDD   ", "   DDDDD   ", "           ")
+                    .aisle(" BDDHHHDDB ", " G       G ", " G       G ", " G       G ", " BDDHHHDDB ", "  DVVVVVD  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  DDDDDDD  ", "  DDDDDDD  ", "   DDDDD   ")
+                    .aisle("BDDDDDDDDDB", "C  VWWWV  C", "C  VBBBV  C", "C  VBBBV  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                    .aisle("BDHDDDDDHDB", "C  W   W  C", "C  B   B  C", "C  B   B  C", "BDHDDDDDHDB", " DVVVVVVVD ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                    .aisle("BDHDDDDDHDB", "C  W V W  C", "C  B V B  C", "C  B V B  C", "BDHDDVDDHDB", " DVVVVVVVD ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " GW  V  WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDMDDD  ")
+                    .aisle("BDHDDDDDHDB", "C  W   W  C", "C  B   B  C", "C  B   B  C", "BDHDDDDDHDB", " DVVVVVVVD ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " GW     WG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                    .aisle("BDDDDDDDDDB", "C  VWWWV  C", "C  VBBBV  C", "C  VBBBV  C", "BDDDDDDDDDB", " DVVVVVVVD ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " GWW   WWG ", " DDDDDDDDD ", " DDDDDDDDD ", "  DDDDDDD  ")
+                    .aisle(" BDDHHHDDB ", " G       G ", " G       G ", " G       G ", " BDDHHHDDB ", "  DVVVVVD  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  GWWWWWG  ", "  DDDDDDD  ", "  DDDDDDD  ", "   DDDDD   ")
+                    .aisle("  BDDDDDB  ", "  G     G  ", "  G     G  ", "  G     G  ", "  BDDDDDB  ", "   DDDDD   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   GGGGG   ", "   DDDDD   ", "   DDDDD   ", "           ")
+                    .aisle("   BBBBB   ", "   ICXCJ   ", "   CCSCC   ", "   CCCCC   ", "   BBBBB   ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ")
+                    .where('S', EPMetaTileEntities.MEGA_ALLOY_BLAST_SMELTER, EnumFacing.SOUTH)
+                    .where('B', getVentState())
+                    .where('D', getCasingState())
+                    .where('H', getVentState())
+                    .where('V', getBoilerState())
+                    .where('C', getCasingState())
+                    .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[5], EnumFacing.NORTH)
+                    .where('N', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : getCasingState(), EnumFacing.NORTH)
+                    .where('I', MetaTileEntities.FLUID_IMPORT_HATCH[4], EnumFacing.SOUTH)
+                    .where('X', MetaTileEntities.ITEM_IMPORT_BUS[4], EnumFacing.SOUTH)
+                    .where('J', MetaTileEntities.FLUID_EXPORT_HATCH[4], EnumFacing.SOUTH)
+                    .where('M', MetaTileEntities.MUFFLER_HATCH[1], EnumFacing.UP)
+                    .where(' ', Blocks.AIR.getDefaultState());
+        }
+        MultiblockShapeInfo.Builder finalBuilder = builder;
+
+        finalListCoil.stream()
+                .map(b -> {
+                    MultiblockShapeInfo.Builder midFinalBuilder = finalBuilder;
+                    if (midFinalBuilder != null) {
+                        midFinalBuilder.where('W', b);
+                        midFinalBuilder.where('G', finalListGlass.get(count));
+                        count++;
+                    }
+                    return midFinalBuilder;
+                }).forEach(b -> shapeInfo.add(b.build()));
+        count = 0;
+        return shapeInfo;
     }
 
     @Override

@@ -309,6 +309,7 @@ tile.ep_multiblock_casing_b.babbitt_alloy_casing.name=抗瘿巴氏合金机器�
 tile.ep_multiblock_casing.vacuum_casing.name=高气密红钢机器外壳
 tile.ep_multiblock_casing_b.zirconium_carbide_casing.name=超耐热碳化锆机器外壳
 tile.ep_multiblock_casing_b.supercritical_fluid_turbine_casing.name=MAR-M200特种钢超临界涡轮外壳
+tile.ep_multiblock_casing_b.supercritical_fluid_turbine_shaft_block.name=超临界涡轮传动转轴方块
 tile.ep_multiblock_casing_b.corrosion_casing.name=抗腐蚀超级奥氏体不锈钢-904L机器外壳
 tile.ep_multiblock_casing_b.hastelloy_x78_casing.name=矩阵强化哈斯特洛伊合金-X78机器外壳
 tile.ep_multiblock_casing_b.stellar_containment_casing.name=恒星热力容器
@@ -364,6 +365,7 @@ tile.ep_explosive_block.taranium_charge.name=塔兰金属爆弹
 tile.ep_explosive_block.leptonic_charge.name=轻子爆弹
 tile.ep_explosive_block.quantum_chromodynamic_charge.name=量子色动力学爆弹
 tile.ep_wire_coil.adamantium.name=精金线圈方块
+tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=合金冶炼管道外壳
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硼硅酸盐玻璃
