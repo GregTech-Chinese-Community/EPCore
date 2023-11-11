@@ -279,6 +279,9 @@ metaitem.plasma_containment_cell.name=等离子体遏制装置
 metaitem.plasma_containment_cell.tooltip=用于封装等离子体
 metaitem.rhenium_plasma_containment_cell.name=铼等离子遏制装置
 metaitem.rhenium_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.neutron_plasma_containment_cell.name=中子等离子遏制装置
+metaitem.neutron_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.quantum_anomaly.name=量子反常
 
 #  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
@@ -313,6 +316,8 @@ tile.ep_multiblock_casing_b.hastelloy_k243_casing.name=高耐久哈斯特洛伊�
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk1.name=精密电子单元机械方块 Mk I
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk2.name=精密电子单元机械方块 Mk II
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk3.name=精密电子单元机械方块 Mk III
+tile.ep_multiblock_casing_b.cyclotron_casing.name=回旋加速机械方块
+tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -858,6 +863,11 @@ epimorphism.machine.compact_fusion_reactor_mk3.name=压缩核聚变反应堆控�
 epimorphism.machine.compact_fusion_reactor_mk4.name=压缩核聚变反应堆控制电脑 Mk IV
 epimorphism.machine.compact_fusion_reactor_mk5.name=压缩核聚变反应堆控制电脑 Mk V
 
+epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
+epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
+epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
+epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590 MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
+
 #  Materials
 
 ##  Element Materials
@@ -1120,6 +1130,11 @@ gregtech.material.free_electron_gas=自由电子气体
 gregtech.material.quark_gluon_plasma=夸克-胶子
 gregtech.material.light_quarks=轻夸克
 gregtech.material.ferric_catalyst=铁-过氧化氢混合催化剂
+gregtech.material.neutron=中子
+gregtech.material.helium_neon=氦-氖混合气
+gregtech.material.polonium_nitrate=硝酸钋
+gregtech.material.polonium_chloride=氯化亚钋
+gregtech.material.celestite=天青石
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1385,3 +1400,8 @@ gregtech.material.eglin_steel=埃格林钢
 gregtech.material.pikyonium_64_b=皮卡优合金-64B
 gregtech.material.cinobite=西诺柏
 gregtech.material.titan_steel=泰坦精钢
+gregtech.material.incoloy_ds=耐热铬铁合金-DS
+gregtech.material.inconel_690=镍基合金-690
+gregtech.material.tantalloy_61=钽钨合金-61
+gregtech.material.incoloy_020=耐热铬铁合金-020
+gregtech.material.hg_1223=HG-1223

@@ -1213,9 +1213,43 @@ public class MachineComponents {
                 .EUt(VA[LV])
                 .duration(50)
                 .buildAndRegister();
+
+        //  COMET Casings
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, IncoloyMA956)
+                .input(plate, IncoloyDS, 8)
+                .input(stickLong, EglinSteel, 4)
+                .input(ELECTRIC_PISTON_HV, 2)
+                .input(screw, Inconel690, 4)
+                .fluidInputs(ZirconiumCarbide.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.CYCLOTRON_CASING, 2))
+                .EUt(VA[ZPM])
+                .duration(50)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.WIRE_COIL.getItemVariant(BlockWireCoil.CoilType.NICHROME))
+                .input(FIELD_GENERATOR_EV)
+                .input(plate, Inconel625, 4)
+                .input(bolt, Tantalloy61, 16)
+                .input(screw, Incoloy020, 32)
+                .fluidInputs(HG1223.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.CYCLOTRON_COIL))
+                .EUt(VA[ZPM])
+                .duration(200)
+                .buildAndRegister();
     }
 
     private static void Materials() {
+        //  Helium-Neon Gas
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Helium.getFluid(1000))
+                .fluidInputs(Neon.getFluid(1000))
+                .fluidOutputs(HeliumNeon.getFluid(1000))
+                .EUt(VA[MV])
+                .duration(100)
+                .buildAndRegister();
+
         //  Babbitt Alloy
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Tin, 5)

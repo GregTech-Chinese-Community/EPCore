@@ -20,7 +20,7 @@ public class PlasmaCondenserRecipes {
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Helium.getFluid(16000))
                 .EUt(VA[UV])
-                .duration(250)
+                .duration(200)
                 .buildAndRegister();
 
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
@@ -31,7 +31,28 @@ public class PlasmaCondenserRecipes {
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Ice.getFluid(8000))
                 .EUt(VA[UV])
-                .duration(250)
+                .duration(200)
+                .buildAndRegister();
+
+        //  Neutron
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(LiquidHelium.getFluid(16000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Neutronium.getFluid(1000))
+                .fluidOutputs(Helium.getFluid(16000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(GelidCryotheum.getFluid(8000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidOutputs(Neutronium.getFluid(1000))
+                .fluidOutputs(Ice.getFluid(8000))
+                .EUt(VA[UV])
+                .duration(200)
                 .buildAndRegister();
 
         /*

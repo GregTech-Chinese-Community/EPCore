@@ -53,7 +53,7 @@ public class EPElementMaterials {
                 .element(EPElements.ChaoticDraconium)
                 .cableProperties(V[UEV], 32, 16)
                 .build();
-        //  FIXME Pay attention to these materials, they are just foil (not foil in gregtech)!
+        //  Pay attention to these materials, they are just foil (not foil in gregtech)!
         //  26004 Orichalcum
         Orichalcum = new Material.Builder(getMaterialsId(), gregtechId("orichalcum"))
                 .ingot()
@@ -149,6 +149,7 @@ public class EPElementMaterials {
         DegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("degenerate_rhenium"))
                 .dust()
                 .fluid(FluidTypes.PLASMA)
+                .fluidTemp((int) V[UV])
                 .color(0x6666FF)
                 .iconSet(CUSTOM_DEGENERATE_RHENIUM)
                 .element(Elements.Rh)

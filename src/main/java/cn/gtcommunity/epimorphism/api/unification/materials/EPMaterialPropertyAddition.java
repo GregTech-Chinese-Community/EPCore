@@ -50,8 +50,14 @@ public class EPMaterialPropertyAddition {
         Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Polonium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Fermium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Fermium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Promethium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Mendelevium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Bohrium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Bohrium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Curium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Curium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);
@@ -99,6 +105,7 @@ public class EPMaterialPropertyAddition {
         NeodymiumMagnetic.addFlags(GENERATE_LONG_ROD);
         Chrome.addFlags(GENERATE_LONG_ROD);
         Ruridit.addFlags(GENERATE_DOUBLE_PLATE);
+        Bohrium.addFlags(GENERATE_PLATE, GENERATE_DENSE);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);

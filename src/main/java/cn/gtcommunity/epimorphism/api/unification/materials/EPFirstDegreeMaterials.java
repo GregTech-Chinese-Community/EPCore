@@ -1827,6 +1827,45 @@ public class EPFirstDegreeMaterials {
                 .color(FerricOxide.getMaterialRGB() + HydrogenPeroxide.getMaterialRGB())
                 .components(FerricOxide, 1, HydrogenPeroxide, 1)
                 .build();
+        //  24245 Neutron
+        Neutron = new Material.Builder(getMaterialsId(), gregtechId("neutron"))
+                .plasma()
+                .fluidTemp((int) V[UXV])
+                .color(0xFCFCFC)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a" + TextFormatting.RESET + "n§e" + TextFormatting.OBFUSCATED + "a", false);
+        //  24246 Helium-Neon Gas
+        HeliumNeon = new Material.Builder(getMaterialsId(), gregtechId("helium_neon"))
+                .fluid(FluidTypes.GAS)
+                .color(0xFF0080)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .components(Helium, 1, Neon, 1)
+                .build();
+        //  24247 Polonium Nitrate
+        PoloniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("polonium_nitrate"))
+                .fluid()
+                .color(Polonium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .components(Polonium, 1, Nitrogen, 4, Oxygen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Po(NO3)4", true);
+        //  24248 Polonium Chloride
+        PoloniumChloride = new Material.Builder(getMaterialsId(), gregtechId("polonium_chloride"))
+                .dust()
+                .color(Polonium.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .components(Polonium, 1, Chlorine, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24249 Celestite
+        Celestite = new Material.Builder(getMaterialsId(), gregtechId("celestite"))
+                .gem()
+                .ore(1, 1, true)// TODO Why the vein no generate in world?!!!
+                .addOreByproducts(Barium)
+                .color(0x4AE3E6)
+                .iconSet(OPAL)
+                .components(Strontium, 1, Sulfur, 1, Oxygen, 4)
+                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING)
+                .build();
     }
 
     private static int getMaterialsId() {

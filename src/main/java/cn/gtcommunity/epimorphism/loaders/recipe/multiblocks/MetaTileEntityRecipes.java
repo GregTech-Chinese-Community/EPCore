@@ -825,6 +825,23 @@ public class MetaTileEntityRecipes {
                         .CWUt(32)
                         .EUt(VA[UV]))
                 .buildAndRegister();
+
+        //  TODO Large Circuit Assembly Line
+
+        //  Cyclotron
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, MARM200Steel)
+                .inputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.CYCLOTRON_CASING, 2))
+                .input(circuit, MarkerMaterials.Tier.ZPM, 4)
+                .input(plate, Pikyonium64B, 4)
+                .input(FIELD_GENERATOR_ZPM, 4)
+                .inputs(NEUTRON_REFLECTOR.getStackForm(2))
+                .input(cableGtQuadruple, VanadiumGallium, 2)
+                .fluidInputs(HY1301.getFluid(L * 4))
+                .outputs(CYCLOTRON.getStackForm())
+                .EUt(VA[ZPM])
+                .duration(1200)
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {

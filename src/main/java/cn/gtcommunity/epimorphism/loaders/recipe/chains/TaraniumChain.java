@@ -421,6 +421,6 @@ public class TaraniumChain {
                 .EUt(500000)
                 .buildAndRegister();
 
-        //  TODO Unstable Star for UEV-UIV Emitter/Sensor? May be use Vibranium or Adamantium
+        //  TODO Unstable Star for UIV Emitter/Sensor? May be use Vibranium or Adamantium
     }
 }

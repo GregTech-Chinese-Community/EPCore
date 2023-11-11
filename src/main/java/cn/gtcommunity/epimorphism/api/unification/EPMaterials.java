@@ -267,6 +267,11 @@ public EPMaterials() {}
     public static Material QuarkGluonPlasma;
     public static Material LightQuarks;
     public static Material FerricCatalyst;
+    public static Material Neutron;
+    public static Material HeliumNeon;
+    public static Material PoloniumNitrate;
+    public static Material PoloniumChloride;
+    public static Material Celestite;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -516,6 +521,11 @@ public EPMaterials() {}
     public static Material Pikyonium64B;
     public static Material Cinobite;
     public static Material TitanSteel;
+    public static Material IncoloyDS;
+    public static Material Inconel690;
+    public static Material Tantalloy61;
+    public static Material Incoloy020;
+    public static Material HG1223;
 
     //  Mod Compatibility Materials
     public static Material Mana;

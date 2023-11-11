@@ -163,6 +163,8 @@ public class EPMetaItems {
     //  High Energy Physics items
     public static MetaItem<?>.MetaValueItem PLASMA_CONTAINMENT_CELL;
     public static MetaItem<?>.MetaValueItem RHENIUM_PLASMA_CONTAINMENT_CELL;
+    public static MetaItem<?>.MetaValueItem NEUTRON_PLASMA_CONTAINMENT_CELL;
+    public static MetaItem<?>.MetaValueItem QUANTUM_ANOMALY;
 
     //  Biological
     public static MetaItem<?>.MetaValueItem ELECTROCHEMICAL_GRADIENT_RECORDER;

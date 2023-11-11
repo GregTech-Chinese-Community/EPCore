@@ -42,7 +42,7 @@ public class EPFusionLoader {
                 .fluidInputs(Americium.getFluid(16))
                 .fluidInputs(Neon.getFluid(125))
                 .fluidOutputs(Dubnium.getFluid(125))
-                .EUt(VA[UV])
+                .EUt(VA[ZPM])
                 .duration(160)
                 .EUToStart(380000000L)
                 .buildAndRegister();
@@ -52,8 +52,8 @@ public class EPFusionLoader {
                 .fluidInputs(Plutonium244.getFluid(16))
                 .fluidInputs(Calcium.getFluid(32))
                 .fluidOutputs(Seaborgium.getFluid(48))
-                .EUt(VA[ZPM])
-                .duration(320)
+                .EUt(VA[UV])
+                .duration(220)
                 .EUToStart(400000000L)
                 .buildAndRegister();
 
@@ -63,7 +63,7 @@ public class EPFusionLoader {
                 .fluidInputs(Neon.getFluid(16))
                 .fluidOutputs(Rutherfordium.getFluid(16))
                 .EUt(VA[LuV])
-                .duration(180)
+                .duration(120)
                 .EUToStart(150000000L)
                 .buildAndRegister();
 
@@ -73,8 +73,38 @@ public class EPFusionLoader {
                 .fluidInputs(Titanium.getFluid(32))
                 .fluidOutputs(Livermorium.getFluid(64))
                 .EUt(VA[UV])
-                .duration(600)
+                .duration(200)
                 .EUToStart(650000000L)
+                .buildAndRegister();
+
+        //  (Mk II) Plutonium-239 + Helium -> Curium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium239.getFluid(32))
+                .fluidInputs(Helium.getPlasma(144))
+                .fluidOutputs(Curium.getFluid(144))
+                .EUt(VA[ZPM])
+                .duration(50)
+                .EUToStart(280000000L)
+                .buildAndRegister();
+
+        //  (Mk III) Curium + Sodium -> Bohrium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Curium.getFluid(288))
+                .fluidInputs(Sodium.getFluid(288))
+                .fluidOutputs(Bohrium.getFluid(576))
+                .EUt(VA[UHV])
+                .duration(140)
+                .EUToStart(400000000L)
+                .buildAndRegister();
+
+        //  (Mk III) Plutonium-241 + Neutron -> Fermium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Plutonium241.getFluid(144))
+                .fluidInputs(Neutron.getPlasma(144))
+                .fluidOutputs(Fermium.getFluid(288))
+                .EUt(VA[UV])
+                .duration(80)
+                .EUToStart(500000000L)
                 .buildAndRegister();
     }
 }

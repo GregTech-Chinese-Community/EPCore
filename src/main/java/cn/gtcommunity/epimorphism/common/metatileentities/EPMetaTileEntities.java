@@ -101,6 +101,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityMegaTurbine MEGA_SUPERCRITICAL_STEAM_TURBINE;
     public static EPMetaTileEntityPreciseAssembler PRECISE_ASSEMBLER;
     public static EPMetaTileEntityComponentAssemblyLine COMPONENT_ASSEMBLY_LINE;
+//    public static EPMetaTileEntityLargeCircuitAssemblyLine LARGE_CIRCUIT_ASSEMBLY_LINE;
+    public static EPMetaTileEntityCompactCyclotron CYCLOTRON;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -204,5 +206,7 @@ public class EPMetaTileEntities {
 //        COMPACT_FUSION_REACTOR[4] = registerMultiMetaTileEntity(58, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk5"), 10, );
         PRECISE_ASSEMBLER = registerMultiMetaTileEntity(59, new EPMetaTileEntityPreciseAssembler(epId("precise_assembler")));
         COMPONENT_ASSEMBLY_LINE = registerMultiMetaTileEntity(60, new EPMetaTileEntityComponentAssemblyLine(epId("component_assembly_line")));
+//        LARGE_CIRCUIT_ASSEMBLY_LINE = registerMultiMetaTileEntity(61, new EPMetaTileEntityLargeCircuitAssemblyLine(epId("large_circuit_assembly_line")));
+        CYCLOTRON = registerMultiMetaTileEntity(62, new EPMetaTileEntityCompactCyclotron(epId("compact_cyclotron")));
     }
 }
