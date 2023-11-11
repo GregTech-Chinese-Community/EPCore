@@ -1238,6 +1238,19 @@ public class MachineComponents {
                 .EUt(VA[ZPM])
                 .duration(200)
                 .buildAndRegister();
+
+        //  Supercritical Fluid Turbine Shaft Block
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, MARM200Steel)
+                .input(plate, MARM200CeSteel, 4)
+                .input(plate, Staballoy, 4)
+                .input(stickLong, EglinSteel, 8)
+                .input(wireFine, Nichrome, 16)
+                .fluidInputs(IncoloyMA956.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_SHAFT_BLOCK))
+                .EUt(VA[IV])
+                .duration(180)
+                .buildAndRegister();
     }
 
     private static void Materials() {

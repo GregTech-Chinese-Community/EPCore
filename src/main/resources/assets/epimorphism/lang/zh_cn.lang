@@ -319,6 +319,7 @@ tile.ep_multiblock_casing_b.precise_assembler_casing_mk2.name=精密电子单元
 tile.ep_multiblock_casing_b.precise_assembler_casing_mk3.name=精密电子单元机械方块 Mk III
 tile.ep_multiblock_casing_b.cyclotron_casing.name=回旋加速机械方块
 tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
+tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=高强度热磁保护管道外壳
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -365,7 +366,6 @@ tile.ep_explosive_block.taranium_charge.name=塔兰金属爆弹
 tile.ep_explosive_block.leptonic_charge.name=轻子爆弹
 tile.ep_explosive_block.quantum_chromodynamic_charge.name=量子色动力学爆弹
 tile.ep_wire_coil.adamantium.name=精金线圈方块
-tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=合金冶炼管道外壳
 
 #  Glasses
 tile.ep_glass_casing.boron_silicate_glass.name=硼硅酸盐玻璃
@@ -1429,3 +1429,4 @@ gregtech.material.inconel_690=镍基合金-690
 gregtech.material.tantalloy_61=钽钨合金-61
 gregtech.material.incoloy_020=耐热铬铁合金-020
 gregtech.material.hg_1223=HG-1223
+gregtech.material.hms_1_j_22_alloy=高饱和磁感应软磁合金-1J22

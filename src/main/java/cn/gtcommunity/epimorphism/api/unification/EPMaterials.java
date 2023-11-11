@@ -547,6 +547,7 @@ public EPMaterials() {}
     public static Material Tantalloy61;
     public static Material Incoloy020;
     public static Material HG1223;
+    public static Material HMS1J22Alloy;
 
     //  Mod Compatibility Materials
     public static Material Mana;
