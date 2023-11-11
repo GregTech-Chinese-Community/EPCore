@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.api.worldgen;
 
 import gregtech.api.GTValues;
+import gregtech.api.util.FileUtility;
 import gregtech.api.util.GTLog;
 import gregtech.api.worldgen.config.OreDepositDefinition;
 import gregtech.api.worldgen.config.WorldGenRegistry;
@@ -13,13 +14,16 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class EPWorldGenRegistry {
     public static Path configPath = Loader.instance().getConfigDir().toPath().resolve(GTValues.MODID);
+    public static List<String> overrideList = new ArrayList<>();
 
     public static void init() throws IOException {
         // The path of the worldgen folder in the config folder
@@ -30,7 +34,19 @@ public class EPWorldGenRegistry {
             Files.createDirectories(veinPath);
         extractJarVeinDefinitions(configPath, veinPath);
 
+        //  Add WorldGen
         WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/nether/precious_metal.json"));
+
+        //  Remove WorldGen
+        overrideList.add("overworld/magnetite_vein.json");
+    }
+
+    public static void override() {
+        List<OreDepositDefinition> list = WorldGenRegistry.getOreDeposits().stream()
+                .filter(Objects::nonNull)
+                .filter(o -> overrideList.contains(FileUtility.nativeSepToSlash(o.getDepositName())))
+                .collect(Collectors.toList());
+        list.forEach(WorldGenRegistry.INSTANCE::removeVeinDefinitions);
     }
     private static void extractJarVeinDefinitions(Path configPath, Path targetPath) throws IOException {
         // The path of the worldgen folder in the config folder
