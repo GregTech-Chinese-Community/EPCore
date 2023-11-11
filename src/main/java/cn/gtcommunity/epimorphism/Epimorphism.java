@@ -9,11 +9,13 @@ import cn.gtcommunity.epimorphism.common.CommonProxy;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.items.EPMetaItems;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
+import gregtech.api.worldgen.config.WorldGenRegistry;
 import gregtech.common.ConfigHolder;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.io.IOException;
@@ -59,5 +61,10 @@ public class Epimorphism {
 
         CapabilityManager.INSTANCE.register(IPollution.class, new PollutionProvider.Storage(), PollutionProvider.Impl::new);
         proxy.preLoad();
+    }
+    @Mod.EventHandler
+    public void onInit(FMLInitializationEvent event) throws IOException {
+        EPWorldGenRegistry.override();
+        WorldGenRegistry.INSTANCE.reinitializeRegisteredVeins();
     }
 }
