@@ -2125,15 +2125,31 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(PlatinumGroupSludge.getMaterialRGB())
                 .iconSet(DULL)
-                .build()
-                .setFormula("Au?Ag(SiO2)2Pt?Pd?Ru?Rh?(H2O)(HCl)", true);
+                .build();
         //  24284 Ammonium Hexachloro Platinum Group Sludge
         AmmoniumHexachloroPlatinumGroupSludge = new Material.Builder(getMaterialsId(), gregtechId("ammonium_hexachloro_platinum_group_sludge"))
                 .fluid()
                 .color(0xFEF0C2)
                 .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24285 Leaching Nickel
+        LeachingNickel = new Material.Builder(getMaterialsId(), gregtechId("leaching_nickel"))
+                .dust()
+                .color(LeachingCopper.getMaterialRGB() + Nickel.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Nickel, 3)
+                .flags(DISABLE_DECOMPOSITION)
                 .build()
-                .setFormula("(NH4)Au?Ag(SiO2)2Pt?Pd?Ru?Rh?Cl6(H2O)(HCl)", true);
+                .setFormula("Ni3?", true);
+        //  24286 Gold Nickel Mixture
+        GoldNickelMixture = new Material.Builder(getMaterialsId(), gregtechId("gold_nickel_mixture"))
+                .dust()
+                .color(GoldCopperMixture.getMaterialRGB() + Nickel.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Nickel, 3, Gold, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ni3Au?", true);
     }
 
     private static int getMaterialsId() {
