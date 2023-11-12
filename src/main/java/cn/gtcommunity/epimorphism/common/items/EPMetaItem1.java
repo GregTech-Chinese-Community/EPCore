@@ -146,6 +146,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         BORON_NITRIDE_GRINDER = this.addItem(109, "grinder.boron_nitride");
         VACUUM_TUBE_COMPONENT = this.addItem(110, "component.vacuum_tube");
         SEPARATION_ELECTROMAGNET = this.addItem(111, "separation_electromagnet");
+        PROTONATED_FULLERENE_SIEVING_MATRIX = this.addItem(112, "protonated_fullerene_sieving_matrix");
+        SATURATED_FULLERENE_SIEVING_MATRIX = this.addItem( 113, "saturated_fullerene_sieving_matrix");
 
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");

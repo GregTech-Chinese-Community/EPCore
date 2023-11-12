@@ -72,6 +72,10 @@ public class EPMaterialPropertyAddition {
         Californium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Californium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Californium.setProperty(PropertyKey.ORE, new OreProperty(1, 1, false));
+        Astatine.setProperty(PropertyKey.DUST, new DustProperty());
+        Astatine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Protactinium.setProperty(PropertyKey.DUST, new DustProperty());
+        Francium.setProperty(PropertyKey.DUST, new DustProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

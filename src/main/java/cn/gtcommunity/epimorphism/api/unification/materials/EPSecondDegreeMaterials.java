@@ -18,20 +18,20 @@ public class EPSecondDegreeMaterials {
                 .fluid(FluidTypes.ACID)
                 .color(0x9400D3)
                 .build()
-                .setFormula("Dr?", false);
+                .setFormula("Dc?", false);
         //  25402 Concentrate Dragon Breath
         ConcentrateDragonBreath = new Material.Builder(getMaterialsId(), gregtechId("concentrate_dragon_breath"))
                 .fluid(FluidTypes.ACID)
                 .color(0x9400D3)
                 .build()
-                .setFormula("Dr2?", true);
+                .setFormula("Dc2?", true);
         //  25403 Dragon Blood
         DragonBlood = new Material.Builder(getMaterialsId(), gregtechId("dragon_blood"))
                 .fluid()
                 .color(0xDC2814)
                 .iconSet(DULL)
                 .build()
-                .setFormula("*Dr*Rn?", true);
+                .setFormula("*Dc*Rn?", true);
     }
 
     private static int getMaterialsId() {

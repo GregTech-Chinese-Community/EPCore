@@ -329,6 +329,19 @@ public EPMaterials() {}
     public static Material Californium252Hexafluoride;
     public static Material SteamCrackedCalifornium252Hexafluoride;
     public static Material Californium252Dioxide;
+    public static Material ActiniumDraconiumHydroxides;
+    public static Material ActiniumNitrate;
+    public static Material RadiumNitrate;
+    public static Material CaesiumCarborane;
+    public static Material SilverNitrate;
+    public static Material CaesiumNitrate;
+    public static Material SilverIodide;
+    public static Material CaesiumHydroxide;
+    public static Material SodiumTetrafluoroborate;
+    public static Material SodiumBorohydride;
+    public static Material SodiumEthoxide;
+    public static Material KryptonDifluoride;
+    public static Material DraconiumTetrafluoride;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -481,6 +494,16 @@ public EPMaterials() {}
     public static Material ElectrolyteReflectorMixture;
     public static Material EthyleneDibromide;
     public static Material GrignardReagent;
+    public static Material Fluorocarborane;
+    public static Material Perfluorobenzene;
+    public static Material Trimethylsilane;
+    public static Material Trimethylchlorosilane;
+    public static Material CaesiumCarboranePrecursor;
+    public static Material BoraneDimethylsulfide;
+    public static Material Decaborane;
+    public static Material DiethylEther;
+    public static Material BoronTrifluorideEtherate;
+    public static Material DimethylSulfide;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -552,6 +575,12 @@ public EPMaterials() {}
     public static Material SupercriticalSteam;
     public static Material HighTemperatureExhaustGas;
     public static Material ExhaustGas;
+    public static Material NitratedDragonDustSolution;
+    public static Material ResidualDraconiumSolution;
+    public static Material DraconiumSlagSolution;
+    public static Material ActiniumRadiumHydroxideSolution;
+    public static Material ActiniumRadiumNitrateSolution;
+    public static Material HeavyFluorinatedDraconiumSolution;
 
     //  Machine Casing Materials
     public static Material Inconel625;

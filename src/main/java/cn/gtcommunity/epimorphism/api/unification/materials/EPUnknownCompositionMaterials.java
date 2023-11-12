@@ -411,6 +411,38 @@ public class EPUnknownCompositionMaterials {
                 .color(0xEDEADE)
                 .fluidTemp(298)
                 .build();
+        //  25270 Nitrated Dragon Dust Solution
+        NitratedDragonDustSolution = new Material.Builder(getMaterialsId(), gregtechId("nitrated_dragon_dust_solution"))
+                .fluid(FluidTypes.ACID)
+                .color(0xF553FF)
+                .build();
+        //  25271 Residual Draconium Solution
+        ResidualDraconiumSolution = new Material.Builder(getMaterialsId(), gregtechId("residual_draconium_solution"))
+                .fluid()
+                .color(0x4321C5)
+                .build();
+        //  25272 Draconium Slag Solution
+        DraconiumSlagSolution = new Material.Builder(getMaterialsId(), gregtechId("draconium_slag_solution"))
+                .fluid()
+                .color(0x790D80)
+                .iconSet(DULL)
+                .build()
+                .setFormula("Dc?(H2O)", true);
+        //  25273 Actinium Radium Hydroxide Solution
+        ActiniumRadiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("actinium_radium_hydroxide_solution"))
+                .fluid()
+                .color(Actinium.getMaterialRGB() + Radium.getMaterialRGB())
+                .build();
+        //  25274 Actinium Radium Nitrate Solution
+        ActiniumRadiumNitrateSolution = new Material.Builder(getMaterialsId(), gregtechId("actinium_radium_nitrate_solution"))
+                .fluid()
+                .color(ActiniumRadiumHydroxideSolution.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .build();
+        //  25275 Heavy Fluorinated Draconium Solution
+        HeavyFluorinatedDraconiumSolution = new Material.Builder(getMaterialsId(), gregtechId("heavy_fluorinated_draconium_solution"))
+                .fluid()
+                .color(0x8C117D)
+                .build();
     }
 
     private static int getMaterialsId() {

@@ -2217,7 +2217,7 @@ public class EPFirstDegreeMaterials {
                 .color(Draconium.getMaterialRGB())
                 .iconSet(DULL)
                 .build()
-                .setFormula("Dr?", false);
+                .setFormula("Dc3Ac3Se4At4?", false);
         //  24296 Californium Nitrite
         CaliforniumNitrite = new Material.Builder(getMaterialsId(), gregtechId("californium_nitrite"))
                 .dust()
@@ -2269,6 +2269,109 @@ public class EPFirstDegreeMaterials {
                 .color(0x912D01)
                 .iconSet(ROUGH)
                 .components(Californium252, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24303 Actinium Draconium Hydroxides
+        ActiniumDraconiumHydroxides = new Material.Builder(getMaterialsId(), gregtechId("actinium_draconium_hydroxides"))
+                .dust()
+                .color(0xB613BF)
+                .iconSet(ROUGH)
+                .components(Draconium, 3, Actinium, 2, Oxygen, 12, Hydrogen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Dc3Ac3(OH)12", true);
+        //  24304 Actinium Nitrate
+        ActiniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("actinium_nitrate"))
+                .dust()
+                .color(Actinium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Actinium, 1, Nitrogen, 3, Oxygen, 9)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ac(NO3)3", true);
+        //  24305 Radium Nitrate
+        RadiumNitrate = new Material.Builder(getMaterialsId(), gregtechId("radium_nitrate"))
+                .dust()
+                .color(Radium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Radium, 1, Nitrogen, 2, Oxygen, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ra(NO3)2", true);
+        //  24306 Caesium Carborane
+        CaesiumCarborane = new Material.Builder(getMaterialsId(), gregtechId("caesium_carborane"))
+                .dust()
+                .color(Caesium.getMaterialRGB() + Carbon.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Caesium, 1, Carbon, 1, Boron, 11, Hydrogen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24307 Silver Nitrate
+        SilverNitrate = new Material.Builder(getMaterialsId(), gregtechId("silver_nitrate"))
+                .dust()
+                .color(Silver.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Silver, 1, Nitrogen, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24308 Caesium Nitrate
+        CaesiumNitrate = new Material.Builder(getMaterialsId(), gregtechId("caesium_nitrate"))
+                .dust()
+                .color(Caesium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Caesium, 1, Nitrogen, 1, Oxygen, 3)
+                .flags(DECOMPOSITION_BY_ELECTROLYZING)
+                .build();
+        //  24309 Silver Iodide
+        SilverIodide = new Material.Builder(getMaterialsId(), gregtechId("silver_iodide"))
+                .dust()
+                .iconSet(SHINY)
+                .color(Silver.getMaterialRGB() + Iodine.getMaterialRGB())
+                .components(Silver, 1, Iodine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24310 Caesium Hydroxide
+        CaesiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("caesium_hydroxide"))
+                .dust()
+                .color(Caesium.getMaterialRGB() + Hydrogen.getMaterialRGB() + Oxygen.getMaterialRGB())
+                .components(Caesium, 1, Oxygen, 1, Hydrogen, 1)
+                .flags(DECOMPOSITION_BY_ELECTROLYZING)
+                .build();
+        //  24311 Sodium Tetrafluoroborate
+        SodiumTetrafluoroborate = new Material.Builder(getMaterialsId(), gregtechId("sodium_tetrafluoroborate"))
+                .dust()
+                .color(Sodium.getMaterialRGB() + BoronTrifluoride.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Sodium, 1, Boron, 1, Fluorine, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24312 Sodium Borohydride
+        SodiumBorohydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_borohydride"))
+                .dust()
+                .color(Sodium.getMaterialRGB() + Boron.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Sodium, 1, Boron, 1, Hydrogen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24313 Sodium Ethoxide
+        SodiumEthoxide = new Material.Builder(getMaterialsId(), gregtechId("sodium_ethoxide"))
+                .dust()
+                .color(Sodium.getMaterialRGB() + Ethanol.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Carbon, 2, Hydrogen, 5, Oxygen, 1, Sodium, 1)
+                .build();
+        //  24314 Krypton Difluoride
+        KryptonDifluoride = new Material.Builder(getMaterialsId(), gregtechId("krypton_difluoride"))
+                .fluid(FluidTypes.GAS)
+                .color(Krypton.getMaterialRGB() + Fluorine.getMaterialRGB())
+                .components(Krypton, 1, Fluorine, 2)
+                .build();
+        //  24315 Draconium Tetrafluoride
+        DraconiumTetrafluoride = new Material.Builder(getMaterialsId(), gregtechId("draconium_tetrafluoride"))
+                .dust()
+                .color(0xBA16A6)
+                .iconSet(DULL)
+                .components(Draconium, 1, Fluorine, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
     }

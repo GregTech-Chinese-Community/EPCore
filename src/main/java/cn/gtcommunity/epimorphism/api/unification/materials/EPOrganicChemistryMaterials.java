@@ -1073,6 +1073,83 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Carbon, 1, Hydrogen, 3, Magnesium, 1, Bromine, 1)
                 .build();
+        //  25144 Fluorocarborane
+        Fluorocarborane = new Material.Builder(getMaterialsId(), gregtechId("fluorocarborane"))
+                .dust()
+                .color(0x59B35C)
+                .iconSet(BRIGHT)
+                .components(Carbon, 1, Hydrogen, 2, Boron, 11, Fluorine, 11)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("HCHB11F11", true);
+        //  25145 Perfluorobenzene
+        Perfluorobenzene = new Material.Builder(getMaterialsId(), gregtechId("perfluorobenzene"))
+                .fluid()
+                .color(0x39733B)
+                .components(Carbon, 6, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25146 Trimethylsilane
+        Trimethylsilane = new Material.Builder(getMaterialsId(), gregtechId("trimethylsilane"))
+                .fluid()
+                .color(0xB366B0)
+                .components(Carbon, 3, Hydrogen, 10, Silicon, 1)
+                .build();
+        //  25147 Trimethylchlorosilane
+        Trimethylchlorosilane = new Material.Builder(getMaterialsId(), gregtechId("trimethylchlorosilane"))
+                .fluid()
+                .color(0x864D84)
+                .components(Carbon, 9, Hydrogen, 9, Silicon, 1, Chlorine, 1)
+                .build()
+                .setFormula("(CH3)3SiCl", true);
+        //  25148 Caesium Carborane Precursor
+        CaesiumCarboranePrecursor = new Material.Builder(getMaterialsId(), gregtechId("caesium_carborane_precursor"))
+                .dust()
+                .color(CaesiumCarborane.getMaterialRGB())
+                .iconSet(SAND)
+                .components(Caesium, 1, Boron, 10, Hydrogen, 21, Carbon, 4, Nitrogen, 1, Chlorine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("CsB10H12CN(CH3)3Cl", true);
+        //  25149 Borane Dimethylsulfide
+        BoraneDimethylsulfide = new Material.Builder(getMaterialsId(), gregtechId("borane_dimethylsulfide"))
+                .fluid()
+                .color(Lead.getMaterialRGB() + Boron.getMaterialRGB())
+                .components(Caesium, 1, Carbon, 1, Boron, 11, Hydrogen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25150 Decaborane
+        Decaborane = new Material.Builder(getMaterialsId(), gregtechId("decaborane"))
+                .dust()
+                .color(0x4C994F)
+                .iconSet(ROUGH)
+                .components(Boron, 10, Hydrogen, 14)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25151 Diethyl Ether
+        DiethylEther = new Material.Builder(getMaterialsId(), gregtechId("diethyl_ether"))
+                .fluid()
+                .color(0xFFA4A3)
+                .components(Carbon, 4, Hydrogen, 10, Oxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(C2H5)2O", true);
+        //  25152 Boron Trifluoride Etherate
+        BoronTrifluorideEtherate = new Material.Builder(getMaterialsId(), gregtechId("boron_trifluoride_etherate"))
+                .fluid()
+                .color(0xBF6E6E)
+                .components(Boron, 1, Fluorine, 3, Carbon, 4, Hydrogen, 7, Oxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(BF3)(C2H5)2O", true);
+        //  25153 Dimethyl Sulfide
+        DimethylSulfide = new Material.Builder(getMaterialsId(), gregtechId("dimethyl_sulfide"))
+                .fluid()
+                .color(SulfuricAcid.getMaterialRGB() + Methanol.getMaterialRGB())
+                .components(Carbon, 2, Hydrogen, 6, Sulfur, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(CH3)2S", true);
     }
 
     private static int getMaterialsId() {
