@@ -22,7 +22,8 @@ public class SuperconductorsChain {
 
     private static void UIVSuperconductorChain() {
         LanthanumFullereneNanotubeChain();
-    }//  TODO Metastable Og + lanthanum-fullerene nanotube + something...
+        ActiniumSuperhydrideChain();
+    }
 
     private static void BETSPerrhenateChain() {
         //  Barium Sulfide + Carbon Dioxide + Water -> Barium Carbonate + Hydrogen Sulfide
@@ -270,5 +271,10 @@ public class SuperconductorsChain {
                 .duration(1200)
                 .EUt(VA[UEV])
                 .buildAndRegister();
+    }
+
+    private static void ActiniumSuperhydrideChain() {
+
+        //
     }
 }

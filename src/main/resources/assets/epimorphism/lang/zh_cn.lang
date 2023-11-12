@@ -425,6 +425,8 @@ metaitem.graphene_aligned.name=石墨烯排列碳纳米管
 metaitem.grinder.boron_nitride.name=氮化硼磨头
 metaitem.component.vacuum_tube.name=真空管组件
 metaitem.separation_electromagnet.name=分离用电磁铁
+metaitem.protonated_fullerene_sieving_matrix.name=质子化富勒烯筛分基质
+metaitem.saturated_fullerene_sieving_matrix.name=饱和富勒烯筛分基质
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -1196,6 +1198,8 @@ gregtech.material.lanthanum_fullerene_mixture=镧-富勒烯混合物
 gregtech.material.lanthanum_embedded_fullerene=镧-富勒烯包合物
 gregtech.material.lanthanum_fullerene_nanotube=镧-富勒烯纳米管
 gregtech.material.hra_magnesium=高反应活化镁
+gregtech.material.cadmium_bromide=溴化镉
+gregtech.material.magnesium_bromide=溴化镁
 gregtech.material.oganesson_breeding_base=气奥增殖基
 gregtech.material.hot_oganesson=热气奥
 gregtech.material.dragon_dust=龙尘
@@ -1206,6 +1210,19 @@ gregtech.material.californium_hexafluoride=六氟化锎
 gregtech.material.californium_252_hexafluoride=六氟化锎-252
 gregtech.material.steam_cracked_californium_252_hexafluoride=蒸汽裂化六氟化锎-252
 gregtech.material.californium_252_dioxide=二氧化锎-252
+gregtech.material.actinium_draconium_hydroxides=锕龙素氢氧化物
+gregtech.material.actinium_nitrate=硝酸锕
+gregtech.material.radium_nitrate=硝酸镭
+gregtech.material.caesium_carborane=碳硼烷铯
+gregtech.material.silver_nitrate=硝酸银
+gregtech.material.caesium_nitrate=硝酸铯
+gregtech.material.silver_iodide=碘化银
+gregtech.material.caesium_hydroxide=氢氧化铯
+gregtech.material.sodium_tetrafluoroborate=四氟硼酸钠
+gregtech.material.sodium_borohydride=硼氢化钠
+gregtech.material.sodium_ethoxide=乙醇钠
+gregtech.material.krypton_difluoride=二氟化氪
+gregtech.material.draconium_tetrafluoride=四氟化龙素
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1359,8 +1376,16 @@ gregtech.material.mesityl_oxide=异亚丙基丙酮
 gregtech.material.electrolyte_reflector_mixture=电介质反射镜形成混合物
 gregtech.material.ethylene_dibromide=1,2-二溴乙烷
 gregtech.material.grignard_reagent=格氏试剂
-gregtech.material.cadmium_bromide=溴化镉
-gregtech.material.magnesium_bromide=溴化镁
+gregtech.material.fluorocarborane=碳氟化合物
+gregtech.material.perfluorobenzene=全氟苯
+gregtech.material.trimethylsilane=三甲基硅烷
+gregtech.material.trimethylchlorosilane=三甲基氯硅烷
+gregtech.material.caesium_carborane_precursor=碳硼烷铯预固化剂
+gregtech.material.borane_dimethylsulfide=硼烷二甲硫醚
+gregtech.material.decaborane=癸硼烷
+gregtech.material.diethyl_ether=二乙醚
+gregtech.material.boron_trifluoride_etherate=三氟化硼乙醚
+gregtech.material.dimethyl_sulfide=二甲硫醚
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -1432,6 +1457,12 @@ gregtech.material.superheated_steam=过热蒸汽
 gregtech.material.supercritical_steam=超临界蒸汽
 gregtech.material.high_temperature_exhaust_gas=高温废气
 gregtech.material.exhaust_gas=废气
+gregtech.material.nitrated_dragon_dust_solution=硝化龙尘溶液
+gregtech.material.residual_draconium_solution=龙素残余物溶液
+gregtech.material.draconium_slag_solution=龙素残渣溶液
+gregtech.material.actinium_radium_hydroxide_solution=氢氧化锕镭溶液
+gregtech.material.actinium_radium_nitrate_solution=硝酸锕镭溶液
+gregtech.material.heavy_fluorinated_draconium_solution=重氟龙素溶液
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力
