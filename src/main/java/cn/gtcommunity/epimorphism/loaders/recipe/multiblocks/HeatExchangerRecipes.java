@@ -14,6 +14,7 @@ public class HeatExchangerRecipes {
                 .fluidOutputs(Steam.getFluid(160 * 5))
                 .fluidOutputs(SuperheatedSteam.getFluid(80 * 5))
                 .fluidOutputs(ExhaustGas.getFluid(1))
+                .maxRate(1600)
                 .flowRate(500)
                 .duration(20)
                 .buildAndRegister();

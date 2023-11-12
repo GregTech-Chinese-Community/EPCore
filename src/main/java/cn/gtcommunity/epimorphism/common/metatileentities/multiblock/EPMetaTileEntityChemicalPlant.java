@@ -148,8 +148,6 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
         }
     }
 
-
-
     @SuppressWarnings("SpellCheckingInspection")
     @Nonnull
     @Override
@@ -245,7 +243,8 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
                         count++;
                     }
                     return midFinalBuilder;
-                }).forEach(b -> shapeInfo.add(b.build()));
+                })
+                .forEach(b -> shapeInfo.add(b.build()));
         count = 0;
         return shapeInfo;
     }
@@ -300,8 +299,14 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
         @Override
         public boolean checkRecipe(@Nonnull Recipe recipe) {
             if (super.checkRecipe(recipe) && (recipe.getProperty(CasingTierProperty.getInstance(), 0) <= tier)) {
-                List<ItemStack> list = getAbilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY).stream().map(c -> c.getStackInSlot(0)).filter(c -> !c.isEmpty()).collect(Collectors.toList());
-                List<GTRecipeInput> list_r = recipe.getInputs().stream().filter(GTRecipeInput::isNonConsumable).filter(r -> !CatalystFormula.checkCatalyst(Arrays.stream(r.getInputStacks()).collect(Collectors.toList()))).collect(Collectors.toList());
+                List<ItemStack> list = getAbilities(EPMultiblockAbility.CATALYST_MULTIBLOCK_ABILITY).stream()
+                        .map(c -> c.getStackInSlot(0))
+                        .filter(c -> !c.isEmpty())
+                        .collect(Collectors.toList());
+                List<GTRecipeInput> list_r = recipe.getInputs().stream()
+                        .filter(GTRecipeInput::isNonConsumable)
+                        .filter(r -> !CatalystFormula.checkCatalyst(Arrays.stream(r.getInputStacks()).collect(Collectors.toList())))
+                        .collect(Collectors.toList());
                 int count = 0;
                 for (GTRecipeInput input_r : list_r) {
                     for (ItemStack input : list) {

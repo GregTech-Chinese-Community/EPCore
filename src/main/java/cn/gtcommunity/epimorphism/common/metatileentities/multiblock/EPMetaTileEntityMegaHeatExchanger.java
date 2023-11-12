@@ -41,7 +41,7 @@ import static gregtech.api.gui.widgets.AdvancedTextWidget.withHoverTextTranslate
 import static net.minecraft.util.text.TextFormatting.AQUA;
 
 public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockController implements IHeatExchanger {
-    private final int maxInputFlowRate = 2000 * 16;
+    private final int parallel = 32;
     private final int heatTime = 150 * 8;
     private int thresholdPercentage = 100;
 
@@ -139,7 +139,7 @@ public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockControl
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip", heatTime));
-        tooltip.add(I18n.format("epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid", maxInputFlowRate));
+        tooltip.add(I18n.format("epimorphism.multiblock.mega_heat_exchanger.tooltip.parallel", parallel));
         tooltip.add(TooltipHelper.BLINKING_RED + I18n.format("epimorphism.multiblock.large_heat_exchanger.explosion_tooltip"));
     }
 
@@ -173,8 +173,8 @@ public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockControl
     }
 
     @Override
-    public int getMaxInputFlowRate() {
-        return maxInputFlowRate;
+    public int getParallel() {
+        return parallel;
     }
 
     @Override

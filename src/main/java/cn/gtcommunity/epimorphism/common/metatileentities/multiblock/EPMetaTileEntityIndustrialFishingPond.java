@@ -55,7 +55,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplayBase implements IWorkable, IDataInfoProvider {
+public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplayBase implements IDataInfoProvider {
 
     private final FishingPondLogic logic;
     private IEnergyContainer energyContainer;
@@ -155,6 +155,13 @@ public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplay
         return Textures.VACUUM_FREEZER_OVERLAY;
     }
 
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
+        super.renderMetaTileEntity(renderState, translation, pipeline);
+        this.getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(), this.logic.isActive(), this.logic.isWorkingEnabled());
+    }
+
     @Override
     @SideOnly(Side.CLIENT)
     public void addToolUsages(ItemStack stack, @Nullable World world, List<String> tooltip, boolean advanced) {
@@ -163,7 +170,44 @@ public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplay
         tooltip.add(I18n.format("gregtech.tool_action.crowbar"));
     }
 
+    @Override
+    protected void addDisplayText(List<ITextComponent> textList) {
+        super.addDisplayText(textList);
+        if (!isStructureFormed())
+            return;
 
+        if (energyContainer != null && energyContainer.getEnergyCapacity() > 0) {
+            int energyContainer = getEnergyTier();
+            long maxVoltage = GTValues.V[energyContainer];
+            String voltageName = GTValues.VNF[energyContainer];
+            textList.add(new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", maxVoltage, voltageName));
+        }
+
+        if (!logic.isWorkingEnabled()) {
+            textList.add(new TextComponentTranslation("gregtech.multiblock.work_paused"));
+
+        } else if (logic.isActive()) {
+            textList.add(new TextComponentTranslation("gregtech.multiblock.running"));
+            int currentProgress = (int) (logic.getProgressPercent() * 100);
+            textList.add(new TextComponentTranslation("gregtech.multiblock.progress", currentProgress));
+        } else {
+            textList.add(new TextComponentTranslation("gregtech.multiblock.idling"));
+        }
+
+        if (logic.getMode() == 1)
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode1"));
+        else if (logic.getMode() == 2)
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode2"));
+        else
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode0"));
+
+        if (!drainEnergy(true)) {
+            textList.add(new TextComponentTranslation("gregtech.multiblock.not_enough_energy").setStyle(new Style().setColor(TextFormatting.RED)));
+        }
+
+        if (logic.isInventoryFull())
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.inv_full").setStyle(new Style().setColor(TextFormatting.RED)));
+    }
 
     public boolean fillChest(ItemStack stack, boolean simulate) {
         return GTTransferUtils.addItemsToItemHandler(outputItemInventory, simulate, Collections.singletonList(stack));
@@ -174,28 +218,21 @@ public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplay
     }
 
     @Override
-    public int getProgress() {
-        return logic.getProgressTime();
+    public <T> T getCapability(Capability<T> capability, EnumFacing side) {
+        if (capability == GregtechTileCapabilities.CAPABILITY_WORKABLE)
+            return GregtechTileCapabilities.CAPABILITY_WORKABLE.cast(this.logic);
+        if (capability == GregtechTileCapabilities.CAPABILITY_CONTROLLABLE)
+            return GregtechTileCapabilities.CAPABILITY_CONTROLLABLE.cast(this.logic);
+        return super.getCapability(capability, side);
     }
 
-    @Override
-    public int getMaxProgress() {
-        return logic.getMaxProgress();
-    }
-
-    @Override
-    public boolean isWorkingEnabled() {
-        return logic.isWorkingEnabled();
+    public boolean isActive() {
+        return (isStructureFormed() && this.logic.isActive() && this.logic.isWorkingEnabled());
     }
 
     @Override
     public boolean getIsWeatherOrTerrainResistant(){
         return true;
-    }
-
-    @Override
-    public void setWorkingEnabled(boolean b) {
-        logic.setWorkingEnabled(b);
     }
 
     public IMultipleTankHandler getImportFluid() {
@@ -259,72 +296,14 @@ public class EPMetaTileEntityIndustrialFishingPond extends MultiblockWithDisplay
     }
 
     @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        this.getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(), this.logic.isActive(), this.logic.isWorkingEnabled());
-    }
-
-    public boolean isActive() {
-        return (isStructureFormed() && this.logic.isActive() && this.logic.isWorkingEnabled());
-    }
-
-    @Override
-    protected void addDisplayText(List<ITextComponent> textList) {
-        super.addDisplayText(textList);
-        if (!isStructureFormed())
-            return;
-
-        if (energyContainer != null && energyContainer.getEnergyCapacity() > 0) {
-            int energyContainer = getEnergyTier();
-            long maxVoltage = GTValues.V[energyContainer];
-            String voltageName = GTValues.VNF[energyContainer];
-            textList.add(new TextComponentTranslation("gregtech.multiblock.max_energy_per_tick", maxVoltage, voltageName));
-        }
-
-        if (!logic.isWorkingEnabled()) {
-            textList.add(new TextComponentTranslation("gregtech.multiblock.work_paused"));
-
-        } else if (logic.isActive()) {
-            textList.add(new TextComponentTranslation("gregtech.multiblock.running"));
-            int currentProgress = (int) (logic.getProgressPercent() * 100);
-            textList.add(new TextComponentTranslation("gregtech.multiblock.progress", currentProgress));
-        } else {
-            textList.add(new TextComponentTranslation("gregtech.multiblock.idling"));
-        }
-
-        if (logic.getMode() == 1)
-            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode1"));
-        else if (logic.getMode() == 2)
-            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode2"));
-        else
-            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.mode0"));
-
-        if (!drainEnergy(true)) {
-            textList.add(new TextComponentTranslation("gregtech.multiblock.not_enough_energy").setStyle(new Style().setColor(TextFormatting.RED)));
-        }
-
-        if (logic.isInventoryFull())
-            textList.add(new TextComponentTranslation("epimorphism.multiblock.industrial_fisher.inv_full").setStyle(new Style().setColor(TextFormatting.RED)));
-    }
-
-    @Override
-    public <T> T getCapability(Capability<T> capability, EnumFacing side) {
-        if (capability == GregtechTileCapabilities.CAPABILITY_WORKABLE)
-            return GregtechTileCapabilities.CAPABILITY_WORKABLE.cast(this);
-        if (capability == GregtechTileCapabilities.CAPABILITY_CONTROLLABLE)
-            return GregtechTileCapabilities.CAPABILITY_CONTROLLABLE.cast(this);
-        return super.getCapability(capability, side);
+    public void receiveCustomData(int dataId, PacketBuffer buf) {
+        super.receiveCustomData(dataId, buf);
+        this.logic.receiveCustomData(dataId, buf);
     }
 
     @Override
     protected boolean shouldShowVoidingModeButton() {
         return false;
-    }
-
-    @Override
-    public void receiveCustomData(int dataId, PacketBuffer buf) {
-        super.receiveCustomData(dataId, buf);
-        this.logic.receiveCustomData(dataId, buf);
     }
 
 }

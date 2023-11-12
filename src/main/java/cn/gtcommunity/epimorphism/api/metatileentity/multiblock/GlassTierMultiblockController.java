@@ -24,7 +24,7 @@ public abstract class GlassTierMultiblockController extends RecipeMapMultiblockC
 
     @Override
     public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
-        return this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0) && super.checkRecipe(recipe, consumeIfSuccess);
+        return super.checkRecipe(recipe, consumeIfSuccess) && this.glassTier >= recipe.getProperty(GlassTierProperty.getInstance(), 0);
     }
 
     @Override

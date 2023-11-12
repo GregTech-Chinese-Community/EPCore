@@ -63,7 +63,7 @@ import java.util.function.Consumer;
 import static gregtech.api.unification.material.Materials.TungstenSteel;
 
 //TODO 添加耗能显示
-public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayBase implements IWorkable, IDataInfoProvider {
+public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayBase implements IDataInfoProvider {
     protected OreProcessingLogic logic;
     protected IEnergyContainer energyContainer;
     protected IMultipleTankHandler inputFluidInventory;
@@ -353,28 +353,8 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
     }
 
     @Override
-    public int getProgress() {
-        return logic.getProgressTime();
-    }
-
-    @Override
-    public int getMaxProgress() {
-        return logic.getMaxProgress();
-    }
-
-    @Override
     public boolean isActive() {
         return (isStructureFormed() && this.logic.isActive() && this.logic.isWorkingEnabled());
-    }
-
-    @Override
-    public boolean isWorkingEnabled() {
-        return logic.isWorkingEnabled();
-    }
-
-    @Override
-    public void setWorkingEnabled(boolean b) {
-        logic.setWorkingEnabled(b);
     }
 
     public IMultipleTankHandler getImportFluid() {
@@ -435,9 +415,9 @@ public class EPMetaTileEntityIntegratedOreFactory extends MultiblockWithDisplayB
     @Override
     public <T> T getCapability(Capability<T> capability, EnumFacing side) {
         if (capability == GregtechTileCapabilities.CAPABILITY_WORKABLE)
-            return GregtechTileCapabilities.CAPABILITY_WORKABLE.cast(this);
+            return GregtechTileCapabilities.CAPABILITY_WORKABLE.cast(this.logic);
         if (capability == GregtechTileCapabilities.CAPABILITY_CONTROLLABLE)
-            return GregtechTileCapabilities.CAPABILITY_CONTROLLABLE.cast(this);
+            return GregtechTileCapabilities.CAPABILITY_CONTROLLABLE.cast(this.logic);
         return super.getCapability(capability, side);
     }
 
