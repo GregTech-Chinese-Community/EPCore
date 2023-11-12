@@ -312,6 +312,9 @@ public EPMaterials() {}
     public static Material AmmoniumHexachloroPlatinumGroupSludge;
     public static Material LeachingNickel;
     public static Material GoldNickelMixture;
+    public static Material LanthanumFullereneMixture;
+    public static Material LanthanumEmbeddedFullerene;
+    public static Material LanthanumFullereneNanotube;
 
     //  Second Degree Materials
     public static Material DragonBreath;

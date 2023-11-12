@@ -83,8 +83,8 @@ public class SpintronicCircuits {
                 .fluidInputs(Kevlar.getFluid(L * 2))
                 .duration(160)
                 .EUt(VA[UHV])
-                .cleanroom(CleanroomType.CLEANROOM)
                 .temperature(2984)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
@@ -104,8 +104,8 @@ public class SpintronicCircuits {
                 .output(SPINTRONIC_CAPACITOR, 16)
                 .duration(160)
                 .EUt(VA[UHV])
-                .cleanroom(CleanroomType.CLEANROOM)
                 .temperature(2755)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
