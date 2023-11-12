@@ -130,27 +130,20 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
         return abilities;
     }
 
+    //TODO 添加更智能的检测机制
     public void setupRotors() {
-        if (!checkRotors()) {
-            for (int index = 0; index < inputInventory.getSlots(); index++) {
-                ItemStack itemStack = inputInventory.getStackInSlot(index);
-                if (itemStack.isEmpty()) {
-                    continue;
-                }
-                if (itemStack.getItem() instanceof MetaItem<?> metaItem) {
-                    MetaItem<?>.MetaValueItem valueItem = metaItem.getItem(itemStack);
-                    if (valueItem == null) continue;
-                    for (IItemBehaviour behaviour : valueItem.getBehaviours()) {
-                        if (behaviour instanceof TurbineRotorBehavior) {
-                            for (IReinforcedRotorHolder holder : getRotorHolders()) {
-                                if (!holder.hasRotor()) {
-                                    inputInventory.extractItem(index, 1, false);
-                                    holder.setRotor(itemStack);
-                                    break;
-                                }
-                            }
-                        }
-                    }
+        if (checkRotors()) return;
+        for (int index = 0; index < inputInventory.getSlots(); index++) {
+            ItemStack itemStack = inputInventory.getStackInSlot(index);
+            if (itemStack.isEmpty()) continue;
+
+            if (TurbineRotorBehavior.getInstanceFor(itemStack) == null) continue;
+
+            for (IReinforcedRotorHolder holder : getRotorHolders()) {
+                if (!holder.hasRotor()) {
+                    inputInventory.extractItem(index, 1, false);
+                    holder.setRotor(itemStack);
+                    break;
                 }
             }
         }

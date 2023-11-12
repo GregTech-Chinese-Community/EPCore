@@ -4,6 +4,7 @@ import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbil
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
 import cn.gtcommunity.epimorphism.api.capability.IPHValue;
 import cn.gtcommunity.epimorphism.api.capability.IBuffer;
+import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
@@ -50,7 +51,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
     private final BufferFluidTank fluidTank;
     private final BufferItemHandler itemHandler;
 
-    public static Map<String,double[]> BufferItemMap = new HashMap<>();
+    public static Map<Integer,double[]> BufferItemMap = new HashMap<>();
     public static Map<String,double[]> BufferFluidMap = new HashMap<>();
 
     private boolean needUpdate = false;
@@ -197,6 +198,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
         }
     }
 
+    //TODO 重写
     public void changePH() {
         ItemStack bufferitem = itemHandler.getStackInSlot(0);
         FluidStack bufferfluid = fluidTank.getFluid();
@@ -204,7 +206,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
             needUpdate = false;
         } else {
             if (!bufferitem.isEmpty()){
-                double[] phchangeitem = BufferItemMap.get(bufferitem.getTranslationKey());
+                double[] phchangeitem = BufferItemMap.get(EPUniverUtil.stackToInt(bufferitem));
                 MultiblockControllerBase current_controller = getController();
                 if (current_controller == null || !current_controller.isStructureFormed()) {
                     needUpdate = false;
@@ -223,7 +225,7 @@ public class EPMetaTileEntityBufferHatch extends MetaTileEntityMultiblockPart im
                 }
             }
             if (bufferfluid != null && bufferfluid.amount >= 1000){
-                double[] phchangefluid = BufferFluidMap.get(bufferfluid.getFluid().toString());
+                double[] phchangefluid = BufferFluidMap.get(bufferfluid.getFluid().getName());
                 MultiblockControllerBase current_controller = getController();
                 if (current_controller == null || !current_controller.isStructureFormed()) {
                     needUpdate = false;

@@ -3,7 +3,9 @@ package cn.gtcommunity.epimorphism.api.capability.impl;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.EPMetaTileEntityIndustrialFishingPond;
 import gregtech.api.GTValues;
 import gregtech.api.capability.GregtechDataCodes;
+import gregtech.api.capability.IControllable;
 import gregtech.api.capability.IMultipleTankHandler;
+import gregtech.api.capability.IWorkable;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.multiblock.IMaintenance;
 import gregtech.common.ConfigHolder;
@@ -26,7 +28,7 @@ import java.util.List;
 
 import static scala.collection.concurrent.Debug.log;
 
-public class FishingPondLogic {
+public class FishingPondLogic implements IWorkable {
 
     public static final int MAX_PROGRESS = 20;
 
@@ -256,6 +258,11 @@ public class FishingPondLogic {
         return false;
     }
 
+    @Override
+    public int getProgress() {
+        return progressTime;
+    }
+
     public int getMaxProgress() {
         return maxProgress;
     }
@@ -310,6 +317,7 @@ public class FishingPondLogic {
      *
      * @return whether working is enabled for the logic
      */
+    @Override
     public boolean isWorkingEnabled() {
         return isWorkingEnabled;
     }
@@ -322,16 +330,8 @@ public class FishingPondLogic {
         return isActive && !hasNotEnoughEnergy && isWorkingEnabled;
     }
 
-    /**
-     *
-     * @return the current progress towards producing fluid of the rig
-     */
-    public int getProgressTime() {
-        return this.progressTime;
-    }
-
     public double getProgressPercent() {
-        return getProgressTime() * 1.0 / MAX_PROGRESS;
+        return getProgress() * 1.0 / MAX_PROGRESS;
     }
 
     protected boolean isOverclocked() {

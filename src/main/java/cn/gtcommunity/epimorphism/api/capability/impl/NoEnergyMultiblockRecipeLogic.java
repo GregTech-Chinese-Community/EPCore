@@ -378,7 +378,6 @@ public class NoEnergyMultiblockRecipeLogic extends AbstractRecipeLogic {
         }
     }
 
-
     @Nullable
     @Override
     public RecipeMap<?> getRecipeMap() {
@@ -386,5 +385,10 @@ public class NoEnergyMultiblockRecipeLogic extends AbstractRecipeLogic {
         if (metaTileEntity instanceof IMultipleRecipeMaps)
             return ((IMultipleRecipeMaps) metaTileEntity).getCurrentRecipeMap();
         return super.getRecipeMap();
+    }
+
+    @Override
+    public int getInfoProviderEUt() {
+        return 0;
     }
 }

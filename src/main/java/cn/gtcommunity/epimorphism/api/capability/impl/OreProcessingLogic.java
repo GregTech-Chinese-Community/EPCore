@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
 * */
 
 //TODO 重写配方逻辑以添加满箱检测和更好的配方检测
-public class OreProcessingLogic implements IWorkable, IControllable {
+public class OreProcessingLogic implements IWorkable{
     private static final int MAX_PARA = 1024;
 
     private static final HashSet<Integer> isCrushedOre = new HashSet<>();
