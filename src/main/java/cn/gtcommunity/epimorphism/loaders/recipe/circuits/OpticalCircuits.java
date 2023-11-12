@@ -256,6 +256,7 @@ public class OpticalCircuits {
         ION_IMPLANTATER_RECIPES.recipeBuilder()
                 .input(dust, Silver, 4)
                 .input(plate, PMMA)
+                .fluidInputs(KaptonE.getFluid(L))
                 .output(OPTICAL_INDUCTOR, 16)
                 .duration(160)
                 .EUt(VA[UV])

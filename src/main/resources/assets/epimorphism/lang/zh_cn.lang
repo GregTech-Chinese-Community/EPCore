@@ -1194,6 +1194,7 @@ gregtech.material.gold_nickel_mixture=镍金混合物
 gregtech.material.lanthanum_fullerene_mixture=镧-富勒烯混合物
 gregtech.material.lanthanum_embedded_fullerene=镧-富勒烯包合物
 gregtech.material.lanthanum_fullerene_nanotube=镧-富勒烯纳米管
+gregtech.material.hra_magnesium=高反应活化镁
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1345,6 +1346,10 @@ gregtech.material.methyl_isobutyl_ketone=甲基异丁基酮（MIBK）
 gregtech.material.tbp_mibk_solution=TBP:MIBK分离液
 gregtech.material.mesityl_oxide=异亚丙基丙酮
 gregtech.material.electrolyte_reflector_mixture=电介质反射镜形成混合物
+gregtech.material.ethylene_dibromide=1,2-二溴乙烷
+gregtech.material.grignard_reagent=格氏试剂
+gregtech.material.cadmium_bromide=溴化镉
+gregtech.material.magnesium_bromide=溴化镁
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

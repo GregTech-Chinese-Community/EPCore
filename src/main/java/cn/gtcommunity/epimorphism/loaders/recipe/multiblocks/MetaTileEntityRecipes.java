@@ -886,6 +886,15 @@ public class MetaTileEntityRecipes {
                 .duration(1200)
                 .buildAndRegister();
 
+        //  High Pressure Steam Turbine
+        ModHandler.addShapedRecipe(true, "high_pressure_steam_turbine", HIGH_PRESSURE_STEAM_TURBINE.getStackForm(),
+                " O ", "RHR", "WPW",
+                'H', HULL[EV].getStackForm(),
+                'P', ELECTRIC_PUMP_EV.getStackForm(),
+                'W', new UnificationEntry(cableGtSingle, Aluminium),
+                'R', new UnificationEntry(rotor, Staballoy),
+                'O', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
+                'P', new UnificationEntry(pipeLargeFluid, Titanium));
     }
 
     private static void GCYMOverrideRecipes() {

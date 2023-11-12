@@ -2173,6 +2173,27 @@ public class EPFirstDegreeMaterials {
                 .components(Lanthanum, 2, GeodesicPolyarene, 2, CarbonNanotube, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24290 HRA Magnesium
+        HRAMagnesium = new Material.Builder(getMaterialsId(), gregtechId("hra_magnesium"))
+                .dust()
+                .color(Magnesium.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Magnesium, 1)
+                .build();
+        //  24291 Cadium Bromide
+        CadmiumBromide = new Material.Builder(getMaterialsId(), gregtechId("cadmium_bromide"))
+                .dust()
+                .color(0xFF1774)
+                .iconSet(SHINY)
+                .components(Cadmium, 1, Bromine, 2)
+                .build();
+        //  24292 Magnesium Bromide
+        MagnesiumBromide = new Material.Builder(getMaterialsId(), gregtechId("magnesium_bromide"))
+                .dust()
+                .color(0x5F4C32)
+                .iconSet(METALLIC)
+                .components(Magnesium, 1, Bromine, 2)
+                .build();
     }
 
     private static int getMaterialsId() {
