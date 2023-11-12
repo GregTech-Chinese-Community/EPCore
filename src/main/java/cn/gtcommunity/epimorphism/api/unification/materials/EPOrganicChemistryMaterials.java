@@ -1150,6 +1150,27 @@ public class EPOrganicChemistryMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
                 .setFormula("(CH3)2S", true);
+        //  25154 Oxalic Acid
+        OxalicAcid = new Material.Builder(getMaterialsId(), gregtechId("oxalic_acid"))
+                .fluid()
+                .color(0xC5EB9E)
+                .components(Carbon, 2, Hydrogen, 2, Oxygen, 4)
+                .build()
+                .setFormula("HOOCCOOH", false);
+        //  25155 Glucose
+        Glucose = new Material.Builder(getMaterialsId(), gregtechId("glucose"))
+                .dust()
+                .color(0xE3E3E3)
+                .iconSet(SAND)
+                .components(Carbon, 6, Hydrogen, 12, Oxygen, 6)
+                .build();
+        //  25156 Fructose
+        Fructose = new Material.Builder(getMaterialsId(), gregtechId("fructose"))
+                .dust()
+                .color(0xE3E3E3)
+                .iconSet(SAND)
+                .components(Carbon, 6, Hydrogen, 12, Oxygen, 6)
+                .build();
     }
 
     private static int getMaterialsId() {

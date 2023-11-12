@@ -23,6 +23,7 @@ public class SuperconductorsChain {
     private static void UIVSuperconductorChain() {
         LanthanumFullereneNanotubeChain();
         ActiniumSuperhydrideChain();
+        BoronFranciumMixtureChain();
     }
 
     private static void BETSPerrhenateChain() {
@@ -275,6 +276,75 @@ public class SuperconductorsChain {
 
     private static void ActiniumSuperhydrideChain() {
 
-        //
+        //  Glucose and Fructos
+        //  TODO Bio Reactor Recipe?
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .input(dust, Sugar, 2)
+                .fluidInputs(Water.getFluid(1000))
+                .output(dust, Glucose, 24)
+                .output(dust, Fructose, 24)
+                .EUt(VA[HV])
+                .duration(300)
+                .buildAndRegister();
+
+        //  Glucose + Oxygen -> Oxalic Acid
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Glucose, 24)
+                .notConsumable(dust, Vanadium)
+                .fluidInputs(Oxygen.getFluid(9000))
+                .fluidOutputs(OxalicAcid.getFluid(3000))
+                .fluidOutputs(Water.getFluid(3000))
+                .EUt(VA[HV])
+                .duration(120)
+                .buildAndRegister();
+
+        //  Oxalic Acid + Oxygen + Actinium -> Actinium Oxalate
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Actinium)
+                .fluidInputs(OxalicAcid.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(2000))
+                .output(dust, ActiniumOxalate, 13)
+                .fluidOutputs(Water.getFluid(2000))
+                .EUt(VA[LuV])
+                .duration(180)
+                .buildAndRegister();
+
+        //  Actinium Oxalate -> Actinium Hydride
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, ActiniumOxalate, 13)
+                .input(dust, Lithium, 13)
+                .input(dust, LithiumHydride, 6)
+                .fluidInputs(CarbonTetrachloride.getFluid(4000))
+                .output(dust, ActiniumHydride, 4)
+                .output(dust, LithiumChloride, 32)
+                .fluidOutputs(CarbonDioxide.getFluid(8000))
+                .EUt(VA[MV])
+                .duration(540)
+                .blastFurnaceTemp(11700)
+                .buildAndRegister();
+
+        //  Back to Stellar Furnace and Plasma Condenser
+    }
+
+    private static void BoronFranciumMixtureChain() {
+        //  Francium Carbide
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Francium, 2)
+                .fluidInputs(Acetylene.getFluid(1000))
+                .output(dust, FranciumCarbide, 4)
+                .fluidOutputs(Hydrogen.getFluid(2000))
+                .EUt(VA[HV])
+                .duration(260)
+                .buildAndRegister();
+
+        //  Boron-Francium Mixture
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, FranciumCarbide, 2)
+                .input(dust, CubicBoronNitride)
+                .input(dust, AmorphousBoronNitride)
+                .output(dust, BoronFranciumMixture, 4)
+                .EUt(VA[UHV])
+                .duration(160)
+                .buildAndRegister();
     }
 }

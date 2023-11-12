@@ -259,7 +259,7 @@ public class SpintronicCircuits {
                 .input(SPINTRONIC_INDUCTOR, 16)
                 .input(foil, CarbonNanotube, 16)
                 .input(SPIN_TRANSFER_TORQUE_MEMORY, 32)
-                .input(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 16)//  TODO new UIV superconductor
+                .input(wireGtDouble, FullereneSuperconductor, 16)
                 .input(plate, NeptuniumAluminide, 8)
                 .fluidInputs(SolderingAlloy.getFluid(L * 20))
                 .fluidInputs(Zylon.getFluid(L * 15))

@@ -342,6 +342,11 @@ public EPMaterials() {}
     public static Material SodiumEthoxide;
     public static Material KryptonDifluoride;
     public static Material DraconiumTetrafluoride;
+    public static Material ActiniumOxalate;
+    public static Material ActiniumHydride;
+    public static Material ActiniumSuperhydride;
+    public static Material FranciumCarbide;
+    public static Material BoronFranciumMixture;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -504,6 +509,9 @@ public EPMaterials() {}
     public static Material DiethylEther;
     public static Material BoronTrifluorideEtherate;
     public static Material DimethylSulfide;
+    public static Material OxalicAcid;
+    public static Material Glucose;
+    public static Material Fructose;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -620,6 +628,7 @@ public EPMaterials() {}
     public static Material Incoloy020;
     public static Material HG1223;
     public static Material HMS1J22Alloy;
+    public static Material FullereneSuperconductor;
 
     //  Mod Compatibility Materials
     public static Material Mana;

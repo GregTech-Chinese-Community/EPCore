@@ -293,6 +293,8 @@ metaitem.neutron_plasma_containment_cell.name=中子等离子遏制装置
 metaitem.neutron_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.hypogen_plasma_containment_cell.name=海珀珍等离子遏制装置
 metaitem.hypogen_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
+metaitem.actinium_superhydride_plasma_containment_cell.name=超氢化锕等离子遏制装置
+metaitem.actinium_superhydride_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.quantum_anomaly.name=量子反常
 
 #  Mill Balls
@@ -1223,6 +1225,11 @@ gregtech.material.sodium_borohydride=硼氢化钠
 gregtech.material.sodium_ethoxide=乙醇钠
 gregtech.material.krypton_difluoride=二氟化氪
 gregtech.material.draconium_tetrafluoride=四氟化龙素
+gregtech.material.actinium_oxalate=草酸锕
+gregtech.material.actinium_hydride=氢化锕
+gregtech.material.actinium_superhydride=超氢化锕
+gregtech.material.francium_carbide=碳化钫
+gregtech.material.boron_francium_mixture=硼钫混合物
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1386,6 +1393,9 @@ gregtech.material.decaborane=癸硼烷
 gregtech.material.diethyl_ether=二乙醚
 gregtech.material.boron_trifluoride_etherate=三氟化硼乙醚
 gregtech.material.dimethyl_sulfide=二甲硫醚
+gregtech.material.oxalic_acid=乙二酸
+gregtech.material.glucose=葡萄糖
+gregtech.material.fructose=果糖
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -1517,3 +1527,4 @@ gregtech.material.tantalloy_61=钽钨合金-61
 gregtech.material.incoloy_020=耐热铬铁合金-020
 gregtech.material.hg_1223=HG-1223
 gregtech.material.hms_1_j_22_alloy=高饱和磁感应软磁合金-1J22
+gregtech.material.fullerene_superconductor=富勒烯超导体
