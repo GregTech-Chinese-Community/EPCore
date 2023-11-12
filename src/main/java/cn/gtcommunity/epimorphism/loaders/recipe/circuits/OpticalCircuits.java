@@ -294,7 +294,7 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  TODO Optical SoC
+        //  Optical SoC
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, ManganeseDifluoride, 3)
                 .input(dust, ZincSulfide, 2)
@@ -306,6 +306,35 @@ public class OpticalCircuits {
                 .duration(270)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
+
+        CRYSTALLIZER_RECIPES.recipeBuilder()
+                .input(dust, StrontiumCarbonate, 64)
+                .input(dust, Bohrium, 8)
+                .output(STRONTIUM_CARBONATE_BOHRIUM_BOULE)
+                .EUt(VA[ZPM])
+                .duration(120)
+                .blastFurnaceTemp(6000)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(STRONTIUM_CARBONATE_BOHRIUM_BOULE)
+                .fluidInputs(Lubricant.getFluid(300)) // TODO Biological Lubricant?
+                .outputs(STRONTIUM_CARBONATE_BOHRIUM_WAFER.getStackForm(6))
+                .EUt(VA[EV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .input(STRONTIUM_CARBONATE_BOHRIUM_WAFER)
+                .fluidInputs(ElectrolyteReflectorMixture.getFluid(200))
+                .output(STRONTIUM_CARBONATE_OPTICAL_WAFER)
+                .EUt(VA[UV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  TODO Optical SoC Recipe, may be use UHASoC (do not use Bio SoC...)
 
         //  Optical Processor
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()

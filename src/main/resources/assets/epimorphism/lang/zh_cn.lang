@@ -220,7 +220,7 @@ metaitem.wafer.dubnium.name=钅杜掺杂的晶圆
 metaitem.wafer.dubnium.tooltip=待处理电路
 metaitem.boule.cubic_zirconia.europium.name=铕掺杂的单晶立方氧化锆
 metaitem.boule.cubic_zirconia.europium.tooltip=待处理晶体
-metaitem.wafer.cubic_zirconia.europium.name=铕掺杂的立方氧化锆晶片
+metaitem.wafer.cubic_zirconia.europium.name=铕掺杂的立方氧化锆晶圆
 metaitem.wafer.cubic_zirconia.europium.tooltip=待处理晶体
 metaitem.wafer.crystal_interface.name=晶体触面晶圆
 metaitem.wafer.crystal_interface.tooltip=待处理晶体接口
@@ -232,6 +232,12 @@ metaitem.wafer.chip.uhasoc.name=UHASoC晶片
 metaitem.wafer.chip.uhasoc.tooltip=极高进阶片上系统
 metaitem.component.gooware.intravital_soc.name=活体 SoC
 metaitem.component.gooware.intravital_soc.tooltip=蠕动着的电路
+metaitem.boule.strontium_carbonate.bohrium.name=钅波掺杂的单晶碳酸锶
+metaitem.boule.strontium_carbonate.bohrium.tooltip=待处理光学晶体
+metaitem.wafer.strontium_carbonate.bohrium.name=钅波掺杂的碳酸锶晶圆
+metaitem.wafer.strontium_carbonate.bohrium.tooltip=待处理光学晶体
+metaitem.component.optical.strontium_carbonate_wafer.name=光聚合液涂覆的碳酸锶晶圆
+metaitem.component.optical.strontium_carbonate_wafer.tooltip=预处理电介质反射晶圆
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪
@@ -871,7 +877,7 @@ epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
 recipemap.cyclotron_recipes.name=回旋加速器
 epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
 epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
-epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590 MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
+epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
 
 #  Materials
 

@@ -1248,6 +1248,7 @@ public class EPFirstDegreeMaterials {
                 .addOreByproducts(SiliconDioxide)
                 .color(0x9EB749)
                 .iconSet(QUARTZ)
+                .flags(CRYSTALLIZABLE)
                 .components(SiliconDioxide, 5, Iron, 1)
                 .build();
         //  24163 Magneto Resonatic
