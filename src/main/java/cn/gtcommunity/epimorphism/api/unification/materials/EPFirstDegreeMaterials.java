@@ -2194,6 +2194,83 @@ public class EPFirstDegreeMaterials {
                 .iconSet(METALLIC)
                 .components(Magnesium, 1, Bromine, 2)
                 .build();
+        //  24293 Oganesson Breeding Base
+        OganessonBreedingBase = new Material.Builder(getMaterialsId(), gregtechId("oganesson_breeding_base"))
+                .fluid()
+                .color(0xA65A7F)
+                .components(Oganesson, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24294 Hot Oganesson
+        HotOganesson = new Material.Builder(getMaterialsId(), gregtechId("hot_oganesson"))
+                .fluid()
+                .fluidTemp(14118)
+                .color(Oganesson.getMaterialRGB())
+                .components(Oganesson, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24295 Dragon Dust
+        DragonDust = new Material.Builder(getMaterialsId(), gregtechId("dragon_dust"))
+                .ore(1, 1, true)
+                .addOreByproducts(Amethyst)
+                .dust()
+                .color(Draconium.getMaterialRGB())
+                .iconSet(DULL)
+                .build()
+                .setFormula("Dr?", false);
+        //  24296 Californium Nitrite
+        CaliforniumNitrite = new Material.Builder(getMaterialsId(), gregtechId("californium_nitrite"))
+                .dust()
+                .color(0x914626)
+                .iconSet(ROUGH)
+                .components(Californium, 1, Nitrogen, 3, Oxygen, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Cf(NO2)3", true);
+        //  24297 Californium Dioxide
+        CaliforniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("californium_dioxide"))
+                .dust()
+                .color(0x912D01)
+                .iconSet(DULL)
+                .components(Californium, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24298 Californium Hexachloride
+        CaliforniumHexachloride = new Material.Builder(getMaterialsId(), gregtechId("californium_hexachloride"))
+                .fluid()
+                .color(Californium.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .components(Californium, 2, Chlorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24299 Californium Hexafluoride
+        CaliforniumHexafluoride = new Material.Builder(getMaterialsId(), gregtechId("californium_hexafluoride"))
+                .fluid(FluidTypes.GAS)
+                .color(Californium.getMaterialRGB() + Fluorine.getMaterialRGB())
+                .components(Californium, 2, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24300 Californium-252 Hexafluoride
+        Californium252Hexafluoride = new Material.Builder(getMaterialsId(), gregtechId("californium_252_hexafluoride"))
+                .fluid(FluidTypes.GAS)
+                .color(Californium252.getMaterialRGB() + Fluorine.getMaterialRGB())
+                .components(Californium252, 2, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24301 Steam Cracked Californium-252 Hexafluoride
+        SteamCrackedCalifornium252Hexafluoride = new Material.Builder(getMaterialsId(), gregtechId("steam_cracked_californium_252_hexafluoride"))
+                .fluid(FluidTypes.GAS)
+                .color(Californium252Hexafluoride.getMaterialRGB() + Steam.getMaterialRGB())
+                .components(Californium252, 2, Fluorine, 6)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24302 Californium-252 Dioxide
+        Californium252Dioxide = new Material.Builder(getMaterialsId(), gregtechId("californium_252_dioxide"))
+                .dust()
+                .color(0x912D01)
+                .iconSet(ROUGH)
+                .components(Californium252, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
     }
 
     private static int getMaterialsId() {
