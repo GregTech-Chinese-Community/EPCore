@@ -38,6 +38,16 @@ public class EPFusionLoader {
                 .EUt(VA[ZPM] * 2)
                 .buildAndRegister();
 
+        //  (Mk II) Uranium-238 + Neutron -> Neptunium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Uranium238.getFluid(144))
+                .fluidInputs(Neutron.getPlasma(144))
+                .fluidOutputs(Neptunium.getFluid(288))
+                .EUt(VA[UV])
+                .duration(80)
+                .EUToStart(300000000L)
+                .buildAndRegister();
+
         //  (Mk III) Americium + Neon -> Dubnium
         FUSION_RECIPES.recipeBuilder()
                 .fluidInputs(Americium.getFluid(16))

@@ -23,6 +23,16 @@ public class MagneticsChain {
                 .EUt(VA[EV])
                 .buildAndRegister();
 
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Thallium)
+                .input(dust, Copper)
+                .fluidInputs(Chlorine.getFluid(3000))
+                .circuitMeta(5)
+                .output(dust, ThalliumCopperChloride, 5)
+                .duration(350)
+                .EUt(VA[EV])
+                .buildAndRegister();
+
         //  Plutonium-239 + Hydrogen -> Plutonium Trihydride
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Plutonium239)
@@ -43,7 +53,6 @@ public class MagneticsChain {
                 .temperature(890)
                 .buildAndRegister();
 
-        //  TODO Neptunium Chain in Fusion Reactor
         //  Neptunium + Aluminium -> Neptunium Aluminide
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Neptunium)
@@ -51,6 +60,27 @@ public class MagneticsChain {
                 .output(dust, NeptuniumAluminide, 4)
                 .duration(400)
                 .EUt(VA[IV])
+                .buildAndRegister();
+
+        ALLOY_BLAST_RECIPES.recipeBuilder()
+                .input(dust, Aluminium, 3)
+                .fluidInputs(Neptunium.getFluid(L))
+                .circuitMeta(2)
+                .fluidOutputs(NeptuniumAluminide.getFluid(L * 4))
+                .EUt(VA[IV])
+                .duration(3669)
+                .blastFurnaceTemp(1568)
+                .buildAndRegister();
+
+        ALLOY_BLAST_RECIPES.recipeBuilder()
+                .input(dust, Aluminium, 3)
+                .fluidInputs(Neptunium.getFluid(L))
+                .fluidInputs(Neon.getFluid(100))
+                .circuitMeta(12)
+                .fluidOutputs(NeptuniumAluminide.getFluid(L * 4))
+                .EUt(VA[IV])
+                .duration(2458)
+                .blastFurnaceTemp(1568)
                 .buildAndRegister();
 
         //  Bismuth + Water -> Bismuth Trioxide + Hydrogen

@@ -1177,7 +1177,7 @@ public class MachineComponents {
                 .input(ELECTRIC_MOTOR_UEV, 2)
                 .input(CONVEYOR_MODULE_UEV, 2)
                 .input(rotor, Neutronium, 4) // TODO may be find better material
-                .input(stickLong, PlutoniumPhosphide, 2)
+                .input(stickLong, Osmiridium, 2)
                 .input(wireFine, ThalliumCopperChloride, 32)
                 .fluidInputs(SolderingAlloy.getFluid(L * 10))
                 .outputs(REINFORCED_ROTOR_HOLDER[4].getStackForm())

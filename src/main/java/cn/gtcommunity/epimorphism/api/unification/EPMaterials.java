@@ -315,6 +315,9 @@ public EPMaterials() {}
     public static Material LanthanumFullereneMixture;
     public static Material LanthanumEmbeddedFullerene;
     public static Material LanthanumFullereneNanotube;
+    public static Material HRAMagnesium;
+    public static Material CadmiumBromide;
+    public static Material MagnesiumBromide;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -465,6 +468,8 @@ public EPMaterials() {}
     public static Material TBPMIBKSolution;
     public static Material MesitylOxide;
     public static Material ElectrolyteReflectorMixture;
+    public static Material EthyleneDibromide;
+    public static Material GrignardReagent;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

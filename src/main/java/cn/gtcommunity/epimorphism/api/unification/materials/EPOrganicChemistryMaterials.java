@@ -1059,6 +1059,20 @@ public class EPOrganicChemistryMaterials {
                 .components(ManganeseDifluoride, 1, ZincSulfide, 1, TantalumPentoxide, 1, Rutile, 1, Ethanol, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  25142 Ethylene Dibromide
+        EthyleneDibromide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_dibromide"))
+                .fluid()
+                .color(0x4F1743)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 2, Hydrogen, 4, Bromine, 2)
+                .build();
+        //  25143 Grignard Reagent
+        GrignardReagent = new Material.Builder(getMaterialsId(), gregtechId("grignard_reagent"))
+                .fluid()
+                .color(0xA12AA1)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 1, Hydrogen, 3, Magnesium, 1, Bromine, 1)
+                .build();
     }
 
     private static int getMaterialsId() {
