@@ -127,6 +127,11 @@ public class EPMetaItem1 extends StandardMetaItem {
         UHASOC_WAFER = this.addItem(87, "wafer.uhasoc");
         UHASOC_CHIP = this.addItem(88, "wafer.chip.uhasoc");
         INTRAVITAL_SOC = this.addItem(89, "component.gooware.intravital_soc");
+        STRONTIUM_CARBONATE_BOHRIUM_BOULE = this.addItem(90, "boule.strontium_carbonate.bohrium");
+        STRONTIUM_CARBONATE_BOHRIUM_WAFER = this.addItem(91, "wafer.strontium_carbonate.bohrium");
+        STRONTIUM_CARBONATE_OPTICAL_WAFER = this.addItem(92, "component.optical.strontium_carbonate_wafer");
+        OPTICAL_IMC_BOARD = this.addItem(93, "component.optical.optical_imc_board");
+        PHOTOELECTRON_SOC = this.addItem(94, "component.optical.photoelectron_soc");
 
         //  Others
         MAGNETRON = this.addItem(100, "magnetron");

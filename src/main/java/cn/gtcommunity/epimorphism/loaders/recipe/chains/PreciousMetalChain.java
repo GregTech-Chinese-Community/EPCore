@@ -19,7 +19,7 @@ public class PreciousMetalChain {
         //  Primitive Gold
         PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
                 .input(dust, PreciousMetal)
-                .input("fuelCoke", 2)
+                .input("fuelCoke")
                 .output(nugget, Gold)
                 .duration(300)
                 .buildAndRegister();

@@ -180,9 +180,9 @@ metaitem.laser.emitter.nd_yag.tooltip=用于强光学设备
 #  Condenser Components
 metaitem.tube.topological_insulator.name=拓扑绝缘管
 metaitem.tube.topological_insulator.tooltip=导电表面态
-metaitem.containment_unit.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态遏制装置
+metaitem.containment_unit.bose_einstein_condensate.name=凝聚态物质遏制装置
 metaitem.containment_unit.bose_einstein_condensate.tooltip=电磁蒸发冷却
-metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态
+metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态物质遏制装置
 metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个 §cRb-87§7 原子！
 
 #  Wafers
@@ -220,7 +220,7 @@ metaitem.wafer.dubnium.name=钅杜掺杂的晶圆
 metaitem.wafer.dubnium.tooltip=待处理电路
 metaitem.boule.cubic_zirconia.europium.name=铕掺杂的单晶立方氧化锆
 metaitem.boule.cubic_zirconia.europium.tooltip=待处理晶体
-metaitem.wafer.cubic_zirconia.europium.name=铕掺杂的立方氧化锆晶片
+metaitem.wafer.cubic_zirconia.europium.name=铕掺杂的立方氧化锆晶圆
 metaitem.wafer.cubic_zirconia.europium.tooltip=待处理晶体
 metaitem.wafer.crystal_interface.name=晶体触面晶圆
 metaitem.wafer.crystal_interface.tooltip=待处理晶体接口
@@ -232,6 +232,16 @@ metaitem.wafer.chip.uhasoc.name=UHASoC晶片
 metaitem.wafer.chip.uhasoc.tooltip=极高进阶片上系统
 metaitem.component.gooware.intravital_soc.name=活体 SoC
 metaitem.component.gooware.intravital_soc.tooltip=蠕动着的电路
+metaitem.boule.strontium_carbonate.bohrium.name=钅波掺杂的单晶碳酸锶
+metaitem.boule.strontium_carbonate.bohrium.tooltip=待处理光学晶体
+metaitem.wafer.strontium_carbonate.bohrium.name=钅波掺杂的碳酸锶晶圆
+metaitem.wafer.strontium_carbonate.bohrium.tooltip=待处理光学晶体
+metaitem.component.optical.strontium_carbonate_wafer.name=光聚合液涂覆的碳酸锶晶圆
+metaitem.component.optical.strontium_carbonate_wafer.tooltip=预处理电介质反射晶圆
+metaitem.component.optical.optical_imc_board.name=精密预装配光电子电路基板
+metaitem.component.optical.optical_imc_board.tooltip=存算一体光学基板
+metaitem.component.optical.photoelectron_soc.name=光电子 SoC
+metaitem.component.optical.photoelectron_soc.tooltip=荧光电路
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪
@@ -871,7 +881,7 @@ epimorphism.machine.compact_cyclotron.name=COMET-紧凑式回旋加速器
 recipemap.cyclotron_recipes.name=回旋加速器
 epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
 epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
-epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590 MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
+epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
 
 #  Materials
 
@@ -1180,6 +1190,9 @@ gregtech.material.platinum_group_sludge_solution=铂族金属泥浆液
 gregtech.material.ammonium_hexachloro_platinum_group_sludge=六氯铵酸化铂族金属泥浆液
 gregtech.material.leaching_nickel=镍浸出物
 gregtech.material.gold_nickel_mixture=镍金混合物
+gregtech.material.lanthanum_fullerene_mixture=镧-富勒烯混合物
+gregtech.material.lanthanum_embedded_fullerene=镧-富勒烯包合物
+gregtech.material.lanthanum_fullerene_nanotube=镧-富勒烯纳米管
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

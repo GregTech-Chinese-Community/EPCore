@@ -1248,6 +1248,7 @@ public class EPFirstDegreeMaterials {
                 .addOreByproducts(SiliconDioxide)
                 .color(0x9EB749)
                 .iconSet(QUARTZ)
+                .flags(CRYSTALLIZABLE)
                 .components(SiliconDioxide, 5, Iron, 1)
                 .build();
         //  24163 Magneto Resonatic
@@ -2150,6 +2151,28 @@ public class EPFirstDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
                 .setFormula("Ni3Au?", true);
+        //  24287 Lanthanum Fullerene Mixture
+        LanthanumFullereneMixture = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_fullerene_mixture"))
+                .dust()
+                .color(0xD26D8E)
+                .iconSet(BRIGHT)
+                .components(Lanthanum, 2, GeodesicPolyarene, 2)
+                .build();
+        //  24288 Lanthanum Embedded Fullerene
+        LanthanumEmbeddedFullerene = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_embedded_fullerene"))
+                .dust()
+                .color(0x84FFAC)
+                .iconSet(BRIGHT)
+                .components(Lanthanum, 2, GeodesicPolyarene, 2)
+                .build();
+        //  24289 Lanthanum Fullerene Nanotube
+        LanthanumFullereneNanotube = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_fullerene_nanotube"))
+                .ingot()
+                .color(0xD24473)
+                .iconSet(BRIGHT)
+                .components(Lanthanum, 2, GeodesicPolyarene, 2, CarbonNanotube, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
     }
 
     private static int getMaterialsId() {

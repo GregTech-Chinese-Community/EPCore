@@ -294,7 +294,7 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  TODO Optical SoC
+        //  Optical SoC
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, ManganeseDifluoride, 3)
                 .input(dust, ZincSulfide, 2)
@@ -307,6 +307,58 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
+        CRYSTALLIZER_RECIPES.recipeBuilder()
+                .input(dust, StrontiumCarbonate, 64)
+                .input(dust, Bohrium, 8)
+                .output(STRONTIUM_CARBONATE_BOHRIUM_BOULE)
+                .EUt(VA[ZPM])
+                .duration(120)
+                .blastFurnaceTemp(6000)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(STRONTIUM_CARBONATE_BOHRIUM_BOULE)
+                .fluidInputs(Lubricant.getFluid(300)) // TODO Biological Lubricant?
+                .outputs(STRONTIUM_CARBONATE_BOHRIUM_WAFER.getStackForm(6))
+                .EUt(VA[EV])
+                .duration(200)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .input(STRONTIUM_CARBONATE_BOHRIUM_WAFER)
+                .fluidInputs(ElectrolyteReflectorMixture.getFluid(200))
+                .output(STRONTIUM_CARBONATE_OPTICAL_WAFER)
+                .EUt(VA[UV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Optical SoC
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, PedotTMA)
+                .input(HELIUM_NEON_LASER)
+                .input(ND_YAG_LASER)
+                .input(lens, Celestite, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .fluidInputs(TinAlloy.getFluid(L * 2))
+                .output(OPTICAL_IMC_BOARD, 2)
+                .EUt(VA[UEV])
+                .duration(400)
+                .CasingTier(3)
+                .buildAndRegister();
+
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(OPTICAL_IMC_BOARD)
+                .input(UHASOC_CHIP, 2)
+                .input(OPTICAL_FIBER, 4)
+                .fluidInputs(Glowstone.getFluid(L * 2))
+                .output(PHOTOELECTRON_SOC)
+                .EUt(VA[UEV])
+                .duration(200)
+                .CasingTier(3)
+                .buildAndRegister();
+
         //  Optical Processor
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(OPTICAL_LASER_CONTROL_UNIT)
@@ -316,8 +368,21 @@ public class OpticalCircuits {
                 .input(OPTICAL_TRANSISTOR, 8)
                 .input(OPTICAL_FIBER, 8)
                 .output(OPTICAL_PROCESSOR, 2)
+                .solderMultiplier(1)
                 .duration(200)
                 .EUt(VA[UHV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(OPTICAL_CIRCUIT_BOARD)
+                .input(PHOTOELECTRON_SOC)
+                .input(wireFine, PedotPSS, 8)
+                .input(bolt, Adamantium, 8)
+                .output(OPTICAL_PROCESSOR, 2)
+                .solderMultiplier(1)
+                .duration(100)
+                .EUt(VA[UEV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 

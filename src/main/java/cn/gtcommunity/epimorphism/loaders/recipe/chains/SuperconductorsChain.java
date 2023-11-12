@@ -13,11 +13,16 @@ import static gregtech.common.items.MetaItems.*;
 public class SuperconductorsChain {
     public static void init() {
         UEVSuperconductorChain();
+        UIVSuperconductorChain();
     }
 
     private static void UEVSuperconductorChain() {
         BETSPerrhenateChain();
     }
+
+    private static void UIVSuperconductorChain() {
+        LanthanumFullereneNanotubeChain();
+    }//  TODO Metastable Og + lanthanum-fullerene nanotube + something...
 
     private static void BETSPerrhenateChain() {
         //  Barium Sulfide + Carbon Dioxide + Water -> Barium Carbonate + Hydrogen Sulfide
@@ -225,6 +230,45 @@ public class SuperconductorsChain {
                 .EUt(VA[MV])
                 .duration(160)
                 .temperature(488)
+                .buildAndRegister();
+    }
+
+    private static void LanthanumFullereneNanotubeChain() {
+
+        //  Lanthanum-Fullerene Mixture
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Lanthanum, 2)
+                .input(dust, GeodesicPolyarene, 2)
+                .output(dust, LanthanumFullereneMixture, 4)
+                .EUt(VA[LuV])
+                .duration(140)
+                .buildAndRegister();
+
+        //  Lanthanum-Fullerene Mixture + Nitrogen -> Lanthanum Embedded Fullerene
+        LASER_CVD_RECIPES.recipeBuilder()
+                .notConsumable(plate, MagnetoResonatic)
+                .input(dust, LanthanumFullereneMixture, 4)
+                .fluidInputs(Nitrogen.getFluid(20000))
+                .output(dust, LanthanumEmbeddedFullerene, 4)
+                .fluidOutputs(Ammonia.getFluid(20000))
+                .EUt(VA[UHV])
+                .duration(320)
+                .temperature(4982)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Lanthanum Embedded Fullerene -> Lanthanum Fullerene Nanotube
+        PLASMA_CVD_RECIPES.recipeBuilder()
+                .notConsumable(plate, Rhenium)
+                .input(dust, LanthanumEmbeddedFullerene)
+                .fluidInputs(Acetylene.getFluid(3000))
+                .fluidInputs(Cycloparaphenylene.getFluid(7000))
+                .fluidInputs(Nitrogen.getPlasma(10000))
+                .output(ingot, LanthanumFullereneNanotube)
+                .fluidOutputs(Ammonia.getFluid(10000))
+                .temperature(3496)
+                .duration(1200)
+                .EUt(VA[UEV])
                 .buildAndRegister();
     }
 }
