@@ -2374,6 +2374,43 @@ public class EPFirstDegreeMaterials {
                 .components(Draconium, 1, Fluorine, 4)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24316 Actinium Oxalate
+        ActiniumOxalate = new Material.Builder(getMaterialsId(), gregtechId("actinium_oxalate"))
+                .dust()
+                .color(0x7971BF)
+                .iconSet(SHINY)
+                .components(Actinium, 1, Carbon, 4, Oxygen, 8)
+                .build()
+                .setFormula("Ac(CO2)4", true);
+        //  24317 Actinium Hydride
+        ActiniumHydride = new Material.Builder(getMaterialsId(), gregtechId("actinium_hydride"))
+                .dust()
+                .color(0x86DAF0)
+                .iconSet(BRIGHT)
+                .components(Actinium, 1, Hydrogen, 3)
+                .build();
+        //  24318 Actinium Superhydride
+        ActiniumSuperhydride = new Material.Builder(getMaterialsId(), gregtechId("actinium_superhydride"))
+                .dust()
+                .fluid(FluidTypes.PLASMA)
+                .color(0xCC3300)
+                .iconSet(BRIGHT)
+                .components(Actinium, 1, Hydrogen, 12)
+                .build();
+        //  24319 Francium Carbide
+        FranciumCarbide = new Material.Builder(getMaterialsId(), gregtechId("francium_carbide"))
+                .dust()
+                .color(Francium.getMaterialRGB() + Carbon.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Francium, 2, Carbon, 2)
+                .build();
+        //  24320 Boron Francium Mixture
+        BoronFranciumMixture = new Material.Builder(getMaterialsId(), gregtechId("boron_francium_mixture"))
+                .dust()
+                .color(Boron.getMaterialRGB() + FranciumCarbide.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(FranciumCarbide, 2, CubicBoronNitride, 1, AmorphousBoronNitride, 1)
+                .build();
     }
 
     private static int getMaterialsId() {

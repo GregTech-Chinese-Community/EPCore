@@ -337,10 +337,10 @@ public class OpticalCircuits {
 
         //  Optical SoC
         PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(STRONTIUM_CARBONATE_OPTICAL_WAFER)
                 .input(plate, PedotTMA)
-                .input(HELIUM_NEON_LASER)
-                .input(ND_YAG_LASER)
                 .input(lens, Celestite, 2)
+                .input(dust, ZBLANGlass, 4)
                 .fluidInputs(SolderingAlloy.getFluid(L * 2))
                 .fluidInputs(TinAlloy.getFluid(L * 2))
                 .output(OPTICAL_IMC_BOARD, 2)

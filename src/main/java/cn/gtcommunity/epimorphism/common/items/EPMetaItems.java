@@ -172,6 +172,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem RHENIUM_PLASMA_CONTAINMENT_CELL;
     public static MetaItem<?>.MetaValueItem NEUTRON_PLASMA_CONTAINMENT_CELL;
     public static MetaItem<?>.MetaValueItem HYPOGEN_PLASMA_CONTAINMENT_CELL;
+    public static MetaItem<?>.MetaValueItem ACTINIUM_SUPERHYDRIDE_PLASMA_CONTAINMENT_CELL;
     public static MetaItem<?>.MetaValueItem QUANTUM_ANOMALY;
 
     //  Biological
@@ -208,10 +209,6 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_UXV;
     public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_OpV;
     public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_MAX;
-
-    //  Chemical Items
-    public static MetaItem<?>.MetaValueItem IMPURITIES_PRECIOUS_METAL_SLUDGE_DUST;
-    public static MetaItem<?>.MetaValueItem PURIFICATION_PRECIOUS_METAL_SLUDGE_DUST;
 
     private EPMetaItems() {}
 

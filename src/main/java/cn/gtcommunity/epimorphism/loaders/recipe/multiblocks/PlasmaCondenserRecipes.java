@@ -37,44 +37,66 @@ public class PlasmaCondenserRecipes {
         //  Neutron
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
                 .inputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
-                .fluidInputs(LiquidHelium.getFluid(16000))
+                .fluidInputs(LiquidHelium.getFluid(32000))
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Neutronium.getFluid(1000))
-                .fluidOutputs(Helium.getFluid(16000))
+                .fluidOutputs(Helium.getFluid(32000))
                 .EUt(VA[UV])
                 .duration(200)
                 .buildAndRegister();
 
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
                 .inputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
-                .fluidInputs(GelidCryotheum.getFluid(8000))
+                .fluidInputs(GelidCryotheum.getFluid(16000))
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Neutronium.getFluid(1000))
-                .fluidOutputs(Ice.getFluid(8000))
+                .fluidOutputs(Ice.getFluid(16000))
                 .EUt(VA[UV])
                 .duration(200)
                 .buildAndRegister();
 
-        //  hypogen
+        //  Hypogen
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
                 .inputs(HYPOGEN_PLASMA_CONTAINMENT_CELL.getStackForm())
-                .fluidInputs(LiquidHelium.getFluid(16000))
+                .fluidInputs(LiquidHelium.getFluid(64000))
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Hypogen.getFluid(1000))
-                .fluidOutputs(Helium.getFluid(16000))
+                .fluidOutputs(Helium.getFluid(64000))
                 .EUt(VA[UV])
                 .duration(200)
                 .buildAndRegister();
 
         PLASMA_CONDENSER_RECIPES.recipeBuilder()
                 .inputs(HYPOGEN_PLASMA_CONTAINMENT_CELL.getStackForm())
-                .fluidInputs(GelidCryotheum.getFluid(8000))
+                .fluidInputs(GelidCryotheum.getFluid(32000))
                 .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidOutputs(Hypogen.getFluid(1000))
-                .fluidOutputs(Ice.getFluid(8000))
+                .fluidOutputs(Ice.getFluid(32000))
                 .EUt(VA[UV])
                 .duration(200)
                 .buildAndRegister();
+
+        //  Actinium Superhydride
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(ACTINIUM_SUPERHYDRIDE_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(LiquidHelium.getFluid(24000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .output(dust, ActiniumSuperhydride, 13)
+                .fluidOutputs(Helium.getFluid(24000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .inputs(ACTINIUM_SUPERHYDRIDE_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(GelidCryotheum.getFluid(12000))
+                .outputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .output(dust, ActiniumSuperhydride, 13)
+                .fluidOutputs(Ice.getFluid(12000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
         /*
         //  Adamantium
         PLASMA_CONDENSER_RECIPES.recipeBuilder()

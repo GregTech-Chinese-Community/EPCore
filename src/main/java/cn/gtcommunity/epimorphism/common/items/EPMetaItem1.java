@@ -181,6 +181,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         RHENIUM_PLASMA_CONTAINMENT_CELL = this.addItem(251, "rhenium_plasma_containment_cell");
         NEUTRON_PLASMA_CONTAINMENT_CELL = this.addItem(252, "neutron_plasma_containment_cell");
         HYPOGEN_PLASMA_CONTAINMENT_CELL = this.addItem(253, "hypogen_plasma_containment_cell");
+        ACTINIUM_SUPERHYDRIDE_PLASMA_CONTAINMENT_CELL = this.addItem(254, "actinium_superhydride_plasma_containment_cell");
+
         QUANTUM_ANOMALY = this.addItem(260, "quantum_anomaly");
 
         //  Biological Components

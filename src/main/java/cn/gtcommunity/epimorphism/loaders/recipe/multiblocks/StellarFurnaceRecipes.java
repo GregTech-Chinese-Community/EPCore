@@ -93,11 +93,31 @@ public class StellarFurnaceRecipes {
                 .temperature(BigInteger.valueOf((10 * V[UHV]) - (10 * V[UV])))
                 .buildAndRegister();
 
-        //  Neutron plasma Containment Cell
+        //  Neutron Plasma Containment Cell
         CANNER_RECIPES.recipeBuilder()
                 .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
                 .fluidInputs(Neutron.getPlasma(1000))
                 .outputs(NEUTRON_PLASMA_CONTAINMENT_CELL.getStackForm())
+                .EUt(VA[LuV])
+                .duration(20)
+                .buildAndRegister();
+
+        //  Actinium Superhydride Plasma
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, ActiniumHydride, 64)
+                .input(dust, ActiniumHydride, 8)
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.NAQUADRIA_CHARGE))
+                .fluidOutputs(ActiniumSuperhydride.getFluid(72000))
+                .EUt(VA[UHV])
+                .duration(260)
+                .temperature(BigInteger.valueOf((10 * V[ZPM]) - (10 * V[IV])))
+                .buildAndRegister();
+
+        //  Actinium Superhydride Plasma Containment Cell
+        CANNER_RECIPES.recipeBuilder()
+                .inputs(PLASMA_CONTAINMENT_CELL.getStackForm())
+                .fluidInputs(ActiniumSuperhydride.getFluid(1000))
+                .outputs(ACTINIUM_SUPERHYDRIDE_PLASMA_CONTAINMENT_CELL.getStackForm())
                 .EUt(VA[LuV])
                 .duration(20)
                 .buildAndRegister();

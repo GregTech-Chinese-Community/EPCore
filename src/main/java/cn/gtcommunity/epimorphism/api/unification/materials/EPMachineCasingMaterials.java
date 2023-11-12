@@ -393,6 +393,17 @@ public class EPMachineCasingMaterials {
                 .blastTemp(4330, BlastProperty.GasTier.MID, VA[EV], 290)
                 .flags(GENERATE_PLATE)
                 .build();
+        //  24538 Fullerene Superconductor
+        FullereneSuperconductor = new Material.Builder(getMaterialsId(), gregtechId("fullerene_superconductor"))
+                .ingot()
+                .fluid()
+                .color(0x8BF743)
+                .iconSet(BRIGHT)
+                .components(BoronFranciumMixture, 8, ActiniumSuperhydride, 13, Abyssalloy, 6, LanthanumFullereneNanotube, 4, MetastableOganesson, 4, Cinobite, 3, Radium, 2, Astatine, 2, Radon, 5)
+                //  TODO UEV stage coil?
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UIV], 5560)
+                .cableProperties(V[UIV], 256, 0, true)
+                .build();
     }
 
     private static int getMaterialsId() {
