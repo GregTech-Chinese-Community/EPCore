@@ -23,6 +23,7 @@ public EPMaterials() {}
     public static Material Infinity;
     public static Material Rhugnor;
     public static Material Hypogen;
+    public static Material Californium252;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -318,6 +319,16 @@ public EPMaterials() {}
     public static Material HRAMagnesium;
     public static Material CadmiumBromide;
     public static Material MagnesiumBromide;
+    public static Material OganessonBreedingBase;
+    public static Material HotOganesson;
+    public static Material DragonDust;
+    public static Material CaliforniumNitrite;
+    public static Material CaliforniumDioxide;
+    public static Material CaliforniumHexachloride;
+    public static Material CaliforniumHexafluoride;
+    public static Material Californium252Hexafluoride;
+    public static Material SteamCrackedCalifornium252Hexafluoride;
+    public static Material Californium252Dioxide;
 
     //  Second Degree Materials
     public static Material DragonBreath;

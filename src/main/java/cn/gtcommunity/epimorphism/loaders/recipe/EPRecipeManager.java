@@ -39,6 +39,7 @@ public class EPRecipeManager {
         BZMediumChain.init();
         CaesiumRubidiumChain.init();
         CalciumChain.init();
+        CaliforniumChain.init();
         ChlorineChain.init();
         CarbonNanotubeChain.init();
         CBDOPolycarbonateChain.init();

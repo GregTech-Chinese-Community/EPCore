@@ -1,10 +1,13 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
+import gregtech.api.metatileentity.multiblock.CleanroomType;
+
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.ore.OrePrefix.*;
 
 public class EPFusionLoader {
     public static void init() {
@@ -116,6 +119,32 @@ public class EPFusionLoader {
                 .EUt(VA[UV])
                 .duration(80)
                 .EUToStart(500000000L)
+                .buildAndRegister();
+
+        //  (Mk IV) Metastable Oganesson
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Titanium.getFluid(L * 2))
+                .fluidInputs(Californium252.getFluid(L * 2))
+                .fluidOutputs(OganessonBreedingBase.getFluid(L * 4))
+                .EUt(VA[IV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(OganessonBreedingBase.getFluid(144))
+                .fluidInputs(Curium.getFluid(36))
+                .fluidOutputs(HotOganesson.getFluid(144))
+                .EUt(VA[UHV])
+                .duration(100)
+                .EUToStart(700000000L)
+                .buildAndRegister();
+
+        VACUUM_RECIPES.recipeBuilder()
+                .fluidInputs(HotOganesson.getFluid(144))
+                .output(ingotHot, MetastableOganesson)
+                .EUt(VA[UHV])
+                .duration(120)
                 .buildAndRegister();
 
         //  (Mk IV) Infinity + Chaotic Draconium -> Rhugnor

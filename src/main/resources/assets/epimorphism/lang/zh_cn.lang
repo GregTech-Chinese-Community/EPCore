@@ -903,6 +903,7 @@ gregtech.material.degenerate_rhenium=简并态铼
 gregtech.material.infinity=无尽
 gregtech.material.rhugnor=鲁格诺
 gregtech.material.hypogen=海珀珍
+gregtech.material.californium_252=锎-252
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1195,6 +1196,16 @@ gregtech.material.lanthanum_fullerene_mixture=镧-富勒烯混合物
 gregtech.material.lanthanum_embedded_fullerene=镧-富勒烯包合物
 gregtech.material.lanthanum_fullerene_nanotube=镧-富勒烯纳米管
 gregtech.material.hra_magnesium=高反应活化镁
+gregtech.material.oganesson_breeding_base=气奥增殖基
+gregtech.material.hot_oganesson=热气奥
+gregtech.material.dragon_dust=龙尘
+gregtech.material.californium_nitrite=亚硝酸锎
+gregtech.material.californium_dioxide=二氧化锎
+gregtech.material.californium_hexachloride=六氯化锎
+gregtech.material.californium_hexafluoride=六氟化锎
+gregtech.material.californium_252_hexafluoride=六氟化锎-252
+gregtech.material.steam_cracked_californium_252_hexafluoride=蒸汽裂化六氟化锎-252
+gregtech.material.californium_252_dioxide=二氧化锎-252
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

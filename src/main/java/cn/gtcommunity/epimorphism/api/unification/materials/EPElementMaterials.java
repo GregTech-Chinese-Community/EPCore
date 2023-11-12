@@ -10,6 +10,7 @@ import gregtech.api.unification.material.properties.ToolProperty;
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
 import static gregtech.api.GTValues.*;
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
@@ -104,7 +105,6 @@ public class EPElementMaterials {
                 .iconSet(SHINY)
                 .element(EPElements.Plutonium244)
                 .build();
-        //  TODO Titanium-50 + Californium-252 -> Oganesson Breeding Base + Californium-250 -> Hot Oganesson -> Metastable Oganesson
         //  26009 Metastable Oganesson
         MetastableOganesson = new Material.Builder(getMaterialsId(), gregtechId("metastable_oganesson"))
                 .ingot()
@@ -113,6 +113,7 @@ public class EPElementMaterials {
                 .iconSet(SHINY)
                 .element(Elements.Og)
                 .flags(GENERATE_PLATE)
+                .blastTemp(10380)
                 .build();
         //  TODO Radium-Radon Mixture + Scandium-Titanium-50 Mixture -> Metastable Hassium
         //  26010 Metastable Hassium
@@ -180,6 +181,14 @@ public class EPElementMaterials {
                 .iconSet(CUSTOM_HYPOGEN)
                 .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200).unbreakable().enchantability(33).magnetic().build())
                 .flags(GENERATE_PLATE)
+                .build();
+        //  26017 Californium-252
+        Californium252 = new Material.Builder(getMaterialsId(), gregtechId("californium_252"))
+                .ingot()
+                .fluid()
+                .iconSet(SHINY)
+                .element(EPElements.Californium252)
+                .color(Californium.getMaterialRGB())
                 .build();
     }
 
