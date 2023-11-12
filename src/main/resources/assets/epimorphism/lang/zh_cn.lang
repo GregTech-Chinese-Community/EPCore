@@ -238,6 +238,10 @@ metaitem.wafer.strontium_carbonate.bohrium.name=钅波掺杂的碳酸锶晶圆
 metaitem.wafer.strontium_carbonate.bohrium.tooltip=待处理光学晶体
 metaitem.component.optical.strontium_carbonate_wafer.name=光聚合液涂覆的碳酸锶晶圆
 metaitem.component.optical.strontium_carbonate_wafer.tooltip=预处理电介质反射晶圆
+metaitem.component.optical.optical_imc_board.name=精密预装配光电子电路基板
+metaitem.component.optical.optical_imc_board.tooltip=存算一体光学基板
+metaitem.component.optical.photoelectron_soc.name=光电子 SoC
+metaitem.component.optical.photoelectron_soc.tooltip=荧光电路
 
 #   Biological Components
 metaitem.biological.components.electrochemical_gradient_recorder.name=电化学梯度记录仪

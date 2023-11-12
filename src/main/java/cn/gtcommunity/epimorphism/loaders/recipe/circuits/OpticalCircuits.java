@@ -334,7 +334,30 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  TODO Optical SoC Recipe, may be use UHASoC (do not use Bio SoC...)
+        //  Optical SoC
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, PedotTMA)
+                .input(HELIUM_NEON_LASER)
+                .input(ND_YAG_LASER)
+                .input(lens, Celestite, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .fluidInputs(TinAlloy.getFluid(L * 2))
+                .output(OPTICAL_IMC_BOARD, 2)
+                .EUt(VA[UEV])
+                .duration(400)
+                .CasingTier(3)
+                .buildAndRegister();
+
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(OPTICAL_IMC_BOARD)
+                .input(UHASOC_CHIP, 2)
+                .input(OPTICAL_FIBER, 4)
+                .fluidInputs(Glowstone.getFluid(L * 2))
+                .output(PHOTOELECTRON_SOC)
+                .EUt(VA[UEV])
+                .duration(200)
+                .CasingTier(3)
+                .buildAndRegister();
 
         //  Optical Processor
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
@@ -345,8 +368,21 @@ public class OpticalCircuits {
                 .input(OPTICAL_TRANSISTOR, 8)
                 .input(OPTICAL_FIBER, 8)
                 .output(OPTICAL_PROCESSOR, 2)
+                .solderMultiplier(1)
                 .duration(200)
                 .EUt(VA[UHV])
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(OPTICAL_CIRCUIT_BOARD)
+                .input(PHOTOELECTRON_SOC)
+                .input(wireFine, PedotPSS, 8)
+                .input(bolt, Adamantium, 8)
+                .output(OPTICAL_PROCESSOR, 2)
+                .solderMultiplier(1)
+                .duration(100)
+                .EUt(VA[UEV])
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
