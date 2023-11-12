@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.api.recipe.builder;
 
 import cn.gtcommunity.epimorphism.api.recipe.properties.FlowRateProperty;
+import cn.gtcommunity.epimorphism.api.recipe.properties.MaxRateProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
@@ -29,11 +30,24 @@ public class FlowRateRecipeBuilder extends RecipeBuilder<FlowRateRecipeBuilder> 
     }
 
     public boolean applyProperty(@Nonnull String key, Object value) {
+        if (key.equals("max_rate")) {
+            flowRate(((Number)value).intValue());
+            return true;
+        }
         if (key.equals("flow_rate")) {
             flowRate(((Number)value).intValue());
             return true;
         }
         return super.applyProperty(key, value);
+    }
+
+    public FlowRateRecipeBuilder maxRate(int heat_max_rate) {
+        if (heat_max_rate < 0) {
+            EPLog.logger.error("Max Rate cannot be less than 0", new IllegalArgumentException());
+            this.recipeStatus = EnumValidationResult.INVALID;
+        }
+        applyProperty(MaxRateProperty.getInstance(), heat_max_rate);
+        return this;
     }
 
     public FlowRateRecipeBuilder flowRate(int heat_flow_rate) {
@@ -43,6 +57,11 @@ public class FlowRateRecipeBuilder extends RecipeBuilder<FlowRateRecipeBuilder> 
         }
         applyProperty(FlowRateProperty.getInstance(), heat_flow_rate);
         return this;
+    }
+
+    public int getMaxRate() {
+        return this.recipePropertyStorage == null ? 0 : this.recipePropertyStorage
+                .getRecipePropertyValue(MaxRateProperty.getInstance(), 0);
     }
 
     public int getFlowRate() {
@@ -59,6 +78,7 @@ public class FlowRateRecipeBuilder extends RecipeBuilder<FlowRateRecipeBuilder> 
     public String toString() {
         return (new ToStringBuilder(this))
                 .appendSuper(super.toString())
+                .append(MaxRateProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getMaxRate()))
                 .append(FlowRateProperty.getInstance().getKey(), TextFormattingUtil.formatNumbers(getFlowRate()))
                 .toString();
     }

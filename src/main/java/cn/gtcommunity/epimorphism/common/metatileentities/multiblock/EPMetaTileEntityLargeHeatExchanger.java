@@ -41,7 +41,6 @@ import static net.minecraft.util.text.TextFormatting.*;
 
 public class EPMetaTileEntityLargeHeatExchanger extends NoEnergyMultiblockController implements IHeatExchanger {
 
-    private final int maxInputFlowRate = 2000;
     private final int heatTime = 150;
     private int thresholdPercentage = 100;
 
@@ -131,7 +130,6 @@ public class EPMetaTileEntityLargeHeatExchanger extends NoEnergyMultiblockContro
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip", heatTime));
-        tooltip.add(I18n.format("epimorphism.multiblock.large_heat_exchanger.tooltip.base_import_fluid", maxInputFlowRate));
         tooltip.add(TooltipHelper.BLINKING_RED + I18n.format("epimorphism.multiblock.large_heat_exchanger.explosion_tooltip"));
     }
 
@@ -165,8 +163,8 @@ public class EPMetaTileEntityLargeHeatExchanger extends NoEnergyMultiblockContro
     }
 
     @Override
-    public int getMaxInputFlowRate() {
-        return maxInputFlowRate;
+    public int getParallel() {
+        return 1;
     }
 
     @Override
