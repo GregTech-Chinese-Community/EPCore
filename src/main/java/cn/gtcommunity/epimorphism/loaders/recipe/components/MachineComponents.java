@@ -1249,7 +1249,20 @@ public class MachineComponents {
                 .fluidInputs(IncoloyMA956.getFluid(L * 2))
                 .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_B.getItemVariant(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_SHAFT_BLOCK))
                 .EUt(VA[IV])
-                .duration(180)
+                .duration(50)
+                .buildAndRegister();
+
+        //  Cosmic Ray Detector Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, HastelloyC59)
+                .input(FIELD_GENERATOR_LuV)
+                .input(NEUTRON_REFLECTOR)
+                .input(plate, ZirconiumCarbide, 4)
+                .input(plate, RhodiumPlatedPalladium, 4)
+                .fluidInputs(Tantalloy61.getFluid(L * 4))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING.getItemVariant(EPBlockMultiblockCasing.CasingType.REFLECTIVE_CASING, 2))
+                .EUt(VA[UV])
+                .duration(100)
                 .buildAndRegister();
     }
 

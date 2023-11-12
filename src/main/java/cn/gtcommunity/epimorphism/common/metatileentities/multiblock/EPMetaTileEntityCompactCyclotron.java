@@ -4,10 +4,13 @@ import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregtech.api.capability.GregtechCapabilities;
+import gregtech.api.capability.IEnergyContainer;
 import gregtech.api.metatileentity.IFastRenderMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -108,7 +111,13 @@ public class EPMetaTileEntityCompactCyclotron extends RecipeMapMultiblockControl
                 .where('G', states(getGlassState()))
                 .where('C', states(getCasingState())
                         .setMinGlobalLimited(88)
-                        .or(autoAbilities()))
+                        .or(autoAbilities(false, false, true, true, true, true, false))
+                        .or(metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.INPUT_ENERGY).stream()
+                                .filter(mte -> {
+                                    IEnergyContainer container = mte.getCapability(GregtechCapabilities.CAPABILITY_ENERGY_CONTAINER, null);
+                                    return container != null && container.getInputAmperage() == 2;
+                                })
+                                .toArray(MetaTileEntity[]::new)).setExactLimit(1).setPreviewCount(1)))
                 .where('K', states(getCoilState()))
                 .where('A', air())
                 .where(' ', any())

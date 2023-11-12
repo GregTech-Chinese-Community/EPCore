@@ -180,9 +180,9 @@ metaitem.laser.emitter.nd_yag.tooltip=用于强光学设备
 #  Condenser Components
 metaitem.tube.topological_insulator.name=拓扑绝缘管
 metaitem.tube.topological_insulator.tooltip=导电表面态
-metaitem.containment_unit.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态遏制装置
+metaitem.containment_unit.bose_einstein_condensate.name=凝聚态物质遏制装置
 metaitem.containment_unit.bose_einstein_condensate.tooltip=电磁蒸发冷却
-metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态
+metaitem.bose_einstein_condensate.name=玻色-爱因斯坦凝聚态物质遏制装置
 metaitem.bose_einstein_condensate.tooltip=在 §b170nK§7 下有整整 2,000 个 §cRb-87§7 原子！
 
 #  Wafers

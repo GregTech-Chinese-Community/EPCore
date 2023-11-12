@@ -255,7 +255,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(DULL)
                 .blastTemp(7600, BlastProperty.GasTier.HIGHER, VA[LuV], 559)
                 .components(Nickel, 18, Chrome, 16, TinAlloy, 8, Cobalt, 6, Niobium, 4, Aluminium, 4, Silicon, 2, Phosphorus, 2)
-                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
         //  24524 HMS-1J79 Alloy
         HMS1J79Alloy = new Material.Builder(getMaterialsId(), gregtechId("hms_1_j_79_alloy"))
