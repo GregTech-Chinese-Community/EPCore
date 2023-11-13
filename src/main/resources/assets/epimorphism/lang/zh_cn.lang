@@ -911,6 +911,8 @@ gregtech.material.infinity=无尽
 gregtech.material.rhugnor=鲁格诺
 gregtech.material.hypogen=海珀珍
 gregtech.material.californium_252=锎-252
+gregtech.material.astral_titanium=星体钛
+gregtech.material.celestial_tungsten=天体钨
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯

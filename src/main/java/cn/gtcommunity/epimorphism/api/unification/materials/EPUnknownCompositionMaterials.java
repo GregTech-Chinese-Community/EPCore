@@ -141,6 +141,7 @@ public class EPUnknownCompositionMaterials {
         //  25222 Bedrock
         Bedrock = new Material.Builder(getMaterialsId(), gregtechId("bedrock"))
                 .dust()
+                .fluid()
                 .color(0x404040)
                 .iconSet(ROUGH)
                 .build();

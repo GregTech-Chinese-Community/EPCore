@@ -175,5 +175,48 @@ public class EPFusionLoader {
                 .EUt(VA[LuV])
                 .duration(20)
                 .buildAndRegister();
+
+        //  Astral Titanium Chain
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Neon.getFluid(144))
+                .fluidInputs(Bedrock.getFluid(144))
+                .fluidOutputs(Taranium.getPlasma(1000))
+                .EUt(VA[UHV])
+                .duration(64)
+                .EUToStart(100000000L)
+                .buildAndRegister();
+
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Krypton.getFluid(1000))
+                .fluidInputs(Taranium.getPlasma(1000))
+                .fluidOutputs(AstralTitanium.getPlasma(1000))
+                .EUt(VA[UEV])
+                .duration(32)
+                .EUToStart(300000000L)
+                .buildAndRegister();
+
+        VACUUM_RECIPES.recipeBuilder()
+                .fluidInputs(AstralTitanium.getPlasma(L))
+                .output(ingotHot, AstralTitanium)
+                .EUt(VA[UEV])
+                .duration(120)
+                .buildAndRegister();
+
+        //  Celestial Tungsten Chain
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Radon.getFluid(1000))
+                .fluidInputs(Taranium.getPlasma(1000))
+                .fluidOutputs(CelestialTungsten.getPlasma(1000))
+                .EUt(VA[UEV])
+                .duration(32)
+                .EUToStart(300000000L)
+                .buildAndRegister();
+
+        VACUUM_RECIPES.recipeBuilder()
+                .fluidInputs(CelestialTungsten.getPlasma(L))
+                .output(ingotHot, CelestialTungsten)
+                .EUt(VA[UEV])
+                .duration(120)
+                .buildAndRegister();
     }
 }

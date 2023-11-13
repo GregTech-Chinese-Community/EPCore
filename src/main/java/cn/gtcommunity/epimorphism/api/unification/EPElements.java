@@ -18,6 +18,8 @@ public class EPElements {
     public static final Element Taranium = Elements.add(321, 478, -1, null, "Taranium", "Tn", false);
     public static final Element CosmicNeutronium = Elements.add(9999, 9999, -1, null, "CosmicNeutronium", "SpNt", false);
     public static final Element Infinity = Elements.add(999, 999, -1, null, "Infinity", "∞", false);
-    public static final Element Rhugnor = Elements.add(8750, 14757, -1, null, "Rhugnor", "Fs⚶", false);
-    public static final Element Hypogen = Elements.add(11255, 19377, -1, null, "Hypogen", "Hy⚶", false);
+    public static final Element Rhugnor = Elements.add(184, 142, -1, null, "Rhugnor", "Fs⚶", false);
+    public static final Element Hypogen = Elements.add(240, 251, -1, null, "Hypogen", "Hy⚶", false);
+    public static final Element AstralTitanium = Elements.add(145, 133, -1, null, "AstralTitanium", "✧◇✧", false);
+    public static final Element CelestialTungsten = Elements.add(160, 101, -1, null, "CelestialTungsten", "✦◆✦", false);
 }
