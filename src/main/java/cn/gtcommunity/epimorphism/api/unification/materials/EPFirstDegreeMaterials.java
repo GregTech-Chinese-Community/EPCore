@@ -1598,7 +1598,7 @@ public class EPFirstDegreeMaterials {
                 .fluidTemp(2147483647)
                 .color(0x70ecff)
                 .iconSet(BRIGHT)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_FRAME)
                 .build();
         //  24212 Magneto Hydrodynamically Constrained Star Matter
         MagnetoHydrodynamicallyConstrainedStarMatter = new Material.Builder(getMaterialsId(), gregtechId("magneto_hydrodynamically_constrained_star_matter"))
@@ -1606,7 +1606,7 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .fluidTemp(600000000)
                 .iconSet(CUSTOM_MHCSM)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
+                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  24213 White Dwarf Matter
         WhiteDwarfMatter = new Material.Builder(getMaterialsId(), gregtechId("white_dwarf_matter"))

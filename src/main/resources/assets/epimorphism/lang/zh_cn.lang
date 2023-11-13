@@ -429,6 +429,7 @@ metaitem.component.vacuum_tube.name=真空管组件
 metaitem.separation_electromagnet.name=分离用电磁铁
 metaitem.protonated_fullerene_sieving_matrix.name=质子化富勒烯筛分基质
 metaitem.saturated_fullerene_sieving_matrix.name=饱和富勒烯筛分基质
+metaitem.unstable_star.name=易变之星
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -1533,3 +1534,5 @@ gregtech.material.incoloy_020=耐热铬铁合金-020
 gregtech.material.hg_1223=HG-1223
 gregtech.material.hms_1_j_22_alloy=高饱和磁感应软磁合金-1J22
 gregtech.material.fullerene_superconductor=富勒烯超导体
+gregtech.material.legendarium=传奇金属
+gregtech.material.superheavy_h_alloy=超重元素-重合金

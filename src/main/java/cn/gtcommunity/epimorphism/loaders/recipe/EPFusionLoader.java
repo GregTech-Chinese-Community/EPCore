@@ -51,6 +51,46 @@ public class EPFusionLoader {
                 .EUToStart(300000000L)
                 .buildAndRegister();
 
+        //  Nickel + Polonium -> Copernicium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Nickel.getPlasma(576))
+                .fluidInputs(Polonium.getFluid(576))
+                .fluidOutputs(Copernicium.getFluid(576))
+                .EUt(VA[UV])
+                .duration(100)
+                .EUToStart(480000000L)
+                .buildAndRegister();
+
+        //  Nickel + Astatine -> Nihonium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Nickel.getPlasma(288))
+                .fluidInputs(Astatine.getFluid(288))
+                .fluidOutputs(Nihonium.getFluid(576))
+                .EUt(358690)
+                .duration(180)
+                .EUToStart(410000000L)
+                .buildAndRegister();
+
+        //  Neptunium + Titanium -> Moscovium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Neptunium.getFluid(288))
+                .fluidInputs(Titanium.getFluid(288))
+                .fluidOutputs(Moscovium.getFluid(576))
+                .EUt(473960)
+                .duration(220)
+                .EUToStart(380000000L)
+                .buildAndRegister();
+
+        //  Americium + Titanium -> Tennessine
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Americium.getFluid(288))
+                .fluidInputs(Titanium.getFluid(288))
+                .fluidOutputs(Tennessine.getFluid(576))
+                .EUt(509370)
+                .duration(300)
+                .EUToStart(420000000L)
+                .buildAndRegister();
+
         //  (Mk III) Americium + Neon -> Dubnium
         FUSION_RECIPES.recipeBuilder()
                 .fluidInputs(Americium.getFluid(16))

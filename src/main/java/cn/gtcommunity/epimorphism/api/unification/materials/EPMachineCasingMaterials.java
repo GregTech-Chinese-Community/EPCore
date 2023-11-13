@@ -5,6 +5,7 @@ import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
+import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
 import static gregicality.multiblocks.api.unification.GCYMMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -404,6 +405,29 @@ public class EPMachineCasingMaterials {
                 //  TODO UEV stage coil?
                 .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UIV], 5560)
                 .cableProperties(V[UIV], 256, 0, true)
+                .build();
+        //  24539 Legendarium
+        Legendarium = new Material.Builder(getMaterialsId(), gregtechId("legendarium"))
+                .ingot()
+                .fluid()
+                .color(0xF58FDA)
+                .iconSet(CUSTOM_LEGENDARIUM)
+                .components(Naquadria, 1, Trinium, 1, Duranium, 1, Tritanium, 1, Orichalcum, 1, Adamantium, 1, Vibranium, 1, Taranium, 1)
+                //  TODO UEV stage coil?
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UIV], 4998)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_DOUBLE_PLATE, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .build();
+        //  24540 Superheavy-H Alloy
+        SuperheavyHAlloy = new Material.Builder(getMaterialsId(), gregtechId("superheavy_h_alloy"))
+                .ingot()
+                .fluid()
+                .color(0xE84B36)
+                .iconSet(SHINY)
+                .components(Copernicium, 1, Nihonium, 1, MetastableFlerovium, 1, Moscovium, 1, Livermorium, 1, Tennessine, 1, MetastableOganesson, 1)
+                //  TODO UEV stage coil?
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UIV], 5236)
+                .flags(GENERATE_FINE_WIRE)
+                .cableProperties(V[UIV], 256, 64, false)
                 .build();
     }
 

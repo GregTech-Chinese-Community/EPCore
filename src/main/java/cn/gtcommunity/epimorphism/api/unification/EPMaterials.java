@@ -631,6 +631,8 @@ public EPMaterials() {}
     public static Material HG1223;
     public static Material HMS1J22Alloy;
     public static Material FullereneSuperconductor;
+    public static Material Legendarium;
+    public static Material SuperheavyHAlloy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

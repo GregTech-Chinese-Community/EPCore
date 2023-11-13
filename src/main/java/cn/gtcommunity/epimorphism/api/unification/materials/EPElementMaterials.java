@@ -201,7 +201,7 @@ public class EPElementMaterials {
                 //  TODO may be re-balance
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.AstralTitanium)
-                //  TODO For UIV Components, may be sensor
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .build();
         //  26019 Celestial Tungsten
         CelestialTungsten = new Material.Builder(getMaterialsId(), gregtechId("celestial_tungsten"))
@@ -213,7 +213,7 @@ public class EPElementMaterials {
                 //  TODO may be re-balance
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.CelestialTungsten)
-                //  TODO For UIV Components
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .build();
 
     }
