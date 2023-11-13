@@ -204,7 +204,7 @@ public class EPFusionLoader {
 
         //  Celestial Tungsten Chain
         FUSION_RECIPES.recipeBuilder()
-                .fluidInputs(Radon.getFluid(1000))
+                .fluidInputs(Xenon.getFluid(1000))
                 .fluidInputs(Taranium.getPlasma(1000))
                 .fluidOutputs(CelestialTungsten.getPlasma(1000))
                 .EUt(VA[UEV])

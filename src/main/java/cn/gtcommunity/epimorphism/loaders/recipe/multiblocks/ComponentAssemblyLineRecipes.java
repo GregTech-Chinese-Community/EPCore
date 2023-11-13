@@ -32,7 +32,7 @@ public class ComponentAssemblyLineRecipes {
                 .input(pipeTinyFluid, Bronze, 64)
                 .input(stickLong, WroughtIron, 64)
                 .input(stickLong, IronMagnetic, 32)
-                .input(wireGtQuadruple, Lead, 64)
+                .input(wireGtHex, Lead, 16)
                 .output(ELECTRIC_MOTOR_ULV, 64)
                 .EUt(VA[ULV])
                 .duration(300)

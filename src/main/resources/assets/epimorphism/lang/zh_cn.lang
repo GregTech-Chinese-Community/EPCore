@@ -710,7 +710,7 @@ epimorphism.machine.mega_oil_cracking_unit.tooltip.3=线圈每比白铜高一个
 
 epimorphism.machine.mega_chemical_reactor.name=巨型化学反应釜
 epimorphism.machine.mega_chemical_reactor.tooltip.1=玻璃等级决定了最大电压。
-epimorphism.machine.mega_chemical_reactor.tooltip.2=拥有最大256的并行。
+epimorphism.machine.mega_chemical_reactor.tooltip.2=最大并行数：§e256§7
 
 epimorphism.machine.blazing_blast_furnace.name=炽焱高炉
 epimorphism.machine.blazing_blast_furnace.amount=烈焰之炽焱储量：%sL

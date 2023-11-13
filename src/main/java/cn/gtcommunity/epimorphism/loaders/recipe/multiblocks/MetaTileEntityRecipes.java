@@ -895,6 +895,44 @@ public class MetaTileEntityRecipes {
                 'R', new UnificationEntry(rotor, Staballoy),
                 'O', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
                 'P', new UnificationEntry(pipeLargeFluid, Titanium));
+
+        //  Mega Oil Cracking Unit
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, HMS1J22Alloy, 4)
+                .inputs(CRACKER.getStackForm(16))
+                .input(circuit, MarkerMaterials.Tier.IV, 16)
+                .input(plateDouble, HG1223, 4)
+                .input(plateDouble, Staballoy, 4)
+                .input(gear, MaragingSteel250, 4)
+                .input(gearSmall, Stellite, 16)
+                .input(cableGtQuadruple, Aluminium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 20))
+                .outputs(MEGA_OIL_CRACKING_UNIT.getStackForm())
+                .EUt(VA[EV])
+                .duration(800)
+                .buildAndRegister();
+
+        //  Mega Chemical Reactor
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, MARM200Steel, 4)
+                .inputs(LARGE_CHEMICAL_REACTOR.getStackForm(16))
+                .input(circuit, MarkerMaterials.Tier.LuV, 16)
+                .input(plateDouble, Pikyonium64B, 4)
+                .input(plateDouble, IncoloyDS, 4)
+                .input(gear, Inconel625, 4)
+                .input(gearSmall, Tantalloy61, 16)
+                .input(cableGtQuadruple, VanadiumGallium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Lubricant.getFluid(3000))
+                .fluidInputs(Osmiridium.getFluid(576))
+                .outputs(MEGA_CHEMICAL_REACTOR.getStackForm())
+                .scannerResearch(b -> b
+                        .researchStack(LARGE_CHEMICAL_REACTOR.getStackForm())
+                        .EUt(VA[IV])
+                        .duration(1200))
+                .EUt(VA[LuV])
+                .duration(1200)
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {
