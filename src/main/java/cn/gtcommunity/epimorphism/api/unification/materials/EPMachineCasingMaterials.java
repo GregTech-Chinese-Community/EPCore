@@ -144,7 +144,7 @@ public class EPMachineCasingMaterials {
                 .color(0xA5ADB2)
                 .iconSet(SHINY)
                 .blastTemp(2413, BlastProperty.GasTier.MID, VA[EV], 680)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_GEAR)
                 .components(Steel, 16, Molybdenum, 1, Titanium, 1, Nickel, 4, Cobalt, 2)
                 .build();
         //  24513 Staballoy
@@ -154,7 +154,7 @@ public class EPMachineCasingMaterials {
                 .color(0x444B42)
                 .iconSet(SHINY)
                 .blastTemp(3450, BlastProperty.GasTier.HIGH, VA[EV], 462)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_DOUBLE_PLATE)
                 .components(Uranium238, 9, Titanium, 1)
                 .build();
         //  24514 Babbitt Alloy
@@ -342,7 +342,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(BRIGHT)
                 .blastTemp(5680, BlastProperty.GasTier.HIGHER, VA[IV], 680)
                 .components(Iron, 23, Cobalt, 9, Chrome, 9, Nickel, 9)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
         //  24533 Inconel-690
         Inconel690 = new Material.Builder(getMaterialsId(), gregtechId("inconel_690"))
@@ -362,7 +362,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .components(Tantalum, 13, Tungsten, 12, Titanium, 6, Yttrium, 4)
                 .blastTemp(6900, BlastProperty.GasTier.HIGHER, VA[LuV], 801)
-                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  24535 Inconel-020
         Incoloy020 = new Material.Builder(getMaterialsId(), gregtechId("incoloy_020"))
@@ -382,6 +382,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(Mercury, 1, Barium, 2, Calcium, 2, Copper, 3, Oxygen, 8)
                 .blastTemp(5325, BlastProperty.GasTier.HIGH, VA[EV], 301)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
         //  24537 HMS-1J22 Alloy
         HMS1J22Alloy = new Material.Builder(getMaterialsId(), gregtechId("hms_1_j_22_alloy"))
@@ -391,7 +392,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(DULL)
                 .components(Nickel, 12, TinAlloy, 8, Chrome, 4, Phosphorus, 2, Silicon, 2)
                 .blastTemp(4330, BlastProperty.GasTier.MID, VA[EV], 290)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
                 .build();
         //  24538 Fullerene Superconductor
         FullereneSuperconductor = new Material.Builder(getMaterialsId(), gregtechId("fullerene_superconductor"))

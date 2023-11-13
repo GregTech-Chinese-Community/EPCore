@@ -92,6 +92,7 @@ public class EPElementMaterials {
         Taranium = new Material.Builder(getMaterialsId(), gregtechId("taranium"))
                 .ingot()
                 .fluid()
+                .plasma()
                 .color(0x4F404F)
                 .iconSet(METALLIC)
                 .element(EPElements.Taranium)
@@ -190,6 +191,31 @@ public class EPElementMaterials {
                 .element(EPElements.Californium252)
                 .color(Californium.getMaterialRGB())
                 .build();
+        //  26018 Astral Titanium
+        AstralTitanium = new Material.Builder(getMaterialsId(), gregtechId("astral_titanium"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .color(0xDCA0F0)
+                .iconSet(BRIGHT)
+                //  TODO may be re-balance
+                .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
+                .element(EPElements.AstralTitanium)
+                //  TODO For UIV Components, may be sensor
+                .build();
+        //  26019 Celestial Tungsten
+        CelestialTungsten = new Material.Builder(getMaterialsId(), gregtechId("celestial_tungsten"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .color(0x323232)
+                .iconSet(BRIGHT)
+                //  TODO may be re-balance
+                .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
+                .element(EPElements.CelestialTungsten)
+                //  TODO For UIV Components
+                .build();
+
     }
 
     private static int getMaterialsId() {

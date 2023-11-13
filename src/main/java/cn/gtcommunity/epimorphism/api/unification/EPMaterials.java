@@ -24,6 +24,8 @@ public EPMaterials() {}
     public static Material Rhugnor;
     public static Material Hypogen;
     public static Material Californium252;
+    public static Material AstralTitanium;
+    public static Material CelestialTungsten;
 
     //  First Degree Materials
     public static Material GrapheneOxide;

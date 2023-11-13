@@ -32,8 +32,8 @@ import javax.annotation.Nullable;
 
 import java.util.List;
 
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.GelidCryotheum;
-import static gregtech.api.recipes.RecipeMaps.VACUUM_RECIPES;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static gregtech.api.recipes.RecipeMaps.*;
 
 public class EPMetaTileEntityCryogenicFreezer extends RecipeMapMultiblockController {
     public EPMetaTileEntityCryogenicFreezer(ResourceLocation metaTileEntityId) {
@@ -86,6 +86,8 @@ public class EPMetaTileEntityCryogenicFreezer extends RecipeMapMultiblockControl
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.machine.cryogenic_freezer.tooltip.1"));
         tooltip.add(I18n.format("epimorphism.machine.cryogenic_freezer.tooltip.2"));
+        tooltip.add(I18n.format("epimorphism.machine.cryogenic_freezer.tooltip.3"));
+        tooltip.add(I18n.format("epimorphism.machine.cryogenic_freezer.tooltip.4"));
     }
 
     //  Display Texts
@@ -142,6 +144,18 @@ public class EPMetaTileEntityCryogenicFreezer extends RecipeMapMultiblockControl
                 else return;
                 drawEnergy(recipeEUt, false);
             }
+        }
+
+        /**
+         * @param maxProgress Reduce duration to 0.8 original duration.
+         */
+        public void setMaxProgress(int maxProgress) {
+            this.maxProgressTime = (int) (0.8 * maxProgress);
+        }
+
+        @Override
+        public int getParallelLimit() {
+            return 4;
         }
     }
 }

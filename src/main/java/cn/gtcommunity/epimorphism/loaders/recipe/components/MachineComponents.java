@@ -9,6 +9,7 @@ import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.*;
 import gregtech.common.items.MetaItems;
 import gregtech.common.metatileentities.MetaTileEntities;
+import net.minecraft.init.Items;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing.CasingType.*;
@@ -1267,6 +1268,45 @@ public class MachineComponents {
     }
 
     private static void Materials() {
+
+        //  Blazing Pyrotheum
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Redstone)
+                .input(dust, Sulfur)
+                .fluidInputs(Blaze.getFluid(L * 2))
+                .fluidOutputs(BlazingPyrotheum.getFluid(4000))
+                .EUt(VA[MV])
+                .duration(120)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(BlazingPyrotheum.getFluid(4000))
+                .output(dust, Redstone)
+                .output(dust, Sulfur)
+                .fluidOutputs(Blaze.getFluid(L * 2))
+                .EUt(VA[LV])
+                .duration(240)
+                .buildAndRegister();
+
+        //  Gelid Cryotheum
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Electrotine)
+                .input(Items.SNOWBALL)
+                .fluidInputs(Ice.getFluid(2000))
+                .fluidOutputs(GelidCryotheum.getFluid(4000))
+                .EUt(VA[MV])
+                .duration(120)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(GelidCryotheum.getFluid(4000))
+                .output(dust, Electrotine)
+                .output(Items.SNOWBALL)
+                .fluidOutputs(Ice.getFluid(2000))
+                .EUt(VA[LV])
+                .duration(240)
+                .buildAndRegister();
+
         //  Helium-Neon Gas
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Helium.getFluid(1000))
