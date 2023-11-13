@@ -41,12 +41,16 @@ public class EPUnknownCompositionMaterials {
                 .fluid()
                 .color(Materials.Blaze.getMaterialRGB())
                 .fluidTemp(8000)
+                .components(Blaze, 2, Redstone, 1, Sulfur, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .build();
         //  25206 Gelid Cryotheum
         GelidCryotheum = new Material.Builder(getMaterialsId(), gregtechId("gelid_cryotheum"))
                 .fluid()
                 .color(0x40B8FB)
                 .fluidTemp(8)
+                .components(Ice, 2, Electrotine, 1, Water, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .build();
         //  25207 Co/AC-AB Catalyst
         CoACABCatalyst = new Material.Builder(getMaterialsId(), gregtechId("co_ac_ab_catalyst"))

@@ -157,6 +157,7 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
         tooltip.add(I18n.format("epimorphism.machine.blazing_blast_furnace.tooltip.1"));
         tooltip.add(I18n.format("epimorphism.machine.blazing_blast_furnace.tooltip.2"));
         tooltip.add(I18n.format("epimorphism.machine.blazing_blast_furnace.tooltip.3"));
+        tooltip.add(I18n.format("epimorphism.machine.blazing_blast_furnace.tooltip.4"));
     }
 
     //  Display Texts
@@ -247,6 +248,10 @@ public class EPMetaTileEntityBlazingBlastFurnace extends RecipeMapMultiblockCont
         @Override
         public int getParallelLimit() {
             return getMaxParallel(heatingCoilLevel);
+        }
+
+        public void setMaxProgress(int maxProgress) {
+            this.maxProgressTime = maxProgress / 2;
         }
 
         protected void updateRecipeProgress() {

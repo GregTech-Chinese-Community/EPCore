@@ -718,7 +718,8 @@ epimorphism.machine.blazing_blast_furnace.heat=烈焰之炽焱正在转换为热
 epimorphism.machine.blazing_blast_furnace.warning=烈焰之炽焱不足
 epimorphism.machine.blazing_blast_furnace.tooltip.1=需要提供§c烈焰之炽焱§7以工作。
 epimorphism.machine.blazing_blast_furnace.tooltip.2=未提供§c烈焰之炽焱§7时，炽焱高炉将会停机。
-epimorphism.machine.blazing_blast_furnace.tooltip.3=根据线圈等级决定最大并行数量，每提升一级都会使得最大并行数量提高至原本数量的两倍。
+epimorphism.machine.blazing_blast_furnace.tooltip.3=比相同电压等级的§r电力高炉§7快一倍
+epimorphism.machine.blazing_blast_furnace.tooltip.4=线圈等级决定最大并行数量，每提升一级都会使得最大并行数量提高至原本数量的两倍。
 
 epimorphism.machine.cryogenic_freezer.name=凛冰冷冻机
 epimorphism.machine.cryogenic_freezer.amount=极寒之凛冰储量：%sL
@@ -726,6 +727,8 @@ epimorphism.machine.cryogenic_freezer.subcooled=极寒之凛冰正在吸收周�
 epimorphism.machine.cryogenic_freezer.warning=极寒之凛冰不足
 epimorphism.machine.cryogenic_freezer.tooltip.1=需要提供§b极寒之凛冰§7以工作
 epimorphism.machine.cryogenic_freezer.tooltip.2=未提供§b极寒之凛冰§7时，凛冰冷冻机将会停机
+epimorphism.machine.cryogenic_freezer.tooltip.3=配方时间减少至原本的0.8倍
+epimorphism.machine.cryogenic_freezer.tooltip.4=最大并行数：§e4§7
 
 epimorphism.machine.isa_mill.name=艾萨研磨机
 recipemap.isa_mill_recipes.name=湿法碾磨
