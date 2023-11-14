@@ -330,6 +330,23 @@ public class PreciousMetalChain {
         GTRecipeHandler.removeRecipesByInputs(DISTILLERY_RECIPES,
                 new ItemStack[]{IntCircuitIngredient.getIntegratedCircuit(2)},
                 new FluidStack[]{AcidicOsmiumSolution.getFluid(400)});
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[]{OreDictUnifier.get(dust, OsmiumTetroxide, 5)},
+                new FluidStack[]{Hydrogen.getFluid(8000)});
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[]{OreDictUnifier.get(dust, OsmiumTetroxide, 5)},
+                new FluidStack[]{Hydrogen.getFluid(8000)});
+
+        ROASTER_RECIPES.recipeBuilder()
+                .fluidInputs(AcidicOsmiumSolution.getFluid(2000))
+                .input(dust, Calcite, 20)
+                .output(dust, OsmiumTetroxide, 5)
+                .output(dust, Calcium, 4)
+                .output(dust, Ash, 4)
+                .EUt(VA[HV])
+                .duration(100)
+                .temperature(1145)
+                .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, OsmiumTetroxide, 5)
