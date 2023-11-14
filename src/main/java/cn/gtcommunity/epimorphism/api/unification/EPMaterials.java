@@ -27,6 +27,8 @@ public EPMaterials() {}
     public static Material AstralTitanium;
     public static Material CelestialTungsten;
     public static Material Ytterbium178;
+    public static Material Ichorium;
+    public static Material IchorLiquid;
 
     //  First Degree Materials
     public static Material GrapheneOxide;

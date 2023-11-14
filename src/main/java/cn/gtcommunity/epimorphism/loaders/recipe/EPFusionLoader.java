@@ -269,6 +269,26 @@ public class EPFusionLoader {
                 .EUToStart(250000000L)
                 .buildAndRegister();
 
+        //  Adamantium + Nether Star -> Ichor Liquid
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Adamantium.getFluid(288))
+                .fluidInputs(NetherStar.getFluid(288))
+                .fluidOutputs(IchorLiquid.getFluid(576))
+                .EUt(500000)
+                .duration(20)
+                .EUToStart(360000000L)
+                .buildAndRegister();
+
+        //  Ichor Liquid + Radon -> Ichorium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(IchorLiquid.getFluid(144))
+                .fluidInputs(Radon.getFluid(1000))
+                .fluidOutputs(Ichorium.getFluid(144))
+                .EUt(VA[UV])
+                .duration(60)
+                .EUToStart(340000000L)
+                .buildAndRegister();
+
         //  TODO Vibranium + Duranium -> Crystal Matrix
 
         //  TODO Orichalcum + Lutetium -> Dragon Tear

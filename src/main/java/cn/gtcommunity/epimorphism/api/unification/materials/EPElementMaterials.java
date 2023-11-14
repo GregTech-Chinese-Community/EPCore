@@ -40,8 +40,9 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xf58742)
                 .iconSet(BRIGHT)
-                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .element(EPElements.AwakenedDraconium)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UV])
                 .cableProperties(V[UHV], 16, 4)
                 .build();
         //  26003 Chaotic Draconium
@@ -222,6 +223,22 @@ public class EPElementMaterials {
                 .color(Ytterbium.getMaterialRGB())
                 .iconSet(SHINY)
                 .element(EPElements.Ytterbium178)
+                .build();
+        //  26021 Ichorium
+        Ichorium = new Material.Builder(getMaterialsId(), gregtechId("ichorium"))
+                .ingot()
+                .fluid()
+                .color(0xE5A559)
+                .iconSet(BRIGHT)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UV])
+                .element(EPElements.Ichorium)
+                .build();
+        //  26022 Ichor Liquid
+        IchorLiquid = new Material.Builder(getMaterialsId(), gregtechId("ichor_liquid"))
+                .fluid(FluidTypes.PLASMA)
+                .fluidTemp(214748)
+                .color(0xE5A559)
+                .element(EPElements.IchorLiquid)
                 .build();
     }
 

@@ -950,6 +950,8 @@ gregtech.material.californium_252=锎-252
 gregtech.material.astral_titanium=星体钛
 gregtech.material.celestial_tungsten=天体钨
 gregtech.material.ytterbium_178=镱-178
+gregtech.material.ichorium=灵宝
+gregtech.material.ichor_liquid=灵液
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯

@@ -23,4 +23,6 @@ public class EPElements {
     public static final Element Hypogen = Elements.add(240, 251, -1, null, "Hypogen", "Hy⚶", false);
     public static final Element AstralTitanium = Elements.add(145, 133, -1, null, "AstralTitanium", "✧◇✧", false);
     public static final Element CelestialTungsten = Elements.add(160, 101, -1, null, "CelestialTungsten", "✦◆✦", false);
+    public static final Element Ichorium = Elements.add(165, 280, -1, null, "Ichorium", "✦☯✧", false);
+    public static final Element IchorLiquid = Elements.add(165, 279, -1, null, "IchorLiquid", "☯", false);
 }
