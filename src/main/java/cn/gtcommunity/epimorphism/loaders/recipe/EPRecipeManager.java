@@ -110,5 +110,6 @@ public class EPRecipeManager {
 //        LargeCircuitAssemblyLineRecipes.init();
         CyclotronRecipes.init();
         DecayChamberRecipes.init();
+        DragonFusionUnitRecipes.init();
     }
 }

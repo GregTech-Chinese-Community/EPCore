@@ -334,6 +334,9 @@ tile.ep_multiblock_casing_b.precise_assembler_casing_mk3.name=精密电子单元
 tile.ep_multiblock_casing_b.cyclotron_casing.name=回旋加速机械方块
 tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
 tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=高强度热磁保护管道外壳
+tile.ep_multiblock_casing_c.draconium_casing.name=魔力亲和龙素机器外壳
+tile.ep_multiblock_casing_c.dragon_fusion_coil.name=混沌聚合线圈方块
+
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -919,6 +922,10 @@ recipemap.cyclotron_recipes.name=回旋加速器
 epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
 epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
 epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
+
+recipemap.dragon_fusion_unit_recipes.name=魔力聚合
+epimorphism.machine.dragon_fusion_unit.name=魔力聚合装置
+epimorphism.machine.dragon_fusion_unit.tooltip.1=龙之力量由此苏醒
 
 #  Materials
 

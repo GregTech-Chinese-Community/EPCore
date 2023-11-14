@@ -405,16 +405,5 @@ public class DragonChain {
                 .duration(240)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
-
-        //  Awakened Draconium + Concentrate Dragon Breath + Radon -> Dragon Blood
-        MIXER_RECIPES.recipeBuilder()
-                .input(dust, AwakenedDraconium)
-                .fluidInputs(ConcentrateDragonBreath.getFluid(1000))
-                .fluidInputs(Radon.getFluid(1000))
-                .output(dust, Ash)
-                .fluidOutputs(DragonBlood.getFluid(1000))
-                .EUt(VA[UHV])
-                .duration(400)
-                .buildAndRegister();
     }
 }

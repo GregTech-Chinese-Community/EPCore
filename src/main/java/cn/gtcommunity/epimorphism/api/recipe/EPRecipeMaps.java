@@ -96,6 +96,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<CACasingTierRecipeBuilder> COMPONENT_ASSEMBLY_LINE_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> CYCLOTRON_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> DRAGON_FUSION_UNIT_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -325,6 +327,13 @@ public class EPRecipeMaps {
                 .setSlotOverlay(true, false, false, GuiTextures.IMPLOSION_OVERLAY_1)
                 .setSlotOverlay(true, false, true, GuiTextures.IMPLOSION_OVERLAY_1)
                 .setSound(GTSoundEvents.SCIENCE);
+
+        //  Dragon Fusion Unit Recipemap
+        DRAGON_FUSION_UNIT_RECIPES = new RecipeMap<>("dragon_fusion_unit_recipes", 0, 6, 0, 1, 0, 3, 0, 1, new SimpleRecipeBuilder(), false)
+                .setSlotOverlay(false, false, false, GuiTextures.RESEARCH_STATION_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.RESEARCH_STATION_OVERLAY)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.ARC);
 
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)

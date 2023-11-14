@@ -24,6 +24,7 @@ public class EPBlockMultiblockCasingB extends VariantBlock<EPBlockMultiblockCasi
     public boolean canCreatureSpawn(@Nonnull IBlockState state, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull EntityLiving.SpawnPlacementType type) {
         return false;
     }
+
     public static enum CasingType implements IStringSerializable {
         GENERAL_PROCESSING_CASING("general_processing_casing"),
         MARAGING_STEEL_CASING("maraging_steel_casing"),
