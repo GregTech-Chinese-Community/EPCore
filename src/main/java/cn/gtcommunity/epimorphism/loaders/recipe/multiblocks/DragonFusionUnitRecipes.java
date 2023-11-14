@@ -19,7 +19,15 @@ public class DragonFusionUnitRecipes {
                 .duration(100)
                 .buildAndRegister();
 
-        //  TODO Awakened Draconium -> Chaotic Draconium
+        //  Awakened Draconium -> Chaotic Draconium
+        DRAGON_FUSION_UNIT_RECIPES.recipeBuilder()
+                .input(dust, AwakenedDraconium)
+                .fluidInputs(VoidMetal.getFluid(L))
+                .fluidInputs(CrystalMatrix.getFluid(L))
+                .output(dust, ChaoticDraconium)
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
 
         //  Awakened Draconium + Concentrate Dragon Breath + Radon -> Dragon Blood
         DRAGON_FUSION_UNIT_RECIPES.recipeBuilder()

@@ -19,7 +19,15 @@ public class CyclotronRecipes {
                 .duration(300)
                 .buildAndRegister();
 
-        //  TODO C + At -> Ac
+        //  C + At -> Ac
+        CYCLOTRON_RECIPES.recipeBuilder()
+                .fluidInputs(Carbon.getFluid(L * 2))
+                .fluidInputs(Astatine.getFluid(L * 2))
+                .fluidOutputs(Actinium.getFluid(L))
+                .fluidOutputs(FreeElectronGas.getFluid(L * 3))
+                .EUt(VA[ZPM])
+                .duration(300)
+                .buildAndRegister();
 
         //  C + Cs -> La
         CYCLOTRON_RECIPES.recipeBuilder()
@@ -67,6 +75,15 @@ public class CyclotronRecipes {
                 .chancedOutput(QUANTUM_ANOMALY, 1000, 0)
                 .EUt(VA[ZPM])
                 .duration(1200)
+                .buildAndRegister();
+
+        //  Ichorium -> Void Metal
+        CYCLOTRON_RECIPES.recipeBuilder()
+                .notConsumable(QUANTUM_ANOMALY)
+                .fluidInputs(Ichorium.getFluid(L))
+                .fluidOutputs(VoidMetal.getFluid(L))
+                .EUt(VA[UV])
+                .duration(120)
                 .buildAndRegister();
 
         //  TODO Quantum Anomaly Recipe in Quantum Force Transformer (at UEV stage)

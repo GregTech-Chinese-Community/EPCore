@@ -29,6 +29,8 @@ public EPMaterials() {}
     public static Material Ytterbium178;
     public static Material Ichorium;
     public static Material IchorLiquid;
+    public static Material CrystalMatrix;
+    public static Material VoidMetal;
 
     //  First Degree Materials
     public static Material GrapheneOxide;

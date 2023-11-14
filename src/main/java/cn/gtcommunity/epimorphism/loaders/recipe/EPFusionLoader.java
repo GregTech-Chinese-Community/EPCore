@@ -289,7 +289,15 @@ public class EPFusionLoader {
                 .EUToStart(340000000L)
                 .buildAndRegister();
 
-        //  TODO Vibranium + Duranium -> Crystal Matrix
+        //  Vibranium + Duranium -> Crystal Matrix
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Vibranium.getPlasma(288))
+                .fluidInputs(Duranium.getFluid(288))
+                .fluidOutputs(CrystalMatrix.getFluid(576))
+                .EUt(VA[UHV])
+                .duration(120)
+                .EUToStart(350000000L)
+                .buildAndRegister();
 
         //  TODO Orichalcum + Lutetium -> Dragon Tear
 

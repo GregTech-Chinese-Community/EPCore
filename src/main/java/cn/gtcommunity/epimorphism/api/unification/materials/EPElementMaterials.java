@@ -240,6 +240,24 @@ public class EPElementMaterials {
                 .color(0xE5A559)
                 .element(EPElements.IchorLiquid)
                 .build();
+        //  26023 Crystal Matrix
+        CrystalMatrix = new Material.Builder(getMaterialsId(), gregtechId("crystal_matrix"))
+                .ingot()
+                .fluid()
+                .fluidTemp(660450)
+                .color(0x70ecff)
+                .iconSet(BRIGHT)
+                .element(EPElements.CrystalMatrix)
+                .build();
+        //  26024 Void Metal
+        VoidMetal = new Material.Builder(getMaterialsId(), gregtechId("void_metal"))
+                .ingot()
+                .fluid()
+                .fluidTemp(0)
+                .color(0x20142C)
+                .iconSet(DULL)
+                .element(EPElements.VoidMetal)
+                .build();
     }
 
     private static int getMaterialsId() {

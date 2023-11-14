@@ -952,6 +952,8 @@ gregtech.material.celestial_tungsten=天体钨
 gregtech.material.ytterbium_178=镱-178
 gregtech.material.ichorium=灵宝
 gregtech.material.ichor_liquid=灵液
+gregtech.material.crystal_matrix=水晶矩阵
+gregtech.material.void_metal=虚空金属
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
