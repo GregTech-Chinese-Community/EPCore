@@ -44,6 +44,7 @@ public class EPMetaTileEntities {
     public static SimpleSteamMetaTileEntity[] STEAM_VACUUM_CHAMBER = new SimpleSteamMetaTileEntity[2];
     public static SimpleMachineMetaTileEntity[] VACUUM_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static SimpleMachineMetaTileEntity[] COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[GTValues.IV + 1];
+    public static SimpleMachineMetaTileEntity[] DECAY_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -145,6 +146,7 @@ public class EPMetaTileEntities {
         registerSimpleSteamMetaTileEntity(STEAM_VACUUM_CHAMBER, 12617, "vacuum_chamber", EPRecipeMaps.VACUUM_CHAMBER_RECIPES, SteamProgressIndicators.COMPRESS, Textures.GAS_COLLECTOR_OVERLAY, false);
         registerSimpleMetaTileEntity(VACUUM_CHAMBER, 12619, "vacuum_chamber", EPRecipeMaps.VACUUM_CHAMBER_RECIPES, Textures.GAS_COLLECTOR_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
         registerSimpleMetaTileEntity(COMPONENT_ASSEMBLER, 12632, "component_assembler", EPRecipeMaps.COMPONENT_ASSEMBLER_RECIPES, Textures.ASSEMBLER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
+        registerSimpleMetaTileEntity(DECAY_CHAMBER, 12637, "decay_chamber", EPRecipeMaps.DECAY_CHAMBER_RECIPES, Textures.CHEMICAL_BATH_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
 
         //Multiblocks: Id 13301-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));

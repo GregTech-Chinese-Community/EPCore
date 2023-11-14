@@ -236,6 +236,15 @@ public class MetaTileEntityRecipes {
                 'G', CraftingComponent.GLASS,
                 'H', CraftingComponent.HULL);
 
+        //  Decay Chamber recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, DECAY_CHAMBER,
+                "CFC", "RHR", "WFW",
+                'H', CraftingComponent.HULL,
+                'R', CraftingComponent.DOUBLE_PLATE,
+                'F', CraftingComponent.FIELD_GENERATOR,
+                'C', CraftingComponent.CIRCUIT,
+                'W', CraftingComponent.CABLE);
+
         //  Naquadah Reactor recipes
         MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
                 "RCR", "FHF", "WCW",

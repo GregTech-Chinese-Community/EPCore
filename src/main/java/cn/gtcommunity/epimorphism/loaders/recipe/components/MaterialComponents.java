@@ -130,6 +130,14 @@ public class MaterialComponents {
 //                {14, new UnificationEntry(OrePrefix.plate, Trinium},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
+        DOUBLE_PLATE.appendIngredients(Stream.of(new Object[][]{
+                {9, new UnificationEntry(OrePrefix.plateDouble, Draconium)},
+                {10, new UnificationEntry(OrePrefix.plateDouble, Neutronium)},
+                {11, new UnificationEntry(OrePrefix.plateDouble, NeutronStarCoreMaterial)},
+//                {12, new UnificationEntry(OrePrefix.plateDouble, Trinium)},
+//                {13, new UnificationEntry(OrePrefix.plateDouble, Trinium)},
+        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
+
         ROTOR.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.rotor, Draconium)},
                 {10, new UnificationEntry(OrePrefix.rotor, Neutronium)},

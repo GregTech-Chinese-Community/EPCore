@@ -215,7 +215,14 @@ public class EPElementMaterials {
                 .element(EPElements.CelestialTungsten)
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .build();
-
+        //  26020 Ytterbium-178
+        Ytterbium178 = new Material.Builder(getMaterialsId(), gregtechId("ytterbium_178"))
+                .dust()
+                .fluid()
+                .color(Ytterbium.getMaterialRGB())
+                .iconSet(SHINY)
+                .element(EPElements.Ytterbium178)
+                .build();
     }
 
     private static int getMaterialsId() {

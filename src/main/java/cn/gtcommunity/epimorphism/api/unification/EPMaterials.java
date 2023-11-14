@@ -26,6 +26,7 @@ public EPMaterials() {}
     public static Material Californium252;
     public static Material AstralTitanium;
     public static Material CelestialTungsten;
+    public static Material Ytterbium178;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -349,6 +350,7 @@ public EPMaterials() {}
     public static Material ActiniumSuperhydride;
     public static Material FranciumCarbide;
     public static Material BoronFranciumMixture;
+    public static Material FleroviumYtterbiumPlasma;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -591,6 +593,7 @@ public EPMaterials() {}
     public static Material ActiniumRadiumHydroxideSolution;
     public static Material ActiniumRadiumNitrateSolution;
     public static Material HeavyFluorinatedDraconiumSolution;
+    public static Material QuasifissioningPlasma;
 
     //  Machine Casing Materials
     public static Material Inconel625;

@@ -1598,7 +1598,7 @@ public class EPFirstDegreeMaterials {
                 .fluidTemp(2147483647)
                 .color(0x70ecff)
                 .iconSet(BRIGHT)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_FRAME)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .build();
         //  24212 Magneto Hydrodynamically Constrained Star Matter
         MagnetoHydrodynamicallyConstrainedStarMatter = new Material.Builder(getMaterialsId(), gregtechId("magneto_hydrodynamically_constrained_star_matter"))
@@ -2410,6 +2410,13 @@ public class EPFirstDegreeMaterials {
                 .color(Boron.getMaterialRGB() + FranciumCarbide.getMaterialRGB())
                 .iconSet(BRIGHT)
                 .components(FranciumCarbide, 2, CubicBoronNitride, 1, AmorphousBoronNitride, 1)
+                .build();
+        //  24321 Flerovium-Ytterbium Plasma
+        FleroviumYtterbiumPlasma = new Material.Builder(getMaterialsId(), gregtechId("flerovium_ytterbium_plasma"))
+                .fluid(FluidTypes.PLASMA)
+                .fluidTemp(300)
+                .components(MetastableFlerovium, 1, Ytterbium178, 1)
+                .flags(DISABLE_DECOMPOSITION)
                 .build();
     }
 

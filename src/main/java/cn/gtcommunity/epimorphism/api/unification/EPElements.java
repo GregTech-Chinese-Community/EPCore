@@ -7,6 +7,7 @@ public class EPElements {
     //  Isotopes
     public static final Element Plutonium244 = Elements.add(94, 152, -1, null, "Plutonium-244", "Pu-244", true);
     public static final Element Californium252 = Elements.add(98, 154, -1, null, "Californium-252", "Cf-252", true);
+    public static final Element Ytterbium178 = Elements.add(70, 108, -1, null, "Ytterbium-178", "Yb-178", true);
 
     //  Fantasy Materials
     public static final Element Draconium = Elements.add(149, 264, -1, null, "Draconium", "Dc", false);

@@ -84,6 +84,8 @@ public class EPMaterialPropertyAddition {
         Moscovium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Moscovium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Tennessine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Hafnium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Hafnium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

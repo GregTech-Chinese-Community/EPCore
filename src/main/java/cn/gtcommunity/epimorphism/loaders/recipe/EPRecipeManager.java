@@ -109,5 +109,6 @@ public class EPRecipeManager {
         ComponentAssemblyLineRecipes.init();
 //        LargeCircuitAssemblyLineRecipes.init();
         CyclotronRecipes.init();
+        DecayChamberRecipes.init();
     }
 }

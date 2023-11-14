@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.api.unification.materials;
 import gregtech.api.fluids.fluidType.FluidTypes;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
+import net.minecraft.util.text.TextFormatting;
 
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
@@ -448,6 +449,13 @@ public class EPUnknownCompositionMaterials {
                 .fluid()
                 .color(0x8C117D)
                 .build();
+        //  25276 Quasi-fissioning Plasma
+        QuasifissioningPlasma = new Material.Builder(getMaterialsId(), gregtechId("quasi_fissioning_plasma"))
+                .fluid(FluidTypes.PLASMA)
+                .fluidTemp(230490)
+                .color(0xB0A2C3)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED + "aaa", false);
     }
 
     private static int getMaterialsId() {

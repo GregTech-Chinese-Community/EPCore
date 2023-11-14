@@ -258,5 +258,23 @@ public class EPFusionLoader {
                 .EUt(VA[UEV])
                 .duration(120)
                 .buildAndRegister();
+
+        //  Metastable Fl Chain
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Uranium238.getFluid(125))
+                .fluidInputs(Uranium238.getFluid(125))
+                .fluidOutputs(QuasifissioningPlasma.getFluid(125))
+                .EUt(600000)
+                .duration(100)
+                .EUToStart(250000000L)
+                .buildAndRegister();
+
+        //  TODO Vibranium + Duranium -> Crystal Matrix
+
+        //  TODO Orichalcum + Lutetium -> Dragon Tear
+
+        //  TODO Europium + Dragon Tear -> Mithril
+
+        //  TODO Crystal Matrix + Mithril -> Infinity
     }
 }

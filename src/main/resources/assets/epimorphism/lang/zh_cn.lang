@@ -573,6 +573,34 @@ epimorphism.machine.component_assembler.ev.tooltip=零部件工厂
 epimorphism.machine.component_assembler.iv.name=精英部件组装机
 epimorphism.machine.component_assembler.iv.tooltip=零部件工厂
 
+recipemap.decay_chamber_recipes.name=衰变室
+epimorphism.machine.decay_chamber.lv.name=基础衰变室
+epimorphism.machine.decay_chamber.lv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.mv.name=进阶衰变室
+epimorphism.machine.decay_chamber.mv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.hv.name=进阶衰变室 II
+epimorphism.machine.decay_chamber.hv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.ev.name=进阶衰变室 III
+epimorphism.machine.decay_chamber.ev.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.iv.name=精英衰变室
+epimorphism.machine.decay_chamber.iv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.luv.name=精英衰变室 II
+epimorphism.machine.decay_chamber.luv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.zpm.name=精英衰变室 III
+epimorphism.machine.decay_chamber.zpm.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.uv.name=终极衰变室
+epimorphism.machine.decay_chamber.uv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uhv.name=史诗衰变室
+epimorphism.machine.decay_chamber.uhv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uev.name=史诗衰变室 II
+epimorphism.machine.decay_chamber.uev.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uiv.name=史诗衰变室 III
+epimorphism.machine.decay_chamber.uiv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uxv.name=史诗衰变室 IV
+epimorphism.machine.decay_chamber.uxv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.opv.name=传奇衰变室
+epimorphism.machine.decay_chamber.opv.tooltip=零过程衰变
+
 recipemap.naquadah_reactor_recipes.name=硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭
@@ -914,6 +942,7 @@ gregtech.material.hypogen=海珀珍
 gregtech.material.californium_252=锎-252
 gregtech.material.astral_titanium=星体钛
 gregtech.material.celestial_tungsten=天体钨
+gregtech.material.ytterbium_178=镱-178
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1236,6 +1265,7 @@ gregtech.material.actinium_hydride=氢化锕
 gregtech.material.actinium_superhydride=超氢化锕
 gregtech.material.francium_carbide=碳化钫
 gregtech.material.boron_francium_mixture=硼钫混合物
+gregtech.material.flerovium_ytterbium_plasma=钅夫-镱
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1479,6 +1509,7 @@ gregtech.material.draconium_slag_solution=龙素残渣溶液
 gregtech.material.actinium_radium_hydroxide_solution=氢氧化锕镭溶液
 gregtech.material.actinium_radium_nitrate_solution=硝酸锕镭溶液
 gregtech.material.heavy_fluorinated_draconium_solution=重氟龙素溶液
+gregtech.material.quasi_fissioning_plasma=拟裂变
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力

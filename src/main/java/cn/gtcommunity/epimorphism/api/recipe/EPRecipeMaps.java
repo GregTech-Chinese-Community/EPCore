@@ -26,6 +26,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_CHAMBER_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> DECAY_CHAMBER_RECIPES;
 
     //  Multiblock Machine Recipemap
     @ZenProperty
@@ -125,6 +127,11 @@ public class EPRecipeMaps {
                 .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTSoundEvents.ASSEMBLER);
+
+        //  Decay Chamber Recipemap
+        DECAY_CHAMBER_RECIPES = new RecipeMap<>("decay_chamber_recipes", 0, 1, 0, 1, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_HAMMER, ProgressWidget.MoveType.VERTICAL_DOWNWARDS)
+                .setSound(GTSoundEvents.SCIENCE);
 
         //  Crystallization Crucible Recipemap
         CRYSTALLIZER_RECIPES = new RecipeMap<>("crystallization_recipes", 0, 6, 1, 1, 0, 3, 0, 0, new BlastRecipeBuilder(), false)
