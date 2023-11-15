@@ -1433,6 +1433,48 @@ public class MachineComponents {
                 .EUt(VA[UV])
                 .duration(100)
                 .buildAndRegister();
+
+        //  Draconium Casing
+        ModHandler.addShapedRecipe(true, "draconium_casing", EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRACONIUM_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, Draconium),
+                'F', new UnificationEntry(frameGt, Draconium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Draconium, 6)
+                .input(frameGt, Draconium)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRACONIUM_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Dragon Coil
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL))
+                .input(plate, Draconium, 4)
+                .input(VOLTAGE_COIL_UV, 2)
+                .input(wireFine, SiliconCarbide, 4)
+                .fluidInputs(ConcentrateDragonBreath.getFluid(L * 4))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRAGON_FUSION_COIL, 2))
+                .EUt(VA[UV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Dragon Fusion Unit
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(HULL[UV].getStackForm())
+                .input(frameGt, Draconium, 4)
+                .input(circuit, MarkerMaterials.Tier.UV, 4)
+                .input(plate, Ichorium, 8)
+                .input(FIELD_GENERATOR_UV, 2)
+                .input(cableGtQuadruple, YttriumBariumCuprate, 4)
+                .fluidInputs(Taranium.getFluid(L * 4))
+                .outputs(DRAGON_FUSION_UNIT.getStackForm())
+                .EUt(VA[UV])
+                .duration(600)
+                .buildAndRegister();
+
     }
 
     private static void Materials() {

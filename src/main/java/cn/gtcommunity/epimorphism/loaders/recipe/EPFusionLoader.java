@@ -227,7 +227,7 @@ public class EPFusionLoader {
                 .fluidInputs(Neon.getFluid(144))
                 .fluidInputs(Bedrock.getFluid(144))
                 .fluidOutputs(Taranium.getPlasma(1000))
-                .EUt(VA[UHV])
+                .EUt(VA[UV])
                 .duration(64)
                 .EUToStart(100000000L)
                 .buildAndRegister();

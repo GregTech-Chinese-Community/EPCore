@@ -6,6 +6,7 @@ import gregtech.api.unification.Elements;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
+import net.minecraft.init.Enchantments;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
@@ -31,7 +32,11 @@ public class EPElementMaterials {
                 .iconSet(SHINY)
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_DENSE)
                 .element(EPElements.Draconium)
-                .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
+                .toolStats(ToolProperty.Builder.of(7.0F, 25.0F, 17000, 22)
+                                       .magnetic()
+                                       .enchantment(Enchantments.EFFICIENCY, 5)
+                                       .enchantment(Enchantments.FORTUNE, 5)
+                                       .build())
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .build();
         //  26002 Awakened Draconium
@@ -181,7 +186,13 @@ public class EPElementMaterials {
                 .element(EPElements.Hypogen)
                 .color(0xDC784B)
                 .iconSet(CUSTOM_HYPOGEN)
-                .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200).unbreakable().enchantability(33).magnetic().build())
+                .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200)
+                                       .unbreakable()
+                                       .enchantability(33)
+                                       .magnetic()
+                                       .enchantment(Enchantments.SHARPNESS, 10)
+                                       .enchantment(Enchantments.LOOTING, 5)
+                                       .enchantment(Enchantments.SWEEPING, 3).build())
                 .flags(GENERATE_PLATE)
                 .build();
         //  26017 Californium-252
@@ -232,6 +243,7 @@ public class EPElementMaterials {
                 .iconSet(BRIGHT)
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UV])
                 .element(EPElements.Ichorium)
+                .flags(GENERATE_PLATE)
                 .build();
         //  26022 Ichor Liquid
         IchorLiquid = new Material.Builder(getMaterialsId(), gregtechId("ichor_liquid"))
