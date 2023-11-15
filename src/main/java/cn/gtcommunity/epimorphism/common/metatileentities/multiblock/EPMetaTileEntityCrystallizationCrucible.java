@@ -11,13 +11,14 @@ import gregtech.api.capability.impl.HeatingCoilRecipeLogic;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiMapMultiblockController;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.MultiblockShapeInfo;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
+import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
@@ -50,12 +51,14 @@ import java.util.List;
 
 import static gregtech.api.unification.material.Materials.Titanium;
 
-public class EPMetaTileEntityCrystallizationCrucible extends RecipeMapMultiblockController implements IHeatingCoil {
+public class EPMetaTileEntityCrystallizationCrucible extends MultiMapMultiblockController implements IHeatingCoil {
 
     private int temperature;
 
     public EPMetaTileEntityCrystallizationCrucible(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.CRYSTALLIZER_RECIPES);
+        super(metaTileEntityId, new RecipeMap[]{
+                EPRecipeMaps.CRYSTALLIZATION_RECIPES,
+                EPRecipeMaps.CRYSTALLIZER_RECIPES});
         this.recipeMapWorkable = new HeatingCoilRecipeLogic(this);
     }
 

@@ -111,5 +111,6 @@ public class EPRecipeManager {
         CyclotronRecipes.init();
         DecayChamberRecipes.init();
         DragonFusionUnitRecipes.init();
+        CrystallizerRecipes.init();
     }
 }

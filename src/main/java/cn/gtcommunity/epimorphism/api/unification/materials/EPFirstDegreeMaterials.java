@@ -2418,6 +2418,13 @@ public class EPFirstDegreeMaterials {
                 .components(MetastableFlerovium, 1, Ytterbium178, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24322 Solar-Grade Silicon
+        SolarGradeSilicon = new Material.Builder(getMaterialsId(), gregtechId("solar_grade_silicon"))
+                .ingot()
+                .color(Silicon.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Silicon, 1)
+                .build();
     }
 
     private static int getMaterialsId() {

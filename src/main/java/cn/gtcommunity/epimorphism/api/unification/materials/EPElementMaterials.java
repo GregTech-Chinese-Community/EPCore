@@ -258,6 +258,17 @@ public class EPElementMaterials {
                 .iconSet(DULL)
                 .element(EPElements.VoidMetal)
                 .build();
+        //  26025 Mithril
+        Mithril = new Material.Builder(getMaterialsId(), gregtechId("mithril"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .fluidTemp(4550)
+                .color(0x428fdb)
+                .iconSet(DULL)
+                .blastTemp(10900, BlastProperty.GasTier.HIGHEST, VA[UHV])
+                .element(EPElements.Mithril)
+                .build();
     }
 
     private static int getMaterialsId() {

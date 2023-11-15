@@ -31,6 +31,7 @@ public EPMaterials() {}
     public static Material IchorLiquid;
     public static Material CrystalMatrix;
     public static Material VoidMetal;
+    public static Material Mithril;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -355,11 +356,13 @@ public EPMaterials() {}
     public static Material FranciumCarbide;
     public static Material BoronFranciumMixture;
     public static Material FleroviumYtterbiumPlasma;
+    public static Material SolarGradeSilicon;
 
     //  Second Degree Materials
     public static Material DragonBreath;
     public static Material ConcentrateDragonBreath;
     public static Material DragonBlood;
+    public static Material DragonTear;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;

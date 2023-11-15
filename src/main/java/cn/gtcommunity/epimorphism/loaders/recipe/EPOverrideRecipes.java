@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
@@ -15,6 +17,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import java.util.Collection;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
@@ -132,8 +135,9 @@ public class EPOverrideRecipes {
                 new ItemStack[]{NEUTRONIUM_BOULE.getStackForm()},
                 new FluidStack[]{Lubricant.getFluid(250)});
 
-        BLAST_RECIPES.recipeBuilder()
-                .input(block, Silicon, 32)
+        CRYSTALLIZER_RECIPES.recipeBuilder()
+                .notConsumable(EPMetablocks.EP_CRUCIBLE_CASING.getItemVariant(EPBlockCrucibleCasing.CrucibleType.GRAPHITE_CRUCIBLE))
+                .input(block, SolarGradeSilicon, 32)
                 .input(ingot, Dubnium, 4)
                 .input(dust, GalliumArsenide, 2)
                 .fluidInputs(Xenon.getFluid(8000))
@@ -143,8 +147,9 @@ public class EPOverrideRecipes {
                 .duration(18000)
                 .buildAndRegister();
 
-        BLAST_RECIPES.recipeBuilder()
-                .input(block, Silicon, 64)
+        CRYSTALLIZER_RECIPES.recipeBuilder()
+                .notConsumable(EPMetablocks.EP_CRUCIBLE_CASING.getItemVariant(EPBlockCrucibleCasing.CrucibleType.BORON_NITRIDE_CRUCIBLE))
+                .input(block, SolarGradeSilicon, 64)
                 .input(ingot, Neutronium, 8)
                 .input(dust, GalliumArsenide, 4)
                 .fluidInputs(Radon.getFluid(8000))

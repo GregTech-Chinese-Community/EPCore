@@ -28,6 +28,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_CHAMBER_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> DECAY_CHAMBER_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES;
 
     //  Multiblock Machine Recipemap
     @ZenProperty
@@ -134,6 +136,11 @@ public class EPRecipeMaps {
         DECAY_CHAMBER_RECIPES = new RecipeMap<>("decay_chamber_recipes", 0, 1, 0, 1, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_HAMMER, ProgressWidget.MoveType.VERTICAL_DOWNWARDS)
                 .setSound(GTSoundEvents.SCIENCE);
+
+        //  Crystallizer Recipemap
+        CRYSTALLIZATION_RECIPES = new RecipeMap<>("crystallizer_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.FURNACE);
 
         //  Crystallization Crucible Recipemap
         CRYSTALLIZER_RECIPES = new RecipeMap<>("crystallization_recipes", 0, 6, 1, 1, 0, 3, 0, 0, new BlastRecipeBuilder(), false)

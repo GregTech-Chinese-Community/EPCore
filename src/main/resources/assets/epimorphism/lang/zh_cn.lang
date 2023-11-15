@@ -604,6 +604,34 @@ epimorphism.machine.decay_chamber.uxv.tooltip=零过程衰变
 epimorphism.machine.decay_chamber.opv.name=传奇衰变室
 epimorphism.machine.decay_chamber.opv.tooltip=零过程衰变
 
+recipemap.crystallizer_recipes.name=结晶器
+epimorphism.machine.crystallizer.lv.name=基础结晶器
+epimorphism.machine.crystallizer.lv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.mv.name=进阶结晶器
+epimorphism.machine.crystallizer.mv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.hv.name=进阶结晶器 II
+epimorphism.machine.crystallizer.hv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.ev.name=进阶结晶器 III
+epimorphism.machine.crystallizer.ev.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.iv.name=精英结晶器
+epimorphism.machine.crystallizer.iv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.luv.name=精英结晶器 II
+epimorphism.machine.crystallizer.luv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.zpm.name=精英结晶器 III
+epimorphism.machine.crystallizer.zpm.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.uv.name=终极结晶器
+epimorphism.machine.crystallizer.uv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.uhv.name=史诗结晶器
+epimorphism.machine.crystallizer.uhv.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.uev.name=史诗结晶器 II
+epimorphism.machine.crystallizer.uev.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.uiv.name=史诗结晶器 III
+epimorphism.machine.crystallizer.uiv.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.uxv.name=史诗结晶器 IV
+epimorphism.machine.crystallizer.uxv.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.opv.name=传奇结晶器
+epimorphism.machine.crystallizer.opv.tooltip=襁褓中的晶体
+
 recipemap.naquadah_reactor_recipes.name=硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭
@@ -665,7 +693,7 @@ epimorphism.machine.nanoscale_fabricator.tooltip.1=坩埚的平均温度最多�
 recipemap.molecular_beam_recipes.name=分子束外延
 
 epimorphism.machine.crystallization_crucible.name=结晶坩埚
-recipemap.crystallization_recipes.name=结晶
+recipemap.crystallization_recipes.name=结晶坩埚
 
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
@@ -954,6 +982,7 @@ gregtech.material.ichorium=灵宝
 gregtech.material.ichor_liquid=灵液
 gregtech.material.crystal_matrix=水晶矩阵
 gregtech.material.void_metal=虚空金属
+gregtech.material.mithril=秘银
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1277,11 +1306,13 @@ gregtech.material.actinium_superhydride=超氢化锕
 gregtech.material.francium_carbide=碳化钫
 gregtech.material.boron_francium_mixture=硼钫混合物
 gregtech.material.flerovium_ytterbium_plasma=钅夫-镱
+gregtech.material.solar_grade_silicon=太阳能级硅
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
 gregtech.material.concentrate_dragon_breath=浓缩龙息
 gregtech.material.dragon_blood=龙血
+gregtech.material.dragon_tear=龙泪
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K

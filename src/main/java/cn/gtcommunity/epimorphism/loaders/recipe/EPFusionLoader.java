@@ -1,6 +1,11 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
+import gregtech.api.unification.OreDictUnifier;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
@@ -8,6 +13,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.SHAPE_MOLD_INGOT;
 
 public class EPFusionLoader {
     public static void init() {
@@ -271,9 +277,9 @@ public class EPFusionLoader {
 
         //  Adamantium + Nether Star -> Ichor Liquid
         FUSION_RECIPES.recipeBuilder()
-                .fluidInputs(Adamantium.getFluid(288))
-                .fluidInputs(NetherStar.getFluid(288))
-                .fluidOutputs(IchorLiquid.getFluid(576))
+                .fluidInputs(Adamantium.getFluid(L * 2))
+                .fluidInputs(NetherStar.getFluid(L * 2))
+                .fluidOutputs(IchorLiquid.getFluid(L * 4))
                 .EUt(500000)
                 .duration(20)
                 .EUToStart(360000000L)
@@ -281,9 +287,9 @@ public class EPFusionLoader {
 
         //  Ichor Liquid + Radon -> Ichorium
         FUSION_RECIPES.recipeBuilder()
-                .fluidInputs(IchorLiquid.getFluid(144))
+                .fluidInputs(IchorLiquid.getFluid(L))
                 .fluidInputs(Radon.getFluid(1000))
-                .fluidOutputs(Ichorium.getFluid(144))
+                .fluidOutputs(Ichorium.getFluid(L))
                 .EUt(VA[UV])
                 .duration(60)
                 .EUToStart(340000000L)
@@ -291,18 +297,53 @@ public class EPFusionLoader {
 
         //  Vibranium + Duranium -> Crystal Matrix
         FUSION_RECIPES.recipeBuilder()
-                .fluidInputs(Vibranium.getPlasma(288))
-                .fluidInputs(Duranium.getFluid(288))
-                .fluidOutputs(CrystalMatrix.getFluid(576))
+                .fluidInputs(Vibranium.getPlasma(L * 2))
+                .fluidInputs(Duranium.getFluid(L * 2))
+                .fluidOutputs(CrystalMatrix.getFluid(L * 4))
                 .EUt(VA[UHV])
                 .duration(120)
                 .EUToStart(350000000L)
                 .buildAndRegister();
 
-        //  TODO Orichalcum + Lutetium -> Dragon Tear
+        //  Orichalcum + Lutetium -> Dragon Tear
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Orichalcum.getFluid(L))
+                .fluidInputs(Lutetium.getFluid(L))
+                .fluidOutputs(DragonTear.getFluid(L * 2))
+                .EUt(VA[UV])
+                .duration(240)
+                .EUToStart(346000000L)
+                .buildAndRegister();
 
-        //  TODO Europium + Dragon Tear -> Mithril
+        //  Europium + Dragon Tear -> Mithril
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Europium.getFluid(L * 2))
+                .fluidInputs(DragonTear.getFluid(L * 2))
+                .fluidOutputs(Mithril.getPlasma(L * 4))
+                .EUt(VA[UHV])
+                .duration(120)
+                .EUToStart(440000000L)
+                .buildAndRegister();
 
-        //  TODO Crystal Matrix + Mithril -> Infinity
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+                .notConsumable(SHAPE_MOLD_INGOT)
+                .fluidInputs(Mithril.getPlasma(L))
+                .output(ingotHot, Mithril)
+                .duration(200)
+                .EUt(VA[ZPM])
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES, OreDictUnifier.get(dust, Mithril), IntCircuitIngredient.getIntegratedCircuit(1));
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES, new ItemStack[]{OreDictUnifier.get(dust, Mithril), IntCircuitIngredient.getIntegratedCircuit(2)}, new FluidStack[]{Krypton.getFluid(50)});
+
+        //  Crystal Matrix + Mithril -> Infinity
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(CrystalMatrix.getFluid(L * 2))
+                .fluidInputs(Mithril.getFluid(L * 2))
+                .fluidOutputs(Infinity.getFluid(L * 4))
+                .EUt(VA[UEV])
+                .duration(240)
+                .EUToStart(650000000L)
+                .buildAndRegister();
     }
 }

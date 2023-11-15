@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.circuits;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -91,16 +93,6 @@ public class OpticalCircuits {
                 .duration(200)
                 .EUt(VA[UHV])
                 .cleanroom(CleanroomType.CLEANROOM)
-                .buildAndRegister();
-
-        //  Silicon + Chlorine -> Silicon Tetrachloride
-        BURNER_REACTOR_RECIPES.recipeBuilder()
-                .input(dust, Silicon)
-                .fluidInputs(Chlorine.getFluid(4000))
-                .fluidOutputs(SiliconTetrachloride.getFluid(1000))
-                .temperature(873)
-                .duration(150)
-                .EUt(VA[HV])
                 .buildAndRegister();
 
         //  Optical Fiber: Germanium Tetrachloride + Phosphory Chloride + Silicon Tetrachloride -> Optical Fiber
@@ -309,6 +301,7 @@ public class OpticalCircuits {
                 .buildAndRegister();
 
         CRYSTALLIZER_RECIPES.recipeBuilder()
+                .notConsumable(EPMetablocks.EP_CRUCIBLE_CASING.getItemVariant(EPBlockCrucibleCasing.CrucibleType.BORON_NITRIDE_CRUCIBLE))
                 .input(dust, StrontiumCarbonate, 64)
                 .input(dust, Bohrium, 8)
                 .output(STRONTIUM_CARBONATE_BOHRIUM_BOULE)

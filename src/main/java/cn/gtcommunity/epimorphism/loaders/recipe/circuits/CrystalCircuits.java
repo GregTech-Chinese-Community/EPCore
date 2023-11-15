@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.circuits;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
@@ -23,6 +25,7 @@ public class CrystalCircuits {
 
         //  Cubic Zirconia + Europium -> Europium-doped Cubic Zirconia Boule
         CRYSTALLIZER_RECIPES.recipeBuilder()
+                .notConsumable(EPMetablocks.EP_CRUCIBLE_CASING.getItemVariant(EPBlockCrucibleCasing.CrucibleType.GRAPHITE_CRUCIBLE))
                 .input(dust, CubicZirconia, 64)
                 .input(dust, Europium, 8)
                 .blastFurnaceTemp(3000)

@@ -51,10 +51,9 @@ public class EPMetaTileEntityVacuumDryingFurnace extends MultiMapMultiblockContr
     private int temperature;
 
     public EPMetaTileEntityVacuumDryingFurnace(ResourceLocation metaTileEntityId) {
-            super(metaTileEntityId, new RecipeMap[]{
+        super(metaTileEntityId, new RecipeMap[]{
                 EPRecipeMaps.DRYER_RECIPES,
-                EPRecipeMaps.VACUUM_DRYING_FURNACE_RECIPES
-        });
+                EPRecipeMaps.VACUUM_DRYING_FURNACE_RECIPES});
         this.recipeMapWorkable = new HeatingCoilRecipeLogic(this);
     }
 

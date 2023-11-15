@@ -245,6 +245,15 @@ public class MetaTileEntityRecipes {
                 'C', CraftingComponent.CIRCUIT,
                 'W', CraftingComponent.CABLE);
 
+        //  Crystallizer recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, CRYSTALLIZER,
+                "APA", "EHE", "WWW",
+                'H', CraftingComponent.HULL,
+                'P', CraftingComponent.PIPE_NORMAL,
+                'E', CraftingComponent.PUMP,
+                'A', CraftingComponent.PLATE,
+                'W', CraftingComponent.CABLE);
+
         //  Naquadah Reactor recipes
         MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
                 "RCR", "FHF", "WCW",
@@ -270,7 +279,7 @@ public class MetaTileEntityRecipes {
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'M', new UnificationEntry(plateDouble, MolybdenumDisilicide),
                 'L', new UnificationEntry(pipeNormalFluid, Titanium),
-                'H', MetaTileEntities.HULL[EV].getStackForm(),
+                'H', CRYSTALLIZER[EV].getStackForm(),
                 'P', new UnificationEntry(plate, Titanium)
         );
 
