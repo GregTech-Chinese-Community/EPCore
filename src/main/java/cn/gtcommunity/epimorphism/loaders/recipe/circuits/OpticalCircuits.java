@@ -115,6 +115,7 @@ public class OpticalCircuits {
                 .input(dust, ErbiumDopedZBLANGlass, 2)
                 .input(dust, PraseodymiumDopedZBLANGlass, 2)
                 .input(dust, TantalumPentoxide, 7)
+                .fluidInputs(ElectrolyteReflectorMixture.getFluid(500))
                 .output(DIELECTRIC_MIRROR)
                 .duration(600)
                 .EUt(VA[LuV])

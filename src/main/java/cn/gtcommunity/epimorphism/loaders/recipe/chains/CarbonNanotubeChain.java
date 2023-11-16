@@ -28,7 +28,7 @@ public class CarbonNanotubeChain {
 
         //  Carbon Nanotube stick (UEV)
         PLASMA_CVD_RECIPES.recipeBuilder()
-                .input(plateDouble, Rhenium)
+                .notConsumable(plateDouble, Rhenium)
                 .fluidInputs(Acetylene.getFluid(24000))
                 .fluidInputs(Cycloparaphenylene.getFluid(6000))
                 .fluidInputs(Nitrogen.getPlasma(16000))
