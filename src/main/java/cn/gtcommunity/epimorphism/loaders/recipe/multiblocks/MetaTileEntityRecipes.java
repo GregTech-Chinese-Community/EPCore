@@ -273,6 +273,16 @@ public class MetaTileEntityRecipes {
                 'W', CraftingComponent.CABLE,
                 'X', CraftingComponent.CIRCUIT);
 
+        //  Rocket Engine recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, ROCKET_ENGINE,
+                "PXP", "MHM", "DWD",
+                'P', CraftingComponent.PISTON,
+                'X', CraftingComponent.CIRCUIT,
+                'M', CraftingComponent.MOTOR,
+                'H', CraftingComponent.HULL,
+                'D', CraftingComponent.DOUBLE_PLATE,
+                'W', CraftingComponent.CABLE);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",

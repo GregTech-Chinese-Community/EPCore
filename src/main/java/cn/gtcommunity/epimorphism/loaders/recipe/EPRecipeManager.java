@@ -113,5 +113,6 @@ public class EPRecipeManager {
         DecayChamberRecipes.init();
         DragonFusionUnitRecipes.init();
         CrystallizerRecipes.init();
+        RocketEngineRecipes.init();
     }
 }

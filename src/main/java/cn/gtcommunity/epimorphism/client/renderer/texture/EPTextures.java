@@ -26,6 +26,7 @@ public class EPTextures {
     public static OrientedOverlayRenderer STELLAR_FURNACE_OVERLAY = new OrientedOverlayRenderer("multiblock/stellar_furnace");
     public static OrientedOverlayRenderer CYCLOTRON_OVERLAY = new OrientedOverlayRenderer("multiblock/cyclotron");
     public static OrientedOverlayRenderer DRAGON_FUSION_OVERLAY = new OrientedOverlayRenderer("multiblock/dragon_fusion");
+    public static OrientedOverlayRenderer ROCKET_ENGINE_OVERLAY = new OrientedOverlayRenderer("machines/rocket_engine");
 
     //  EPOverlayRenderer
     public static EPOverlayRenderer ADVANCED_INVAR_CASING = new EPOverlayRenderer("casings/solid/advanced_invar_casing");

@@ -640,6 +640,14 @@ epimorphism.machine.naquadah_reactor.luv.tooltip=取之不尽，用之不竭
 epimorphism.machine.naquadah_reactor.zpm.name=精英硅岩反应堆 III
 epimorphism.machine.naquadah_reactor.zpm.tooltip=取之不尽，用之不竭
 
+recipemap.rocket_engine_recipes.name=火箭引擎
+epimorphism.machine.rocket_engine.ev.name=进阶火箭引擎 III
+epimorphism.machine.rocket_engine.ev.tooltip=嗡嗡作响
+epimorphism.machine.rocket_engine.iv.name=精英火箭引擎
+epimorphism.machine.rocket_engine.iv.tooltip=嗡嗡作响
+epimorphism.machine.rocket_engine.luv.name=精英火箭引擎 II
+epimorphism.machine.rocket_engine.luv.tooltip=嗡嗡作响
+
 epimorphism.machine.multiblock.glass_tier=当前玻璃等级：%s (%s)
 epimorphism.machine.multiblock.max_parallel=最大并行数：%s
 epimorphism.machine.multiblock.max_voltage=最大电压：%s

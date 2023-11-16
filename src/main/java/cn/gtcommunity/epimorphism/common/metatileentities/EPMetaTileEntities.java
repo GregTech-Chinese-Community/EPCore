@@ -46,6 +46,7 @@ public class EPMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[GTValues.IV + 1];
     public static SimpleMachineMetaTileEntity[] DECAY_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
+    public static final SimpleGeneratorMetaTileEntity[] ROCKET_ENGINE = new SimpleGeneratorMetaTileEntity[3];
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -150,6 +151,9 @@ public class EPMetaTileEntities {
         registerSimpleMetaTileEntity(COMPONENT_ASSEMBLER, 12632, "component_assembler", EPRecipeMaps.COMPONENT_ASSEMBLER_RECIPES, Textures.ASSEMBLER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
         registerSimpleMetaTileEntity(DECAY_CHAMBER, 12637, "decay_chamber", EPRecipeMaps.DECAY_CHAMBER_RECIPES, Textures.CHEMICAL_BATH_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
         registerSimpleMetaTileEntity(CRYSTALLIZER, 12650, "crystallizer", EPRecipeMaps.CRYSTALLIZATION_RECIPES, Textures.AUTOCLAVE_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
+        ROCKET_ENGINE[0] = registerMetaTileEntity(12663, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.ev"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 4, genericGeneratorTankSizeFunction));
+        ROCKET_ENGINE[1] = registerMetaTileEntity(12664, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.iv"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 5, genericGeneratorTankSizeFunction));
+        ROCKET_ENGINE[2] = registerMetaTileEntity(12665, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.luv"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 6, genericGeneratorTankSizeFunction));
 
         //Multiblocks: Id 13301-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));
