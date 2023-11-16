@@ -1474,6 +1474,8 @@ gregtech.material.dimethyl_sulfide=二甲硫醚
 gregtech.material.oxalic_acid=乙二酸
 gregtech.material.glucose=葡萄糖
 gregtech.material.fructose=果糖
+gregtech.material.hexafluoropropylene=六氟丙烯
+gregtech.material.fluorinated_ethylene_propylene=聚全氟乙丙烯（FEP）
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

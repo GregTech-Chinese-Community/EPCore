@@ -47,6 +47,7 @@ public class EPRecipeManager {
         DragonChain.init();
         EDTAChain.init();
         EtchingMaterialsChain.init();
+        FluoinatedEthylenePropyleneChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
         GermaniumChain.init();

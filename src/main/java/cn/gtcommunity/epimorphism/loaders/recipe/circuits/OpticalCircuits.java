@@ -21,6 +21,7 @@ public class OpticalCircuits {
         CVD_RECIPES.recipeBuilder()
                 .input(plate, GalliumNitride)
                 .input(foil, Americium, 4)
+                .fluidInputs(FluorinatedEthylenePropylene.getFluid(L * 2))//  TODO Find better material
                 .output(OPTICAL_BOARD)
                 .duration(40)
                 .EUt(VA[UHV])

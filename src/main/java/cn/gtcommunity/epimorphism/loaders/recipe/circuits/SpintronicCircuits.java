@@ -20,6 +20,7 @@ public class SpintronicCircuits {
         CVD_RECIPES.recipeBuilder()
                 .input(plate, CarbonNanotube)
                 .input(foil, Phosphorene, 4)
+                .fluidInputs(FluorinatedEthylenePropylene.getFluid(L * 4))//  TODO Find better material
                 .output(SPINTRONIC_BOARD)
                 .duration(40)
                 .EUt(VA[UEV])

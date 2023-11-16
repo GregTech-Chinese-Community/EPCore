@@ -523,6 +523,8 @@ public EPMaterials() {}
     public static Material OxalicAcid;
     public static Material Glucose;
     public static Material Fructose;
+    public static Material Hexafluoropropylene;
+    public static Material FluorinatedEthylenePropylene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
