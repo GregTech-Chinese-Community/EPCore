@@ -1315,6 +1315,11 @@ gregtech.material.francium_carbide=碳化钫
 gregtech.material.boron_francium_mixture=硼钫混合物
 gregtech.material.flerovium_ytterbium_plasma=钅夫-镱
 gregtech.material.solar_grade_silicon=太阳能级硅
+gregtech.material.dense_hydrazine_mixture_fuel=混合浓缩肼火箭燃料
+gregtech.material.highly_purified_coal_tar=高度提纯煤焦油
+gregtech.material.rp_1_rocket_fuel=RP-1火箭燃料
+gregtech.material.methylhydrazine=甲肼
+gregtech.material.methylhydrazine_nitrate_rocket_fuel=硝酸甲肼火箭燃料
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

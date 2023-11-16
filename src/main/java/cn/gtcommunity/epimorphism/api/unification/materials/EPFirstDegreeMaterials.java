@@ -2425,6 +2425,41 @@ public class EPFirstDegreeMaterials {
                 .iconSet(BRIGHT)
                 .components(Silicon, 1)
                 .build();
+        //  24323 Dense Hydrazine Mixture Fuel
+        DenseHydrazineMixtureFuel = new Material.Builder(getMaterialsId(), gregtechId("dense_hydrazine_mixture_fuel"))
+                .fluid()
+                .color(0x912565)
+                .components(Dimethylhydrazine, 1, Methanol, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24324 Highly Purified Coal Tar
+        HighlyPurifiedCoalTar = new Material.Builder(getMaterialsId(), gregtechId("highly_purified_coal_tar"))
+                .fluid()
+                .color(0x7F811D)
+                .components(CoalTar, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24325 RP-1 Rocket Fuel
+        RP1RocketFuel = new Material.Builder(getMaterialsId(), gregtechId("rp_1_rocket_fuel"))
+                .fluid()
+                .color(0xFB2A08)
+                .components(HighlyPurifiedCoalTar, 1, LiquidOxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24326 Methylhydrazine
+        Methylhydrazine = new Material.Builder(getMaterialsId(), gregtechId("methylhydrazine"))
+                .fluid()
+                .color(0x321452)
+                .components(Carbon, 1, Hydrogen, 6, Nitrogen, 2)
+                .build();
+        //  24327 Methylhydrazine Nitrate Rocket Fuel
+        MethylhydrazineNitrateRocketFuel = new Material.Builder(getMaterialsId(), gregtechId("methylhydrazine_nitrate_rocket_fuel"))
+                .fluid()
+                .color(0x607186)
+                .components(Methylhydrazine, 1, Tetranitromethane, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+
     }
 
     private static int getMaterialsId() {

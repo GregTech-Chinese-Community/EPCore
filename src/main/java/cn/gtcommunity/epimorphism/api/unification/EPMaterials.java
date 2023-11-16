@@ -357,6 +357,11 @@ public EPMaterials() {}
     public static Material BoronFranciumMixture;
     public static Material FleroviumYtterbiumPlasma;
     public static Material SolarGradeSilicon;
+    public static Material DenseHydrazineMixtureFuel;
+    public static Material HighlyPurifiedCoalTar;
+    public static Material RP1RocketFuel;
+    public static Material Methylhydrazine;
+    public static Material MethylhydrazineNitrateRocketFuel;
 
     //  Second Degree Materials
     public static Material DragonBreath;
