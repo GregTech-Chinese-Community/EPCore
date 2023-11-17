@@ -87,6 +87,10 @@ public class EPMaterialPropertyAddition {
         Hafnium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Hafnium.setProperty(PropertyKey.FLUID, new FluidProperty());
         NetherStar.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Meitnerium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Meitnerium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Roentgenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Roentgenium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

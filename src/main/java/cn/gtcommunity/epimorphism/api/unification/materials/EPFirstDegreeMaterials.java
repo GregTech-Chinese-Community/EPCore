@@ -2509,6 +2509,31 @@ public class EPFirstDegreeMaterials {
                 .components(Yttrium, 1, Vanadium, 1, Oxygen, 1, Lutetium, 1, Thulium, 1)
                 .build()
                 .setFormula("Lu/Tm:YVO", false);
+        //  24334 Heavy Quark Enriched Mixture
+        HeavyQuarkEnrichedMixture = new Material.Builder(getMaterialsId(), gregtechId("heavy_quark_enriched_mixture"))
+                .fluid()
+                .color(HeavyQuarks.getMaterialRGB() + LightQuarks.getMaterialRGB())
+                .components(LightQuarks, 1, HeavyQuarks, 3)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a"  + TextFormatting.RESET + "§e(u2)d(c2)s(t2)b" + TextFormatting.OBFUSCATED  + "a" , true);
+        //  24335 Deuterium-Superheavy Mixture
+        DeuteriumSuperHeavyMixture = new Material.Builder(getMaterialsId(), gregtechId("deuterium_superheavy_mixture"))
+                .fluid()
+                .color(0x7B9F8E)
+                .components(Deuterium, 2, MetastableHassium, 1, MetastableFlerovium, 1, MetastableOganesson, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24336 Heavy Quark Degenerate Matter
+        HeavyQuarkDegenerateMatter = new Material.Builder(getMaterialsId(), gregtechId("heavy_quark_degenerate_matter"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .color(0x5DBD3A)
+                .iconSet(BRIGHT)
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UEV])
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
+                .build();
     }
 
     private static int getMaterialsId() {

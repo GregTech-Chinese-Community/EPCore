@@ -429,6 +429,15 @@ public class EPMachineCasingMaterials {
                 .flags(GENERATE_FINE_WIRE)
                 .cableProperties(V[UIV], 256, 64, false)
                 .build();
+        //  24541 Superheavy-L Alloy
+        SuperheavyLAlloy = new Material.Builder(getMaterialsId(), gregtechId("superheavy_l_alloy"))
+                .ingot()
+                .fluid()
+                .color(0x4D8BE9)
+                .iconSet(SHINY)
+                .components(Rutherfordium, 1, Dubnium, 1, Seaborgium, 1, Bohrium, 1, MetastableHassium, 1, Meitnerium, 1, Darmstadtium, 1, Roentgenium, 1)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 4990)
+                .build();
     }
 
     private static int getMaterialsId() {

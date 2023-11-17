@@ -32,6 +32,8 @@ public EPMaterials() {}
     public static Material CrystalMatrix;
     public static Material VoidMetal;
     public static Material Mithril;
+    public static Material Bismuth209;
+    public static Material Lead209;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -368,6 +370,9 @@ public EPMaterials() {}
     public static Material LutetiumThuliumYttriumChloridesSolution;
     public static Material YttriumVanadateLuTmDeposition;
     public static Material YttriumVanadateLuTm;
+    public static Material HeavyQuarkEnrichedMixture;
+    public static Material DeuteriumSuperHeavyMixture;
+    public static Material HeavyQuarkDegenerateMatter;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -656,6 +661,7 @@ public EPMaterials() {}
     public static Material FullereneSuperconductor;
     public static Material Legendarium;
     public static Material SuperheavyHAlloy;
+    public static Material SuperheavyLAlloy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

@@ -1657,8 +1657,23 @@ public class MachineComponents {
                 .input(dust, Moscovium)
                 .input(dust, Livermorium)
                 .input(dust, MetastableOganesson)
-                .fluidInputs(Tennessine.getFluid(1000))
+                .fluidInputs(Tennessine.getFluid(L))
                 .output(dust, SuperheavyHAlloy, 7)
+                .EUt(VA[UEV])
+                .duration(120)
+                .buildAndRegister();
+
+        //  Superheavy-L Alloy
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Rutherfordium)
+                .input(dust, Dubnium)
+                .input(dust, Seaborgium)
+                .input(dust, Bohrium)
+                .input(dust, MetastableHassium)
+                .input(dust, Meitnerium)
+                .fluidInputs(Darmstadtium.getFluid(L))
+                .fluidInputs(Roentgenium.getFluid(L))
+                .output(dust, SuperheavyLAlloy, 8)
                 .EUt(VA[UEV])
                 .duration(120)
                 .buildAndRegister();

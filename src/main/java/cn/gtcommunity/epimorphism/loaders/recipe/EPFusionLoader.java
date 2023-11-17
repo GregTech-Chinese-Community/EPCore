@@ -167,6 +167,26 @@ public class EPFusionLoader {
                 .EUToStart(500000000L)
                 .buildAndRegister();
 
+        //  Iron + Bismuth-209 -> Meitnerium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Iron.getPlasma(L))
+                .fluidInputs(Bismuth209.getFluid(L))
+                .fluidOutputs(Meitnerium.getFluid(L * 2))
+                .EUt(VA[UHV])
+                .duration(140)
+                .EUToStart(400000000L)
+                .buildAndRegister();
+
+        //  Nickel + Bismuth-209 -> Roentgenium
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(Nickel.getPlasma(L))
+                .fluidInputs(Bismuth209.getFluid(L))
+                .fluidOutputs(Roentgenium.getFluid(L * 2))
+                .EUt(VA[UHV])
+                .duration(180)
+                .EUToStart(440000000L)
+                .buildAndRegister();
+
         //  (Mk IV) Metastable Oganesson
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Titanium.getFluid(L * 2))

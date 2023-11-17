@@ -282,6 +282,18 @@ public class EPElementMaterials {
                 .element(EPElements.Mithril)
                 .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .build();
+        //  26026 Bismuth-209
+        Bismuth209 = new Material.Builder(getMaterialsId(), gregtechId("bismuth_209"))
+                .fluid()
+                .color(Bismuth.getMaterialRGB())
+                .element(EPElements.Bismuth209)
+                .build();
+        //  26027 Lead-209
+        Lead209 = new Material.Builder(getMaterialsId(), gregtechId("lead_209"))
+                .fluid()
+                .color(Lead.getMaterialRGB())
+                .element(EPElements.Lead209)
+                .build();
     }
 
     private static int getMaterialsId() {

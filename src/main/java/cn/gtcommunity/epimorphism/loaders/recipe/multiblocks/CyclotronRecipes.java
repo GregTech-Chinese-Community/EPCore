@@ -69,6 +69,15 @@ public class CyclotronRecipes {
                 .duration(1200)
                 .buildAndRegister();
 
+        //  Pb + Neutron -> Pb-209
+        CYCLOTRON_RECIPES.recipeBuilder()
+                .fluidInputs(Lead.getFluid(L))
+                .fluidInputs(Neutron.getPlasma(L * 5))
+                .fluidOutputs(Lead209.getFluid(L))
+                .EUt(VA[ZPM])
+                .duration(200)
+                .buildAndRegister();
+
         //  Free Electron Gas -> Quantum Anomaly
         CYCLOTRON_RECIPES.recipeBuilder()
                 .fluidInputs(FreeElectronGas.getFluid(L * 10))

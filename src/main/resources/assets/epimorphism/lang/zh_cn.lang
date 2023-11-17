@@ -1043,6 +1043,8 @@ gregtech.material.ichor_liquid=灵液
 gregtech.material.crystal_matrix=水晶矩阵
 gregtech.material.void_metal=虚空金属
 gregtech.material.mithril=秘银
+gregtech.material.bismuth_209=铋-209
+gregtech.material.lead_209=铅-209
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1378,6 +1380,9 @@ gregtech.material.high_purity_sodium_vanadate=高纯钒酸钠
 gregtech.material.lutetium_thulium_yttrium_chlorides_solution=镥铥钇氯化物溶液
 gregtech.material.yttrium_vanadate_lu_tm_deposition=镥铥掺杂的钒酸钇沉淀
 gregtech.material.yttrium_vanadate_lu_tm=镥铥掺杂的钒酸钇
+gregtech.material.heavy_quark_enriched_mixture=富集重夸克混合物
+gregtech.material.deuterium_superheavy_mixture=氘-超重元素混合物
+gregtech.material.heavy_quark_degenerate_matter=重夸克简并物质
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1682,3 +1687,4 @@ gregtech.material.hms_1_j_22_alloy=高饱和磁感应软磁合金-1J22
 gregtech.material.fullerene_superconductor=富勒烯超导体
 gregtech.material.legendarium=传奇金属
 gregtech.material.superheavy_h_alloy=超重元素-重合金
+gregtech.material.superheavy_l_alloy=超重元素-轻合金

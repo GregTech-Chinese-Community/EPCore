@@ -42,5 +42,13 @@ public class DecayChamberRecipes {
                 .EUt(VA[HV])
                 .duration(180)
                 .buildAndRegister();
+
+        //  Lead-209 -> Bismuth-209
+        DECAY_CHAMBER_RECIPES.recipeBuilder()
+                .fluidInputs(Lead209.getFluid(L))
+                .fluidOutputs(Bismuth209.getFluid(L))
+                .EUt(VA[ZPM])
+                .duration(240)
+                .buildAndRegister();
     }
 }
