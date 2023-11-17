@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.DRYER_RECIPES;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
@@ -11,7 +12,11 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 
 public class PowerIntCircuitChain {
     public static void init() {
+        NanoPIC();
+        PicoPIC();
+    }
 
+    private static void NanoPIC() {
         //  Niobium + Chlorine -> Niobium Pentachloride
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Niobium)
@@ -77,6 +82,82 @@ public class PowerIntCircuitChain {
                 .fluidInputs(Lubricant.getFluid(250))
                 .output(NANO_PIC_CHIP, 2)
                 .EUt(VA[ZPM])
+                .duration(900)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+    }
+
+    private static void PicoPIC() {
+
+        //  Ammonium Vanadate + Sodium Oxide + Salt -> High Purity Sodium Vanadate
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, AmmoniumVanadate, 9)
+                .input(dust, SodiumOxide, 3)
+                .input(dust, Salt, 2)
+                .output(dust, HighPuritySodiumVanadate, 8)
+                .fluidOutputs(AmmoniumChloride.getFluid(1000))
+                .EUt(VA[EV])
+                .duration(280)
+                .blastFurnaceTemp(700)
+                .buildAndRegister();
+
+        //  High Purity Sodium Vanadate + Carbamide + Lu-Tm-Y Chlorides Solution -> Lu-Tm-droped Yttrium Vanadate Deposition + Chlorine
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, HighPuritySodiumVanadate, 8)
+                .input(dust, Carbamide, 16)
+                .fluidInputs(LutetiumThuliumYttriumChloridesSolution.getFluid(1000))
+                .output(dust, YttriumVanadateLuTmDeposition)
+                .fluidOutputs(Chlorine.getFluid(900))
+                .EUt(VA[ZPM])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Lu-Tm-droped Yttrium Vanadate deposition + Ethanol -> Lu/Tm:YVO + Ammonium Carbonate + Propene
+        DRYER_RECIPES.recipeBuilder()
+                .input(dust, YttriumVanadateLuTmDeposition)
+                .fluidInputs(Ethanol.getFluid(1000))
+                .output(dust, YttriumVanadateLuTm)
+                .output(dust, AmmoniumCarbonate, 14)
+                .fluidOutputs(Propene.getFluid(1000))
+                .EUt(VA[IV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  Pico PIC
+        //  TODO Ultraviolet Lamp Chamber?
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(NANO_PIC_WAFER)
+                .notConsumable(lens, YttriumVanadateLuTm)
+                .output(PICO_PIC_WAFER)
+                .EUt(VA[UHV])
+                .duration(40)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(PICO_PIC_WAFER)
+                .fluidInputs(Water.getFluid(1000))
+                .output(PICO_PIC_CHIP, 2)
+                .EUt(VA[UV])
+                .duration(1800)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(PICO_PIC_WAFER)
+                .fluidInputs(DistilledWater.getFluid(750))
+                .output(PICO_PIC_CHIP, 2)
+                .EUt(VA[UV])
+                .duration(1350)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(PICO_PIC_WAFER)
+                .fluidInputs(Lubricant.getFluid(250))
+                .output(PICO_PIC_CHIP, 2)
+                .EUt(VA[UV])
                 .duration(900)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();

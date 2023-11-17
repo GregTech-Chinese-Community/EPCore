@@ -364,6 +364,10 @@ public EPMaterials() {}
     public static Material MethylhydrazineNitrateRocketFuel;
     public static Material LithiumNiobate;
     public static Material NiobiumPentachloride;
+    public static Material HighPuritySodiumVanadate;
+    public static Material LutetiumThuliumYttriumChloridesSolution;
+    public static Material YttriumVanadateLuTmDeposition;
+    public static Material YttriumVanadateLuTm;
 
     //  Second Degree Materials
     public static Material DragonBreath;

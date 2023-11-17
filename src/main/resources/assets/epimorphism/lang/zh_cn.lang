@@ -1346,6 +1346,10 @@ gregtech.material.methylhydrazine=甲肼
 gregtech.material.methylhydrazine_nitrate_rocket_fuel=硝酸甲肼火箭燃料
 gregtech.material.lithium_niobate=铌酸锂
 gregtech.material.niobium_pentachloride=五氯化铌
+gregtech.material.high_purity_sodium_vanadate=高纯钒酸钠
+gregtech.material.lutetium_thulium_yttrium_chlorides_solution=镥铥钇氯化物溶液
+gregtech.material.yttrium_vanadate_lu_tm_deposition=镥铥掺杂的钒酸钇沉淀
+gregtech.material.yttrium_vanadate_lu_tm=镥铥掺杂的钒酸钇
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

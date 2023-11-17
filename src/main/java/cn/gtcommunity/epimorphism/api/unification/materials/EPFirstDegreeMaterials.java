@@ -2475,7 +2475,40 @@ public class EPFirstDegreeMaterials {
                 .color(Niobium.getMaterialRGB() + Chlorine.getMaterialRGB())
                 .iconSet(SHINY)
                 .components(Niobium, 1, Chlorine, 5)
+                .flags(DISABLE_DECOMPOSITION)
                 .build();
+        //  24330 High Purity Sodium Vanadate
+        HighPuritySodiumVanadate = new Material.Builder(getMaterialsId(), gregtechId("high_purity_sodium_vanadate"))
+                .dust()
+                .color(0xE3E147)
+                .iconSet(BRIGHT)
+                .components(Sodium, 3, Vanadium, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24331 Lutetium Thulium Yttrium Chlorides Solution
+        LutetiumThuliumYttriumChloridesSolution = new Material.Builder(getMaterialsId(), gregtechId("lutetium_thulium_yttrium_chlorides_solution"))
+                .fluid()
+                .color(Lutetium.getMaterialRGB() + Thulium.getMaterialRGB() + Yttrium.getMaterialRGB())
+                .components(Lutetium, 2, Thulium, 2, Yttrium, 6, Chlorine, 30, Hydrogen, 30, Oxygen, 15)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(LuCl3)2(TmCl3)2(YCl3)6(H2O)15", true);
+        //  24332 Lu-Tm-droped Yttrium Vanadate Deposition
+        YttriumVanadateLuTmDeposition = new Material.Builder(getMaterialsId(), gregtechId("yttrium_vanadate_lu_tm_deposition"))
+                .dust()
+                .color(Yttrium.getMaterialRGB() + Vanadium.getMaterialRGB() + Lutetium.getMaterialRGB() + Thulium.getMaterialRGB())
+                .iconSet(DULL)
+                .build()
+                .setFormula("Lu/TM:YVO?", false);
+        //  24333 Lu-Tm-droped Yttrium Vanadate
+        YttriumVanadateLuTm = new Material.Builder(getMaterialsId(), gregtechId("yttrium_vanadate_lu_tm"))
+                .gem()
+                .color(0x8C1B23)
+                .iconSet(GEM_HORIZONTAL)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_LENS, CRYSTALLIZABLE)
+                .components(Yttrium, 1, Vanadium, 1, Oxygen, 1, Lutetium, 1, Thulium, 1)
+                .build()
+                .setFormula("Lu/Tm:YVO", false);
     }
 
     private static int getMaterialsId() {
