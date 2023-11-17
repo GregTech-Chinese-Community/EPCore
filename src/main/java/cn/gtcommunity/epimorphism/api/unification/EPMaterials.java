@@ -362,6 +362,8 @@ public EPMaterials() {}
     public static Material RP1RocketFuel;
     public static Material Methylhydrazine;
     public static Material MethylhydrazineNitrateRocketFuel;
+    public static Material LithiumNiobate;
+    public static Material NiobiumPentachloride;
 
     //  Second Degree Materials
     public static Material DragonBreath;

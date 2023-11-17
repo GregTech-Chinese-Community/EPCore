@@ -24,6 +24,7 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockTurbineCasing;
 import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
 
 import static cn.gtcommunity.epimorphism.api.utils.EPUtils.epId;
 import static gregtech.api.util.GTUtility.*;
@@ -37,6 +38,10 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityCatalystHatch MULTIPART_CATALYST_HATCH;
     public static EPMetaTileEntityIndustrialMaintenanceHatch INDUSTRIAL_MAINTENANCE_HATCH;
     public static final EPMetaTileEntityReinforcedRotorHolder[] REINFORCED_ROTOR_HOLDER = new EPMetaTileEntityReinforcedRotorHolder[6]; //LuV, ZPM, UV, UHV, UEV, UIV
+    public static MetaTileEntityEnergyHatch[] INPUT_ENERGY_HATCH_4A = new MetaTileEntityEnergyHatch[4];
+    public static MetaTileEntityEnergyHatch[] INPUT_ENERGY_HATCH_16A = new MetaTileEntityEnergyHatch[4];
+    public static MetaTileEntityEnergyHatch[] OUTPUT_ENERGY_HATCH_4A = new MetaTileEntityEnergyHatch[7];
+    public static MetaTileEntityEnergyHatch[] OUTPUT_ENERGY_HATCH_16A = new MetaTileEntityEnergyHatch[8];
 
     //  SingleBlock---SimpleMachines Range:301-600
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
@@ -126,22 +131,44 @@ public class EPMetaTileEntities {
 
     public static void init() {
 
-        //SingleBlocks: Id 12301-13300
+        //  Single Blocks range: 12301-13300
 
-        //  MultiblockHatches Id 12301_12600
+        //  Multiblock Hatches range: 12301-12600
         MULTIPART_BUFFER_HATCH = registerSingleMetaTileEntity(1, new EPMetaTileEntityBufferHatch(epId("buffer_hatch")));
         MULTIPART_BALL_HATCH = registerSingleMetaTileEntity(2, new EPMetaTileEntityMillBallHatch(epId("mill_ball_hatch")));
         MULTIPART_CATALYST_HATCH = registerSingleMetaTileEntity(3, new EPMetaTileEntityCatalystHatch(epId("catalyst_hatch")));
         INDUSTRIAL_MAINTENANCE_HATCH = registerSingleMetaTileEntity(4, new EPMetaTileEntityIndustrialMaintenanceHatch(epId("industrial_maintenance_hatch")));
-        // Reinforced Rotor Holder
         REINFORCED_ROTOR_HOLDER[0] = registerSingleMetaTileEntity(5, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.luv"), GTValues.LuV));
         REINFORCED_ROTOR_HOLDER[1] = registerSingleMetaTileEntity(6, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.zpm"), GTValues.ZPM));
         REINFORCED_ROTOR_HOLDER[2] = registerSingleMetaTileEntity(7, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uv"), GTValues.UV));
         REINFORCED_ROTOR_HOLDER[3] = registerSingleMetaTileEntity(8, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uhv"), GTValues.UHV));
         REINFORCED_ROTOR_HOLDER[4] = registerSingleMetaTileEntity(9, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uev"), GTValues.UEV));
         REINFORCED_ROTOR_HOLDER[5] = registerSingleMetaTileEntity(10, new EPMetaTileEntityReinforcedRotorHolder(epId("reinforced_rotor_holder.uiv"), GTValues.UIV));
+        INPUT_ENERGY_HATCH_4A[0] = registerSingleMetaTileEntity(11, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_4a.uev"), 10, 4, false));
+        INPUT_ENERGY_HATCH_4A[1] = registerSingleMetaTileEntity(12, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_4a.uiv"), 11, 4, false));
+        INPUT_ENERGY_HATCH_4A[2] = registerSingleMetaTileEntity(13, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_4a.uxv"), 12, 4, false));
+        INPUT_ENERGY_HATCH_4A[3] = registerSingleMetaTileEntity(14, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_4a.opv"), 13, 4, false));
+        INPUT_ENERGY_HATCH_16A[0] = registerSingleMetaTileEntity(15, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_16a.uev"), 10, 16, false));
+        INPUT_ENERGY_HATCH_16A[1] = registerSingleMetaTileEntity(16, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_16a.uiv"), 11, 16, false));
+        INPUT_ENERGY_HATCH_16A[2] = registerSingleMetaTileEntity(17, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_16a.uxv"), 12, 16, false));
+        INPUT_ENERGY_HATCH_16A[3] = registerSingleMetaTileEntity(18, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.input_16a.opv"), 13, 16, false));
+        OUTPUT_ENERGY_HATCH_4A[0] = registerSingleMetaTileEntity(19, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.lv"), 1, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[1] = registerSingleMetaTileEntity(20, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.mv"), 2, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[2] = registerSingleMetaTileEntity(21, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.hv"), 3, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[3] = registerSingleMetaTileEntity(22, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.uev"), 10, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[4] = registerSingleMetaTileEntity(23, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.uiv"), 11, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[5] = registerSingleMetaTileEntity(24, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.uxv"), 12, 4, true));
+        OUTPUT_ENERGY_HATCH_4A[6] = registerSingleMetaTileEntity(25, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_4a.opv"), 13, 4, true));
+        OUTPUT_ENERGY_HATCH_16A[0] = registerSingleMetaTileEntity(26, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.lv"), 1, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[1] = registerSingleMetaTileEntity(27, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.mv"), 2, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[2] = registerSingleMetaTileEntity(28, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.hv"), 3, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[3] = registerSingleMetaTileEntity(29, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.ev"), 4, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[4] = registerSingleMetaTileEntity(30, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.uev"), 10, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[5] = registerSingleMetaTileEntity(31, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.uiv"), 11, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[6] = registerSingleMetaTileEntity(32, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.uxv"), 12, 16, true));
+        OUTPUT_ENERGY_HATCH_16A[7] = registerSingleMetaTileEntity(33, new EPMetaTileEntityEnergyHatch(epId("energy_hatch.output_16a.opv"), 13, 16, true));
 
-        //  SimpleMachines: Id 12601_12900   15 ids for each machine
+        //  Simple Machines range: 12601-12900
         registerSimpleMetaTileEntity(DRYER, 12601, "dryer", EPRecipeMaps.DRYER_RECIPES, EPTextures.DRYER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
         NAQUADAH_REACTOR[0] = registerMetaTileEntity(12614, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.iv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 5, genericGeneratorTankSizeFunction));
         NAQUADAH_REACTOR[1] = registerMetaTileEntity(12615, new SimpleGeneratorMetaTileEntity(epId("naquadah_reactor.luv"), EPRecipeMaps.NAQUADAH_REACTOR_RECIPES, EPTextures.NAQUADAH_REACTOR_OVERLAY, 6, genericGeneratorTankSizeFunction));

@@ -44,7 +44,6 @@ public class MetaTileEntityRecipes {
 
     private static void VanillaMachineRecipes() {
         HullRecipes();
-        EnergyHatchRecipes();
     }
 
     private static void HullRecipes() {
@@ -142,63 +141,6 @@ public class MetaTileEntityRecipes {
                 .EUt(16)
                 .duration(50)
                 .buildAndRegister();
-    }
-
-    private static void EnergyHatchRecipes() {
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
-                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
-                        OreDictUnifier.get(cableGtSingle, Europium, 4),
-                        ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
-                        OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
-                        OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
-                new FluidStack[]{SodiumPotassium.getFluid(12000),
-                        SolderingAlloy.getFluid(5760)});
-
-        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.HULL[UHV])
-                .input(cableGtSingle, Europium, 4)
-                .input(NANO_PIC_CHIP, 2)
-                .input(circuit, MarkerMaterials.Tier.UHV)
-                .input(VOLTAGE_COIL_UHV, 2)
-                .fluidInputs(SodiumPotassium.getFluid(12000))
-                .fluidInputs(SolderingAlloy.getFluid(5760))
-                .output(ENERGY_INPUT_HATCH[UHV])
-                .duration(1000)
-                .EUt(VA[UHV])
-                .stationResearch(b -> b
-                        .researchStack(ENERGY_INPUT_HATCH[UV].getStackForm())
-                        .CWUt(128)
-                        .EUt(VA[UV]))
-                .buildAndRegister();
-
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
-                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
-                                OreDictUnifier.get(spring, Europium, 4),
-                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
-                                OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
-                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
-                new FluidStack[]{SodiumPotassium.getFluid(12000), SolderingAlloy.getFluid(5760)});
-
-        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.HULL[UHV])
-                .input(spring, Europium, 4)
-                .input(NANO_PIC_CHIP, 2)
-                .input(circuit, MarkerMaterials.Tier.UHV)
-                .input(VOLTAGE_COIL_UHV, 2)
-                .fluidInputs(SodiumPotassium.getFluid(12000))
-                .fluidInputs(SolderingAlloy.getFluid(5760))
-                .output(ENERGY_OUTPUT_HATCH[UHV])
-                .duration(1000)
-                .EUt(VA[UHV])
-                .stationResearch(b -> b
-                        .researchStack(ENERGY_OUTPUT_HATCH[UV].getStackForm())
-                        .CWUt(128)
-                        .EUt(VA[UV]))
-                .buildAndRegister();
-
-        //  TODO Other Transformers and Energy Hatches (e.g. 4A, 16A, 64A).
     }
 
     private static void EPMachineRecipes() {

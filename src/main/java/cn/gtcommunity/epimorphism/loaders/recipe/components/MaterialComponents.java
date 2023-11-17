@@ -236,7 +236,7 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         POWER_COMPONENT.appendIngredients(Stream.of(new Object[][]{
-                {8, EPMetaItems.NANO_PIC_CHIP},
+//                {8, EPMetaItems.NANO_PIC_CHIP},
                 {9, EPMetaItems.NANO_PIC_CHIP},
                 {10, EPMetaItems.PICO_PIC_CHIP},
                 {11, EPMetaItems.PICO_PIC_CHIP},

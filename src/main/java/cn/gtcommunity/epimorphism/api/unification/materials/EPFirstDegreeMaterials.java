@@ -2459,7 +2459,23 @@ public class EPFirstDegreeMaterials {
                 .components(Methylhydrazine, 1, Tetranitromethane, 1)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
-
+        //  24328 Lithium Niobate
+        LithiumNiobate = new Material.Builder(getMaterialsId(), gregtechId("lithium_niobate"))
+                .ingot()
+                .color(0xD27700)
+                .iconSet(SHINY)
+                .components(Lithium, 1, Niobium, 1, Oxygen, 4)
+                .blastTemp(6700)
+                .flags(DISABLE_DECOMPOSITION)
+                .flags(GENERATE_PLATE, GENERATE_LENS)
+                .build();
+        //  24329 Niobium Pentachloride
+        NiobiumPentachloride = new Material.Builder(getMaterialsId(), gregtechId("niobium_pentachloride"))
+                .dust()
+                .color(Niobium.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Niobium, 1, Chlorine, 5)
+                .build();
     }
 
     private static int getMaterialsId() {

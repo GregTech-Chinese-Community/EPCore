@@ -280,6 +280,7 @@ public class EPElementMaterials {
                 .iconSet(DULL)
                 .blastTemp(10900, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.Mithril)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .build();
     }
 

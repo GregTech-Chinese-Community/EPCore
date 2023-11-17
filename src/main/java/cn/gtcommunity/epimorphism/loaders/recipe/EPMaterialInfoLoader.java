@@ -62,7 +62,7 @@ public class EPMaterialInfoLoader {
         //  UEV Voltage Coil
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(stick, ChromiumGermaniumTellurideMagnetic)
-                .input(wireFine, Seaborgium, 16)
+                .input(wireFine, Mithril, 16)
                 .circuitMeta(1)
                 .output(VOLTAGE_COIL_UEV)
                 .EUt(VA[UEV])
@@ -71,7 +71,7 @@ public class EPMaterialInfoLoader {
 
         OreDictUnifier.registerOre(VOLTAGE_COIL_UEV.getStackForm(), new ItemMaterialInfo (
                 new MaterialStack(ChromiumGermaniumTellurideMagnetic, M / 2),
-                new MaterialStack(Seaborgium, M * 2)));
+                new MaterialStack(Mithril, M * 2)));
 
         //  PMMA Glass
         COMPRESSOR_RECIPES.recipeBuilder()

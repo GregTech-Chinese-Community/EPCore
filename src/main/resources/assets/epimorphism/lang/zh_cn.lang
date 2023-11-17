@@ -760,6 +760,30 @@ epimorphism.machine.reinforced_rotor_holder.uhv.name=强化转子固定器（UHV
 epimorphism.machine.reinforced_rotor_holder.uev.name=强化转子固定器（UEV）
 epimorphism.machine.reinforced_rotor_holder.uiv.name=强化转子固定器（UIV）
 
+epimorphism.machine.energy_hatch.input_4a.uev.name=4 安能源仓（UEV）
+epimorphism.machine.energy_hatch.input_4a.uiv.name=4 安能源仓（UIV）
+epimorphism.machine.energy_hatch.input_4a.uxv.name=4 安能源仓（UXV）
+epimorphism.machine.energy_hatch.input_4a.opv.name=4 安能源仓（OpV）
+epimorphism.machine.energy_hatch.input_16a.uev.name=16 安能源仓（UEV）
+epimorphism.machine.energy_hatch.input_16a.uiv.name=16 安能源仓（UIV）
+epimorphism.machine.energy_hatch.input_16a.uxv.name=16 安能源仓（UXV）
+epimorphism.machine.energy_hatch.input_16a.opv.name=16 安能源仓（OpV）
+epimorphism.machine.energy_hatch.output_4a.lv.name=4 安动力仓（LV）
+epimorphism.machine.energy_hatch.output_4a.mv.name=4 安动力仓（MV）
+epimorphism.machine.energy_hatch.output_4a.hv.name=4 安动力仓（HV）
+epimorphism.machine.energy_hatch.output_4a.uev.name=4 安动力仓（UEV）
+epimorphism.machine.energy_hatch.output_4a.uiv.name=4 安动力仓（UIV）
+epimorphism.machine.energy_hatch.output_4a.uxv.name=4 安动力仓（UXV）
+epimorphism.machine.energy_hatch.output_4a.opv.name=4 安动力仓（OpV）
+epimorphism.machine.energy_hatch.output_16a.lv.name=16 安动力仓（LV）
+epimorphism.machine.energy_hatch.output_16a.mv.name=16 安动力仓（MV）
+epimorphism.machine.energy_hatch.output_16a.hv.name=16 安动力仓（HV）
+epimorphism.machine.energy_hatch.output_16a.ev.name=16 安动力仓（EV）
+epimorphism.machine.energy_hatch.output_16a.uev.name=16 安动力仓（UEV）
+epimorphism.machine.energy_hatch.output_16a.uiv.name=16 安动力仓（UIV）
+epimorphism.machine.energy_hatch.output_16a.uxv.name=16 安动力仓（UXV）
+epimorphism.machine.energy_hatch.output_16a.opv.name=16 安动力仓（OpV）
+
 epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
 
@@ -1320,6 +1344,8 @@ gregtech.material.highly_purified_coal_tar=高度提纯煤焦油
 gregtech.material.rp_1_rocket_fuel=RP-1火箭燃料
 gregtech.material.methylhydrazine=甲肼
 gregtech.material.methylhydrazine_nitrate_rocket_fuel=硝酸甲肼火箭燃料
+gregtech.material.lithium_niobate=铌酸锂
+gregtech.material.niobium_pentachloride=五氯化铌
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息

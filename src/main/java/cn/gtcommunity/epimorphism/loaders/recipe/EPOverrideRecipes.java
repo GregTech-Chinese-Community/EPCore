@@ -6,9 +6,11 @@ import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.core.unification.material.internal.MaterialRegistryManager;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -21,12 +23,14 @@ import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.api.unification.ore.EPOrePrefix.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
+import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
+import static gregtech.common.metatileentities.MetaTileEntities.*;
 
 public class EPOverrideRecipes {
     public static void init() {
@@ -113,6 +117,7 @@ public class EPOverrideRecipes {
     private static void GTOverrideRecipes() {
         NeutroniumWaferOverride();
         NewRubberOverride();
+        EnergyHatchOverride();
     }
 
     private static void NeutroniumWaferOverride() {
@@ -878,5 +883,349 @@ public class EPOverrideRecipes {
 
         //  TODO LuV-UV
 
+    }
+
+    private static void EnergyHatchOverride() {
+
+        //  1A UHV Energy Input Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
+                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
+                                OreDictUnifier.get(cableGtSingle, Europium, 4),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                                OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
+                new FluidStack[]{SodiumPotassium.getFluid(12000),
+                                 SolderingAlloy.getFluid(5760)});
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UHV])
+                .input(cableGtSingle, Europium, 4)
+                .input(NANO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(VOLTAGE_COIL_UHV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(12000))
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .output(ENERGY_INPUT_HATCH[UHV])
+                .duration(1000)
+                .EUt(VA[UHV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_INPUT_HATCH[UV].getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UV]))
+                .buildAndRegister();
+
+        //  1A UEV Energy Input Hatch
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UEV])
+                .input(cableGtSingle, CarbonNanotube, 4)
+                .input(PICO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UEV)
+                .input(VOLTAGE_COIL_UEV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(14000))
+                .fluidInputs(SolderingAlloy.getFluid(11520))
+                .output(ENERGY_INPUT_HATCH[UEV])
+                .duration(1200)
+                .EUt(VA[UEV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_INPUT_HATCH[UHV].getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        //  1A UIV Energy Input Hatch
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UIV])
+                .input(cableGtSingle, CosmicNeutronium, 4)
+                .input(PICO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UIV)
+                .input(VOLTAGE_COIL_UIV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(16000))
+                .fluidInputs(SolderingAlloy.getFluid(23040))
+                .output(ENERGY_INPUT_HATCH[UIV])
+                .duration(1400)
+                .EUt(VA[UIV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_INPUT_HATCH[UEV].getStackForm())
+                        .CWUt(512)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();
+
+        //  TODO 1A UXV Energy Input Hatch
+
+        //  TODO 1A OpV Energy Input Hatch
+
+        //  4A UHV Energy Input Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[]{TRANSFORMER[UHV].getStackForm(),
+                                ENERGY_INPUT_HATCH[UHV].getStackForm(),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate),
+                                OreDictUnifier.get(wireGtQuadruple, Europium, 2)});
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UHV])
+                .input(ENERGY_INPUT_HATCH[UHV])
+                .input(NANO_PIC_CHIP)
+                .input(VOLTAGE_COIL_UHV)
+                .input(wireGtQuadruple, Europium, 2)
+                .output(ENERGY_INPUT_HATCH_4A[5])
+                .EUt(VA[UV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A UEV Energy Input Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UEV])
+                .input(ENERGY_INPUT_HATCH[UEV])
+                .input(PICO_PIC_CHIP)
+                .input(wireGtQuadruple, CarbonNanotube, 2)
+                .output(INPUT_ENERGY_HATCH_4A[0])
+                .EUt(VA[UHV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A UIV Energy Input Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UIV])
+                .input(ENERGY_INPUT_HATCH[UIV])
+                .input(PICO_PIC_CHIP)
+                .input(wireGtQuadruple, CosmicNeutronium, 2)
+                .output(INPUT_ENERGY_HATCH_4A[1])
+                .EUt(VA[UEV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  TODO 4A UXV Energy Hatch
+        /*
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UXV])
+                .input(ENERGY_INPUT_HATCH[UXV])
+                .input(FEMTO_PIC_CHIP)
+                .input(wireGtQuadruple, ... , 2)
+                .output(INPUT_ENERGY_HATCH_4A[2])
+                .EUt(VA[UIV])
+                .duration(100)
+                .buildAndRegister();
+         */
+
+        //  TODO 4A OpV Energy Hatch
+        /*
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[OpV])
+                .input(ENERGY_INPUT_HATCH[OpV])
+                .input(ATTO_PIC_CHIP)
+                .input(wireGtQuadruple, ... , 2)
+                .output(INPUT_ENERGY_HATCH_4A[3])
+                .EUt(VA[UXV])
+                .duration(100)
+                .buildAndRegister();
+         */
+
+        //  16A UHV Energy Input Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[]{ENERGY_INPUT_HATCH_4A[5].getStackForm(2),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate),
+                                OreDictUnifier.get(wireGtOctal, Europium, 2)});
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UHV])
+                .input(ENERGY_INPUT_HATCH_4A[5])
+                .input(NANO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UHV)
+                .input(cableGtOctal, Europium, 2)
+                .output(ENERGY_INPUT_HATCH_16A[4])
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A UEV Energy Input Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UEV])
+                .input(INPUT_ENERGY_HATCH_4A[0])
+                .input(PICO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UEV)
+                .input(cableGtOctal, CarbonNanotube, 2)
+                .output(INPUT_ENERGY_HATCH_16A[0])
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A UIV Energy Input Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UIV])
+                .input(INPUT_ENERGY_HATCH_4A[1])
+                .input(PICO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UIV)
+                .input(cableGtOctal, CosmicNeutronium, 2)
+                .output(INPUT_ENERGY_HATCH_16A[1])
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  TODO 16A UXV Energy Input Hatch
+
+        //  TODO 16A OpV Energy Input Hatch
+
+        //  1A UHV Energy Output Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
+                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
+                                OreDictUnifier.get(spring, Europium, 4),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                                OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
+                new FluidStack[]{SodiumPotassium.getFluid(12000),
+                                 SolderingAlloy.getFluid(5760)});
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UHV])
+                .input(spring, Europium, 4)
+                .input(NANO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV)
+                .input(VOLTAGE_COIL_UHV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(12000))
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .output(ENERGY_OUTPUT_HATCH[UHV])
+                .duration(1000)
+                .EUt(VA[UHV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_OUTPUT_HATCH[UV].getStackForm())
+                        .CWUt(128)
+                        .EUt(VA[UV]))
+                .buildAndRegister();
+
+        //  1A UEV Energy Output Hatch
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UEV])
+                .input(spring, PedotTMA, 4)
+                .input(PICO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UEV)
+                .input(VOLTAGE_COIL_UEV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(14000))
+                .fluidInputs(SolderingAlloy.getFluid(11520))
+                .output(ENERGY_OUTPUT_HATCH[UEV])
+                .duration(1200)
+                .EUt(VA[UEV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_OUTPUT_HATCH[UHV].getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        //  1A UIV Energy Output Hatch
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(MetaTileEntities.HULL[UIV])
+                .input(spring, RutheniumTriniumAmericiumNeutronate, 4)
+                .input(PICO_PIC_CHIP, 2)
+                .input(circuit, MarkerMaterials.Tier.UIV)
+                .input(VOLTAGE_COIL_UIV, 2)
+                .fluidInputs(SodiumPotassium.getFluid(16000))
+                .fluidInputs(SolderingAlloy.getFluid(23040))
+                .output(ENERGY_OUTPUT_HATCH[UIV])
+                .duration(1400)
+                .EUt(VA[UIV])
+                .stationResearch(b -> b
+                        .researchStack(ENERGY_OUTPUT_HATCH[UEV].getStackForm())
+                        .CWUt(512)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();
+
+        //  TODO 1A UXV Energy Output Hathc
+
+        //  TODO 1A OpV Energy Output Hatch
+
+        //  4A UHV Energy Output Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[]{ENERGY_OUTPUT_HATCH[UHV].getStackForm(2),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate),
+                                OreDictUnifier.get(wireGtQuadruple, Europium, 2)});
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UHV])
+                .input(ENERGY_OUTPUT_HATCH[UHV])
+                .input(NANO_PIC_CHIP)
+                .input(VOLTAGE_COIL_UHV)
+                .input(wireGtQuadruple, Europium, 2)
+                .output(ENERGY_OUTPUT_HATCH_4A[5])
+                .EUt(VA[UV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A UEV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UEV])
+                .input(ENERGY_OUTPUT_HATCH[UEV])
+                .input(PICO_PIC_CHIP)
+                .input(VOLTAGE_COIL_UEV)
+                .input(wireGtQuadruple, CarbonNanotube, 2)
+                .output(OUTPUT_ENERGY_HATCH_4A[3])
+                .EUt(VA[UHV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A UIV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[UIV])
+                .input(ENERGY_OUTPUT_HATCH[UIV])
+                .input(PICO_PIC_CHIP)
+                .input(VOLTAGE_COIL_UIV)
+                .input(wireGtQuadruple, CosmicNeutronium, 2)
+                .output(OUTPUT_ENERGY_HATCH_4A[4])
+                .EUt(VA[UEV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  TODO 4A UXV Energy Output Hatch
+
+        //  TODO 4A OpV Energy Output Hatch
+
+        //  16A UHV Energy Output Hatch
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[]{ENERGY_OUTPUT_HATCH_4A[5].getStackForm(2),
+                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
+                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate),
+                                OreDictUnifier.get(wireGtOctal, Europium, 2)});
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UHV])
+                .input(ENERGY_OUTPUT_HATCH_4A[5])
+                .input(NANO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UHV)
+                .input(wireGtOctal, Europium, 2)
+                .output(ENERGY_OUTPUT_HATCH_16A[4])
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A UEV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UEV])
+                .input(OUTPUT_ENERGY_HATCH_4A[3])
+                .input(PICO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UEV)
+                .input(wireGtOctal, CarbonNanotube, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[4])
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A UIV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[UIV])
+                .input(OUTPUT_ENERGY_HATCH_4A[4])
+                .input(PICO_PIC_CHIP, 2)
+                .input(VOLTAGE_COIL_UIV)
+                .input(wireGtOctal, CosmicNeutronium, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[5])
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  TODO 16A UXV Energy Output Hatch
+
+        //  TODO 16A OpV Energy Output Hatch
+
+
+        //  TODO Other transformers...
     }
 }
