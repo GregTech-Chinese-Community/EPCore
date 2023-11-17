@@ -674,7 +674,7 @@ public class MachineComponents {
                 'G', new UnificationEntry(gear, Orichalcum),
                 'M', ELECTRIC_MOTOR_UV.getStackForm(),
                 'H', HULL[UV].getStackForm(),
-                'S', EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()
+                'S', COMPONENT_GRINDER_TUNGSTEN.getStackForm()
         );
 
         //  Naquadria Casing
