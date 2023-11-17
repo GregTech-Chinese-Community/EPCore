@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.unification.material.MarkerMaterials;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
@@ -14,8 +15,8 @@ import static gregtechfoodoption.GTFOMaterialHandler.*;
 public class FullereneChain {
     public static void init() {
         //  Butane + Bromine -> Bromobutane + Hydrofluoric Acid
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(craftingLens, MarkerMaterials.Color.Brown)
                 .fluidInputs(Butane.getFluid(1000))
                 .fluidInputs(Bromine.getFluid(2000))
                 .fluidOutputs(Bromobutane.getFluid(1000))

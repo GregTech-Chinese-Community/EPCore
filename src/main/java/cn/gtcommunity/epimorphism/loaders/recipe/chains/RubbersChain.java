@@ -6,7 +6,6 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class RubbersChain {
@@ -84,8 +83,8 @@ public class RubbersChain {
                 .buildAndRegister();
 
         //  Fluorobenzene + Hydrofluoric Acid + Oxygen -> Octafluoro Pentanol + Propene (Cycle)
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(lens, NetherStar)
                 .fluidInputs(Fluorobenzene.getFluid(2000))
                 .fluidInputs(HydrofluoricAcid.getFluid(6000))
                 .fluidInputs(Oxygen.getFluid(1000))

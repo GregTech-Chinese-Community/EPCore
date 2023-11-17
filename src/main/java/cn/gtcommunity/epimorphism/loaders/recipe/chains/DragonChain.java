@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.unification.material.MarkerMaterials;
 import net.minecraft.init.Items;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
@@ -10,7 +11,6 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class DragonChain {
@@ -146,8 +146,8 @@ public class DragonChain {
                 .buildAndRegister();
 
         //  Krypton Difluoride
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(craftingLens, MarkerMaterials.Color.Green)
                 .fluidInputs(Krypton.getFluid(1000))
                 .fluidInputs(Fluorine.getFluid(2000))
                 .fluidOutputs(KryptonDifluoride.getFluid(1000))

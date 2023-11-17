@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.DRYER_RECIPES;
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.ULTRAVIOLET_LAMP_CHAMBER_RECIPES;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static cn.gtcommunity.epimorphism.common.items.EPMetaItems.*;
 import static gregtech.api.GTValues.*;
@@ -125,8 +126,7 @@ public class PowerIntCircuitChain {
                 .buildAndRegister();
 
         //  Pico PIC
-        //  TODO Ultraviolet Lamp Chamber?
-        CHEMICAL_RECIPES.recipeBuilder()
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
                 .input(NANO_PIC_WAFER)
                 .notConsumable(lens, YttriumVanadateLuTm)
                 .output(PICO_PIC_WAFER)

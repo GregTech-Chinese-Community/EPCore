@@ -225,6 +225,16 @@ public class MetaTileEntityRecipes {
                 'D', CraftingComponent.DOUBLE_PLATE,
                 'W', CraftingComponent.CABLE);
 
+        //  Ultraviolet Lamp Chamber
+        MetaTileEntityLoader.registerMachineRecipe(true, ULTRAVIOLET_LAMP_CHAMBER,
+                "GEG", "PHP", "WXW",
+                'E', CraftingComponent.EMITTER,
+                'H', CraftingComponent.HULL,
+                'P', CraftingComponent.PLATE,
+                'G', CraftingComponent.GLASS,
+                'W', CraftingComponent.CABLE,
+                'X', CraftingComponent.CIRCUIT);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",
@@ -535,10 +545,10 @@ public class MetaTileEntityRecipes {
 
         //  Large Vacuum Chamber
         ModHandler.addShapedRecipe(true, "large_vacuum_chamber", LARGE_VACUUM_CHAMBER.getStackForm(),
-                "GXG", "PCQ", "GWG",
+                "GXG", "CPD", "GWG",
                 'C', VACUUM_CHAMBER[5].getStackForm(),
+                'D', ULTRAVIOLET_LAMP_CHAMBER[5].getStackForm(),
                 'P', ELECTRIC_PUMP_IV.getStackForm(),
-                'Q', FLUID_REGULATOR_IV.getStackForm(),
                 'X', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'W', new UnificationEntry(cableGtSingle, Platinum),
                 'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS));

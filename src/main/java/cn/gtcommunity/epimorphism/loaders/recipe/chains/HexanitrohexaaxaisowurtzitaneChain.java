@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.unification.material.MarkerMaterials;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
@@ -8,7 +9,6 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.BLACKLIGHT;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class HexanitrohexaaxaisowurtzitaneChain {
@@ -64,8 +64,8 @@ public class HexanitrohexaaxaisowurtzitaneChain {
                 .buildAndRegister();
 
         //  Benzyl Chloride
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(craftingLens, MarkerMaterials.Color.LightBlue)
                 .fluidInputs(Toluene.getFluid(1000))
                 .fluidInputs(Chlorine.getFluid(1000))
                 .fluidOutputs(BenzylChloride.getFluid(1000))

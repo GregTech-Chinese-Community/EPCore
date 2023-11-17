@@ -30,6 +30,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> DECAY_CHAMBER_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> ULTRAVIOLET_LAMP_CHAMBER_RECIPES;
 
     //  Multiblock Machine Recipemap
     @ZenProperty
@@ -143,6 +145,16 @@ public class EPRecipeMaps {
         CRYSTALLIZATION_RECIPES = new RecipeMap<>("crystallizer_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new SimpleRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTSoundEvents.FURNACE);
+
+        //  Ultraviolet Lamp Chamber Recipemap
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES = new RecipeMap<>("ultraviolet_lamp_chamber_recipes", 0, 2, 0, 2, 0, 3, 0, 2, new SimpleRecipeBuilder(), false)
+                .setSlotOverlay(false, false, false, GuiTextures.LENS_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.LENS_OVERLAY)
+                .setSlotOverlay(false, true, false, GuiTextures.MOLECULAR_OVERLAY_3)
+                .setSlotOverlay(false, true, true, GuiTextures.MOLECULAR_OVERLAY_4)
+                .setSlotOverlay(true, false, GuiTextures.VIAL_OVERLAY_1)
+                .setSlotOverlay(true, true, GuiTextures.VIAL_OVERLAY_2)
+                .setSound(GTSoundEvents.CHEMICAL_REACTOR);
 
         //  Crystallization Crucible Recipemap
         CRYSTALLIZER_RECIPES = new RecipeMap<>("crystallization_recipes", 0, 6, 1, 1, 0, 3, 0, 0, new BlastRecipeBuilder(), false)

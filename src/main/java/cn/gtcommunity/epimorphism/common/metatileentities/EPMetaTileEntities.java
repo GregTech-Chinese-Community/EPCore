@@ -52,6 +52,7 @@ public class EPMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] DECAY_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static final SimpleGeneratorMetaTileEntity[] ROCKET_ENGINE = new SimpleGeneratorMetaTileEntity[3];
+    public static SimpleMachineMetaTileEntity[] ULTRAVIOLET_LAMP_CHAMBER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
 
     //  Multiblocks
     public static EPMetaTileEntitySonicator SONICATOR;
@@ -181,8 +182,9 @@ public class EPMetaTileEntities {
         ROCKET_ENGINE[0] = registerMetaTileEntity(12663, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.ev"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 4, genericGeneratorTankSizeFunction));
         ROCKET_ENGINE[1] = registerMetaTileEntity(12664, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.iv"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 5, genericGeneratorTankSizeFunction));
         ROCKET_ENGINE[2] = registerMetaTileEntity(12665, new SimpleGeneratorMetaTileEntity(epId("rocket_engine.luv"), EPRecipeMaps.ROCKET_ENGINE_RECIPES, EPTextures.ROCKET_ENGINE_OVERLAY, 6, genericGeneratorTankSizeFunction));
+        registerSimpleMetaTileEntity(ULTRAVIOLET_LAMP_CHAMBER, 12666, "ultraviolet_lamp_chamber", EPRecipeMaps.ULTRAVIOLET_LAMP_CHAMBER_RECIPES, Textures.LASER_ENGRAVER_OVERLAY, true, EPUtils::epId, GTUtility.hvCappedTankSizeFunction);
 
-        //Multiblocks: Id 13301-14300
+        //  Multiblocks range: 13301-14300
         SONICATOR = registerMultiMetaTileEntity(1, new EPMetaTileEntitySonicator(epId("sonicator")));
         CVD_UNIT = registerMultiMetaTileEntity(2, new EPMetaTileEntityCVDUnit(epId("cvd_unit")));
         NANOSCALE_FABRICATOR = registerMultiMetaTileEntity(3, new EPMetaTileEntityNanoscaleFabricator(epId("nanoscale_fabricator")));
