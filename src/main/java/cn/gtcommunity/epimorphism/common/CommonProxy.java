@@ -59,6 +59,7 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_MILL_CASING);
         registry.register(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING);
         registry.register(EPMetablocks.EP_COMPONENT_ASSEMBLY_LINE_CASING);
+        registry.register(EPMetablocks.EP_PCB_FACTORY_CASING);
         registry.register(EPMetablocks.EP_CLEANROOM_CASING);
         registry.register(EPMetablocks.EP_BOILER_CASING);
         registry.register(EPMetablocks.EP_EXPLOSIVE_BLOCK);
@@ -80,6 +81,7 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_MILL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_ACTIVE_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_COMPONENT_ASSEMBLY_LINE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_PCB_FACTORY_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_CLEANROOM_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_BOILER_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_EXPLOSIVE_BLOCK, VariantItemBlock::new));

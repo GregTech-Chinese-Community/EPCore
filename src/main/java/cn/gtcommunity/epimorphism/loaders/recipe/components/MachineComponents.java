@@ -1490,6 +1490,91 @@ public class MachineComponents {
                 .duration(600)
                 .buildAndRegister();
 
+        //  PCB Factory Casings
+
+        //  T1
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Iridium)
+                .input(EMITTER_IV, 2)
+                .input(plate, Osmiridium, 4)
+                .input(wireFine, Ruridit, 4)
+                .fluidInputs(TinAlloy.getFluid(L * 2)) // TODO Photoresist?
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.BASIC_PHOTOLITHOGRAPHIC_FRAMEWORK_CASING, 2))
+                .EUt(VA[IV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  T2
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Trinium)
+                .input(EMITTER_LuV, 2)
+                .input(plate, NaquadahAlloy, 4)
+                .input(wireFine, Europium, 4)
+                .fluidInputs(TinAlloy.getFluid(L * 2)) // TODO Photoresist?
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.MOLD_PRINTING_ASSEMBLY_FRAMEWORK_CASING, 2))
+                .EUt(VA[ZPM])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  T3
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Tritanium)
+                .input(EMITTER_ZPM, 2)
+                .input(plate, Orichalcum, 4)
+                .input(wireFine, Mithril, 4)
+                .fluidInputs(TinAlloy.getFluid(L * 2)) // TODO Photoresist?
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.RADIATION_PROOF_SCAN_FRAMEWORK_CASING, 2))
+                .EUt(VA[UHV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Water Cooled
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Aluminium)
+                .input(ELECTRIC_PUMP_HV, 2)
+                .input(FIELD_GENERATOR_HV, 2)
+                .input(plate, TungstenSteel, 8)
+                .input(pipeTinyFluid, Titanium, 16)
+                .input(screw, StainlessSteel, 8)
+                .fluidInputs(PCBCoolant.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.WATER_COOLED_MACHINE_CASING, 2))
+                .EUt(VA[EV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Infinity Cooled
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Infinity)
+                .input(ELECTRIC_PUMP_UV, 2)
+                .input(FIELD_GENERATOR_UV, 2)
+                .input(plate, Hypogen, 8)
+                .input(pipeTinyFluid, Lafium, 16)
+                .input(screw, AusteniticStainlessSteel904L, 8)
+                .fluidInputs(PCBCoolant.getFluid(L * 4))
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.INFINITY_COOLED_MACHINE_CASING, 2))
+                .EUt(VA[UEV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Biological
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Europium)
+                .input(ELECTRIC_MOTOR_UV)
+                .input(SENSOR_UV)
+                .input(plate, IncoloyMA956, 4)
+                .input(rotor, Inconel792, 2)
+                .input(wireFine, MercuryCadmiumTelluride, 4)
+                .fluidInputs(SterileGrowthMedium.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_PCB_FACTORY_CASING.getItemVariant(EPBlockPCBFactoryCasing.CasingType.BIOLOGICAL_STERILE_MACHINE_CASING, 2))
+                .EUt(VA[UV])
+                .duration(100)
+                .cleanroom(CleanroomType.STERILE_CLEANROOM)
+                .buildAndRegister();
     }
 
     private static void Materials() {

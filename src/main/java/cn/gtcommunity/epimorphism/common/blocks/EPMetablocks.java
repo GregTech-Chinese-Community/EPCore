@@ -19,6 +19,7 @@ public class EPMetablocks {
     public static EPBlockMillCasing EP_MILL_CASING;
     public static EPBlockActiveMultiblockCasing EP_ACTIVE_MULTIBLOCK_CASING;
     public static EPBlockComponentAssemblyLineCasing EP_COMPONENT_ASSEMBLY_LINE_CASING;
+    public static EPBlockPCBFactoryCasing EP_PCB_FACTORY_CASING;
     public static EPBlockCleanroomCasing EP_CLEANROOM_CASING;
     public static EPBlockBoilerCasing EP_BOILER_CASING;
     public static EPBlockExplosive EP_EXPLOSIVE_BLOCK;
@@ -47,6 +48,8 @@ public class EPMetablocks {
         EP_ACTIVE_MULTIBLOCK_CASING.setRegistryName("ep_active_multiblock_casing");
         EP_COMPONENT_ASSEMBLY_LINE_CASING = new EPBlockComponentAssemblyLineCasing();
         EP_COMPONENT_ASSEMBLY_LINE_CASING.setRegistryName("ep_component_assembly_line_casing");
+        EP_PCB_FACTORY_CASING = new EPBlockPCBFactoryCasing();
+        EP_PCB_FACTORY_CASING.setRegistryName("ep_pcb_factory_casing");
         EP_CLEANROOM_CASING = new EPBlockCleanroomCasing();
         EP_CLEANROOM_CASING.setRegistryName("ep_cleanroom_casing");
         EP_BOILER_CASING = new EPBlockBoilerCasing();
@@ -69,6 +72,7 @@ public class EPMetablocks {
         registerItemModel(EP_MULTIBLOCK_CASING_B);
         registerItemModel(EP_MULTIBLOCK_CASING_C);
         registerItemModel(EP_COMPONENT_ASSEMBLY_LINE_CASING);
+        registerItemModel(EP_PCB_FACTORY_CASING);
         registerItemModel(EP_CLEANROOM_CASING);
         registerItemModel(EP_BOILER_CASING);
         registerItemModel(EP_EXPLOSIVE_BLOCK);
