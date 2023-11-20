@@ -297,6 +297,9 @@ metaitem.actinium_superhydride_plasma_containment_cell.name=超氢化锕等离�
 metaitem.actinium_superhydride_plasma_containment_cell.tooltip=使用§6等离子冷凝器§7进行冷却
 metaitem.quantum_anomaly.name=量子反常
 
+metaitem.null.name=空
+metaitem.null.tooltip=§b§o天体即空洞
+
 #  Mill Balls
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球

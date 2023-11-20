@@ -7,5 +7,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
   "server": [],
-  "client": ["minecraft.MixinBlockGlass"]
+  "client": [
+    "minecraft.MixinBlockGlass"
+  ]
 }

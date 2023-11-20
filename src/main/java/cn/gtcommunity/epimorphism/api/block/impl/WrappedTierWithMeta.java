@@ -2,6 +2,8 @@ package cn.gtcommunity.epimorphism.api.block.impl;
 
 import cn.gtcommunity.epimorphism.api.block.ITierGlassBlockState;
 
+import javax.annotation.Nonnull;
+
 public class WrappedTierWithMeta implements ITierGlassBlockState {
     private final ITierGlassBlockState inner;
     private final int meta;
@@ -11,6 +13,7 @@ public class WrappedTierWithMeta implements ITierGlassBlockState {
         this.meta = meta;
     }
 
+    @Nonnull
     @Override
     public String getName() {
         return inner.getName() + "#" + meta;
