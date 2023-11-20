@@ -148,8 +148,7 @@ public class NoEnergyMultiblockRecipeLogic extends AbstractRecipeLogic {
     @Override
     protected boolean canWorkWithInputs() {
         MultiblockWithDisplayBase controller = (MultiblockWithDisplayBase) metaTileEntity;
-        if (controller instanceof NoEnergyMultiblockController) {
-            NoEnergyMultiblockController distinctController = (NoEnergyMultiblockController) controller;
+        if (controller instanceof NoEnergyMultiblockController distinctController) {
 
             if (distinctController.canBeDistinct() && distinctController.isDistinct() && getInputInventory().getSlots() > 0) {
                 boolean canWork = false;
@@ -211,8 +210,7 @@ public class NoEnergyMultiblockRecipeLogic extends AbstractRecipeLogic {
         }
 
         // Distinct buses only apply to some multiblocks, so check the controller against a lower class
-        if (controller instanceof NoEnergyMultiblockController) {
-            NoEnergyMultiblockController distinctController = (NoEnergyMultiblockController) controller;
+        if (controller instanceof NoEnergyMultiblockController distinctController) {
 
             if (distinctController.canBeDistinct() && distinctController.isDistinct() && getInputInventory().getSlots() > 0) {
                 trySearchNewRecipeDistinct();
