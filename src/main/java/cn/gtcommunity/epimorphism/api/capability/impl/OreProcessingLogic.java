@@ -54,6 +54,7 @@ public class OreProcessingLogic implements IWorkable{
     private boolean isActive;
     protected boolean canRecipeProgress = true;
     protected int recipeEUt;
+
     protected List<FluidStack> fluidOutputs;
     protected NonNullList<ItemStack> itemOutputs;
     protected boolean workingEnabled = true;
@@ -392,7 +393,6 @@ public class OreProcessingLogic implements IWorkable{
             recipeEUt = overclockResults[1];
             itemOutputs.addAll(Arrays.asList(midProduct));
         }
-        //  序列化
     }
 
     private int[] calculateOverclock(int parallelNumber) {
@@ -623,6 +623,7 @@ public class OreProcessingLogic implements IWorkable{
         return metaTileEntity;
     }
 
+    @Override
     public boolean isWorkingEnabled() {
         return workingEnabled;
     }
@@ -637,10 +638,12 @@ public class OreProcessingLogic implements IWorkable{
         }
     }
 
+    @Override
     public int getProgress() {
         return this.progressTime;
     }
 
+    @Override
     public int getMaxProgress() {
         return this.maxProgressTime;
     }
@@ -650,6 +653,7 @@ public class OreProcessingLogic implements IWorkable{
         metaTileEntity.markDirty();
     }
 
+    @Override
     public boolean isActive() {
         return this.isActive;
     }
@@ -662,10 +666,6 @@ public class OreProcessingLogic implements IWorkable{
                 this.metaTileEntity.markDirty();
             }
         }
-    }
-
-    public int getProgressTime() {
-        return this.progressTime;
     }
 
     public double getProgressPercent() {

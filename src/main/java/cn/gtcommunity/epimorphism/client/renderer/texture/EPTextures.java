@@ -1,7 +1,11 @@
 package cn.gtcommunity.epimorphism.client.renderer.texture;
 
+import cn.gtcommunity.epimorphism.api.utils.EPUtils;
 import cn.gtcommunity.epimorphism.client.renderer.texture.custom.IsaMillRenderer;
+import codechicken.lib.texture.TextureUtils;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureMap;
 
 public class EPTextures {
 
@@ -60,8 +64,59 @@ public class EPTextures {
     // EPMultiRenderer
     public static IsaMillRenderer ISA_MILL = new IsaMillRenderer();
 
+    public static TextureAtlasSprite HALO;
+    public static TextureAtlasSprite HALO_NOISE;
+
+    public static TextureAtlasSprite MASK_INGOT;
+
+    public static TextureAtlasSprite[] COSMIC;
+    public static TextureAtlasSprite COSMIC_0;
+    public static TextureAtlasSprite COSMIC_1;
+    public static TextureAtlasSprite COSMIC_2;
+    public static TextureAtlasSprite COSMIC_3;
+    public static TextureAtlasSprite COSMIC_4;
+    public static TextureAtlasSprite COSMIC_5;
+    public static TextureAtlasSprite COSMIC_6;
+    public static TextureAtlasSprite COSMIC_7;
+    public static TextureAtlasSprite COSMIC_8;
+    public static TextureAtlasSprite COSMIC_9;
+
     public EPTextures() {}
 
-    public static void preInit() {}
+    public static void register(TextureMap textureMap) {
+
+        HALO = textureMap.registerSprite(EPUtils.epId("items/halo"));
+        HALO_NOISE = textureMap.registerSprite(EPUtils.epId("items/halo_noise"));
+
+        MASK_INGOT = textureMap.registerSprite(EPUtils.epId( "items/mask_ingot"));
+
+        COSMIC_0 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_0"));
+        COSMIC_1 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_1"));
+        COSMIC_2 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_2"));
+        COSMIC_3 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_3"));
+        COSMIC_4 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_4"));
+        COSMIC_5 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_5"));
+        COSMIC_6 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_6"));
+        COSMIC_7 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_7"));
+        COSMIC_8 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_8"));
+        COSMIC_9 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_9"));
+
+        COSMIC = new TextureAtlasSprite[] {
+                COSMIC_0,
+                COSMIC_1,
+                COSMIC_2,
+                COSMIC_3,
+                COSMIC_4,
+                COSMIC_5,
+                COSMIC_6,
+                COSMIC_7,
+                COSMIC_8,
+                COSMIC_9
+        };
+    }
+
+    public static void preInit() {
+        TextureUtils.addIconRegister(EPTextures::register);
+    }
 
 }
