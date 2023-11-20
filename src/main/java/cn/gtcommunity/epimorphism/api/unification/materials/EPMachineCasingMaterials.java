@@ -286,7 +286,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .blastTemp(4960, BlastProperty.GasTier.MID, VA[EV], 344)
                 .components(StainlessSteel, 8, NickelZincFerrite, 4, Kanthal, 4, Molybdenum, 4)
-                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME)
+                .flags(GENERATE_PLATE, GENERATE_ROD, GENERATE_FRAME, GENERATE_BOLT_SCREW)
                 .build();
         //  24527 Eglin Steel Base
         EglinSteelBase = new Material.Builder(getMaterialsId(), gregtechId("eglin_steel_base"))
