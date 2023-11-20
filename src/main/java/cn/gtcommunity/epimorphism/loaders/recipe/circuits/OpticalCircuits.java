@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.circuits;
 
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockCrucibleCasing;
+import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -19,6 +21,7 @@ public class OpticalCircuits {
         CVD_RECIPES.recipeBuilder()
                 .input(plate, GalliumNitride)
                 .input(foil, Americium, 4)
+                .fluidInputs(FluorinatedEthylenePropylene.getFluid(L * 2))//  TODO Find better material
                 .output(OPTICAL_BOARD)
                 .duration(40)
                 .EUt(VA[UHV])
@@ -93,16 +96,6 @@ public class OpticalCircuits {
                 .cleanroom(CleanroomType.CLEANROOM)
                 .buildAndRegister();
 
-        //  Silicon + Chlorine -> Silicon Tetrachloride
-        BURNER_REACTOR_RECIPES.recipeBuilder()
-                .input(dust, Silicon)
-                .fluidInputs(Chlorine.getFluid(4000))
-                .fluidOutputs(SiliconTetrachloride.getFluid(1000))
-                .temperature(873)
-                .duration(150)
-                .EUt(VA[HV])
-                .buildAndRegister();
-
         //  Optical Fiber: Germanium Tetrachloride + Phosphory Chloride + Silicon Tetrachloride -> Optical Fiber
         LASER_CVD_RECIPES.recipeBuilder()
                 .fluidInputs(GermaniumTetrachloride.getFluid(250))
@@ -122,6 +115,7 @@ public class OpticalCircuits {
                 .input(dust, ErbiumDopedZBLANGlass, 2)
                 .input(dust, PraseodymiumDopedZBLANGlass, 2)
                 .input(dust, TantalumPentoxide, 7)
+                .fluidInputs(ElectrolyteReflectorMixture.getFluid(500))
                 .output(DIELECTRIC_MIRROR)
                 .duration(600)
                 .EUt(VA[LuV])
@@ -309,6 +303,7 @@ public class OpticalCircuits {
                 .buildAndRegister();
 
         CRYSTALLIZER_RECIPES.recipeBuilder()
+                .notConsumable(EPMetablocks.EP_CRUCIBLE_CASING.getItemVariant(EPBlockCrucibleCasing.CrucibleType.BORON_NITRIDE_CRUCIBLE))
                 .input(dust, StrontiumCarbonate, 64)
                 .input(dust, Bohrium, 8)
                 .output(STRONTIUM_CARBONATE_BOHRIUM_BOULE)

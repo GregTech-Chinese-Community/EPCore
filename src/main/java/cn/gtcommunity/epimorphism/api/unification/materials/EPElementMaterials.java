@@ -6,6 +6,7 @@ import gregtech.api.unification.Elements;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.properties.BlastProperty;
 import gregtech.api.unification.material.properties.ToolProperty;
+import net.minecraft.init.Enchantments;
 
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialFlags.*;
 import static cn.gtcommunity.epimorphism.api.unification.material.info.EPMaterialIconSet.*;
@@ -31,7 +32,11 @@ public class EPElementMaterials {
                 .iconSet(SHINY)
                 .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_DENSE)
                 .element(EPElements.Draconium)
-                .toolStats(new ToolProperty(7.0F, 25.0F, 17000, 22))
+                .toolStats(ToolProperty.Builder.of(7.0F, 25.0F, 17000, 22)
+                                       .magnetic()
+                                       .enchantment(Enchantments.EFFICIENCY, 5)
+                                       .enchantment(Enchantments.FORTUNE, 5)
+                                       .build())
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .build();
         //  26002 Awakened Draconium
@@ -40,8 +45,9 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xf58742)
                 .iconSet(BRIGHT)
-                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .element(EPElements.AwakenedDraconium)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UV])
                 .cableProperties(V[UHV], 16, 4)
                 .build();
         //  26003 Chaotic Draconium
@@ -180,7 +186,13 @@ public class EPElementMaterials {
                 .element(EPElements.Hypogen)
                 .color(0xDC784B)
                 .iconSet(CUSTOM_HYPOGEN)
-                .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200).unbreakable().enchantability(33).magnetic().build())
+                .toolStats(ToolProperty.Builder.of(20.0F, 200.0F, 2000000, 200)
+                                       .unbreakable()
+                                       .enchantability(33)
+                                       .magnetic()
+                                       .enchantment(Enchantments.SHARPNESS, 10)
+                                       .enchantment(Enchantments.LOOTING, 5)
+                                       .enchantment(Enchantments.SWEEPING, 3).build())
                 .flags(GENERATE_PLATE)
                 .build();
         //  26017 Californium-252
@@ -201,7 +213,7 @@ public class EPElementMaterials {
                 //  TODO may be re-balance
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.AstralTitanium)
-                //  TODO For UIV Components, may be sensor
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .build();
         //  26019 Celestial Tungsten
         CelestialTungsten = new Material.Builder(getMaterialsId(), gregtechId("celestial_tungsten"))
@@ -213,9 +225,75 @@ public class EPElementMaterials {
                 //  TODO may be re-balance
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.CelestialTungsten)
-                //  TODO For UIV Components
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .build();
-
+        //  26020 Ytterbium-178
+        Ytterbium178 = new Material.Builder(getMaterialsId(), gregtechId("ytterbium_178"))
+                .dust()
+                .fluid()
+                .color(Ytterbium.getMaterialRGB())
+                .iconSet(SHINY)
+                .element(EPElements.Ytterbium178)
+                .build();
+        //  26021 Ichorium
+        Ichorium = new Material.Builder(getMaterialsId(), gregtechId("ichorium"))
+                .ingot()
+                .fluid()
+                .color(0xE5A559)
+                .iconSet(BRIGHT)
+                .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UV])
+                .element(EPElements.Ichorium)
+                .flags(GENERATE_PLATE)
+                .build();
+        //  26022 Ichor Liquid
+        IchorLiquid = new Material.Builder(getMaterialsId(), gregtechId("ichor_liquid"))
+                .fluid(FluidTypes.PLASMA)
+                .fluidTemp(214748)
+                .color(0xE5A559)
+                .element(EPElements.IchorLiquid)
+                .build();
+        //  26023 Crystal Matrix
+        CrystalMatrix = new Material.Builder(getMaterialsId(), gregtechId("crystal_matrix"))
+                .ingot()
+                .fluid()
+                .fluidTemp(660450)
+                .color(0x70ecff)
+                .iconSet(BRIGHT)
+                .element(EPElements.CrystalMatrix)
+                .build();
+        //  26024 Void Metal
+        VoidMetal = new Material.Builder(getMaterialsId(), gregtechId("void_metal"))
+                .ingot()
+                .fluid()
+                .fluidTemp(0)
+                .color(0x20142C)
+                .iconSet(DULL)
+                .element(EPElements.VoidMetal)
+                .build();
+        //  26025 Mithril
+        Mithril = new Material.Builder(getMaterialsId(), gregtechId("mithril"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .fluidTemp(4550)
+                .color(0x428fdb)
+                .iconSet(DULL)
+                .blastTemp(10900, BlastProperty.GasTier.HIGHEST, VA[UHV])
+                .element(EPElements.Mithril)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
+                .build();
+        //  26026 Bismuth-209
+        Bismuth209 = new Material.Builder(getMaterialsId(), gregtechId("bismuth_209"))
+                .fluid()
+                .color(Bismuth.getMaterialRGB())
+                .element(EPElements.Bismuth209)
+                .build();
+        //  26027 Lead-209
+        Lead209 = new Material.Builder(getMaterialsId(), gregtechId("lead_209"))
+                .fluid()
+                .color(Lead.getMaterialRGB())
+                .element(EPElements.Lead209)
+                .build();
     }
 
     private static int getMaterialsId() {

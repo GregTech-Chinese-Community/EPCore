@@ -26,6 +26,14 @@ public EPMaterials() {}
     public static Material Californium252;
     public static Material AstralTitanium;
     public static Material CelestialTungsten;
+    public static Material Ytterbium178;
+    public static Material Ichorium;
+    public static Material IchorLiquid;
+    public static Material CrystalMatrix;
+    public static Material VoidMetal;
+    public static Material Mithril;
+    public static Material Bismuth209;
+    public static Material Lead209;
 
     //  First Degree Materials
     public static Material GrapheneOxide;
@@ -349,11 +357,28 @@ public EPMaterials() {}
     public static Material ActiniumSuperhydride;
     public static Material FranciumCarbide;
     public static Material BoronFranciumMixture;
+    public static Material FleroviumYtterbiumPlasma;
+    public static Material SolarGradeSilicon;
+    public static Material DenseHydrazineMixtureFuel;
+    public static Material HighlyPurifiedCoalTar;
+    public static Material RP1RocketFuel;
+    public static Material Methylhydrazine;
+    public static Material MethylhydrazineNitrateRocketFuel;
+    public static Material LithiumNiobate;
+    public static Material NiobiumPentachloride;
+    public static Material HighPuritySodiumVanadate;
+    public static Material LutetiumThuliumYttriumChloridesSolution;
+    public static Material YttriumVanadateLuTmDeposition;
+    public static Material YttriumVanadateLuTm;
+    public static Material HeavyQuarkEnrichedMixture;
+    public static Material DeuteriumSuperHeavyMixture;
+    public static Material HeavyQuarkDegenerateMatter;
 
     //  Second Degree Materials
     public static Material DragonBreath;
     public static Material ConcentrateDragonBreath;
     public static Material DragonBlood;
+    public static Material DragonTear;
 
     //  Organic Chemistry Materials
     public static Material KaptonK;
@@ -514,6 +539,8 @@ public EPMaterials() {}
     public static Material OxalicAcid;
     public static Material Glucose;
     public static Material Fructose;
+    public static Material Hexafluoropropylene;
+    public static Material FluorinatedEthylenePropylene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;
@@ -591,6 +618,7 @@ public EPMaterials() {}
     public static Material ActiniumRadiumHydroxideSolution;
     public static Material ActiniumRadiumNitrateSolution;
     public static Material HeavyFluorinatedDraconiumSolution;
+    public static Material QuasifissioningPlasma;
 
     //  Machine Casing Materials
     public static Material Inconel625;
@@ -631,6 +659,9 @@ public EPMaterials() {}
     public static Material HG1223;
     public static Material HMS1J22Alloy;
     public static Material FullereneSuperconductor;
+    public static Material Legendarium;
+    public static Material SuperheavyHAlloy;
+    public static Material SuperheavyLAlloy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

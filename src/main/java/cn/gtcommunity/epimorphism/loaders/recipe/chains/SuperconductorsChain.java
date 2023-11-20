@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.unification.material.MarkerMaterials;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
@@ -120,8 +121,8 @@ public class SuperconductorsChain {
                 .buildAndRegister();
 
         //  Ethane + Chlorine -> Dibromoacrolein + Hydrochloric Acid
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(lens, MarkerMaterials.Color.Gray)
                 .fluidInputs(Ethane.getFluid(1000))
                 .fluidInputs(Chlorine.getFluid(2000))
                 .circuitMeta(2)

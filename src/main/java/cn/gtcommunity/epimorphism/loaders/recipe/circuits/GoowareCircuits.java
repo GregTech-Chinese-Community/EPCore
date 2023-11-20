@@ -22,6 +22,7 @@ public class GoowareCircuits {
         CVD_RECIPES.recipeBuilder()
                 .input(OrePrefix.plate, EPMaterials.KaptonE)
                 .input(OrePrefix.foil, Materials.Europium, 4)
+                .fluidInputs(FluorinatedEthylenePropylene.getFluid(L))
                 .output(GOOWARE_BOARD)
                 .duration(40)
                 .EUt(VA[UV])

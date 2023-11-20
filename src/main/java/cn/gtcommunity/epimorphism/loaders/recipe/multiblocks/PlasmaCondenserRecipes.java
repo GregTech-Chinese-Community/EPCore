@@ -97,6 +97,25 @@ public class PlasmaCondenserRecipes {
                 .duration(200)
                 .buildAndRegister();
 
+        //  Heavy Quark Degenerate Matter
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .fluidInputs(HeavyQuarkDegenerateMatter.getPlasma(1000))
+                .fluidInputs(LiquidHelium.getFluid(28000))
+                .fluidOutputs(HeavyQuarkDegenerateMatter.getFluid(1000))
+                .fluidOutputs(Helium.getFluid(28000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
+        PLASMA_CONDENSER_RECIPES.recipeBuilder()
+                .fluidInputs(HeavyQuarkDegenerateMatter.getPlasma(1000))
+                .fluidInputs(GelidCryotheum.getFluid(14000))
+                .fluidOutputs(HeavyQuarkDegenerateMatter.getFluid(1000))
+                .fluidOutputs(Ice.getFluid(14000))
+                .EUt(VA[UV])
+                .duration(200)
+                .buildAndRegister();
+
         /*
         //  Adamantium
         PLASMA_CONDENSER_RECIPES.recipeBuilder()

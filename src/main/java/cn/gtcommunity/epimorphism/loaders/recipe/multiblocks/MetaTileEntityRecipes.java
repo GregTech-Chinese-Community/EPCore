@@ -44,7 +44,6 @@ public class MetaTileEntityRecipes {
 
     private static void VanillaMachineRecipes() {
         HullRecipes();
-        EnergyHatchRecipes();
     }
 
     private static void HullRecipes() {
@@ -144,63 +143,6 @@ public class MetaTileEntityRecipes {
                 .buildAndRegister();
     }
 
-    private static void EnergyHatchRecipes() {
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
-                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
-                        OreDictUnifier.get(cableGtSingle, Europium, 4),
-                        ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
-                        OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
-                        OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
-                new FluidStack[]{SodiumPotassium.getFluid(12000),
-                        SolderingAlloy.getFluid(5760)});
-
-        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.HULL[UHV])
-                .input(cableGtSingle, Europium, 4)
-                .input(NANO_PIC_CHIP, 2)
-                .input(circuit, MarkerMaterials.Tier.UHV)
-                .input(VOLTAGE_COIL_UHV, 2)
-                .fluidInputs(SodiumPotassium.getFluid(12000))
-                .fluidInputs(SolderingAlloy.getFluid(5760))
-                .output(ENERGY_INPUT_HATCH[UHV])
-                .duration(1000)
-                .EUt(VA[UHV])
-                .stationResearch(b -> b
-                        .researchStack(ENERGY_INPUT_HATCH[UV].getStackForm())
-                        .CWUt(128)
-                        .EUt(VA[UV]))
-                .buildAndRegister();
-
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLY_LINE_RECIPES,
-                new ItemStack[]{MetaTileEntities.HULL[UHV].getStackForm(),
-                                OreDictUnifier.get(spring, Europium, 4),
-                                ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT.getStackForm(2),
-                                OreDictUnifier.get(circuit, MarkerMaterials.Tier.UHV),
-                                OreDictUnifier.get(wireGtDouble, RutheniumTriniumAmericiumNeutronate, 2)},
-                new FluidStack[]{SodiumPotassium.getFluid(12000), SolderingAlloy.getFluid(5760)});
-
-        //  FIXME Research can run in actual testing, but because the original research was not deleted, two identical researches appeared...
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.HULL[UHV])
-                .input(spring, Europium, 4)
-                .input(NANO_PIC_CHIP, 2)
-                .input(circuit, MarkerMaterials.Tier.UHV)
-                .input(VOLTAGE_COIL_UHV, 2)
-                .fluidInputs(SodiumPotassium.getFluid(12000))
-                .fluidInputs(SolderingAlloy.getFluid(5760))
-                .output(ENERGY_OUTPUT_HATCH[UHV])
-                .duration(1000)
-                .EUt(VA[UHV])
-                .stationResearch(b -> b
-                        .researchStack(ENERGY_OUTPUT_HATCH[UV].getStackForm())
-                        .CWUt(128)
-                        .EUt(VA[UV]))
-                .buildAndRegister();
-
-        //  TODO Other Transformers and Energy Hatches (e.g. 4A, 16A, 64A).
-    }
-
     private static void EPMachineRecipes() {
         //  Dryer recipes
         MetaTileEntityLoader.registerMachineRecipe(true, DRYER,
@@ -236,6 +178,24 @@ public class MetaTileEntityRecipes {
                 'G', CraftingComponent.GLASS,
                 'H', CraftingComponent.HULL);
 
+        //  Decay Chamber recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, DECAY_CHAMBER,
+                "CFC", "RHR", "WFW",
+                'H', CraftingComponent.HULL,
+                'R', CraftingComponent.DOUBLE_PLATE,
+                'F', CraftingComponent.FIELD_GENERATOR,
+                'C', CraftingComponent.CIRCUIT,
+                'W', CraftingComponent.CABLE);
+
+        //  Crystallizer recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, CRYSTALLIZER,
+                "APA", "EHE", "WWW",
+                'H', CraftingComponent.HULL,
+                'P', CraftingComponent.PIPE_NORMAL,
+                'E', CraftingComponent.PUMP,
+                'A', CraftingComponent.PLATE,
+                'W', CraftingComponent.CABLE);
+
         //  Naquadah Reactor recipes
         MetaTileEntityLoader.registerMachineRecipe(true, NAQUADAH_REACTOR,
                 "RCR", "FHF", "WCW",
@@ -255,13 +215,33 @@ public class MetaTileEntityRecipes {
                 'W', CraftingComponent.CABLE,
                 'X', CraftingComponent.CIRCUIT);
 
+        //  Rocket Engine recipes
+        MetaTileEntityLoader.registerMachineRecipe(true, ROCKET_ENGINE,
+                "PXP", "MHM", "DWD",
+                'P', CraftingComponent.PISTON,
+                'X', CraftingComponent.CIRCUIT,
+                'M', CraftingComponent.MOTOR,
+                'H', CraftingComponent.HULL,
+                'D', CraftingComponent.DOUBLE_PLATE,
+                'W', CraftingComponent.CABLE);
+
+        //  Ultraviolet Lamp Chamber
+        MetaTileEntityLoader.registerMachineRecipe(true, ULTRAVIOLET_LAMP_CHAMBER,
+                "GEG", "PHP", "WXW",
+                'E', CraftingComponent.EMITTER,
+                'H', CraftingComponent.HULL,
+                'P', CraftingComponent.PLATE,
+                'G', CraftingComponent.GLASS,
+                'W', CraftingComponent.CABLE,
+                'X', CraftingComponent.CIRCUIT);
+
         //  Crystallization crucible
         ModHandler.addShapedRecipe(true, "crystallization_crucible", CRYSTALLIZATION_CRUCIBLE.getStackForm(),
                 "CMC", "LHL", "PCP",
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'M', new UnificationEntry(plateDouble, MolybdenumDisilicide),
                 'L', new UnificationEntry(pipeNormalFluid, Titanium),
-                'H', MetaTileEntities.HULL[EV].getStackForm(),
+                'H', CRYSTALLIZER[EV].getStackForm(),
                 'P', new UnificationEntry(plate, Titanium)
         );
 
@@ -565,10 +545,10 @@ public class MetaTileEntityRecipes {
 
         //  Large Vacuum Chamber
         ModHandler.addShapedRecipe(true, "large_vacuum_chamber", LARGE_VACUUM_CHAMBER.getStackForm(),
-                "GXG", "PCQ", "GWG",
+                "GXG", "CPD", "GWG",
                 'C', VACUUM_CHAMBER[5].getStackForm(),
+                'D', ULTRAVIOLET_LAMP_CHAMBER[5].getStackForm(),
                 'P', ELECTRIC_PUMP_IV.getStackForm(),
-                'Q', FLUID_REGULATOR_IV.getStackForm(),
                 'X', new UnificationEntry(circuit, MarkerMaterials.Tier.IV),
                 'W', new UnificationEntry(cableGtSingle, Platinum),
                 'G', MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.LAMINATED_GLASS));

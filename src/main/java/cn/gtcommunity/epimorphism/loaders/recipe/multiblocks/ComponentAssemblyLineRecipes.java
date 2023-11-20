@@ -120,7 +120,7 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(SolderingAlloy.getFluid(L * 64))
                 .fluidInputs(Lubricant.getFluid(16000))
                 .fluidInputs(HSSS.getFluid(L * 64))
-                .fluidInputs(Ruridit.getFluid(L * 8))
+                .fluidInputs(Ruridit.getFluid(L * 8 * 64))
                 .output(ELECTRIC_MOTOR_LuV, 64)
                 .EUt(VA[LuV])
                 .duration(1200)
@@ -140,7 +140,7 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(SolderingAlloy.getFluid(L * 2 * 64))
                 .fluidInputs(Lubricant.getFluid(32000))
                 .fluidInputs(Osmiridium.getFluid(L * 64 * 2))
-                .fluidInputs(Europium.getFluid(L * 12))
+                .fluidInputs(Europium.getFluid(L * 12 * 64))
                 .output(ELECTRIC_MOTOR_ZPM, 64)
                 .EUt(VA[ZPM])
                 .duration(1200)
@@ -161,7 +161,7 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(Lubricant.getFluid(64000))
                 .fluidInputs(Naquadria.getFluid(L * 4 * 64))
                 .fluidInputs(Tritanium.getFluid(L * 64 * 2))
-                .fluidInputs(Americium.getFluid(L * 16))
+                .fluidInputs(Americium.getFluid(L * 16 * 64))
                 .output(ELECTRIC_MOTOR_UV, 64)
                 .EUt(VA[UV])
                 .duration(1500)
@@ -182,7 +182,7 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(Lubricant.getFluid(192000))
                 .fluidInputs(Vibranium.getFluid(L * 64))
                 .fluidInputs(Adamantium.getFluid(L * 2 * 64))
-                .fluidInputs(SiliconCarbide.getFluid(L * 16))
+                .fluidInputs(SiliconCarbide.getFluid(L * 16 * 64))
                 .output(ELECTRIC_MOTOR_UHV, 64)
                 .EUt(VA[UHV])
                 .duration(1500)
@@ -204,7 +204,7 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(Polyetheretherketone.getFluid(L * 2 * 64))
                 .fluidInputs(ChaoticDraconium.getFluid(L * 64))
                 .fluidInputs(Hdcs.getFluid(L * 2 * 64))
-                .fluidInputs(Abyssalloy.getFluid(L * 16))
+                .fluidInputs(Abyssalloy.getFluid(L * 16 * 64))
                 .output(ELECTRIC_MOTOR_UEV, 64)
                 .EUt(VA[UEV])
                 .duration(1800)
@@ -212,6 +212,25 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, WhiteDwarfMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(stickLong, Legendarium, 64) //  Ring
+                .input(cableGtHex, CosmicNeutronium, 8)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32 * 64))
+                .fluidInputs(Lubricant.getFluid(448000))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2 * 64))
+                .fluidInputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L * 32 + L * 64)) // Ring + Round
+                .fluidInputs(Legendarium.getFluid(L * 64))
+                .fluidInputs(RutheniumTriniumAmericiumNeutronate.getFluid(L * 16 * 64))
+                .output(ELECTRIC_MOTOR_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
+
 
         //  UXV (105s)
 
@@ -410,6 +429,26 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(plateDouble, Legendarium, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(cableGtHex, CosmicNeutronium, 8)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32 * 64))
+                .fluidInputs(Lubricant.getFluid(7000 * 64))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2 * 64))
+                .fluidInputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L * 2 * 64))
+                .fluidInputs(Legendarium.getFluid(L * 2 * 64))
+                .output(ELECTRIC_PISTON_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -661,6 +700,26 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(plateDouble, Legendarium, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 32)
+                .input(stickLong, Legendarium, 64)
+                .input(stickLong, Legendarium, 32)
+                .input(cableGtHex, CosmicNeutronium, 8)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32 * 64))
+                .fluidInputs(Lubricant.getFluid(7000 * 64))
+                .fluidInputs(PolyPhosphonitrileFluoroRubber.getFluid(L * 48 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 4 * 64))
+                .fluidInputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L * 2 * 64))
+                .fluidInputs(Legendarium.getFluid(L * 2 * 64))
+                .output(CONVEYOR_MODULE_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -907,7 +966,8 @@ public class ComponentAssemblyLineRecipes {
                 .fluidInputs(Polyetheretherketone.getFluid(L * 2 * 64))
                 .fluidInputs(ChaoticDraconium.getFluid(L * 64))
                 .fluidInputs(NitrileButadieneRubber.getFluid(L * 1024))
-                .fluidInputs(Neutronium.getFluid(L * 6 * 64 + L * 4 * 64)) //  PipeLargeFluid + Rotor
+                .fluidInputs(Lafium.getFluid(L * 6 * 64)) //  PipeLargeFluid
+                .fluidInputs(Neutronium.getFluid( L * 4 * 64)) //  Rotor
                 .output(ELECTRIC_PUMP_UEV, 64)
                 .EUt(VA[UEV])
                 .duration(1800)
@@ -915,6 +975,22 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(cableGtHex, CosmicNeutronium, 8)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32 * 64))
+                .fluidInputs(Lubricant.getFluid(7000 * 64))
+                .fluidInputs(PolyPhosphonitrileFluoroRubber.getFluid(L * 48 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 4 * 64))
+                .fluidInputs(Neutronium.getFluid(L * 6 * 64))
+                .output(ELECTRIC_PUMP_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -1206,6 +1282,29 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(ELECTRIC_PISTON_UIV, 64)
+                .input(WRAP_CIRCUIT_UIV)
+                .input(WRAP_CIRCUIT_UEV, 2)
+                .input(WRAP_CIRCUIT_UHV, 4)
+                .input(cableGtHex, CosmicNeutronium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 24 * 64))
+                .fluidInputs(Lubricant.getFluid(7000 * 64))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2 * 64))
+                .fluidInputs(Legendarium.getFluid(L * 4 * 64))
+                .fluidInputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L * 3 * 64))
+                .output(ROBOT_ARM_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -1473,6 +1572,26 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(stickLong, Legendarium, 64)
+                .input(stickLong, Legendarium, 64)
+                .inputs(UNSTABLE_STAR.getStackForm(64))
+                .input(WRAP_CIRCUIT_UIV, 2)
+                .input(cableGtHex, CosmicNeutronium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 64 * 64))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 64))
+                .fluidInputs(AstralTitanium.getFluid(L * 24 * 64))
+                .output(EMITTER_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -1727,6 +1846,24 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Legendarium, 64)
+                .input(ELECTRIC_MOTOR_UIV, 64)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(plateDouble, Legendarium, 64)
+                .input(UNSTABLE_STAR, 64)
+                .input(WRAP_CIRCUIT_UIV, 2)
+                .input(cableGtHex, CarbonNanotube, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 64 * 64))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 64))
+                .fluidInputs(CelestialTungsten.getFluid(L * 24 * 64))
+                .output(SENSOR_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 
@@ -1995,6 +2132,27 @@ public class ComponentAssemblyLineRecipes {
                 .buildAndRegister();
 
         //  UIV (90s)
+        COMPONENT_ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, NeutronStarCoreMaterial, 64)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 64)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 32)
+                .input(plateDouble, Legendarium, 64)
+                .input(plateDouble, Legendarium, 32)
+                .input(UNSTABLE_STAR, 64)
+                .input(EMITTER_UIV, 64)
+                .input(EMITTER_UIV, 64)
+                .input(WRAP_CIRCUIT_UIV, 2)
+                .input(cableGtHex, CosmicNeutronium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 24 * 64))
+                .fluidInputs(Zylon.getFluid(L * 4 * 64))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2 * 64))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 64))
+                .fluidInputs(SuperheavyHAlloy.getFluid(L * 16 * 64))
+                .output(FIELD_GENERATOR_UIV, 64)
+                .EUt(VA[UIV])
+                .duration(1800)
+                .CasingTier(UIV)
+                .buildAndRegister();
 
         //  UXV (105s)
 

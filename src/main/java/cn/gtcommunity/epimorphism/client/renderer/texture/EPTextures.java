@@ -25,6 +25,8 @@ public class EPTextures {
     public static OrientedOverlayRenderer NAQUADAH_REACTOR_OVERLAY = new OrientedOverlayRenderer("machines/naquadah_reactor");
     public static OrientedOverlayRenderer STELLAR_FURNACE_OVERLAY = new OrientedOverlayRenderer("multiblock/stellar_furnace");
     public static OrientedOverlayRenderer CYCLOTRON_OVERLAY = new OrientedOverlayRenderer("multiblock/cyclotron");
+    public static OrientedOverlayRenderer DRAGON_FUSION_OVERLAY = new OrientedOverlayRenderer("multiblock/dragon_fusion");
+    public static OrientedOverlayRenderer ROCKET_ENGINE_OVERLAY = new OrientedOverlayRenderer("machines/rocket_engine");
 
     //  EPOverlayRenderer
     public static EPOverlayRenderer ADVANCED_INVAR_CASING = new EPOverlayRenderer("casings/solid/advanced_invar_casing");
@@ -50,6 +52,7 @@ public class EPTextures {
     public static EPOverlayRenderer PRECISE_ASSEMBLER_CASING_MK3 = new EPOverlayRenderer("casings/solid/precise_assembler_casing_mk3");
     public static EPOverlayRenderer HASTELLOY_X78_CASING = new EPOverlayRenderer("casings/solid/hastelloy_x78_casing");
     public static EPOverlayRenderer CYCLOTRON_CASING = new EPOverlayRenderer("casings/solid/cyclotron_casing");
+    public static EPOverlayRenderer DRACONIUM_CASING = new EPOverlayRenderer("casings/solid/draconium_casing");
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");

@@ -130,6 +130,14 @@ public class MaterialComponents {
 //                {14, new UnificationEntry(OrePrefix.plate, Trinium},
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
+        DOUBLE_PLATE.appendIngredients(Stream.of(new Object[][]{
+                {9, new UnificationEntry(OrePrefix.plateDouble, Draconium)},
+                {10, new UnificationEntry(OrePrefix.plateDouble, Neutronium)},
+                {11, new UnificationEntry(OrePrefix.plateDouble, NeutronStarCoreMaterial)},
+//                {12, new UnificationEntry(OrePrefix.plateDouble, Trinium)},
+//                {13, new UnificationEntry(OrePrefix.plateDouble, Trinium)},
+        }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
+
         ROTOR.appendIngredients(Stream.of(new Object[][]{
                 {9, new UnificationEntry(OrePrefix.rotor, Draconium)},
                 {10, new UnificationEntry(OrePrefix.rotor, Neutronium)},
@@ -228,7 +236,7 @@ public class MaterialComponents {
         }).collect(Collectors.toMap(data -> (Integer) data[0], data -> data[1])));
 
         POWER_COMPONENT.appendIngredients(Stream.of(new Object[][]{
-                {8, EPMetaItems.NANO_PIC_CHIP},
+//                {8, EPMetaItems.NANO_PIC_CHIP},
                 {9, EPMetaItems.NANO_PIC_CHIP},
                 {10, EPMetaItems.PICO_PIC_CHIP},
                 {11, EPMetaItems.PICO_PIC_CHIP},

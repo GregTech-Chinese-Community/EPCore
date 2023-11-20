@@ -13,6 +13,7 @@ import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.recipes.RecipeMap;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
@@ -25,7 +26,9 @@ import javax.annotation.Nonnull;
 
 public class EPMetaTileEntityLargeVacuumChamber extends GCYMRecipeMapMultiblockController {
     public EPMetaTileEntityLargeVacuumChamber(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, EPRecipeMaps.VACUUM_CHAMBER_RECIPES);
+        super(metaTileEntityId, new RecipeMap[]{
+                EPRecipeMaps.VACUUM_CHAMBER_RECIPES,
+                EPRecipeMaps.ULTRAVIOLET_LAMP_CHAMBER_RECIPES});
     }
 
     @Override

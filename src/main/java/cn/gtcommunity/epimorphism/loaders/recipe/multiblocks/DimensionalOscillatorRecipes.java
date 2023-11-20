@@ -2,6 +2,9 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
 public class DimensionalOscillatorRecipes {
     public static void init() {
+
+        //  TODO Neutron Star Matter
+
         //  TODO Raw Star Matter
 
         //  MHCSM (UEV)

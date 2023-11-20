@@ -66,6 +66,24 @@ public class Explosives {
                         .duration(1200))
                 .buildAndRegister();
 
-        //  TODO QCD Charge
+        //  QCD Charge
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                .input(plate, HeavyQuarkDegenerateMatter, 2)
+                .input(plate, CelestialTungsten, 2)
+                .input(plate, AstralTitanium, 2)
+                .input(plate, DegenerateRhenium, 2)
+                .input(bolt, Legendarium, 16)
+                .fluidInputs(Gluons.getFluid(1296))
+                .fluidInputs(SuperheavyHAlloy.getFluid(L))
+                .fluidInputs(SuperheavyLAlloy.getFluid(L))
+                .outputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.QUANTUM_CHROMODYNAMIC_CHARGE))
+                .EUt(VA[UIV])
+                .duration(100)
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                        .EUt(VA[UEV])
+                        .duration(1200))
+                .buildAndRegister();
     }
 }

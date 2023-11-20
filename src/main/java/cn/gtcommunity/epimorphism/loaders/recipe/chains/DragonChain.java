@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.chains;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
+import gregtech.api.unification.material.MarkerMaterials;
 import net.minecraft.init.Items;
 
 import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
@@ -10,7 +11,6 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class DragonChain {
@@ -146,8 +146,8 @@ public class DragonChain {
                 .buildAndRegister();
 
         //  Krypton Difluoride
-        CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(BLACKLIGHT)
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(craftingLens, MarkerMaterials.Color.Green)
                 .fluidInputs(Krypton.getFluid(1000))
                 .fluidInputs(Fluorine.getFluid(2000))
                 .fluidOutputs(KryptonDifluoride.getFluid(1000))
@@ -404,17 +404,6 @@ public class DragonChain {
                 .EUt(VA[IV])
                 .duration(240)
                 .cleanroom(CleanroomType.CLEANROOM)
-                .buildAndRegister();
-
-        //  Awakened Draconium + Concentrate Dragon Breath + Radon -> Dragon Blood
-        MIXER_RECIPES.recipeBuilder()
-                .input(dust, AwakenedDraconium)
-                .fluidInputs(ConcentrateDragonBreath.getFluid(1000))
-                .fluidInputs(Radon.getFluid(1000))
-                .output(dust, Ash)
-                .fluidOutputs(DragonBlood.getFluid(1000))
-                .EUt(VA[UHV])
-                .duration(400)
                 .buildAndRegister();
     }
 }

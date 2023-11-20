@@ -1171,6 +1171,19 @@ public class EPOrganicChemistryMaterials {
                 .iconSet(SAND)
                 .components(Carbon, 6, Hydrogen, 12, Oxygen, 6)
                 .build();
+        //  25157 Hexafluoropropylene
+        Hexafluoropropylene = new Material.Builder(getMaterialsId(), gregtechId("hexafluoropropylene"))
+                .fluid()
+                .color(0x141D6F)
+                .components(Carbon, 3, Fluorine, 6)
+                .build();
+        //  25158 Fluorinated Ethylene Propylene
+        FluorinatedEthylenePropylene = new Material.Builder(getMaterialsId(), gregtechId("fluorinated_ethylene_propylene"))
+                .polymer()
+                .color(0xC8C8C8)
+                .iconSet(DULL)
+                .components(Carbon, 5, Fluorine, 10)
+                .build();
     }
 
     private static int getMaterialsId() {

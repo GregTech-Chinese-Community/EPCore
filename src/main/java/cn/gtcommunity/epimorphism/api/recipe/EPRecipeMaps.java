@@ -26,6 +26,12 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_CHAMBER_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> DECAY_CHAMBER_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> ULTRAVIOLET_LAMP_CHAMBER_RECIPES;
 
     //  Multiblock Machine Recipemap
     @ZenProperty
@@ -94,6 +100,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<CACasingTierRecipeBuilder> COMPONENT_ASSEMBLY_LINE_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> CYCLOTRON_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> DRAGON_FUSION_UNIT_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -108,6 +116,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<FuelRecipeBuilder> HIGH_PRESSURE_STEAM_TURBINE_FUELS;
     @ZenProperty
     public static final RecipeMap<FuelRecipeBuilder> SUPERCRITICAL_STEAM_TURBINE_FUELS;
+    @ZenProperty
+    public static final RecipeMap<FuelRecipeBuilder> ROCKET_ENGINE_RECIPES;
 
     public EPRecipeMaps() {}
 
@@ -125,6 +135,26 @@ public class EPRecipeMaps {
                 .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTSoundEvents.ASSEMBLER);
+
+        //  Decay Chamber Recipemap
+        DECAY_CHAMBER_RECIPES = new RecipeMap<>("decay_chamber_recipes", 0, 1, 0, 1, 0, 1, 0, 1, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_HAMMER, ProgressWidget.MoveType.VERTICAL_DOWNWARDS)
+                .setSound(GTSoundEvents.SCIENCE);
+
+        //  Crystallizer Recipemap
+        CRYSTALLIZATION_RECIPES = new RecipeMap<>("crystallizer_recipes", 0, 3, 0, 3, 0, 3, 0, 3, new SimpleRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.FURNACE);
+
+        //  Ultraviolet Lamp Chamber Recipemap
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES = new RecipeMap<>("ultraviolet_lamp_chamber_recipes", 0, 2, 0, 2, 0, 3, 0, 2, new SimpleRecipeBuilder(), false)
+                .setSlotOverlay(false, false, false, GuiTextures.LENS_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.LENS_OVERLAY)
+                .setSlotOverlay(false, true, false, GuiTextures.MOLECULAR_OVERLAY_3)
+                .setSlotOverlay(false, true, true, GuiTextures.MOLECULAR_OVERLAY_4)
+                .setSlotOverlay(true, false, GuiTextures.VIAL_OVERLAY_1)
+                .setSlotOverlay(true, true, GuiTextures.VIAL_OVERLAY_2)
+                .setSound(GTSoundEvents.CHEMICAL_REACTOR);
 
         //  Crystallization Crucible Recipemap
         CRYSTALLIZER_RECIPES = new RecipeMap<>("crystallization_recipes", 0, 6, 1, 1, 0, 3, 0, 0, new BlastRecipeBuilder(), false)
@@ -319,6 +349,13 @@ public class EPRecipeMaps {
                 .setSlotOverlay(true, false, true, GuiTextures.IMPLOSION_OVERLAY_1)
                 .setSound(GTSoundEvents.SCIENCE);
 
+        //  Dragon Fusion Unit Recipemap
+        DRAGON_FUSION_UNIT_RECIPES = new RecipeMap<>("dragon_fusion_unit_recipes", 0, 6, 0, 1, 0, 3, 0, 1, new SimpleRecipeBuilder(), false)
+                .setSlotOverlay(false, false, false, GuiTextures.RESEARCH_STATION_OVERLAY)
+                .setSlotOverlay(false, false, true, GuiTextures.RESEARCH_STATION_OVERLAY)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.ARC);
+
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
@@ -344,5 +381,9 @@ public class EPRecipeMaps {
 
         //  Supercritical Steam Turbine Recipemap
         SUPERCRITICAL_STEAM_TURBINE_FUELS = new RecipeMap<>("supercritical_steam_turbine_fuels",  0, 0, 1, 1, new FuelRecipeBuilder(), false);
+
+        //  Rocket Engine Recipemap
+        ROCKET_ENGINE_RECIPES = new RecipeMap<>("rocket_engine_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
+                .setSound(GTSoundEvents.COMBUSTION);
     }
 }

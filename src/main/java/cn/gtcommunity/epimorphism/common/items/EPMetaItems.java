@@ -140,6 +140,8 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem PROTONATED_FULLERENE_SIEVING_MATRIX;
     public static MetaItem<?>.MetaValueItem SATURATED_FULLERENE_SIEVING_MATRIX;
 
+    public static MetaItem<?>.MetaValueItem UNSTABLE_STAR;
+
     //  Crystal Components
     public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;
     public static MetaItem<?>.MetaValueItem RUBY_CHIP;

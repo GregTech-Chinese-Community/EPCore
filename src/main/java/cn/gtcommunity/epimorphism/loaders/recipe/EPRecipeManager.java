@@ -47,6 +47,7 @@ public class EPRecipeManager {
         DragonChain.init();
         EDTAChain.init();
         EtchingMaterialsChain.init();
+        FluoinatedEthylenePropyleneChain.init();
         FullereneChain.init();
         GalliumNitrideChain.init();
         GermaniumChain.init();
@@ -69,6 +70,7 @@ public class EPRecipeManager {
         PhotoresistivesChain.init();
         PMMAChain.init();
         PoloniumChain.init();
+        PowerIntCircuitChain.init();
         PreciousMetalChain.init();
         RareEarthChain.init();
         RubbersChain.init();
@@ -109,5 +111,9 @@ public class EPRecipeManager {
         ComponentAssemblyLineRecipes.init();
 //        LargeCircuitAssemblyLineRecipes.init();
         CyclotronRecipes.init();
+        DecayChamberRecipes.init();
+        DragonFusionUnitRecipes.init();
+        CrystallizerRecipes.init();
+        RocketEngineRecipes.init();
     }
 }

@@ -93,25 +93,29 @@ public class MachineComponents {
                         .EUt(VA[UHV]))
                 .buildAndRegister();
 
-        /*ASSEMBLY_LINE_RECIPES.recipeBuilder()
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(stickLong, WhiteDwarfMatter)
-                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
-                .input(ring, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
-                .input(round, MagnetoHydrodynamicallyConstrainedStarMatter, 8)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(stickLong, Legendarium, 2)
+                .input(ring, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(ring, Legendarium, 2)
+                .input(round, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
+                .input(round, Legendarium, 4)
                 .input(wireFine, RutheniumTriniumAmericiumNeutronate, 64)
                 .input(wireFine, RutheniumTriniumAmericiumNeutronate, 64)
                 .input(cableGtSingle, CosmicNeutronium, 2)
-                .fluidInputs(SolderingAlloy.getFluid(L * 8))
-                .fluidInputs(Lubricant.getFluid(5000))//  TODO Biological Lubricant?
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Lubricant.getFluid(7000))//  TODO Biological Lubricant?
                 .fluidInputs(Zylon.getFluid(L * 4))
-                .fluidInputs(BlackDwarfMatter.getFluid(L))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2))
                 .output(ELECTRIC_MOTOR_UIV)
                 .duration(2400)
+                .EUt(8000000)
                 .stationResearch(b -> b
                         .researchStack(ELECTRIC_MOTOR_UEV.getStackForm())
                         .CWUt(256)
                         .EUt(VA[UEV]))
-                .buildAndRegister();*/
+                .buildAndRegister();
     }
 
     private static void ConveyorModule() {
@@ -159,6 +163,29 @@ public class MachineComponents {
                         .researchStack(CONVEYOR_MODULE_UHV.getStackForm())
                         .CWUt(128)
                         .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV, 2)
+                .input(plate, Legendarium, 2)
+                .input(ring, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(ring, Legendarium, 2)
+                .input(round, MagnetoHydrodynamicallyConstrainedStarMatter, 8)
+                .input(round, Legendarium, 8)
+                .input(screw, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(screw, Legendarium, 2)
+                .input(cableGtSingle, CosmicNeutronium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Lubricant.getFluid(7000))
+                .fluidInputs(PolyPhosphonitrileFluoroRubber.getFluid(L * 48))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 4))
+                .output(CONVEYOR_MODULE_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(CONVEYOR_MODULE_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
     }
 
@@ -213,6 +240,32 @@ public class MachineComponents {
                         .researchStack(ELECTRIC_PISTON_UHV.getStackForm())
                         .CWUt(128)
                         .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV)
+                .input(plate, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(plate, Legendarium, 2)
+                .input(ring, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(ring, Legendarium, 2)
+                .input(round, MagnetoHydrodynamicallyConstrainedStarMatter, 8)
+                .input(round, Legendarium, 8)
+                .input(stick, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(stick, Legendarium, 2)
+                .input(gear, MagnetoHydrodynamicallyConstrainedStarMatter)
+                .input(gearSmall, Legendarium, 2)
+                .input(cableGtSingle, CosmicNeutronium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Lubricant.getFluid(7000))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2))
+                .output(ELECTRIC_PISTON_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(ELECTRIC_PISTON_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
     }
 
@@ -270,6 +323,30 @@ public class MachineComponents {
                         .CWUt(128)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(stickLong, Legendarium, 2)
+                .input(gear, Legendarium)
+                .input(gearSmall, MagnetoHydrodynamicallyConstrainedStarMatter, 3)
+                .input(ELECTRIC_MOTOR_UIV, 2)
+                .input(ELECTRIC_PISTON_UIV)
+                .input(circuit, MarkerMaterials.Tier.UIV)
+                .input(circuit, MarkerMaterials.Tier.UEV, 2)
+                .input(circuit, MarkerMaterials.Tier.UHV, 4)
+                .input(cableGtSingle, CosmicNeutronium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 24))
+                .fluidInputs(Lubricant.getFluid(7000))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2))
+                .output(ROBOT_ARM_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(ROBOT_ARM_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();
     }
 
     private static void ElectricPump() {
@@ -305,7 +382,7 @@ public class MachineComponents {
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(ELECTRIC_MOTOR_UEV)
-                .input(pipeLargeFluid, Neutronium) // TODO find new pipeLargeFluid
+                .input(pipeLargeFluid, Lafium)
                 .input(plate, Hdcs, 2)
                 .input(screw, Hdcs, 8)
                 .input(ring, NitrileButadieneRubber, 64)
@@ -322,6 +399,28 @@ public class MachineComponents {
                         .researchStack(ELECTRIC_PUMP_UHV.getStackForm())
                         .CWUt(128)
                         .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(ELECTRIC_MOTOR_UIV)
+                .input(pipeLargeFluid, Neutronium) //TODO Find better material
+                .input(plate, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(screw, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
+                .input(screw, Legendarium, 4)
+                .input(ring, NitrileButadieneRubber, 64)
+                .input(rotor, NeutronStarCoreMaterial)
+                .input(cableGtSingle, CosmicNeutronium, 2)
+                .fluidInputs(SolderingAlloy.getFluid(L * 32))
+                .fluidInputs(Lubricant.getFluid(7000))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(BlackDwarfMatter.getFluid(L * 2))
+                .output(ELECTRIC_PUMP_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(ELECTRIC_PUMP_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
     }
 
@@ -374,6 +473,29 @@ public class MachineComponents {
                         .CWUt(128)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, MagnetoHydrodynamicallyConstrainedStarMatter)
+                .input(ELECTRIC_MOTOR_UIV)
+                .input(stickLong, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(stickLong, Legendarium, 2)
+                .input(UNSTABLE_STAR)
+                .input(circuit, MarkerMaterials.Tier.UIV, 2)
+                .input(foil, AstralTitanium, 64)
+                .input(foil, AstralTitanium, 32)
+                .input(cableGtSingle, CosmicNeutronium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 64))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2))
+                .fluidInputs(BlackDwarfMatter.getFluid(L))
+                .output(EMITTER_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(EMITTER_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();
     }
 
     private static void Sensor() {
@@ -424,6 +546,29 @@ public class MachineComponents {
                         .researchStack(SENSOR_UHV.getStackForm())
                         .CWUt(128)
                         .EUt(VA[UHV]))
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Legendarium)
+                .input(ELECTRIC_MOTOR_UIV)
+                .input(plate, MagnetoHydrodynamicallyConstrainedStarMatter, 2)
+                .input(plate, Legendarium, 2)
+                .input(UNSTABLE_STAR)
+                .input(circuit, MarkerMaterials.Tier.UIV, 2)
+                .input(foil, CelestialTungsten, 64)
+                .input(foil, CelestialTungsten, 32)
+                .input(cableGtSingle, CosmicNeutronium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 64))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2))
+                .fluidInputs(BlackDwarfMatter.getFluid(L))
+                .output(SENSOR_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(SENSOR_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
                 .buildAndRegister();
     }
 
@@ -476,6 +621,29 @@ public class MachineComponents {
                         .CWUt(128)
                         .EUt(VA[UHV]))
                 .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, NeutronStarCoreMaterial)
+                .input(plate, MagnetoHydrodynamicallyConstrainedStarMatter, 3)
+                .input(plate, Legendarium, 3)
+                .input(UNSTABLE_STAR)
+                .input(EMITTER_UIV, 2)
+                .input(circuit, MarkerMaterials.Tier.UIV, 2)
+                .input(wireFine, SuperheavyHAlloy, 64)
+                .input(wireFine, SuperheavyHAlloy, 64)
+                .input(cableGtSingle, CosmicNeutronium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 24))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(Polyetheretherketone.getFluid(L * 2))
+                .fluidInputs(BlackDwarfMatter.getFluid(L))
+                .output(FIELD_GENERATOR_UIV)
+                .duration(2400)
+                .EUt(8000000)
+                .stationResearch(b -> b
+                        .researchStack(FIELD_GENERATOR_UEV.getStackForm())
+                        .CWUt(256)
+                        .EUt(VA[UEV]))
+                .buildAndRegister();
     }
 
     private static void Machines() {
@@ -506,7 +674,7 @@ public class MachineComponents {
                 'G', new UnificationEntry(gear, Orichalcum),
                 'M', ELECTRIC_MOTOR_UV.getStackForm(),
                 'H', HULL[UV].getStackForm(),
-                'S', EPMetaItems.BORON_NITRIDE_GRINDER.getStackForm()
+                'S', COMPONENT_GRINDER_TUNGSTEN.getStackForm()
         );
 
         //  Naquadria Casing
@@ -1265,9 +1433,61 @@ public class MachineComponents {
                 .EUt(VA[UV])
                 .duration(100)
                 .buildAndRegister();
+
+        //  Draconium Casing
+        ModHandler.addShapedRecipe(true, "draconium_casing", EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRACONIUM_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, Draconium),
+                'F', new UnificationEntry(frameGt, Draconium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, Draconium, 6)
+                .input(frameGt, Draconium)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRACONIUM_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
+
+        //  Dragon Coil
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL))
+                .input(plate, Draconium, 4)
+                .input(VOLTAGE_COIL_UV, 2)
+                .input(wireFine, SiliconCarbide, 4)
+                .fluidInputs(ConcentrateDragonBreath.getFluid(L * 4))
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.DRAGON_FUSION_COIL, 2))
+                .EUt(VA[UV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Dragon Fusion Unit
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(HULL[UV].getStackForm())
+                .input(frameGt, Draconium, 4)
+                .input(circuit, MarkerMaterials.Tier.UV, 4)
+                .input(plate, Ichorium, 8)
+                .input(FIELD_GENERATOR_UV, 2)
+                .input(cableGtQuadruple, YttriumBariumCuprate, 4)
+                .fluidInputs(Taranium.getFluid(L * 4))
+                .outputs(DRAGON_FUSION_UNIT.getStackForm())
+                .EUt(VA[UV])
+                .duration(600)
+                .buildAndRegister();
+
     }
 
     private static void Materials() {
+
+        //  Unstable Star
+        //  TODO Require Space Environment?
+        AUTOCLAVE_RECIPES.recipeBuilder()
+                .input(GRAVI_STAR)
+                .fluidInputs(Rhugnor.getFluid(144))
+                .output(UNSTABLE_STAR)
+                .EUt(VA[UV])
+                .duration(480)
+                .buildAndRegister();
 
         //  Blazing Pyrotheum
         MIXER_RECIPES.recipeBuilder()
@@ -1427,6 +1647,35 @@ public class MachineComponents {
                 .output(dust, Abyssalloy, 23)
                 .EUt(VA[UHV])
                 .duration(1200)
+                .buildAndRegister();
+
+        //  Superheavy-H Alloy
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Copernicium)
+                .input(dust, Nihonium)
+                .input(dust, MetastableFlerovium)
+                .input(dust, Moscovium)
+                .input(dust, Livermorium)
+                .input(dust, MetastableOganesson)
+                .fluidInputs(Tennessine.getFluid(L))
+                .output(dust, SuperheavyHAlloy, 7)
+                .EUt(VA[UEV])
+                .duration(120)
+                .buildAndRegister();
+
+        //  Superheavy-L Alloy
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Rutherfordium)
+                .input(dust, Dubnium)
+                .input(dust, Seaborgium)
+                .input(dust, Bohrium)
+                .input(dust, MetastableHassium)
+                .input(dust, Meitnerium)
+                .fluidInputs(Darmstadtium.getFluid(L))
+                .fluidInputs(Roentgenium.getFluid(L))
+                .output(dust, SuperheavyLAlloy, 8)
+                .EUt(VA[UEV])
+                .duration(120)
                 .buildAndRegister();
     }
 }

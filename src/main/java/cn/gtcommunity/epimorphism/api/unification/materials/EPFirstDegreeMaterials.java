@@ -1598,7 +1598,7 @@ public class EPFirstDegreeMaterials {
                 .fluidTemp(2147483647)
                 .color(0x70ecff)
                 .iconSet(BRIGHT)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_DOUBLE_PLATE)
                 .build();
         //  24212 Magneto Hydrodynamically Constrained Star Matter
         MagnetoHydrodynamicallyConstrainedStarMatter = new Material.Builder(getMaterialsId(), gregtechId("magneto_hydrodynamically_constrained_star_matter"))
@@ -1606,7 +1606,7 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .fluidTemp(600000000)
                 .iconSet(CUSTOM_MHCSM)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
+                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  24213 White Dwarf Matter
         WhiteDwarfMatter = new Material.Builder(getMaterialsId(), gregtechId("white_dwarf_matter"))
@@ -2410,6 +2410,129 @@ public class EPFirstDegreeMaterials {
                 .color(Boron.getMaterialRGB() + FranciumCarbide.getMaterialRGB())
                 .iconSet(BRIGHT)
                 .components(FranciumCarbide, 2, CubicBoronNitride, 1, AmorphousBoronNitride, 1)
+                .build();
+        //  24321 Flerovium-Ytterbium Plasma
+        FleroviumYtterbiumPlasma = new Material.Builder(getMaterialsId(), gregtechId("flerovium_ytterbium_plasma"))
+                .fluid(FluidTypes.PLASMA)
+                .fluidTemp(300)
+                .components(MetastableFlerovium, 1, Ytterbium178, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24322 Solar-Grade Silicon
+        SolarGradeSilicon = new Material.Builder(getMaterialsId(), gregtechId("solar_grade_silicon"))
+                .ingot()
+                .color(Silicon.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Silicon, 1)
+                .build();
+        //  24323 Dense Hydrazine Mixture Fuel
+        DenseHydrazineMixtureFuel = new Material.Builder(getMaterialsId(), gregtechId("dense_hydrazine_mixture_fuel"))
+                .fluid()
+                .color(0x912565)
+                .components(Dimethylhydrazine, 1, Methanol, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24324 Highly Purified Coal Tar
+        HighlyPurifiedCoalTar = new Material.Builder(getMaterialsId(), gregtechId("highly_purified_coal_tar"))
+                .fluid()
+                .color(0x7F811D)
+                .components(CoalTar, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24325 RP-1 Rocket Fuel
+        RP1RocketFuel = new Material.Builder(getMaterialsId(), gregtechId("rp_1_rocket_fuel"))
+                .fluid()
+                .color(0xFB2A08)
+                .components(HighlyPurifiedCoalTar, 1, LiquidOxygen, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24326 Methylhydrazine
+        Methylhydrazine = new Material.Builder(getMaterialsId(), gregtechId("methylhydrazine"))
+                .fluid()
+                .color(0x321452)
+                .components(Carbon, 1, Hydrogen, 6, Nitrogen, 2)
+                .build();
+        //  24327 Methylhydrazine Nitrate Rocket Fuel
+        MethylhydrazineNitrateRocketFuel = new Material.Builder(getMaterialsId(), gregtechId("methylhydrazine_nitrate_rocket_fuel"))
+                .fluid()
+                .color(0x607186)
+                .components(Methylhydrazine, 1, Tetranitromethane, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24328 Lithium Niobate
+        LithiumNiobate = new Material.Builder(getMaterialsId(), gregtechId("lithium_niobate"))
+                .ingot()
+                .color(0xD27700)
+                .iconSet(SHINY)
+                .components(Lithium, 1, Niobium, 1, Oxygen, 4)
+                .blastTemp(6700)
+                .flags(DISABLE_DECOMPOSITION)
+                .flags(GENERATE_PLATE, GENERATE_LENS)
+                .build();
+        //  24329 Niobium Pentachloride
+        NiobiumPentachloride = new Material.Builder(getMaterialsId(), gregtechId("niobium_pentachloride"))
+                .dust()
+                .color(Niobium.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Niobium, 1, Chlorine, 5)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24330 High Purity Sodium Vanadate
+        HighPuritySodiumVanadate = new Material.Builder(getMaterialsId(), gregtechId("high_purity_sodium_vanadate"))
+                .dust()
+                .color(0xE3E147)
+                .iconSet(BRIGHT)
+                .components(Sodium, 3, Vanadium, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24331 Lutetium Thulium Yttrium Chlorides Solution
+        LutetiumThuliumYttriumChloridesSolution = new Material.Builder(getMaterialsId(), gregtechId("lutetium_thulium_yttrium_chlorides_solution"))
+                .fluid()
+                .color(Lutetium.getMaterialRGB() + Thulium.getMaterialRGB() + Yttrium.getMaterialRGB())
+                .components(Lutetium, 2, Thulium, 2, Yttrium, 6, Chlorine, 30, Hydrogen, 30, Oxygen, 15)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("(LuCl3)2(TmCl3)2(YCl3)6(H2O)15", true);
+        //  24332 Lu-Tm-droped Yttrium Vanadate Deposition
+        YttriumVanadateLuTmDeposition = new Material.Builder(getMaterialsId(), gregtechId("yttrium_vanadate_lu_tm_deposition"))
+                .dust()
+                .color(Yttrium.getMaterialRGB() + Vanadium.getMaterialRGB() + Lutetium.getMaterialRGB() + Thulium.getMaterialRGB())
+                .iconSet(DULL)
+                .build()
+                .setFormula("Lu/TM:YVO?", false);
+        //  24333 Lu-Tm-droped Yttrium Vanadate
+        YttriumVanadateLuTm = new Material.Builder(getMaterialsId(), gregtechId("yttrium_vanadate_lu_tm"))
+                .gem()
+                .color(0x8C1B23)
+                .iconSet(GEM_HORIZONTAL)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_LENS, CRYSTALLIZABLE)
+                .components(Yttrium, 1, Vanadium, 1, Oxygen, 1, Lutetium, 1, Thulium, 1)
+                .build()
+                .setFormula("Lu/Tm:YVO", false);
+        //  24334 Heavy Quark Enriched Mixture
+        HeavyQuarkEnrichedMixture = new Material.Builder(getMaterialsId(), gregtechId("heavy_quark_enriched_mixture"))
+                .fluid()
+                .color(HeavyQuarks.getMaterialRGB() + LightQuarks.getMaterialRGB())
+                .components(LightQuarks, 1, HeavyQuarks, 3)
+                .flags(DECOMPOSITION_BY_CENTRIFUGING)
+                .build()
+                .setFormula(TextFormatting.OBFUSCATED  + "a"  + TextFormatting.RESET + "§e(u2)d(c2)s(t2)b" + TextFormatting.OBFUSCATED  + "a" , true);
+        //  24335 Deuterium-Superheavy Mixture
+        DeuteriumSuperHeavyMixture = new Material.Builder(getMaterialsId(), gregtechId("deuterium_superheavy_mixture"))
+                .fluid()
+                .color(0x7B9F8E)
+                .components(Deuterium, 2, MetastableHassium, 1, MetastableFlerovium, 1, MetastableOganesson, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24336 Heavy Quark Degenerate Matter
+        HeavyQuarkDegenerateMatter = new Material.Builder(getMaterialsId(), gregtechId("heavy_quark_degenerate_matter"))
+                .ingot()
+                .fluid()
+                .plasma()
+                .color(0x5DBD3A)
+                .iconSet(BRIGHT)
+                .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UEV])
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
                 .build();
     }
 

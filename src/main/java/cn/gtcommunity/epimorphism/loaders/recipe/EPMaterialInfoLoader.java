@@ -1,9 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe;
 
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockTransparentCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.blocks.*;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.stack.ItemMaterialInfo;
 import gregtech.api.unification.stack.MaterialStack;
@@ -18,6 +15,7 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.blocks.MetaBlocks.*;
+import static gregtech.common.items.MetaItems.*;
 
 public class EPMaterialInfoLoader {
     public static void init() {
@@ -64,7 +62,7 @@ public class EPMaterialInfoLoader {
         //  UEV Voltage Coil
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(stick, ChromiumGermaniumTellurideMagnetic)
-                .input(wireFine, Seaborgium, 16)
+                .input(wireFine, Mithril, 16)
                 .circuitMeta(1)
                 .output(VOLTAGE_COIL_UEV)
                 .EUt(VA[UEV])
@@ -73,7 +71,7 @@ public class EPMaterialInfoLoader {
 
         OreDictUnifier.registerOre(VOLTAGE_COIL_UEV.getStackForm(), new ItemMaterialInfo (
                 new MaterialStack(ChromiumGermaniumTellurideMagnetic, M / 2),
-                new MaterialStack(Seaborgium, M * 2)));
+                new MaterialStack(Mithril, M * 2)));
 
         //  PMMA Glass
         COMPRESSOR_RECIPES.recipeBuilder()
@@ -196,5 +194,17 @@ public class EPMaterialInfoLoader {
         OreDictUnifier.registerOre(EPMetablocks.EP_PMMA_CASING.getItemVariant(EPBlockPMMACasing.CasingType.NEU_PMMA_GLASS),
                 new ItemMaterialInfo(new MaterialStack(PMMA, M * 4),
                                      new MaterialStack(Neutronium, M * 4)));
+
+        //  Infinity Glass
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+                .notConsumable(SHAPE_MOLD_BLOCK)
+                .fluidInputs(Infinity.getFluid(L * 4))
+                .outputs(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.INFINITY_GLASS))
+                .EUt(VA[UEV])
+                .duration(100)
+                .buildAndRegister();
+
+        OreDictUnifier.registerOre(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.INFINITY_GLASS),
+                new ItemMaterialInfo(new MaterialStack(Infinity, M * 4)));
     }
 }

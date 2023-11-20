@@ -32,6 +32,14 @@ public class EPSecondDegreeMaterials {
                 .iconSet(DULL)
                 .build()
                 .setFormula("*Dc*Rn?", true);
+        //  25404 Dragon Tear
+        DragonTear = new Material.Builder(getMaterialsId(), gregtechId("dragon_tear"))
+                .fluid()
+                .fluidTemp(2992)
+                .color(0x9999FF)
+                .iconSet(DULL)
+                .build()
+                .setFormula("⚙", false);
     }
 
     private static int getMaterialsId() {

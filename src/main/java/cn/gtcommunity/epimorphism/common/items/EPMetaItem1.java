@@ -149,6 +149,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         PROTONATED_FULLERENE_SIEVING_MATRIX = this.addItem(112, "protonated_fullerene_sieving_matrix");
         SATURATED_FULLERENE_SIEVING_MATRIX = this.addItem( 113, "saturated_fullerene_sieving_matrix");
 
+        UNSTABLE_STAR = this.addItem(120, "unstable_star");
+
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");
         RUBY_CHIP = this.addItem(151, "crystal.ruby_chip");

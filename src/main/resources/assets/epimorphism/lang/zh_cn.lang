@@ -334,6 +334,9 @@ tile.ep_multiblock_casing_b.precise_assembler_casing_mk3.name=精密电子单元
 tile.ep_multiblock_casing_b.cyclotron_casing.name=回旋加速机械方块
 tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
 tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=高强度热磁保护管道外壳
+tile.ep_multiblock_casing_c.draconium_casing.name=魔力亲和龙素机器外壳
+tile.ep_multiblock_casing_c.dragon_fusion_coil.name=混沌聚合线圈方块
+
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
 tile.ep_mill_casing.isa_mill_casing_gearbox.name=镍基合金-625球磨齿轮箱外壳
@@ -429,6 +432,7 @@ metaitem.component.vacuum_tube.name=真空管组件
 metaitem.separation_electromagnet.name=分离用电磁铁
 metaitem.protonated_fullerene_sieving_matrix.name=质子化富勒烯筛分基质
 metaitem.saturated_fullerene_sieving_matrix.name=饱和富勒烯筛分基质
+metaitem.unstable_star.name=易变之星
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -510,11 +514,11 @@ epimorphism.machine.dryer.hv.tooltip=并不能用于烘干头发
 epimorphism.machine.dryer.ev.name=进阶化学脱水机 III
 epimorphism.machine.dryer.ev.tooltip=并不能用于烘干头发
 epimorphism.machine.dryer.iv.name=精英化学脱水机
-epimorphism.machine.dryer.iv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.iv.tooltip=并不能用于烘干衣物
 epimorphism.machine.dryer.luv.name=精英化学脱水机 II
-epimorphism.machine.dryer.luv.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.luv.tooltip=并不能用于烘干衣物
 epimorphism.machine.dryer.zpm.name=精英化学脱水机 III
-epimorphism.machine.dryer.zpm.tooltip=并不能用于烘干头发
+epimorphism.machine.dryer.zpm.tooltip=并不能用于烘干衣物
 epimorphism.machine.dryer.uv.name=终极化学脱水机
 epimorphism.machine.dryer.uv.tooltip=水分湮灭者
 epimorphism.machine.dryer.uhv.name=史诗化学脱水机
@@ -534,13 +538,13 @@ epimorphism.machine.vacuum_chamber.bronze.tooltip=你的第一片真空
 epimorphism.machine.vacuum_chamber.steel.name=高压蒸汽真空室
 epimorphism.machine.vacuum_chamber.steel.tooltip=小小真空
 epimorphism.machine.vacuum_chamber.lv.name=基础真空室
-epimorphism.machine.vacuum_chamber.lv.tooltip=空气隔绝者
+epimorphism.machine.vacuum_chamber.lv.tooltip=空气驱逐者
 epimorphism.machine.vacuum_chamber.mv.name=进阶真空室
-epimorphism.machine.vacuum_chamber.mv.tooltip=空气隔绝者
+epimorphism.machine.vacuum_chamber.mv.tooltip=空气驱逐者
 epimorphism.machine.vacuum_chamber.hv.name=进阶真空室 II
-epimorphism.machine.vacuum_chamber.hv.tooltip=空气隔绝者
+epimorphism.machine.vacuum_chamber.hv.tooltip=空气驱逐者
 epimorphism.machine.vacuum_chamber.ev.name=进阶真空室 III
-epimorphism.machine.vacuum_chamber.ev.tooltip=空气隔绝者
+epimorphism.machine.vacuum_chamber.ev.tooltip=空气驱逐者
 epimorphism.machine.vacuum_chamber.iv.name=精英真空室
 epimorphism.machine.vacuum_chamber.iv.tooltip=空气隔绝者
 epimorphism.machine.vacuum_chamber.luv.name=精英真空室 II
@@ -572,6 +576,90 @@ epimorphism.machine.component_assembler.ev.tooltip=零部件工厂
 epimorphism.machine.component_assembler.iv.name=精英部件组装机
 epimorphism.machine.component_assembler.iv.tooltip=零部件工厂
 
+recipemap.decay_chamber_recipes.name=衰变室
+epimorphism.machine.decay_chamber.lv.name=基础衰变室
+epimorphism.machine.decay_chamber.lv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.mv.name=进阶衰变室
+epimorphism.machine.decay_chamber.mv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.hv.name=进阶衰变室 II
+epimorphism.machine.decay_chamber.hv.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.ev.name=进阶衰变室 III
+epimorphism.machine.decay_chamber.ev.tooltip=辐光盈盈
+epimorphism.machine.decay_chamber.iv.name=精英衰变室
+epimorphism.machine.decay_chamber.iv.tooltip=衰变加速器
+epimorphism.machine.decay_chamber.luv.name=精英衰变室 II
+epimorphism.machine.decay_chamber.luv.tooltip=衰变加速器
+epimorphism.machine.decay_chamber.zpm.name=精英衰变室 III
+epimorphism.machine.decay_chamber.zpm.tooltip=衰变加速器
+epimorphism.machine.decay_chamber.uv.name=终极衰变室
+epimorphism.machine.decay_chamber.uv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uhv.name=史诗衰变室
+epimorphism.machine.decay_chamber.uhv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uev.name=史诗衰变室 II
+epimorphism.machine.decay_chamber.uev.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uiv.name=史诗衰变室 III
+epimorphism.machine.decay_chamber.uiv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.uxv.name=史诗衰变室 IV
+epimorphism.machine.decay_chamber.uxv.tooltip=零过程衰变
+epimorphism.machine.decay_chamber.opv.name=传奇衰变室
+epimorphism.machine.decay_chamber.opv.tooltip=零过程衰变
+
+recipemap.crystallizer_recipes.name=结晶器
+epimorphism.machine.crystallizer.lv.name=基础结晶器
+epimorphism.machine.crystallizer.lv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.mv.name=进阶结晶器
+epimorphism.machine.crystallizer.mv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.hv.name=进阶结晶器 II
+epimorphism.machine.crystallizer.hv.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.ev.name=进阶结晶器 III
+epimorphism.machine.crystallizer.ev.tooltip=单晶硅之梦
+epimorphism.machine.crystallizer.iv.name=精英结晶器
+epimorphism.machine.crystallizer.iv.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.luv.name=精英结晶器 II
+epimorphism.machine.crystallizer.luv.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.zpm.name=精英结晶器 III
+epimorphism.machine.crystallizer.zpm.tooltip=襁褓中的晶体
+epimorphism.machine.crystallizer.uv.name=终极结晶器
+epimorphism.machine.crystallizer.uv.tooltip=水晶之巢
+epimorphism.machine.crystallizer.uhv.name=史诗结晶器
+epimorphism.machine.crystallizer.uhv.tooltip=水晶之巢
+epimorphism.machine.crystallizer.uev.name=史诗结晶器 II
+epimorphism.machine.crystallizer.uev.tooltip=水晶之巢
+epimorphism.machine.crystallizer.uiv.name=史诗结晶器 III
+epimorphism.machine.crystallizer.uiv.tooltip=水晶之巢
+epimorphism.machine.crystallizer.uxv.name=史诗结晶器 IV
+epimorphism.machine.crystallizer.uxv.tooltip=水晶之巢
+epimorphism.machine.crystallizer.opv.name=传奇结晶器
+epimorphism.machine.crystallizer.opv.tooltip=水晶之巢
+
+recipemap.ultraviolet_lamp_chamber_recipes.name=紫外辐照
+epimorphism.machine.ultraviolet_lamp_chamber.lv.name=基础紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.lv.tooltip=消毒利器
+epimorphism.machine.ultraviolet_lamp_chamber.mv.name=进阶紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.mv.tooltip=消毒利器
+epimorphism.machine.ultraviolet_lamp_chamber.hv.name=进阶紫外灯箱 II
+epimorphism.machine.ultraviolet_lamp_chamber.hv.tooltip=消毒利器
+epimorphism.machine.ultraviolet_lamp_chamber.ev.name=进阶紫外灯箱 III
+epimorphism.machine.ultraviolet_lamp_chamber.ev.tooltip=消毒利器
+epimorphism.machine.ultraviolet_lamp_chamber.iv.name=精英紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.iv.tooltip=光化学容器
+epimorphism.machine.ultraviolet_lamp_chamber.luv.name=精英紫外灯箱 II
+epimorphism.machine.ultraviolet_lamp_chamber.luv.tooltip=光化学容器
+epimorphism.machine.ultraviolet_lamp_chamber.zpm.name=精英紫外灯箱 III
+epimorphism.machine.ultraviolet_lamp_chamber.zpm.tooltip=光化学容器
+epimorphism.machine.ultraviolet_lamp_chamber.uv.name=终极紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.uv.tooltip=强光辐照
+epimorphism.machine.ultraviolet_lamp_chamber.uhv.name=史诗紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.uhv.tooltip=强光辐照
+epimorphism.machine.ultraviolet_lamp_chamber.uev.name=史诗紫外灯箱 II
+epimorphism.machine.ultraviolet_lamp_chamber.uev.tooltip=强光辐照
+epimorphism.machine.ultraviolet_lamp_chamber.uiv.name=史诗紫外灯箱 III
+epimorphism.machine.ultraviolet_lamp_chamber.uiv.tooltip=强光辐照
+epimorphism.machine.ultraviolet_lamp_chamber.uxv.name=史诗紫外灯箱 IV
+epimorphism.machine.ultraviolet_lamp_chamber.uxv.tooltip=强光辐照
+epimorphism.machine.ultraviolet_lamp_chamber.opv.name=传奇紫外灯箱
+epimorphism.machine.ultraviolet_lamp_chamber.opv.tooltip=强光辐照
+
 recipemap.naquadah_reactor_recipes.name=硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.name=精英硅岩反应堆
 epimorphism.machine.naquadah_reactor.iv.tooltip=取之不尽，用之不竭
@@ -579,6 +667,14 @@ epimorphism.machine.naquadah_reactor.luv.name=精英硅岩反应堆 II
 epimorphism.machine.naquadah_reactor.luv.tooltip=取之不尽，用之不竭
 epimorphism.machine.naquadah_reactor.zpm.name=精英硅岩反应堆 III
 epimorphism.machine.naquadah_reactor.zpm.tooltip=取之不尽，用之不竭
+
+recipemap.rocket_engine_recipes.name=火箭引擎
+epimorphism.machine.rocket_engine.ev.name=进阶火箭引擎 III
+epimorphism.machine.rocket_engine.ev.tooltip=嗡嗡作响
+epimorphism.machine.rocket_engine.iv.name=精英火箭引擎
+epimorphism.machine.rocket_engine.iv.tooltip=嗡嗡作响
+epimorphism.machine.rocket_engine.luv.name=精英火箭引擎 II
+epimorphism.machine.rocket_engine.luv.tooltip=嗡嗡作响
 
 epimorphism.machine.multiblock.glass_tier=当前玻璃等级：%s (%s)
 epimorphism.machine.multiblock.max_parallel=最大并行数：%s
@@ -633,7 +729,7 @@ epimorphism.machine.nanoscale_fabricator.tooltip.1=坩埚的平均温度最多�
 recipemap.molecular_beam_recipes.name=分子束外延
 
 epimorphism.machine.crystallization_crucible.name=结晶坩埚
-recipemap.crystallization_recipes.name=结晶
+recipemap.crystallization_recipes.name=结晶坩埚
 
 epimorphism.machine.catalytic_reformer.name=催化重整炉
 recipemap.catalytic_reformer_recipes.name=催化重整
@@ -691,6 +787,30 @@ epimorphism.machine.reinforced_rotor_holder.uv.name=强化转子固定器（UV�
 epimorphism.machine.reinforced_rotor_holder.uhv.name=强化转子固定器（UHV）
 epimorphism.machine.reinforced_rotor_holder.uev.name=强化转子固定器（UEV）
 epimorphism.machine.reinforced_rotor_holder.uiv.name=强化转子固定器（UIV）
+
+epimorphism.machine.energy_hatch.input_4a.uev.name=4 安能源仓（UEV）
+epimorphism.machine.energy_hatch.input_4a.uiv.name=4 安能源仓（UIV）
+epimorphism.machine.energy_hatch.input_4a.uxv.name=4 安能源仓（UXV）
+epimorphism.machine.energy_hatch.input_4a.opv.name=4 安能源仓（OpV）
+epimorphism.machine.energy_hatch.input_16a.uev.name=16 安能源仓（UEV）
+epimorphism.machine.energy_hatch.input_16a.uiv.name=16 安能源仓（UIV）
+epimorphism.machine.energy_hatch.input_16a.uxv.name=16 安能源仓（UXV）
+epimorphism.machine.energy_hatch.input_16a.opv.name=16 安能源仓（OpV）
+epimorphism.machine.energy_hatch.output_4a.lv.name=4 安动力仓（LV）
+epimorphism.machine.energy_hatch.output_4a.mv.name=4 安动力仓（MV）
+epimorphism.machine.energy_hatch.output_4a.hv.name=4 安动力仓（HV）
+epimorphism.machine.energy_hatch.output_4a.uev.name=4 安动力仓（UEV）
+epimorphism.machine.energy_hatch.output_4a.uiv.name=4 安动力仓（UIV）
+epimorphism.machine.energy_hatch.output_4a.uxv.name=4 安动力仓（UXV）
+epimorphism.machine.energy_hatch.output_4a.opv.name=4 安动力仓（OpV）
+epimorphism.machine.energy_hatch.output_16a.lv.name=16 安动力仓（LV）
+epimorphism.machine.energy_hatch.output_16a.mv.name=16 安动力仓（MV）
+epimorphism.machine.energy_hatch.output_16a.hv.name=16 安动力仓（HV）
+epimorphism.machine.energy_hatch.output_16a.ev.name=16 安动力仓（EV）
+epimorphism.machine.energy_hatch.output_16a.uev.name=16 安动力仓（UEV）
+epimorphism.machine.energy_hatch.output_16a.uiv.name=16 安动力仓（UIV）
+epimorphism.machine.energy_hatch.output_16a.uxv.name=16 安动力仓（UXV）
+epimorphism.machine.energy_hatch.output_16a.opv.name=16 安动力仓（OpV）
 
 epimorphism.machine.burner_reactor.name=燃烧反应室
 recipemap.burner_reactor_recipes.name=燃烧反应
@@ -815,7 +935,7 @@ epimorphism.machine.pcb_factory.cooling_tower=冷却塔控制模块：%s
 epimorphism.machine.pcb_factory.module.false=§4离线
 epimorphism.machine.pcb_factory.module.true=§2在线
 
-epimorphism.machine.large_vacuum_chamber.name=大型真空室
+epimorphism.machine.large_vacuum_chamber.name=大型真空反应室
 
 epimorphism.machine.plasma_condenser.name=等离子冷凝器
 recipemap.plasma_condenser_recipes.name=等离子冷凝
@@ -891,6 +1011,10 @@ epimorphism.machine.compact_cyclotron.tooltip.1=超高速磁力枪
 epimorphism.machine.compact_cyclotron.tooltip.2=粒子将在§r186个周期§7以上的运动中被加速至80%%光素
 epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590MeV§7的能量产生一个持续§a2.2mA§7的粒子束流
 
+recipemap.dragon_fusion_unit_recipes.name=魔力聚合
+epimorphism.machine.dragon_fusion_unit.name=魔力聚合装置
+epimorphism.machine.dragon_fusion_unit.tooltip.1=龙之力量由此苏醒
+
 #  Materials
 
 ##  Element Materials
@@ -913,6 +1037,14 @@ gregtech.material.hypogen=海珀珍
 gregtech.material.californium_252=锎-252
 gregtech.material.astral_titanium=星体钛
 gregtech.material.celestial_tungsten=天体钨
+gregtech.material.ytterbium_178=镱-178
+gregtech.material.ichorium=灵宝
+gregtech.material.ichor_liquid=灵液
+gregtech.material.crystal_matrix=水晶矩阵
+gregtech.material.void_metal=虚空金属
+gregtech.material.mithril=秘银
+gregtech.material.bismuth_209=铋-209
+gregtech.material.lead_209=铅-209
 
 ##  First Degree Materials
 gregtech.material.graphene_oxide=氧化石墨烯
@@ -1235,11 +1367,28 @@ gregtech.material.actinium_hydride=氢化锕
 gregtech.material.actinium_superhydride=超氢化锕
 gregtech.material.francium_carbide=碳化钫
 gregtech.material.boron_francium_mixture=硼钫混合物
+gregtech.material.flerovium_ytterbium_plasma=钅夫-镱
+gregtech.material.solar_grade_silicon=太阳能级硅
+gregtech.material.dense_hydrazine_mixture_fuel=混合浓缩肼火箭燃料
+gregtech.material.highly_purified_coal_tar=高度提纯煤焦油
+gregtech.material.rp_1_rocket_fuel=RP-1火箭燃料
+gregtech.material.methylhydrazine=甲肼
+gregtech.material.methylhydrazine_nitrate_rocket_fuel=硝酸甲肼火箭燃料
+gregtech.material.lithium_niobate=铌酸锂
+gregtech.material.niobium_pentachloride=五氯化铌
+gregtech.material.high_purity_sodium_vanadate=高纯钒酸钠
+gregtech.material.lutetium_thulium_yttrium_chlorides_solution=镥铥钇氯化物溶液
+gregtech.material.yttrium_vanadate_lu_tm_deposition=镥铥掺杂的钒酸钇沉淀
+gregtech.material.yttrium_vanadate_lu_tm=镥铥掺杂的钒酸钇
+gregtech.material.heavy_quark_enriched_mixture=富集重夸克混合物
+gregtech.material.deuterium_superheavy_mixture=氘-超重元素混合物
+gregtech.material.heavy_quark_degenerate_matter=重夸克简并物质
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
 gregtech.material.concentrate_dragon_breath=浓缩龙息
 gregtech.material.dragon_blood=龙血
+gregtech.material.dragon_tear=龙泪
 
 ##  Organic Chemistry Materials
 gregtech.material.kapton_k=聚酰亚胺-K
@@ -1401,6 +1550,8 @@ gregtech.material.dimethyl_sulfide=二甲硫醚
 gregtech.material.oxalic_acid=乙二酸
 gregtech.material.glucose=葡萄糖
 gregtech.material.fructose=果糖
+gregtech.material.hexafluoropropylene=六氟丙烯
+gregtech.material.fluorinated_ethylene_propylene=聚全氟乙丙烯（FEP）
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液
@@ -1478,6 +1629,7 @@ gregtech.material.draconium_slag_solution=龙素残渣溶液
 gregtech.material.actinium_radium_hydroxide_solution=氢氧化锕镭溶液
 gregtech.material.actinium_radium_nitrate_solution=硝酸锕镭溶液
 gregtech.material.heavy_fluorinated_draconium_solution=重氟龙素溶液
+gregtech.material.quasi_fissioning_plasma=拟裂变
 
 ##  Mod Compatibility Materials
 gregtech.material.mana=魔力
@@ -1533,3 +1685,6 @@ gregtech.material.incoloy_020=耐热铬铁合金-020
 gregtech.material.hg_1223=HG-1223
 gregtech.material.hms_1_j_22_alloy=高饱和磁感应软磁合金-1J22
 gregtech.material.fullerene_superconductor=富勒烯超导体
+gregtech.material.legendarium=传奇金属
+gregtech.material.superheavy_h_alloy=超重元素-重合金
+gregtech.material.superheavy_l_alloy=超重元素-轻合金

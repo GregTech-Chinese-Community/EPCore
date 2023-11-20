@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockExplosive;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockPMMACasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import gregtech.api.metatileentity.multiblock.CleanroomType;
 
 import java.math.BigInteger;
 
@@ -183,7 +184,39 @@ public class StellarFurnaceRecipes {
                 .duration(1)
                 .buildAndRegister();
 
-        //  TODO three metastable materials + D + Light-Heavy Quarks --Advanced Fusion--> Heavy Quark Degenerate Matter
+        //  Deuterium-Superheavy Mixture
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                .fluidInputs(Deuterium.getFluid(2000))
+                .fluidInputs(MetastableHassium.getFluid(L))
+                .fluidInputs(MetastableFlerovium.getFluid(L))
+                .fluidInputs(MetastableOganesson.getFluid(L))
+                .fluidOutputs(DeuteriumSuperHeavyMixture.getFluid(2592))
+                .EUt(VA[UEV])
+                .duration(140)
+                .temperature(BigInteger.valueOf((10 * V[UEV]) - (10 * V[ZPM])))
+                .buildAndRegister();
+
+        //  Heavy Quark Enriched Mixture
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(LightQuarks.getFluid(1000))
+                .fluidInputs(HeavyQuarks.getFluid(3000))
+                .fluidOutputs(HeavyQuarkEnrichedMixture.getFluid(1000))
+                .EUt(VA[UEV])
+                .duration(120)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Deuterium-Superheavy Mixture + Heavy Quark Enriched Mixture -> Heavy Quark Degenerate Matter
+        STELLAR_FURNACE_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_EXPLOSIVE_BLOCK.getItemVariant(EPBlockExplosive.CasingType.LEPTONIC_CHARGE))
+                .fluidInputs(DeuteriumSuperHeavyMixture.getFluid(1000))
+                .fluidInputs(HeavyQuarkEnrichedMixture.getFluid(1000))
+                .fluidOutputs(HeavyQuarkDegenerateMatter.getPlasma(1000))
+                .EUt(VA[UEV])
+                .duration(20)
+                .temperature(BigInteger.valueOf((10 * V[UIV]) - (10 * V[EV])))
+                .buildAndRegister();
 
         //  TODO other components of Cosmic Computing Mixture
 

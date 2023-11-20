@@ -56,6 +56,7 @@ public class EPMaterialPropertyAddition {
         Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Strontium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Polonium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Polonium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Fermium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Fermium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Promethium.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -76,6 +77,20 @@ public class EPMaterialPropertyAddition {
         Astatine.setProperty(PropertyKey.FLUID, new FluidProperty());
         Protactinium.setProperty(PropertyKey.DUST, new DustProperty());
         Francium.setProperty(PropertyKey.DUST, new DustProperty());
+        Copernicium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Copernicium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Nihonium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Nihonium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Moscovium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Moscovium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Tennessine.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Hafnium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Hafnium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        NetherStar.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Meitnerium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Meitnerium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Roentgenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Roentgenium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

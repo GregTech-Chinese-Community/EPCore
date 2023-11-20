@@ -14,6 +14,7 @@ public class EPMetablocks {
     public static EPBlockPMMACasing EP_PMMA_CASING;
     public static EPBlockMultiblockCasing EP_MULTIBLOCK_CASING;
     public static EPBlockMultiblockCasingB EP_MULTIBLOCK_CASING_B;
+    public static EPBlockMultiblockCasingC EP_MULTIBLOCK_CASING_C;
     public static EPBlockCrucibleCasing EP_CRUCIBLE_CASING;
     public static EPBlockMillCasing EP_MILL_CASING;
     public static EPBlockActiveMultiblockCasing EP_ACTIVE_MULTIBLOCK_CASING;
@@ -36,6 +37,8 @@ public class EPMetablocks {
         EP_MULTIBLOCK_CASING.setRegistryName("ep_multiblock_casing");
         EP_MULTIBLOCK_CASING_B = new EPBlockMultiblockCasingB();
         EP_MULTIBLOCK_CASING_B.setRegistryName("ep_multiblock_casing_b");
+        EP_MULTIBLOCK_CASING_C = new EPBlockMultiblockCasingC();
+        EP_MULTIBLOCK_CASING_C.setRegistryName("ep_multiblock_casing_c");
         EP_CRUCIBLE_CASING = new EPBlockCrucibleCasing();
         EP_CRUCIBLE_CASING.setRegistryName("ep_crucible_casing");
         EP_MILL_CASING = new EPBlockMillCasing();
@@ -64,6 +67,7 @@ public class EPMetablocks {
         registerItemModel(EP_CRUCIBLE_CASING);
         registerItemModel(EP_MILL_CASING);
         registerItemModel(EP_MULTIBLOCK_CASING_B);
+        registerItemModel(EP_MULTIBLOCK_CASING_C);
         registerItemModel(EP_COMPONENT_ASSEMBLY_LINE_CASING);
         registerItemModel(EP_CLEANROOM_CASING);
         registerItemModel(EP_BOILER_CASING);
