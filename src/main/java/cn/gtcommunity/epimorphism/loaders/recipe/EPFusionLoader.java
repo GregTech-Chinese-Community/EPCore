@@ -361,7 +361,7 @@ public class EPFusionLoader {
                 .fluidInputs(CrystalMatrix.getFluid(L * 2))
                 .fluidInputs(Mithril.getFluid(L * 2))
                 .fluidOutputs(Infinity.getFluid(L * 4))
-                .EUt(VA[UEV])
+                .EUt(VA[UHV])
                 .duration(240)
                 .EUToStart(650000000L)
                 .buildAndRegister();

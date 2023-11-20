@@ -171,7 +171,7 @@ public class EPElementMaterials {
                 .iconSet(CUSTOM_INFINITY)
                 .fluidTemp((int) V[UIV])
                 .element(EPElements.Infinity)
-                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME)
+                .flags(NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR)
                 .build();
         //  26015 Rhugnor
         Rhugnor = new Material.Builder(getMaterialsId(), gregtechId("rhugnor"))
