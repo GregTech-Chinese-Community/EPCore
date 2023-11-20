@@ -196,9 +196,9 @@ public class EPMaterialInfoLoader {
                                      new MaterialStack(Neutronium, M * 4)));
 
         //  Infinity Glass
-        FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .input(dust, Infinity, 4)
                 .notConsumable(SHAPE_MOLD_BLOCK)
-                .fluidInputs(Infinity.getFluid(L * 4))
                 .outputs(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.INFINITY_GLASS))
                 .EUt(VA[UEV])
                 .duration(100)
