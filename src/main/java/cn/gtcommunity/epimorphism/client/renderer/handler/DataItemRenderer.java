@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.client.renderer.handler;
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
-import cn.gtcommunity.epimorphism.common.items.behaviors.IDataRenderBehavior;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
+import cn.gtcommunity.epimorphism.common.items.behaviors.renderer.DataRenderItemBehavior;
 import codechicken.lib.model.ModelRegistryHelper;
 import codechicken.lib.render.item.IItemRenderer;
 import gregtech.api.items.metaitem.MetaItem;
@@ -41,10 +41,10 @@ public class DataItemRenderer implements IItemRenderer {
             if (transformType != ItemCameraTransforms.TransformType.GUI) break;
 
             MetaItem<?>.MetaValueItem valueItem = ((MetaItem<?>)stack.getItem()).getItem(stack);
-            IDataRenderBehavior dri = null;
+            DataRenderItemBehavior dri = null;
 
             if (valueItem != null) {
-                dri = (IDataRenderBehavior) ((IRenderer)valueItem).getRendererManager();
+                dri = (DataRenderItemBehavior) ((IRenderer)valueItem).getRendererManager();
             }
             if (dri == null || !Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) break;
 
