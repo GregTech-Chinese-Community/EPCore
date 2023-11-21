@@ -139,6 +139,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem SEPARATION_ELECTROMAGNET;
     public static MetaItem<?>.MetaValueItem PROTONATED_FULLERENE_SIEVING_MATRIX;
     public static MetaItem<?>.MetaValueItem SATURATED_FULLERENE_SIEVING_MATRIX;
+    public static MetaItem<?>.MetaValueItem NULL;
 
     public static MetaItem<?>.MetaValueItem UNSTABLE_STAR;
 
