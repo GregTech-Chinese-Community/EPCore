@@ -1,5 +1,6 @@
-package cn.gtcommunity.epimorphism.common.items.behaviors;
+package cn.gtcommunity.epimorphism.common.items.behaviors.renderer;
 
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.IHaloRenderBehavior;
 import cn.gtcommunity.epimorphism.client.renderer.handler.HaloItemRenderer;
 import codechicken.lib.model.ModelRegistryHelper;
 import codechicken.lib.util.TransformUtils;

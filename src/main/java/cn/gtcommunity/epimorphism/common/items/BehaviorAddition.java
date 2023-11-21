@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.items;
 
-import cn.gtcommunity.epimorphism.common.items.behaviors.DataRenderItemBehavior;
+import cn.gtcommunity.epimorphism.common.items.behaviors.renderer.DataRenderItemBehavior;
 import cn.gtcommunity.epimorphism.common.items.behaviors.EPDataItemBehavior;
 import gregtech.common.items.MetaItems;
 

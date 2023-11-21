@@ -4,8 +4,8 @@ package cn.gtcommunity.epimorphism.client.renderer.handler;
   Original class written by covers1624 for Avaritia.
  */
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
-import cn.gtcommunity.epimorphism.common.items.behaviors.IHaloRenderBehavior;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.IHaloRenderBehavior;
 import codechicken.lib.colour.Colour;
 import gregtech.api.items.metaitem.MetaItem;
 import net.minecraft.client.renderer.*;

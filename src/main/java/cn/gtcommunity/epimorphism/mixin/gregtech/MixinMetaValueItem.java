@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.mixin.gregtech;
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IItemRendererManager;
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.IItemRendererManager;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.stats.IItemComponent;
 import org.spongepowered.asm.mixin.Mixin;

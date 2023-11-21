@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.items;
 
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
-import cn.gtcommunity.epimorphism.common.items.behaviors.CosmicRenderItemBehavior;
+import cn.gtcommunity.epimorphism.common.items.behaviors.renderer.CosmicRenderItemBehavior;
 import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import gregtech.api.GregTechAPI;
 import gregtech.api.items.metaitem.StandardMetaItem;

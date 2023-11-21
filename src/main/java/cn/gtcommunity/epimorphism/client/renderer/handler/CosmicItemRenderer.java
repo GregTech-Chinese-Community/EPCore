@@ -4,9 +4,9 @@ package cn.gtcommunity.epimorphism.client.renderer.handler;
   Original class written by covers1624 for Avaritia.
  */
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
 import cn.gtcommunity.epimorphism.client.shader.CosmicShaderHelper;
-import cn.gtcommunity.epimorphism.common.items.behaviors.ICosmicRenderBehavior;
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.ICosmicRenderBehavior;
 import codechicken.lib.model.ItemQuadBakery;
 import codechicken.lib.model.bakedmodels.ModelProperties;
 import codechicken.lib.model.bakedmodels.PerspectiveAwareBakedModel;

@@ -1,7 +1,7 @@
-package cn.gtcommunity.epimorphism.common.items.behaviors;
+package cn.gtcommunity.epimorphism.common.items.behaviors.renderer;
 
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.ICosmicRenderBehavior;
 import cn.gtcommunity.epimorphism.client.renderer.handler.CosmicItemRenderer;
-import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import codechicken.lib.model.ModelRegistryHelper;
 import codechicken.lib.util.TransformUtils;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -13,7 +13,7 @@ import net.minecraft.util.ResourceLocation;
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
-public class CosmicRenderItemBehavior implements ICosmicRenderBehavior{
+public class CosmicRenderItemBehavior implements ICosmicRenderBehavior {
 
     private final Supplier<TextureAtlasSprite> supplier;
     private final int maskOpacity;

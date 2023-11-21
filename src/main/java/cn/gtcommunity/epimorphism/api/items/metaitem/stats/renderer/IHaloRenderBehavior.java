@@ -1,6 +1,5 @@
-package cn.gtcommunity.epimorphism.common.items.behaviors;
+package cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer;
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IItemRendererManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
