@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.mixin.gregtech;
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IItemRendererManager;
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
+import cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer.IItemRendererManager;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
 import gregtech.api.items.materialitem.MetaPrefixItem;
 import gregtech.api.items.metaitem.StandardMetaItem;
 import gregtech.api.unification.material.info.MaterialIconSet;

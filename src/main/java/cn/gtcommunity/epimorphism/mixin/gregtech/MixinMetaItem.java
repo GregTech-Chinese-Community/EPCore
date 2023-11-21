@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.mixin.gregtech;
 
-import cn.gtcommunity.epimorphism.api.items.metaitem.stats.IRenderer;
+import cn.gtcommunity.epimorphism.api.items.metaitem.IRenderer;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.util.GTUtility;
 import net.minecraft.item.Item;
