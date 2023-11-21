@@ -88,7 +88,7 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityComputingTerminal COMPUTING_TERMINAL;
 //    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
     public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
-    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
+//    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
@@ -102,7 +102,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityMegaTurbine MEGA_GAS_TURBINE;
     public static EPMetaTileEntityMegaTurbine MEGA_PLASMA_TURBINE;
     public static EPMetaTileEntityStellarFurnace STELLAR_FURNACE;
-    public static EPMetaTileEntityCompressedFusionReactor[] COMPACT_FUSION_REACTOR = new EPMetaTileEntityCompressedFusionReactor[5];
+//    public static EPMetaTileEntityCompressedFusionReactor[] COMPACT_FUSION_REACTOR = new EPMetaTileEntityCompressedFusionReactor[5];
     public static EPMetaTileEntityPlasmaCondenser PLASMA_CONDENSER;
     public static EPMetaTileEntityLargeHeatExchanger LARGE_HEAT_EXCHANGER;
     public static EPMetaTileEntityMegaHeatExchanger MEGA_HEAT_EXCHANGER;
@@ -222,7 +222,7 @@ public class EPMetaTileEntities {
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
         LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
-        PCB_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityPCBFactory(epId("pcb_factory")));
+//        PCB_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityPCBFactory(epId("pcb_factory")));
         FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(36, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
         HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
@@ -240,9 +240,9 @@ public class EPMetaTileEntities {
         SUPERCRITICAL_STEAM_TURBINE = registerMultiMetaTileEntity(51, new EPMetaTileEntityLargeTurbine(epId("supercritical_steam_turbine"), EPRecipeMaps.SUPERCRITICAL_STEAM_TURBINE_FUELS, 6, EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING), EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_SHAFT_BLOCK), EPTextures.SUPERCRITICAL_FLUID_TURBINE_CASING, false, Textures.LARGE_STEAM_TURBINE_OVERLAY));
         MEGA_HIGH_PRESSURE_STEAM_TURBINE = registerMultiMetaTileEntity(52, new EPMetaTileEntityMegaTurbine(epId("mega_high_pressure_steam_turbine"), EPRecipeMaps.HIGH_PRESSURE_STEAM_TURBINE_FUELS, 4, MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_TURBINE_CASING), MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.TITANIUM_GEARBOX), Textures.STABLE_TITANIUM_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
         MEGA_SUPERCRITICAL_STEAM_TURBINE = registerMultiMetaTileEntity(53, new EPMetaTileEntityMegaTurbine(epId("mega_supercritical_steam_turbine"), EPRecipeMaps.SUPERCRITICAL_STEAM_TURBINE_FUELS, 6, EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_CASING), EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.SUPERCRITICAL_FLUID_TURBINE_SHAFT_BLOCK), EPTextures.SUPERCRITICAL_FLUID_TURBINE_CASING, false, EPTextures.MEGA_TURBINE_OVERLAY));
-        COMPACT_FUSION_REACTOR[0] = registerMultiMetaTileEntity(54, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk1"), GTValues.LuV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING), MetaBlocks.FRAMES.get(Materials.NaquadahAlloy).getBlock(Materials.NaquadahAlloy), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
-        COMPACT_FUSION_REACTOR[1] = registerMultiMetaTileEntity(55, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk2"), GTValues.ZPM, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK2), MetaBlocks.FRAMES.get(Materials.Trinium).getBlock(Materials.Trinium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
-        COMPACT_FUSION_REACTOR[2] = registerMultiMetaTileEntity(56, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk3"), GTValues.UV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK3), MetaBlocks.FRAMES.get(Materials.Tritanium).getBlock(Materials.Tritanium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[0] = registerMultiMetaTileEntity(54, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk1"), GTValues.LuV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING), MetaBlocks.FRAMES.get(Materials.NaquadahAlloy).getBlock(Materials.NaquadahAlloy), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[1] = registerMultiMetaTileEntity(55, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk2"), GTValues.ZPM, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK2), MetaBlocks.FRAMES.get(Materials.Trinium).getBlock(Materials.Trinium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
+//        COMPACT_FUSION_REACTOR[2] = registerMultiMetaTileEntity(56, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk3"), GTValues.UV, MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_CASING_MK3), MetaBlocks.FRAMES.get(Materials.Tritanium).getBlock(Materials.Tritanium), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL), MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS)));
 //        COMPACT_FUSION_REACTOR[3] = registerMultiMetaTileEntity(57, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk4"), 9, );
 //        COMPACT_FUSION_REACTOR[4] = registerMultiMetaTileEntity(58, new EPMetaTileEntityCompressedFusionReactor(epId("compact_fusion_reactor_mk5"), 10, );
         PRECISE_ASSEMBLER = registerMultiMetaTileEntity(59, new EPMetaTileEntityPreciseAssembler(epId("precise_assembler")));
