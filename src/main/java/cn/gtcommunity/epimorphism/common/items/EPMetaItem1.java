@@ -1,5 +1,7 @@
 package cn.gtcommunity.epimorphism.common.items;
 
+import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
+import cn.gtcommunity.epimorphism.common.items.behaviors.renderer.CosmicRenderItemBehavior;
 import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import gregtech.api.GregTechAPI;
 import gregtech.api.items.metaitem.StandardMetaItem;
@@ -148,6 +150,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         SEPARATION_ELECTROMAGNET = this.addItem(111, "separation_electromagnet");
         PROTONATED_FULLERENE_SIEVING_MATRIX = this.addItem(112, "protonated_fullerene_sieving_matrix");
         SATURATED_FULLERENE_SIEVING_MATRIX = this.addItem( 113, "saturated_fullerene_sieving_matrix");
+        NULL = this.addItem(114, "null").addComponents(new CosmicRenderItemBehavior(() -> EPTextures.MASK_INGOT, 1));
 
         UNSTABLE_STAR = this.addItem(120, "unstable_star");
 

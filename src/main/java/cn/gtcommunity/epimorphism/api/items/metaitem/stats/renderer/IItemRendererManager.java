@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.api.items.metaitem.stats;
+package cn.gtcommunity.epimorphism.api.items.metaitem.stats.renderer;
 
 import gregtech.api.items.metaitem.stats.IItemComponent;
 import net.minecraft.util.ResourceLocation;
