@@ -57,6 +57,7 @@ public class EPTextures {
     public static EPOverlayRenderer HASTELLOY_X78_CASING = new EPOverlayRenderer("casings/solid/hastelloy_x78_casing");
     public static EPOverlayRenderer CYCLOTRON_CASING = new EPOverlayRenderer("casings/solid/cyclotron_casing");
     public static EPOverlayRenderer DRACONIUM_CASING = new EPOverlayRenderer("casings/solid/draconium_casing");
+    public static EPOverlayRenderer HG_1223_CASING = new EPOverlayRenderer("casings/solid/hg_1223_casing");
     public static EPOverlayRenderer MULTIPART_BUFFER_HATCH = new EPOverlayRenderer("multiparts/overlay_buffer_hatch");
     public static EPOverlayRenderer MULTIPART_BALL_HATCH = new EPOverlayRenderer("multiparts/overlay_ball_hatch");
     public static EPOverlayRenderer MULTIPART_CATALYST_HATCH = new EPOverlayRenderer("multiparts/overlay_catalyst_hatch");

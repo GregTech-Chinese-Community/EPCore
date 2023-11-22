@@ -13,6 +13,12 @@
         "textures": {
           "all": "epimorphism:blocks/casings/solid/dragon_fusion_coil"
         }
+      },
+      "hg_1223_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "epimorphism:blocks/casings/solid/hg_1223_casing"
+        }
       }
     }
   }

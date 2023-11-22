@@ -113,6 +113,7 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityLargeCircuitAssemblyLine LARGE_CIRCUIT_ASSEMBLY_LINE;
     public static EPMetaTileEntityCompactCyclotron CYCLOTRON;
     public static EPMetaTileEntityDragonFusionUnit DRAGON_FUSION_UNIT;
+    public static EPMetaTileEntityDangoteDistillery DANGOTE_DISTILLERY;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -247,5 +248,6 @@ public class EPMetaTileEntities {
 //        LARGE_CIRCUIT_ASSEMBLY_LINE = registerMultiMetaTileEntity(61, new EPMetaTileEntityLargeCircuitAssemblyLine(epId("large_circuit_assembly_line")));
         CYCLOTRON = registerMultiMetaTileEntity(62, new EPMetaTileEntityCompactCyclotron(epId("compact_cyclotron")));
         DRAGON_FUSION_UNIT = registerMultiMetaTileEntity(63, new EPMetaTileEntityDragonFusionUnit(epId("dragon_fusion_unit")));
+        DANGOTE_DISTILLERY = registerMultiMetaTileEntity(64, new EPMetaTileEntityDangoteDistillery(epId("dangote_distillery")));
     }
 }

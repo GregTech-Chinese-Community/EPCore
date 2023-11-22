@@ -28,7 +28,8 @@ public class EPBlockMultiblockCasingC extends VariantBlock<EPBlockMultiblockCasi
 
     public static enum CasingType implements IStringSerializable {
         DRACONIUM_CASING("draconium_casing"),
-        DRAGON_FUSION_COIL("dragon_fusion_coil");
+        DRAGON_FUSION_COIL("dragon_fusion_coil"),
+        HG_1223_CASING("hg_1223_casing");
 
         private final String name;
 

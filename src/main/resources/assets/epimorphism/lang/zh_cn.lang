@@ -339,6 +339,7 @@ tile.ep_multiblock_casing_b.cyclotron_coil.name=重离子偏转线圈方块
 tile.ep_multiblock_casing_b.alloy_smelting_pipe_casing.name=高强度热磁保护管道外壳
 tile.ep_multiblock_casing_c.draconium_casing.name=魔力亲和龙素机器外壳
 tile.ep_multiblock_casing_c.dragon_fusion_coil.name=混沌聚合线圈方块
+tile.ep_multiblock_casing_c.hg_1223_casing.name=化学惰性HG-1223耐热机器外壳
 
 tile.ep_mill_casing.isa_mill_casing.name=镍基合金-625机器外壳
 tile.ep_mill_casing.isa_mill_casing_pipe.name=镍基合金-625温和分散管道外壳
@@ -977,13 +978,13 @@ epimorphism.machine.stellar_furnace.tooltip.4=部分产物在使用相应的§6�
 
 recipemap.dimensional_oscillator_recipes.name=超维度震荡
 
-epimorphism.machine.precise_assembler.name=精密自动组装机MT-3662
 recipemap.precise_assembler_recipes.name=精密组装机
+epimorphism.machine.precise_assembler.name=精密自动组装机MT-3662
 epimorphism.machine.precise_assembler.tier=机器外壳等级：
 epimorphism.machine.precise_assembler.tooltip.1=误差不超过7nm
 epimorphism.machine.precise_assembler.tooltip.2=可运行一般的§r组装机§7配方，亦可用于组装精密器件
 epimorphism.machine.precise_assembler.tooltip.3=使用不同的机器外壳判定机器等级
-epimorphism.machine.precise_assembler.tooltip.4=运行§r组装机§7配方时，配方时间减半。
+epimorphism.machine.precise_assembler.tooltip.4=运行§r组装机§7配方时，运行耗时为§r(配方时间/2)§7。
 epimorphism.machine.precise_assembler.tooltip.5=运行§r组装机§7配方时，获得§r2^(机器外壳等级+4)§7次并行。
 epimorphism.machine.precise_assembler.tier=机器外壳等级：
 epimorphism.machine.precise_assembler.tier.1=MK1
@@ -1029,6 +1030,16 @@ epimorphism.machine.compact_cyclotron.tooltip.3=能够以§c590MeV§7的能量�
 recipemap.dragon_fusion_unit_recipes.name=魔力聚合
 epimorphism.machine.dragon_fusion_unit.name=魔力聚合装置
 epimorphism.machine.dragon_fusion_unit.tooltip.1=龙之力量由此苏醒
+
+recipemap.molecular_distillation_recipes.name=高真空分子蒸馏
+epimorphism.machine.dangote_distillery.name=丹格特蒸馏厂
+epimorphism.machine.dangote_distillery.tooltip.1=现代化工业蒸馏，从现在开始
+epimorphism.machine.dangote_distillery.tooltip.2=可运行一般的§r蒸馏塔§7配方，亦可用于进行分子蒸馏
+epimorphism.machine.dangote_distillery.tooltip.3=运行§r蒸馏室§7配方时，运行耗时为§r(配方时间/4)§7。
+epimorphism.machine.dangote_distillery.tooltip.4=运行§r蒸馏塔§7配方时，运行耗时为§r(配方时间/2)§7。
+epimorphism.machine.dangote_distillery.tooltip.5=最大并行数：
+epimorphism.machine.dangote_distillery.tooltip.6=§3UV§7级以下 -> §r4 * (电压等级 * 4)§7
+epimorphism.machine.dangote_distillery.tooltip.7=§3UV§7级以上 -> §r12 * (电压等级 * 4)§7
 
 #  Materials
 

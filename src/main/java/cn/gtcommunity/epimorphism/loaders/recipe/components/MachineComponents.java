@@ -1575,6 +1575,21 @@ public class MachineComponents {
                 .duration(100)
                 .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .buildAndRegister();
+
+        //  HG-1223 Casing
+        ModHandler.addShapedRecipe(true, "hg_1223_casing", EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.HG_1223_CASING, 2),
+                "PhP", "PFP","PwP",
+                'P', new UnificationEntry(plate, HG1223),
+                'F', new UnificationEntry(frameGt, RhodiumPlatedPalladium));
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, HG1223, 6)
+                .input(frameGt, RhodiumPlatedPalladium)
+                .circuitMeta(6)
+                .outputs(EPMetablocks.EP_MULTIBLOCK_CASING_C.getItemVariant(EPBlockMultiblockCasingC.CasingType.HG_1223_CASING, 2))
+                .EUt(VA[LV])
+                .duration(50)
+                .buildAndRegister();
     }
 
     private static void Materials() {
