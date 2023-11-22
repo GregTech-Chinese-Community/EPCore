@@ -6,9 +6,11 @@ import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbil
 import cn.gtcommunity.epimorphism.api.pattern.predicates.TierStateTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.pattern.predicates.TierTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
+import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.metatileentity.ITieredMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
+import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.pattern.PatternStringError;
@@ -91,8 +93,44 @@ public class EPTraceabilityPredicate {
     public static Supplier<TierTraceabilityPredicate> EP_CA_TIERED_CASING = () -> new TierTraceabilityPredicate(MAP_CA_TIRED_CASING,
             Comparator.comparing((s) -> ((WrappedIntTier)MAP_CA_TIRED_CASING.get(s)).getIntTier()), "CATieredCasing", null);
 
+    //  Optional Traceability Predicates
+    public static TraceabilityPredicate optionalStates(String mark, IBlockState... allowedStates) {
+        return new TraceabilityPredicate(blockWorldState -> {
+            IBlockState state = blockWorldState.getBlockState();
+            if (state.getBlock() instanceof VariantActiveBlock) {
+                blockWorldState.getMatchContext().getOrPut("VABlock", new LinkedList<>()).add(blockWorldState.getPos());
+            }
+            if (ArrayUtils.contains(allowedStates, state)) {
+                return (blockWorldState.getMatchContext().getOrPut(mark, true));
+            }
+            return blockWorldState.getMatchContext().get(mark) == null;
+        }, getCandidates(allowedStates));
+    }
+
+    public static TraceabilityPredicate optionalAbilities(String mark, MultiblockAbility<?>... allowedAbilities) {
+        return new TraceabilityPredicate(blockWorldState -> {
+            TileEntity tileEntity = blockWorldState.getTileEntity();
+            if (tileEntity instanceof IGregTechTileEntity) {
+                MetaTileEntity metaTileEntity = ((IGregTechTileEntity) tileEntity).getMetaTileEntity();
+                if (metaTileEntity instanceof IMultiblockAbilityPart<?> && ArrayUtils.contains(allowedAbilities, ((IMultiblockAbilityPart<?>) metaTileEntity).getAbility())) {
+                    Set<IMultiblockPart> partsFound = blockWorldState.getMatchContext().getOrCreate("MultiblockParts", HashSet::new);
+                    partsFound.add((IMultiblockPart) metaTileEntity);
+                    return (blockWorldState.getMatchContext().getOrPut(mark, true));
+                }
+            }
+            return blockWorldState.getMatchContext().get(mark) == null;
+        }, getCandidates(Arrays.stream(allowedAbilities).flatMap(ability -> MultiblockAbility.REGISTRY.get(ability).stream()).toArray(MetaTileEntity[]::new)));
+    }
+
     //  Utils
     public static Supplier<BlockInfo[]> getCandidates(IBlockState... allowedStates) {
         return () -> Arrays.stream(allowedStates).map(state -> new BlockInfo(state, null)).toArray(BlockInfo[]::new);
+    }
+
+    public static Supplier<BlockInfo[]> getCandidates(MetaTileEntity... metaTileEntities) {
+        return () -> Arrays.stream(metaTileEntities)
+                .filter(Objects::nonNull)
+                .map(tile -> new BlockInfo(MetaBlocks.MACHINE.getDefaultState(), EPUniverUtil.getTileEntity(tile)))
+                .toArray(BlockInfo[]::new);
     }
 }
