@@ -43,10 +43,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static gregtech.api.GTValues.*;
@@ -57,23 +55,9 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
     private int InternalCasingTier;
     private int tier;
 
-    List<IBlockState> ListCasing = EPAPI.MAP_PA_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-
-    List<IBlockState> ListInternalCasing = EPAPI.MAP_PA_INTERNAL_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-
-    int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
-        add(ListCasing);
-        add(ListInternalCasing);
-    }});
-
-    List<IBlockState> finalListCasing = EPUniverUtil.consistentList(ListCasing, maxLeng);
-    List<IBlockState> finalListInternalCasing = EPUniverUtil.consistentList(ListInternalCasing, maxLeng);
+    private static boolean init = false;
+    private static List<IBlockState> finalListCasing;
+    private static List<IBlockState> finalListInternalCasing;
 
     public EPMetaTileEntityPreciseAssembler(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, new RecipeMap[]{
@@ -81,11 +65,35 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                 EPRecipeMaps.PRECISE_ASSEMBLER_RECIPES
         });
         this.recipeMapWorkable = new PreciseAssemblerRecipeLogic(this);
+        initMap();
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
         return new EPMetaTileEntityPreciseAssembler(metaTileEntityId);
+    }
+
+    private void initMap() {
+        if (init) return;
+
+        List<IBlockState> ListCasing = EPAPI.MAP_PA_CASING.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+
+        List<IBlockState> ListInternalCasing = EPAPI.MAP_PA_INTERNAL_CASING.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+
+        int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
+            add(ListCasing);
+            add(ListInternalCasing);
+        }});
+        finalListCasing = EPUniverUtil.consistentList(ListCasing, maxLeng);
+        finalListInternalCasing = EPUniverUtil.consistentList(ListInternalCasing, maxLeng);
+
+        init = true;
     }
 
     @Override
@@ -170,8 +178,6 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
         };
     }
 
-    private int count = 0;
-
     @Override
     public List<MultiblockShapeInfo> getMatchingShapes() {
         ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList<>();
@@ -195,18 +201,18 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
                     .where(' ', Blocks.AIR.getDefaultState());
         }
         MultiblockShapeInfo.Builder finalBuilder = builder;
-
+        AtomicInteger count = new AtomicInteger();
         finalListCasing.stream()
                 .map(b -> {
-                    MultiblockShapeInfo.Builder midFinalBuilder = finalBuilder;
-                    if (midFinalBuilder != null) {
-                        midFinalBuilder.where('C', b);
-                        midFinalBuilder.where('M', finalListInternalCasing.get(count));
-                        count++;
+                    if (finalBuilder != null) {
+                        finalBuilder.where('C', b);
+                        finalBuilder.where('M', finalListInternalCasing.get(count.get()));
+                        count.getAndIncrement();
                     }
-                    return midFinalBuilder;
-                }).forEach(b -> shapeInfo.add(b.build()));
-        count = 0;
+                    return finalBuilder;
+                })
+                .filter(Objects::nonNull)
+                .forEach(b -> shapeInfo.add(b.build()));
         return shapeInfo;
     }
 
