@@ -1,11 +1,8 @@
 package cn.gtcommunity.epimorphism.api.recipe;
 
 import cn.gtcommunity.epimorphism.api.recipe.builder.*;
-import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapChemicalPlant;
-import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapComponentAssemblyLine;
-import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapGeneral;
+import cn.gtcommunity.epimorphism.api.recipe.machines.*;
 import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
-import cn.gtcommunity.epimorphism.api.recipe.machines.RecipeMapPreciseAssembler;
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
@@ -102,6 +99,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CYCLOTRON_RECIPES;
     @ZenProperty
     public static final RecipeMap<SimpleRecipeBuilder> DRAGON_FUSION_UNIT_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<NoCoilTemperatureRecipeBuilder> MOLECULAR_DISTILLATION_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -356,6 +355,11 @@ public class EPRecipeMaps {
                 .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION, ProgressWidget.MoveType.HORIZONTAL)
                 .setSound(GTSoundEvents.ARC);
 
+        //  Dangote Distillery RecipeMap
+        MOLECULAR_DISTILLATION_RECIPES = new RecipeMapDangoteDistillery<>("molecular_distillation_recipes", 0, true, 1, true, 1, true, 12, false, new NoCoilTemperatureRecipeBuilder(), false)
+                .setSound(GTSoundEvents.CHEMICAL_REACTOR);
+
+                // 0, true, 1, true, 1, true, 12, false, new UniversalDistillationRecipeBuilder(), false)).setSound(GTSoundEvents.CHEMICAL_REACTOR);
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)

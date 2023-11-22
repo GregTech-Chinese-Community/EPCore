@@ -115,5 +115,6 @@ public class EPRecipeManager {
         DragonFusionUnitRecipes.init();
         CrystallizerRecipes.init();
         RocketEngineRecipes.init();
+        DangoteDistilleryRecipes.init();
     }
 }

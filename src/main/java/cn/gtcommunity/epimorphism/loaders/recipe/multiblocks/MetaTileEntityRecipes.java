@@ -913,6 +913,20 @@ public class MetaTileEntityRecipes {
                 .EUt(VA[LuV])
                 .duration(1200)
                 .buildAndRegister();
+
+        //  Dangote Distillery
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Rhodium)
+                .input(DISTILLATION_TOWER, 16)
+                .input(ELECTRIC_PUMP_LuV, 2)
+                .input(plate, IncoloyDS, 4)
+                .input(pipeHugeFluid, Inconel625, 2)
+                .input(wireGtDouble, NiobiumTitanium, 2)
+                .fluidInputs(AusteniticStainlessSteel904L.getFluid(L * 4))
+                .outputs(DANGOTE_DISTILLERY.getStackForm())
+                .EUt(VA[LuV])
+                .duration(600)
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {

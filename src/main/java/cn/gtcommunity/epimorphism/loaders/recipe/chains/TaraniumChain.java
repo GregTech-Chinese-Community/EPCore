@@ -7,6 +7,7 @@ import gregtech.api.unification.OreDictUnifier;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.MOLECULAR_DISTILLATION_RECIPES;
 import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
@@ -37,7 +38,7 @@ public class TaraniumChain {
                 .buildAndRegister();
 
         //  Clean Bedrock Solution -> Bedrock + Heavy Bedrock Smoke + Medium Bedrock Smoke + Light Bedrock Smoke + Ultralight Bedrock Smoke
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CleanBedrockSolution.getFluid(1000))
                 .output(dust, Bedrock, 3)
                 .fluidOutputs(HeavyBedrockSmoke.getFluid(440))
@@ -46,6 +47,7 @@ public class TaraniumChain {
                 .fluidOutputs(UltralightBedrockSmoke.getFluid(150))
                 .duration(90)
                 .EUt(VA[IV])
+                .temperature(14370)
                 .buildAndRegister();
 
         //  Heavy Bedrock Smoke -> Iridium + Bedrock + Heavy Taranium Gas
@@ -123,7 +125,7 @@ public class TaraniumChain {
                 .buildAndRegister();
 
         //  Cracked Heavy Taranium -> Taranium + Fluorine + Heavy Taranium Fuel + Medium Taranium Fuel + Light Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedHeavyTaranium.getFluid(1000))
                 .output(dust, Taranium)
                 .fluidOutputs(Fluorine.getFluid(250))
@@ -133,10 +135,11 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(50))
                 .duration(600)
                 .EUt(VA[UV])
+                .temperature(37540)
                 .buildAndRegister();
 
         //  Cracked Medium Taranium -> Taranium + Fluorine + Heavy Taranium Fuel + Medium Taranium Fuel + Light Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedMediumTaranium.getFluid(1000))
                 .output(dust, Taranium)
                 .fluidOutputs(Fluorine.getFluid(150))
@@ -146,10 +149,11 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(150))
                 .duration(600)
                 .EUt(VA[UV])
+                .temperature(36650)
                 .buildAndRegister();
 
         //  Cracked Light Taranium -> Taranium + Fluorine + Heavy Taranium Fuel + Medium Taranium Fuel + Light Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedLightTaranium.getFluid(1000))
                 .output(dust, Taranium)
                 .fluidOutputs(Fluorine.getFluid(50))
@@ -159,6 +163,7 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(350))
                 .duration(600)
                 .EUt(VA[UV])
+                .temperature(35960)
                 .buildAndRegister();
 
         //  Enriched Naquadah + Sulfuric Acid + Bedrock Soot Solution -> Enriched Bedrock Soot Solution
@@ -183,7 +188,7 @@ public class TaraniumChain {
                 .buildAndRegister();
 
         //  Clean Enriched Bedrock Solution -> Bedrock + Heavy Enriched Bedrock Smoke + Medium Enriched Bedrock Smoke + Light Enriched Bedrock Smoke
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CleanEnrichedBedrockSolution.getFluid(1000))
                 .output(dust, Bedrock, 4)
                 .fluidOutputs(HeavyEnrichedBedrockSmoke.getFluid(440))
@@ -192,6 +197,7 @@ public class TaraniumChain {
                 .fluidOutputs(UltralightBedrockSmoke.getFluid(150))
                 .duration(140)
                 .EUt(40960)
+                .temperature(14300)
                 .buildAndRegister();
 
         //  Heavy Enriched Bedrock Smoke -> Bedrock + Naquadria + Iridium + Osmium + Heavy Enriched Taranium Gas
@@ -261,7 +267,7 @@ public class TaraniumChain {
                 .buildAndRegister();
 
         //  Cracked Heavy Enriched Taranium -> Taranium + Radon + Heavy Enriched Taranium Fuel + Medium Enriched Taraniium Fuel + Light Enriched Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedHeavyEnrichedTaranium.getFluid(1000))
                 .output(dust, Taranium, 2)
                 .fluidOutputs(Radon.getFluid(250))
@@ -271,10 +277,11 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(50))
                 .duration(160)
                 .EUt(98304)
+                .temperature(24330)
                 .buildAndRegister();
 
         //  Cracked Medium Enriched Taranium -> Taranium + Radon + Heavy Enriched Taranium Fuel + Medium Enriched Taraniium Fuel + Light Enriched Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedMediumEnrichedTaranium.getFluid(1000))
                 .output(dust, Taranium, 2)
                 .fluidOutputs(Radon.getFluid(150))
@@ -284,10 +291,11 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(150))
                 .duration(140)
                 .EUt(98304)
+                .temperature(23980)
                 .buildAndRegister();
 
         //  Cracked Light Enriched Taranium -> Taranium + Radon + Heavy Enriched Taranium Fuel + Medium Enriched Taraniium Fuel + Light Enriched Taranium Fuel
-        DISTILLATION_RECIPES.recipeBuilder()
+        MOLECULAR_DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(CrackedLightEnrichedTaranium.getFluid(1000))
                 .output(dust, Taranium, 2)
                 .fluidOutputs(Radon.getFluid(50))
@@ -297,6 +305,7 @@ public class TaraniumChain {
                 .fluidOutputs(BedrockGas.getFluid(350))
                 .duration(120)
                 .EUt(98304)
+                .temperature(22990)
                 .buildAndRegister();
 
         //  Bedrock Gas -> Bedrock + Helium-3

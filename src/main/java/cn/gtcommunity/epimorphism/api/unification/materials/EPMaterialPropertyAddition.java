@@ -139,6 +139,7 @@ public class EPMaterialPropertyAddition {
         Chrome.addFlags(GENERATE_LONG_ROD);
         Ruridit.addFlags(GENERATE_DOUBLE_PLATE);
         Bohrium.addFlags(GENERATE_PLATE, GENERATE_DENSE);
+        Rhodium.addFlags(GENERATE_FRAME);
 
         Pyrochlore.addFlags(DISABLE_DECOMPOSITION);
         Tantalite.addFlags(DISABLE_DECOMPOSITION);
