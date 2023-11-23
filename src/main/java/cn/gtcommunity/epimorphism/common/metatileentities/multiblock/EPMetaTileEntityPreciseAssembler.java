@@ -54,7 +54,6 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
     private int CasingTier;
     private int InternalCasingTier;
     private int tier;
-
     private static boolean init = false;
     private static List<IBlockState> finalListCasing;
     private static List<IBlockState> finalListInternalCasing;
@@ -90,6 +89,7 @@ public class EPMetaTileEntityPreciseAssembler extends MultiMapMultiblockControll
             add(ListCasing);
             add(ListInternalCasing);
         }});
+
         finalListCasing = EPUniverUtil.consistentList(ListCasing, maxLeng);
         finalListInternalCasing = EPUniverUtil.consistentList(ListInternalCasing, maxLeng);
 
