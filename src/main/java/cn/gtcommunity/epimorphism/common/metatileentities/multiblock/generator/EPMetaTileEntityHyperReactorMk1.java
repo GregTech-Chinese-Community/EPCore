@@ -1,4 +1,4 @@
-package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
+package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator;
 
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;

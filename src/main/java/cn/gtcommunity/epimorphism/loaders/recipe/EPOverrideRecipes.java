@@ -1133,6 +1133,42 @@ public class EPOverrideRecipes {
 
         //  TODO 1A OpV Energy Output Hatch
 
+        //  4A LV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[LV])
+                .input(ENERGY_OUTPUT_HATCH[LV])
+                .input(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT)
+                .input(VOLTAGE_COIL_LV)
+                .input(wireGtQuadruple, Tin, 2)
+                .output(OUTPUT_ENERGY_HATCH_4A[0])
+                .EUt(VA[ULV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A MV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[MV])
+                .input(ENERGY_OUTPUT_HATCH[MV])
+                .input(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT)
+                .input(VOLTAGE_COIL_MV)
+                .input(wireGtQuadruple, Copper, 2)
+                .output(OUTPUT_ENERGY_HATCH_4A[1])
+                .EUt(VA[LV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  4A HV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(TRANSFORMER[HV])
+                .input(ENERGY_OUTPUT_HATCH[HV])
+                .input(LOW_POWER_INTEGRATED_CIRCUIT)
+                .input(VOLTAGE_COIL_HV)
+                .input(wireGtQuadruple, Gold, 2)
+                .output(OUTPUT_ENERGY_HATCH_4A[2])
+                .EUt(VA[MV])
+                .duration(100)
+                .buildAndRegister();
+
         //  4A UHV Energy Output Hatch
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
                 new ItemStack[]{ENERGY_OUTPUT_HATCH[UHV].getStackForm(2),
@@ -1178,6 +1214,54 @@ public class EPOverrideRecipes {
         //  TODO 4A UXV Energy Output Hatch
 
         //  TODO 4A OpV Energy Output Hatch
+
+        //  16A LV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[LV])
+                .input(OUTPUT_ENERGY_HATCH_4A[LV])
+                .input(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT, 2)
+                .input(VOLTAGE_COIL_LV)
+                .input(wireGtOctal, Tin, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[0])
+                .EUt(VA[ULV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A MV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[MV])
+                .input(OUTPUT_ENERGY_HATCH_4A[MV])
+                .input(ULTRA_LOW_POWER_INTEGRATED_CIRCUIT, 2)
+                .input(VOLTAGE_COIL_MV)
+                .input(wireGtOctal, Copper, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[1])
+                .EUt(VA[LV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A HV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[HV])
+                .input(OUTPUT_ENERGY_HATCH_4A[HV])
+                .input(LOW_POWER_INTEGRATED_CIRCUIT, 2)
+                .input(VOLTAGE_COIL_HV)
+                .input(wireGtOctal, Gold, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[2])
+                .EUt(VA[MV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  16A EV Energy Output Hatch
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HI_AMP_TRANSFORMER[EV])
+                .input(ENERGY_OUTPUT_HATCH_4A[0])
+                .input(POWER_INTEGRATED_CIRCUIT, 2)
+                .input(VOLTAGE_COIL_EV)
+                .input(wireGtOctal, Aluminium, 2)
+                .output(OUTPUT_ENERGY_HATCH_16A[3])
+                .EUt(VA[HV])
+                .duration(200)
+                .buildAndRegister();
 
         //  16A UHV Energy Output Hatch
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,

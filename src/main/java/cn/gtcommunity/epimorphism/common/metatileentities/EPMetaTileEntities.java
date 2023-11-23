@@ -9,8 +9,7 @@ import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.*;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityLargeTurbine;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.EPMetaTileEntityMegaTurbine;
+import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator.*;
 import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part.*;
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
@@ -19,12 +18,9 @@ import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockFusionCasing;
-import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockTurbineCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
@@ -118,6 +114,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityDragonFusionUnit DRAGON_FUSION_UNIT;
     public static EPMetaTileEntityDangoteDistillery DANGOTE_DISTILLERY;
     public static EPMetaTileEntityIndustrialPrimitiveBlastFurnace INDUSTRIAL_PRIMITIVE_BLAST_FURNACE;
+    public static EPMetaTileEntityLargeSteamCompressor LARGE_STEAM_COMPRESSOR;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -254,5 +251,6 @@ public class EPMetaTileEntities {
         DRAGON_FUSION_UNIT = registerMultiMetaTileEntity(63, new EPMetaTileEntityDragonFusionUnit(epId("dragon_fusion_unit")));
         DANGOTE_DISTILLERY = registerMultiMetaTileEntity(64, new EPMetaTileEntityDangoteDistillery(epId("dangote_distillery")));
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE = registerMultiMetaTileEntity(65, new EPMetaTileEntityIndustrialPrimitiveBlastFurnace(epId("industrial_primitive_blast_furnace")));
+        LARGE_STEAM_COMPRESSOR = registerMultiMetaTileEntity(66, new EPMetaTileEntityLargeSteamCompressor(epId("large_steam_compressor")));
     }
 }
