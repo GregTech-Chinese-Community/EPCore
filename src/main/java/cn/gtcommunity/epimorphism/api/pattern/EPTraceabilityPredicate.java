@@ -92,6 +92,10 @@ public class EPTraceabilityPredicate {
             Comparator.comparing((s) -> ((WrappedIntTier)MAP_PA_INTERNAL_CASING.get(s)).getIntTier()), "PAInternalCasing", null);
     public static Supplier<TierTraceabilityPredicate> EP_CA_TIERED_CASING = () -> new TierTraceabilityPredicate(MAP_CA_TIRED_CASING,
             Comparator.comparing((s) -> ((WrappedIntTier)MAP_CA_TIRED_CASING.get(s)).getIntTier()), "CATieredCasing", null);
+    public static Supplier<TierTraceabilityPredicate> EP_QFT_MANIPULATOR = () -> new TierTraceabilityPredicate(MAP_QFT_MANIPULATOR,
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_QFT_MANIPULATOR.get(s)).getIntTier()), "QFTManipulator", null);
+    public static Supplier<TierTraceabilityPredicate> EP_QFT_SHIELDING_CORE = () -> new TierTraceabilityPredicate(MAP_QFT_SHIELDING_CORE,
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_QFT_SHIELDING_CORE.get(s)).getIntTier()), "QFTShieldingCore", null);
 
     //  Optional Traceability Predicates
     public static TraceabilityPredicate optionalStates(String mark, IBlockState... allowedStates) {

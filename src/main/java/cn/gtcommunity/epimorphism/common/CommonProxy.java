@@ -2,6 +2,7 @@ package cn.gtcommunity.epimorphism.common;
 
 import cn.gtcommunity.epimorphism.api.recipe.properties.CACasingTierProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PACasingTierProperty;
+import cn.gtcommunity.epimorphism.api.recipe.properties.QFTCasingTierProperty;
 import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
@@ -133,6 +134,10 @@ public class CommonProxy {
         CACasingTierProperty.registerCACasingTier(12, I18n.format("epimorphism.machine.component_assembly_line.tier.12"));
         CACasingTierProperty.registerCACasingTier(13, I18n.format("epimorphism.machine.component_assembly_line.tier.13"));
         CACasingTierProperty.registerCACasingTier(14, I18n.format("epimorphism.machine.component_assembly_line.tier.14"));
+        QFTCasingTierProperty.registerQFTCasingTier(1, I18n.format("epimorphism.machine.quantum_force_transformer.tier.1"));
+        QFTCasingTierProperty.registerQFTCasingTier(2, I18n.format("epimorphism.machine.quantum_force_transformer.tier.2"));
+        QFTCasingTierProperty.registerQFTCasingTier(3, I18n.format("epimorphism.machine.quantum_force_transformer.tier.3"));
+        QFTCasingTierProperty.registerQFTCasingTier(4, I18n.format("epimorphism.machine.quantum_force_transformer.tier.4"));
         FormulaManager.init();
         EPRecipeManager.init();
     }

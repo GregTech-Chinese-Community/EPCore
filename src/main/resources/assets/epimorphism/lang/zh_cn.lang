@@ -1066,6 +1066,17 @@ epimorphism.machine.industrial_primitive_blast_furnace.auxiliary_blast_furnace=�
 
 epimorphism.machine.large_steam_compressor.name=大型蒸汽压缩机
 
+recipemap.quantum_force_transformer_recipes.name=量子操纵者
+epimorphism.machine.quantum_force_transformer.name=量子操纵者
+epimorphism.machine.quantum_force_transformer.tooltip.1=可以让复杂的化工流程一步到位
+epimorphism.machine.quantum_force_transformer.tooltip.2=需要不同等级的§r脉冲控制器§7与§r屏蔽核心§7
+epimorphism.machine.quantum_force_transformer.tooltip.3=脉冲控制器与屏蔽核心限制了机器可执行的§r配方§7
+epimorphism.machine.quantum_force_transformer.tier=机器等级：
+epimorphism.machine.quantum_force_transformer.tier.1=中子 (1级)
+epimorphism.machine.quantum_force_transformer.tier.2=寰宇 (2级)
+epimorphism.machine.quantum_force_transformer.tier.3=无尽时空 (3级)
+epimorphism.machine.quantum_force_transformer.tier.4=超因果连续体 (4级)
+
 #  Materials
 
 ##  Element Materials

@@ -115,6 +115,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityDangoteDistillery DANGOTE_DISTILLERY;
     public static EPMetaTileEntityIndustrialPrimitiveBlastFurnace INDUSTRIAL_PRIMITIVE_BLAST_FURNACE;
     public static EPMetaTileEntityLargeSteamCompressor LARGE_STEAM_COMPRESSOR;
+    public static EPMetaTileEntityQuantumForceTransformer QUANTUM_FORCE_TRANSFORMER;
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -252,5 +253,6 @@ public class EPMetaTileEntities {
         DANGOTE_DISTILLERY = registerMultiMetaTileEntity(64, new EPMetaTileEntityDangoteDistillery(epId("dangote_distillery")));
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE = registerMultiMetaTileEntity(65, new EPMetaTileEntityIndustrialPrimitiveBlastFurnace(epId("industrial_primitive_blast_furnace")));
         LARGE_STEAM_COMPRESSOR = registerMultiMetaTileEntity(66, new EPMetaTileEntityLargeSteamCompressor(epId("large_steam_compressor")));
+        QUANTUM_FORCE_TRANSFORMER = registerMultiMetaTileEntity(67, new EPMetaTileEntityQuantumForceTransformer(epId("quantum_force_transformer")));
     }
 }

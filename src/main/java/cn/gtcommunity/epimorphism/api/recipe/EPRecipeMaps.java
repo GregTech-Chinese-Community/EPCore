@@ -101,6 +101,8 @@ public class EPRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> DRAGON_FUSION_UNIT_RECIPES;
     @ZenProperty
     public static final RecipeMap<NoCoilTemperatureRecipeBuilder> MOLECULAR_DISTILLATION_RECIPES;
+    @ZenProperty
+    public static final RecipeMap<QFTCasingTierRecipeBuilder> QUANTUM_FORCE_TRANSFORMER_RECIPES;
 
     //  Generator Recipemaps
     @ZenProperty
@@ -359,7 +361,11 @@ public class EPRecipeMaps {
         MOLECULAR_DISTILLATION_RECIPES = new RecipeMapDangoteDistillery<>("molecular_distillation_recipes", 0, true, 1, true, 1, true, 12, false, new NoCoilTemperatureRecipeBuilder(), false)
                 .setSound(GTSoundEvents.CHEMICAL_REACTOR);
 
-                // 0, true, 1, true, 1, true, 12, false, new UniversalDistillationRecipeBuilder(), false)).setSound(GTSoundEvents.CHEMICAL_REACTOR);
+        //  Quantum Force Transformer RecipeMap
+        QUANTUM_FORCE_TRANSFORMER_RECIPES = new RecipeMap<>("quantum_force_transformer_recipes", 0, 6, 0, 6, 0, 6, 0, 6, new QFTCasingTierRecipeBuilder(), false)
+                .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, ProgressWidget.MoveType.HORIZONTAL)
+                .setSound(GTSoundEvents.SCIENCE);
+
         //  Naquadah Reactor Recipemap
         NAQUADAH_REACTOR_RECIPES = new RecipeMap<>("naquadah_reactor_recipes", 0, 0, 0, 0, 0, 1, 0, 0, new FuelRecipeBuilder(), false)
                 .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)

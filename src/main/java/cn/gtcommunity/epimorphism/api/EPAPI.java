@@ -25,6 +25,8 @@ public class EPAPI {
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_PA_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_PA_INTERNAL_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_CA_TIRED_CASING = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_QFT_MANIPULATOR = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_QFT_SHIELDING_CORE = new Object2ObjectOpenHashMap<>();
 
     public static void APIBlockInit() {
         //  HEATING_COILS Addition
@@ -131,5 +133,25 @@ public class EPAPI {
                 new WrappedIntTier(EPBlockComponentAssemblyLineCasing.CasingTier.OpV, 13));
         MAP_CA_TIRED_CASING.put(EPMetablocks.EP_COMPONENT_ASSEMBLY_LINE_CASING.getState(EPBlockComponentAssemblyLineCasing.CasingTier.MAX),
                 new WrappedIntTier(EPBlockComponentAssemblyLineCasing.CasingTier.MAX, 14));
+
+        //  MAP_QFT_MANIPULATOR Init
+        MAP_QFT_MANIPULATOR.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_PULSE_MANIPULATOR_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_PULSE_MANIPULATOR_CASING, 1));
+        MAP_QFT_MANIPULATOR.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_MANIPULATOR_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_MANIPULATOR_CASING, 2));
+        MAP_QFT_MANIPULATOR.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_MANIPULATOR_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_MANIPULATOR_CASING, 3));
+        MAP_QFT_MANIPULATOR.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_MANIPULATOR_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_MANIPULATOR_CASING, 4));
+
+        //  MAP_QFT_SHIELDING_CORE Init
+        MAP_QFT_SHIELDING_CORE.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_SHIELDING_CORE_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_SHIELDING_CORE_CASING, 1));
+        MAP_QFT_SHIELDING_CORE.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_SHIELDING_CORE_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_SHIELDING_CORE_CASING, 2));
+        MAP_QFT_SHIELDING_CORE.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_SHIELDING_CORE_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_SHIELDING_CORE_CASING, 3));
+        MAP_QFT_SHIELDING_CORE.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_SHIELDING_CORE_CASING),
+                new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_SHIELDING_CORE_CASING, 4));
     }
 }

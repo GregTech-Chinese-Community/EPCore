@@ -116,5 +116,6 @@ public class EPRecipeManager {
         CrystallizerRecipes.init();
         RocketEngineRecipes.init();
         DangoteDistilleryRecipes.init();
+        QuantumForceTransformerRecipes.init();
     }
 }
