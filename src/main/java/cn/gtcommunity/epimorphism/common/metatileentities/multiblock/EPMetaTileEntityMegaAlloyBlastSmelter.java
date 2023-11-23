@@ -48,38 +48,24 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockController implements IHeatingCoil {
 
     private int blastFurnaceTemperature;
     protected int heatingCoilLevel;
-    protected int heatingCoilDiscount;
     protected int coilTier;
 
-    private int count = 0;
-    List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    List<IBlockState> listGlass = EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> (int) entry.getValue().getTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
-        add(listCoil);
-        add(listGlass);
-    }});
-    List<IBlockState> finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
-    List<IBlockState> finalListGlass = EPUniverUtil.consistentList(listGlass, maxLeng);
+    private static boolean init = false;
+    private static List<IBlockState> finalListCoil;
+    private static List<IBlockState> finalListGlass;
 
     public EPMetaTileEntityMegaAlloyBlastSmelter(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GCYMRecipeMaps.ALLOY_BLAST_RECIPES);
         this.recipeMapWorkable = new MegaAlloyBlastSmelterRecipeLogic(this);
+        initMap();
     }
 
     @Override
@@ -87,21 +73,39 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
         return new EPMetaTileEntityMegaAlloyBlastSmelter(metaTileEntityId);
     }
 
+    private void initMap() {
+        if (init) return;
+
+        List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        List<IBlockState> listGlass = EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> (int) entry.getValue().getTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
+            add(listCoil);
+            add(listGlass);
+        }});
+        finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
+        finalListGlass = EPUniverUtil.consistentList(listGlass, maxLeng);
+
+        init = true;
+    }
+
     //  CoilType Context
     @Override
     protected void formStructure(PatternMatchContext context) {
         super.formStructure(context);
-        Object type = context.get("CoilType");
         Object coilType = context.get("CoilType");
-        if (type instanceof IHeatingCoilBlockStats) {
-            this.blastFurnaceTemperature = ((IHeatingCoilBlockStats) type).getCoilTemperature();
+        if (coilType instanceof IHeatingCoilBlockStats) {
+            this.blastFurnaceTemperature = ((IHeatingCoilBlockStats) coilType).getCoilTemperature();
             this.heatingCoilLevel = ((IHeatingCoilBlockStats) coilType).getLevel();
-            this.heatingCoilDiscount = ((IHeatingCoilBlockStats) coilType).getEnergyDiscount();
             this.coilTier = ((IHeatingCoilBlockStats) coilType).getTier();
         } else {
             this.blastFurnaceTemperature = BlockWireCoil.CoilType.CUPRONICKEL.getCoilTemperature();
             this.heatingCoilLevel = BlockWireCoil.CoilType.CUPRONICKEL.getLevel();
-            this.heatingCoilDiscount = BlockWireCoil.CoilType.CUPRONICKEL.getEnergyDiscount();
             this.coilTier = BlockWireCoil.CoilType.CUPRONICKEL.getTier();
         }
 
@@ -113,7 +117,6 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
         super.invalidateStructure();
         blastFurnaceTemperature = 0;
         heatingCoilLevel = 0;
-        heatingCoilDiscount = 0;
     }
 
     //  Check recipe
@@ -235,18 +238,18 @@ public class EPMetaTileEntityMegaAlloyBlastSmelter extends GlassTierMultiblockCo
                     .where(' ', Blocks.AIR.getDefaultState());
         }
         MultiblockShapeInfo.Builder finalBuilder = builder;
-
+        AtomicInteger count = new AtomicInteger();
         finalListCoil.stream()
                 .map(b -> {
-                    MultiblockShapeInfo.Builder midFinalBuilder = finalBuilder;
-                    if (midFinalBuilder != null) {
-                        midFinalBuilder.where('W', b);
-                        midFinalBuilder.where('G', finalListGlass.get(count));
-                        count++;
+                    if (finalBuilder != null) {
+                        finalBuilder.where('W', b);
+                        finalBuilder.where('G', finalListGlass.get(count.get()));
+                        count.getAndIncrement();
                     }
-                    return midFinalBuilder;
-                }).forEach(b -> shapeInfo.add(b.build()));
-        count = 0;
+                    return finalBuilder;
+                })
+                .filter(Objects::nonNull)
+                .forEach(b -> shapeInfo.add(b.build()));
         return shapeInfo;
     }
 
