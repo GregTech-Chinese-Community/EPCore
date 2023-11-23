@@ -53,6 +53,7 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 
 import javax.annotation.Nonnull;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static gregtech.api.GTValues.VA;
@@ -65,42 +66,54 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
     private int tier;
 
     //TODO 生成预览使用 未来优化器其架构
-    private int count = 0;
-    List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    List<IBlockState> listCasing = EPAPI.MAP_CP_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    List<IBlockState> listTube = EPAPI.MAP_CP_TUBE.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    List<IBlockState> listMachineCasing = EPAPI.MAP_MACHINE_CASING.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
-        add(listCoil);
-        add(listCasing);
-        add(listTube);
-        add(listMachineCasing);
-    }});
-    List<IBlockState> finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
-    List<IBlockState> finalListCasing = EPUniverUtil.consistentList(listCasing, maxLeng);
-    List<IBlockState> finalListTube = EPUniverUtil.consistentList(listTube, maxLeng);
-    List<IBlockState> finalListMachineCasing = EPUniverUtil.consistentList(listMachineCasing, maxLeng);
+    private static boolean init = false;
+    private static List<IBlockState> finalListCoil;
+    private static List<IBlockState> finalListCasing;
+    private static List<IBlockState> finalListTube;
+    private static List<IBlockState> finalListMachineCasing;
 
     public EPMetaTileEntityChemicalPlant(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, EPRecipeMaps.CHEMICAL_PLANT_RECIPES);
         this.recipeMapWorkable = new ChemicalPlantLogic(this);
+        initMap();
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
         return new EPMetaTileEntityChemicalPlant(metaTileEntityId);
+    }
+
+    private void initMap() {
+        if (init) return;
+
+        List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        List<IBlockState> listCasing = EPAPI.MAP_CP_CASING.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        List<IBlockState> listTube = EPAPI.MAP_CP_TUBE.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        List<IBlockState> listMachineCasing = EPAPI.MAP_MACHINE_CASING.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
+            add(listCoil);
+            add(listCasing);
+            add(listTube);
+            add(listMachineCasing);
+        }});
+        finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
+        finalListCasing = EPUniverUtil.consistentList(listCasing, maxLeng);
+        finalListTube = EPUniverUtil.consistentList(listTube, maxLeng);
+        finalListMachineCasing = EPUniverUtil.consistentList(listMachineCasing, maxLeng);
+
+        init = true;
     }
 
     @Override
@@ -126,6 +139,16 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
         this.tier = Math.min(this.casingTier,this.tubeTier);
 
         this.writeCustomData(EPDataCode.EP_CHANNEL_3, buf -> buf.writeInt(this.casingTier));
+    }
+
+    @Override
+    public void invalidateStructure() {
+        super.invalidateStructure();
+        coilLevel = 0;
+        casingTier = 0;
+        tubeTier = 0;
+        voltageTier = 0;
+        tier = 0;
     }
 
     @Override
@@ -231,21 +254,20 @@ public class EPMetaTileEntityChemicalPlant extends RecipeMapMultiblockController
                     .where('J', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF), EnumFacing.NORTH);
         }
         MultiblockShapeInfo.Builder finalBuilder = builder;
-
+        AtomicInteger count = new AtomicInteger();
         finalListCoil.stream()
                 .map(b -> {
-                    MultiblockShapeInfo.Builder midFinalBuilder = finalBuilder;
-                    if (midFinalBuilder != null) {
-                        midFinalBuilder.where('X', b);
-                        midFinalBuilder.where('C', finalListCasing.get(count));
-                        midFinalBuilder.where('T', finalListTube.get(count));
-                        midFinalBuilder.where('M', finalListMachineCasing.get(count));
-                        count++;
+                    if (finalBuilder != null) {
+                        finalBuilder.where('X', b);
+                        finalBuilder.where('C', finalListCasing.get(count.get()));
+                        finalBuilder.where('T', finalListTube.get(count.get()));
+                        finalBuilder.where('M', finalListMachineCasing.get(count.get()));
+                        count.getAndIncrement();
                     }
-                    return midFinalBuilder;
+                    return finalBuilder;
                 })
+                .filter(Objects::nonNull)
                 .forEach(b -> shapeInfo.add(b.build()));
-        count = 0;
         return shapeInfo;
     }
 

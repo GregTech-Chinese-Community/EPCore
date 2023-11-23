@@ -1041,6 +1041,9 @@ epimorphism.machine.dangote_distillery.tooltip.5=最大并行数：
 epimorphism.machine.dangote_distillery.tooltip.6=§3UV§7级以下 -> §r4 * (电压等级 * 4)§7
 epimorphism.machine.dangote_distillery.tooltip.7=§3UV§7级以上 -> §r12 * (电压等级 * 4)§7
 
+epimorphism.machine.industrial_primitive_blast_furnace.name=工业级土高炉
+epimorphism.machine.industrial_primitive_blast_furnace.auxiliary_blast_furnace=附属高炉： %s 座
+
 #  Materials
 
 ##  Element Materials

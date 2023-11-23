@@ -19,7 +19,6 @@ import gregtech.api.pattern.*;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.recipes.recipeproperties.IRecipePropertyStorage;
 import gregtech.api.util.GTUtility;
-import gregtech.api.util.TextFormattingUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.ConfigHolder;
@@ -42,10 +41,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockController {
@@ -53,29 +50,39 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
     private int coilTier;
     protected int heatingCoilLevel;
 
-    private int count = 0;
-    List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    List<IBlockState> listGlass = EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream()
-            .sorted(Comparator.comparingInt(entry -> (int) entry.getValue().getTier()))
-            .map(Map.Entry::getKey)
-            .collect(Collectors.toList());
-    int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
-        add(listCoil);
-        add(listGlass);
-    }});
-    List<IBlockState> finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
-    List<IBlockState> finalListGlass = EPUniverUtil.consistentList(listGlass, maxLeng);
+    private static boolean init = false;
+    private static List<IBlockState> finalListCoil;
+    private static List<IBlockState> finalListGlass;
 
     public EPMetaTileEntityMegaOilCrackingUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, RecipeMaps.CRACKING_RECIPES);
         this.recipeMapWorkable = new MegaCrackingUnitWorkableHandler(this);
+        initMap();
     }
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity iGregTechTileEntity) {
         return new EPMetaTileEntityMegaOilCrackingUnit(metaTileEntityId);
+    }
+
+    private void initMap() {
+        if (init) return;
+
+        List<IBlockState> listCoil = GregTechAPI.HEATING_COILS.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> entry.getValue().getTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        List<IBlockState> listGlass = EPAPI.MAP_GLASS_SHAPE_INFO.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> (int) entry.getValue().getTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
+            add(listCoil);
+            add(listGlass);
+        }});
+        finalListCoil = EPUniverUtil.consistentList(listCoil, maxLeng);
+        finalListGlass = EPUniverUtil.consistentList(listGlass, maxLeng);
+
+        init = true;
     }
 
     @Override
@@ -217,7 +224,7 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.machine.mega_oil_cracking_unit.tooltip.1"));
         tooltip.add(I18n.format("epimorphism.machine.mega_oil_cracking_unit.tooltip.2"));
@@ -338,18 +345,18 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                     .where('J', () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH : getCasingState(), EnumFacing.NORTH);
         }
         MultiblockShapeInfo.Builder finalBuilder = builder;
-
+        AtomicInteger count = new AtomicInteger();
         finalListCoil.stream()
                 .map(b -> {
-                    MultiblockShapeInfo.Builder midFinalBuilder = finalBuilder;
-                    if (midFinalBuilder != null) {
-                        midFinalBuilder.where('L', b);
-                        midFinalBuilder.where('G', finalListGlass.get(count));
-                        count++;
+                    if (finalBuilder != null) {
+                        finalBuilder.where('L', b);
+                        finalBuilder.where('G', finalListGlass.get(count.get()));
+                        count.getAndIncrement();
                     }
-                    return midFinalBuilder;
-                }).forEach(b -> shapeInfo.add(b.build()));
-        count = 0;
+                    return finalBuilder;
+                })
+                .filter(Objects::nonNull)
+                .forEach(b -> shapeInfo.add(b.build()));
         return shapeInfo;
     }
 
