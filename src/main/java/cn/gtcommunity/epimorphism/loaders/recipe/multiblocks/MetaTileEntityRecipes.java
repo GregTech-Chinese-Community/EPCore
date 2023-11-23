@@ -927,6 +927,13 @@ public class MetaTileEntityRecipes {
                 .EUt(VA[LuV])
                 .duration(600)
                 .buildAndRegister();
+
+        //  Industrial Primitive Blast Furnace
+        ModHandler.addShapedRecipe(true, "industrial_primitive_blast_furnace", INDUSTRIAL_PRIMITIVE_BLAST_FURNACE.getStackForm(),
+                "BPB", "PFP", "BPB",
+                'P', PRIMITIVE_BLAST_FURNACE.getStackForm(),
+                'F', new UnificationEntry(frameGt, Steel),
+                'B', new UnificationEntry(plate, Bronze));
     }
 
     private static void GCYMOverrideRecipes() {
