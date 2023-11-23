@@ -1045,6 +1045,8 @@ epimorphism.machine.industrial_primitive_blast_furnace.name=工业级土高炉
 epimorphism.machine.industrial_primitive_blast_furnace.tooltip.1=比土高炉更好
 epimorphism.machine.industrial_primitive_blast_furnace.auxiliary_blast_furnace=附属高炉： %s 座
 
+epimorphism.machine.large_steam_compressor.name=大型蒸汽压缩机
+
 #  Materials
 
 ##  Element Materials
