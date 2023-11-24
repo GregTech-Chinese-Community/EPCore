@@ -176,10 +176,14 @@ public class EPElementMaterials {
                 .build();
         //  26015 Rhugnor
         Rhugnor = new Material.Builder(getMaterialsId(), gregtechId("rhugnor"))
+                .ingot()
                 .fluid()
                 .fluidTemp((int) (V[UIV] - V[UV]))
                 .color(0xBE00FF)
+                .iconSet(BRIGHT)
                 .element(EPElements.Rhugnor)
+                .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV], 3340)
+                .flags(GENERATE_PLATE)
                 .build();
         //  26016 Hypogen
         Hypogen = new Material.Builder(getMaterialsId(), gregtechId("hypogen"))
