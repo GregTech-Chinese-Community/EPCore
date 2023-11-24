@@ -20,6 +20,8 @@ import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.MultiblockShapeInfo;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.client.renderer.ICubeRenderer;
+import gregtech.client.shader.postprocessing.BloomEffect;
+import gregtech.client.utils.BloomEffectUtil;
 import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -28,13 +30,16 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
@@ -321,56 +326,55 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
     @SideOnly(Side.CLIENT)
     @Override
     public void renderMetaTileEntity(double x, double y, double z, float partialTicks) {
-        Tessellator tess = Tessellator.getInstance();
-        BufferBuilder buffer = tess.getBuffer();
         TextureAtlasSprite forceField = EPTextures.FORCE_FIELD;
-        GlStateManager.bindTexture(1);
-        if (!isActive()) {
+        if (isActive() && MinecraftForgeClient.getRenderPass() == 0) {
 
-            double minU = forceField.getMinU();
-            double maxU = forceField.getMaxU();
-            double minV = forceField.getMinV();
-            double maxV = forceField.getMaxV();
-            double xBaseOffset = 3 * getFrontFacing().getOpposite().getXOffset();
-            double zBaseOffset = 3 * getFrontFacing().getOpposite().getZOffset();
-            GlStateManager.pushMatrix();
-            GlStateManager.disableCull();
-            GlStateManager.disableAlpha();
-            GlStateManager.enableBlend();
-            GlStateManager.color(1, 1, 1, 1);
-            int i = 15728880;
-            int j = i % 65536;
-            int k = i / 65536;
-            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float)j, (float)k);
-            Minecraft.getMinecraft().getTextureManager().bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
-            //Center O:  0,  0         1 ------- 8
-            //Corner 1:  7, -2        /           \
-            //Corner 2:  3, -6     2 /             \ 7
-            //Corner 3: -2, -6      |               |
-            //Corner 4: -6, -2      |       O       |
-            //Corner 5: -6,  3      |               |
-            //Corner 6: -2,  7     3 \             / 6
-            //Corner 7:  3,  7        \           /
-            //Corner 8:  7,  3         4 ------- 5
-            buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 0, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 1, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 2, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 3, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 4, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 5, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 6, minU, maxU, minV, maxV);
-            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 7, minU, maxU, minV, maxV);
-            tess.draw();
-            GlStateManager.disableBlend();
-            GlStateManager.enableAlpha();
-            GlStateManager.enableCull();
-            GlStateManager.popMatrix();
+            BloomEffectUtil.requestCustomBloom(RENDER_HANDLER, (buffer) -> {
+                Entity entity = Minecraft.getMinecraft().getRenderViewEntity();
+                if (entity != null) {
+                    double minU = forceField.getMinU();
+                    double maxU = forceField.getMaxU();
+                    double minV = forceField.getMinV();
+                    double maxV = forceField.getMaxV();
+                    double xBaseOffset = 3 * getFrontFacing().getOpposite().getXOffset();
+                    double zBaseOffset = 3 * getFrontFacing().getOpposite().getZOffset();
+                    GlStateManager.pushMatrix();
+                    GlStateManager.disableCull();
+                    GlStateManager.disableAlpha();
+                    GlStateManager.enableBlend();
+                    Minecraft.getMinecraft().getTextureManager().bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+                    //Center O:  0,  0         1 ------- 8
+                    //Corner 1:  7, -2        /           \
+                    //Corner 2:  3, -6     2 /             \ 7
+                    //Corner 3: -2, -6      |               |
+                    //Corner 4: -6, -2      |       O       |
+                    //Corner 5: -6,  3      |               |
+                    //Corner 6: -2,  7     3 \             / 6
+                    //Corner 7:  3,  7        \           /
+                    //Corner 8:  7,  3         4 ------- 5
+                    buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+                    GlStateManager.translate(x + xBaseOffset + 0.5, 0 , z + zBaseOffset + 0.5);
+                    if (zBaseOffset == 0) {
+                        GlStateManager.rotate(90F, 0F, 1F, 0F);
+                    }
+                    for (int i = 0; i < 8; i++) {
+                        renderForceField(buffer, 0, y, 0, i, minU, maxU, minV, maxV);
+                    }
+                    Tessellator.getInstance().draw();
+                    GlStateManager.disableBlend();
+                    GlStateManager.enableAlpha();
+                    GlStateManager.enableCull();
+                    GlStateManager.popMatrix();
+                }
+            });
         }
     }
 
     public AxisAlignedBB getRenderBoundingBox() {
-        return new AxisAlignedBB(this.getPos().offset(this.getFrontFacing().getOpposite()).offset(this.getFrontFacing().rotateY(), 6), this.getPos().offset(this.getFrontFacing().getOpposite(), 13).offset(this.getFrontFacing().rotateY().getOpposite(), 6));
+        double xBaseOffset = 3 * getFrontFacing().getOpposite().getXOffset();
+        double zBaseOffset = 3 * getFrontFacing().getOpposite().getZOffset();
+        BlockPos pos = new BlockPos(this.getPos().getX() + xBaseOffset + 0.5, this.getPos().getY() , this.getPos().getZ() + zBaseOffset + 0.5);
+        return new AxisAlignedBB(pos).grow(6, 6, 6);
     }
 
     public boolean shouldRenderInPass(int pass) {
@@ -380,4 +384,35 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
     public boolean isGlobalRenderer() {
         return true;
     }
+
+    static BloomEffectUtil.IBloomRenderFast RENDER_HANDLER = new BloomEffectUtil.IBloomRenderFast() {
+        @Override
+        public int customBloomStyle() {
+            return 2;
+        }
+
+        float lastBrightnessX;
+        float lastBrightnessY;
+
+        @Override
+        @SideOnly(Side.CLIENT)
+        public void preDraw(BufferBuilder buffer) {
+            BloomEffect.strength = 1.5F;
+            BloomEffect.baseBrightness = 0.0F;
+            BloomEffect.highBrightnessThreshold = 1.3F;
+            BloomEffect.lowBrightnessThreshold = 0.3F;
+            BloomEffect.step = 1;
+
+            lastBrightnessX = OpenGlHelper.lastBrightnessX;
+            lastBrightnessY = OpenGlHelper.lastBrightnessY;
+            GlStateManager.color(1, 1, 1, 1);
+            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240.0F, 240.0F);
+        }
+
+        @Override
+        @SideOnly(Side.CLIENT)
+        public void postDraw(BufferBuilder buffer) {
+            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, lastBrightnessX, lastBrightnessY);
+        }
+    };
 }
