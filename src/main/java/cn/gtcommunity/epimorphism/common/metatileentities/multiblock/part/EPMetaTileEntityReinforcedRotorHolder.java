@@ -1,10 +1,9 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.part;
 
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
-import cn.gtcommunity.epimorphism.api.capability.IMegaTurbine;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.IMegaTurbine;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
 import cn.gtcommunity.epimorphism.api.capability.IReinforcedRotorHolder;
-import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import codechicken.lib.raytracer.CuboidRayTraceResult;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
@@ -125,7 +124,8 @@ public class EPMetaTileEntityReinforcedRotorHolder extends MetaTileEntityMultibl
         }
     }
 
-    void setCurrentSpeed(int speed) {
+    @Override
+    public void setCurrentSpeed(int speed) {
         if (currentSpeed != speed) {
             currentSpeed = speed;
             setRotorSpinning(currentSpeed > 0);
@@ -133,7 +133,7 @@ public class EPMetaTileEntityReinforcedRotorHolder extends MetaTileEntityMultibl
         }
     }
 
-    void setRotorSpinning(boolean spinning) {
+    public void setRotorSpinning(boolean spinning) {
         if (isRotorSpinning != spinning) {
             isRotorSpinning = spinning;
             writeCustomData(GregtechDataCodes.IS_ROTOR_LOOPING, buf -> buf.writeBoolean(isRotorSpinning));

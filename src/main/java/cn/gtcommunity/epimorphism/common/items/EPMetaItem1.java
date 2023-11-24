@@ -1,6 +1,7 @@
 package cn.gtcommunity.epimorphism.common.items;
 
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
+import cn.gtcommunity.epimorphism.common.items.behaviors.StructureWriteBehavior;
 import cn.gtcommunity.epimorphism.common.items.behaviors.renderer.CosmicRenderItemBehavior;
 import cn.gtcommunity.epimorphism.common.items.behaviors.MillBallBehavior;
 import gregtech.api.GregTechAPI;
@@ -228,5 +229,9 @@ public class EPMetaItem1 extends StandardMetaItem {
         WRAP_CIRCUIT_UXV = this.addItem(412, "wrap.circuit.uxv");
         WRAP_CIRCUIT_OpV = this.addItem(413, "wrap.circuit.opv");
         WRAP_CIRCUIT_MAX = this.addItem(414, "wrap.circuit.max");
+
+        // Debug
+        DEBUG_STRUCTURE_WRITER = this.addItem(9999, "debug.structure_writer").addComponents(new StructureWriteBehavior());
+        DEBUG_STRUCTURE_BUILDER = this.addItem(10000, "debug.structure_builder");
     }
 }

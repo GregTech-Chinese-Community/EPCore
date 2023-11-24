@@ -49,7 +49,7 @@ public class Epimorphism {
     }
 
     @Mod.EventHandler
-    public void onPreInit(FMLPreInitializationEvent event) throws IOException {
+    public void onPreInit(FMLPreInitializationEvent event) {
         EPLog.init(event.getModLog());
         ConfigHolder.machines.highTierContent = true;
         EPLog.logger.info("Enabled GregTechCEu highTierContent");
@@ -63,8 +63,12 @@ public class Epimorphism {
         proxy.preLoad();
     }
     @Mod.EventHandler
-    public void onInit(FMLInitializationEvent event) throws IOException {
+    public void onInit(FMLInitializationEvent event) {
         EPWorldGenRegistry.override();
-        WorldGenRegistry.INSTANCE.reinitializeRegisteredVeins();
+        try {
+            WorldGenRegistry.INSTANCE.reinitializeRegisteredVeins();
+        } catch (IOException | RuntimeException exception) {
+            EPLog.logger.fatal("Failed to initialize worldgen registry.", exception);
+        }
     }
 }

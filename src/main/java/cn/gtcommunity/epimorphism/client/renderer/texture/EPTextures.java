@@ -83,6 +83,8 @@ public class EPTextures {
     public static TextureAtlasSprite COSMIC_8;
     public static TextureAtlasSprite COSMIC_9;
 
+    public static TextureAtlasSprite FORCE_FIELD;
+
     public EPTextures() {}
 
     public static void register(TextureMap textureMap) {
@@ -102,6 +104,8 @@ public class EPTextures {
         COSMIC_7 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_7"));
         COSMIC_8 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_8"));
         COSMIC_9 = textureMap.registerSprite(EPUtils.epId("shader/cosmic_9"));
+
+        FORCE_FIELD = textureMap.registerSprite(EPUtils.epId("blocks/force_field"));
 
         COSMIC = new TextureAtlasSprite[] {
                 COSMIC_0,

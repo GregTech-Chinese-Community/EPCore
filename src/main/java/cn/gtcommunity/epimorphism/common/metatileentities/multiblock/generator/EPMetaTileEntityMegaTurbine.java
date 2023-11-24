@@ -1,7 +1,7 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator;
 
 import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
-import cn.gtcommunity.epimorphism.api.capability.IMegaTurbine;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.IMegaTurbine;
 import cn.gtcommunity.epimorphism.api.capability.IReinforcedRotorHolder;
 import cn.gtcommunity.epimorphism.api.gui.EPGuiTextures;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.EPMultiblockAbility;
@@ -10,8 +10,6 @@ import gregtech.api.GTValues;
 import gregtech.api.capability.impl.FluidTankList;
 import gregtech.api.gui.Widget;
 import gregtech.api.gui.widgets.ImageCycleButtonWidget;
-import gregtech.api.items.metaitem.MetaItem;
-import gregtech.api.items.metaitem.stats.IItemBehaviour;
 import gregtech.api.metatileentity.ITieredMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -95,7 +93,7 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
 
     @Override
     public boolean checkRecipe(@Nonnull Recipe recipe, boolean consumeIfSuccess) {
-        return super.checkRecipe(recipe, consumeIfSuccess) &&  checkRotors() && checkRotorMaterial();
+        return super.checkRecipe(recipe, consumeIfSuccess) && checkRotors() && checkRotorMaterial();
     }
 
     @Override
@@ -109,17 +107,16 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
         }
     }
 
-    public boolean isRotorFaceFree() {
+    protected boolean isRotorFaceFree() {
         List<IReinforcedRotorHolder> rotorHolders = getRotorHolders();
-        if (isStructureFormed() && rotorHolders != null) {
-            for (IReinforcedRotorHolder rotorHolder : rotorHolders) {
-                if (!rotorHolder.isFrontFaceFree()) {
-                    return false;
-                }
+        if (!isStructureFormed() || rotorHolders == null) return false;
+
+        for (IReinforcedRotorHolder rotorHolder : rotorHolders) {
+            if (!rotorHolder.isFrontFaceFree()) {
+                return false;
             }
-            return true;
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -131,7 +128,7 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
     }
 
     //TODO 添加更智能的检测机制
-    public void setupRotors() {
+    protected void setupRotors() {
         if (checkRotors()) return;
         for (int index = 0; index < inputInventory.getSlots(); index++) {
             ItemStack itemStack = inputInventory.getStackInSlot(index);
@@ -149,7 +146,15 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
         }
     }
 
-    public boolean checkRotors() {
+    protected void setSpeed(int speed) {
+        for (IReinforcedRotorHolder holder : getRotorHolders()) {
+            if (holder.hasRotor()) {
+                holder.setCurrentSpeed(speed);
+            }
+        }
+    }
+
+    protected boolean checkRotors() {
         for (IReinforcedRotorHolder holder : getRotorHolders()) {
             if (!holder.hasRotor()) {
                 return false;
@@ -158,7 +163,7 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
         return true;
     }
 
-    public boolean checkRotorMaterial() {
+    protected boolean checkRotorMaterial() {
         return getRotorHolders().stream()
                 .map(IReinforcedRotorHolder::getRotorMaterial)
                 .filter(Objects::nonNull)
@@ -168,8 +173,11 @@ public class EPMetaTileEntityMegaTurbine extends FuelMultiblockController implem
     @Override
     public void update() {
         super.update();
-        if (!getWorld().isRemote) {
-            if (isStructureFormed() && getOffsetTimer() % 20 == 0) {
+        if (getOffsetTimer() % 20 == 0) {
+            if (!checkRotors()) {
+                setSpeed(0);
+            }
+            if (!getWorld().isRemote && isStructureFormed()) {
                 setupRotors();
             }
         }

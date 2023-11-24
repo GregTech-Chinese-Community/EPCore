@@ -139,9 +139,9 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                 .aisle(
                         "CCCCCCCCCCCCC",
                         " GALALALALAG ",
+                        " EAAAAAAAAAD ",
                         " EALALALALAD ",
-                        " EALALALALAD ",
-                        " EALALALALAD ",
+                        " EAAAAAAAAAD ",
                         " GALALALALAG ",
                         " CGGGEEEGGGC "
                 )
@@ -157,9 +157,9 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                 .aisle(
                         "CCCCCCCCCCCCC",
                         " GALALALALAG ",
+                        " EAAAAAAAAAD ",
                         " EALALALALAD ",
-                        " EALALALALAD ",
-                        " EALALALALAD ",
+                        " EAAAAAAAAAD ",
                         " GALALALALAG ",
                         " CGGGEEEGGGC "
                 )
@@ -283,9 +283,9 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                     .aisle(
                             "CCCCCCCCCCCCC",
                             " GALALALALAG ",
+                            " CAAAAAAAAAC ",
                             " CALALALALAC ",
-                            " CALALALALAC ",
-                            " CALALALALAC ",
+                            " CAAAAAAAAAC ",
                             " GALALALALAG ",
                             " CGGGCCCGGGC "
                     )
@@ -301,9 +301,9 @@ public class EPMetaTileEntityMegaOilCrackingUnit extends GlassTierMultiblockCont
                     .aisle(
                             "CCCCCCCCCCCCC",
                             " GALALALALAG ",
+                            " CAAAAAAAAAC ",
                             " CALALALALAC ",
-                            " CALALALALAC ",
-                            " CALALALALAC ",
+                            " CAAAAAAAAAC ",
                             " GALALALALAG ",
                             " CGGGCCCGGGC "
                     )
