@@ -55,19 +55,19 @@ public class EPMetaTileEntityDragonFusionUnit extends RecipeMapMultiblockControl
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_C.getState(EPBlockMultiblockCasingC.CasingType.DRACONIUM_CASING);
     }
 
-    private IBlockState getCoilState() {
+    private static IBlockState getCoilState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_C.getState(EPBlockMultiblockCasingC.CasingType.DRAGON_FUSION_COIL);
     }
 
-    private IBlockState getSecondCoilState() {
+    private static IBlockState getSecondCoilState() {
         return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL);
     }
 
-    private IBlockState getThirdCoilState() {
+    private static IBlockState getThirdCoilState() {
         return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL);
     }
 

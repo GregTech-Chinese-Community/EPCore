@@ -55,11 +55,11 @@ public class EPMetaTileEntityLargeSteamCompressor extends RecipeMapSteamMultiblo
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return ConfigHolder.machines.steelSteamMultiblocks ? MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID) : MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
     }
 
-    private IBlockState getPipeCasingState() {
+    private static IBlockState getPipeCasingState() {
         return ConfigHolder.machines.steelSteamMultiblocks ? MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE) : MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.BRONZE_PIPE);
     }
 

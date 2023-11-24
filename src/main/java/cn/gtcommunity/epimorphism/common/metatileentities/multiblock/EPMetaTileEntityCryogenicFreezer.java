@@ -61,7 +61,7 @@ public class EPMetaTileEntityCryogenicFreezer extends RecipeMapMultiblockControl
                 .build();
     }
 
-    protected IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.ADVANCED_ALUMINIUM_CASING);
     }
 

@@ -75,19 +75,19 @@ public class EPMetaTileEntityFuelRefineFactory extends RecipeMapMultiblockContro
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.TALONITE_CASING);
     }
 
-    private IBlockState getPipeCasingState() {
+    private static IBlockState getPipeCasingState() {
         return EPMetablocks.EP_BOILER_CASING.getState(EPBlockBoilerCasing.BoilerCasingType.POLYBENZIMIDAZOLE);
     }
 
-    private IBlockState getUniqueCasingState() {
+    private static IBlockState getUniqueCasingState() {
         return GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.HEAT_VENT);
     }
 
-    private IBlockState getFrameState() {
+    private static IBlockState getFrameState() {
         return MetaBlocks.FRAMES.get(NaquadahAlloy).getBlock(NaquadahAlloy);
     }
 
