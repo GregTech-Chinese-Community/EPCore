@@ -16,6 +16,7 @@ import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.util.GTUtility;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
@@ -65,8 +66,8 @@ public class EPMetaTileEntityDangoteDistillery extends MultiMapMultiblockControl
         if (this.isStructureFormed()) {
             FluidStack stackInTank = this.importFluids.drain(Integer.MAX_VALUE, false);
             if (stackInTank != null && stackInTank.amount > 0) {
-                TextComponentTranslation fluidName = new TextComponentTranslation(stackInTank.getFluid().getUnlocalizedName(stackInTank), new Object[0]);
-                textList.add(new TextComponentTranslation("gregtech.multiblock.distillation_tower.distilling_fluid", new Object[]{fluidName}));
+                TextComponentTranslation fluidName = new TextComponentTranslation(stackInTank.getFluid().getUnlocalizedName(stackInTank));
+                textList.add(new TextComponentTranslation("gregtech.multiblock.distillation_tower.distilling_fluid", fluidName));
             }
         }
 
@@ -178,67 +179,20 @@ public class EPMetaTileEntityDangoteDistillery extends MultiMapMultiblockControl
             return 12 * (tier * 4);
         }
 
-        private int getTier(long vol) {
-            for (int i = 0; i < V.length; i++) {
-                if (V[i] == vol) {
-                    return i;
-                }
-            }
-            return 0;
-        }
-
         @Override
         public int getParallelLimit() {
-//            if (this.getMaxVoltage() == V[ULV]) {
-//                return ParallelTier(ULV);
-//            } else if (this.getMaxVoltage() == V[LV]) {
-//                return ParallelTier(LV);
-//            } else if (this.getMaxVoltage() == V[MV]) {
-//                return ParallelTier(MV);
-//            } else if (this.getMaxVoltage() == V[HV]) {
-//                return ParallelTier(HV);
-//            } else if (this.getMaxVoltage() == V[EV]) {
-//                return ParallelTier(EV);
-//            } else if (this.getMaxVoltage() == V[IV]) {
-//                return ParallelTier(IV);
-//            } else if (this.getMaxVoltage() == V[LuV]) {
-//                return ParallelTier(LuV);
-//            } else if (this.getMaxVoltage() == V[ZPM]) {
-//                return ParallelTier(ZPM);
-//            } else if (this.getMaxVoltage() == V[UV]) {
-//                return ParallelTier(UV);
-//            } else if (this.getMaxVoltage() == V[UHV]) {
-//                return HigherParallelTier(UHV);
-//            } else if (this.getMaxVoltage() == V[UEV]) {
-//                return HigherParallelTier(UEV);
-//            } else if (this.getMaxVoltage() == V[UIV]) {
-//                return HigherParallelTier(UIV);
-//            } else if (this.getMaxVoltage() == V[UXV]) {
-//                return HigherParallelTier(UXV);
-//            } else if (this.getMaxVoltage() == V[OpV]) {
-//                return HigherParallelTier(OpV);
-//            } else if (this.getMaxVoltage() == V[MAX]) {
-//                return HigherParallelTier(MAX);
-//            } else if (this.getMaxVoltage() > V[MAX]){    //  For MAX+, get 4 * 15 * 4
-//                return HigherParallelTier(15);
-//            } else {
-//                return 1;
-//            }
             if (this.getMaxVoltage() > V[MAX]) {    //  For MAX+, get 4 * 15 * 4
                 return HigherParallelTier(15);
             }
-            int tier = getTier(getMaxVoltage());
+            int tier = GTUtility.getTierByVoltage(getMaxVoltage());
             if (tier == 0) {
                 return 1;
             }
             if (tier <= UV) {
-                return ParallelTier(getTier(getMaxVoltage()));
+                return ParallelTier(tier);
             } else {
-                return HigherParallelTier(getTier(getMaxVoltage()));
+                return HigherParallelTier(tier);
             }
-
-//            int tier = (int) Math.round(((Math.log(this.getMaxVoltage()) / Math.log(2)) - 3) / 2);
-
         }
     }
 }

@@ -213,6 +213,9 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_OpV;
     public static MetaItem<?>.MetaValueItem WRAP_CIRCUIT_MAX;
 
+    //  Debug
+    public static MetaItem<?>.MetaValueItem DEBUG_STRUCTURE_WRITER;
+    public static MetaItem<?>.MetaValueItem DEBUG_STRUCTURE_BUILDER;
     private EPMetaItems() {}
 
     public static void initialization()

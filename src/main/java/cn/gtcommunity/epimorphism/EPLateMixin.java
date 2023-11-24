@@ -8,6 +8,6 @@ import java.util.List;
 public class EPLateMixin implements ILateMixinLoader {
     @Override
     public List<String> getMixinConfigs() {
-        return Collections.singletonList("mixins.epimorphism.json");
+        return Collections.singletonList("mixins.epimorphism_late.json");
     }
 }

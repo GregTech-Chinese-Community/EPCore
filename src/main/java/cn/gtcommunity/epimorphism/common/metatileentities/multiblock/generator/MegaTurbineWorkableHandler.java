@@ -1,9 +1,8 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock.generator;
 
-import cn.gtcommunity.epimorphism.api.capability.IMegaTurbine;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.IMegaTurbine;
 import cn.gtcommunity.epimorphism.api.capability.IReinforcedRotorHolder;
 import gregtech.api.GTValues;
-import gregtech.api.capability.IRotorHolder;
 import gregtech.api.capability.impl.MultiblockFuelRecipeLogic;
 import gregtech.api.metatileentity.multiblock.FuelMultiblockController;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;

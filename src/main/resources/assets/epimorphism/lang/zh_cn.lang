@@ -304,6 +304,10 @@ metaitem.null.tooltip=§b§o天体即空洞
 metaitem.mill.grindball_soapstone.name=皂石研磨球
 metaitem.mill.grindball_aluminium.name=铝研磨球
 
+#  Debug
+metaitem.debug.structure_writer.name=多方块导出工具
+metaitem.debug.structure_builder.name=多方块构建工具
+
 #  Multiblock Casings
 tile.ep_multiblock_casing.substrate_casing.name=基板机械方块
 tile.ep_multiblock_casing.advanced_substrate_casing.name=高级基板机械方块
@@ -977,6 +981,9 @@ recipemap.plasma_condenser_recipes.name=等离子冷凝
 
 epimorphism.machine.large_heat_exchanger.name=大型热交换机
 recipemap.heat_exchanger_recipes.name=热力交换
+epimorphism.multiblock.large_heat_exchanger.rate.true=流量： %s L/s（§4过热§r）
+epimorphism.multiblock.large_heat_exchanger.rate.false=流量： %s L/s
+epimorphism.multiblock.large_heat_exchanger.efficiency=总效率： %s
 epimorphism.multiblock.large_heat_exchanger.threshold=流量阈值：%s
 epimorphism.multiblock.large_heat_exchanger.threshold.tooltip=热交换器能以降低基础热流体输入流量为代价，降低生产过热蒸汽的流量阈值。
 epimorphism.multiblock.large_heat_exchanger.threshold_decrement=§c降低5%%流量阈值 /n§7效率降低3%%

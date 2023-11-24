@@ -1,5 +1,6 @@
 package cn.gtcommunity.epimorphism.api.worldgen;
 
+import cn.gtcommunity.epimorphism.api.utils.EPLog;
 import gregtech.api.GTValues;
 import gregtech.api.util.FileUtility;
 import gregtech.api.util.GTLog;
@@ -7,6 +8,7 @@ import gregtech.api.worldgen.config.OreDepositDefinition;
 import gregtech.api.worldgen.config.WorldGenRegistry;
 import net.minecraftforge.fml.common.Loader;
 import org.apache.commons.io.IOUtils;
+import org.apache.logging.log4j.Level;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -25,14 +27,19 @@ public class EPWorldGenRegistry {
     public static Path configPath = Loader.instance().getConfigDir().toPath().resolve(GTValues.MODID);
     public static List<String> overrideList = new ArrayList<>();
 
-    public static void init() throws IOException {
+    public static void init() {
         // The path of the worldgen folder in the config folder
         Path worldgenRootPath = configPath.resolve("worldgen");
         // The folder where all physical veins are stored
         Path veinPath = worldgenRootPath.resolve("vein");
-        if (!Files.exists(veinPath))
-            Files.createDirectories(veinPath);
-        extractJarVeinDefinitions(configPath, veinPath);
+
+        try {
+            if (!Files.exists(veinPath))
+                Files.createDirectories(veinPath);
+            extractJarVeinDefinitions(configPath, veinPath);
+        } catch (IOException | RuntimeException exception) {
+            EPLog.logger.fatal("Failed to generate worldgen config file", exception);
+        }
 
         //  Add WorldGen
         WorldGenRegistry.INSTANCE.addVeinDefinitions(new OreDepositDefinition("vein/overworld/prasiolite_vein.json"));

@@ -13,6 +13,9 @@ public class EPDataCode {
     public static final int EP_CHANNEL_7 = 9990;
     public static final int EP_CHANNEL_8 = 9991;
     public static final int EP_CHANNEL_9 = 9992;
+    public static final int EP_CHANNEL_10 = 9993;
+    public static final int EP_CHANNEL_11 = 9994;
+    public static final int EP_CHANNEL_12 = 9995;
 
     private EPDataCode() {/**/}
 }
