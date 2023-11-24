@@ -54,15 +54,15 @@ public class EPMetaTileEntityPlasmaCondenser extends RecipeMapMultiblockControll
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.ZIRCONIUM_CARBIDE_CASING);
     }
 
-    private IBlockState getGearboxCasingState() {
+    private static IBlockState getGearboxCasingState() {
         return MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STEEL_GEARBOX);
     }
 
-    private IBlockState getPipeCasingState() {
+    private static IBlockState getPipeCasingState() {
         return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TUNGSTENSTEEL_PIPE);
     }
 

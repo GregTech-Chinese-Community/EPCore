@@ -298,7 +298,7 @@ public class QuantumForceTransformerRecipes {
         QUANTUM_FORCE_TRANSFORMER_RECIPES.recipeBuilder()
                 .input(QUANTUM_ANOMALY)
                 .notConsumable(plate, NeutronStarCoreMaterial)
-                .fluidInputs(Neutron.getFluid(30000))
+                .fluidInputs(Neutron.getPlasma(30000))
                 .fluidInputs(Iron.getPlasma(30000))
                 .fluidInputs(Nickel.getPlasma(30000))
                 .fluidInputs(AstralTitanium.getPlasma(30000))

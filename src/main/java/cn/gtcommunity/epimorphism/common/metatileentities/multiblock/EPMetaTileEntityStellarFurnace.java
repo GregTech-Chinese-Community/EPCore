@@ -67,20 +67,20 @@ public class EPMetaTileEntityStellarFurnace extends RecipeMapMultiblockControlle
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.TRITANIUM_CASING);
     }
 
-    private IBlockState getSecondCasingState() {
+    private static IBlockState getSecondCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.STELLAR_CONTAINMENT_CASING);
     }
 
     //  TODO Maybe high tier fusion coil?
-    private IBlockState getCoilState() {
+    private static IBlockState getCoilState() {
         return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL);
     }
 
-    private IBlockState getFrameState() {
+    private static IBlockState getFrameState() {
         return MetaBlocks.FRAMES.get(Materials.Tritanium).getBlock(Materials.Tritanium);
     }
 

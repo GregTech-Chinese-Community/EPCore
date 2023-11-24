@@ -23,7 +23,6 @@ import gregtech.api.recipes.Recipe;
 import gregtech.api.unification.material.Materials;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.ConfigHolder;
-import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -157,27 +156,27 @@ public class EPMetaTileEntityComponentAssemblyLine extends RecipeMapMultiblockCo
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING.getState(EPBlockMultiblockCasing.CasingType.IRIDIUM_CASING);
     }
 
-    private IBlockState getSecondCasingState() {
+    private static IBlockState getSecondCasingState() {
         return MetaBlocks.MULTIBLOCK_CASING.getState(BlockMultiblockCasing.MultiblockCasingType.ASSEMBLY_LINE_CASING);
     }
 
-    private IBlockState getThirdCasingState() {
+    private static IBlockState getThirdCasingState() {
         return EPMetablocks.EP_CLEANROOM_CASING.getState(EPBlockCleanroomCasing.CasingType.ADVANCED_FILTER_CASING);
     }
 
-    private IBlockState getGlassState() {
+    private static IBlockState getGlassState() {
         return EPMetablocks.EP_GLASS_CASING.getState(EPBlockGlassCasing.CasingType.OSMIR_BORON_SILICATE_GLASS);
     }
 
-    private IBlockState getFrameState() {
+    private static IBlockState getFrameState() {
         return MetaBlocks.FRAMES.get(EPMaterials.MARM200Steel).getBlock(EPMaterials.MARM200Steel);
     }
 
-    private IBlockState getPipeCasingState() {
+    private static IBlockState getPipeCasingState() {
         return EPMetablocks.EP_BOILER_CASING.getState(EPBlockBoilerCasing.BoilerCasingType.POLYBENZIMIDAZOLE);
     }
 

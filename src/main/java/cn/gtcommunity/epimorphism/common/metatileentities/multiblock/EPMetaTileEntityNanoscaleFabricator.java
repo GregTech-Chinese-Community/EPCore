@@ -86,7 +86,7 @@ public class EPMetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockCont
                 .build();
     }
 
-    private IBlockState getNonconductingState() {
+    private static IBlockState getNonconductingState() {
         return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
     }
 

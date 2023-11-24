@@ -124,15 +124,15 @@ public class EPMetaTileEntityCompactCyclotron extends RecipeMapMultiblockControl
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.CYCLOTRON_CASING);
     }
 
-    private IBlockState getCoilState() {
+    private static IBlockState getCoilState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_B.getState(EPBlockMultiblockCasingB.CasingType.CYCLOTRON_COIL);
     }
 
-    private IBlockState getGlassState() {
+    private static IBlockState getGlassState() {
         return MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.FUSION_GLASS);
     }
 

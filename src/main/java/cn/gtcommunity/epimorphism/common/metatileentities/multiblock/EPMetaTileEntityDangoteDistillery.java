@@ -104,11 +104,11 @@ public class EPMetaTileEntityDangoteDistillery extends MultiMapMultiblockControl
                 .build();
     }
 
-    private IBlockState getCasingState() {
+    private static IBlockState getCasingState() {
         return EPMetablocks.EP_MULTIBLOCK_CASING_C.getState(EPBlockMultiblockCasingC.CasingType.HG_1223_CASING);
     }
 
-    private IBlockState getPipeCasingState() {
+    private static IBlockState getPipeCasingState() {
         return EPMetablocks.EP_BOILER_CASING.getState(EPBlockBoilerCasing.BoilerCasingType.POLYBENZIMIDAZOLE);
     }
 
