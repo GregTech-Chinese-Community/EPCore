@@ -30,7 +30,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0xbe49ed)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_DENSE)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROTOR, GENERATE_ROD, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FRAME, GENERATE_CURVED_PLATE, GENERATE_DENSE)
                 .element(EPElements.Draconium)
                 .toolStats(ToolProperty.Builder.of(7.0F, 25.0F, 17000, 22)
                                        .magnetic()
@@ -56,7 +56,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0x2C195A)
                 .iconSet(SHINY)
-                .flags(NO_SMELTING)
+                .flags(NO_SMELTING, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .element(EPElements.ChaoticDraconium)
                 .cableProperties(V[UEV], 32, 16)
                 .build();
@@ -78,7 +78,7 @@ public class EPElementMaterials {
                 .plasma()
                 .color(0xC880FF)
                 .iconSet(SHINY)
-                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_COIL)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_DOUBLE_PLATE, GENERATE_FINE_WIRE, GENERATE_FRAME, GENERATE_COIL, GENERATE_BOLT_SCREW)
                 .element(EPElements.Vibranium)
                 .blastTemp(4852, BlastProperty.GasTier.HIGH)
                 .build();
@@ -197,7 +197,7 @@ public class EPElementMaterials {
                                        .enchantment(Enchantments.SHARPNESS, 10)
                                        .enchantment(Enchantments.LOOTING, 5)
                                        .enchantment(Enchantments.SWEEPING, 3).build())
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
         //  26017 Californium-252
         Californium252 = new Material.Builder(getMaterialsId(), gregtechId("californium_252"))
@@ -229,7 +229,7 @@ public class EPElementMaterials {
                 //  TODO may be re-balance
                 .blastTemp(12000, BlastProperty.GasTier.HIGHEST, VA[UHV])
                 .element(EPElements.CelestialTungsten)
-                .flags(GENERATE_PLATE, GENERATE_FOIL)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_ROD, GENERATE_BOLT_SCREW)
                 .build();
         //  26020 Ytterbium-178
         Ytterbium178 = new Material.Builder(getMaterialsId(), gregtechId("ytterbium_178"))

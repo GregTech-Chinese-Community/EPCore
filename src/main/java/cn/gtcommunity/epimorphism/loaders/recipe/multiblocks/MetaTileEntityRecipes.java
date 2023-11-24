@@ -1,9 +1,6 @@
 package cn.gtcommunity.epimorphism.loaders.recipe.multiblocks;
 
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockActiveMultiblockCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockMillCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockMultiblockCasingB;
-import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
+import cn.gtcommunity.epimorphism.common.blocks.*;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
@@ -934,6 +931,28 @@ public class MetaTileEntityRecipes {
                 'P', PRIMITIVE_BLAST_FURNACE.getStackForm(),
                 'F', new UnificationEntry(frameGt, Steel),
                 'B', new UnificationEntry(plate, Bronze));
+
+        //  Quantum Force Transformer
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Adamantium, 16)
+                .input(circuit, MarkerMaterials.Tier.UEV, 8)
+                .input(plate, AwakenedDraconium, 4)
+                .input(ELECTRIC_PUMP_UHV, 4)
+                .input(FIELD_GENERATOR_UHV, 4)
+                .input(QUANTUM_ANOMALY, 2)
+                .input(wireGtQuadruple, QuantumAlloy, 16)
+                .fluidInputs(Pikyonium64B.getFluid(4608))
+                .fluidInputs(Cinobite.getFluid(4608))
+                .fluidInputs(HastelloyX78.getFluid(4608))
+                .fluidInputs(TitanSteel.getFluid(2304))
+                .outputs(QUANTUM_FORCE_TRANSFORMER.getStackForm())
+                .EUt(VA[UHV])
+                .duration(1200)
+                .stationResearch(b -> b
+                        .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_FORCE_TRANSFORMER_COIL))
+                        .EUt(VA[UV])
+                        .CWUt(256))
+                .buildAndRegister();
     }
 
     private static void GCYMOverrideRecipes() {

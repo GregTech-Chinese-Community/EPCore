@@ -1590,6 +1590,152 @@ public class MachineComponents {
                 .EUt(VA[LV])
                 .duration(50)
                 .buildAndRegister();
+
+        //  Quantum Force Transformer Casings
+
+        //  Casing
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(frameGt, Orichalcum)
+                .input(plate, Tritanium, 4)
+                .input(FIELD_GENERATOR_LuV)
+                .input(wireFine, QuantumAlloy, 16)
+                .fluidInputs(SolderingAlloy.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_CONSTRAINT_CASING, 2))
+                .EUt(VA[UHV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Coil
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(EPMetablocks.EP_WIRE_COIL.getItemVariant(EPBlockWireCoil.CoilType.ADAMANTIUM))// TODO May be infinity coil?
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL, 2))
+                .input(plateDouble, Pikyonium64B, 2)
+                .input(wireFine, Europium, 16)
+                .fluidInputs(GelidCryotheum.getFluid(1440))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_FORCE_TRANSFORMER_COIL))
+                .EUt(VA[UHV])
+                .duration(150)
+                .buildAndRegister();
+
+        //  T1
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Orichalcum, 4)
+                .input(plate, NaquadahAlloy, 4)
+                .input(EMITTER_UV, 4)
+                .input(plateDouble, Osmiridium, 2)
+                .input(plateDouble, Trinium, 2)
+                .input(QUANTUM_ANOMALY)
+                .input(cableGtQuadruple, QuantumAlloy, 4)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Thulium.getFluid(1440))
+                .fluidInputs(Neptunium.getFluid(500))
+                .fluidInputs(Fermium.getFluid(500))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_PULSE_MANIPULATOR_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS))
+                        .EUt(VA[UHV])
+                        .duration(1200))
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, BlackPlutonium, 4)
+                .input(plateDouble, PlatinumGroupAlloy, 4)
+                .input(FIELD_GENERATOR_UV)
+                .input(plateDouble, Draconium, 16)
+                .input(screw, Vibranium, 16)
+                .fluidInputs(SolderingAlloy.getFluid(1440))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_SHIELDING_CORE_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                        .EUt(VA[UHV])
+                        .duration(1200))
+                .EUt(VA[UHV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  T2
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Neutronium, 4)
+                .input(plate, Darmstadtium, 4)
+                .input(EMITTER_UHV, 4)
+                .input(plateDouble, Tritanium, 2)
+                .input(plateDouble, Naquadria, 2)
+                .input(QUANTUM_ANOMALY)
+                .input(METASTABLE_SELF_HEALING_ADHESIVE, 4)
+                .input(cableGtQuadruple, Grisium, 4)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Ytterbium.getFluid(1440))
+                .fluidInputs(Tennessine.getFluid(500))
+                .fluidInputs(Livermorium.getFluid(500))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_MANIPULATOR_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_PULSE_MANIPULATOR_CASING))
+                        .EUt(VA[UEV])
+                        .duration(1200))
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, BlackTitanium, 4)
+                .input(plateDouble, Infinity, 4)
+                .input(FIELD_GENERATOR_UHV)
+                .input(plateDouble, ChaoticDraconium, 16)
+                .input(screw, CelestialTungsten, 16)
+                .fluidInputs(SolderingAlloy.getFluid(1440))
+                .fluidInputs(AstralTitanium.getFluid(500))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_SHIELDING_CORE_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.NEUTRON_SHIELDING_CORE_CASING))
+                        .EUt(VA[UEV])
+                        .duration(1200))
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  T3
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, NeutronStarCoreMaterial, 4)
+                .input(plate, Draconium, 4)
+                .input(EMITTER_UEV, 4)
+                .input(plateDouble, Adamantium, 2)
+                .input(plateDouble, Abyssalloy, 2)
+                .input(QUANTUM_ANOMALY)
+                .input(HYPERDIMENSIONAL_TACHYON_CONDENSED_MATTER, 4)
+                .input(cableGtQuadruple, FullereneSuperconductor, 4)
+                .fluidInputs(SolderingAlloy.getFluid(5760))
+                .fluidInputs(Lutetium.getFluid(1440))
+                .fluidInputs(MetastableOganesson.getFluid(500))
+                .fluidInputs(MetastableHassium.getFluid(500))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_MANIPULATOR_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_MANIPULATOR_CASING))
+                        .EUt(VA[UIV])
+                        .duration(1200))
+                .EUt(VA[UIV])
+                .duration(200)
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Legendarium, 4)
+                .input(plateDouble, Hypogen, 4)
+                .input(FIELD_GENERATOR_UEV)
+                .input(plateDouble, MagnetoHydrodynamicallyConstrainedStarMatter, 16)
+                .input(screw, SuperheavyLAlloy, 16)
+                .fluidInputs(SolderingAlloy.getFluid(1440))
+                .fluidInputs(SuperheavyHAlloy.getFluid(500))
+                .outputs(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_SHIELDING_CORE_CASING))
+                .scannerResearch(b -> b
+                        .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.COSMIC_FABRIC_SHIELDING_CORE_CASING))
+                        .EUt(VA[UIV])
+                        .duration(1200))
+                .EUt(VA[UIV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  TODO T4
     }
 
     private static void Materials() {

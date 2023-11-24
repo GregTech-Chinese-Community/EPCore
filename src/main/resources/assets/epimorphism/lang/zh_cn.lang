@@ -467,6 +467,8 @@ metaitem.component.vacuum_tube.name=真空管组件
 metaitem.separation_electromagnet.name=分离用电磁铁
 metaitem.protonated_fullerene_sieving_matrix.name=质子化富勒烯筛分基质
 metaitem.saturated_fullerene_sieving_matrix.name=饱和富勒烯筛分基质
+metaitem.metastable_self_healing_adhesive.name=超稳态自修复粘合剂
+metaitem.hyperdimensional_tachyon_condensed_matter.name=超维度快子凝聚物质
 metaitem.unstable_star.name=易变之星
 
 #  Covers
@@ -1750,3 +1752,4 @@ gregtech.material.fullerene_superconductor=富勒烯超导体
 gregtech.material.legendarium=传奇金属
 gregtech.material.superheavy_h_alloy=超重元素-重合金
 gregtech.material.superheavy_l_alloy=超重元素-轻合金
+gregtech.material.platinum_group_alloy=稀有金属合金
