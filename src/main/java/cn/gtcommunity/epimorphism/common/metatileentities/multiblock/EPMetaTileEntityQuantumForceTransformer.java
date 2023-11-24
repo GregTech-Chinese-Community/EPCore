@@ -11,6 +11,7 @@ import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockQuantumForceTransformerCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
+import gregtech.api.metatileentity.IFastRenderMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -22,15 +23,22 @@ import gregtech.api.pattern.PatternMatchContext;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.lwjgl.opengl.GL11;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -40,7 +48,7 @@ import java.util.stream.Collectors;
 
 import static gregtech.api.GTValues.*;
 
-public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblockController {
+public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblockController implements IFastRenderMetaTileEntity {
 
     private int ManipulatorCasingTier;
     private int ShieldingCoreCasingTier;
@@ -166,6 +174,14 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
     }
 
     @Override
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+        super.addInformation(stack, player, tooltip, advanced);
+        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.1"));
+        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.2"));
+        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.3"));
+    }
+
+    @Override
     public List<MultiblockShapeInfo> getMatchingShapes() {
         ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList<>();
         MultiblockShapeInfo.Builder builder = null;
@@ -239,11 +255,121 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
         this.ManipulatorCasingTier = buf.readInt();
     }
 
+    @SideOnly(Side.CLIENT)
+    private void renderForceField(BufferBuilder buffer, double x, double y, double z, int side, double minU, double maxU, double minV, double maxV) {
+
+        switch (side) {
+            case 0 -> {
+                buffer.pos(x + 3, y, z + 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x + 3, y + 4, z + 7).tex(maxU, minV).endVertex();
+                buffer.pos(x - 3, y + 4, z + 7).tex(minU, minV).endVertex();
+                buffer.pos(x - 3, y, z + 7).tex(minU, maxV).endVertex();
+            }
+            case 1 -> {
+                buffer.pos(x + 7, y, z + 4).tex(maxU, maxV).endVertex();
+                buffer.pos(x + 7, y + 4, z + 4).tex(maxU, minV).endVertex();
+                buffer.pos(x + 7, y + 4, z - 4).tex(minU, minV).endVertex();
+                buffer.pos(x + 7, y, z - 4).tex(minU, maxV).endVertex();
+            }
+            case 2 -> {
+                buffer.pos(x + 3, y, z - 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x + 3, y + 4, z - 7).tex(maxU, minV).endVertex();
+                buffer.pos(x - 3, y + 4, z - 7).tex(minU, minV).endVertex();
+                buffer.pos(x - 3, y, z - 7).tex(minU, maxV).endVertex();
+            }
+            case 3 -> {
+                buffer.pos(x - 7, y, z + 4).tex(maxU, maxV).endVertex();
+                buffer.pos(x - 7, y + 4, z + 4).tex(maxU, minV).endVertex();
+                buffer.pos(x - 7, y + 4, z - 4).tex(minU, minV).endVertex();
+                buffer.pos(x - 7, y, z - 4).tex(minU, maxV).endVertex();
+            }
+            case 4 -> {
+                buffer.pos(x - 3, y, z + 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x - 3, y + 4, z + 7).tex(maxU, minV).endVertex();
+                buffer.pos(x - 7, y + 4, z + 4).tex(minU, minV).endVertex();
+                buffer.pos(x - 7, y, z + 4).tex(minU, maxV).endVertex();
+            }
+            case 5 -> {
+                buffer.pos(x - 3, y, z - 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x - 3, y + 4, z - 7).tex(maxU, minV).endVertex();
+                buffer.pos(x - 7, y + 4, z - 4).tex(minU, minV).endVertex();
+                buffer.pos(x - 7, y, z - 4).tex(minU, maxV).endVertex();
+            }
+            case 6 -> {
+                buffer.pos(x + 3, y, z + 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x + 3, y + 4, z + 7).tex(maxU, minV).endVertex();
+                buffer.pos(x + 7, y + 4, z + 4).tex(minU, minV).endVertex();
+                buffer.pos(x + 7, y, z + 4).tex(minU, maxV).endVertex();
+            }
+            case 7 -> {
+                buffer.pos(x + 3, y, z - 7).tex(maxU, maxV).endVertex();
+                buffer.pos(x + 3, y + 4, z - 7).tex(maxU, minV).endVertex();
+                buffer.pos(x + 7, y + 4, z - 4).tex(minU, minV).endVertex();
+                buffer.pos(x + 7, y, z - 4).tex(minU, maxV).endVertex();
+            }
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
-        super.addInformation(stack, player, tooltip, advanced);
-        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.1"));
-        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.2"));
-        tooltip.add(I18n.format("epimorphism.machine.quantum_force_transformer.tooltip.3"));
+    public void renderMetaTileEntity(double x, double y, double z, float partialTicks) {
+        Tessellator tess = Tessellator.getInstance();
+        BufferBuilder buffer = tess.getBuffer();
+        TextureAtlasSprite forceField = EPTextures.FORCE_FIELD;
+        GlStateManager.bindTexture(1);
+        if (!isActive()) {
+
+            double minU = forceField.getMinU();
+            double maxU = forceField.getMaxU();
+            double minV = forceField.getMinV();
+            double maxV = forceField.getMaxV();
+            double xBaseOffset = 3 * getFrontFacing().getOpposite().getXOffset();
+            double zBaseOffset = 3 * getFrontFacing().getOpposite().getZOffset();
+            GlStateManager.pushMatrix();
+            GlStateManager.disableCull();
+            GlStateManager.disableAlpha();
+            GlStateManager.enableBlend();
+            GlStateManager.color(1, 1, 1, 1);
+            int i = 15728880;
+            int j = i % 65536;
+            int k = i / 65536;
+            OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float)j, (float)k);
+            Minecraft.getMinecraft().getTextureManager().bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+            //Center O:  0,  0         1 ------- 8
+            //Corner 1:  7, -2        /           \
+            //Corner 2:  3, -6     2 /             \ 7
+            //Corner 3: -2, -6      |               |
+            //Corner 4: -6, -2      |       O       |
+            //Corner 5: -6,  3      |               |
+            //Corner 6: -2,  7     3 \             / 6
+            //Corner 7:  3,  7        \           /
+            //Corner 8:  7,  3         4 ------- 5
+            buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 0, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 1, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 2, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 3, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 4, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 5, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 6, minU, maxU, minV, maxV);
+            renderForceField(buffer, x + xBaseOffset + 0.5, y, z + zBaseOffset + 0.5, 7, minU, maxU, minV, maxV);
+            tess.draw();
+            GlStateManager.disableBlend();
+            GlStateManager.enableAlpha();
+            GlStateManager.enableCull();
+            GlStateManager.popMatrix();
+        }
+    }
+
+    public AxisAlignedBB getRenderBoundingBox() {
+        return new AxisAlignedBB(this.getPos().offset(this.getFrontFacing().getOpposite()).offset(this.getFrontFacing().rotateY(), 6), this.getPos().offset(this.getFrontFacing().getOpposite(), 13).offset(this.getFrontFacing().rotateY().getOpposite(), 6));
+    }
+
+    public boolean shouldRenderInPass(int pass) {
+        return pass == 0;
+    }
+
+    public boolean isGlobalRenderer() {
+        return true;
     }
 }

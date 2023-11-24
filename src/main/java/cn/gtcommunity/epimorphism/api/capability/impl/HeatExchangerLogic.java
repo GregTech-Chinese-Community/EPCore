@@ -1,31 +1,54 @@
 package cn.gtcommunity.epimorphism.api.capability.impl;
 
-import cn.gtcommunity.epimorphism.api.capability.IHeatExchanger;
+import cn.gtcommunity.epimorphism.api.capability.EPDataCode;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.IHeatExchanger;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.NoEnergyMultiblockController;
 import cn.gtcommunity.epimorphism.api.recipe.properties.FlowRateProperty;
-import cn.gtcommunity.epimorphism.api.utils.EPLog;
+import cn.gtcommunity.epimorphism.api.recipe.properties.MaxRateProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPMathUtil;
-import cn.gtcommunity.epimorphism.common.metatileentities.multiblock.EPMetaTileEntityLargeHeatExchanger;
-import gregtech.api.capability.IMultipleTankHandler;
-import gregtech.api.capability.IRotorHolder;
-import gregtech.api.capability.impl.PrimitiveRecipeLogic;
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
-import gregtech.common.metatileentities.multi.electric.generator.MetaTileEntityLargeTurbine;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.items.IItemHandlerModifiable;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class HeatExchangerLogic extends NoEnergyMultiblockRecipeLogic {
+
+    private int currentHeat;
+    private final int maxHeat;
+    private boolean isSuperheat;
+    private int rate;
+
     public HeatExchangerLogic(NoEnergyMultiblockController tileEntity) {
         super(tileEntity, tileEntity.recipeMap);
+        this.maxHeat = ((IHeatExchanger)tileEntity).getHeatTime() * 20;
+    }
+
+    @Override
+    public void update() {
+        if ((!isActive() || !canProgressRecipe() || !isWorkingEnabled()) && currentHeat > 0) {
+            setHeat(currentHeat - 1);
+            setRate(0);
+            setSuperheat(false);
+        }
+        super.update();
+    }
+
+    @Override
+    protected void updateRecipeProgress() {
+        super.updateRecipeProgress();
+        if (!canRecipeProgress) return;
+
+        if (currentHeat < maxHeat) {
+            setHeat(currentHeat + 1);
+        }
     }
 
     @Override
@@ -69,14 +92,19 @@ public class HeatExchangerLogic extends NoEnergyMultiblockRecipeLogic {
     protected boolean prepareRecipe(Recipe recipe) {
         FluidStack recipeFluidStack = recipe.getFluidInputs().get(1).getInputFluidStack();
         FluidStack inputFluidStack = getInputFluidStack(recipeFluidStack);
-        int maxInletFlow = (int) (Math.ceil(0.4 + 0.006 * ((IHeatExchanger)metaTileEntity).getThrottle() * ((IHeatExchanger)metaTileEntity).getParallel()));
-        int threshold = (int) Math.ceil((double) (recipe.getProperty(FlowRateProperty.getInstance(), 0) * ((IHeatExchanger) metaTileEntity).getThrottle()) / 100);
+        IHeatExchanger mte = (IHeatExchanger)metaTileEntity;
+        int rMaxInletFlow = recipe.getProperty(MaxRateProperty.getInstance(), 0);
+
+        int tMaxInletFlow = (int) Math.ceil((0.4 + 0.006 * mte.getThrottle()) * ((double) currentHeat / maxHeat) * mte.getParallel() * rMaxInletFlow);
+        int threshold = (int) Math.ceil(0.01 * recipe.getProperty(FlowRateProperty.getInstance(), 0) * mte.getThrottle());
 
         if (inputFluidStack != null) {
-            int amount = EPMathUtil.clamp(inputFluidStack.amount, 0, maxInletFlow);
+            int amount = EPMathUtil.clamp(inputFluidStack.amount, 0, tMaxInletFlow);
             if (amount >= threshold) {
+                setSuperheat(true);
                 return setRecipe(recipe, amount, 1);
             } else {
+                setSuperheat(false);
                 return setRecipe(recipe, amount, 0);
             }
         }
@@ -95,6 +123,7 @@ public class HeatExchangerLogic extends NoEnergyMultiblockRecipeLogic {
         recipe = recipeBuilder.build().getResult();
         if (recipe != null && setupAndConsumeRecipeInputs(recipe, getInputInventory())) {
             setupRecipe(recipe);
+            setRate(amount);
             return true;
         } else {
             metaTileEntity.doExplosion(6);
@@ -104,6 +133,87 @@ public class HeatExchangerLogic extends NoEnergyMultiblockRecipeLogic {
 
     public FluidStack getInputFluidStack(FluidStack fluidStack) {
         return getInputTank().drain(new FluidStack(fluidStack.getFluid(), Integer.MAX_VALUE), false);
+    }
+
+    private void setHeat(int heat) {
+        if (heat != this.currentHeat && !metaTileEntity.getWorld().isRemote) {
+            writeCustomData(EPDataCode.EP_CHANNEL_10, b -> b.writeVarInt(heat));
+        }
+        this.currentHeat = heat;
+    }
+
+    private void setSuperheat(boolean isSuperheat) {
+        if (this.isSuperheat != isSuperheat && !metaTileEntity.getWorld().isRemote) {
+            writeCustomData(EPDataCode.EP_CHANNEL_11, b -> b.writeBoolean(isSuperheat));
+        }
+        this.isSuperheat = isSuperheat;
+    }
+
+    private void setRate(int rate) {
+        if (this.rate != rate && !metaTileEntity.getWorld().isRemote) {
+            writeCustomData(EPDataCode.EP_CHANNEL_12, b -> b.writeVarInt(rate));
+        }
+        this.rate = rate;
+    }
+
+    public double getHeatEfficiency() {
+        return (double) currentHeat / maxHeat;
+    }
+
+    public int getRate() {
+        return rate;
+    }
+
+    public boolean isSuperheat() {
+        return isSuperheat;
+    }
+
+    @Nonnull
+    @Override
+    public NBTTagCompound serializeNBT() {
+        NBTTagCompound compound = super.serializeNBT();
+        compound.setInteger("Heat", currentHeat);
+        compound.setInteger("Rate", rate);
+        compound.setBoolean("isSuperheat", isSuperheat);
+        return compound;
+    }
+
+    @Override
+    public void deserializeNBT(@Nonnull NBTTagCompound compound) {
+        super.deserializeNBT(compound);
+        currentHeat = compound.getInteger("Heat");
+        rate = compound.getInteger("Rate");
+        isSuperheat = compound.getBoolean("isSuperheat");
+    }
+
+    @Override
+    public void writeInitialData(@Nonnull PacketBuffer buf) {
+        super.writeInitialData(buf);
+        buf.writeVarInt(currentHeat);
+        buf.writeVarInt(rate);
+        buf.writeBoolean(isSuperheat);
+    }
+
+    @Override
+    public void receiveInitialData(@Nonnull PacketBuffer buf) {
+        super.receiveInitialData(buf);
+        this.currentHeat = buf.readVarInt();
+        this.rate = buf.readVarInt();
+        this.isSuperheat = buf.readBoolean();
+    }
+
+    @Override
+    public void receiveCustomData(int dataId, @Nonnull PacketBuffer buf) {
+        super.receiveCustomData(dataId, buf);
+        if (dataId == EPDataCode.EP_CHANNEL_10) {
+            this.currentHeat = buf.readVarInt();
+        }
+        if (dataId == EPDataCode.EP_CHANNEL_11) {
+            this.isSuperheat = buf.readBoolean();
+        }
+        if (dataId == EPDataCode.EP_CHANNEL_12) {
+            this.rate = buf.readVarInt();
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.api.capability.IHeatExchanger;
+import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.IHeatExchanger;
 import cn.gtcommunity.epimorphism.api.capability.impl.HeatExchangerLogic;
 import cn.gtcommunity.epimorphism.api.metatileentity.multiblock.NoEnergyMultiblockController;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 import static gregtech.api.gui.widgets.AdvancedTextWidget.withHoverTextTranslate;
-import static net.minecraft.util.text.TextFormatting.AQUA;
+import static net.minecraft.util.text.TextFormatting.*;
 
 public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockController implements IHeatExchanger {
     private final int parallel = 32;
@@ -97,11 +97,11 @@ public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockControl
     protected void addDisplayText(List<ITextComponent> textList) {
         super.addDisplayText(textList);
         if (isStructureFormed()) {
-//            int efficiency = recipeLogic.getHeatScaled();
-//            textList.add(new TextComponentTranslation("gregtech.multiblock.large_boiler.efficiency",
-//                    (efficiency == 0 ? DARK_RED : efficiency <= 40 ? RED : efficiency == 100 ? GREEN : YELLOW).toString() + efficiency + "%"));
-//            textList.add(new TextComponentTranslation("gregtech.multiblock.large_boiler.steam_output", recipeLogic.getLastTickSteam()));
-
+            HeatExchangerLogic logic = (HeatExchangerLogic)recipeMapWorkable;
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.large_heat_exchanger.rate." + logic.isSuperheat(), logic.getRate()));
+            int efficiency = (int) Math.ceil(((HeatExchangerLogic)recipeMapWorkable).getHeatEfficiency() * (40 + 0.6 * thresholdPercentage));
+            textList.add(new TextComponentTranslation("epimorphism.multiblock.large_heat_exchanger.efficiency",
+                    (efficiency == 0 ? DARK_RED : efficiency <= 40 ? RED : efficiency == 100 ? GREEN : YELLOW).toString() + efficiency + "%"));
             ITextComponent throttleText = new TextComponentTranslation("epimorphism.multiblock.large_heat_exchanger.threshold",
                     AQUA.toString() + getThrottle() + "%");
             withHoverTextTranslate(throttleText, "epimorphism.multiblock.large_heat_exchanger.threshold.tooltip");
@@ -136,7 +136,7 @@ public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockControl
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("epimorphism.multiblock.large_heat_exchanger.heat_time_tooltip", heatTime));
         tooltip.add(I18n.format("epimorphism.multiblock.mega_heat_exchanger.tooltip.parallel", parallel));
@@ -170,6 +170,11 @@ public class EPMetaTileEntityMegaHeatExchanger extends NoEnergyMultiblockControl
     @Override
     public int getThrottle() {
         return thresholdPercentage;
+    }
+
+    @Override
+    public int getHeatTime() {
+        return heatTime;
     }
 
     @Override
