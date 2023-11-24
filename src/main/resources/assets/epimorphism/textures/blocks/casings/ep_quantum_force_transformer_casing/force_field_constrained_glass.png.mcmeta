@@ -1,0 +1,15 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "CTM",
+        "layer": "BLOOM",
+        "gregtech": true,
+        "textures": [
+            "layer0": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass_ctm",
+            "layer1": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass_ctm"
+        ],
+        "extra": {
+            "light": 4
+        }
+    }
+}

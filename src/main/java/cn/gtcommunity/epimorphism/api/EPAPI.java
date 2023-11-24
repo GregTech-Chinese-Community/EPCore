@@ -27,6 +27,7 @@ public class EPAPI {
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_CA_TIRED_CASING = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_QFT_MANIPULATOR = new Object2ObjectOpenHashMap<>();
     public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_QFT_SHIELDING_CORE = new Object2ObjectOpenHashMap<>();
+    public static final Object2ObjectOpenHashMap<IBlockState, ITier> MAP_QFT_GLASS = new Object2ObjectOpenHashMap<>();
 
     public static void APIBlockInit() {
         //  HEATING_COILS Addition
@@ -153,5 +154,15 @@ public class EPAPI {
                 new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.INFINITY_INFUSED_SHIELDING_CORE_CASING, 3));
         MAP_QFT_SHIELDING_CORE.put(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_SHIELDING_CORE_CASING),
                 new WrappedIntTier(EPBlockQuantumForceTransformerCasing.CasingType.SUPRACAUSAL_CONTINUUM_SHIELDING_CORE_CASING, 4));
+
+        //  MAP_QFT_GLASS Init
+        MAP_QFT_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(EPBlockGlassCasingB.GlassType.FORCE_FIELD_CONSTRAINED_GLASS),
+                new WrappedIntTier(EPBlockGlassCasingB.GlassType.FORCE_FIELD_CONSTRAINED_GLASS, 1));
+        MAP_QFT_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(EPBlockGlassCasingB.GlassType.COSMIC_MICROWAVE_BACKGROUND_RADIATION_ABSORPTION_GLASS),
+                new WrappedIntTier(EPBlockGlassCasingB.GlassType.COSMIC_MICROWAVE_BACKGROUND_RADIATION_ABSORPTION_GLASS, 2));
+        MAP_QFT_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(EPBlockGlassCasingB.GlassType.SPACETIME_SUPERCONDENSER_GLASS),
+                new WrappedIntTier(EPBlockGlassCasingB.GlassType.SPACETIME_SUPERCONDENSER_GLASS, 3));
+        MAP_QFT_GLASS.put(EPMetablocks.EP_GLASS_CASING_B.getState(EPBlockGlassCasingB.GlassType.SUPRACAUSAL_LIGHT_CONE_GLASS),
+                new WrappedIntTier(EPBlockGlassCasingB.GlassType.SUPRACAUSAL_LIGHT_CONE_GLASS, 4));
     }
 }

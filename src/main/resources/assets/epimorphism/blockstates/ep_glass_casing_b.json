@@ -14,6 +14,62 @@
       "textures": {
         "all": "epimorphism:blocks/casings/ep_glass_casing_b/infinity_glass"
       }
+    },
+    "active=false,variant=force_field_constrained_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass"
+      }
+    },
+    "active=true,variant=force_field_constrained_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass"
+      }
+    },
+    "active=false,variant=cosmic_microwave_background_radiation_absorption_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/cosmic_microwave_background_radiation_absorption_glass"
+      }
+    },
+    "active=true,variant=cosmic_microwave_background_radiation_absorption_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/cosmic_microwave_background_radiation_absorption_glass"
+      }
+    },
+    "active=false,variant=spacetime_supercondenser_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/spacetime_supercondenser_glass"
+      }
+    },
+    "active=true,variant=spacetime_supercondenser_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/spacetime_supercondenser_glass"
+      }
+    },
+    "active=false,variant=supracausal_light_cone_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/supracausal_light_cone_glass"
+      }
+    },
+    "active=true,variant=supracausal_light_cone_glass": {
+      "model": "minecraft:cube_all",
+      "ambientocclusion": false,
+      "textures": {
+        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/supracausal_light_cone_glass"
+      }
     }
   }
 }

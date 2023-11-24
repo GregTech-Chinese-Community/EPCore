@@ -96,6 +96,8 @@ public class EPTraceabilityPredicate {
             Comparator.comparing((s) -> ((WrappedIntTier)MAP_QFT_MANIPULATOR.get(s)).getIntTier()), "QFTManipulator", null);
     public static Supplier<TierTraceabilityPredicate> EP_QFT_SHIELDING_CORE = () -> new TierTraceabilityPredicate(MAP_QFT_SHIELDING_CORE,
             Comparator.comparing((s) -> ((WrappedIntTier)MAP_QFT_SHIELDING_CORE.get(s)).getIntTier()), "QFTShieldingCore", null);
+    public static Supplier<TierTraceabilityPredicate> EP_QFT_GLASS = () -> new TierTraceabilityPredicate(MAP_QFT_GLASS,
+            Comparator.comparing((s) -> ((WrappedIntTier)MAP_QFT_GLASS.get(s)).getIntTier()), "QFTGlass", null);
 
     //  Optional Traceability Predicates
     public static TraceabilityPredicate optionalStates(String mark, IBlockState... allowedStates) {

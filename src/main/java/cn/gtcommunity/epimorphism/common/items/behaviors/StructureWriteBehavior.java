@@ -1,7 +1,6 @@
 package cn.gtcommunity.epimorphism.common.items.behaviors;
 
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
-import cn.gtcommunity.epimorphism.client.renderer.handler.TestRenderer;
 import codechicken.lib.vec.Vector3;
 import com.google.common.eventbus.Subscribe;
 import gregtech.api.gui.ModularUI;
