@@ -152,6 +152,8 @@ public class EPMetaItem1 extends StandardMetaItem {
         PROTONATED_FULLERENE_SIEVING_MATRIX = this.addItem(112, "protonated_fullerene_sieving_matrix");
         SATURATED_FULLERENE_SIEVING_MATRIX = this.addItem( 113, "saturated_fullerene_sieving_matrix");
         NULL = this.addItem(114, "null").addComponents(new CosmicRenderItemBehavior(() -> EPTextures.MASK_INGOT, 1));
+        METASTABLE_SELF_HEALING_ADHESIVE = this.addItem(115, "metastable_self_healing_adhesive");
+        HYPERDIMENSIONAL_TACHYON_CONDENSED_MATTER = this.addItem(116, "hyperdimensional_tachyon_condensed_matter");
 
         UNSTABLE_STAR = this.addItem(120, "unstable_star");
 

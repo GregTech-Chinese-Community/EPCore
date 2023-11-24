@@ -63,7 +63,7 @@ public class EPMachineCasingMaterials {
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UHV], 1600)
                 .components(Stellite, 15, Emerald, 5, Gallium, 5, Americium, 5, Germanium, 5, TitaniumTungstenCarbide, 5)
                 .cableProperties(V[UHV], 24, 0, true)
-                .flags(GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .build();
         //  24505 Grisium
         Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
@@ -95,7 +95,7 @@ public class EPMachineCasingMaterials {
                 .blastTemp(9625, BlastProperty.GasTier.HIGHEST, VA[UEV], 2250)
                 .components(StainlessSteel, 5, TungstenCarbide, 5, Nichrome, 5, IncoloyMA956, 5, Germanium, 1, Rutherfordium, 1, Radon, 1)
                 .cableProperties(V[UEV], 64, 64, false)
-                .flags(GENERATE_FINE_WIRE)
+                .flags(GENERATE_FINE_WIRE, GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
         //  24508 Lafium
         Lafium = new Material.Builder(getMaterialsId(), gregtechId("lafium"))
@@ -437,6 +437,17 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(Rutherfordium, 1, Dubnium, 1, Seaborgium, 1, Bohrium, 1, MetastableHassium, 1, Meitnerium, 1, Darmstadtium, 1, Roentgenium, 1)
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 4990)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .build();
+        //  24542 Platinum-group Alloy
+        PlatinumGroupAlloy = new Material.Builder(getMaterialsId(), gregtechId("platinum_group_alloy"))
+                .ingot()
+                .fluid()
+                .color(Gold.getMaterialRGB() + Silver.getMaterialRGB() + Platinum.getMaterialRGB() + Palladium.getMaterialRGB() + Ruthenium.getMaterialRGB() + Rhodium.getMaterialRGB() + Iridium.getMaterialRGB() + Osmium.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Gold, 1, Silver, 1, Platinum, 1, Palladium, 1, Ruthenium, 1, Rhodium, 1, Iridium, 1, Osmium, 1)
+                .blastTemp(10000, BlastProperty.GasTier.HIGHEST, VA[UV], 1800)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE)
                 .build();
     }
 

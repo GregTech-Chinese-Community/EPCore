@@ -220,10 +220,6 @@ public class StellarFurnaceRecipes {
 
         //  TODO other components of Cosmic Computing Mixture
 
-        //  Instantons
-
-        //  Temporal Fluid
-
         //  Cosmic Computing Mixture
         STELLAR_FURNACE_RECIPES.recipeBuilder()
                 .fluidInputs(HeavyLeptonMixture.getFluid(32000))

@@ -662,6 +662,7 @@ public EPMaterials() {}
     public static Material Legendarium;
     public static Material SuperheavyHAlloy;
     public static Material SuperheavyLAlloy;
+    public static Material PlatinumGroupAlloy;
 
     //  Mod Compatibility Materials
     public static Material Mana;

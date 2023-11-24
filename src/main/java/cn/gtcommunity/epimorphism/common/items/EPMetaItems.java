@@ -140,7 +140,8 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem PROTONATED_FULLERENE_SIEVING_MATRIX;
     public static MetaItem<?>.MetaValueItem SATURATED_FULLERENE_SIEVING_MATRIX;
     public static MetaItem<?>.MetaValueItem NULL;
-
+    public static MetaItem<?>.MetaValueItem METASTABLE_SELF_HEALING_ADHESIVE;
+    public static MetaItem<?>.MetaValueItem HYPERDIMENSIONAL_TACHYON_CONDENSED_MATTER;
     public static MetaItem<?>.MetaValueItem UNSTABLE_STAR;
 
     //  Crystal Components

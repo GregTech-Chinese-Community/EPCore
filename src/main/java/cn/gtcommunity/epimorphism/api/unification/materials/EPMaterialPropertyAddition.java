@@ -52,7 +52,9 @@ public class EPMaterialPropertyAddition {
         Dysprosium.setProperty(PropertyKey.DUST, new DustProperty());
         Holmium.setProperty(PropertyKey.DUST, new DustProperty());
         Thulium.setProperty(PropertyKey.DUST, new DustProperty());
+        Thulium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Ytterbium.setProperty(PropertyKey.DUST, new DustProperty());
+        Ytterbium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Strontium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Polonium.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -119,7 +121,7 @@ public class EPMaterialPropertyAddition {
         HSLASteel.addFlags(GENERATE_DOUBLE_PLATE);
         Trinaquadalloy.addFlags(GENERATE_FRAME);
         CobaltBrass.addFlags(GENERATE_FRAME);
-        Trinium.addFlags(GENERATE_SPRING);
+        Trinium.addFlags(GENERATE_SPRING, GENERATE_DOUBLE_PLATE);
         Tritanium.addFlags(GENERATE_SPRING, GENERATE_CURVED_PLATE, GENERATE_ROTOR, GENERATE_DOUBLE_PLATE);
         RedSteel.addFlags(GENERATE_DOUBLE_PLATE);
         Ruthenium.addFlags(GENERATE_DOUBLE_PLATE);
