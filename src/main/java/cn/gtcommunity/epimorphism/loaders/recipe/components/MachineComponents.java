@@ -1618,6 +1618,17 @@ public class MachineComponents {
                 .buildAndRegister();
 
         //  T1
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS))
+                .input(plate, Draconium, 2)
+                .input(FIELD_GENERATOR_LuV)
+                .input(NEUTRON_REFLECTOR, 4)
+                .fluidInputs(Naquadah.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.FORCE_FIELD_CONSTRAINED_GLASS))
+                .EUt(VA[UHV])
+                .duration(20)
+                .buildAndRegister();
+
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(frameGt, Orichalcum, 4)
                 .input(plate, NaquadahAlloy, 4)
@@ -1656,6 +1667,17 @@ public class MachineComponents {
                 .buildAndRegister();
 
         //  T2
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS))
+                .input(plate, Neutronium, 2)
+                .input(FIELD_GENERATOR_ZPM)
+                .input(NEUTRON_REFLECTOR, 4)
+                .fluidInputs(Trinium.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.COSMIC_MICROWAVE_BACKGROUND_RADIATION_ABSORPTION_GLASS))
+                .EUt(VA[UEV])
+                .duration(20)
+                .buildAndRegister();
+
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(frameGt, Neutronium, 4)
                 .input(plate, Darmstadtium, 4)
@@ -1696,6 +1718,17 @@ public class MachineComponents {
                 .buildAndRegister();
 
         //  T3
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.TRANSPARENT_CASING.getItemVariant(BlockGlassCasing.CasingType.FUSION_GLASS))
+                .input(plate, NeutronStarCoreMaterial, 2)
+                .input(FIELD_GENERATOR_UV)
+                .input(NEUTRON_REFLECTOR, 4)
+                .fluidInputs(Taranium.getFluid(L * 2))
+                .outputs(EPMetablocks.EP_GLASS_CASING_B.getItemVariant(EPBlockGlassCasingB.GlassType.SPACETIME_SUPERCONDENSER_GLASS))
+                .EUt(VA[UIV])
+                .duration(20)
+                .buildAndRegister();
+
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(frameGt, NeutronStarCoreMaterial, 4)
                 .input(plate, Draconium, 4)

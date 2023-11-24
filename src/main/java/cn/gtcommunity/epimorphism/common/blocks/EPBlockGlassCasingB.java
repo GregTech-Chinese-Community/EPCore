@@ -97,7 +97,11 @@ public class EPBlockGlassCasingB extends VariantActiveBlock<EPBlockGlassCasingB.
     }
 
     public enum GlassType implements IStringSerializable, ITierGlassBlockState {
-        INFINITY_GLASS("infinity_glass", GTValues.OpV, false);
+        INFINITY_GLASS("infinity_glass", GTValues.OpV, false),
+        FORCE_FIELD_CONSTRAINED_GLASS("force_field_constrained_glass", GTValues.UHV, false),
+        COSMIC_MICROWAVE_BACKGROUND_RADIATION_ABSORPTION_GLASS("cosmic_microwave_background_radiation_absorption_glass", GTValues.UEV, false),
+        SPACETIME_SUPERCONDENSER_GLASS("spacetime_supercondenser_glass", GTValues.UIV, false),
+        SUPRACAUSAL_LIGHT_CONE_GLASS("supracausal_light_cone_glass", GTValues.UXV, false);
 
         private final String name;
         private final int tier;

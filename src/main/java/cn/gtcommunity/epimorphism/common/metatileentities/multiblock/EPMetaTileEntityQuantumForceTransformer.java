@@ -7,7 +7,6 @@ import cn.gtcommunity.epimorphism.api.pattern.EPTraceabilityPredicate;
 import cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps;
 import cn.gtcommunity.epimorphism.api.utils.EPUniverUtil;
 import cn.gtcommunity.epimorphism.client.renderer.texture.EPTextures;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockGlassCasingB;
 import cn.gtcommunity.epimorphism.common.blocks.EPBlockQuantumForceTransformerCasing;
 import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities;
@@ -52,10 +51,12 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
 
     private int ManipulatorCasingTier;
     private int ShieldingCoreCasingTier;
+    private int GlassTier;
     private int tier;
     private static boolean init = false;
     private static List<IBlockState> finalListManipulatorCasing;
     private static List<IBlockState> finalListShieldingCoreCasing;
+    private static List<IBlockState> finalListGlass;
 
     public EPMetaTileEntityQuantumForceTransformer(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, EPRecipeMaps.QUANTUM_FORCE_TRANSFORMER_RECIPES);
@@ -80,13 +81,20 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
 
+        List<IBlockState> ListGlass = EPAPI.MAP_QFT_GLASS.entrySet().stream()
+                .sorted(Comparator.comparingInt(entry -> ((WrappedIntTier) entry.getValue()).getIntTier()))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+
         int maxLeng = EPUniverUtil.maxLength(new ArrayList<List<IBlockState>>() {{
             add(ListManipulatorCasing);
             add(ListShieldingCoreCasing);
+            add(ListGlass);
         }});
 
         finalListManipulatorCasing = EPUniverUtil.consistentList(ListManipulatorCasing, maxLeng);
         finalListShieldingCoreCasing = EPUniverUtil.consistentList(ListShieldingCoreCasing, maxLeng);
+        finalListGlass = EPUniverUtil.consistentList(ListGlass, maxLeng);
 
         init = true;
     }
@@ -96,13 +104,16 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
         super.formStructure(context);
         Object ManipulatorCasingTier = context.get("QFTManipulatorCasingTieredStats");
         Object ShieldingCoreCasingTier = context.get("QFTShieldingCoreCasingTieredStats");
+        Object GlassTier = context.get("QFTGlassTieredStats");
 
         this.ManipulatorCasingTier = EPUniverUtil.getOrDefault(() -> ManipulatorCasingTier instanceof WrappedIntTier,
                 () -> ((WrappedIntTier) ManipulatorCasingTier).getIntTier(), 0);
         this.ShieldingCoreCasingTier = EPUniverUtil.getOrDefault(() -> ShieldingCoreCasingTier instanceof WrappedIntTier,
                 () -> ((WrappedIntTier) ShieldingCoreCasingTier).getIntTier(), 0);
+        this.GlassTier = EPUniverUtil.getOrDefault(() -> GlassTier instanceof  WrappedIntTier,
+                () -> ((WrappedIntTier) GlassTier).getIntTier(), 0);
 
-        this.tier = this.ManipulatorCasingTier = this.ShieldingCoreCasingTier;
+        this.tier = this.ManipulatorCasingTier = this.ShieldingCoreCasingTier = this.GlassTier;
 
         this.writeCustomData(EPDataCode.EP_CHANNEL_8, buf -> buf.writeInt(this.ManipulatorCasingTier));
     }
@@ -141,7 +152,7 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
                 .where('B', EPTraceabilityPredicate.EP_QFT_SHIELDING_CORE.get())
                 .where('C', states(getCoilState()))
                 .where('D', states(getCasingState()))
-                .where('E', states(getGlassState()))
+                .where('E', EPTraceabilityPredicate.EP_QFT_GLASS.get())
                 .where('H', states(getCasingState())
                         .setMinGlobalLimited(55)
                         .or(autoAbilities()))
@@ -152,9 +163,6 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
         return EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_CONSTRAINT_CASING);
     }
 
-    private IBlockState getGlassState() {
-        return EPMetablocks.EP_GLASS_CASING_B.getState(EPBlockGlassCasingB.GlassType.INFINITY_GLASS);
-    }
 
     private IBlockState getCoilState() {
         return EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getState(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_FORCE_TRANSFORMER_COIL);
@@ -211,7 +219,6 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
                     .where('W', MetaTileEntities.MAINTENANCE_HATCH, EnumFacing.NORTH)
                     .where('C', getCoilState())
                     .where('D', getCasingState())
-                    .where('E', getGlassState())
                     .where('H', getCasingState())
                     .where('T', getCasingState())
                     .where(' ', Blocks.AIR.getDefaultState());
@@ -223,6 +230,7 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
                     if (finalBuilder != null) {
                         finalBuilder.where('A', b);
                         finalBuilder.where('B', finalListShieldingCoreCasing.get(count.get()));
+                        finalBuilder.where('E', finalListGlass.get(count.get()));
                         count.getAndIncrement();
                     }
                     return finalBuilder;
