@@ -40,15 +40,12 @@ import static gregtech.api.GregTechAPI.HEATING_COILS;
         modid = "epimorphism"
 )
 public class CommonProxy {
-    public CommonProxy() {
-    }
+    public CommonProxy() {}
 
-    public void preLoad() {
-    }
+    public void preLoad() {}
 
     @SubscribeEvent
-    public static void syncConfigValues(ConfigChangedEvent.OnConfigChangedEvent event) {
-    }
+    public static void syncConfigValues(ConfigChangedEvent.OnConfigChangedEvent event) {}
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {

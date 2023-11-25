@@ -56,22 +56,22 @@
           "all": "epimorphism:blocks/casings/ep_fusion_casing/beam_core_4"
         }
       },
-      "machine_casing_fusion_4": {
+      "fusion_casing_iv": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/ep_fusion_casing/machine_casing_fusion_4"
+          "all": "epimorphism:blocks/casings/ep_fusion_casing/fusion_casing_iv"
         }
       },
-      "machine_casing_fusion_5": {
+      "fusion_casing_v": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/ep_fusion_casing/machine_casing_fusion_5"
+          "all": "epimorphism:blocks/casings/ep_fusion_casing/fusion_casing_v"
         }
       },
-      "machine_casing_fusion_6": {
+      "fusion_casing_vi": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/ep_fusion_casing/machine_casing_fusion_6"
+          "all": "epimorphism:blocks/casings/ep_fusion_casing/fusion_casing_vi"
         }
       }
     }

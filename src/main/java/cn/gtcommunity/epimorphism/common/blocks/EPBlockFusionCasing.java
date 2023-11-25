@@ -16,7 +16,7 @@ public class EPBlockFusionCasing extends VariantBlock<EPBlockFusionCasing.Casing
 
     public EPBlockFusionCasing() {
         super(Material.IRON);
-        this.setTranslationKey("fusion_casing");
+        this.setTranslationKey("ep_fusion_casing");
         this.setHardness(5.0F);
         this.setResistance(10.0F);
         this.setSoundType(SoundType.METAL);
@@ -37,9 +37,9 @@ public class EPBlockFusionCasing extends VariantBlock<EPBlockFusionCasing.Casing
         BEAM_CORE_2("beam_core_2"),
         BEAM_CORE_3("beam_core_3"),
         BEAM_CORE_4("beam_core_4"),
-        CASING_FUSION_MKIV("machine_casing_fusion_4"),
-        CASING_FUSION_MKV("machine_casing_fusion_5"),
-        CASING_FUSION_MKVI("machine_casing_fusion_6");
+        CASING_FUSION_MKIV("fusion_casing_iv"),
+        CASING_FUSION_MKV("fusion_casing_v"),
+        CASING_FUSION_MKVI("fusion_casing_vi");
 
         private final String name;
 
