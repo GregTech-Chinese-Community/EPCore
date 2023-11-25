@@ -3,6 +3,7 @@ package cn.gtcommunity.epimorphism.common;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CACasingTierProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.PACasingTierProperty;
 import cn.gtcommunity.epimorphism.api.recipe.properties.QFTCasingTierProperty;
+import cn.gtcommunity.epimorphism.common.blocks.EPBlockWireCoil;
 import cn.gtcommunity.epimorphism.common.covers.EPCoverBehavior;
 import cn.gtcommunity.epimorphism.api.recipe.properties.CasingTierProperty;
 import cn.gtcommunity.epimorphism.api.utils.EPLog;
@@ -32,6 +33,8 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Objects;
 import java.util.function.Function;
+
+import static gregtech.api.GregTechAPI.HEATING_COILS;
 
 @EventBusSubscriber(
         modid = "epimorphism"
@@ -68,6 +71,8 @@ public class CommonProxy {
         registry.register(EPMetablocks.EP_WIRE_COIL);
         registry.register(EPMetablocks.EP_TRANSPARENT_CASING);
         registry.register(EPMetablocks.EP_GLASS_CASING_B);
+        registry.register(EPMetablocks.EP_ADV_GLASS_CASING);
+        registry.register(EPMetablocks.EP_BLOCK_FUSION_CASING);
     }
 
     @SubscribeEvent
@@ -91,6 +96,8 @@ public class CommonProxy {
         registry.register(createItemBlock(EPMetablocks.EP_WIRE_COIL, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_TRANSPARENT_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(EPMetablocks.EP_GLASS_CASING_B, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_ADV_GLASS_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(EPMetablocks.EP_BLOCK_FUSION_CASING, VariantItemBlock::new));
         BehaviorAddition.init();
     }
 
@@ -104,6 +111,10 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerCoverBehavior(GregTechAPI.RegisterEvent<CoverDefinition> event) {
         EPCoverBehavior.init();
+
+        for (EPBlockWireCoil.CoilType type : EPBlockWireCoil.CoilType.values()) {
+            HEATING_COILS.put(EPMetablocks.EP_WIRE_COIL.getState(type), type);
+        }
     }
 
     //  Recipe Event
@@ -112,6 +123,7 @@ public class CommonProxy {
         EPLog.logger.info("Registering recipes...");
         FusionEUToStartProperty.registerFusionTier(9, "(MK4)");
         FusionEUToStartProperty.registerFusionTier(10, "(MK5)");
+        FusionEUToStartProperty.registerFusionTier(11, "(MK6)");
         CasingTierProperty.registerCasingTier(1, I18n.format("epimorphism.recipe.casing_tier.1"));
         CasingTierProperty.registerCasingTier(2, I18n.format("epimorphism.recipe.casing_tier.2"));
         CasingTierProperty.registerCasingTier(3, I18n.format("epimorphism.recipe.casing_tier.3"));
