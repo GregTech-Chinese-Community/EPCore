@@ -5,7 +5,7 @@
         "layer": "BLOOM",
         "gregtech": true,
         "textures": [
-            "epimorphism:blocks/casings/advglass/tech_fusion_glass_5_ctm"
+            "epimorphism:blocks/casings/advglass/fusion_glass_v_ctm"
         ],
         "extra": {
             "connect_inside": true,

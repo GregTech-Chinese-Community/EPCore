@@ -50,22 +50,22 @@
           "all": "epimorphism:blocks/casings/advglass/adv_machine_glass_pr"
         }
       },
-      "tech_fusion_glass_4": {
+      "fusion_glass_iv": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/advglass/tech_fusion_glass_4"
+          "all": "epimorphism:blocks/casings/advglass/fusion_glass_iv"
         }
       },
-      "tech_fusion_glass_5": {
+      "fusion_glass_v": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/advglass/tech_fusion_glass_5"
+          "all": "epimorphism:blocks/casings/advglass/fusion_glass_v"
         }
       },
-      "tech_fusion_glass_6": {
+      "fusion_glass_vi": {
         "model": "minecraft:cube_all",
         "textures": {
-          "all": "epimorphism:blocks/casings/advglass/tech_fusion_glass_6"
+          "all": "epimorphism:blocks/casings/advglass/fusion_glass_vi"
         }
       }
     }

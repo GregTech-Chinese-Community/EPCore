@@ -8,10 +8,7 @@ import gregtech.api.unification.material.MarkerMaterials;
 
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
-import gregtech.common.blocks.BlockGlassCasing;
-import gregtech.common.blocks.BlockMachineCasing;
-import gregtech.common.blocks.BlockSteamCasing;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.*;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.loaders.recipe.CraftingComponent;
 import gregtech.loaders.recipe.MetaTileEntityLoader;
@@ -952,6 +949,74 @@ public class MetaTileEntityRecipes {
                         .researchStack(EPMetablocks.EP_QUANTUM_FORCE_TRANSFORMER_CASING.getItemVariant(EPBlockQuantumForceTransformerCasing.CasingType.QUANTUM_FORCE_TRANSFORMER_COIL))
                         .EUt(VA[UV])
                         .CWUt(256))
+                .buildAndRegister();
+
+        //  Fusion Reactor Mk IV
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(circuit, MarkerMaterials.Tier.UEV, 4)
+                .input(GRAVI_STAR)
+                .input(plateDouble, Tritanium)
+                .input(FIELD_GENERATOR_UV, 2)
+                .input(NANO_PIC_CHIP, 64)
+                .input(NANO_PIC_CHIP, 64)
+                .input(wireGtSingle, QuantumAlloy, 32)
+                .fluidInputs(SolderingAlloy.getFluid(2304))
+                .fluidInputs(Europium.getFluid(1152))
+                .fluidInputs(Polyetheretherketone.getFluid(576))
+                .outputs(HIGH_TIRE_FUSION_REACTORS[0].getStackForm())
+                .stationResearch(b -> b
+                        .researchStack(FUSION_REACTOR[2].getStackForm())
+                        .EUt(VA[UHV])
+                        .CWUt(192))
+                .EUt(VA[UV])
+                .duration(1000)
+                .buildAndRegister();
+
+        //  Fusion Reactor Mk V
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(circuit, MarkerMaterials.Tier.UIV, 4)
+                .input(UNSTABLE_STAR)
+                .input(plateDouble, Infinity)
+                .input(FIELD_GENERATOR_UHV, 2)
+                .input(PICO_PIC_CHIP, 64)
+                .input(PICO_PIC_CHIP, 64)
+                .input(wireGtSingle, Grisium, 32)
+                .fluidInputs(SolderingAlloy.getFluid(4608))
+                .fluidInputs(CarbonNanotube.getFluid(2304))
+                .fluidInputs(Kevlar.getFluid(1152))
+                .fluidInputs(Neutronium.getFluid(576))
+                .outputs(HIGH_TIRE_FUSION_REACTORS[1].getStackForm())
+                .stationResearch(b -> b
+                        .researchStack(HIGH_TIRE_FUSION_REACTORS[0].getStackForm())
+                        .EUt(VA[UEV])
+                        .CWUt(384))
+                .EUt(VA[UHV])
+                .duration(1000)
+                .buildAndRegister();
+
+        //  Fusion Reactor Mk VI
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(circuit, MarkerMaterials.Tier.UXV, 4)
+                .input(UNSTABLE_STAR) // TODO Next Star!
+                .input(plateDouble, Hypogen)
+                .input(FIELD_GENERATOR_UEV, 2)
+                .input(FEMTO_PIC_CHIP, 64)
+                .input(FEMTO_PIC_CHIP, 64)
+                .input(wireGtSingle, FullereneSuperconductor, 32)
+                .fluidInputs(SolderingAlloy.getFluid(9216))
+                .fluidInputs(CosmicNeutronium.getFluid(4608))
+                .fluidInputs(Zylon.getFluid(2304))
+                .fluidInputs(NeutronStarCoreMaterial.getFluid(1152))
+                .outputs(HIGH_TIRE_FUSION_REACTORS[2].getStackForm())
+                .stationResearch(b -> b
+                        .researchStack(HIGH_TIRE_FUSION_REACTORS[1].getStackForm())
+                        .EUt(VA[UIV])
+                        .CWUt(768))
+                .EUt(VA[UEV])
+                .duration(1000)
                 .buildAndRegister();
     }
 

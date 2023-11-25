@@ -1769,6 +1769,49 @@ public class MachineComponents {
                 .buildAndRegister();
 
         //  TODO T4
+
+        //  Fusion Casing Mk IV
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HULL[UHV])
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(VOLTAGE_COIL_UHV, 2)
+                .input(FIELD_GENERATOR_UV)
+                .input(plate, Tritanium, 6)
+                .fluidInputs(Polyetheretherketone.getFluid(576))
+                .outputs(EPMetablocks.EP_BLOCK_FUSION_CASING.getItemVariant(EPBlockFusionCasing.CasingType.CASING_FUSION_MKIV, 2))
+                .EUt(VA[UHV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Fusion Casing Mk V
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HULL[UEV])
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(VOLTAGE_COIL_UEV, 2)
+                .input(FIELD_GENERATOR_UHV)
+                .input(plate, Infinity, 6)
+                .fluidInputs(Kevlar.getFluid(576))
+                .outputs(EPMetablocks.EP_BLOCK_FUSION_CASING.getItemVariant(EPBlockFusionCasing.CasingType.CASING_FUSION_MKV, 2))
+                .EUt(VA[UEV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Fusion Casing Mk VI
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(HULL[UIV])
+                .inputs(MetaBlocks.FUSION_CASING.getItemVariant(BlockFusionCasing.CasingType.FUSION_COIL))
+                .input(VOLTAGE_COIL_UIV, 2)
+                .input(FIELD_GENERATOR_UEV)
+                .input(plate, Hypogen, 6)
+                .fluidInputs(Zylon.getFluid(576))
+                .outputs(EPMetablocks.EP_BLOCK_FUSION_CASING.getItemVariant(EPBlockFusionCasing.CasingType.CASING_FUSION_MKVI, 2))
+                .EUt(VA[UIV])
+                .duration(100)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
     }
 
     private static void Materials() {
