@@ -23,10 +23,11 @@
       }
     },
     "active=true,variant=force_field_constrained_glass": {
-      "model": "minecraft:cube_all",
+      "model": "gregtech:cube_2_layer_all",
       "ambientocclusion": false,
       "textures": {
-        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass"
+        "bot_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass",
+        "top_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/force_field_constrained_glass_bloom"
       }
     },
     "active=false,variant=cosmic_microwave_background_radiation_absorption_glass": {
@@ -37,10 +38,11 @@
       }
     },
     "active=true,variant=cosmic_microwave_background_radiation_absorption_glass": {
-      "model": "minecraft:cube_all",
+      "model": "gregtech:cube_2_layer_all",
       "ambientocclusion": false,
       "textures": {
-        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/cosmic_microwave_background_radiation_absorption_glass"
+        "bot_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/cosmic_microwave_background_radiation_absorption_glass",
+        "top_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/cosmic_microwave_background_radiation_absorption_glass_bloom"
       }
     },
     "active=false,variant=spacetime_supercondenser_glass": {
@@ -51,10 +53,11 @@
       }
     },
     "active=true,variant=spacetime_supercondenser_glass": {
-      "model": "minecraft:cube_all",
+      "model": "gregtech:cube_2_layer_all",
       "ambientocclusion": false,
       "textures": {
-        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/spacetime_supercondenser_glass"
+        "bot_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/spacetime_supercondenser_glass",
+        "top_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/spacetime_supercondenser_glass_bloom"
       }
     },
     "active=false,variant=supracausal_light_cone_glass": {
@@ -65,10 +68,11 @@
       }
     },
     "active=true,variant=supracausal_light_cone_glass": {
-      "model": "minecraft:cube_all",
+      "model": "gregtech:cube_2_layer_all",
       "ambientocclusion": false,
       "textures": {
-        "all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/supracausal_light_cone_glass"
+        "bot_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/supracausal_light_cone_glass",
+        "top_all": "epimorphism:blocks/casings/ep_quantum_force_transformer_casing/supracausal_light_cone_glass_bloom"
       }
     }
   }

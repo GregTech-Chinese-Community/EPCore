@@ -53,11 +53,12 @@ public class EPBlockGlassCasingB extends VariantActiveBlock<EPBlockGlassCasingB.
     @Override
     public boolean canRenderInLayer(IBlockState state, BlockRenderLayer layer) {
         EPBlockGlassCasingB.GlassType type = getState(state);
-        if( type == GlassType.INFINITY_GLASS
-        ) {
-            return super.canRenderInLayer(state, layer);
-        }
-        return layer == BlockRenderLayer.TRANSLUCENT;
+//        if( type == GlassType.INFINITY_GLASS
+//        ) {
+//            return super.canRenderInLayer(state, layer);
+//        }
+//        return layer == BlockRenderLayer.TRANSLUCENT;
+        return super.canRenderInLayer(state, layer);
     }
 
     @Override
