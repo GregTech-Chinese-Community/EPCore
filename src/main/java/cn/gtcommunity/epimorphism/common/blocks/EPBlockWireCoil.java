@@ -5,6 +5,7 @@ import gregtech.api.block.IHeatingCoilBlockStats;
 import gregtech.api.block.VariantActiveBlock;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.Materials;
 import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockWireCoil;
@@ -74,7 +75,6 @@ public class EPBlockWireCoil extends VariantActiveBlock<EPBlockWireCoil.CoilType
     }
 
     public enum CoilType implements IStringSerializable, IHeatingCoilBlockStats {
-
         ADAMANTIUM("adamantium", 12960, 32, 16, EPMaterials.Adamantium);
 
         private final String name;
