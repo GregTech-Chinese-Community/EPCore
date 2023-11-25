@@ -1,8 +1,5 @@
 package cn.gtcommunity.epimorphism.common.metatileentities.multiblock;
 
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockAdvGlass;
-import cn.gtcommunity.epimorphism.common.blocks.EPBlockFusionCasing;
-import cn.gtcommunity.epimorphism.common.blocks.EPMetablocks;
 import gregtech.api.GTValues;
 import gregtech.api.capability.GregtechDataCodes;
 import gregtech.api.capability.IEnergyContainer;
@@ -27,8 +24,6 @@ import gregtech.client.utils.BloomEffectUtil;
 import gregtech.client.utils.RenderBufferHelper;
 import gregtech.client.utils.RenderUtil;
 import gregtech.common.ConfigHolder;
-import gregtech.common.blocks.BlockFusionCasing;
-import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -62,14 +57,20 @@ import java.util.Objects;
 public class EPMetaTileEntityHighTireFusionReactor extends RecipeMapMultiblockController implements IFastRenderMetaTileEntity {
 
     private final int tier;
+    public final IBlockState casingState;
+    public final IBlockState glassState;
+    public final IBlockState coilState;
     private EnergyContainerList inputEnergyContainers;
     private long heat = 0; // defined in TileEntityFusionReactor but serialized in FusionRecipeLogic
     private Integer color;
 
-    public EPMetaTileEntityHighTireFusionReactor(ResourceLocation metaTileEntityId, int tier) {
+    public EPMetaTileEntityHighTireFusionReactor(ResourceLocation metaTileEntityId, int tier, IBlockState casingState, IBlockState glassState, IBlockState coilState) {
         super(metaTileEntityId, RecipeMaps.FUSION_RECIPES);
         this.recipeMapWorkable = new FusionRecipeLogic(this);
         this.tier = tier;
+        this.casingState = casingState;
+        this.glassState = glassState;
+        this.coilState = coilState;
         this.energyContainer = new EnergyContainerHandler(this, Integer.MAX_VALUE, 0, 0, 0, 0) {
             @Nonnull
             @Override
@@ -81,7 +82,7 @@ public class EPMetaTileEntityHighTireFusionReactor extends RecipeMapMultiblockCo
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new EPMetaTileEntityHighTireFusionReactor(metaTileEntityId, tier);
+        return new EPMetaTileEntityHighTireFusionReactor(metaTileEntityId, tier, casingState, glassState, coilState);
     }
 
     @Nonnull
@@ -129,29 +130,15 @@ public class EPMetaTileEntityHighTireFusionReactor extends RecipeMapMultiblockCo
     }
 
     private IBlockState getGlassState() {
-        if (tier == GTValues.UHV)
-            return EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.CasingType.TECH_FUSION_GLASS_IV);
-        if (tier == GTValues.UEV)
-            return EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.CasingType.TECH_FUSION_GLASS_V);
-
-        return EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.CasingType.TECH_FUSION_GLASS_VI);
-
+        return glassState;
     }
 
     private IBlockState getCasingState() {
-        if (tier == GTValues.UHV)
-            return EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKIV);
-        if (tier == GTValues.UEV)
-            return EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKV);
-
-        return EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKVI);
+        return casingState;
     }
 
     private IBlockState getCoilState() {
-        if (tier == GTValues.UHV)
-            return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL);
-
-        return MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.FUSION_COIL);
+        return coilState;
     }
 
     @Override
@@ -248,14 +235,6 @@ public class EPMetaTileEntityHighTireFusionReactor extends RecipeMapMultiblockCo
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
-
-        if (tier == GTValues.UHV){
-            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uhv.tooltip"));
-        } else if (tier == GTValues.UEV) {
-            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uev.tooltip"));
-        } else {
-            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uiv.tooltip"));
-        }
 
         tooltip.add(I18n.format("gregtech.machine.fusion_reactor.capacity", calculateEnergyStorageFactor(16) / 1000000L));
         tooltip.add(I18n.format("gregtech.machine.fusion_reactor.overclocking"));

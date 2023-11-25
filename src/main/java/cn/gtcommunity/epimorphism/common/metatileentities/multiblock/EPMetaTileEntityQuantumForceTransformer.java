@@ -370,6 +370,7 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
         }
     }
 
+    @Override
     public AxisAlignedBB getRenderBoundingBox() {
         double xBaseOffset = 3 * getFrontFacing().getOpposite().getXOffset();
         double zBaseOffset = 3 * getFrontFacing().getOpposite().getZOffset();
@@ -377,10 +378,12 @@ public class EPMetaTileEntityQuantumForceTransformer extends RecipeMapMultiblock
         return new AxisAlignedBB(pos).grow(6, 6, 6);
     }
 
+    @Override
     public boolean shouldRenderInPass(int pass) {
         return pass == 0;
     }
 
+    @Override
     public boolean isGlobalRenderer() {
         return true;
     }
