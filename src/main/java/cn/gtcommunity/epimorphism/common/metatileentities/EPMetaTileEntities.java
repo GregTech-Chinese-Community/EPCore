@@ -71,6 +71,7 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityChemicalPlant CHEMICAL_PLANT;
     public static EPMetaTileEntityMegaOilCrackingUnit MEGA_OIL_CRACKING_UNIT;
     public static EPMetaTileEntityMegaChemicalReactor MEGA_CHEMICAL_REACTOR;
+
 //    public static EPMetaTileEntityAlgaeFarm ALGAE_FARM;
     public static EPMetaTileEntityIndustrialFishingPond INDUSTRIAL_FISHING_POND;
     public static EPMetaTileEntityRoaster ROASTER;
@@ -116,6 +117,8 @@ public class EPMetaTileEntities {
     public static EPMetaTileEntityIndustrialPrimitiveBlastFurnace INDUSTRIAL_PRIMITIVE_BLAST_FURNACE;
     public static EPMetaTileEntityLargeSteamCompressor LARGE_STEAM_COMPRESSOR;
     public static EPMetaTileEntityQuantumForceTransformer QUANTUM_FORCE_TRANSFORMER;
+
+    public static final EPMetaTileEntityHighTireFusionReactor[] HIGH_TIRE_FUSION_REACTORS = new EPMetaTileEntityHighTireFusionReactor[3];
 
     //  Range: 12301-13300
     private static void registerSimpleSteamMetaTileEntity(SimpleSteamMetaTileEntity[] machines, int startId, String name, RecipeMap<?> recipeMap, SteamProgressIndicator progressIndicator, ICubeRenderer texture, boolean isBricked) {
@@ -254,5 +257,9 @@ public class EPMetaTileEntities {
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE = registerMultiMetaTileEntity(65, new EPMetaTileEntityIndustrialPrimitiveBlastFurnace(epId("industrial_primitive_blast_furnace")));
         LARGE_STEAM_COMPRESSOR = registerMultiMetaTileEntity(66, new EPMetaTileEntityLargeSteamCompressor(epId("large_steam_compressor")));
         QUANTUM_FORCE_TRANSFORMER = registerMultiMetaTileEntity(67, new EPMetaTileEntityQuantumForceTransformer(epId("quantum_force_transformer")));
+
+        HIGH_TIRE_FUSION_REACTORS[0] = registerMetaTileEntity(20003, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uhv"), GTValues.UHV));
+        HIGH_TIRE_FUSION_REACTORS[1] = registerMetaTileEntity(20004, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uev"), GTValues.UEV));
+        HIGH_TIRE_FUSION_REACTORS[2] = registerMetaTileEntity(20005, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uiv"), GTValues.UIV));
     }
 }

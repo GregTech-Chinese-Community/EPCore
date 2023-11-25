@@ -24,14 +24,14 @@ import java.io.IOException;
         modid = "epimorphism",
         name = "Epimorphism",
         acceptedMinecraftVersions = "[1.12.2,1.13)",
-        version = "0.0.2-alpha",
+        version = "0.0.2-beta",
         dependencies = "required-after:gcym"
 )
 public class Epimorphism {
 
     public static final String MODID = "epimorphism";
     public static final String NAME = "Epimorphism";
-    public static final String VERSION = "0.0.2-alpha";
+    public static final String VERSION = "0.0.2-beta";
 
     @SidedProxy(
             modId = MODID,

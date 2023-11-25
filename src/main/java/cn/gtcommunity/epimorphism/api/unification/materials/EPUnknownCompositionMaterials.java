@@ -88,10 +88,10 @@ public class EPUnknownCompositionMaterials {
         //  25213 Precious Metal
         PreciousMetal = new Material.Builder(getMaterialsId(), gregtechId("precious_metal"))
                 .ore(1, 1, false)
-                .dust()
+                .ingot()
                 .addOreByproducts(Iron)
                 .color(0xDAA520)
-                .iconSet(DULL)
+                .iconSet(SHINY)
                 .build()
                 .setFormula("Au?", false);
         //  25214 Iridium Platinum Metal Dust
