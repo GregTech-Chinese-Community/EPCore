@@ -26,7 +26,6 @@ import gregtech.client.shader.postprocessing.BloomEffect;
 import gregtech.client.utils.BloomEffectUtil;
 import gregtech.client.utils.RenderBufferHelper;
 import gregtech.client.utils.RenderUtil;
-import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockFusionCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -249,14 +248,17 @@ public class EPMetaTileEntityHighTireFusionReactor extends RecipeMapMultiblockCo
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, @Nonnull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
+
+        if (tier == GTValues.UHV){
+            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uhv.tooltip"));
+        } else if (tier == GTValues.UEV) {
+            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uev.tooltip"));
+        } else {
+            tooltip.add(I18n.format("epimorphism.machine.fusion_reactor.uiv.tooltip"));
+        }
+
         tooltip.add(I18n.format("gregtech.machine.fusion_reactor.capacity", calculateEnergyStorageFactor(16) / 1000000L));
         tooltip.add(I18n.format("gregtech.machine.fusion_reactor.overclocking"));
-        if (tier == GTValues.UHV){
-            tooltip.add(TooltipHelper.RAINBOW_SLOW + I18n.format("惊 鸿 万 物", new Object[0]));}
-        if (tier == GTValues.UEV){
-            tooltip.add(TooltipHelper.RAINBOW_SLOW + I18n.format("破 碎 亘 古", new Object[0]));}
-        if (tier == GTValues.UIV){
-            tooltip.add(TooltipHelper.RAINBOW_SLOW + I18n.format("凌 驾 虚 无", new Object[0]));}
     }
 
     @SideOnly(Side.CLIENT)

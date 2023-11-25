@@ -450,6 +450,9 @@ tile.ep_glass_casing_b.spacetime_supercondenser_glass.name=时空超凝聚体玻
 tile.ep_glass_casing_b.spacetime_supercondenser_glass.tooltip=§b量子操纵者§7-力场玻璃等级：§cIII§7
 tile.ep_glass_casing_b.supracausal_light_cone_glass.name=超因果光锥具现化玻璃
 tile.ep_glass_casing_b.supracausal_light_cone_glass.tooltip=§b量子操纵者§7-力场玻璃等级：§cIV§7
+tile.ep_fusion_casing.fusion_casing_iv.name=聚变机器外壳 Mk IV
+tile.ep_fusion_casing.fusion_casing_v.name=聚变机器外壳 Mk V
+tile.ep_fusion_casing.fusion_casing_vi.name=聚变机器外壳 Mk VI
 
 epimorphism.glass_tier.tooltip=玻璃等级：%s
 epimorphism.optical_glass_tier.tooltip.0=粗制光学玻璃
@@ -1092,6 +1095,13 @@ epimorphism.machine.quantum_force_transformer.tier.1=中子 (1级)
 epimorphism.machine.quantum_force_transformer.tier.2=寰宇 (2级)
 epimorphism.machine.quantum_force_transformer.tier.3=无尽时空 (3级)
 epimorphism.machine.quantum_force_transformer.tier.4=超因果连续体 (4级)
+
+epimorphism.machine.fusion_reactor.uhv.name=核聚变反应堆控制电脑 Mk IV
+epimorphism.machine.fusion_reactor.uhv.tooltip=银河泻落九天
+epimorphism.machine.fusion_reactor.uev.name=核聚变反应堆控制电脑 Mk V
+epimorphism.machine.fusion_reactor.uev.tooltip=白矮星之力
+epimorphism.machine.fusion_reactor.uiv.name=核聚变反应堆控制电脑 Mk VI
+epimorphism.machine.fusion_reactor.uiv.tooltip=家用中子星
 
 #  Materials
 
