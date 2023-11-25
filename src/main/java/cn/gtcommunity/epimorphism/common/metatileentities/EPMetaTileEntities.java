@@ -88,7 +88,7 @@ public class EPMetaTileEntities {
 //    public static EPMetaTileEntityComputingTerminal COMPUTING_TERMINAL;
 //    public static EPMetaTileEntityElectronCryomicroscopy ELECTRON_CRYOMICROSCOPY;
     public static EPMetaTileEntityCosmicRayDetector COSMIC_RAY_DETECTOR;
-    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
+//    public static EPMetaTileEntityPCBFactory PCB_FACTORY;
     public static EPMetaTileEntityIonImplantater ION_IMPLANTATER;
     public static EPMetaTileEntityPlasmaCVDUnit PLASMA_CVD;
     public static EPMetaTileEntityLaserCVDUnit LASER_CVD;
@@ -227,7 +227,7 @@ public class EPMetaTileEntities {
         PLASMA_CVD = registerMultiMetaTileEntity(32, new EPMetaTileEntityPlasmaCVDUnit(epId("plasma_cvd_unit")));
         LASER_CVD = registerMultiMetaTileEntity(33, new EPMetaTileEntityLaserCVDUnit(epId("laser_cvd_unit")));
         LARGE_NAQUADAH_REACTOR = registerMultiMetaTileEntity(34, new EPMetaTileEntityLargeNaquadahReactor(epId("large_naquadah_reactor")));
-        PCB_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityPCBFactory(epId("pcb_factory")));
+//        PCB_FACTORY = registerMultiMetaTileEntity(35, new EPMetaTileEntityPCBFactory(epId("pcb_factory")));
         FUEL_REFINE_FACTORY = registerMultiMetaTileEntity(36, new EPMetaTileEntityFuelRefineFactory(epId("fuel_refine_factory")));
         HYPER_REACTOR_MK1 = registerMultiMetaTileEntity(37, new EPMetaTileEntityHyperReactorMk1(epId("hyper_reactor_mk1")));
         HYPER_REACTOR_MK2 = registerMultiMetaTileEntity(38, new EPMetaTileEntityHyperReactorMk2(epId("hyper_reactor_mk2")));
@@ -259,8 +259,8 @@ public class EPMetaTileEntities {
         INDUSTRIAL_PRIMITIVE_BLAST_FURNACE = registerMultiMetaTileEntity(65, new EPMetaTileEntityIndustrialPrimitiveBlastFurnace(epId("industrial_primitive_blast_furnace")));
         LARGE_STEAM_COMPRESSOR = registerMultiMetaTileEntity(66, new EPMetaTileEntityLargeSteamCompressor(epId("large_steam_compressor")));
         QUANTUM_FORCE_TRANSFORMER = registerMultiMetaTileEntity(67, new EPMetaTileEntityQuantumForceTransformer(epId("quantum_force_transformer")));
-        HIGH_TIRE_FUSION_REACTORS[0] = registerMultiMetaTileEntity(68, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uhv"), GTValues.UHV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKIV), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.TECH_FUSION_GLASS_IV), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
-        HIGH_TIRE_FUSION_REACTORS[1] = registerMultiMetaTileEntity(69, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uev"), GTValues.UEV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKV), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.TECH_FUSION_GLASS_V), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
-        HIGH_TIRE_FUSION_REACTORS[2] = registerMultiMetaTileEntity(70, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uiv"), GTValues.UIV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKVI), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.TECH_FUSION_GLASS_VI), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
+        HIGH_TIRE_FUSION_REACTORS[0] = registerMultiMetaTileEntity(68, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uhv"), GTValues.UHV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKIV), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.FUSION_GLASS_IV), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
+        HIGH_TIRE_FUSION_REACTORS[1] = registerMultiMetaTileEntity(69, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uev"), GTValues.UEV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKV), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.FUSION_GLASS_V), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
+        HIGH_TIRE_FUSION_REACTORS[2] = registerMultiMetaTileEntity(70, new EPMetaTileEntityHighTireFusionReactor(epId("fusion_reactor.uiv"), GTValues.UIV, EPMetablocks.EP_BLOCK_FUSION_CASING.getState(EPBlockFusionCasing.CasingType.CASING_FUSION_MKVI), EPMetablocks.EP_ADV_GLASS_CASING.getState(EPBlockAdvGlass.AdvGlassType.FUSION_GLASS_VI), MetaBlocks.FUSION_CASING.getState(BlockFusionCasing.CasingType.SUPERCONDUCTOR_COIL)));
     }
 }

@@ -90,9 +90,9 @@ public class EPBlockAdvGlass extends VariantBlock<EPBlockAdvGlass.AdvGlassType> 
         ADV_MACHINE_GLASS("adv_machine_glass", GTValues.ZPM, false),
         ADV_MACHINE_GLASS_R("adv_machine_glass_r", GTValues.ZPM, false),
         ADV_MACHINE_GLASS_O("adv_machine_glass_o", GTValues.ZPM, false),
-        TECH_FUSION_GLASS_IV("tech_fusion_glass_4", GTValues.ZPM, false),
-        TECH_FUSION_GLASS_V("tech_fusion_glass_5", GTValues.ZPM, false),
-        TECH_FUSION_GLASS_VI("tech_fusion_glass_6", GTValues.ZPM, false);
+        FUSION_GLASS_IV("fusion_glass_iv", GTValues.UHV, false),
+        FUSION_GLASS_V("fusion_glass_v", GTValues.UEV, false),
+        FUSION_GLASS_VI("fusion_glass_vi", GTValues.UIV, false);
         private final String name;
         private final int tier;
         private final boolean isOpticalGlass;

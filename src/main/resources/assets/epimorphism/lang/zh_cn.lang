@@ -453,6 +453,9 @@ tile.ep_glass_casing_b.supracausal_light_cone_glass.tooltip=§b量子操纵者§
 tile.ep_fusion_casing.fusion_casing_iv.name=聚变机器外壳 Mk IV
 tile.ep_fusion_casing.fusion_casing_v.name=聚变机器外壳 Mk V
 tile.ep_fusion_casing.fusion_casing_vi.name=聚变机器外壳 Mk VI
+tile.ep_adv_glass_casing.fusion_glass_iv.name=进阶聚变玻璃
+tile.ep_adv_glass_casing.fusion_glass_v.name=次世代聚变玻璃
+tile.ep_adv_glass_casing.fusion_glass_vi.name=终焉聚变玻璃
 
 epimorphism.glass_tier.tooltip=玻璃等级：%s
 epimorphism.optical_glass_tier.tooltip.0=粗制光学玻璃
