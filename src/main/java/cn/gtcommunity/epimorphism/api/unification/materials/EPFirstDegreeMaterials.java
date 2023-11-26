@@ -1534,7 +1534,7 @@ public class EPFirstDegreeMaterials {
                 .gem()
                 .color(0xD99DE4)
                 .iconSet(GEM_VERTICAL)
-                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING, GENERATE_LENS)
                 .components(YttriumOxide, 2, NeodymiumOxide, 1, Alumina, 5)
                 .build()
                 .setFormula("NdY2Al5O12", true);
@@ -2555,6 +2555,38 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(Scandium.getMaterialRGB() + Titanium.getMaterialRGB())
                 .components(Scandium, 1, Titanium, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24340 Caesium Iodide
+        CaesiumIodide = new Material.Builder(getMaterialsId(), gregtechId("caesium_iodide"))
+                .dust()
+                .color(Caesium.getMaterialRGB() + Iodine.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Caesium, 1, Iodine, 1)
+                .build();
+        //  24341 Tl-Tm-Droped Caesium Iodide
+        TlTmDropedCaesiumIodide = new Material.Builder(getMaterialsId(), gregtechId("tl_tm_droped_caesium_iodide"))
+                .dust()
+                .color(Thallium.getMaterialRGB() + Thulium.getMaterialRGB() + CaesiumIodide.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Thallium, 1, Thulium, 1, CaesiumIodide, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Tl/Tm:CsI");
+        //  24342 Cadmium Tungstate
+        CadmiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("cadmium_tungstate"))
+                .dust()
+                .color(Cadmium.getMaterialRGB() + Tungsten.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Cadmium, 1, Tungsten, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24343 Bismuth Germanate
+        BismuthGermanate = new Material.Builder(getMaterialsId(), gregtechId("bismuth_germanate"))
+                .dust()
+                .color(Bismuth.getMaterialRGB() + Germanium.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Bismuth, 12, Germanium, 1, Oxygen, 20)
                 .flags(DISABLE_DECOMPOSITION)
                 .build();
     }

@@ -6,6 +6,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class KaptonChain {
     public static void init() {
@@ -35,7 +36,7 @@ public class KaptonChain {
                 .fluidInputs(Nitrobenzene.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(4000))
                 .circuitMeta(1)
-                .fluidOutputs(Aminophenol.getFluid(1000))
+                .output(Aminophenol.getItemStack().getItem())
                 .fluidOutputs(Water.getFluid(1000))
                 .duration(300)
                 .EUt(VA[LV])
@@ -57,7 +58,7 @@ public class KaptonChain {
         //  Saltpeter + Aminonphenol + Nitrochlorobenzene + Water + Dimethylformamide -> Oxydianiline + Oxygen + Hydrochloric Acid
         CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .notConsumable(dust, Saltpeter)
-                .fluidInputs(Aminophenol.getFluid(1000))
+                .input(Aminophenol.getItemStack().getItem())
                 .fluidInputs(Nitrochlorobenzene.getFluid(1000))
                 .fluidInputs(Water.getFluid(1000))
                 .notConsumable(Dimethylformamide.getFluid(1))

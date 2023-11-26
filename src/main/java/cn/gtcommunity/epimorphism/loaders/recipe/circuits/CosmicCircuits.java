@@ -36,7 +36,65 @@ public class CosmicCircuits {
                 .duration(600)
                 .buildAndRegister();
 
-        //  TODO Scintillator Crystal
+        //  Caesium + Iodine -> Caesium Iodide
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Caesium)
+                .input(dust, Iodine)
+                .output(dust, CaesiumIodide, 2)
+                .EUt(VA[MV])
+                .duration(340)
+                .buildAndRegister();
+
+        //  Caesium Iodide + Thallium + Thulium -> Tl-Tm-droped Caesium Iodide
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, CaesiumIodide)
+                .input(dustSmall, Thallium, 2)
+                .input(dustSmall, Thulium, 2)
+                .output(dust, TlTmDropedCaesiumIodide, 2)
+                .EUt(VA[HV])
+                .duration(260)
+                .blastFurnaceTemp(2853)
+                .buildAndRegister();
+
+        //  TODO Tetracene Chain
+
+        //  Cadmium Tungstate
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, TungstenTrioxide, 4)
+                .input(dust, CadmiumSulfide, 2)
+                .fluidInputs(Oxygen.getFluid(3000))
+                .output(dust, CadmiumTungstate, 6)
+                .fluidOutputs(SulfurDioxide.getFluid(1000))
+                .EUt(VA[EV])
+                .duration(320)
+                .blastFurnaceTemp(2800)
+                .buildAndRegister();
+
+        //  Bismuth Germanate
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .input(dust, GermaniumDioxide, 3)
+                .notConsumable(lens, NdYAG)
+                .fluidInputs(BismuthNitrateSolution.getFluid(4000))
+                .output(dust, BismuthGermanate, 33)
+                .output(dust, Potash, 18)
+                .fluidOutputs(NitrogenDioxide.getFluid(12000))
+                .fluidOutputs(Water.getFluid(4000))
+                .EUt(VA[UV])
+                .duration(80)
+                .buildAndRegister();
+
+        //  Scintillator Crystal
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(plate, Vibranium, 2)
+                .input(dust, TlTmDropedCaesiumIodide)
+                .input(dust, PolycyclicAromaticMixture)
+                .input(dust, CadmiumTungstate)
+                .input(dust, BismuthGermanate)
+                .output(SCINTILLATOR_CRYSTAL)
+                .EUt(VA[UHV])
+                .duration(280)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
 
         //  Scintillator
         PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
@@ -45,7 +103,7 @@ public class CosmicCircuits {
                 .input(plate, Zylon, 2)
                 .input(screw, Hdcs, 4)
                 .fluidInputs(SolderingAlloy.getFluid(L * 8))
-                .fluidInputs(Zylon.getFluid(L * 4))
+                .fluidInputs(Kevlar.getFluid(L * 4))
                 .output(SCINTILLATOR)
                 .EUt(VA[UHV])
                 .duration(120)
