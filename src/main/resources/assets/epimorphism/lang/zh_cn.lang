@@ -494,6 +494,13 @@ metaitem.metastable_self_healing_adhesive.name=超稳态自修复粘合剂
 metaitem.hyperdimensional_tachyon_condensed_matter.name=超维度快子凝聚物质
 metaitem.unstable_star.name=易变之星
 metaitem.component.cosmic.cladded_optical_fiber_core.name=包层光导纤维内芯
+metaitem.component.cosmic.closed_timelike_curve_computational_unit.name=封闭类时曲线计算单元
+metaitem.component.cosmic.closed_timelike_curve_guidance_unit.name=封闭类时曲线引导单元
+metaitem.component.cosmic.nuclear_clock.name=核时钟
+metaitem.component.cosmic.manifold_oscillatory_power_cell.name=流形振荡能量单元
+
+metaitem.scintillator.name=闪烁体
+metaitem.scintillator_crystal.name=闪烁晶体
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）

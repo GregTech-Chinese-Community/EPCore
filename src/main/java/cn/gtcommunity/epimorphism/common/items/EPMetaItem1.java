@@ -158,6 +158,14 @@ public class EPMetaItem1 extends StandardMetaItem {
         UNSTABLE_STAR = this.addItem(120, "unstable_star");
 
         CLADDED_OPTICAL_FIBER_CORE = this.addItem(130, "component.cosmic.cladded_optical_fiber_core");
+        CLOSED_TIMELIKE_CURVE_COMPUTATIONAL_UNIT = addItem(131, "component.cosmic.closed_timelike_curve_computational_unit");
+        CLOSED_TIMELIKE_CURVE_GUIDANCE_UNIT = addItem(132, "component.cosmic.closed_timelike_curve_guidance_unit");
+        NUCLEAR_CLOCK = addItem(133, "component.cosmic.nuclear_clock");
+        MANIFOLD_OSCILLATORY_POWER_CELL = addItem(134, "component.cosmic.manifold_oscillatory_power_cell");
+
+
+        SCINTILLATOR = addItem(140, "scintillator");
+        SCINTILLATOR_CRYSTAL = addItem(141, "scintillator_crystal");
 
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");

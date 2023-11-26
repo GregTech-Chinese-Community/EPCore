@@ -144,6 +144,13 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem HYPERDIMENSIONAL_TACHYON_CONDENSED_MATTER;
     public static MetaItem<?>.MetaValueItem UNSTABLE_STAR;
     public static MetaItem<?>.MetaValueItem CLADDED_OPTICAL_FIBER_CORE;
+    public static MetaItem<?>.MetaValueItem CLOSED_TIMELIKE_CURVE_COMPUTATIONAL_UNIT;
+    public static MetaItem<?>.MetaValueItem CLOSED_TIMELIKE_CURVE_GUIDANCE_UNIT;
+    public static MetaItem<?>.MetaValueItem NUCLEAR_CLOCK;
+    public static MetaItem<?>.MetaValueItem MANIFOLD_OSCILLATORY_POWER_CELL;
+
+    public static MetaItem<?>.MetaValueItem SCINTILLATOR;
+    public static MetaItem<?>.MetaValueItem SCINTILLATOR_CRYSTAL;
 
     //  Crystal Components
     public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;

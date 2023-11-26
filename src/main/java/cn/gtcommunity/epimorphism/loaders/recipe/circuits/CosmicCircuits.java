@@ -9,6 +9,7 @@ import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
 
 public class CosmicCircuits {
     public static void init() {
@@ -33,6 +34,105 @@ public class CosmicCircuits {
                 .output(CLADDED_OPTICAL_FIBER_CORE)
                 .EUt(VA[LuV])
                 .duration(600)
+                .buildAndRegister();
+
+        //  TODO Scintillator Crystal
+
+        //  Scintillator
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SCINTILLATOR_CRYSTAL)
+                .input(SEPARATION_ELECTROMAGNET)
+                .input(plate, Zylon, 2)
+                .input(screw, Hdcs, 4)
+                .fluidInputs(SolderingAlloy.getFluid(L * 8))
+                .fluidInputs(Zylon.getFluid(L * 4))
+                .output(SCINTILLATOR)
+                .EUt(VA[UHV])
+                .duration(120)
+                .CasingTier(3)
+                .buildAndRegister();
+
+        //  Nuclear Clock
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SCINTILLATOR)
+                .input(SENSOR_UIV, 2)
+                .input(ND_YAG_LASER, 2)
+                .input(lens, YttriumVanadateLuTm)
+                .fluidInputs(Adamantium.getFluid(L * 9))
+                .fluidInputs(Thorium.getFluid(L))
+                .output(NUCLEAR_CLOCK)
+                .EUt(VA[UEV])
+                .duration(35)
+                .CasingTier(3)
+                .buildAndRegister();
+
+        //  Closed Time-like Curve Guidance Unit
+        PRECISE_ASSEMBLER_RECIPES.recipeBuilder()
+                .input(NUCLEAR_CLOCK)
+                .input(TOOL_DATA_MODULE)
+                .input(SPIN_TRANSFER_TORQUE_MEMORY, 16)
+                .input(wireFine, Grisium, 8)
+                .fluidInputs(Zylon.getFluid(L * 10))
+                .fluidInputs(MagnetoHydrodynamicallyConstrainedStarMatter.getFluid(L))
+                .output(CLOSED_TIMELIKE_CURVE_GUIDANCE_UNIT)
+                .EUt(VA[UIV])
+                .duration(400)
+                .CasingTier(3)
+                .buildAndRegister();
+
+        //  Manifold Oscillatory Power Cell
+        DIMENSIONAL_OSCILLATOR_RECIPES.recipeBuilder()
+                .input(QUANTUM_ANOMALY)
+                .input(plate, HeavyQuarkDegenerateMatter)
+                .fluidInputs(FreeElectronGas.getFluid(16000))
+                .fluidInputs(Taranium.getFluid(L * 4))
+                .output(MANIFOLD_OSCILLATORY_POWER_CELL, 16)
+                .EUt(VA[UEV])
+                .duration(200)
+                .buildAndRegister();
+
+        //  Closed Time-like Curve Computational Unit
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(frameGt, Neutronium)
+                .input(CLOSED_TIMELIKE_CURVE_GUIDANCE_UNIT)
+                .input(MANIFOLD_OSCILLATORY_POWER_CELL, 4)
+                .input(plate, MagnetoHydrodynamicallyConstrainedStarMatter, 4)
+                .input(plate, AstralTitanium, 4)
+                .input(plate, CelestialTungsten, 4)
+                .input(FIELD_GENERATOR_UHV, 2)
+                .input(wireFine, CosmicNeutronium, 16)
+                .fluidInputs(SuperheavyHAlloy.getFluid(L * 4))
+                .fluidInputs(SuperheavyLAlloy.getFluid(L * 4))
+                .fluidInputs(CosmicComputingMixture.getFluid(L * 2))
+                .fluidInputs(CosmicNeutronium.getFluid(L))
+                .output(CLOSED_TIMELIKE_CURVE_COMPUTATIONAL_UNIT)
+                .stationResearch(b -> b
+                        .researchStack(CLOSED_TIMELIKE_CURVE_GUIDANCE_UNIT.getStackForm())
+                        .EUt(VA[UIV])
+                        .CWUt(576))
+                .EUt(VA[UIV])
+                .duration(1000)
+                .buildAndRegister();
+
+        //  Cosmic Circuit Board
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .input(COSMIC_INFORMATION_MODULE)
+                .input(frameGt, BlackTitanium)
+                .input(CLOSED_TIMELIKE_CURVE_COMPUTATIONAL_UNIT)
+                .input(CLADDED_OPTICAL_FIBER_CORE, 8)
+                .input(BOSE_EINSTEIN_CONDENSATE, 4)
+                .input(wireGtSingle, BlackDwarfMatter, 8)
+                .fluidInputs(SolderingAlloy.getFluid(L * 16))
+                .fluidInputs(Zylon.getFluid(L * 10))
+                .fluidInputs(QuantumAlloy.getFluid(L * 4))
+                .fluidInputs(WhiteDwarfMatter.getFluid(L * 2))
+                .output(HOLOGRAPHIC_INFORMATION_IMC)
+                .stationResearch(b -> b
+                        .researchStack(COSMIC_INFORMATION_MODULE.getStackForm())
+                        .EUt(VA[UIV])
+                        .CWUt(1024))
+                .EUt(VA[UIV])
+                .duration(200)
                 .buildAndRegister();
 
         //  Cosmic SMDs

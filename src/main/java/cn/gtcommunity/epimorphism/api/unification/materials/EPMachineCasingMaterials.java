@@ -73,6 +73,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(METALLIC)
                 .blastTemp(11800, BlastProperty.GasTier.HIGHEST, VA[UEV], 2000)
                 .components(BETSPerrhenate, 1, Trinaquadalloy, 4, Vibranium, 2, Taranium, 1, TitaniumCarbide, 9, Potassium, 9, Lithium, 9, Sulfur, 6)
+                .flags(GENERATE_FINE_WIRE)
                 .cableProperties(V[UEV], 48, 0, true)
                 .build();
         //  24506 HDCS (High Durability Compound Steel)
