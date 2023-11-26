@@ -373,6 +373,18 @@ public EPMaterials() {}
     public static Material HeavyQuarkEnrichedMixture;
     public static Material DeuteriumSuperHeavyMixture;
     public static Material HeavyQuarkDegenerateMatter;
+    public static Material FullerenePolymerMatrix;
+    public static Material RadiumRadonMixture;
+    public static Material ScandiumTitaniumMixture;
+    public static Material CaesiumIodide;
+    public static Material TlTmDropedCaesiumIodide;
+    public static Material CadmiumTungstate;
+    public static Material BismuthGermanate;
+    public static Material IodineMonochloride;
+    public static Material MagnesiumChlorideBromide;
+    public static Material RhReNqCatalyst;
+    public static Material LithiumTitanate;
+    public static Material TitaniumNitrate;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -430,8 +442,6 @@ public EPMaterials() {}
     public static Material Nitroaniline;
     public static Material Durene;
     public static Material PyromelliticDianhydride;
-    public static Material Aminophenol;
-    public static Material Aniline;
     public static Material Oxydianiline;
     public static Material Dimethylformamide;
     public static Material PhthalicAnhydride;
@@ -541,6 +551,15 @@ public EPMaterials() {}
     public static Material Fructose;
     public static Material Hexafluoropropylene;
     public static Material FluorinatedEthylenePropylene;
+    public static Material PolycyclicAromaticMixture;
+    public static Material Anthracene;
+    public static Material Dihydroiodotetracene;
+    public static Material Dimethylnaphthalene;
+    public static Material AcetylatingReagent;
+    public static Material Dichlorodicyanobenzoquinone;
+    public static Material Dichlorodicyanohydroquinone;
+    public static Material IsopropylAlcohol;
+    public static Material Tetracene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

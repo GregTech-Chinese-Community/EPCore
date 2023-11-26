@@ -493,6 +493,14 @@ metaitem.null.tooltip=§b§o天体即空洞
 metaitem.metastable_self_healing_adhesive.name=超稳态自修复粘合剂
 metaitem.hyperdimensional_tachyon_condensed_matter.name=超维度快子凝聚物质
 metaitem.unstable_star.name=易变之星
+metaitem.component.cosmic.cladded_optical_fiber_core.name=包层光导纤维内芯
+metaitem.component.cosmic.closed_timelike_curve_computational_unit.name=封闭类时曲线计算单元
+metaitem.component.cosmic.closed_timelike_curve_guidance_unit.name=封闭类时曲线引导单元
+metaitem.component.cosmic.nuclear_clock.name=核时钟
+metaitem.component.cosmic.manifold_oscillatory_power_cell.name=流形振荡能量单元
+
+metaitem.scintillator.name=闪烁体
+metaitem.scintillator_crystal.name=闪烁晶体
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -1480,6 +1488,18 @@ gregtech.material.yttrium_vanadate_lu_tm=镥铥掺杂的钒酸钇
 gregtech.material.heavy_quark_enriched_mixture=富集重夸克混合物
 gregtech.material.deuterium_superheavy_mixture=氘-超重元素混合物
 gregtech.material.heavy_quark_degenerate_matter=重夸克简并物质
+gregtech.material.fullerene_polymer_matrix=富勒烯聚合物基体
+gregtech.material.radium_radon_mixture=镭-氡混合物
+gregtech.material.scandium_titanium_mixture=钪-钛混合物
+gregtech.material.caesium_iodide=碘化铯
+gregtech.material.tl_tm_droped_caesium_iodide=铊-铥掺杂的碘化铯
+gregtech.material.cadmium_tungstate=钨酸镉
+gregtech.material.bismuth_germanate=锗酸铋
+gregtech.material.iodine_monochloride=氯化碘
+gregtech.material.magnesium_chloride_bromide=溴氯化镁
+gregtech.material.rh_re_nq_catalyst=铑-铼-硅岩混合催化剂
+gregtech.material.lithium_titanate=钛酸锂
+gregtech.material.titanium_nitrate=硝酸钛
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1537,8 +1557,6 @@ gregtech.material.n_methyl_pyrrolidone=N-甲基-2-吡咯烷酮
 gregtech.material.nitroaniline=4-硝基苯胺
 gregtech.material.durene=均四甲苯
 gregtech.material.pyromellitic_dianhydride=均苯四酸二酐（PDMA）
-gregtech.material.aminophenol=4-氨基苯酚
-gregtech.material.aniline=苯胺
 gregtech.material.oxydianiline=4,4'-二氨基二苯醚（ODA）
 gregtech.material.dimethylformamide=二甲基甲酰胺（DMF）
 gregtech.material.phthalic_anhydride=邻苯二甲酸酐
@@ -1649,6 +1667,15 @@ gregtech.material.glucose=葡萄糖
 gregtech.material.fructose=果糖
 gregtech.material.hexafluoropropylene=六氟丙烯
 gregtech.material.fluorinated_ethylene_propylene=聚全氟乙丙烯（FEP）
+gregtech.material.polycyclic_aromatic_mixture=多环芳香烃混合物
+gregtech.material.anthracene=蒽
+gregtech.material.dihydroiodotetracene=二氢碘化四联苯
+gregtech.material.dimethylnaphthalene=二甲基萘
+gregtech.material.acetylating_reagent=乙酰化试剂
+gregtech.material.dichlorodicyanobenzoquinone=二氯二氰苯醌
+gregtech.material.dichlorodicyanohydroquinone=二氯二氰氢醌
+gregtech.material.isopropyl_alcohol=异丙醇
+gregtech.material.tetracene=并四苯
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

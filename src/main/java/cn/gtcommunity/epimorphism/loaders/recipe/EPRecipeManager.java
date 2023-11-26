@@ -91,6 +91,7 @@ public class EPRecipeManager {
         GoowareCircuits.init();
         OpticalCircuits.init();
         SpintronicCircuits.init();
+        CosmicCircuits.init();
         WrapCircuits.init();
     }
 

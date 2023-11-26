@@ -130,9 +130,9 @@ public class EPElementMaterials {
                 .color(0x2D3A9D)
                 .iconSet(BRIGHT)
                 .element(Elements.Hs)
-                .flags(GENERATE_ROD)
+                .flags(GENERATE_ROD, GENERATE_PLATE)
+                .blastTemp(11240, BlastProperty.GasTier.HIGHEST)
                 .build();
-        //  TODO Uranium-238 -> Quasi-fissioning Plasma -> Flerovium-Ytterbium Plasma -> Metastable Flerovium + Ytterbium-178
         //  26011 Metastable Flerovium
         MetastableFlerovium = new Material.Builder(getMaterialsId(), gregtechId("metastable_flerovium"))
                 .ingot()
@@ -148,7 +148,7 @@ public class EPElementMaterials {
                 .fluid()
                 .color(0x323232)
                 .iconSet(BRIGHT)
-                .flags(NO_SMELTING, NO_SMASHING)
+                .flags(NO_SMELTING, NO_SMASHING, GENERATE_FINE_WIRE)
                 .fluidTemp(2000000000)
                 .element(EPElements.CosmicNeutronium)
                 .cableProperties(V[UIV], 256, 128, false)
@@ -172,7 +172,7 @@ public class EPElementMaterials {
                 .fluidTemp((int) V[UIV])
                 .element(EPElements.Infinity)
                 .blastTemp(12600, BlastProperty.GasTier.HIGHEST, VA[UHV], 5901)
-                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR)
+                .flags(GENERATE_PLATE, GENERATE_DOUBLE_PLATE, GENERATE_ROD, GENERATE_LONG_ROD, GENERATE_RING, GENERATE_ROUND, GENERATE_BOLT_SCREW, GENERATE_FRAME, GENERATE_GEAR, GENERATE_SMALL_GEAR, GENERATE_FOIL, GENERATE_FINE_WIRE)
                 .build();
         //  26015 Rhugnor
         Rhugnor = new Material.Builder(getMaterialsId(), gregtechId("rhugnor"))

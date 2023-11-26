@@ -1042,7 +1042,7 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(0xACB4BC)
                 .iconSet(SHINY)
-                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION)
+                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Zirconium, 5, Barium, 2, Lanthanum, 1, Aluminium, 1, Sodium, 2, Fluorine, 6)
                 .build()
                 .setFormula("(ZrF4)5(BaF2)2(LaF3)(AlF3)(NaF)2", true);
@@ -1248,7 +1248,7 @@ public class EPFirstDegreeMaterials {
                 .addOreByproducts(SiliconDioxide)
                 .color(0x9EB749)
                 .iconSet(QUARTZ)
-                .flags(CRYSTALLIZABLE)
+                .flags(CRYSTALLIZABLE, GENERATE_LENS)
                 .components(SiliconDioxide, 5, Iron, 1)
                 .build();
         //  24163 Magneto Resonatic
@@ -1534,7 +1534,7 @@ public class EPFirstDegreeMaterials {
                 .gem()
                 .color(0xD99DE4)
                 .iconSet(GEM_VERTICAL)
-                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING)
+                .flags(CRYSTALLIZABLE, DECOMPOSITION_BY_CENTRIFUGING, GENERATE_LENS)
                 .components(YttriumOxide, 2, NeodymiumOxide, 1, Alumina, 5)
                 .build()
                 .setFormula("NdY2Al5O12", true);
@@ -2534,6 +2534,102 @@ public class EPFirstDegreeMaterials {
                 .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UEV])
                 .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
                 .build();
+        //  24337 Fullerene Polymer Matrix
+        FullerenePolymerMatrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_matrix"))
+                .polymer()
+                .color(0x2F0B01)
+                .iconSet(SHINY)
+                .fluidTemp(500)
+                .components(Lead, 1, Iron, 1, Carbon, 153, Hydrogen, 36, Nitrogen, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
+                .build();
+        //  24338 Radium-Radon Mixture
+        RadiumRadonMixture = new Material.Builder(getMaterialsId(), gregtechId("radium_radon_mixture"))
+                .fluid()
+                .color(Radium.getMaterialRGB() + Radon.getMaterialRGB())
+                .components(Radium, 1, Radon, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24339 Scandium-Titanium Mixture
+        ScandiumTitaniumMixture = new Material.Builder(getMaterialsId(), gregtechId("scandium_titanium_mixture"))
+                .fluid()
+                .color(Scandium.getMaterialRGB() + Titanium.getMaterialRGB())
+                .components(Scandium, 1, Titanium, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24340 Caesium Iodide
+        CaesiumIodide = new Material.Builder(getMaterialsId(), gregtechId("caesium_iodide"))
+                .dust()
+                .color(Caesium.getMaterialRGB() + Iodine.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Caesium, 1, Iodine, 1)
+                .build();
+        //  24341 Tl-Tm-Droped Caesium Iodide
+        TlTmDropedCaesiumIodide = new Material.Builder(getMaterialsId(), gregtechId("tl_tm_droped_caesium_iodide"))
+                .dust()
+                .color(Thallium.getMaterialRGB() + Thulium.getMaterialRGB() + CaesiumIodide.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Thallium, 1, Thulium, 1, CaesiumIodide, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Tl/Tm:CsI");
+        //  24342 Cadmium Tungstate
+        CadmiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("cadmium_tungstate"))
+                .dust()
+                .color(Cadmium.getMaterialRGB() + Tungsten.getMaterialRGB())
+                .iconSet(BRIGHT)
+                .components(Cadmium, 1, Tungsten, 1, Oxygen, 4)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24343 Bismuth Germanate
+        BismuthGermanate = new Material.Builder(getMaterialsId(), gregtechId("bismuth_germanate"))
+                .dust()
+                .color(Bismuth.getMaterialRGB() + Germanium.getMaterialRGB())
+                .iconSet(ROUGH)
+                .components(Bismuth, 12, Germanium, 1, Oxygen, 20)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24344 Iodine Monochloride
+        IodineMonochloride = new Material.Builder(getMaterialsId(), gregtechId("iodine_monochloride"))
+                .fluid()
+                .color(Iodine.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .components(Iodine, 1, Chlorine, 1)
+                .build();
+        //  24345 Magnesium Chloride Bromide
+        MagnesiumChlorideBromide = new Material.Builder(getMaterialsId(), gregtechId("magnesium_chloride_bromide"))
+                .dust()
+                .color(Magnesium.getMaterialRGB() + Chlorine.getMaterialRGB() + Bromine.getMaterialRGB())
+                .components(Magnesium, 1, Chlorine, 1, Bromine, 1)
+                .build();
+        //  24346 Rh-Re-Nq Catalyst
+        RhReNqCatalyst = new Material.Builder(getMaterialsId(), gregtechId("rh_re_nq_catalyst"))
+                .dust()
+                .color(Rhodium.getMaterialRGB() + Rhenium.getMaterialRGB() + Naquadah.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Rhodium, 1, Rhenium, 1, Naquadah, 1)
+                .build();
+        //  24347 Lithium Titanate
+        LithiumTitanate = new Material.Builder(getMaterialsId(), gregtechId("lithium_titanate"))
+                .ingot()
+                .fluid()
+                .color(0xFE71A9)
+                .iconSet(SHINY)
+                .blastTemp(3100)
+                .components(Lithium, 2, Titanium, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .build();
+        //  24348 Titanium Nitrate
+        TitaniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("titanium_nitrate"))
+                .dust()
+                .color(Titanium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Titanium, 1, Nitrogen, 4, Oxygen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ti(NO3)4", true);
+
+        //  24349 PalladiumLoadedRutileNanoparticles
+
     }
 
     private static int getMaterialsId() {

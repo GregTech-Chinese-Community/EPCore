@@ -35,6 +35,7 @@ public class EPMaterialPropertyAddition {
         Praseodymium.setProperty(PropertyKey.DUST, new DustProperty());
         Terbium.setProperty(PropertyKey.DUST, new DustProperty());
         Scandium.setProperty(PropertyKey.DUST, new DustProperty());
+        Scandium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Neptunium.setProperty(PropertyKey.DUST, new DustProperty());
         Neptunium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Zirconium.setProperty(PropertyKey.DUST, new DustProperty());
@@ -69,6 +70,7 @@ public class EPMaterialPropertyAddition {
         Curium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Radium.setProperty(PropertyKey.DUST, new DustProperty());
+        Radium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Actinium.setProperty(PropertyKey.DUST, new DustProperty());
         Actinium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Caesium.setProperty(PropertyKey.FLUID, new FluidProperty());
@@ -93,6 +95,7 @@ public class EPMaterialPropertyAddition {
         Meitnerium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Roentgenium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Roentgenium.setProperty(PropertyKey.FLUID, new FluidProperty());
+
 
         //  IconSets
         Bromine.setMaterialIconSet(MaterialIconSet.FLUID);

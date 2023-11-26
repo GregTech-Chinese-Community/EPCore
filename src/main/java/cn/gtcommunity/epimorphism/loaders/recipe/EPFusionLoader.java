@@ -365,5 +365,47 @@ public class EPFusionLoader {
                 .duration(240)
                 .EUToStart(650000000L)
                 .buildAndRegister();
+
+        //  Metastable Hassium Chain
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Radium.getFluid(L))
+                .fluidInputs(Radon.getFluid(1000))
+                .fluidOutputs(RadiumRadonMixture.getFluid(L * 2))
+                .EUt(VA[UV])
+                .duration(130)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(RadiumRadonMixture.getFluid(L * 2))
+                .fluidOutputs(Radium.getFluid(L))
+                .fluidOutputs(Radon.getFluid(1000))
+                .EUt(VA[IV])
+                .duration(260)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Scandium.getFluid(L))
+                .fluidInputs(Titanium.getFluid(L))
+                .fluidOutputs(ScandiumTitaniumMixture.getFluid(L * 2))
+                .EUt(VA[UV])
+                .duration(130)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(ScandiumTitaniumMixture.getFluid(L * 2))
+                .fluidOutputs(Scandium.getFluid(L))
+                .fluidOutputs(Titanium.getFluid(L))
+                .EUt(VA[IV])
+                .duration(260)
+                .buildAndRegister();
+
+        FUSION_RECIPES.recipeBuilder()
+                .fluidInputs(RadiumRadonMixture.getFluid(L * 2))
+                .fluidInputs(ScandiumTitaniumMixture.getFluid(L * 2))
+                .fluidOutputs(MetastableHassium.getFluid(L * 4))
+                .EUt(VA[UEV])
+                .duration(100)
+                .EUToStart(2500000000L)
+                .buildAndRegister();
     }
 }
