@@ -143,6 +143,7 @@ public class EPMetaItems {
     public static MetaItem<?>.MetaValueItem METASTABLE_SELF_HEALING_ADHESIVE;
     public static MetaItem<?>.MetaValueItem HYPERDIMENSIONAL_TACHYON_CONDENSED_MATTER;
     public static MetaItem<?>.MetaValueItem UNSTABLE_STAR;
+    public static MetaItem<?>.MetaValueItem CLADDED_OPTICAL_FIBER_CORE;
 
     //  Crystal Components
     public static MetaItem<?>.MetaValueItem DIAMOND_CHIP;

@@ -1042,7 +1042,7 @@ public class EPFirstDegreeMaterials {
                 .fluid()
                 .color(0xACB4BC)
                 .iconSet(SHINY)
-                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION)
+                .flags(NO_SMASHING, NO_WORKING, DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
                 .components(Zirconium, 5, Barium, 2, Lanthanum, 1, Aluminium, 1, Sodium, 2, Fluorine, 6)
                 .build()
                 .setFormula("(ZrF4)5(BaF2)2(LaF3)(AlF3)(NaF)2", true);
@@ -2533,6 +2533,15 @@ public class EPFirstDegreeMaterials {
                 .iconSet(BRIGHT)
                 .blastTemp(12960, BlastProperty.GasTier.HIGHEST, VA[UEV])
                 .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE)
+                .build();
+        //  24337 Fullerene Polymer Matrix
+        FullerenePolymerMatrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_matrix"))
+                .polymer()
+                .color(0x2F0B01)
+                .iconSet(SHINY)
+                .fluidTemp(500)
+                .components(Lead, 1, Iron, 1, Carbon, 153, Hydrogen, 36, Nitrogen, 1, Oxygen, 2)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
                 .build();
     }
 

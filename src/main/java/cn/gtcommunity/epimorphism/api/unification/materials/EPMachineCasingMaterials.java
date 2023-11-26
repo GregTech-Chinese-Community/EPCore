@@ -437,7 +437,7 @@ public class EPMachineCasingMaterials {
                 .iconSet(SHINY)
                 .components(Rutherfordium, 1, Dubnium, 1, Seaborgium, 1, Bohrium, 1, MetastableHassium, 1, Meitnerium, 1, Darmstadtium, 1, Roentgenium, 1)
                 .blastTemp(10800, BlastProperty.GasTier.HIGHEST, VA[UEV], 4990)
-                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW)
+                .flags(GENERATE_ROD, GENERATE_BOLT_SCREW, GENERATE_FINE_WIRE)
                 .build();
         //  24542 Platinum-group Alloy
         PlatinumGroupAlloy = new Material.Builder(getMaterialsId(), gregtechId("platinum_group_alloy"))

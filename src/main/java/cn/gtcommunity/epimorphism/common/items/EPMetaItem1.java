@@ -157,6 +157,8 @@ public class EPMetaItem1 extends StandardMetaItem {
 
         UNSTABLE_STAR = this.addItem(120, "unstable_star");
 
+        CLADDED_OPTICAL_FIBER_CORE = this.addItem(130, "component.cosmic.cladded_optical_fiber_core");
+
         //  Crystal Components
         DIAMOND_CHIP = this.addItem(150, "crystal.diamond_chip");
         RUBY_CHIP = this.addItem(151, "crystal.ruby_chip");

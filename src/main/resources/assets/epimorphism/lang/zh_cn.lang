@@ -487,6 +487,7 @@ metaitem.null.tooltip=§b§o天体即空洞
 metaitem.metastable_self_healing_adhesive.name=超稳态自修复粘合剂
 metaitem.hyperdimensional_tachyon_condensed_matter.name=超维度快子凝聚物质
 metaitem.unstable_star.name=易变之星
+metaitem.component.cosmic.cladded_optical_fiber_core.name=包层光导纤维内芯
 
 #  Covers
 metaitem.cover.electric_motor.ulv.name=电动马达（ULV）
@@ -1474,6 +1475,7 @@ gregtech.material.yttrium_vanadate_lu_tm=镥铥掺杂的钒酸钇
 gregtech.material.heavy_quark_enriched_mixture=富集重夸克混合物
 gregtech.material.deuterium_superheavy_mixture=氘-超重元素混合物
 gregtech.material.heavy_quark_degenerate_matter=重夸克简并物质
+gregtech.material.fullerene_polymer_matrix=富勒烯聚合物基体
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
