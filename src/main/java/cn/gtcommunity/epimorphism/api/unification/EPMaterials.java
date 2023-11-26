@@ -383,6 +383,8 @@ public EPMaterials() {}
     public static Material IodineMonochloride;
     public static Material MagnesiumChlorideBromide;
     public static Material RhReNqCatalyst;
+    public static Material LithiumTitanate;
+    public static Material TitaniumNitrate;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -556,6 +558,8 @@ public EPMaterials() {}
     public static Material AcetylatingReagent;
     public static Material Dichlorodicyanobenzoquinone;
     public static Material Dichlorodicyanohydroquinone;
+    public static Material IsopropylAlcohol;
+    public static Material Tetracene;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

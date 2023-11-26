@@ -1217,7 +1217,20 @@ public class EPOrganicChemistryMaterials {
                 .components(Carbon, 8, Chlorine, 2, Nitrogen, 2, Oxygen, 2, Hydrogen, 2)
                 .flags(DISABLE_DECOMPOSITION)
                 .build()
-                .setFormula("C8Cl2N2(OH)2");
+                .setFormula("C8Cl2N2(OH)2", true);
+        //  25166 Isopropyl Alcohol
+        IsopropylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isopropyl_alcohol"))
+                .fluid()
+                .color(0xFF23D4)
+                .components(Carbon, 3, Hydrogen, 8, Oxygen, 1)
+                .build();
+        //  25167 Tetracene
+        Tetracene = new Material.Builder(getMaterialsId(), gregtechId("tetracene"))
+                .dust()
+                .color(0x9B8E35)
+                .iconSet(SHINY)
+                .components(Carbon, 18, Hydrogen, 12)
+                .build();
     }
 
     private static int getMaterialsId() {

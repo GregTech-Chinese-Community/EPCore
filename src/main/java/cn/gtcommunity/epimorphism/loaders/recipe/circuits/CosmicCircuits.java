@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gregtechfoodoption.GTFOMaterialHandler.HydrogenCyanide;
+import static gregtechfoodoption.GTFOMaterialHandler.LithiumCarbonate;
 
 public class CosmicCircuits {
     public static void init() {
@@ -149,10 +150,45 @@ public class CosmicCircuits {
                 .duration(250)
                 .buildAndRegister();
 
+        //  Isopropyl Alcohol
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(dust, SodiumPhosphomolybdate)
+                .notConsumable(dust, SodiumPhosphotungstate)
+                .fluidInputs(Propene.getFluid(1000))
+                .fluidInputs(Water.getFluid(1000))
+                .fluidOutputs(IsopropylAlcohol.getFluid(1000))
+                .EUt(VA[LuV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Titanium Nitrate
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(TitaniumTetrachloride.getFluid(1000))
+                .fluidInputs(DinitrogenTetroxide.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(2000))
+                .output(dust, TitaniumNitrate, 17)
+                .fluidOutputs(Chlorine.getFluid(4000))
+                .EUt(VA[EV])
+                .duration(230)
+                .buildAndRegister();
+
+        //  Lithium Titanate
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, TitaniumNitrate, 17)
+                .input(dust, SodiumHydroxide, 6)
+                .inputs(LithiumCarbonate.getItemStack(6))
+                .output(dust, LithiumTitanate, 6)
+                .output(dust, SodaAsh, 6)
+                .fluidOutputs(NitricAcid.getFluid(4000))
+                .EUt(VA[EV])
+                .duration(320)
+                .blastFurnaceTemp(3100)
+                .buildAndRegister();
+
         //  Tetracene
         ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
                 .notConsumable(lens, Prasiolite)
-                .notConsumable(dust, PalladiumLoadedRutileNanoparticles)
+                .notConsumable(dust, Rutile) // TODO Nanoparticles?
                 .fluidInputs(Dihydroiodotetracene.getFluid(2000))
                 .fluidInputs(Dichlorodicyanobenzoquinone.getFluid(2000))
                 .fluidInputs(IsopropylAlcohol.getFluid(1000))

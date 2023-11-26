@@ -2608,6 +2608,28 @@ public class EPFirstDegreeMaterials {
                 .iconSet(SHINY)
                 .components(Rhodium, 1, Rhenium, 1, Naquadah, 1)
                 .build();
+        //  24347 Lithium Titanate
+        LithiumTitanate = new Material.Builder(getMaterialsId(), gregtechId("lithium_titanate"))
+                .ingot()
+                .fluid()
+                .color(0xFE71A9)
+                .iconSet(SHINY)
+                .blastTemp(3100)
+                .components(Lithium, 2, Titanium, 1, Oxygen, 3)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_FINE_WIRE)
+                .build();
+        //  24348 Titanium Nitrate
+        TitaniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("titanium_nitrate"))
+                .dust()
+                .color(Titanium.getMaterialRGB() + NitricAcid.getMaterialRGB())
+                .iconSet(DULL)
+                .components(Titanium, 1, Nitrogen, 4, Oxygen, 12)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("Ti(NO3)4", true);
+
+        //  24349 PalladiumLoadedRutileNanoparticles
+
     }
 
     private static int getMaterialsId() {
