@@ -303,6 +303,12 @@ metaitem.mill.grindball_aluminium.name=铝研磨球
 
 #  Debug
 metaitem.debug.structure_writer.name=多方块导出工具
+metaitem.debug.structure_writer.tooltip=因为我需要一个...
+metaitem.debug.structure_writer.export_to_log=导出为日志
+metaitem.debug.structure_writer.export_to_json=导出为Json
+metaitem.debug.structure_writer.rotate_along_y_axis=沿Y轴旋转
+metaitem.debug.structure_writer.ex=无
+metaitem.debug.structure_writer.structural_scale=结构规模： X:%s  Y:%s  Z:%s
 metaitem.debug.structure_builder.name=多方块构建工具
 
 #  Multiblock Casings

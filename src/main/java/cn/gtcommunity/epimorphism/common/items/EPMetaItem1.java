@@ -233,7 +233,7 @@ public class EPMetaItem1 extends StandardMetaItem {
         WRAP_CIRCUIT_MAX = this.addItem(414, "wrap.circuit.max");
 
         // Debug
-        DEBUG_STRUCTURE_WRITER = this.addItem(9999, "debug.structure_writer").addComponents(new StructureWriteBehavior());
+        DEBUG_STRUCTURE_WRITER = this.addItem(9999, "debug.structure_writer").addComponents(StructureWriteBehavior.INSTANCE);
         DEBUG_STRUCTURE_BUILDER = this.addItem(10000, "debug.structure_builder");
     }
 }
