@@ -8,7 +8,7 @@
 
 <h1 align="center">
     <a href="https://modrinth.com/mod/epcore"><img src="https://img.shields.io/badge/Available%20for-MC%201.12.2%20-informational?style=for-the-badge" alt="Supported Versions"></a>
-    <a href="https://gitlab.com/gtcnc/epimorphism-core/blob/overhaul/LICENSE"><img src="https://img.shields.io/gitlab/license/gtcnc/epimorphism-core?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/GregTech-Chinese-Community/EPcore/blob/overhaul/LICENSE"><img src="https://img.shields.io/gitlab/license/gtcnc/epimorphism-core?style=for-the-badge" alt="License"></a>
 </h1>
 
 ##  Welcome to Epimorphism Core
