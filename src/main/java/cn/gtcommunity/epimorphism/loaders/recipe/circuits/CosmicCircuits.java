@@ -10,8 +10,7 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
-import static gregtechfoodoption.GTFOMaterialHandler.HydrogenCyanide;
-import static gregtechfoodoption.GTFOMaterialHandler.LithiumCarbonate;
+import static gregtechfoodoption.GTFOMaterialHandler.*;
 
 public class CosmicCircuits {
     public static void init() {
@@ -159,30 +158,6 @@ public class CosmicCircuits {
                 .fluidOutputs(IsopropylAlcohol.getFluid(1000))
                 .EUt(VA[LuV])
                 .duration(100)
-                .buildAndRegister();
-
-        //  Titanium Nitrate
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(TitaniumTetrachloride.getFluid(1000))
-                .fluidInputs(DinitrogenTetroxide.getFluid(2000))
-                .fluidInputs(Oxygen.getFluid(2000))
-                .output(dust, TitaniumNitrate, 17)
-                .fluidOutputs(Chlorine.getFluid(4000))
-                .EUt(VA[EV])
-                .duration(230)
-                .buildAndRegister();
-
-        //  Lithium Titanate
-        BLAST_RECIPES.recipeBuilder()
-                .input(dust, TitaniumNitrate, 17)
-                .input(dust, SodiumHydroxide, 6)
-                .inputs(LithiumCarbonate.getItemStack(6))
-                .output(dust, LithiumTitanate, 6)
-                .output(dust, SodaAsh, 6)
-                .fluidOutputs(NitricAcid.getFluid(4000))
-                .EUt(VA[EV])
-                .duration(320)
-                .blastFurnaceTemp(3100)
                 .buildAndRegister();
 
         //  Tetracene

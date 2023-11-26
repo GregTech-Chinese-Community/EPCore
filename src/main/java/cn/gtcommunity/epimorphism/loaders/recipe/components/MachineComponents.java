@@ -22,6 +22,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gregtech.common.metatileentities.MetaTileEntities.*;
+import static gregtechfoodoption.GTFOMaterialHandler.LithiumCarbonate;
 
 public class MachineComponents {
 
@@ -2013,6 +2014,29 @@ public class MachineComponents {
                 .output(dust, SuperheavyLAlloy, 8)
                 .EUt(VA[UEV])
                 .duration(120)
+                .buildAndRegister();
+
+        //  Lithium Titanate
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(TitaniumTetrachloride.getFluid(1000))
+                .fluidInputs(DinitrogenTetroxide.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(2000))
+                .output(dust, TitaniumNitrate, 17)
+                .fluidOutputs(Chlorine.getFluid(4000))
+                .EUt(VA[EV])
+                .duration(230)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, TitaniumNitrate, 17)
+                .input(dust, SodiumHydroxide, 6)
+                .inputs(LithiumCarbonate.getItemStack(6))
+                .output(dust, LithiumTitanate, 6)
+                .output(dust, SodaAsh, 6)
+                .fluidOutputs(NitricAcid.getFluid(4000))
+                .EUt(VA[EV])
+                .duration(320)
+                .blastFurnaceTemp(3100)
                 .buildAndRegister();
     }
 }
