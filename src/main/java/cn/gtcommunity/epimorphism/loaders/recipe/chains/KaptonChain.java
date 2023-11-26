@@ -36,7 +36,7 @@ public class KaptonChain {
                 .fluidInputs(Nitrobenzene.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(4000))
                 .circuitMeta(1)
-                .output(Aminophenol.getItemStack().getItem())
+                .outputs(Aminophenol.getItemStack())
                 .fluidOutputs(Water.getFluid(1000))
                 .duration(300)
                 .EUt(VA[LV])
@@ -58,7 +58,7 @@ public class KaptonChain {
         //  Saltpeter + Aminonphenol + Nitrochlorobenzene + Water + Dimethylformamide -> Oxydianiline + Oxygen + Hydrochloric Acid
         CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .notConsumable(dust, Saltpeter)
-                .input(Aminophenol.getItemStack().getItem())
+                .inputs(Aminophenol.getItemStack())
                 .fluidInputs(Nitrochlorobenzene.getFluid(1000))
                 .fluidInputs(Water.getFluid(1000))
                 .notConsumable(Dimethylformamide.getFluid(1))
