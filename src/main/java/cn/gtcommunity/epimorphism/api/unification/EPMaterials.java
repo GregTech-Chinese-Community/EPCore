@@ -380,6 +380,9 @@ public EPMaterials() {}
     public static Material TlTmDropedCaesiumIodide;
     public static Material CadmiumTungstate;
     public static Material BismuthGermanate;
+    public static Material IodineMonochloride;
+    public static Material MagnesiumChlorideBromide;
+    public static Material RhReNqCatalyst;
 
     //  Second Degree Materials
     public static Material DragonBreath;
@@ -547,6 +550,12 @@ public EPMaterials() {}
     public static Material Hexafluoropropylene;
     public static Material FluorinatedEthylenePropylene;
     public static Material PolycyclicAromaticMixture;
+    public static Material Anthracene;
+    public static Material Dihydroiodotetracene;
+    public static Material Dimethylnaphthalene;
+    public static Material AcetylatingReagent;
+    public static Material Dichlorodicyanobenzoquinone;
+    public static Material Dichlorodicyanohydroquinone;
 
     //  Unknown Composition Materials
     public static Material BZMedium;

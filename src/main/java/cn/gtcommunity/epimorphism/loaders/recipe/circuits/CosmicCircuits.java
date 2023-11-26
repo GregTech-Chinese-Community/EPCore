@@ -10,6 +10,7 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
+import static gregtechfoodoption.GTFOMaterialHandler.HydrogenCyanide;
 
 public class CosmicCircuits {
     public static void init() {
@@ -56,7 +57,122 @@ public class CosmicCircuits {
                 .blastFurnaceTemp(2853)
                 .buildAndRegister();
 
-        //  TODO Tetracene Chain
+        //  Anthracene
+        DISTILLERY_RECIPES.recipeBuilder()
+                .fluidInputs(HighlyPurifiedCoalTar.getFluid(20))
+                .circuitMeta(0)
+                .fluidOutputs(Anthracene.getFluid(5))
+                .EUt(VA[MV])
+                .duration(100)
+                .buildAndRegister();
+
+        //  Dimethylnaphthalene
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Naphthalene.getFluid(1000))
+                .fluidInputs(Methanol.getFluid(2000))
+                .fluidOutputs(Dimethylnaphthalene.getFluid(1000))
+                .fluidOutputs(Water.getFluid(2000))
+                .EUt(VA[EV])
+                .duration(240)
+                .buildAndRegister();
+
+        //  Acetylating Reagent
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, MagnesiumChloride, 6)
+                .fluidInputs(Acetylene.getFluid(3000))
+                .fluidInputs(Trimethylchlorosilane.getFluid(1000))
+                .fluidInputs(Bromine.getFluid(2000))
+                .fluidOutputs(AcetylatingReagent.getFluid(1000))
+                .fluidOutputs(Chlorine.getFluid(2000))
+                .fluidOutputs(HydrochloricAcid.getFluid(3000))
+                .EUt(VA[IV])
+                .duration(350)
+                .buildAndRegister();
+
+        //  Iodine Monochloride
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Iodine)
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidOutputs(IodineMonochloride.getFluid(1000))
+                .EUt(VA[MV])
+                .duration(240)
+                .buildAndRegister();
+
+        //  Rh-Re-Nq Catalyst
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Rhodium)
+                .input(dust, Rhenium)
+                .input(dust, Naquadah)
+                .output(dust, RhReNqCatalyst, 3)
+                .EUt(VA[ZPM])
+                .duration(260)
+                .buildAndRegister();
+
+        //  Dihydroiodotetracene
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
+                .notConsumable(dust, RhReNqCatalyst)
+                .input(dust, BromoSuccinimide, 12)
+                .fluidInputs(Dimethylnaphthalene.getFluid(1000))
+                .fluidInputs(AcetylatingReagent.getFluid(1000))
+                .fluidInputs(IodineMonochloride.getFluid(1000))
+                .fluidInputs(Chlorine.getFluid(2000))
+                .output(dust, MagnesiumChlorideBromide, 6)
+                .output(dust, Succinimide, 12)
+                .fluidOutputs(Dihydroiodotetracene.getFluid(1000))
+                .fluidOutputs(Trimethylchlorosilane.getFluid(1000))
+                .fluidOutputs(HydrobromicAcid.getFluid(1000))
+                .EUt(VA[ZPM])
+                .duration(290)
+                .CasingTier(4)
+                .buildAndRegister();
+
+        //  Dichlorodicyanobenzoquinone
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Phenol.getFluid(1000))
+                .fluidInputs(Chlorine.getFluid(10000))
+                .fluidInputs(HydrogenCyanide.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidOutputs(Dichlorodicyanobenzoquinone.getFluid(1000))
+                .fluidOutputs(HydrochloricAcid.getFluid(8000))
+                .EUt(VA[LuV])
+                .duration(250)
+                .buildAndRegister();
+
+        //  Dichlorodicyanohydroquinone -> Dichlorodicyanobenzoquinone cycle
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(dust, Vanadium)
+                .fluidInputs(Dichlorodicyanohydroquinone.getFluid(1000))
+                .fluidInputs(HydrogenPeroxide.getFluid(1000))
+                .fluidOutputs(Dichlorodicyanobenzoquinone.getFluid(1000))
+                .fluidOutputs(Water.getFluid(2000))
+                .EUt(VA[EV])
+                .duration(250)
+                .buildAndRegister();
+
+        //  Tetracene
+        ULTRAVIOLET_LAMP_CHAMBER_RECIPES.recipeBuilder()
+                .notConsumable(lens, Prasiolite)
+                .notConsumable(dust, PalladiumLoadedRutileNanoparticles)
+                .fluidInputs(Dihydroiodotetracene.getFluid(2000))
+                .fluidInputs(Dichlorodicyanobenzoquinone.getFluid(2000))
+                .fluidInputs(IsopropylAlcohol.getFluid(1000))
+                .output(dust, Tetracene, 60)
+                .output(dust, Iodine, 2)
+                .fluidOutputs(Acetone.getFluid(1000))
+                .fluidOutputs(Dichlorodicyanohydroquinone.getFluid(2000))
+                .EUt(VA[UV])
+                .duration(260)
+                .cleanroom(CleanroomType.CLEANROOM)
+                .buildAndRegister();
+
+        //  Polycyclic Aromatic Mixture
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Tetracene, 2)
+                .fluidInputs(Anthracene.getFluid(1000))
+                .output(dust, PolycyclicAromaticMixture, 3)
+                .EUt(VA[IV])
+                .duration(240)
+                .buildAndRegister();
 
         //  Cadmium Tungstate
         BLAST_RECIPES.recipeBuilder()

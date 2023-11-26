@@ -1248,7 +1248,7 @@ public class EPFirstDegreeMaterials {
                 .addOreByproducts(SiliconDioxide)
                 .color(0x9EB749)
                 .iconSet(QUARTZ)
-                .flags(CRYSTALLIZABLE)
+                .flags(CRYSTALLIZABLE, GENERATE_LENS)
                 .components(SiliconDioxide, 5, Iron, 1)
                 .build();
         //  24163 Magneto Resonatic
@@ -2588,6 +2588,25 @@ public class EPFirstDegreeMaterials {
                 .iconSet(ROUGH)
                 .components(Bismuth, 12, Germanium, 1, Oxygen, 20)
                 .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24344 Iodine Monochloride
+        IodineMonochloride = new Material.Builder(getMaterialsId(), gregtechId("iodine_monochloride"))
+                .fluid()
+                .color(Iodine.getMaterialRGB() + Chlorine.getMaterialRGB())
+                .components(Iodine, 1, Chlorine, 1)
+                .build();
+        //  24345 Magnesium Chloride Bromide
+        MagnesiumChlorideBromide = new Material.Builder(getMaterialsId(), gregtechId("magnesium_chloride_bromide"))
+                .dust()
+                .color(Magnesium.getMaterialRGB() + Chlorine.getMaterialRGB() + Bromine.getMaterialRGB())
+                .components(Magnesium, 1, Chlorine, 1, Bromine, 1)
+                .build();
+        //  24346 Rh-Re-Nq Catalyst
+        RhReNqCatalyst = new Material.Builder(getMaterialsId(), gregtechId("rh_re_nq_catalyst"))
+                .dust()
+                .color(Rhodium.getMaterialRGB() + Rhenium.getMaterialRGB() + Naquadah.getMaterialRGB())
+                .iconSet(SHINY)
+                .components(Rhodium, 1, Rhenium, 1, Naquadah, 1)
                 .build();
     }
 

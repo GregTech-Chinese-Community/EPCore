@@ -1495,6 +1495,9 @@ gregtech.material.caesium_iodide=碘化铯
 gregtech.material.tl_tm_droped_caesium_iodide=铊-铥掺杂的碘化铯
 gregtech.material.cadmium_tungstate=钨酸镉
 gregtech.material.bismuth_germanate=锗酸铋
+gregtech.material.iodine_monochloride=氯化碘
+gregtech.material.magnesium_chloride_bromide=溴氯化镁
+gregtech.material.rh_re_nq_catalyst=铑-铼-硅岩混合催化剂
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
@@ -1663,6 +1666,12 @@ gregtech.material.fructose=果糖
 gregtech.material.hexafluoropropylene=六氟丙烯
 gregtech.material.fluorinated_ethylene_propylene=聚全氟乙丙烯（FEP）
 gregtech.material.polycyclic_aromatic_mixture=多环芳香烃混合物
+gregtech.material.anthracene=蒽
+gregtech.material.dihydroiodotetracene=二氢碘化四联苯
+gregtech.material.dimethylnaphthalene=二甲基萘
+gregtech.material.acetylating_reagent=乙酰化试剂
+gregtech.material.dichlorodicyanobenzoquinone=二氯二氰苯醌
+gregtech.material.dichlorodicyanohydroquinone=二氯二氰氢醌
 
 ##  Unknown Composition Materials
 gregtech.material.bz_medium=别洛索夫-扎鲍京斯基振荡反应液

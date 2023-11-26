@@ -1177,6 +1177,47 @@ public class EPOrganicChemistryMaterials {
                 .iconSet(ROUGH)
                 .components(Carbon, 18, Hydrogen, 12)
                 .build();
+        //  25160 Anthracene
+        Anthracene = new Material.Builder(getMaterialsId(), gregtechId("anthracene"))
+                .fluid()
+                .color(0xCCCC99)
+                .components(Carbon, 14, Hydrogen, 10)
+                .build();
+        //  25161 Dihydroiodotetracene
+        Dihydroiodotetracene = new Material.Builder(getMaterialsId(), gregtechId("dihydroiodotetracene"))
+                .fluid()
+                .color(0xA1DF62)
+                .components(Carbon, 18, Hydrogen, 11, Hydrogen, 2, Iodine, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25162 Dimethylnaphthalene
+        Dimethylnaphthalene = new Material.Builder(getMaterialsId(), gregtechId("dimethylnaphthalene"))
+                .fluid()
+                .color(0xF200FF)
+                .components(Carbon, 12, Hydrogen, 12)
+                .build();
+        //  25163 Acetylating Reagent
+        AcetylatingReagent = new Material.Builder(getMaterialsId(), gregtechId("acetylating_reagent"))
+                .fluid()
+                .color(0x500C45)
+                .components(Carbon, 9, Hydrogen, 12, Silicon, 1, MagnesiumBromide, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  25164 Dichlorodicyanobenzoquinone
+        Dichlorodicyanobenzoquinone = new Material.Builder(getMaterialsId(), gregtechId("dichlorodicyanobenzoquinone"))
+                .fluid()
+                .color(0x47BFA6)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 8, Chlorine, 2, Nitrogen, 2, Oxygen, 2)
+                .build();
+        //  25165 Dichlorodicyanohydroquinone
+        Dichlorodicyanohydroquinone = new Material.Builder(getMaterialsId(), gregtechId("dichlorodicyanohydroquinone"))
+                .fluid()
+                .color(0x1BC3A2)
+                .components(Carbon, 8, Chlorine, 2, Nitrogen, 2, Oxygen, 2, Hydrogen, 2)
+                .flags(DISABLE_DECOMPOSITION)
+                .build()
+                .setFormula("C8Cl2N2(OH)2");
     }
 
     private static int getMaterialsId() {
