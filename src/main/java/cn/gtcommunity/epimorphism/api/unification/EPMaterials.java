@@ -374,6 +374,8 @@ public EPMaterials() {}
     public static Material DeuteriumSuperHeavyMixture;
     public static Material HeavyQuarkDegenerateMatter;
     public static Material FullerenePolymerMatrix;
+    public static Material RadiumRadonMixture;
+    public static Material ScandiumTitaniumMixture;
 
     //  Second Degree Materials
     public static Material DragonBreath;

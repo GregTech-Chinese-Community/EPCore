@@ -131,6 +131,7 @@ public class EPElementMaterials {
                 .iconSet(BRIGHT)
                 .element(Elements.Hs)
                 .flags(GENERATE_ROD, GENERATE_PLATE)
+                .blastTemp(11240, BlastProperty.GasTier.HIGHEST)
                 .build();
         //  26011 Metastable Flerovium
         MetastableFlerovium = new Material.Builder(getMaterialsId(), gregtechId("metastable_flerovium"))

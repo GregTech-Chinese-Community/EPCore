@@ -2543,6 +2543,20 @@ public class EPFirstDegreeMaterials {
                 .components(Lead, 1, Iron, 1, Carbon, 153, Hydrogen, 36, Nitrogen, 1, Oxygen, 2)
                 .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
                 .build();
+        //  24338 Radium-Radon Mixture
+        RadiumRadonMixture = new Material.Builder(getMaterialsId(), gregtechId("radium_radon_mixture"))
+                .fluid()
+                .color(Radium.getMaterialRGB() + Radon.getMaterialRGB())
+                .components(Radium, 1, Radon, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
+        //  24339 Scandium-Titanium Mixture
+        ScandiumTitaniumMixture = new Material.Builder(getMaterialsId(), gregtechId("scandium_titanium_mixture"))
+                .fluid()
+                .color(Scandium.getMaterialRGB() + Titanium.getMaterialRGB())
+                .components(Scandium, 1, Titanium, 1)
+                .flags(DISABLE_DECOMPOSITION)
+                .build();
     }
 
     private static int getMaterialsId() {

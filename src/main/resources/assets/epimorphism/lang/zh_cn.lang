@@ -1482,6 +1482,8 @@ gregtech.material.heavy_quark_enriched_mixture=富集重夸克混合物
 gregtech.material.deuterium_superheavy_mixture=氘-超重元素混合物
 gregtech.material.heavy_quark_degenerate_matter=重夸克简并物质
 gregtech.material.fullerene_polymer_matrix=富勒烯聚合物基体
+gregtech.material.radium_radon_mixture=镭-氡混合物
+gregtech.material.scandium_titanium_mixture=钪-钛混合物
 
 ##  Second Degree Materials
 gregtech.material.dragon_breath=龙息
